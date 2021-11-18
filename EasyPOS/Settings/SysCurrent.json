@@ -15,7 +15,7 @@
   "TenantOf": "",
   "CurrentUserId": 1,
   "CurrentUserName": "admin",
-  "CurrentVersion": "Version 1.20211161620NOR",
+  "CurrentVersion": "Version 1.20211181241NOR",
   "CurrentDeveloper": "Easyfis Corporation",
   "CurrentSupport": "(032) 234-0787",
   "CurrentPeriodId": 1,
@@ -59,11 +59,11 @@
   "ChoosePrinter": false,
   "IsTriggeredQuantity": false,
   "EnableEditPrice": false,
-  "SalesOrderPrinterType": "Kitchen Printer",
+  "SalesOrderPrinterType": "Default Printer",
   "DisableSalesCustomerSelection": false,
   "Language": "English",
   "SingleColumnBarcodePrintOut": false,
   "RestrictCashin": false,
-  "DisableLockTender": true,
-  "PopupCustomerInfo": true
+  "DisableLockTender": false,
+  "PopupCustomerInfo": false
 }
