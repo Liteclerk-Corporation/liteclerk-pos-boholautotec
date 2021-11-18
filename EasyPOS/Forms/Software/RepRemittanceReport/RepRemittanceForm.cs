@@ -191,7 +191,7 @@ namespace EasyPOS.Forms.Software.RepRemittanceReport
             }
             else
             {
-                MessageBox.Show("Please select a report.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a report.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -207,7 +207,7 @@ namespace EasyPOS.Forms.Software.RepRemittanceReport
                         sysUserRights = new Modules.SysUserRightsModule("RepDisbursementRemittance");
                         if (sysUserRights.GetUserRights() == null)
                         {
-                            MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -215,7 +215,7 @@ namespace EasyPOS.Forms.Software.RepRemittanceReport
                             {
                                 if (comboBoxRemittanceNumber.SelectedValue == null)
                                 {
-                                    MessageBox.Show("Please provide disbursement number.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Please provide disbursement number.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
                                 else
                                 {
@@ -225,7 +225,7 @@ namespace EasyPOS.Forms.Software.RepRemittanceReport
                             }
                             else
                             {
-                                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         break;
@@ -234,7 +234,7 @@ namespace EasyPOS.Forms.Software.RepRemittanceReport
                         sysUserRights = new Modules.SysUserRightsModule("RepDisbursementRemittance");
                         if (sysUserRights.GetUserRights() == null)
                         {
-                            MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -245,18 +245,18 @@ namespace EasyPOS.Forms.Software.RepRemittanceReport
                             }
                             else
                             {
-                                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         break;
                     default:
-                        MessageBox.Show("Please select a report.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please select a report.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                 }
             }
             else
             {
-                MessageBox.Show("Please select a report.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a report.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

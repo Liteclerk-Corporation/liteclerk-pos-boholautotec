@@ -76,7 +76,7 @@ namespace EasyPOS.Forms.Software.MstUser
             sysUserRights = new Modules.SysUserRightsModule("MstUserDetail");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -131,7 +131,7 @@ namespace EasyPOS.Forms.Software.MstUser
             }
             else
             {
-                DialogResult closeDialogResult = MessageBox.Show("Save Changes?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult closeDialogResult = MessageBox.Show("Save Changes?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (closeDialogResult == DialogResult.Yes)
                 {
                     Controllers.MstUserController mstUserController = new Controllers.MstUserController();
@@ -152,7 +152,7 @@ namespace EasyPOS.Forms.Software.MstUser
                     }
                     else
                     {
-                        MessageBox.Show(lockUser[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(lockUser[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -228,7 +228,7 @@ namespace EasyPOS.Forms.Software.MstUser
             else
             {
                 UpdateComponents(false);
-                MessageBox.Show(lockUser[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(lockUser[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -245,7 +245,7 @@ namespace EasyPOS.Forms.Software.MstUser
             else
             {
                 UpdateComponents(true);
-                MessageBox.Show(unlockUser[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(unlockUser[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -352,12 +352,12 @@ namespace EasyPOS.Forms.Software.MstUser
         {
             UpdateUserFormListDataSource();
 
-            dataGridViewUserFormList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewUserFormList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewUserFormList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewUserFormList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewUserFormList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewUserFormList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewUserFormList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewUserFormList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewUserFormList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewUserFormList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewUserFormList.DataSource = userFormDataSource;
@@ -422,7 +422,7 @@ namespace EasyPOS.Forms.Software.MstUser
 
             if (e.RowIndex > -1 && dataGridViewUserFormList.CurrentCell.ColumnIndex == dataGridViewUserFormList.Columns["ColumnUserFormListButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Form?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Form?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     var id = Convert.ToInt32(dataGridViewUserFormList.Rows[e.RowIndex].Cells[dataGridViewUserFormList.Columns["ColumnUserFormListId"].Index].Value);
@@ -436,7 +436,7 @@ namespace EasyPOS.Forms.Software.MstUser
                     }
                     else
                     {
-                        MessageBox.Show(deleteUserForm[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteUserForm[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

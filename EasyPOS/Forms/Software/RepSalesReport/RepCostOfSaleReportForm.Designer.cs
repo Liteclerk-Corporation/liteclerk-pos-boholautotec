@@ -31,6 +31,14 @@ namespace EasyPOS.Forms.Software.RepSalesReport
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RepCostOfSaleReportForm));
             this.dataGridViewCostOfSalesReport = new System.Windows.Forms.DataGridView();
+            this.ColumnTerminal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSalesNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnBarCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnItemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCostAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -45,14 +53,6 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.buttonPageListPrevious = new System.Windows.Forms.Button();
             this.textBoxPageNumber = new System.Windows.Forms.TextBox();
             this.folderBrowserDialogGenerateCSV = new System.Windows.Forms.FolderBrowserDialog();
-            this.ColumnTerminal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSalesNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnBarCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnItemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCostAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCostOfSalesReport)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -82,20 +82,94 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.dataGridViewCostOfSalesReport.MultiSelect = false;
             this.dataGridViewCostOfSalesReport.Name = "dataGridViewCostOfSalesReport";
             this.dataGridViewCostOfSalesReport.ReadOnly = true;
+            this.dataGridViewCostOfSalesReport.RowHeadersWidth = 51;
             this.dataGridViewCostOfSalesReport.RowTemplate.Height = 24;
             this.dataGridViewCostOfSalesReport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCostOfSalesReport.ShowEditingIcon = false;
             this.dataGridViewCostOfSalesReport.Size = new System.Drawing.Size(1096, 433);
             this.dataGridViewCostOfSalesReport.TabIndex = 12;
             // 
+            // ColumnTerminal
+            // 
+            this.ColumnTerminal.DataPropertyName = "ColumnTerminal";
+            this.ColumnTerminal.HeaderText = "Terminal";
+            this.ColumnTerminal.MinimumWidth = 6;
+            this.ColumnTerminal.Name = "ColumnTerminal";
+            this.ColumnTerminal.ReadOnly = true;
+            this.ColumnTerminal.Width = 125;
+            // 
+            // ColumnDate
+            // 
+            this.ColumnDate.DataPropertyName = "ColumnDate";
+            this.ColumnDate.HeaderText = "Sales Date";
+            this.ColumnDate.MinimumWidth = 6;
+            this.ColumnDate.Name = "ColumnDate";
+            this.ColumnDate.ReadOnly = true;
+            this.ColumnDate.Width = 120;
+            // 
+            // ColumnSalesNumber
+            // 
+            this.ColumnSalesNumber.DataPropertyName = "ColumnSalesNumber";
+            this.ColumnSalesNumber.HeaderText = "Sales No.";
+            this.ColumnSalesNumber.MinimumWidth = 6;
+            this.ColumnSalesNumber.Name = "ColumnSalesNumber";
+            this.ColumnSalesNumber.ReadOnly = true;
+            this.ColumnSalesNumber.Width = 120;
+            // 
+            // ColumnBarCode
+            // 
+            this.ColumnBarCode.DataPropertyName = "ColumnBarCode";
+            this.ColumnBarCode.HeaderText = "Barcode";
+            this.ColumnBarCode.MinimumWidth = 6;
+            this.ColumnBarCode.Name = "ColumnBarCode";
+            this.ColumnBarCode.ReadOnly = true;
+            this.ColumnBarCode.Width = 125;
+            // 
+            // ColumnItemDescription
+            // 
+            this.ColumnItemDescription.DataPropertyName = "ColumnItemDescription";
+            this.ColumnItemDescription.HeaderText = "Item Description";
+            this.ColumnItemDescription.MinimumWidth = 6;
+            this.ColumnItemDescription.Name = "ColumnItemDescription";
+            this.ColumnItemDescription.ReadOnly = true;
+            this.ColumnItemDescription.Width = 200;
+            // 
+            // ColumnQuantity
+            // 
+            this.ColumnQuantity.DataPropertyName = "ColumnQuantity";
+            this.ColumnQuantity.HeaderText = "Quantity";
+            this.ColumnQuantity.MinimumWidth = 6;
+            this.ColumnQuantity.Name = "ColumnQuantity";
+            this.ColumnQuantity.ReadOnly = true;
+            this.ColumnQuantity.Width = 120;
+            // 
+            // ColumnCost
+            // 
+            this.ColumnCost.DataPropertyName = "ColumnCost";
+            this.ColumnCost.HeaderText = "Cost";
+            this.ColumnCost.MinimumWidth = 6;
+            this.ColumnCost.Name = "ColumnCost";
+            this.ColumnCost.ReadOnly = true;
+            this.ColumnCost.Width = 125;
+            // 
+            // ColumnCostAmount
+            // 
+            this.ColumnCostAmount.DataPropertyName = "ColumnCostAmount";
+            this.ColumnCostAmount.HeaderText = "Cost Amount";
+            this.ColumnCostAmount.MinimumWidth = 6;
+            this.ColumnCostAmount.Name = "ColumnCostAmount";
+            this.ColumnCostAmount.ReadOnly = true;
+            this.ColumnCostAmount.Width = 125;
+            // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
@@ -105,7 +179,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -124,7 +198,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -158,7 +232,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.label3.Location = new System.Drawing.Point(57, 12);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(204, 28);
+            this.label3.Size = new System.Drawing.Size(253, 35);
             this.label3.TabIndex = 2;
             this.label3.Text = "Cost of Sales Report";
             // 
@@ -188,7 +262,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.textBoxTotalCost.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTotalCost.Name = "textBoxTotalCost";
             this.textBoxTotalCost.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBoxTotalCost.Size = new System.Drawing.Size(246, 19);
+            this.textBoxTotalCost.Size = new System.Drawing.Size(246, 23);
             this.textBoxTotalCost.TabIndex = 15;
             // 
             // label2
@@ -199,7 +273,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.label2.Location = new System.Drawing.Point(688, 12);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 19);
+            this.label2.Size = new System.Drawing.Size(94, 23);
             this.label2.TabIndex = 13;
             this.label2.Text = "Total Cost:";
             // 
@@ -278,74 +352,14 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.textBoxPageNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPageNumber.Name = "textBoxPageNumber";
             this.textBoxPageNumber.ReadOnly = true;
-            this.textBoxPageNumber.Size = new System.Drawing.Size(55, 19);
+            this.textBoxPageNumber.Size = new System.Drawing.Size(55, 23);
             this.textBoxPageNumber.TabIndex = 12;
             this.textBoxPageNumber.TabStop = false;
             this.textBoxPageNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // ColumnTerminal
-            // 
-            this.ColumnTerminal.DataPropertyName = "ColumnTerminal";
-            this.ColumnTerminal.HeaderText = "Terminal";
-            this.ColumnTerminal.Name = "ColumnTerminal";
-            this.ColumnTerminal.ReadOnly = true;
-            // 
-            // ColumnDate
-            // 
-            this.ColumnDate.DataPropertyName = "ColumnDate";
-            this.ColumnDate.HeaderText = "Sales Date";
-            this.ColumnDate.Name = "ColumnDate";
-            this.ColumnDate.ReadOnly = true;
-            this.ColumnDate.Width = 120;
-            // 
-            // ColumnSalesNumber
-            // 
-            this.ColumnSalesNumber.DataPropertyName = "ColumnSalesNumber";
-            this.ColumnSalesNumber.HeaderText = "Sales No.";
-            this.ColumnSalesNumber.Name = "ColumnSalesNumber";
-            this.ColumnSalesNumber.ReadOnly = true;
-            this.ColumnSalesNumber.Width = 120;
-            // 
-            // ColumnBarCode
-            // 
-            this.ColumnBarCode.DataPropertyName = "ColumnBarCode";
-            this.ColumnBarCode.HeaderText = "Barcode";
-            this.ColumnBarCode.Name = "ColumnBarCode";
-            this.ColumnBarCode.ReadOnly = true;
-            // 
-            // ColumnItemDescription
-            // 
-            this.ColumnItemDescription.DataPropertyName = "ColumnItemDescription";
-            this.ColumnItemDescription.HeaderText = "Item Description";
-            this.ColumnItemDescription.Name = "ColumnItemDescription";
-            this.ColumnItemDescription.ReadOnly = true;
-            this.ColumnItemDescription.Width = 200;
-            // 
-            // ColumnQuantity
-            // 
-            this.ColumnQuantity.DataPropertyName = "ColumnQuantity";
-            this.ColumnQuantity.HeaderText = "Quantity";
-            this.ColumnQuantity.Name = "ColumnQuantity";
-            this.ColumnQuantity.ReadOnly = true;
-            this.ColumnQuantity.Width = 120;
-            // 
-            // ColumnCost
-            // 
-            this.ColumnCost.DataPropertyName = "ColumnCost";
-            this.ColumnCost.HeaderText = "Cost";
-            this.ColumnCost.Name = "ColumnCost";
-            this.ColumnCost.ReadOnly = true;
-            // 
-            // ColumnCostAmount
-            // 
-            this.ColumnCostAmount.DataPropertyName = "ColumnCostAmount";
-            this.ColumnCostAmount.HeaderText = "Cost Amount";
-            this.ColumnCostAmount.Name = "ColumnCostAmount";
-            this.ColumnCostAmount.ReadOnly = true;
-            // 
             // RepCostOfSaleReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1096, 522);
             this.Controls.Add(this.panel4);

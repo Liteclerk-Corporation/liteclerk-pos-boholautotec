@@ -63,7 +63,7 @@ namespace EasyPOS.Forms.Account.SysLogin
             }
             dateTimePickerLoginDate.Enabled = false;
             textBoxUsername.Focus();
-            labelVersion.Text = "EasyPOS Version: " + Modules.SysCurrentModule.GetCurrentSettings().CurrentVersion;
+            labelVersion.Text = "Liteclerk POS Version: " + Modules.SysCurrentModule.GetCurrentSettings().CurrentVersion;
             labelSupport.Text = "Support: Easyfis Corporation " + Modules.SysCurrentModule.GetCurrentSettings().CurrentSupport;
 
             _trnPOSBarcodeForm = trnPOSBarcodeForm;
@@ -183,7 +183,7 @@ namespace EasyPOS.Forms.Account.SysLogin
             }
             else
             {
-                MessageBox.Show(login[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(login[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

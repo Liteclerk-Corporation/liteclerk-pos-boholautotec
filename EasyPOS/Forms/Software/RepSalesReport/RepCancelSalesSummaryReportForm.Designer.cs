@@ -77,12 +77,13 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
             this.panel1.Controls.Add(this.buttonView);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.panel1.Name = "panel1";
@@ -92,7 +93,7 @@
             // buttonView
             // 
             this.buttonView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonView.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonView.FlatAppearance.BorderSize = 0;
             this.buttonView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -122,7 +123,7 @@
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -175,6 +176,7 @@
             this.dataGridCancelSalesSummaryReport.MultiSelect = false;
             this.dataGridCancelSalesSummaryReport.Name = "dataGridCancelSalesSummaryReport";
             this.dataGridCancelSalesSummaryReport.ReadOnly = true;
+            this.dataGridCancelSalesSummaryReport.RowHeadersWidth = 51;
             this.dataGridCancelSalesSummaryReport.RowTemplate.Height = 24;
             this.dataGridCancelSalesSummaryReport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridCancelSalesSummaryReport.ShowEditingIcon = false;
@@ -185,21 +187,26 @@
             // 
             this.ColumnId.DataPropertyName = "ColumnId";
             this.ColumnId.HeaderText = "Id";
+            this.ColumnId.MinimumWidth = 6;
             this.ColumnId.Name = "ColumnId";
             this.ColumnId.ReadOnly = true;
             this.ColumnId.Visible = false;
+            this.ColumnId.Width = 125;
             // 
             // ColumnTerminal
             // 
             this.ColumnTerminal.DataPropertyName = "ColumnTerminal";
             this.ColumnTerminal.HeaderText = "Terminal";
+            this.ColumnTerminal.MinimumWidth = 6;
             this.ColumnTerminal.Name = "ColumnTerminal";
             this.ColumnTerminal.ReadOnly = true;
+            this.ColumnTerminal.Width = 125;
             // 
             // ColumnCollectionDate
             // 
             this.ColumnCollectionDate.DataPropertyName = "ColumnCollectionDate";
             this.ColumnCollectionDate.HeaderText = "Collection Date";
+            this.ColumnCollectionDate.MinimumWidth = 6;
             this.ColumnCollectionDate.Name = "ColumnCollectionDate";
             this.ColumnCollectionDate.ReadOnly = true;
             this.ColumnCollectionDate.Width = 120;
@@ -208,6 +215,7 @@
             // 
             this.ColumnCancelledCollectionNumber.DataPropertyName = "ColumnCancelledCollectionNumber";
             this.ColumnCancelledCollectionNumber.HeaderText = "Cancelled Collection No.";
+            this.ColumnCancelledCollectionNumber.MinimumWidth = 6;
             this.ColumnCancelledCollectionNumber.Name = "ColumnCancelledCollectionNumber";
             this.ColumnCancelledCollectionNumber.ReadOnly = true;
             this.ColumnCancelledCollectionNumber.Width = 120;
@@ -216,6 +224,7 @@
             // 
             this.ColumnCollectionNumber.DataPropertyName = "ColumnCollectionNumber";
             this.ColumnCollectionNumber.HeaderText = "Collection No.";
+            this.ColumnCollectionNumber.MinimumWidth = 6;
             this.ColumnCollectionNumber.Name = "ColumnCollectionNumber";
             this.ColumnCollectionNumber.ReadOnly = true;
             this.ColumnCollectionNumber.Width = 120;
@@ -224,6 +233,7 @@
             // 
             this.ColumnCustomerCode.DataPropertyName = "ColumnCustomerCode";
             this.ColumnCustomerCode.HeaderText = "Customer Code";
+            this.ColumnCustomerCode.MinimumWidth = 6;
             this.ColumnCustomerCode.Name = "ColumnCustomerCode";
             this.ColumnCustomerCode.ReadOnly = true;
             this.ColumnCustomerCode.Width = 150;
@@ -233,6 +243,7 @@
             this.ColumnCustomer.DataPropertyName = "ColumnCustomer";
             this.ColumnCustomer.FillWeight = 150F;
             this.ColumnCustomer.HeaderText = "Customer";
+            this.ColumnCustomer.MinimumWidth = 6;
             this.ColumnCustomer.Name = "ColumnCustomer";
             this.ColumnCustomer.ReadOnly = true;
             this.ColumnCustomer.Width = 200;
@@ -241,6 +252,7 @@
             // 
             this.ColumnSalesNumber.DataPropertyName = "ColumnSalesNumber";
             this.ColumnSalesNumber.HeaderText = "Sales No.";
+            this.ColumnSalesNumber.MinimumWidth = 6;
             this.ColumnSalesNumber.Name = "ColumnSalesNumber";
             this.ColumnSalesNumber.ReadOnly = true;
             this.ColumnSalesNumber.Width = 120;
@@ -249,6 +261,7 @@
             // 
             this.ColumnRemarks.DataPropertyName = "ColumnRemarks";
             this.ColumnRemarks.HeaderText = "Remarks";
+            this.ColumnRemarks.MinimumWidth = 6;
             this.ColumnRemarks.Name = "ColumnRemarks";
             this.ColumnRemarks.ReadOnly = true;
             this.ColumnRemarks.Width = 120;
@@ -258,6 +271,7 @@
             this.ColumnPreparedByUserName.DataPropertyName = "ColumnPreparedByUserName";
             this.ColumnPreparedByUserName.FillWeight = 120F;
             this.ColumnPreparedByUserName.HeaderText = "Prepared By";
+            this.ColumnPreparedByUserName.MinimumWidth = 6;
             this.ColumnPreparedByUserName.Name = "ColumnPreparedByUserName";
             this.ColumnPreparedByUserName.ReadOnly = true;
             this.ColumnPreparedByUserName.Width = 150;
@@ -268,6 +282,7 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.ColumnAmount.DefaultCellStyle = dataGridViewCellStyle1;
             this.ColumnAmount.HeaderText = "Amount";
+            this.ColumnAmount.MinimumWidth = 6;
             this.ColumnAmount.Name = "ColumnAmount";
             this.ColumnAmount.ReadOnly = true;
             this.ColumnAmount.Width = 120;

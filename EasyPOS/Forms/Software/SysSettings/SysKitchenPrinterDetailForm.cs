@@ -61,7 +61,7 @@ namespace EasyPOS.Forms.Software.SysSettings
                 String[] updateKitchenPrinter = sysKitchenPrinterController.UpdateKitchenPrinter(sysKitchenPrinterEntity);
                 if (updateKitchenPrinter[1].Equals("0") == true)
                 {
-                    MessageBox.Show(updateKitchenPrinter[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(updateKitchenPrinter[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {

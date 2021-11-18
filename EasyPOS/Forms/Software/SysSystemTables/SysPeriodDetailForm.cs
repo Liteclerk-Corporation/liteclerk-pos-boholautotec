@@ -44,7 +44,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
             sysUserRights = new Modules.SysUserRightsModule("SysTables");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -93,7 +93,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
                 String[] addPeriod = mstPeriodController.AddPeriod(newPeriod);
                 if (addPeriod[1].Equals("0") == true)
                 {
-                    MessageBox.Show(addPeriod[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addPeriod[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -108,7 +108,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
                 String[] updatePeriod = mstPeriodController.UpdatePeriod(mstPeriodEntity);
                 if (updatePeriod[1].Equals("0") == true)
                 {
-                    MessageBox.Show(updatePeriod[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(updatePeriod[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {

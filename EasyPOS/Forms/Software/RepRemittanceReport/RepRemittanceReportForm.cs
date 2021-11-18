@@ -33,7 +33,7 @@ namespace EasyPOS.Forms.Software.RepRemittanceReport
             sysUserRights = new Modules.SysUserRightsModule("RepDisbursementRemittance");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

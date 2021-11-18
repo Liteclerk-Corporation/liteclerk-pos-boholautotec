@@ -91,7 +91,7 @@ namespace EasyPOS.Forms.Software.MstItem
             sysUserRights = new Modules.SysUserRightsModule("MstItemDetail");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -408,12 +408,12 @@ namespace EasyPOS.Forms.Software.MstItem
                     mstItemEntity.IsLocked = false;
 
                     UpdateComponents(false);
-                    MessageBox.Show(lockItem[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(lockItem[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -434,7 +434,7 @@ namespace EasyPOS.Forms.Software.MstItem
                 mstItemEntity.IsLocked = true;
 
                 UpdateComponents(true);
-                MessageBox.Show(unlockItem[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(unlockItem[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -446,7 +446,7 @@ namespace EasyPOS.Forms.Software.MstItem
             }
             else
             {
-                DialogResult closeDialogResult = MessageBox.Show("Save Changes?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult closeDialogResult = MessageBox.Show("Save Changes?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (closeDialogResult == DialogResult.Yes)
                 {
                     Controllers.MstItemController mstItemController = new Controllers.MstItemController();
@@ -484,7 +484,7 @@ namespace EasyPOS.Forms.Software.MstItem
                     }
                     else
                     {
-                        MessageBox.Show(lockItem[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(lockItem[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -649,12 +649,12 @@ namespace EasyPOS.Forms.Software.MstItem
         {
             UpdateItemPriceListDataSource();
 
-            dataGridViewItemPriceList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewItemPriceList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewItemPriceList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewItemPriceList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewItemPriceList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewItemPriceList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewItemPriceList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewItemPriceList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewItemPriceList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewItemPriceList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewItemPriceList.DataSource = itemPriceListDataSource;
@@ -692,7 +692,7 @@ namespace EasyPOS.Forms.Software.MstItem
 
             if (e.RowIndex > -1 && dataGridViewItemPriceList.CurrentCell.ColumnIndex == dataGridViewItemPriceList.Columns["ColumnItemPriceListButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete ItemPrice?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete ItemPrice?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     Controllers.MstItemPriceController mstItemPriceController = new Controllers.MstItemPriceController();
@@ -707,7 +707,7 @@ namespace EasyPOS.Forms.Software.MstItem
                     }
                     else
                     {
-                        MessageBox.Show(deleteItemPrice[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteItemPrice[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -925,12 +925,12 @@ namespace EasyPOS.Forms.Software.MstItem
         {
             UpdateItemComponentListDataSource();
 
-            dataGridViewItemComponentList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewItemComponentList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewItemComponentList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewItemComponentList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewItemComponentList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewItemComponentList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewItemComponentList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewItemComponentList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewItemComponentList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewItemComponentList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewItemComponentList.DataSource = itemComponentListDataSource;
@@ -970,7 +970,7 @@ namespace EasyPOS.Forms.Software.MstItem
 
             if (e.RowIndex > -1 && dataGridViewItemComponentList.CurrentCell.ColumnIndex == dataGridViewItemComponentList.Columns["ColumnItemComponentButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Item Component?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Item Component?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     Controllers.MstItemComponentController mstItemComponentController = new Controllers.MstItemComponentController();
@@ -985,7 +985,7 @@ namespace EasyPOS.Forms.Software.MstItem
                     }
                     else
                     {
-                        MessageBox.Show(deleteItemComponent[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteItemComponent[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -1109,7 +1109,7 @@ namespace EasyPOS.Forms.Software.MstItem
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void ComputeMarkUpPrice()
@@ -1132,7 +1132,7 @@ namespace EasyPOS.Forms.Software.MstItem
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -58,7 +58,7 @@ namespace EasyPOS.Forms.Software.MstUser
             sysUserRights = new Modules.SysUserRightsModule("MstUserDetail");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -164,7 +164,7 @@ namespace EasyPOS.Forms.Software.MstUser
                 }
                 else
                 {
-                    MessageBox.Show(addUserForm[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addUserForm[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -177,7 +177,7 @@ namespace EasyPOS.Forms.Software.MstUser
                 }
                 else
                 {
-                    MessageBox.Show(updateUserForm[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(updateUserForm[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

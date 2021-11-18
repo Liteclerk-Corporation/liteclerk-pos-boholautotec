@@ -35,7 +35,7 @@ namespace EasyPOS.Forms.Software.MstItemGroup
             sysUserRights = new Modules.SysUserRightsModule("MstItemGroupDetail");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -157,7 +157,7 @@ namespace EasyPOS.Forms.Software.MstItemGroup
         {
             if (kitchens.Contains(comboBoxItemGroupKitchens.Text) == false)
             {
-                MessageBox.Show("Invalid kitchen report!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid kitchen report!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -190,7 +190,7 @@ namespace EasyPOS.Forms.Software.MstItemGroup
                 else
                 {
                     UpdateComponents(false);
-                    MessageBox.Show(lockItemGroup[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(lockItemGroup[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -208,7 +208,7 @@ namespace EasyPOS.Forms.Software.MstItemGroup
             else
             {
                 UpdateComponents(true);
-                MessageBox.Show(unlockItemGroup[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(unlockItemGroup[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -309,12 +309,12 @@ namespace EasyPOS.Forms.Software.MstItemGroup
         {
             UpdateItemGroupItemListDataSource();
 
-            dataGridViewItemGroupItemList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewItemGroupItemList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewItemGroupItemList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewItemGroupItemList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewItemGroupItemList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewItemGroupItemList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewItemGroupItemList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewItemGroupItemList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewItemGroupItemList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewItemGroupItemList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewItemGroupItemList.DataSource = itemGroupItemDataSource;
@@ -355,7 +355,7 @@ namespace EasyPOS.Forms.Software.MstItemGroup
 
             if (e.RowIndex > -1 && dataGridViewItemGroupItemList.CurrentCell.ColumnIndex == dataGridViewItemGroupItemList.Columns["ColumnItemGroupItemListButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Item?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Item?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     var id = Convert.ToInt32(dataGridViewItemGroupItemList.Rows[e.RowIndex].Cells[dataGridViewItemGroupItemList.Columns["ColumnItemGroupItemListId"].Index].Value);
@@ -369,7 +369,7 @@ namespace EasyPOS.Forms.Software.MstItemGroup
                     }
                     else
                     {
-                        MessageBox.Show(deleteItemGroupItem[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteItemGroupItem[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

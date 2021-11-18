@@ -92,7 +92,7 @@ namespace EasyPOS.Forms.Software.MstItem
 
                 if (addItemPrice[1].Equals("0") == true)
                 {
-                    MessageBox.Show(addItemPrice[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addItemPrice[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -107,7 +107,7 @@ namespace EasyPOS.Forms.Software.MstItem
 
                 if (updateItemPrice[1].Equals("0") == true)
                 {
-                    MessageBox.Show(updateItemPrice[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(updateItemPrice[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {

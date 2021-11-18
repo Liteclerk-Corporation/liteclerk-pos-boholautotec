@@ -103,7 +103,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             sysUserRights = new Modules.SysUserRightsModule("TrnSales");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -233,7 +233,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             else
             {
-                MessageBox.Show(addSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(addSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -452,14 +452,14 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                 if (isTendered == true)
                 {
-                    MessageBox.Show("Already tendered.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Already tendered.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
                     if (trnPOSSalesController.IsSalesTendered(Convert.ToInt32(dataGridViewSalesList.Rows[e.RowIndex].Cells[dataGridViewSalesList.Columns["ColumnId"].Index].Value)) == true)
                     {
-                        MessageBox.Show("Already tendered.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Already tendered.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -475,22 +475,22 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                 if (isLocked == true)
                 {
-                    MessageBox.Show("Already locked.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Already locked.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (isTendered == true)
                 {
-                    MessageBox.Show("Already tendered.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Already tendered.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
                     if (trnPOSSalesController.IsSalesTendered(Convert.ToInt32(dataGridViewSalesList.Rows[e.RowIndex].Cells[dataGridViewSalesList.Columns["ColumnId"].Index].Value)) == true)
                     {
-                        MessageBox.Show("Already tendered.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Already tendered.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        DialogResult deleteDialogResult = MessageBox.Show("Delete Sales?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult deleteDialogResult = MessageBox.Show("Delete Sales?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (deleteDialogResult == DialogResult.Yes)
                         {
                             String[] deleteSales = trnPOSSalesController.DeleteSales(Convert.ToInt32(dataGridViewSalesList.Rows[e.RowIndex].Cells[dataGridViewSalesList.Columns["ColumnId"].Index].Value));
@@ -501,7 +501,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                             }
                             else
                             {
-                                MessageBox.Show(deleteSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show(deleteSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
@@ -603,7 +603,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                         if (isCanclled == true)
                         {
-                            MessageBox.Show("Already Cancelled.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Already Cancelled.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
@@ -614,7 +614,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                                 if (continueCancel)
                                 {
-                                    DialogResult cancelDialogResult = MessageBox.Show("Cancel Transaction? ", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                    DialogResult cancelDialogResult = MessageBox.Show("Cancel Transaction? ", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                                     if (cancelDialogResult == DialogResult.Yes)
                                     {
                                         Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
@@ -623,13 +623,13 @@ namespace EasyPOS.Forms.Software.TrnPOS
                                         if (cancelSales[1].Equals("0") == false)
                                         {
                                             String collectionNumber = dataGridViewSalesList.Rows[dataGridViewSalesList.CurrentCell.RowIndex].Cells[dataGridViewSalesList.Columns["ColumnRececiptInvoiceNumber"].Index].Value.ToString();
-                                            MessageBox.Show(collectionNumber + " is successfully cancelled.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            MessageBox.Show(collectionNumber + " is successfully cancelled.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                             UpdateSalesListGridDataSource();
                                         }
                                         else
                                         {
-                                            MessageBox.Show(cancelSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            MessageBox.Show(cancelSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         }
                                     }
                                 }
@@ -638,12 +638,12 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     }
                     else
                     {
-                        MessageBox.Show("Please select sales.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please select sales.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Sales empty.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Sales empty.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -657,7 +657,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                         if (isCanclled == true)
                         {
-                            MessageBox.Show("Already Cancelled.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Already Cancelled.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
@@ -668,7 +668,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                                 if (continueCancel)
                                 {
-                                    DialogResult cancelDialogResult = MessageBox.Show("Cancel Transaction? ", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                    DialogResult cancelDialogResult = MessageBox.Show("Cancel Transaction? ", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                                     if (cancelDialogResult == DialogResult.Yes)
                                     {
                                         Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
@@ -679,18 +679,18 @@ namespace EasyPOS.Forms.Software.TrnPOS
                                             if (cancelSales[1].Equals("0") == false)
                                             {
                                                 String collectionNumber = dataGridViewSalesList.Rows[dataGridViewSalesList.CurrentCell.RowIndex].Cells[dataGridViewSalesList.Columns["ColumnRececiptInvoiceNumber"].Index].Value.ToString();
-                                                MessageBox.Show(collectionNumber + " is successfully cancelled.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                MessageBox.Show(collectionNumber + " is successfully cancelled.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                                 UpdateSalesListGridDataSource();
                                             }
                                             else
                                             {
-                                                MessageBox.Show(cancelSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                                MessageBox.Show(cancelSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                             }
                                         }
                                         else
                                         {
-                                            MessageBox.Show("Not allowed.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            MessageBox.Show("Not allowed.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         }
                                     }
                                 }
@@ -699,12 +699,12 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     }
                     else
                     {
-                        MessageBox.Show("Please select sales.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please select sales.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Sales empty.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Sales empty.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -732,14 +732,14 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                         if (isTendered == true)
                         {
-                            MessageBox.Show("Already tendered.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Already tendered.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
                             Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
                             if (trnPOSSalesController.IsSalesTendered(Convert.ToInt32(dataGridViewSalesList.Rows[dataGridViewSalesList.CurrentCell.RowIndex].Cells[dataGridViewSalesList.Columns["ColumnId"].Index].Value)) == true)
                             {
-                                MessageBox.Show("Already tendered.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Already tendered.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {
@@ -814,18 +814,18 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     }
                     else
                     {
-                        MessageBox.Show("Please select sales.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please select sales.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Cannot tender zero amount.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Cannot tender zero amount.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             else
             {
-                MessageBox.Show("Sales empty.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Sales empty.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -842,11 +842,11 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                         if (isTendered != true)
                         {
-                            MessageBox.Show("Not tendered.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Not tendered.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else if (isLocked != true)
                         {
-                            MessageBox.Show("Not locked.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Not locked.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -861,23 +861,23 @@ namespace EasyPOS.Forms.Software.TrnPOS
                             }
                             else
                             {
-                                MessageBox.Show("No collection.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("No collection.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Please select sales.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please select sales.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Sales empty.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Sales empty.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -964,7 +964,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 isAutoRefresh = false;
 
                 buttonAutoRefresh.Text = SetLabel("Start");
-                buttonAutoRefresh.BackColor = ColorTranslator.FromHtml("#7FBC00");
+                buttonAutoRefresh.BackColor = ColorTranslator.FromHtml("#91C354");
                 buttonAutoRefresh.ForeColor = Color.White;
             }
             else
@@ -972,7 +972,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 isAutoRefresh = true;
 
                 buttonAutoRefresh.Text = SetLabel("Stop");
-                buttonAutoRefresh.BackColor = ColorTranslator.FromHtml("#F34F1C");
+                buttonAutoRefresh.BackColor = ColorTranslator.FromHtml("#C32938");
                 buttonAutoRefresh.ForeColor = Color.White;
             }
         }

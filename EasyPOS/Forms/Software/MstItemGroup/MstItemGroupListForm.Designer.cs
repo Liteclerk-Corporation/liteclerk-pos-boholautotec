@@ -58,7 +58,7 @@
             // buttonAdd
             // 
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonAdd.FlatAppearance.BorderSize = 0;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -76,7 +76,7 @@
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -114,12 +114,13 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Controls.Add(this.buttonAdd);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1400, 63);
@@ -246,6 +247,7 @@
             this.dataGridViewItemGroupList.MultiSelect = false;
             this.dataGridViewItemGroupList.Name = "dataGridViewItemGroupList";
             this.dataGridViewItemGroupList.ReadOnly = true;
+            this.dataGridViewItemGroupList.RowHeadersWidth = 51;
             this.dataGridViewItemGroupList.RowTemplate.Height = 24;
             this.dataGridViewItemGroupList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewItemGroupList.Size = new System.Drawing.Size(1376, 536);
@@ -257,6 +259,7 @@
             this.ColumnItemGroupListButtonEdit.DataPropertyName = "ColumnItemGroupListButtonEdit";
             this.ColumnItemGroupListButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColumnItemGroupListButtonEdit.HeaderText = "";
+            this.ColumnItemGroupListButtonEdit.MinimumWidth = 6;
             this.ColumnItemGroupListButtonEdit.Name = "ColumnItemGroupListButtonEdit";
             this.ColumnItemGroupListButtonEdit.ReadOnly = true;
             this.ColumnItemGroupListButtonEdit.Width = 70;
@@ -266,6 +269,7 @@
             this.ColumnItemGroupListButtonDelete.DataPropertyName = "ColumnItemGroupListButtonDelete";
             this.ColumnItemGroupListButtonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColumnItemGroupListButtonDelete.HeaderText = "";
+            this.ColumnItemGroupListButtonDelete.MinimumWidth = 6;
             this.ColumnItemGroupListButtonDelete.Name = "ColumnItemGroupListButtonDelete";
             this.ColumnItemGroupListButtonDelete.ReadOnly = true;
             this.ColumnItemGroupListButtonDelete.Width = 70;
@@ -274,14 +278,17 @@
             // 
             this.ColumnItemGroupListId.DataPropertyName = "ColumnItemGroupListId";
             this.ColumnItemGroupListId.HeaderText = "Id";
+            this.ColumnItemGroupListId.MinimumWidth = 6;
             this.ColumnItemGroupListId.Name = "ColumnItemGroupListId";
             this.ColumnItemGroupListId.ReadOnly = true;
             this.ColumnItemGroupListId.Visible = false;
+            this.ColumnItemGroupListId.Width = 125;
             // 
             // ColumnItemGroupListItemGroup
             // 
             this.ColumnItemGroupListItemGroup.DataPropertyName = "ColumnItemGroupListItemGroup";
             this.ColumnItemGroupListItemGroup.HeaderText = "Item Group";
+            this.ColumnItemGroupListItemGroup.MinimumWidth = 6;
             this.ColumnItemGroupListItemGroup.Name = "ColumnItemGroupListItemGroup";
             this.ColumnItemGroupListItemGroup.ReadOnly = true;
             this.ColumnItemGroupListItemGroup.Width = 250;
@@ -290,6 +297,7 @@
             // 
             this.ColumnItemGroupListIsLocked.DataPropertyName = "ColumnItemGroupListIsLocked";
             this.ColumnItemGroupListIsLocked.HeaderText = "L";
+            this.ColumnItemGroupListIsLocked.MinimumWidth = 6;
             this.ColumnItemGroupListIsLocked.Name = "ColumnItemGroupListIsLocked";
             this.ColumnItemGroupListIsLocked.ReadOnly = true;
             this.ColumnItemGroupListIsLocked.Width = 35;

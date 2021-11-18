@@ -45,7 +45,7 @@ namespace EasyPOS.Forms.Software.MstDiscounting
             sysUserRights = new Modules.SysUserRightsModule("MstDiscount");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -193,12 +193,12 @@ namespace EasyPOS.Forms.Software.MstDiscounting
         {
             UpdateDiscountListDataSource();
 
-            dataGridViewDiscountList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewDiscountList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewDiscountList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewDiscountList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewDiscountList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewDiscountList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewDiscountList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewDiscountList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewDiscountList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewDiscountList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewDiscountList.DataSource = discountListDataSource;
@@ -225,7 +225,7 @@ namespace EasyPOS.Forms.Software.MstDiscounting
             }
             else
             {
-                MessageBox.Show(addDiscount[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(addDiscount[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -243,7 +243,7 @@ namespace EasyPOS.Forms.Software.MstDiscounting
                 var discountDetail = new Modules.SysUserRightsModule("MstDiscountDetail");
                 if (discountDetail.GetUserRights() == null)
                 {
-                    MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -257,11 +257,11 @@ namespace EasyPOS.Forms.Software.MstDiscounting
 
                 if (isLocked == true)
                 {
-                    MessageBox.Show("Already locked.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Already locked.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    DialogResult deleteDialogResult = MessageBox.Show("Delete Discount?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult deleteDialogResult = MessageBox.Show("Delete Discount?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (deleteDialogResult == DialogResult.Yes)
                     {
                         Controllers.MstDiscountController mstDiscountController = new Controllers.MstDiscountController();
@@ -294,7 +294,7 @@ namespace EasyPOS.Forms.Software.MstDiscounting
                         }
                         else
                         {
-                            MessageBox.Show(deleteDiscount[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(deleteDiscount[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }

@@ -52,7 +52,7 @@ namespace EasyPOS.Forms.Software.MstItem
             sysUserRights = new Modules.SysUserRightsModule("MstItem");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -257,12 +257,12 @@ namespace EasyPOS.Forms.Software.MstItem
         {
             UpdateItemListDataSource();
 
-            dataGridViewItemList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewItemList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewItemList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewItemList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewItemList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewItemList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewItemList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewItemList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewItemList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewItemList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewItemList.DataSource = itemListDataSource;
@@ -297,7 +297,7 @@ namespace EasyPOS.Forms.Software.MstItem
             }
             else
             {
-                MessageBox.Show(addItem[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(addItem[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -320,11 +320,11 @@ namespace EasyPOS.Forms.Software.MstItem
 
                 if (isLocked == true)
                 {
-                    MessageBox.Show("Already locked.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Already locked.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    DialogResult deleteDialogResult = MessageBox.Show("Delete Item?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult deleteDialogResult = MessageBox.Show("Delete Item?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (deleteDialogResult == DialogResult.Yes)
                     {
                         Controllers.MstItemController mstItemController = new Controllers.MstItemController();
@@ -357,7 +357,7 @@ namespace EasyPOS.Forms.Software.MstItem
                         }
                         else
                         {
-                            MessageBox.Show(deleteItem[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(deleteItem[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }

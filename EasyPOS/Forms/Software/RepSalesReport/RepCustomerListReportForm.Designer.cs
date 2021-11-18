@@ -35,13 +35,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewCustomerListReport = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.buttonPageListFirst = new System.Windows.Forms.Button();
-            this.buttonPageListNext = new System.Windows.Forms.Button();
-            this.buttonPageListLast = new System.Windows.Forms.Button();
-            this.buttonPageListPrevious = new System.Windows.Forms.Button();
-            this.textBoxPageNumber = new System.Windows.Forms.TextBox();
-            this.folderBrowserDialogGenerateCSV = new System.Windows.Forms.FolderBrowserDialog();
             this.ColumnCustomerListButtonEdit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ColumnCustomerListButtonDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ColumnCustomerListId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +43,13 @@
             this.ColumnCustomerListContactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCustomerListAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCustomerListIsLocked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.buttonPageListFirst = new System.Windows.Forms.Button();
+            this.buttonPageListNext = new System.Windows.Forms.Button();
+            this.buttonPageListLast = new System.Windows.Forms.Button();
+            this.buttonPageListPrevious = new System.Windows.Forms.Button();
+            this.textBoxPageNumber = new System.Windows.Forms.TextBox();
+            this.folderBrowserDialogGenerateCSV = new System.Windows.Forms.FolderBrowserDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomerListReport)).BeginInit();
@@ -58,31 +58,31 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
             this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Controls.Add(this.buttonGenerateCSV);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1059, 50);
+            this.panel1.Size = new System.Drawing.Size(1324, 62);
             this.panel1.TabIndex = 11;
             // 
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(977, 9);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.buttonClose.Location = new System.Drawing.Point(1221, 11);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(70, 32);
+            this.buttonClose.Size = new System.Drawing.Size(88, 40);
             this.buttonClose.TabIndex = 6;
             this.buttonClose.TabStop = false;
             this.buttonClose.Text = "Close";
@@ -92,16 +92,16 @@
             // buttonGenerateCSV
             // 
             this.buttonGenerateCSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonGenerateCSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonGenerateCSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonGenerateCSV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonGenerateCSV.FlatAppearance.BorderSize = 0;
             this.buttonGenerateCSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGenerateCSV.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonGenerateCSV.ForeColor = System.Drawing.Color.White;
-            this.buttonGenerateCSV.Location = new System.Drawing.Point(903, 9);
-            this.buttonGenerateCSV.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.buttonGenerateCSV.Location = new System.Drawing.Point(1129, 11);
+            this.buttonGenerateCSV.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.buttonGenerateCSV.Name = "buttonGenerateCSV";
-            this.buttonGenerateCSV.Size = new System.Drawing.Size(70, 32);
+            this.buttonGenerateCSV.Size = new System.Drawing.Size(88, 40);
             this.buttonGenerateCSV.TabIndex = 5;
             this.buttonGenerateCSV.TabStop = false;
             this.buttonGenerateCSV.Text = "CSV";
@@ -111,10 +111,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Reports;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 8);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 38);
+            this.pictureBox1.Size = new System.Drawing.Size(45, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -123,10 +123,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(57, 12);
+            this.label1.Location = new System.Drawing.Point(71, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 28);
+            this.label1.Size = new System.Drawing.Size(265, 35);
             this.label1.TabIndex = 2;
             this.label1.Text = "Customer List Report";
             // 
@@ -149,16 +149,93 @@
             this.ColumnCustomerListContactNumber,
             this.ColumnCustomerListAddress,
             this.ColumnCustomerListIsLocked});
-            this.dataGridViewCustomerListReport.Location = new System.Drawing.Point(2, 46);
+            this.dataGridViewCustomerListReport.Location = new System.Drawing.Point(2, 58);
             this.dataGridViewCustomerListReport.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewCustomerListReport.MultiSelect = false;
             this.dataGridViewCustomerListReport.Name = "dataGridViewCustomerListReport";
             this.dataGridViewCustomerListReport.ReadOnly = true;
+            this.dataGridViewCustomerListReport.RowHeadersWidth = 51;
             this.dataGridViewCustomerListReport.RowTemplate.Height = 24;
             this.dataGridViewCustomerListReport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCustomerListReport.ShowEditingIcon = false;
-            this.dataGridViewCustomerListReport.Size = new System.Drawing.Size(1055, 299);
+            this.dataGridViewCustomerListReport.Size = new System.Drawing.Size(1319, 374);
             this.dataGridViewCustomerListReport.TabIndex = 12;
+            // 
+            // ColumnCustomerListButtonEdit
+            // 
+            this.ColumnCustomerListButtonEdit.DataPropertyName = "ColumnCustomerListButtonEdit";
+            this.ColumnCustomerListButtonEdit.HeaderText = "";
+            this.ColumnCustomerListButtonEdit.MinimumWidth = 6;
+            this.ColumnCustomerListButtonEdit.Name = "ColumnCustomerListButtonEdit";
+            this.ColumnCustomerListButtonEdit.ReadOnly = true;
+            this.ColumnCustomerListButtonEdit.Visible = false;
+            this.ColumnCustomerListButtonEdit.Width = 125;
+            // 
+            // ColumnCustomerListButtonDelete
+            // 
+            this.ColumnCustomerListButtonDelete.DataPropertyName = "ColumnCustomerListButtonDelete";
+            this.ColumnCustomerListButtonDelete.HeaderText = "";
+            this.ColumnCustomerListButtonDelete.MinimumWidth = 6;
+            this.ColumnCustomerListButtonDelete.Name = "ColumnCustomerListButtonDelete";
+            this.ColumnCustomerListButtonDelete.ReadOnly = true;
+            this.ColumnCustomerListButtonDelete.Visible = false;
+            this.ColumnCustomerListButtonDelete.Width = 125;
+            // 
+            // ColumnCustomerListId
+            // 
+            this.ColumnCustomerListId.DataPropertyName = "ColumnCustomerListId";
+            this.ColumnCustomerListId.HeaderText = "Id";
+            this.ColumnCustomerListId.MinimumWidth = 6;
+            this.ColumnCustomerListId.Name = "ColumnCustomerListId";
+            this.ColumnCustomerListId.ReadOnly = true;
+            this.ColumnCustomerListId.Visible = false;
+            this.ColumnCustomerListId.Width = 125;
+            // 
+            // ColumnCustomerListCustomerCode
+            // 
+            this.ColumnCustomerListCustomerCode.DataPropertyName = "ColumnCustomerListCustomerCode";
+            this.ColumnCustomerListCustomerCode.HeaderText = "Customer Code";
+            this.ColumnCustomerListCustomerCode.MinimumWidth = 6;
+            this.ColumnCustomerListCustomerCode.Name = "ColumnCustomerListCustomerCode";
+            this.ColumnCustomerListCustomerCode.ReadOnly = true;
+            this.ColumnCustomerListCustomerCode.Width = 125;
+            // 
+            // ColumnCustomerListCustomer
+            // 
+            this.ColumnCustomerListCustomer.DataPropertyName = "ColumnCustomerListCustomer";
+            this.ColumnCustomerListCustomer.HeaderText = "Customer";
+            this.ColumnCustomerListCustomer.MinimumWidth = 6;
+            this.ColumnCustomerListCustomer.Name = "ColumnCustomerListCustomer";
+            this.ColumnCustomerListCustomer.ReadOnly = true;
+            this.ColumnCustomerListCustomer.Width = 125;
+            // 
+            // ColumnCustomerListContactNumber
+            // 
+            this.ColumnCustomerListContactNumber.DataPropertyName = "ColumnCustomerListContactNumber";
+            this.ColumnCustomerListContactNumber.HeaderText = "Contact Number";
+            this.ColumnCustomerListContactNumber.MinimumWidth = 6;
+            this.ColumnCustomerListContactNumber.Name = "ColumnCustomerListContactNumber";
+            this.ColumnCustomerListContactNumber.ReadOnly = true;
+            this.ColumnCustomerListContactNumber.Width = 125;
+            // 
+            // ColumnCustomerListAddress
+            // 
+            this.ColumnCustomerListAddress.DataPropertyName = "ColumnCustomerListAddress";
+            this.ColumnCustomerListAddress.HeaderText = "Address";
+            this.ColumnCustomerListAddress.MinimumWidth = 6;
+            this.ColumnCustomerListAddress.Name = "ColumnCustomerListAddress";
+            this.ColumnCustomerListAddress.ReadOnly = true;
+            this.ColumnCustomerListAddress.Width = 125;
+            // 
+            // ColumnCustomerListIsLocked
+            // 
+            this.ColumnCustomerListIsLocked.DataPropertyName = "ColumnCustomerListIsLocked";
+            this.ColumnCustomerListIsLocked.HeaderText = "IsLocked";
+            this.ColumnCustomerListIsLocked.MinimumWidth = 6;
+            this.ColumnCustomerListIsLocked.Name = "ColumnCustomerListIsLocked";
+            this.ColumnCustomerListIsLocked.ReadOnly = true;
+            this.ColumnCustomerListIsLocked.Visible = false;
+            this.ColumnCustomerListIsLocked.Width = 125;
             // 
             // panel4
             // 
@@ -169,10 +246,10 @@
             this.panel4.Controls.Add(this.buttonPageListPrevious);
             this.panel4.Controls.Add(this.textBoxPageNumber);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 341);
+            this.panel4.Location = new System.Drawing.Point(0, 427);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1059, 42);
+            this.panel4.Size = new System.Drawing.Size(1324, 52);
             this.panel4.TabIndex = 21;
             // 
             // buttonPageListFirst
@@ -182,10 +259,10 @@
             this.buttonPageListFirst.FlatAppearance.BorderSize = 0;
             this.buttonPageListFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPageListFirst.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.buttonPageListFirst.Location = new System.Drawing.Point(10, 8);
+            this.buttonPageListFirst.Location = new System.Drawing.Point(12, 10);
             this.buttonPageListFirst.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPageListFirst.Name = "buttonPageListFirst";
-            this.buttonPageListFirst.Size = new System.Drawing.Size(66, 26);
+            this.buttonPageListFirst.Size = new System.Drawing.Size(82, 32);
             this.buttonPageListFirst.TabIndex = 8;
             this.buttonPageListFirst.TabStop = false;
             this.buttonPageListFirst.Text = "First";
@@ -198,10 +275,10 @@
             this.buttonPageListNext.FlatAppearance.BorderSize = 0;
             this.buttonPageListNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPageListNext.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.buttonPageListNext.Location = new System.Drawing.Point(270, 8);
+            this.buttonPageListNext.Location = new System.Drawing.Point(338, 10);
             this.buttonPageListNext.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPageListNext.Name = "buttonPageListNext";
-            this.buttonPageListNext.Size = new System.Drawing.Size(66, 26);
+            this.buttonPageListNext.Size = new System.Drawing.Size(82, 32);
             this.buttonPageListNext.TabIndex = 10;
             this.buttonPageListNext.TabStop = false;
             this.buttonPageListNext.Text = "Next";
@@ -214,10 +291,10 @@
             this.buttonPageListLast.FlatAppearance.BorderSize = 0;
             this.buttonPageListLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPageListLast.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.buttonPageListLast.Location = new System.Drawing.Point(338, 8);
+            this.buttonPageListLast.Location = new System.Drawing.Point(422, 10);
             this.buttonPageListLast.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPageListLast.Name = "buttonPageListLast";
-            this.buttonPageListLast.Size = new System.Drawing.Size(66, 26);
+            this.buttonPageListLast.Size = new System.Drawing.Size(82, 32);
             this.buttonPageListLast.TabIndex = 11;
             this.buttonPageListLast.TabStop = false;
             this.buttonPageListLast.Text = "Last";
@@ -231,10 +308,10 @@
             this.buttonPageListPrevious.FlatAppearance.BorderSize = 0;
             this.buttonPageListPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPageListPrevious.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.buttonPageListPrevious.Location = new System.Drawing.Point(80, 8);
+            this.buttonPageListPrevious.Location = new System.Drawing.Point(100, 10);
             this.buttonPageListPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPageListPrevious.Name = "buttonPageListPrevious";
-            this.buttonPageListPrevious.Size = new System.Drawing.Size(69, 26);
+            this.buttonPageListPrevious.Size = new System.Drawing.Size(86, 32);
             this.buttonPageListPrevious.TabIndex = 9;
             this.buttonPageListPrevious.TabStop = false;
             this.buttonPageListPrevious.Text = "Previous";
@@ -246,85 +323,26 @@
             this.textBoxPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxPageNumber.BackColor = System.Drawing.Color.White;
             this.textBoxPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPageNumber.Location = new System.Drawing.Point(185, 12);
+            this.textBoxPageNumber.Location = new System.Drawing.Point(231, 15);
             this.textBoxPageNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPageNumber.Name = "textBoxPageNumber";
             this.textBoxPageNumber.ReadOnly = true;
-            this.textBoxPageNumber.Size = new System.Drawing.Size(55, 19);
+            this.textBoxPageNumber.Size = new System.Drawing.Size(69, 23);
             this.textBoxPageNumber.TabIndex = 12;
             this.textBoxPageNumber.TabStop = false;
             this.textBoxPageNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // ColumnCustomerListButtonEdit
-            // 
-            this.ColumnCustomerListButtonEdit.DataPropertyName = "ColumnCustomerListButtonEdit";
-            this.ColumnCustomerListButtonEdit.HeaderText = "";
-            this.ColumnCustomerListButtonEdit.Name = "ColumnCustomerListButtonEdit";
-            this.ColumnCustomerListButtonEdit.ReadOnly = true;
-            this.ColumnCustomerListButtonEdit.Visible = false;
-            // 
-            // ColumnCustomerListButtonDelete
-            // 
-            this.ColumnCustomerListButtonDelete.DataPropertyName = "ColumnCustomerListButtonDelete";
-            this.ColumnCustomerListButtonDelete.HeaderText = "";
-            this.ColumnCustomerListButtonDelete.Name = "ColumnCustomerListButtonDelete";
-            this.ColumnCustomerListButtonDelete.ReadOnly = true;
-            this.ColumnCustomerListButtonDelete.Visible = false;
-            // 
-            // ColumnCustomerListId
-            // 
-            this.ColumnCustomerListId.DataPropertyName = "ColumnCustomerListId";
-            this.ColumnCustomerListId.HeaderText = "Id";
-            this.ColumnCustomerListId.Name = "ColumnCustomerListId";
-            this.ColumnCustomerListId.ReadOnly = true;
-            this.ColumnCustomerListId.Visible = false;
-            // 
-            // ColumnCustomerListCustomerCode
-            // 
-            this.ColumnCustomerListCustomerCode.DataPropertyName = "ColumnCustomerListCustomerCode";
-            this.ColumnCustomerListCustomerCode.HeaderText = "Customer Code";
-            this.ColumnCustomerListCustomerCode.Name = "ColumnCustomerListCustomerCode";
-            this.ColumnCustomerListCustomerCode.ReadOnly = true;
-            // 
-            // ColumnCustomerListCustomer
-            // 
-            this.ColumnCustomerListCustomer.DataPropertyName = "ColumnCustomerListCustomer";
-            this.ColumnCustomerListCustomer.HeaderText = "Customer";
-            this.ColumnCustomerListCustomer.Name = "ColumnCustomerListCustomer";
-            this.ColumnCustomerListCustomer.ReadOnly = true;
-            // 
-            // ColumnCustomerListContactNumber
-            // 
-            this.ColumnCustomerListContactNumber.DataPropertyName = "ColumnCustomerListContactNumber";
-            this.ColumnCustomerListContactNumber.HeaderText = "Contact Number";
-            this.ColumnCustomerListContactNumber.Name = "ColumnCustomerListContactNumber";
-            this.ColumnCustomerListContactNumber.ReadOnly = true;
-            // 
-            // ColumnCustomerListAddress
-            // 
-            this.ColumnCustomerListAddress.DataPropertyName = "ColumnCustomerListAddress";
-            this.ColumnCustomerListAddress.HeaderText = "Address";
-            this.ColumnCustomerListAddress.Name = "ColumnCustomerListAddress";
-            this.ColumnCustomerListAddress.ReadOnly = true;
-            // 
-            // ColumnCustomerListIsLocked
-            // 
-            this.ColumnCustomerListIsLocked.DataPropertyName = "ColumnCustomerListIsLocked";
-            this.ColumnCustomerListIsLocked.HeaderText = "IsLocked";
-            this.ColumnCustomerListIsLocked.Name = "ColumnCustomerListIsLocked";
-            this.ColumnCustomerListIsLocked.ReadOnly = true;
-            this.ColumnCustomerListIsLocked.Visible = false;
-            // 
             // RepCustomerListReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1059, 383);
+            this.ClientSize = new System.Drawing.Size(1324, 479);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.dataGridViewCustomerListReport);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RepCustomerListReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer List Report";

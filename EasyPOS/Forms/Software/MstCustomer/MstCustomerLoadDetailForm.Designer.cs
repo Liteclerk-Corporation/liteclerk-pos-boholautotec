@@ -48,25 +48,26 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(489, 50);
+            this.panel1.Size = new System.Drawing.Size(611, 62);
             this.panel1.TabIndex = 7;
             // 
             // buttonSave
             // 
             this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonSave.FlatAppearance.BorderSize = 0;
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSave.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSave.ForeColor = System.Drawing.Color.White;
-            this.buttonSave.Location = new System.Drawing.Point(334, 10);
+            this.buttonSave.Location = new System.Drawing.Point(418, 12);
             this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(70, 32);
+            this.buttonSave.Size = new System.Drawing.Size(88, 40);
             this.buttonSave.TabIndex = 20;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = false;
@@ -75,10 +76,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Customer;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -87,26 +88,26 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(50, 14);
+            this.label1.Location = new System.Drawing.Point(62, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 28);
+            this.label1.Size = new System.Drawing.Size(268, 35);
             this.label1.TabIndex = 2;
             this.label1.Text = "Customer Load Detail";
             // 
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(409, 10);
+            this.buttonClose.Location = new System.Drawing.Point(511, 12);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(70, 32);
+            this.buttonClose.Size = new System.Drawing.Size(88, 40);
             this.buttonClose.TabIndex = 21;
             this.buttonClose.TabStop = false;
             this.buttonClose.Text = "Close";
@@ -116,10 +117,10 @@
             // textBoxAmount
             // 
             this.textBoxAmount.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxAmount.Location = new System.Drawing.Point(123, 57);
+            this.textBoxAmount.Location = new System.Drawing.Point(154, 71);
             this.textBoxAmount.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmount.Name = "textBoxAmount";
-            this.textBoxAmount.Size = new System.Drawing.Size(355, 26);
+            this.textBoxAmount.Size = new System.Drawing.Size(443, 30);
             this.textBoxAmount.TabIndex = 1;
             this.textBoxAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
@@ -129,18 +130,18 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label3.Location = new System.Drawing.Point(56, 59);
+            this.label3.Location = new System.Drawing.Point(70, 74);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 19);
+            this.label3.Size = new System.Drawing.Size(76, 23);
             this.label3.TabIndex = 13;
             this.label3.Text = "Amount:";
             // 
             // MstCustomerLoadDetailForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(489, 92);
+            this.ClientSize = new System.Drawing.Size(611, 115);
             this.Controls.Add(this.textBoxAmount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);

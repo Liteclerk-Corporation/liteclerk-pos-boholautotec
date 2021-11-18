@@ -58,31 +58,32 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
             this.panel1.Controls.Add(this.buttonView);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1096, 50);
+            this.panel1.Size = new System.Drawing.Size(1370, 62);
             this.panel1.TabIndex = 7;
             // 
             // buttonView
             // 
             this.buttonView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonView.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonView.FlatAppearance.BorderSize = 0;
             this.buttonView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonView.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonView.ForeColor = System.Drawing.Color.White;
-            this.buttonView.Location = new System.Drawing.Point(941, 10);
+            this.buttonView.Location = new System.Drawing.Point(1176, 12);
             this.buttonView.Margin = new System.Windows.Forms.Padding(2);
             this.buttonView.Name = "buttonView";
-            this.buttonView.Size = new System.Drawing.Size(70, 32);
+            this.buttonView.Size = new System.Drawing.Size(88, 40);
             this.buttonView.TabIndex = 20;
             this.buttonView.TabStop = false;
             this.buttonView.Text = "View";
@@ -92,10 +93,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Reports;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -104,26 +105,26 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(50, 13);
+            this.label1.Location = new System.Drawing.Point(62, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 28);
+            this.label1.Size = new System.Drawing.Size(236, 35);
             this.label1.TabIndex = 2;
             this.label1.Text = "Remittance Report";
             // 
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(1016, 10);
+            this.buttonClose.Location = new System.Drawing.Point(1270, 12);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(70, 32);
+            this.buttonClose.Size = new System.Drawing.Size(88, 40);
             this.buttonClose.TabIndex = 21;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = false;
@@ -148,17 +149,17 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1096, 560);
+            this.panel4.Size = new System.Drawing.Size(1370, 700);
             this.panel4.TabIndex = 8;
             this.panel4.TabStop = true;
             // 
             // dateTimePickerEndDateFilter
             // 
             this.dateTimePickerEndDateFilter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerEndDateFilter.Location = new System.Drawing.Point(436, 154);
+            this.dateTimePickerEndDateFilter.Location = new System.Drawing.Point(545, 192);
             this.dateTimePickerEndDateFilter.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerEndDateFilter.Name = "dateTimePickerEndDateFilter";
-            this.dateTimePickerEndDateFilter.Size = new System.Drawing.Size(177, 26);
+            this.dateTimePickerEndDateFilter.Size = new System.Drawing.Size(220, 30);
             this.dateTimePickerEndDateFilter.TabIndex = 34;
             this.dateTimePickerEndDateFilter.Visible = false;
             this.dateTimePickerEndDateFilter.ValueChanged += new System.EventHandler(this.dateTimePickerEndDateFilter_ValueChanged);
@@ -167,10 +168,10 @@
             // 
             this.labelEndDate.AutoSize = true;
             this.labelEndDate.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelEndDate.Location = new System.Drawing.Point(348, 160);
+            this.labelEndDate.Location = new System.Drawing.Point(435, 200);
             this.labelEndDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEndDate.Name = "labelEndDate";
-            this.labelEndDate.Size = new System.Drawing.Size(68, 19);
+            this.labelEndDate.Size = new System.Drawing.Size(84, 23);
             this.labelEndDate.TabIndex = 35;
             this.labelEndDate.Text = "End Date:";
             this.labelEndDate.Visible = false;
@@ -179,10 +180,10 @@
             // 
             this.comboBoxRemittanceNumber.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.comboBoxRemittanceNumber.FormattingEnabled = true;
-            this.comboBoxRemittanceNumber.Location = new System.Drawing.Point(436, 215);
+            this.comboBoxRemittanceNumber.Location = new System.Drawing.Point(545, 269);
             this.comboBoxRemittanceNumber.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxRemittanceNumber.Name = "comboBoxRemittanceNumber";
-            this.comboBoxRemittanceNumber.Size = new System.Drawing.Size(177, 27);
+            this.comboBoxRemittanceNumber.Size = new System.Drawing.Size(220, 31);
             this.comboBoxRemittanceNumber.TabIndex = 33;
             this.comboBoxRemittanceNumber.Visible = false;
             // 
@@ -190,10 +191,10 @@
             // 
             this.labelRemittanceNumber.AutoSize = true;
             this.labelRemittanceNumber.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelRemittanceNumber.Location = new System.Drawing.Point(325, 218);
+            this.labelRemittanceNumber.Location = new System.Drawing.Point(406, 272);
             this.labelRemittanceNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRemittanceNumber.Name = "labelRemittanceNumber";
-            this.labelRemittanceNumber.Size = new System.Drawing.Size(105, 19);
+            this.labelRemittanceNumber.Size = new System.Drawing.Size(132, 23);
             this.labelRemittanceNumber.TabIndex = 32;
             this.labelRemittanceNumber.Text = "Remittance No.:";
             this.labelRemittanceNumber.Visible = false;
@@ -204,10 +205,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.listBoxRemittanceReport);
-            this.panel2.Location = new System.Drawing.Point(10, 55);
+            this.panel2.Location = new System.Drawing.Point(12, 69);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(304, 445);
+            this.panel2.Size = new System.Drawing.Size(380, 556);
             this.panel2.TabIndex = 30;
             // 
             // listBoxRemittanceReport
@@ -215,7 +216,7 @@
             this.listBoxRemittanceReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBoxRemittanceReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxRemittanceReport.FormattingEnabled = true;
-            this.listBoxRemittanceReport.ItemHeight = 19;
+            this.listBoxRemittanceReport.ItemHeight = 23;
             this.listBoxRemittanceReport.Items.AddRange(new object[] {
             "Remittance Report",
             "",
@@ -223,7 +224,7 @@
             this.listBoxRemittanceReport.Location = new System.Drawing.Point(0, 0);
             this.listBoxRemittanceReport.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxRemittanceReport.Name = "listBoxRemittanceReport";
-            this.listBoxRemittanceReport.Size = new System.Drawing.Size(304, 445);
+            this.listBoxRemittanceReport.Size = new System.Drawing.Size(380, 556);
             this.listBoxRemittanceReport.TabIndex = 4;
             this.listBoxRemittanceReport.SelectedIndexChanged += new System.EventHandler(this.listBoxRemittanceReport_SelectedIndexChanged);
             // 
@@ -231,10 +232,10 @@
             // 
             this.dateTimePickerStartDateFilter.Checked = false;
             this.dateTimePickerStartDateFilter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerStartDateFilter.Location = new System.Drawing.Point(436, 124);
+            this.dateTimePickerStartDateFilter.Location = new System.Drawing.Point(545, 155);
             this.dateTimePickerStartDateFilter.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerStartDateFilter.Name = "dateTimePickerStartDateFilter";
-            this.dateTimePickerStartDateFilter.Size = new System.Drawing.Size(177, 26);
+            this.dateTimePickerStartDateFilter.Size = new System.Drawing.Size(220, 30);
             this.dateTimePickerStartDateFilter.TabIndex = 1;
             this.dateTimePickerStartDateFilter.Visible = false;
             this.dateTimePickerStartDateFilter.ValueChanged += new System.EventHandler(this.dateTimePickerStartDateFilter_ValueChanged);
@@ -243,12 +244,12 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(318, 55);
+            this.panel3.Location = new System.Drawing.Point(398, 69);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(768, 30);
+            this.panel3.Size = new System.Drawing.Size(960, 38);
             this.panel3.TabIndex = 23;
             // 
             // label2
@@ -256,10 +257,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(7, 6);
+            this.label2.Location = new System.Drawing.Point(9, 8);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 19);
+            this.label2.Size = new System.Drawing.Size(59, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Filters";
             // 
@@ -267,10 +268,10 @@
             // 
             this.labelUser.AutoSize = true;
             this.labelUser.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelUser.Location = new System.Drawing.Point(348, 192);
+            this.labelUser.Location = new System.Drawing.Point(435, 240);
             this.labelUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(40, 19);
+            this.labelUser.Size = new System.Drawing.Size(48, 23);
             this.labelUser.TabIndex = 28;
             this.labelUser.Text = "User:";
             this.labelUser.Visible = false;
@@ -279,10 +280,10 @@
             // 
             this.labelTerminal.AutoSize = true;
             this.labelTerminal.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelTerminal.Location = new System.Drawing.Point(348, 97);
+            this.labelTerminal.Location = new System.Drawing.Point(435, 121);
             this.labelTerminal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTerminal.Name = "labelTerminal";
-            this.labelTerminal.Size = new System.Drawing.Size(63, 19);
+            this.labelTerminal.Size = new System.Drawing.Size(78, 23);
             this.labelTerminal.TabIndex = 25;
             this.labelTerminal.Text = "Terminal:";
             this.labelTerminal.Visible = false;
@@ -291,10 +292,10 @@
             // 
             this.labelStartDate.AutoSize = true;
             this.labelStartDate.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelStartDate.Location = new System.Drawing.Point(348, 130);
+            this.labelStartDate.Location = new System.Drawing.Point(435, 162);
             this.labelStartDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelStartDate.Name = "labelStartDate";
-            this.labelStartDate.Size = new System.Drawing.Size(74, 19);
+            this.labelStartDate.Size = new System.Drawing.Size(90, 23);
             this.labelStartDate.TabIndex = 26;
             this.labelStartDate.Text = "Start Date:";
             this.labelStartDate.Visible = false;
@@ -303,10 +304,10 @@
             // 
             this.comboBoxUser.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.comboBoxUser.FormattingEnabled = true;
-            this.comboBoxUser.Location = new System.Drawing.Point(436, 184);
+            this.comboBoxUser.Location = new System.Drawing.Point(545, 230);
             this.comboBoxUser.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxUser.Name = "comboBoxUser";
-            this.comboBoxUser.Size = new System.Drawing.Size(336, 27);
+            this.comboBoxUser.Size = new System.Drawing.Size(419, 31);
             this.comboBoxUser.TabIndex = 2;
             this.comboBoxUser.Visible = false;
             this.comboBoxUser.SelectedIndexChanged += new System.EventHandler(this.comboBoxUser_SelectedIndexChanged);
@@ -315,24 +316,24 @@
             // 
             this.comboBoxTerminal.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.comboBoxTerminal.FormattingEnabled = true;
-            this.comboBoxTerminal.Location = new System.Drawing.Point(436, 94);
+            this.comboBoxTerminal.Location = new System.Drawing.Point(545, 118);
             this.comboBoxTerminal.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTerminal.Name = "comboBoxTerminal";
-            this.comboBoxTerminal.Size = new System.Drawing.Size(177, 27);
+            this.comboBoxTerminal.Size = new System.Drawing.Size(220, 31);
             this.comboBoxTerminal.TabIndex = 0;
             this.comboBoxTerminal.Visible = false;
             this.comboBoxTerminal.SelectedIndexChanged += new System.EventHandler(this.comboBoxTerminal_SelectedIndexChanged);
             // 
             // RepRemittanceForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1096, 560);
+            this.ClientSize = new System.Drawing.Size(1370, 700);
             this.Controls.Add(this.panel4);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "RepRemittanceForm";
             this.Text = "RepRemittanceReportForm";
             this.panel1.ResumeLayout(false);

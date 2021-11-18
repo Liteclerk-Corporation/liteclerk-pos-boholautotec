@@ -43,7 +43,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
             sysUserRights = new Modules.SysUserRightsModule("SysTables");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -91,7 +91,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
                 String[] addTerminal = mstTerminalController.AddTerminal(newTerminal);
                 if (addTerminal[1].Equals("0") == true)
                 {
-                    MessageBox.Show(addTerminal[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addTerminal[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -106,7 +106,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
                 String[] updateTerminal = mstTerminalController.UpdateTerminal(mstTerminalEntity);
                 if (updateTerminal[1].Equals("0") == true)
                 {
-                    MessageBox.Show(updateTerminal[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(updateTerminal[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {

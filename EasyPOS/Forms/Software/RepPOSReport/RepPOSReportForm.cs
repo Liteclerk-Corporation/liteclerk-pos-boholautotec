@@ -187,7 +187,7 @@ namespace EasyPOS.Forms.Software.RepPOSReport
             }
             else
             {
-                MessageBox.Show("Please select a report.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a report.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -213,7 +213,7 @@ namespace EasyPOS.Forms.Software.RepPOSReport
 
                         if (sysUserRights.GetUserRights() == null)
                         {
-                            MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -224,7 +224,7 @@ namespace EasyPOS.Forms.Software.RepPOSReport
                             }
                             else
                             {
-                                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
 
@@ -234,7 +234,7 @@ namespace EasyPOS.Forms.Software.RepPOSReport
 
                         if (sysUserRights.GetUserRights() == null)
                         {
-                            MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -245,7 +245,7 @@ namespace EasyPOS.Forms.Software.RepPOSReport
                             }
                             else
                             {
-                                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
 
@@ -553,14 +553,14 @@ namespace EasyPOS.Forms.Software.RepPOSReport
                         break;
 
                     default:
-                        MessageBox.Show("Please select a report.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please select a report.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         break;
                 }
             }
             else
             {
-                MessageBox.Show("Please select a report.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a report.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

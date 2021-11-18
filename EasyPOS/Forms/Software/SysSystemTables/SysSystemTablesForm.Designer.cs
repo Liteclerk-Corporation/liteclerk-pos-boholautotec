@@ -225,7 +225,7 @@
             this.tabControlSystemTable.Controls.Add(this.tabPage8);
             this.tabControlSystemTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlSystemTable.Location = new System.Drawing.Point(0, 0);
-            this.tabControlSystemTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControlSystemTable.Margin = new System.Windows.Forms.Padding(4);
             this.tabControlSystemTable.Name = "tabControlSystemTable";
             this.tabControlSystemTable.SelectedIndex = 0;
             this.tabControlSystemTable.Size = new System.Drawing.Size(1370, 638);
@@ -1799,9 +1799,9 @@
             this.tabPage8.Controls.Add(this.dataGridViewLanguageList);
             this.tabPage8.Controls.Add(this.textBoxLanguageListFilter);
             this.tabPage8.Location = new System.Drawing.Point(4, 32);
-            this.tabPage8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage8.Size = new System.Drawing.Size(1362, 602);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Label";
@@ -1920,7 +1920,7 @@
             this.ColumnLanguageListLabel,
             this.ColumnLanguageListDisplayLabel});
             this.dataGridViewLanguageList.Location = new System.Drawing.Point(8, 41);
-            this.dataGridViewLanguageList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewLanguageList.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewLanguageList.MultiSelect = false;
             this.dataGridViewLanguageList.Name = "dataGridViewLanguageList";
             this.dataGridViewLanguageList.ReadOnly = true;
@@ -1996,12 +1996,13 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
             this.panel1.Controls.Add(this.buttonAdd);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -2011,7 +2012,7 @@
             // buttonAdd
             // 
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonAdd.FlatAppearance.BorderSize = 0;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2052,7 +2053,7 @@
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

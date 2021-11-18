@@ -31,7 +31,7 @@ namespace EasyPOS.Forms.License.SysLicense
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -55,7 +55,7 @@ namespace EasyPOS.Forms.License.SysLicense
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

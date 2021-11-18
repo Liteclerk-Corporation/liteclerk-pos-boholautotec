@@ -131,8 +131,8 @@ namespace EasyPOS.Forms.Software.MstItemGroup
         {
             UpdateSearchItemListDataSource();
 
-            dataGridViewSearchItemList.Columns[11].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewSearchItemList.Columns[11].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewSearchItemList.Columns[11].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewSearchItemList.Columns[11].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewSearchItemList.Columns[11].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewSearchItemList.DataSource = searchItemListDataSource;
@@ -175,7 +175,7 @@ namespace EasyPOS.Forms.Software.MstItemGroup
                     }
                     else
                     {
-                        MessageBox.Show(addUserForm[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(addUserForm[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -188,7 +188,7 @@ namespace EasyPOS.Forms.Software.MstItemGroup
                     }
                     else
                     {
-                        MessageBox.Show(updateUserForm[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(updateUserForm[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

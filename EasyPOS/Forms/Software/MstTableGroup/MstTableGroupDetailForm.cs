@@ -33,7 +33,7 @@ namespace EasyPOS.Forms.Software.MstTableGroup
             sysUserRights = new Modules.SysUserRightsModule("MstRestaurantTableDetail");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -137,7 +137,7 @@ namespace EasyPOS.Forms.Software.MstTableGroup
             else
             {
                 UpdateComponents(false);
-                MessageBox.Show(lockTableGroup[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(lockTableGroup[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -154,7 +154,7 @@ namespace EasyPOS.Forms.Software.MstTableGroup
             else
             {
                 UpdateComponents(true);
-                MessageBox.Show(unlockTableGroup[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(unlockTableGroup[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -252,12 +252,12 @@ namespace EasyPOS.Forms.Software.MstTableGroup
         {
             UpdateTableListDataSource();
 
-            dataGridViewTableList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewTableList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewTableList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewTableList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewTableList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewTableList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewTableList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewTableList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewTableList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewTableList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewTableList.DataSource = tableDataSource;
@@ -297,7 +297,7 @@ namespace EasyPOS.Forms.Software.MstTableGroup
 
             if (e.RowIndex > -1 && dataGridViewTableList.CurrentCell.ColumnIndex == dataGridViewTableList.Columns["ColumnTableListButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Table?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Table?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     var id = Convert.ToInt32(dataGridViewTableList.Rows[e.RowIndex].Cells[dataGridViewTableList.Columns["ColumnTableListId"].Index].Value);
@@ -311,7 +311,7 @@ namespace EasyPOS.Forms.Software.MstTableGroup
                     }
                     else
                     {
-                        MessageBox.Show(deleteTable[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteTable[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

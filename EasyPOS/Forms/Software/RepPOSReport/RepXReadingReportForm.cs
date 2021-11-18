@@ -50,7 +50,7 @@ namespace EasyPOS.Forms.Software.RepPOSReport
             sysUserRights = new Modules.SysUserRightsModule("RepPOS (X Reading)");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

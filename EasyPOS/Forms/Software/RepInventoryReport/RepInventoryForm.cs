@@ -284,7 +284,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
             }
             else
             {
-                MessageBox.Show("Please select a report.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a report.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -300,7 +300,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                         sysUserRights = new Modules.SysUserRightsModule("RepInventory");
                         if (sysUserRights.GetUserRights() == null)
                         {
-                            MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -311,7 +311,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                             }
                             else
                             {
-                                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         break;
@@ -320,7 +320,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                         sysUserRights = new Modules.SysUserRightsModule("RepInventoryItemList");
                         if (sysUserRights.GetUserRights() == null)
                         {
-                            MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -331,7 +331,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                             }
                             else
                             {
-                                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         break;
@@ -340,7 +340,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                         sysUserRights = new Modules.SysUserRightsModule("RepInventoryStockCard");
                         if (sysUserRights.GetUserRights() == null)
                         {
-                            MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -351,7 +351,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                             }
                             else
                             {
-                                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         break;
@@ -360,7 +360,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                         sysUserRights = new Modules.SysUserRightsModule("RepInventoryStockInDetail");
                         if (sysUserRights.GetUserRights() == null)
                         {
-                            MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -371,7 +371,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                             }
                             else
                             {
-                                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         break;
@@ -380,7 +380,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                         sysUserRights = new Modules.SysUserRightsModule("RepInventoryStockOutDetail");
                         if (sysUserRights.GetUserRights() == null)
                         {
-                            MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -391,7 +391,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                             }
                             else
                             {
-                                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         break;
@@ -400,7 +400,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                         sysUserRights = new Modules.SysUserRightsModule("RepInventoryStockCountDetail");
                         if (sysUserRights.GetUserRights() == null)
                         {
-                            MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -411,7 +411,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                             }
                             else
                             {
-                                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         break;
@@ -420,7 +420,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                         sysUserRights = new Modules.SysUserRightsModule("RepInventoryStockLevelReport");
                         if (sysUserRights.GetUserRights() == null)
                         {
-                            MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -431,7 +431,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                             }
                             else
                             {
-                                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         break;
@@ -440,7 +440,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                         sysUserRights = new Modules.SysUserRightsModule("RepInventoryItemExpiry");
                         if (sysUserRights.GetUserRights() == null)
                         {
-                            MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -451,7 +451,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                             }
                             else
                             {
-                                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         break;
@@ -460,7 +460,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                         sysUserRights = new Modules.SysUserRightsModule("RepRestaurantInventory");
                         if (sysUserRights.GetUserRights() == null)
                         {
-                            MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -471,19 +471,19 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                             else
                             {
                                 
-                                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         break;
                     default:
-                        MessageBox.Show("Please select a report.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please select a report.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         break;
                 }
             }
             else
             {
-                MessageBox.Show("Please select a report.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a report.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

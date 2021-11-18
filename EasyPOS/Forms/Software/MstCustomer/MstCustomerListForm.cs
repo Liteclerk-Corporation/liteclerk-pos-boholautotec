@@ -46,7 +46,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
             sysUserRights = new Modules.SysUserRightsModule("MstCustomer");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -210,12 +210,12 @@ namespace EasyPOS.Forms.Software.MstCustomer
         {
             UpdateCustomerListDataSource();
 
-            dataGridViewCustomerList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewCustomerList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewCustomerList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewCustomerList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewCustomerList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewCustomerList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewCustomerList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewCustomerList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewCustomerList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewCustomerList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewCustomerList.DataSource = itemListDataSource;
@@ -238,7 +238,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
             }
             else
             {
-                MessageBox.Show(addCustomer[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(addCustomer[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -335,11 +335,11 @@ namespace EasyPOS.Forms.Software.MstCustomer
 
                 if (isLocked == true)
                 {
-                    MessageBox.Show("Already locked.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Already locked.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    DialogResult deleteDialogResult = MessageBox.Show("Delete Customer?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult deleteDialogResult = MessageBox.Show("Delete Customer?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (deleteDialogResult == DialogResult.Yes)
                     {
                         Controllers.MstCustomerController mstCustomerController = new Controllers.MstCustomerController();
@@ -352,7 +352,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
                         }
                         else
                         {
-                            MessageBox.Show(deleteCustomer[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(deleteCustomer[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }

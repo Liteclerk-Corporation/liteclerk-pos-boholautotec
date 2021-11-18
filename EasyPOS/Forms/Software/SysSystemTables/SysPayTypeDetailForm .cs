@@ -38,7 +38,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
             sysUserRights = new Modules.SysUserRightsModule("SysTables");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -130,7 +130,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
                 String[] addPayType = mstPayTypeController.AddPayType(updatePayType);
                 if (addPayType[1].Equals("0"))
                 {
-                    MessageBox.Show(addPayType[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addPayType[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -148,7 +148,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
                 String[] updatePayType = mstPayTypeController.UpdatePayType(mstPayTypeEntity);
                 if (updatePayType[1].Equals("0"))
                 {
-                    MessageBox.Show(updatePayType[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(updatePayType[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {

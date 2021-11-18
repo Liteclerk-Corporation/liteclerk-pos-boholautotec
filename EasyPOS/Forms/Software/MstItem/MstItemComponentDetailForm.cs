@@ -123,7 +123,7 @@ namespace EasyPOS.Forms.Software.MstItem
 
                         if (addItemComponent[1].Equals("0") == true)
                         {
-                            MessageBox.Show(addItemComponent[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(addItemComponent[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
@@ -138,7 +138,7 @@ namespace EasyPOS.Forms.Software.MstItem
 
                         if (updateItemComponent[1].Equals("0") == true)
                         {
-                            MessageBox.Show(updateItemComponent[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(updateItemComponent[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
@@ -149,12 +149,12 @@ namespace EasyPOS.Forms.Software.MstItem
                 }
                 else
                 {
-                    MessageBox.Show("Cannot add component to Non-Inventory item.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Cannot add component to Non-Inventory item.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

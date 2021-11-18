@@ -71,7 +71,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
             sysUserRights = new Modules.SysUserRightsModule("MstCustomerDetail");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -241,7 +241,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
             else
             {
                 UpdateComponents(false);
-                MessageBox.Show(lockCustomer[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(lockCustomer[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -249,7 +249,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
         {
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -264,7 +264,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
                 else
                 {
                     UpdateComponents(true);
-                    MessageBox.Show(unlockCustomer[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(unlockCustomer[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -277,7 +277,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
             }
             else
             {
-                DialogResult closeDialogResult = MessageBox.Show("Save Changes?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult closeDialogResult = MessageBox.Show("Save Changes?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (closeDialogResult == DialogResult.Yes)
                 {
                     Controllers.MstCustomerController mstCustomerController = new Controllers.MstCustomerController();
@@ -309,7 +309,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
                     }
                     else
                     {
-                        MessageBox.Show(lockCustomer[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(lockCustomer[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -496,7 +496,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
 
             if (e.RowIndex > -1 && dataGridViewCustomerLoadList.CurrentCell.ColumnIndex == dataGridViewCustomerLoadList.Columns["ColumnCustomerLoadListButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete CustomerLoad?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete CustomerLoad?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     Controllers.MstCustomerLoadController mstCustomerLoadController = new Controllers.MstCustomerLoadController();
@@ -511,7 +511,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
                     }
                     else
                     {
-                        MessageBox.Show(deleteCustomerLoad[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteCustomerLoad[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

@@ -98,7 +98,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
 
                 if (addCustomerLoad[1].Equals("0") == true)
                 {
-                    MessageBox.Show(addCustomerLoad[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addCustomerLoad[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {

@@ -144,7 +144,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
             sysUserRights = new Modules.SysUserRightsModule("SysTables");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -345,12 +345,12 @@ namespace EasyPOS.Forms.Software.SysSystemTables
         {
             UpdateAccountListDataSource();
 
-            dataGridViewAccountList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewAccountList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewAccountList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewAccountList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewAccountList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewAccountList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewAccountList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewAccountList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewAccountList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewAccountList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewAccountList.DataSource = accountListDataSource;
@@ -452,7 +452,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
 
             if (e.RowIndex > -1 && dataGridViewAccountList.CurrentCell.ColumnIndex == dataGridViewAccountList.Columns["ColumnAccountListButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Account?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Account?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     Controllers.MstAccountController mstAccountController = new Controllers.MstAccountController();
@@ -467,7 +467,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
                     }
                     else
                     {
-                        MessageBox.Show(deleteAccount[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteAccount[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -590,12 +590,12 @@ namespace EasyPOS.Forms.Software.SysSystemTables
         {
             UpdatePayTypeListDataSource();
 
-            dataGridViewPayTypeList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewPayTypeList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewPayTypeList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewPayTypeList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewPayTypeList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewPayTypeList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewPayTypeList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewPayTypeList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewPayTypeList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewPayTypeList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewPayTypeList.DataSource = payTypeListDataSource;
@@ -632,7 +632,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
             if (e.RowIndex > -1 && dataGridViewPayTypeList.CurrentCell.ColumnIndex == dataGridViewPayTypeList.Columns["ColumnPayTypeListButtonDelete"].Index)
             {
 
-                DialogResult deleteDialogResult = MessageBox.Show("Delete PayType?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete PayType?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     Controllers.MstPayTypeController mstPayTypeController = new Controllers.MstPayTypeController();
@@ -647,7 +647,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
                     }
                     else
                     {
-                        MessageBox.Show(deletePayType[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deletePayType[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -822,12 +822,12 @@ namespace EasyPOS.Forms.Software.SysSystemTables
         {
             UpdateTaxListDataSource();
 
-            dataGridViewTaxList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewTaxList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewTaxList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewTaxList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewTaxList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewTaxList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewTaxList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewTaxList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewTaxList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewTaxList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewTaxList.DataSource = taxListDataSource;
@@ -865,7 +865,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
 
             if (e.RowIndex > -1 && dataGridViewTaxList.CurrentCell.ColumnIndex == dataGridViewTaxList.Columns["ColumnTaxListButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Tax?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Tax?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     Controllers.MstTaxController mstTaxController = new Controllers.MstTaxController();
@@ -880,7 +880,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
                     }
                     else
                     {
-                        MessageBox.Show(deleteTax[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteTax[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -1065,12 +1065,12 @@ namespace EasyPOS.Forms.Software.SysSystemTables
         {
             UpdateUnitListDataSource();
 
-            dataGridViewUnitList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewUnitList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewUnitList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewUnitList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewUnitList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewUnitList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewUnitList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewUnitList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewUnitList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewUnitList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewUnitList.DataSource = unitListDataSource;
@@ -1104,7 +1104,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
 
             if (e.RowIndex > -1 && dataGridViewUnitList.CurrentCell.ColumnIndex == dataGridViewUnitList.Columns["ColumnUnitListButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Unit?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Unit?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     Controllers.MstUnitController mstUnitController = new Controllers.MstUnitController();
@@ -1119,7 +1119,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
                     }
                     else
                     {
-                        MessageBox.Show(deleteUnit[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteUnit[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -1290,12 +1290,12 @@ namespace EasyPOS.Forms.Software.SysSystemTables
         {
             UpdatePeriodListDataSource();
 
-            dataGridViewPeriodList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewPeriodList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewPeriodList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewPeriodList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewPeriodList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewPeriodList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewPeriodList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewPeriodList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewPeriodList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewPeriodList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewPeriodList.DataSource = periodListDataSource;
@@ -1329,7 +1329,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
 
             if (e.RowIndex > -1 && dataGridViewPeriodList.CurrentCell.ColumnIndex == dataGridViewPeriodList.Columns["ColumnPeriodListButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Period?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Period?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     Controllers.MstPeriodController mstPeriodController = new Controllers.MstPeriodController();
@@ -1344,7 +1344,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
                     }
                     else
                     {
-                        MessageBox.Show(deletePeriod[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deletePeriod[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -1515,12 +1515,12 @@ namespace EasyPOS.Forms.Software.SysSystemTables
         {
             UpdateTerminalListDataSource();
 
-            dataGridViewTerminalList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewTerminalList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewTerminalList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewTerminalList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewTerminalList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewTerminalList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewTerminalList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewTerminalList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewTerminalList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewTerminalList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewTerminalList.DataSource = terminalListDataSource;
@@ -1554,7 +1554,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
 
             if (e.RowIndex > -1 && dataGridViewTerminalList.CurrentCell.ColumnIndex == dataGridViewTerminalList.Columns["ColumnTerminalListButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Terminal?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Terminal?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     Controllers.MstTerminalController mstTerminalController = new Controllers.MstTerminalController();
@@ -1569,7 +1569,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
                     }
                     else
                     {
-                        MessageBox.Show(deleteTerminal[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteTerminal[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -1762,12 +1762,12 @@ namespace EasyPOS.Forms.Software.SysSystemTables
         {
             UpdateSupplierListDataSource();
 
-            dataGridViewSupplierList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewSupplierList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewSupplierList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewSupplierList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewSupplierList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewSupplierList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewSupplierList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewSupplierList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewSupplierList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewSupplierList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewSupplierList.DataSource = supplierListDataSource;
@@ -1810,7 +1810,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
 
             if (e.RowIndex > -1 && dataGridViewSupplierList.CurrentCell.ColumnIndex == dataGridViewSupplierList.Columns["ColumnSupplierListButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Supplier?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Supplier?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     Controllers.MstSupplierController mstSupplierController = new Controllers.MstSupplierController();
@@ -1825,7 +1825,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
                     }
                     else
                     {
-                        MessageBox.Show(deleteSupplier[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteSupplier[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -1959,7 +1959,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
                     }
                     else
                     {
-                        MessageBox.Show(newSupplier[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(newSupplier[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     break;
                 case "Label":
@@ -2077,12 +2077,12 @@ namespace EasyPOS.Forms.Software.SysSystemTables
         {
             UpdateLanguageListDataSource();
 
-            dataGridViewLanguageList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewLanguageList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewLanguageList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewLanguageList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewLanguageList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewLanguageList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewLanguageList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewLanguageList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewLanguageList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewLanguageList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewLanguageList.DataSource = languageListDataSource;
@@ -2117,7 +2117,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
 
             if (e.RowIndex > -1 && dataGridViewLanguageList.CurrentCell.ColumnIndex == dataGridViewLanguageList.Columns["ColumnLanguageListButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Label?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Label?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     Controllers.SysLanguageController sysLanguageController = new Controllers.SysLanguageController();
@@ -2132,7 +2132,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
                     }
                     else
                     {
-                        MessageBox.Show(deleteLanguage[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteLanguage[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

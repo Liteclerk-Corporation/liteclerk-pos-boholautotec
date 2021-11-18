@@ -40,7 +40,7 @@ namespace EasyPOS.Forms.Software.SysSettings
             sysUserRights = new Modules.SysUserRightsModule("SysSettings");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -284,7 +284,7 @@ namespace EasyPOS.Forms.Software.SysSettings
         {
             if (buttonLock.Enabled == true)
             {
-                MessageBox.Show("Please lock the settings first.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please lock the settings first.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -306,7 +306,7 @@ namespace EasyPOS.Forms.Software.SysSettings
 
         private void btnStopIntegration_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to stop integration?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to stop integration?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 isIntegrationStarted = false;
@@ -350,7 +350,7 @@ namespace EasyPOS.Forms.Software.SysSettings
         {
             if (isIntegrationStarted == true)
             {
-                MessageBox.Show("Please stop the integration first.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please stop the integration first.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -705,7 +705,7 @@ namespace EasyPOS.Forms.Software.SysSettings
             }
             else
             {
-                MessageBox.Show(saveSysCurrent[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(saveSysCurrent[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -713,7 +713,7 @@ namespace EasyPOS.Forms.Software.SysSettings
         {
             if (isIntegrationStarted == true)
             {
-                MessageBox.Show("Please stop the integration first.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please stop the integration first.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -923,12 +923,12 @@ namespace EasyPOS.Forms.Software.SysSettings
         {
             UpdateKitchenDataSource();
 
-            dataGridViewKitchen.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewKitchen.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewKitchen.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewKitchen.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewKitchen.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewKitchen.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewKitchen.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewKitchen.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewKitchen.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewKitchen.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewKitchen.DataSource = kitchenDataSource;

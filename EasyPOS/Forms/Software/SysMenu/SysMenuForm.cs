@@ -43,7 +43,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("SysMenu");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             var sysCurrent = Modules.SysCurrentModule.GetCurrentSettings();
@@ -92,7 +92,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("MstItem");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -106,7 +106,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("TrnSales");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -127,7 +127,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("MstDiscount");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -140,7 +140,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("RepPOS");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -153,7 +153,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("MstUser");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -166,7 +166,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("SysSettings");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -179,7 +179,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("RepSales");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -192,7 +192,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("MstCustomer");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -205,7 +205,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("TrnStockIn");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -218,7 +218,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("TrnStockOut");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -231,7 +231,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("TrnDisbursement");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -244,7 +244,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("SysTables");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -257,7 +257,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("RepInventory");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -270,7 +270,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("RepDisbursement");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -283,7 +283,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("TrnStockCount");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -296,7 +296,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             sysUserRights = new Modules.SysUserRightsModule("SysUtilities");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

@@ -26,7 +26,7 @@ namespace EasyPOS.Forms.Software.MstTableGroup
             sysUserRights = new Modules.SysUserRightsModule("MstRestaurantTableDetail");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -62,7 +62,7 @@ namespace EasyPOS.Forms.Software.MstTableGroup
                 String[] addTable = mstTableController.AddTable(newTable);
                 if (addTable[1].Equals("0") == true)
                 {
-                    MessageBox.Show(addTable[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addTable[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -77,7 +77,7 @@ namespace EasyPOS.Forms.Software.MstTableGroup
                 String[] updateTable = mstTableController.UpdateTable(mstTableEntity.Id, mstTableEntity);
                 if (updateTable[1].Equals("0") == true)
                 {
-                    MessageBox.Show(updateTable[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(updateTable[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
