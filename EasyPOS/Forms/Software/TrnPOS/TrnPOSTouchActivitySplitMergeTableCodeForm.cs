@@ -48,7 +48,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -69,7 +69,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -82,7 +82,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
         {
             if (Convert.ToDecimal(textBoxQuantity.Text) > originalQuantity)
             {
-                MessageBox.Show("The provided quantity must not be higher than the original quantity.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("The provided quantity must not be higher than the original quantity.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -112,7 +112,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

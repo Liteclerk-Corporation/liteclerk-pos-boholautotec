@@ -2007,6 +2007,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="liteclerkicon.ico" />
     <Content Include="newEasyposIcon.ico" />
     <Content Include="OpenCvSharpExtern.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

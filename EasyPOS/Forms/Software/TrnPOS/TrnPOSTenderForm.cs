@@ -111,7 +111,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             if (Convert.ToDecimal(textBoxChangeAmount.Text) < 0)
             {
                 buttonTender.Enabled = false;
-                //MessageBox.Show("Change amount must be non-negative value.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Change amount must be non-negative value.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -185,7 +185,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 else
                 {
                     buttonTender.Enabled = false;
-                    MessageBox.Show(invalidTenderMessage, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(invalidTenderMessage, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -248,7 +248,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 {
                     if (Modules.SysCurrentModule.GetCurrentSettings().IsTenderPrint == true)
                     {
-                        DialogResult tenderPrinterReadyDialogResult = MessageBox.Show("Is printer ready?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult tenderPrinterReadyDialogResult = MessageBox.Show("Is printer ready?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (tenderPrinterReadyDialogResult == DialogResult.Yes)
                         {
                             if (Modules.SysCurrentModule.GetCurrentSettings().CollectionReport == "Official Receipt")
@@ -329,12 +329,12 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 }
                 else
                 {
-                    MessageBox.Show(tenderSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(tenderSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Cannot tender zero amount.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cannot tender zero amount.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -379,7 +379,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -393,12 +393,12 @@ namespace EasyPOS.Forms.Software.TrnPOS
             var payTypeList = trnPOSSalesController.TenderListPayType();
             if (payTypeList.Any())
             {
-                dataGridViewTenderPayType.Columns[2].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#7FBC00");
-                dataGridViewTenderPayType.Columns[2].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#7FBC00");
+                dataGridViewTenderPayType.Columns[2].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#91C354");
+                dataGridViewTenderPayType.Columns[2].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#91C354");
                 dataGridViewTenderPayType.Columns[2].DefaultCellStyle.ForeColor = Color.White;
 
-                dataGridViewTenderPayType.Columns[3].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-                dataGridViewTenderPayType.Columns[3].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+                dataGridViewTenderPayType.Columns[3].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+                dataGridViewTenderPayType.Columns[3].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
                 dataGridViewTenderPayType.Columns[3].DefaultCellStyle.ForeColor = Color.White;
 
                 foreach (var objPayTypeList in payTypeList)
@@ -463,7 +463,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dataGridViewTenderPayType.CurrentCell.Value = "0.00";
             }
         }

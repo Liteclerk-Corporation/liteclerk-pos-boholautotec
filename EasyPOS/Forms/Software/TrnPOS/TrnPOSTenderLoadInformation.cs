@@ -113,7 +113,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                         if (addCustomerLoad[1].Equals("0") == true)
                         {
-                            MessageBox.Show(addCustomerLoad[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(addCustomerLoad[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
@@ -123,17 +123,17 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     }
                     else
                     {
-                        MessageBox.Show("Insufficient Balance! Please Reload.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Insufficient Balance! Please Reload.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show(updateSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(updateSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Invalid card number!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid card number!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -184,12 +184,12 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 }
                 else
                 {
-                    MessageBox.Show("Cannot pay if amount is zero.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Cannot pay if amount is zero.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

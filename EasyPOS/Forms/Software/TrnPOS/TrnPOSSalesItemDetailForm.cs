@@ -260,7 +260,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 }
                 else
                 {
-                    MessageBox.Show(addSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -282,7 +282,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 }
                 else
                 {
-                    MessageBox.Show(addSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -390,7 +390,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

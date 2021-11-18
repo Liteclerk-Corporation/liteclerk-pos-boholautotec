@@ -55,7 +55,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             sysUserRights = new Modules.SysUserRightsModule("TrnSales");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -151,7 +151,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -194,7 +194,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -232,13 +232,13 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     }
                     else
                     {
-                        MessageBox.Show(addSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(addSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -274,7 +274,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             else
             {
-                MessageBox.Show(addSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(addSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -286,7 +286,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -777,7 +777,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
         private void buttonTenderAll_Click(object sender, EventArgs e)
         {
-            DialogResult deleteDialogResult = MessageBox.Show("Are you sure you want to tender all sales?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult deleteDialogResult = MessageBox.Show("Are you sure you want to tender all sales?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (deleteDialogResult == DialogResult.Yes)
             {
                 Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
@@ -794,12 +794,12 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     String[] tenderAllSales = trnPOSSalesController.TenderAllSales(salesIds);
                     if (tenderAllSales[1].Equals("0") == false)
                     {
-                        MessageBox.Show("Tender successful.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Tender successful.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         UpdateSalesListGridDataSource();
                     }
                     else
                     {
-                        MessageBox.Show(tenderAllSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(tenderAllSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
@@ -815,12 +815,12 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     String[] tenderAllSales = trnPOSSalesController.TenderAllSales(salesIds);
                     if (tenderAllSales[1].Equals("0") == false)
                     {
-                        MessageBox.Show("Tender successful.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Tender successful.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         UpdateSalesListGridDataSource();
                     }
                     else
                     {
-                        MessageBox.Show(tenderAllSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(tenderAllSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

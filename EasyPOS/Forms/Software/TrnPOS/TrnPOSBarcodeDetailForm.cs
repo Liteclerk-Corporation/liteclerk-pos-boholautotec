@@ -77,7 +77,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             sysUserRights = new Modules.SysUserRightsModule("TrnSalesDetail");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -265,7 +265,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             sysUserRights.OverrideUserRights(overrideUserId, "TrnSalesDetail");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -466,7 +466,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     }
                     else
                     {
-                        MessageBox.Show("Please make a cash-in transaction first!", "EasyPOS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please make a cash-in transaction first!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -477,7 +477,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             else
             {
-                MessageBox.Show("Cannot tender zero amount.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cannot tender zero amount.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -638,7 +638,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
             if (e.RowIndex > -1 && dataGridViewSalesLineList.CurrentCell.ColumnIndex == dataGridViewSalesLineList.Columns["ColumnSalesLineDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Sales?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Sales?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     Controllers.TrnSalesLineController trnPOSSalesLineController = new Controllers.TrnSalesLineController();
@@ -650,7 +650,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     }
                     else
                     {
-                        MessageBox.Show(deleteSalesLine[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteSalesLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -722,7 +722,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     }
                     else
                     {
-                        MessageBox.Show("Item not found.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Item not found.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
@@ -846,7 +846,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             else
             {
-                MessageBox.Show("Cannot discount with empty sales.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cannot discount with empty sales.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -938,7 +938,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 }
                 else
                 {
-                    MessageBox.Show(lockSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(lockSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

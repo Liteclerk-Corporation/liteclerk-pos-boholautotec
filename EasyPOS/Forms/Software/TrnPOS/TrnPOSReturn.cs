@@ -188,12 +188,12 @@ namespace EasyPOS.Forms.Software.TrnPOS
         {
             UpdateReturnDataSource();
 
-            dataGridViewReturnItems.Columns[8].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewReturnItems.Columns[8].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewReturnItems.Columns[8].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewReturnItems.Columns[8].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewReturnItems.Columns[8].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewReturnItems.Columns[9].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewReturnItems.Columns[9].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewReturnItems.Columns[9].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewReturnItems.Columns[9].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewReturnItems.Columns[9].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewReturnItems.DataSource = returnDataSource;

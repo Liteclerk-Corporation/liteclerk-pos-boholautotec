@@ -133,8 +133,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
         {
             UpdateItemPriceListDataSource();
 
-            dataGridViewItemPriceList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewItemPriceList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewItemPriceList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewItemPriceList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewItemPriceList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewItemPriceList.DataSource = itemPriceListDataSource;

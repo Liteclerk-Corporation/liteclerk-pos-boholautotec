@@ -150,8 +150,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
             var itemList = trnPOSSalesLineController.ListSearchItem(filter);
             if (itemList.Any())
             {
-                dataGridViewSearchItemList.Columns[12].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-                dataGridViewSearchItemList.Columns[12].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+                dataGridViewSearchItemList.Columns[12].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+                dataGridViewSearchItemList.Columns[12].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
                 dataGridViewSearchItemList.Columns[12].DefaultCellStyle.ForeColor = Color.White;
                 var row = from d in itemList
                           select new Entities.DgvTrnSalesSearchItemListEntity

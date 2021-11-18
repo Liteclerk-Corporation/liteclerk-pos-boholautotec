@@ -55,7 +55,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             Int32 driverId = Convert.ToInt32(comboBoxDeliveredBy.SelectedValue);
             String driverName = comboBoxDeliveredBy.Text;
 
-            DialogResult assignDriverDialogResult = MessageBox.Show("Assign Driver? ", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult assignDriverDialogResult = MessageBox.Show("Assign Driver? ", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (assignDriverDialogResult == DialogResult.Yes)
             {
                 Controllers.TrnSalesController trnSalesController = new Controllers.TrnSalesController();
@@ -63,7 +63,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 String[] assignDriver = trnSalesController.AssignDriverSales(salesId, driverName, driverId.ToString());
                 if (assignDriver[1].Equals("0") == false)
                 {
-                    MessageBox.Show("Assign Successful.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Assign Successful.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     trnPOSTouchForm.UpdateSalesListGridDataSource();
                     trnPOSTouchActivityForm.Close();
@@ -72,7 +72,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 }
                 else
                 {
-                    MessageBox.Show(assignDriver[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(assignDriver[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

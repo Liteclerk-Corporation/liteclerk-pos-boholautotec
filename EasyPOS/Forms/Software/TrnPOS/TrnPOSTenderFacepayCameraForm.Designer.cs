@@ -51,25 +51,26 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Controls.Add(this.buttonPay);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(534, 50);
+            this.panel1.Size = new System.Drawing.Size(668, 62);
             this.panel1.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::EasyPOS.Properties.Resources.POS;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -78,26 +79,26 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(50, 14);
+            this.label1.Location = new System.Drawing.Point(62, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 28);
+            this.label1.Size = new System.Drawing.Size(204, 35);
             this.label1.TabIndex = 2;
             this.label1.Text = "Facepay Camera";
             // 
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(415, 10);
+            this.buttonClose.Location = new System.Drawing.Point(519, 12);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(109, 32);
+            this.buttonClose.Size = new System.Drawing.Size(136, 40);
             this.buttonClose.TabIndex = 21;
             this.buttonClose.TabStop = false;
             this.buttonClose.Text = "Esc - Close";
@@ -107,16 +108,16 @@
             // buttonPay
             // 
             this.buttonPay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonPay.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonPay.FlatAppearance.BorderSize = 0;
             this.buttonPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPay.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPay.ForeColor = System.Drawing.Color.White;
-            this.buttonPay.Location = new System.Drawing.Point(299, 10);
+            this.buttonPay.Location = new System.Drawing.Point(374, 12);
             this.buttonPay.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPay.Name = "buttonPay";
-            this.buttonPay.Size = new System.Drawing.Size(112, 32);
+            this.buttonPay.Size = new System.Drawing.Size(140, 40);
             this.buttonPay.TabIndex = 20;
             this.buttonPay.TabStop = false;
             this.buttonPay.Text = "Ent - Pay";
@@ -131,10 +132,10 @@
             this.panel2.Controls.Add(this.videoSourcePlayerCamera);
             this.panel2.Controls.Add(this.comboBoxCameraDevices);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Location = new System.Drawing.Point(0, 62);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(534, 456);
+            this.panel2.Size = new System.Drawing.Size(668, 570);
             this.panel2.TabIndex = 6;
             // 
             // buttonOpen
@@ -143,11 +144,11 @@
             this.buttonOpen.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonOpen.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.buttonOpen.ForeColor = System.Drawing.Color.Black;
-            this.buttonOpen.Location = new System.Drawing.Point(415, 109);
+            this.buttonOpen.Location = new System.Drawing.Point(519, 136);
             this.buttonOpen.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOpen.Name = "buttonOpen";
             this.buttonOpen.Padding = new System.Windows.Forms.Padding(2);
-            this.buttonOpen.Size = new System.Drawing.Size(109, 29);
+            this.buttonOpen.Size = new System.Drawing.Size(136, 36);
             this.buttonOpen.TabIndex = 22;
             this.buttonOpen.TabStop = false;
             this.buttonOpen.Text = "F2 - Open";
@@ -159,10 +160,10 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.textBoxTappedCardNumber);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 66);
+            this.panel5.Location = new System.Drawing.Point(0, 82);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(534, 38);
+            this.panel5.Size = new System.Drawing.Size(668, 48);
             this.panel5.TabIndex = 43;
             // 
             // textBoxTappedCardNumber
@@ -172,11 +173,11 @@
             this.textBoxTappedCardNumber.BackColor = System.Drawing.Color.White;
             this.textBoxTappedCardNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTappedCardNumber.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textBoxTappedCardNumber.Location = new System.Drawing.Point(10, 8);
+            this.textBoxTappedCardNumber.Location = new System.Drawing.Point(12, 10);
             this.textBoxTappedCardNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTappedCardNumber.Name = "textBoxTappedCardNumber";
             this.textBoxTappedCardNumber.PasswordChar = '•';
-            this.textBoxTappedCardNumber.Size = new System.Drawing.Size(514, 22);
+            this.textBoxTappedCardNumber.Size = new System.Drawing.Size(642, 27);
             this.textBoxTappedCardNumber.TabIndex = 0;
             this.textBoxTappedCardNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxTappedCardNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTappedCardNumber_KeyDown);
@@ -189,7 +190,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(534, 66);
+            this.panel3.Size = new System.Drawing.Size(668, 82);
             this.panel3.TabIndex = 42;
             // 
             // textBoxTotalSalesAmount
@@ -199,11 +200,11 @@
             this.textBoxTotalSalesAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTotalSalesAmount.Font = new System.Drawing.Font("Segoe UI Semibold", 30F, System.Drawing.FontStyle.Bold);
             this.textBoxTotalSalesAmount.ForeColor = System.Drawing.Color.White;
-            this.textBoxTotalSalesAmount.Location = new System.Drawing.Point(39, 5);
+            this.textBoxTotalSalesAmount.Location = new System.Drawing.Point(49, 6);
             this.textBoxTotalSalesAmount.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTotalSalesAmount.Name = "textBoxTotalSalesAmount";
             this.textBoxTotalSalesAmount.ReadOnly = true;
-            this.textBoxTotalSalesAmount.Size = new System.Drawing.Size(485, 54);
+            this.textBoxTotalSalesAmount.Size = new System.Drawing.Size(606, 67);
             this.textBoxTotalSalesAmount.TabIndex = 1;
             this.textBoxTotalSalesAmount.TabStop = false;
             this.textBoxTotalSalesAmount.Text = "0.00";
@@ -212,10 +213,10 @@
             // videoSourcePlayerCamera
             // 
             this.videoSourcePlayerCamera.BackColor = System.Drawing.Color.White;
-            this.videoSourcePlayerCamera.Location = new System.Drawing.Point(10, 142);
+            this.videoSourcePlayerCamera.Location = new System.Drawing.Point(12, 178);
             this.videoSourcePlayerCamera.Margin = new System.Windows.Forms.Padding(2);
             this.videoSourcePlayerCamera.Name = "videoSourcePlayerCamera";
-            this.videoSourcePlayerCamera.Size = new System.Drawing.Size(513, 302);
+            this.videoSourcePlayerCamera.Size = new System.Drawing.Size(641, 378);
             this.videoSourcePlayerCamera.TabIndex = 3;
             this.videoSourcePlayerCamera.Text = "videoSourcePlayer1";
             this.videoSourcePlayerCamera.VideoSource = null;
@@ -225,17 +226,17 @@
             // 
             this.comboBoxCameraDevices.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCameraDevices.FormattingEnabled = true;
-            this.comboBoxCameraDevices.Location = new System.Drawing.Point(10, 110);
+            this.comboBoxCameraDevices.Location = new System.Drawing.Point(12, 138);
             this.comboBoxCameraDevices.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCameraDevices.Name = "comboBoxCameraDevices";
-            this.comboBoxCameraDevices.Size = new System.Drawing.Size(401, 27);
+            this.comboBoxCameraDevices.Size = new System.Drawing.Size(500, 31);
             this.comboBoxCameraDevices.TabIndex = 0;
             // 
             // TrnPOSTenderFacepayCameraForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(534, 506);
+            this.ClientSize = new System.Drawing.Size(668, 632);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);

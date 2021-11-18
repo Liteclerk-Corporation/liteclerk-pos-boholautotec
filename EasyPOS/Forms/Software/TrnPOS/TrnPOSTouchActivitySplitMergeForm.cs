@@ -147,8 +147,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
         {
             UpdateSalesItemSplitDataSource();
 
-            dataGridViewSalesItemSplitItems.Columns[4].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewSalesItemSplitItems.Columns[4].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewSalesItemSplitItems.Columns[4].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewSalesItemSplitItems.Columns[4].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewSalesItemSplitItems.Columns[4].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewSalesItemSplitItems.DataSource = salesItemListSplitDataSource;
@@ -245,7 +245,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
         private void buttonSplit_Click(object sender, EventArgs e)
         {
-            DialogResult splitDialogResult = MessageBox.Show("Split bill? ", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult splitDialogResult = MessageBox.Show("Split bill? ", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (splitDialogResult == DialogResult.Yes)
             {
                 if (dataGridViewSalesItemSplitItems.Rows.Count > 0)
@@ -271,14 +271,14 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     String[] splitSales = trnPOSSalesController.SplitSales(trnSalesEntity, listSplitMergeItems);
                     if (splitSales[1].Equals("0") == false)
                     {
-                        MessageBox.Show("Split successful.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Split successful.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         trnPOSTouchForm.UpdateSalesListGridDataSource();
                         Close();
                     }
                     else
                     {
-                        MessageBox.Show(splitSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(splitSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -302,7 +302,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -361,7 +361,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -561,7 +561,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
         private void buttonMerge_Click(object sender, EventArgs e)
         {
-            DialogResult splitDialogResult = MessageBox.Show("Merge bills? ", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult splitDialogResult = MessageBox.Show("Merge bills? ", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (splitDialogResult == DialogResult.Yes)
             {
                 if (dataGridViewMergeSalesList.Rows.Count > 0)
@@ -584,14 +584,14 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     String[] splitSales = trnPOSSalesController.MergeSales(salesIds, tableId);
                     if (splitSales[1].Equals("0") == false)
                     {
-                        MessageBox.Show("Merge successful.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Merge successful.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         trnPOSTouchForm.UpdateSalesListGridDataSource();
                         Close();
                     }
                     else
                     {
-                        MessageBox.Show(splitSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(splitSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

@@ -80,14 +80,14 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
             if (isTendered == true)
             {
-                MessageBox.Show("Already tendered.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Already tendered.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
                 if (trnPOSSalesController.IsSalesTendered(trnSalesEntity.Id) == true)
                 {
-                    MessageBox.Show("Already tendered.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Already tendered.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -126,7 +126,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
             if (isCanclled == true)
             {
-                MessageBox.Show("Already Cancelled.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Already Cancelled.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -147,7 +147,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             else
             {
-                MessageBox.Show("Easyshop Integration is not enabled.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Easyshop Integration is not enabled.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -268,15 +268,15 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                 if (isTendered != true)
                 {
-                    MessageBox.Show("Not tendered.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Not tendered.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (isLocked != true)
                 {
-                    MessageBox.Show("Not locked.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Not locked.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    DialogResult cancelDialogResult = MessageBox.Show("Reprint Sales?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult cancelDialogResult = MessageBox.Show("Reprint Sales?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (cancelDialogResult == DialogResult.Yes)
                     {
                         DialogResult printDialogResult = printDialogReprintOR.ShowDialog();
@@ -292,7 +292,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                             }
                             else
                             {
-                                MessageBox.Show("No collection.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("No collection.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
@@ -301,7 +301,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -313,7 +313,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                 if (isLocked != true)
                 {
-                    MessageBox.Show("Not locked.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Not locked.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -326,7 +326,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -337,15 +337,15 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
             if (isLocked == true)
             {
-                MessageBox.Show("Already locked.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Already locked.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (isTendered == true)
             {
-                MessageBox.Show("Already tendered.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Already tendered.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Sales?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Sales?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
@@ -357,7 +357,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     }
                     else
                     {
-                        MessageBox.Show(deleteSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -367,6 +367,11 @@ namespace EasyPOS.Forms.Software.TrnPOS
         {
             TrnPOSTouchActivitySplitMergeForm trnPOSTouchActivitySplitMergeForm = new TrnPOSTouchActivitySplitMergeForm(sysSoftwareForm, trnPOSTouchForm, this, trnSalesEntity);
             trnPOSTouchActivitySplitMergeForm.ShowDialog();
+        }
+
+        private void buttonPrintPartialBill_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
