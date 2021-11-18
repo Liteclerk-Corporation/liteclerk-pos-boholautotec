@@ -40,11 +40,13 @@ namespace EasyPOS.Forms.Software
 
             String currentTerminal = terminal;
 
-            labelCurrentUser.Text = "Date: " + currentDate + "     User: " + currentUserName + "     Terminal: " + currentTerminal;
+            labelCurrentUser.Text = "User: " + currentUserName;
+            labelCurrentDate.Text = "Date: " + currentDate;
+            labelCurrentTerminal.Text = "Terminal: " + currentTerminal;
             panelSidebarMenu.Visible = false;
 
-            labelVersion.Text = "EasyPOS Version: " + Modules.SysCurrentModule.GetCurrentSettings().CurrentVersion;
-            labelSupport.Text = "Support: Easyfis Corporation " + Modules.SysCurrentModule.GetCurrentSettings().CurrentSupport;
+            labelVersion.Text = "Liteclerk POS Version: " + Modules.SysCurrentModule.GetCurrentSettings().CurrentVersion;
+            labelSupport.Text = "Support: Liteclerk Corporation " + Modules.SysCurrentModule.GetCurrentSettings().CurrentSupport;
         }
 
         public TabPage tabPageItemList = new TabPage { Name = "tabPageItemList", Text = "Setup - Item List" };

@@ -499,12 +499,12 @@ namespace EasyPOS.Forms.Software.TrnPOS
             var salesLineList = trnPOSSalesLineController.ListSalesLine(trnSalesEntity.Id);
             if (salesLineList.Any())
             {
-                dataGridViewSalesLineList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-                dataGridViewSalesLineList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+                dataGridViewSalesLineList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#91C354");
+                dataGridViewSalesLineList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#91C354");
                 dataGridViewSalesLineList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-                dataGridViewSalesLineList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-                dataGridViewSalesLineList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+                dataGridViewSalesLineList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+                dataGridViewSalesLineList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
                 dataGridViewSalesLineList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
                 foreach (var objSalesLineList in salesLineList)
