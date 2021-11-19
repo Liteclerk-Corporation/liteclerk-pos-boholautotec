@@ -7,7 +7,7 @@
     <ProjectGuid>{A0BF508D-CC6D-480E-86EF-713A26C5309F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>EasyPOS</RootNamespace>
-    <AssemblyName>EasyPOS</AssemblyName>
+    <AssemblyName>Liteclerk</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -51,7 +51,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>newEasyposIcon.ico</ApplicationIcon>
+    <ApplicationIcon>liteclerkicon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>

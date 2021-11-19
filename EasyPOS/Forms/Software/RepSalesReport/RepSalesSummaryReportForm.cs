@@ -345,9 +345,6 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                     )
                 )
             );
-            // @"C:\temp\MyNewFile.xml";
-           
-
             var xmlFilePath = Modules.SysCurrentModule.GetCurrentSettings().XMLFilePath;
             string fileName = @"" + xmlFilePath + "\\SalesOrder_" + DateTime.Now.ToString("yyyyMMdd_hhmmss") + ".xml";
             if (!File.Exists(fileName))
