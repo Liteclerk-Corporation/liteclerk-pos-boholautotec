@@ -158,12 +158,12 @@ namespace EasyPOS.Forms.Software.SysUtilities
         {
             UpdateAuditTrailListDataSource();
 
-            dataGridViewAuditTrailList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewAuditTrailList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewAuditTrailList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewAuditTrailList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewAuditTrailList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewAuditTrailList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewAuditTrailList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewAuditTrailList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewAuditTrailList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewAuditTrailList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewAuditTrailList.DataSource = audiTrailListDataSource;
@@ -414,12 +414,12 @@ namespace EasyPOS.Forms.Software.SysUtilities
         {
             UpdateItemListDataSource();
 
-            dataGridViewItemList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewItemList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewItemList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewItemList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewItemList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewItemList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewItemList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewItemList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewItemList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewItemList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewItemList.DataSource = itemListDataSource;
@@ -636,7 +636,7 @@ namespace EasyPOS.Forms.Software.SysUtilities
                 }
                 else
                 {
-                    MessageBox.Show(addItem[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addItem[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -749,7 +749,7 @@ namespace EasyPOS.Forms.Software.SysUtilities
                 }
                 else
                 {
-                    MessageBox.Show(addCustomer[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addCustomer[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -867,7 +867,7 @@ namespace EasyPOS.Forms.Software.SysUtilities
                 }
                 else
                 {
-                    MessageBox.Show(updateItemPrice[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(updateItemPrice[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

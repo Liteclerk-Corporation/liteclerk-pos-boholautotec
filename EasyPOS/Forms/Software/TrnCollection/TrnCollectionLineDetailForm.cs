@@ -114,7 +114,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
                 }
                 else
                 {
-                    MessageBox.Show(addCollectionLine[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addCollectionLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -127,7 +127,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
                 }
                 else
                 {
-                    MessageBox.Show(updateCollectionLine[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(updateCollectionLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

@@ -190,8 +190,8 @@ namespace EasyPOS.Forms.Software.TrnStockOut
         {
             UpdateSearchItemListDataSource();
 
-            dataGridViewSearchItemList.Columns[12].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewSearchItemList.Columns[12].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewSearchItemList.Columns[12].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewSearchItemList.Columns[12].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewSearchItemList.Columns[12].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewSearchItemList.DataSource = searchItemListDataSource;

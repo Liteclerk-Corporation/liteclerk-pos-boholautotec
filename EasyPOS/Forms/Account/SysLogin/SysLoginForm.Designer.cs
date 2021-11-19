@@ -267,7 +267,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::EasyPOS.Properties.Resources.liteclerklogo;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 8);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 11);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(213, 42);

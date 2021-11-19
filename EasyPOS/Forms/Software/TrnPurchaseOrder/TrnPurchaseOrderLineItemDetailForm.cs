@@ -50,7 +50,7 @@ namespace EasyPOS.Forms.Software.TrnPurchaseOrder
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -94,7 +94,7 @@ namespace EasyPOS.Forms.Software.TrnPurchaseOrder
                 }
                 else
                 {
-                    MessageBox.Show(addPurchaseOrderLine[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addPurchaseOrderLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -107,7 +107,7 @@ namespace EasyPOS.Forms.Software.TrnPurchaseOrder
                 }
                 else
                 {
-                    MessageBox.Show(updatePurchaseOrderLine[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(updatePurchaseOrderLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

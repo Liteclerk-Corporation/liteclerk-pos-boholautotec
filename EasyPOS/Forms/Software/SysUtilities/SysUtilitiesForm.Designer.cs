@@ -98,6 +98,7 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.buttonOpenCustomer = new System.Windows.Forms.Button();
             this.buttonExportCustomer = new System.Windows.Forms.Button();
             this.textBoxFileNameCustomer = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -105,7 +106,6 @@
             this.buttonCustomerImport = new System.Windows.Forms.Button();
             this.folderBrowserDialogGenerateCSV = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialogImportCSV = new System.Windows.Forms.OpenFileDialog();
-            this.buttonOpenCustomer = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAuditTrailList)).BeginInit();
@@ -135,10 +135,10 @@
             this.panel3.Controls.Add(this.buttonAuditTrailListPageListLast);
             this.panel3.Controls.Add(this.textBoxAuditTrailListPageNumber);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 432);
+            this.panel3.Location = new System.Drawing.Point(0, 546);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1084, 42);
+            this.panel3.Size = new System.Drawing.Size(1358, 52);
             this.panel3.TabIndex = 21;
             // 
             // buttonAuditTrailListPageListFirst
@@ -148,10 +148,10 @@
             this.buttonAuditTrailListPageListFirst.FlatAppearance.BorderSize = 0;
             this.buttonAuditTrailListPageListFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAuditTrailListPageListFirst.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonAuditTrailListPageListFirst.Location = new System.Drawing.Point(10, 9);
+            this.buttonAuditTrailListPageListFirst.Location = new System.Drawing.Point(12, 11);
             this.buttonAuditTrailListPageListFirst.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAuditTrailListPageListFirst.Name = "buttonAuditTrailListPageListFirst";
-            this.buttonAuditTrailListPageListFirst.Size = new System.Drawing.Size(66, 26);
+            this.buttonAuditTrailListPageListFirst.Size = new System.Drawing.Size(82, 32);
             this.buttonAuditTrailListPageListFirst.TabIndex = 13;
             this.buttonAuditTrailListPageListFirst.TabStop = false;
             this.buttonAuditTrailListPageListFirst.Text = "First";
@@ -165,10 +165,10 @@
             this.buttonAuditTrailListPageListPrevious.FlatAppearance.BorderSize = 0;
             this.buttonAuditTrailListPageListPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAuditTrailListPageListPrevious.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonAuditTrailListPageListPrevious.Location = new System.Drawing.Point(80, 9);
+            this.buttonAuditTrailListPageListPrevious.Location = new System.Drawing.Point(100, 11);
             this.buttonAuditTrailListPageListPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAuditTrailListPageListPrevious.Name = "buttonAuditTrailListPageListPrevious";
-            this.buttonAuditTrailListPageListPrevious.Size = new System.Drawing.Size(66, 26);
+            this.buttonAuditTrailListPageListPrevious.Size = new System.Drawing.Size(82, 32);
             this.buttonAuditTrailListPageListPrevious.TabIndex = 14;
             this.buttonAuditTrailListPageListPrevious.TabStop = false;
             this.buttonAuditTrailListPageListPrevious.Text = "Previous";
@@ -181,10 +181,10 @@
             this.buttonAuditTrailListPageListNext.FlatAppearance.BorderSize = 0;
             this.buttonAuditTrailListPageListNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAuditTrailListPageListNext.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonAuditTrailListPageListNext.Location = new System.Drawing.Point(210, 9);
+            this.buttonAuditTrailListPageListNext.Location = new System.Drawing.Point(262, 11);
             this.buttonAuditTrailListPageListNext.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAuditTrailListPageListNext.Name = "buttonAuditTrailListPageListNext";
-            this.buttonAuditTrailListPageListNext.Size = new System.Drawing.Size(66, 26);
+            this.buttonAuditTrailListPageListNext.Size = new System.Drawing.Size(82, 32);
             this.buttonAuditTrailListPageListNext.TabIndex = 15;
             this.buttonAuditTrailListPageListNext.TabStop = false;
             this.buttonAuditTrailListPageListNext.Text = "Next";
@@ -197,10 +197,10 @@
             this.buttonAuditTrailListPageListLast.FlatAppearance.BorderSize = 0;
             this.buttonAuditTrailListPageListLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAuditTrailListPageListLast.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonAuditTrailListPageListLast.Location = new System.Drawing.Point(278, 9);
+            this.buttonAuditTrailListPageListLast.Location = new System.Drawing.Point(348, 11);
             this.buttonAuditTrailListPageListLast.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAuditTrailListPageListLast.Name = "buttonAuditTrailListPageListLast";
-            this.buttonAuditTrailListPageListLast.Size = new System.Drawing.Size(66, 26);
+            this.buttonAuditTrailListPageListLast.Size = new System.Drawing.Size(82, 32);
             this.buttonAuditTrailListPageListLast.TabIndex = 16;
             this.buttonAuditTrailListPageListLast.TabStop = false;
             this.buttonAuditTrailListPageListLast.Text = "Last";
@@ -213,11 +213,11 @@
             this.textBoxAuditTrailListPageNumber.BackColor = System.Drawing.Color.White;
             this.textBoxAuditTrailListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxAuditTrailListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBoxAuditTrailListPageNumber.Location = new System.Drawing.Point(150, 13);
+            this.textBoxAuditTrailListPageNumber.Location = new System.Drawing.Point(188, 16);
             this.textBoxAuditTrailListPageNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAuditTrailListPageNumber.Name = "textBoxAuditTrailListPageNumber";
             this.textBoxAuditTrailListPageNumber.ReadOnly = true;
-            this.textBoxAuditTrailListPageNumber.Size = new System.Drawing.Size(55, 16);
+            this.textBoxAuditTrailListPageNumber.Size = new System.Drawing.Size(69, 20);
             this.textBoxAuditTrailListPageNumber.TabIndex = 17;
             this.textBoxAuditTrailListPageNumber.TabStop = false;
             this.textBoxAuditTrailListPageNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -238,17 +238,17 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1084, 474);
+            this.panel2.Size = new System.Drawing.Size(1358, 598);
             this.panel2.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 7F);
-            this.label4.Location = new System.Drawing.Point(238, 5);
+            this.label4.Location = new System.Drawing.Point(298, 6);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 12);
+            this.label4.Size = new System.Drawing.Size(33, 15);
             this.label4.TabIndex = 25;
             this.label4.Text = "User:";
             // 
@@ -256,10 +256,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 7F);
-            this.label3.Location = new System.Drawing.Point(118, 5);
+            this.label3.Location = new System.Drawing.Point(148, 6);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 12);
+            this.label3.Size = new System.Drawing.Size(57, 15);
             this.label3.TabIndex = 24;
             this.label3.Text = "End Date:";
             // 
@@ -267,26 +267,26 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 7F);
-            this.label2.Location = new System.Drawing.Point(1, 5);
+            this.label2.Location = new System.Drawing.Point(1, 6);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 12);
+            this.label2.Size = new System.Drawing.Size(61, 15);
             this.label2.TabIndex = 23;
             this.label2.Text = "Start Date:";
             // 
             // buttonView
             // 
             this.buttonView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonView.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonView.FlatAppearance.BorderSize = 0;
             this.buttonView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonView.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonView.ForeColor = System.Drawing.Color.White;
-            this.buttonView.Location = new System.Drawing.Point(1009, 11);
-            this.buttonView.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.buttonView.Location = new System.Drawing.Point(1264, 14);
+            this.buttonView.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.buttonView.Name = "buttonView";
-            this.buttonView.Size = new System.Drawing.Size(70, 32);
+            this.buttonView.Size = new System.Drawing.Size(88, 40);
             this.buttonView.TabIndex = 22;
             this.buttonView.TabStop = false;
             this.buttonView.Text = "CSV";
@@ -296,30 +296,30 @@
             // comboBoxUserFilter
             // 
             this.comboBoxUserFilter.FormattingEnabled = true;
-            this.comboBoxUserFilter.Location = new System.Drawing.Point(238, 18);
+            this.comboBoxUserFilter.Location = new System.Drawing.Point(298, 22);
             this.comboBoxUserFilter.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxUserFilter.Name = "comboBoxUserFilter";
-            this.comboBoxUserFilter.Size = new System.Drawing.Size(212, 27);
+            this.comboBoxUserFilter.Size = new System.Drawing.Size(264, 31);
             this.comboBoxUserFilter.TabIndex = 2;
             this.comboBoxUserFilter.SelectedIndexChanged += new System.EventHandler(this.AuditTrailList_Filter);
             // 
             // dateTimePickerSysAuditTrailListEndDateFilter
             // 
             this.dateTimePickerSysAuditTrailListEndDateFilter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerSysAuditTrailListEndDateFilter.Location = new System.Drawing.Point(121, 19);
+            this.dateTimePickerSysAuditTrailListEndDateFilter.Location = new System.Drawing.Point(151, 24);
             this.dateTimePickerSysAuditTrailListEndDateFilter.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerSysAuditTrailListEndDateFilter.Name = "dateTimePickerSysAuditTrailListEndDateFilter";
-            this.dateTimePickerSysAuditTrailListEndDateFilter.Size = new System.Drawing.Size(114, 26);
+            this.dateTimePickerSysAuditTrailListEndDateFilter.Size = new System.Drawing.Size(142, 30);
             this.dateTimePickerSysAuditTrailListEndDateFilter.TabIndex = 1;
             this.dateTimePickerSysAuditTrailListEndDateFilter.ValueChanged += new System.EventHandler(this.dateTimePickerSysAuditTrailListEndDateFilter_ValueChanged);
             // 
             // dateTimePickerSysAuditTrailListStartDateFilter
             // 
             this.dateTimePickerSysAuditTrailListStartDateFilter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerSysAuditTrailListStartDateFilter.Location = new System.Drawing.Point(4, 19);
+            this.dateTimePickerSysAuditTrailListStartDateFilter.Location = new System.Drawing.Point(5, 24);
             this.dateTimePickerSysAuditTrailListStartDateFilter.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerSysAuditTrailListStartDateFilter.Name = "dateTimePickerSysAuditTrailListStartDateFilter";
-            this.dateTimePickerSysAuditTrailListStartDateFilter.Size = new System.Drawing.Size(114, 26);
+            this.dateTimePickerSysAuditTrailListStartDateFilter.Size = new System.Drawing.Size(142, 30);
             this.dateTimePickerSysAuditTrailListStartDateFilter.TabIndex = 0;
             this.dateTimePickerSysAuditTrailListStartDateFilter.ValueChanged += new System.EventHandler(this.dateTimePickerSysAuditTrailListStartDateFilter_ValueChanged);
             // 
@@ -343,36 +343,42 @@
             this.ColumnAuditTrailListRecordInformation,
             this.ColumnAuditTrailListFormInformation,
             this.ColumnAuditTrailListSpace});
-            this.dataGridViewAuditTrailList.Location = new System.Drawing.Point(4, 49);
+            this.dataGridViewAuditTrailList.Location = new System.Drawing.Point(5, 61);
             this.dataGridViewAuditTrailList.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewAuditTrailList.MultiSelect = false;
             this.dataGridViewAuditTrailList.Name = "dataGridViewAuditTrailList";
             this.dataGridViewAuditTrailList.ReadOnly = true;
+            this.dataGridViewAuditTrailList.RowHeadersWidth = 51;
             this.dataGridViewAuditTrailList.RowTemplate.Height = 24;
             this.dataGridViewAuditTrailList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewAuditTrailList.Size = new System.Drawing.Size(1076, 378);
+            this.dataGridViewAuditTrailList.Size = new System.Drawing.Size(1348, 478);
             this.dataGridViewAuditTrailList.TabIndex = 20;
             // 
             // ColumnAuditTrailListId
             // 
             this.ColumnAuditTrailListId.DataPropertyName = "ColumnAuditTrailListId";
             this.ColumnAuditTrailListId.HeaderText = "Id";
+            this.ColumnAuditTrailListId.MinimumWidth = 6;
             this.ColumnAuditTrailListId.Name = "ColumnAuditTrailListId";
             this.ColumnAuditTrailListId.ReadOnly = true;
             this.ColumnAuditTrailListId.Visible = false;
+            this.ColumnAuditTrailListId.Width = 125;
             // 
             // ColumnAuditTrailListUserId
             // 
             this.ColumnAuditTrailListUserId.DataPropertyName = "ColumnAuditTrailListUserId";
             this.ColumnAuditTrailListUserId.HeaderText = "UserId";
+            this.ColumnAuditTrailListUserId.MinimumWidth = 6;
             this.ColumnAuditTrailListUserId.Name = "ColumnAuditTrailListUserId";
             this.ColumnAuditTrailListUserId.ReadOnly = true;
             this.ColumnAuditTrailListUserId.Visible = false;
+            this.ColumnAuditTrailListUserId.Width = 125;
             // 
             // ColumnAuditTrailListAuditDate
             // 
             this.ColumnAuditTrailListAuditDate.DataPropertyName = "ColumnAuditTrailListAuditDate";
             this.ColumnAuditTrailListAuditDate.HeaderText = "Date";
+            this.ColumnAuditTrailListAuditDate.MinimumWidth = 6;
             this.ColumnAuditTrailListAuditDate.Name = "ColumnAuditTrailListAuditDate";
             this.ColumnAuditTrailListAuditDate.ReadOnly = true;
             this.ColumnAuditTrailListAuditDate.Width = 150;
@@ -381,6 +387,7 @@
             // 
             this.ColumnAuditTrailListUser.DataPropertyName = "ColumnAuditTrailListUser";
             this.ColumnAuditTrailListUser.HeaderText = "User";
+            this.ColumnAuditTrailListUser.MinimumWidth = 6;
             this.ColumnAuditTrailListUser.Name = "ColumnAuditTrailListUser";
             this.ColumnAuditTrailListUser.ReadOnly = true;
             this.ColumnAuditTrailListUser.Width = 150;
@@ -389,6 +396,7 @@
             // 
             this.ColumnAuditTrailListTableInformation.DataPropertyName = "ColumnAuditTrailListTableInformation";
             this.ColumnAuditTrailListTableInformation.HeaderText = "Module";
+            this.ColumnAuditTrailListTableInformation.MinimumWidth = 6;
             this.ColumnAuditTrailListTableInformation.Name = "ColumnAuditTrailListTableInformation";
             this.ColumnAuditTrailListTableInformation.ReadOnly = true;
             this.ColumnAuditTrailListTableInformation.Width = 200;
@@ -397,6 +405,7 @@
             // 
             this.ColumnAuditTrailListActionInformation.DataPropertyName = "ColumnAuditTrailListActionInformation";
             this.ColumnAuditTrailListActionInformation.HeaderText = "Action Taken";
+            this.ColumnAuditTrailListActionInformation.MinimumWidth = 6;
             this.ColumnAuditTrailListActionInformation.Name = "ColumnAuditTrailListActionInformation";
             this.ColumnAuditTrailListActionInformation.ReadOnly = true;
             this.ColumnAuditTrailListActionInformation.Width = 150;
@@ -405,6 +414,7 @@
             // 
             this.ColumnAuditTrailListRecordInformation.DataPropertyName = "ColumnAuditTrailListRecordInformation";
             this.ColumnAuditTrailListRecordInformation.HeaderText = "Old Value";
+            this.ColumnAuditTrailListRecordInformation.MinimumWidth = 6;
             this.ColumnAuditTrailListRecordInformation.Name = "ColumnAuditTrailListRecordInformation";
             this.ColumnAuditTrailListRecordInformation.ReadOnly = true;
             this.ColumnAuditTrailListRecordInformation.Width = 320;
@@ -413,6 +423,7 @@
             // 
             this.ColumnAuditTrailListFormInformation.DataPropertyName = "ColumnAuditTrailListFormInformation";
             this.ColumnAuditTrailListFormInformation.HeaderText = "New Value";
+            this.ColumnAuditTrailListFormInformation.MinimumWidth = 6;
             this.ColumnAuditTrailListFormInformation.Name = "ColumnAuditTrailListFormInformation";
             this.ColumnAuditTrailListFormInformation.ReadOnly = true;
             this.ColumnAuditTrailListFormInformation.Width = 320;
@@ -422,29 +433,31 @@
             this.ColumnAuditTrailListSpace.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColumnAuditTrailListSpace.DataPropertyName = "ColumnAuditTrailListSpace";
             this.ColumnAuditTrailListSpace.HeaderText = "";
+            this.ColumnAuditTrailListSpace.MinimumWidth = 6;
             this.ColumnAuditTrailListSpace.Name = "ColumnAuditTrailListSpace";
             this.ColumnAuditTrailListSpace.ReadOnly = true;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1096, 50);
+            this.panel1.Size = new System.Drawing.Size(1370, 62);
             this.panel1.TabIndex = 8;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Utilities;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -453,26 +466,26 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(50, 14);
+            this.label1.Location = new System.Drawing.Point(62, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 28);
+            this.label1.Size = new System.Drawing.Size(197, 35);
             this.label1.TabIndex = 2;
             this.label1.Text = "System Utilities";
             // 
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(1016, 10);
+            this.buttonClose.Location = new System.Drawing.Point(1270, 12);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(70, 32);
+            this.buttonClose.Size = new System.Drawing.Size(88, 40);
             this.buttonClose.TabIndex = 20;
             this.buttonClose.TabStop = false;
             this.buttonClose.Text = "Close";
@@ -486,21 +499,21 @@
             this.tabControlSystemTable.Controls.Add(this.tabPage2);
             this.tabControlSystemTable.Controls.Add(this.tabPage3);
             this.tabControlSystemTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlSystemTable.Location = new System.Drawing.Point(0, 50);
+            this.tabControlSystemTable.Location = new System.Drawing.Point(0, 62);
             this.tabControlSystemTable.Margin = new System.Windows.Forms.Padding(2);
             this.tabControlSystemTable.Name = "tabControlSystemTable";
             this.tabControlSystemTable.SelectedIndex = 0;
-            this.tabControlSystemTable.Size = new System.Drawing.Size(1096, 510);
+            this.tabControlSystemTable.Size = new System.Drawing.Size(1370, 638);
             this.tabControlSystemTable.TabIndex = 10;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.panel9);
-            this.tabPage1.Location = new System.Drawing.Point(4, 28);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1088, 478);
+            this.tabPage1.Size = new System.Drawing.Size(1362, 602);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Audit Trail";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -512,17 +525,17 @@
             this.panel9.Location = new System.Drawing.Point(2, 2);
             this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1084, 474);
+            this.panel9.Size = new System.Drawing.Size(1358, 598);
             this.panel9.TabIndex = 1;
             // 
             // tabPageBarcodePrinting
             // 
             this.tabPageBarcodePrinting.Controls.Add(this.panel4);
-            this.tabPageBarcodePrinting.Location = new System.Drawing.Point(4, 28);
+            this.tabPageBarcodePrinting.Location = new System.Drawing.Point(4, 32);
             this.tabPageBarcodePrinting.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageBarcodePrinting.Name = "tabPageBarcodePrinting";
             this.tabPageBarcodePrinting.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPageBarcodePrinting.Size = new System.Drawing.Size(1088, 478);
+            this.tabPageBarcodePrinting.Size = new System.Drawing.Size(1362, 602);
             this.tabPageBarcodePrinting.TabIndex = 1;
             this.tabPageBarcodePrinting.Text = "Barcode Printing";
             this.tabPageBarcodePrinting.UseVisualStyleBackColor = true;
@@ -537,7 +550,7 @@
             this.panel4.Location = new System.Drawing.Point(2, 2);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1084, 474);
+            this.panel4.Size = new System.Drawing.Size(1358, 598);
             this.panel4.TabIndex = 20;
             // 
             // panel5
@@ -549,10 +562,10 @@
             this.panel5.Controls.Add(this.buttonItemListPageListLast);
             this.panel5.Controls.Add(this.textBoxItemListPageNumber);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 432);
+            this.panel5.Location = new System.Drawing.Point(0, 546);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1084, 42);
+            this.panel5.Size = new System.Drawing.Size(1358, 52);
             this.panel5.TabIndex = 18;
             // 
             // buttonItemListPageListFirst
@@ -562,10 +575,10 @@
             this.buttonItemListPageListFirst.FlatAppearance.BorderSize = 0;
             this.buttonItemListPageListFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemListPageListFirst.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonItemListPageListFirst.Location = new System.Drawing.Point(10, 9);
+            this.buttonItemListPageListFirst.Location = new System.Drawing.Point(12, 11);
             this.buttonItemListPageListFirst.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemListPageListFirst.Name = "buttonItemListPageListFirst";
-            this.buttonItemListPageListFirst.Size = new System.Drawing.Size(66, 26);
+            this.buttonItemListPageListFirst.Size = new System.Drawing.Size(82, 32);
             this.buttonItemListPageListFirst.TabIndex = 13;
             this.buttonItemListPageListFirst.TabStop = false;
             this.buttonItemListPageListFirst.Text = "First";
@@ -579,10 +592,10 @@
             this.buttonItemListPageListPrevious.FlatAppearance.BorderSize = 0;
             this.buttonItemListPageListPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemListPageListPrevious.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonItemListPageListPrevious.Location = new System.Drawing.Point(80, 9);
+            this.buttonItemListPageListPrevious.Location = new System.Drawing.Point(100, 11);
             this.buttonItemListPageListPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemListPageListPrevious.Name = "buttonItemListPageListPrevious";
-            this.buttonItemListPageListPrevious.Size = new System.Drawing.Size(66, 26);
+            this.buttonItemListPageListPrevious.Size = new System.Drawing.Size(82, 32);
             this.buttonItemListPageListPrevious.TabIndex = 14;
             this.buttonItemListPageListPrevious.TabStop = false;
             this.buttonItemListPageListPrevious.Text = "Previous";
@@ -595,10 +608,10 @@
             this.buttonItemListPageListNext.FlatAppearance.BorderSize = 0;
             this.buttonItemListPageListNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemListPageListNext.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonItemListPageListNext.Location = new System.Drawing.Point(210, 9);
+            this.buttonItemListPageListNext.Location = new System.Drawing.Point(262, 11);
             this.buttonItemListPageListNext.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemListPageListNext.Name = "buttonItemListPageListNext";
-            this.buttonItemListPageListNext.Size = new System.Drawing.Size(66, 26);
+            this.buttonItemListPageListNext.Size = new System.Drawing.Size(82, 32);
             this.buttonItemListPageListNext.TabIndex = 15;
             this.buttonItemListPageListNext.TabStop = false;
             this.buttonItemListPageListNext.Text = "Next";
@@ -611,10 +624,10 @@
             this.buttonItemListPageListLast.FlatAppearance.BorderSize = 0;
             this.buttonItemListPageListLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemListPageListLast.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonItemListPageListLast.Location = new System.Drawing.Point(278, 9);
+            this.buttonItemListPageListLast.Location = new System.Drawing.Point(348, 11);
             this.buttonItemListPageListLast.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemListPageListLast.Name = "buttonItemListPageListLast";
-            this.buttonItemListPageListLast.Size = new System.Drawing.Size(66, 26);
+            this.buttonItemListPageListLast.Size = new System.Drawing.Size(82, 32);
             this.buttonItemListPageListLast.TabIndex = 16;
             this.buttonItemListPageListLast.TabStop = false;
             this.buttonItemListPageListLast.Text = "Last";
@@ -627,11 +640,11 @@
             this.textBoxItemListPageNumber.BackColor = System.Drawing.Color.White;
             this.textBoxItemListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxItemListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBoxItemListPageNumber.Location = new System.Drawing.Point(150, 13);
+            this.textBoxItemListPageNumber.Location = new System.Drawing.Point(188, 16);
             this.textBoxItemListPageNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxItemListPageNumber.Name = "textBoxItemListPageNumber";
             this.textBoxItemListPageNumber.ReadOnly = true;
-            this.textBoxItemListPageNumber.Size = new System.Drawing.Size(55, 16);
+            this.textBoxItemListPageNumber.Size = new System.Drawing.Size(69, 20);
             this.textBoxItemListPageNumber.TabIndex = 17;
             this.textBoxItemListPageNumber.TabStop = false;
             this.textBoxItemListPageNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -659,14 +672,15 @@
             this.ColumnItemListIsInventory,
             this.ColumnItemListIsLocked,
             this.ColumnItemListSpace});
-            this.dataGridViewItemList.Location = new System.Drawing.Point(4, 34);
+            this.dataGridViewItemList.Location = new System.Drawing.Point(5, 42);
             this.dataGridViewItemList.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewItemList.MultiSelect = false;
             this.dataGridViewItemList.Name = "dataGridViewItemList";
             this.dataGridViewItemList.ReadOnly = true;
+            this.dataGridViewItemList.RowHeadersWidth = 51;
             this.dataGridViewItemList.RowTemplate.Height = 24;
             this.dataGridViewItemList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewItemList.Size = new System.Drawing.Size(1076, 393);
+            this.dataGridViewItemList.Size = new System.Drawing.Size(1348, 497);
             this.dataGridViewItemList.TabIndex = 9;
             this.dataGridViewItemList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewItemList_CellClick);
             // 
@@ -675,6 +689,7 @@
             this.ColumnItemListButtonPick.DataPropertyName = "ColumnItemListButtonPick";
             this.ColumnItemListButtonPick.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColumnItemListButtonPick.HeaderText = "";
+            this.ColumnItemListButtonPick.MinimumWidth = 6;
             this.ColumnItemListButtonPick.Name = "ColumnItemListButtonPick";
             this.ColumnItemListButtonPick.ReadOnly = true;
             this.ColumnItemListButtonPick.Width = 70;
@@ -683,14 +698,17 @@
             // 
             this.ColumnItemListId.DataPropertyName = "ColumnItemListId";
             this.ColumnItemListId.HeaderText = "Id";
+            this.ColumnItemListId.MinimumWidth = 6;
             this.ColumnItemListId.Name = "ColumnItemListId";
             this.ColumnItemListId.ReadOnly = true;
             this.ColumnItemListId.Visible = false;
+            this.ColumnItemListId.Width = 125;
             // 
             // ColumnItemListCode
             // 
             this.ColumnItemListCode.DataPropertyName = "ColumnItemListCode";
             this.ColumnItemListCode.HeaderText = "Code";
+            this.ColumnItemListCode.MinimumWidth = 6;
             this.ColumnItemListCode.Name = "ColumnItemListCode";
             this.ColumnItemListCode.ReadOnly = true;
             this.ColumnItemListCode.Width = 150;
@@ -699,6 +717,7 @@
             // 
             this.ColumnItemListDescription.DataPropertyName = "ColumnItemListDescription";
             this.ColumnItemListDescription.HeaderText = "Description";
+            this.ColumnItemListDescription.MinimumWidth = 6;
             this.ColumnItemListDescription.Name = "ColumnItemListDescription";
             this.ColumnItemListDescription.ReadOnly = true;
             this.ColumnItemListDescription.Width = 250;
@@ -707,6 +726,7 @@
             // 
             this.ColumnItemListBarcode.DataPropertyName = "ColumnItemListBarcode";
             this.ColumnItemListBarcode.HeaderText = "Barcode";
+            this.ColumnItemListBarcode.MinimumWidth = 6;
             this.ColumnItemListBarcode.Name = "ColumnItemListBarcode";
             this.ColumnItemListBarcode.ReadOnly = true;
             this.ColumnItemListBarcode.Width = 200;
@@ -715,6 +735,7 @@
             // 
             this.ColumnItemListUnit.DataPropertyName = "ColumnItemListUnit";
             this.ColumnItemListUnit.HeaderText = "Unit";
+            this.ColumnItemListUnit.MinimumWidth = 6;
             this.ColumnItemListUnit.Name = "ColumnItemListUnit";
             this.ColumnItemListUnit.ReadOnly = true;
             this.ColumnItemListUnit.Width = 70;
@@ -723,6 +744,7 @@
             // 
             this.ColumnItemListCategory.DataPropertyName = "ColumnItemListCategory";
             this.ColumnItemListCategory.HeaderText = "Category";
+            this.ColumnItemListCategory.MinimumWidth = 6;
             this.ColumnItemListCategory.Name = "ColumnItemListCategory";
             this.ColumnItemListCategory.ReadOnly = true;
             this.ColumnItemListCategory.Width = 250;
@@ -731,6 +753,7 @@
             // 
             this.ColumnItemListAlias.DataPropertyName = "ColumnItemListAlias";
             this.ColumnItemListAlias.HeaderText = "Alias";
+            this.ColumnItemListAlias.MinimumWidth = 6;
             this.ColumnItemListAlias.Name = "ColumnItemListAlias";
             this.ColumnItemListAlias.ReadOnly = true;
             this.ColumnItemListAlias.Width = 250;
@@ -741,13 +764,16 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.ColumnItemListPrice.DefaultCellStyle = dataGridViewCellStyle1;
             this.ColumnItemListPrice.HeaderText = "Price";
+            this.ColumnItemListPrice.MinimumWidth = 6;
             this.ColumnItemListPrice.Name = "ColumnItemListPrice";
             this.ColumnItemListPrice.ReadOnly = true;
+            this.ColumnItemListPrice.Width = 125;
             // 
             // ColumnItemListIsInventory
             // 
             this.ColumnItemListIsInventory.DataPropertyName = "ColumnItemListIsInventory";
             this.ColumnItemListIsInventory.HeaderText = "I";
+            this.ColumnItemListIsInventory.MinimumWidth = 6;
             this.ColumnItemListIsInventory.Name = "ColumnItemListIsInventory";
             this.ColumnItemListIsInventory.ReadOnly = true;
             this.ColumnItemListIsInventory.Width = 35;
@@ -756,6 +782,7 @@
             // 
             this.ColumnItemListIsLocked.DataPropertyName = "ColumnItemListIsLocked";
             this.ColumnItemListIsLocked.HeaderText = "L";
+            this.ColumnItemListIsLocked.MinimumWidth = 6;
             this.ColumnItemListIsLocked.Name = "ColumnItemListIsLocked";
             this.ColumnItemListIsLocked.ReadOnly = true;
             this.ColumnItemListIsLocked.Width = 35;
@@ -764,6 +791,7 @@
             // 
             this.ColumnItemListSpace.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColumnItemListSpace.HeaderText = "";
+            this.ColumnItemListSpace.MinimumWidth = 6;
             this.ColumnItemListSpace.Name = "ColumnItemListSpace";
             this.ColumnItemListSpace.ReadOnly = true;
             // 
@@ -771,10 +799,10 @@
             // 
             this.textBoxItemListFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxItemListFilter.Location = new System.Drawing.Point(4, 5);
+            this.textBoxItemListFilter.Location = new System.Drawing.Point(5, 6);
             this.textBoxItemListFilter.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxItemListFilter.Name = "textBoxItemListFilter";
-            this.textBoxItemListFilter.Size = new System.Drawing.Size(1077, 26);
+            this.textBoxItemListFilter.Size = new System.Drawing.Size(1348, 30);
             this.textBoxItemListFilter.TabIndex = 8;
             this.textBoxItemListFilter.TabStop = false;
             this.textBoxItemListFilter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxItemListFilter_KeyDown);
@@ -782,10 +810,11 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.panel7);
-            this.tabPage2.Location = new System.Drawing.Point(4, 28);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1088, 478);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(1362, 602);
             this.tabPage2.TabIndex = 2;
             this.tabPage2.Text = "Upload Item";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -805,24 +834,25 @@
             this.panel7.Controls.Add(this.buttonImport);
             this.panel7.Controls.Add(this.textBoxUpdatePrice);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Location = new System.Drawing.Point(4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1082, 472);
+            this.panel7.Size = new System.Drawing.Size(1354, 594);
             this.panel7.TabIndex = 20;
             // 
             // buttonOpenUpdatePrice
             // 
             this.buttonOpenUpdatePrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOpenUpdatePrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
+            this.buttonOpenUpdatePrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
             this.buttonOpenUpdatePrice.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonOpenUpdatePrice.FlatAppearance.BorderSize = 0;
             this.buttonOpenUpdatePrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOpenUpdatePrice.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOpenUpdatePrice.ForeColor = System.Drawing.Color.White;
-            this.buttonOpenUpdatePrice.Location = new System.Drawing.Point(521, 46);
+            this.buttonOpenUpdatePrice.Location = new System.Drawing.Point(653, 58);
             this.buttonOpenUpdatePrice.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOpenUpdatePrice.Name = "buttonOpenUpdatePrice";
-            this.buttonOpenUpdatePrice.Size = new System.Drawing.Size(70, 32);
+            this.buttonOpenUpdatePrice.Size = new System.Drawing.Size(88, 40);
             this.buttonOpenUpdatePrice.TabIndex = 47;
             this.buttonOpenUpdatePrice.TabStop = false;
             this.buttonOpenUpdatePrice.Text = "Open";
@@ -832,25 +862,26 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(5, 53);
+            this.label8.Location = new System.Drawing.Point(6, 66);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(122, 19);
+            this.label8.Size = new System.Drawing.Size(152, 23);
             this.label8.TabIndex = 46;
             this.label8.Text = "Update Item Price:";
             // 
             // buttonUpdateExport
             // 
             this.buttonUpdateExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonUpdateExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
+            this.buttonUpdateExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
             this.buttonUpdateExport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonUpdateExport.FlatAppearance.BorderSize = 0;
             this.buttonUpdateExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUpdateExport.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdateExport.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdateExport.Location = new System.Drawing.Point(685, 46);
+            this.buttonUpdateExport.Location = new System.Drawing.Point(858, 58);
             this.buttonUpdateExport.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUpdateExport.Name = "buttonUpdateExport";
-            this.buttonUpdateExport.Size = new System.Drawing.Size(70, 32);
+            this.buttonUpdateExport.Size = new System.Drawing.Size(88, 40);
             this.buttonUpdateExport.TabIndex = 43;
             this.buttonUpdateExport.TabStop = false;
             this.buttonUpdateExport.Text = "Export";
@@ -860,16 +891,16 @@
             // buttonOpen
             // 
             this.buttonOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
+            this.buttonOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
             this.buttonOpen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonOpen.FlatAppearance.BorderSize = 0;
             this.buttonOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOpen.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOpen.ForeColor = System.Drawing.Color.White;
-            this.buttonOpen.Location = new System.Drawing.Point(521, 5);
+            this.buttonOpen.Location = new System.Drawing.Point(653, 6);
             this.buttonOpen.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOpen.Name = "buttonOpen";
-            this.buttonOpen.Size = new System.Drawing.Size(70, 32);
+            this.buttonOpen.Size = new System.Drawing.Size(88, 40);
             this.buttonOpen.TabIndex = 45;
             this.buttonOpen.TabStop = false;
             this.buttonOpen.Text = "Open";
@@ -879,34 +910,36 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 9);
+            this.label5.Location = new System.Drawing.Point(6, 11);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 19);
+            this.label5.Size = new System.Drawing.Size(106, 23);
             this.label5.TabIndex = 44;
             this.label5.Text = "Import Item:";
             // 
             // textBoxFileName
             // 
             this.textBoxFileName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxFileName.Location = new System.Drawing.Point(139, 9);
+            this.textBoxFileName.Location = new System.Drawing.Point(176, 11);
+            this.textBoxFileName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxFileName.Name = "textBoxFileName";
             this.textBoxFileName.ReadOnly = true;
-            this.textBoxFileName.Size = new System.Drawing.Size(377, 26);
+            this.textBoxFileName.Size = new System.Drawing.Size(470, 30);
             this.textBoxFileName.TabIndex = 40;
             // 
             // buttonExport
             // 
             this.buttonExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
+            this.buttonExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
             this.buttonExport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonExport.FlatAppearance.BorderSize = 0;
             this.buttonExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExport.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExport.ForeColor = System.Drawing.Color.White;
-            this.buttonExport.Location = new System.Drawing.Point(685, 5);
+            this.buttonExport.Location = new System.Drawing.Point(858, 6);
             this.buttonExport.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExport.Name = "buttonExport";
-            this.buttonExport.Size = new System.Drawing.Size(70, 32);
+            this.buttonExport.Size = new System.Drawing.Size(88, 40);
             this.buttonExport.TabIndex = 42;
             this.buttonExport.TabStop = false;
             this.buttonExport.Text = "Export";
@@ -916,16 +949,16 @@
             // buttonUpdate
             // 
             this.buttonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonUpdate.FlatAppearance.BorderSize = 0;
             this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUpdate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(604, 46);
+            this.buttonUpdate.Location = new System.Drawing.Point(757, 58);
             this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(70, 32);
+            this.buttonUpdate.Size = new System.Drawing.Size(88, 40);
             this.buttonUpdate.TabIndex = 38;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = false;
@@ -934,16 +967,16 @@
             // buttonImport
             // 
             this.buttonImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonImport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonImport.FlatAppearance.BorderSize = 0;
             this.buttonImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonImport.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonImport.ForeColor = System.Drawing.Color.White;
-            this.buttonImport.Location = new System.Drawing.Point(604, 5);
+            this.buttonImport.Location = new System.Drawing.Point(757, 6);
             this.buttonImport.Margin = new System.Windows.Forms.Padding(2);
             this.buttonImport.Name = "buttonImport";
-            this.buttonImport.Size = new System.Drawing.Size(70, 32);
+            this.buttonImport.Size = new System.Drawing.Size(88, 40);
             this.buttonImport.TabIndex = 39;
             this.buttonImport.Text = "Import";
             this.buttonImport.UseVisualStyleBackColor = false;
@@ -952,19 +985,21 @@
             // textBoxUpdatePrice
             // 
             this.textBoxUpdatePrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxUpdatePrice.Location = new System.Drawing.Point(139, 50);
+            this.textBoxUpdatePrice.Location = new System.Drawing.Point(176, 62);
+            this.textBoxUpdatePrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxUpdatePrice.Name = "textBoxUpdatePrice";
             this.textBoxUpdatePrice.ReadOnly = true;
-            this.textBoxUpdatePrice.Size = new System.Drawing.Size(377, 26);
+            this.textBoxUpdatePrice.Size = new System.Drawing.Size(470, 30);
             this.textBoxUpdatePrice.TabIndex = 41;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.panel6);
-            this.tabPage3.Location = new System.Drawing.Point(4, 28);
+            this.tabPage3.Location = new System.Drawing.Point(4, 32);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1088, 478);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Size = new System.Drawing.Size(1362, 602);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Upload Customer";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -974,9 +1009,10 @@
             this.panel6.BackColor = System.Drawing.Color.LightGray;
             this.panel6.Controls.Add(this.panel10);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Location = new System.Drawing.Point(4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1082, 475);
+            this.panel6.Size = new System.Drawing.Size(1354, 594);
             this.panel6.TabIndex = 21;
             // 
             // panel10
@@ -992,22 +1028,41 @@
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1082, 50);
+            this.panel10.Size = new System.Drawing.Size(1354, 62);
             this.panel10.TabIndex = 30;
+            // 
+            // buttonOpenCustomer
+            // 
+            this.buttonOpenCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOpenCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
+            this.buttonOpenCustomer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonOpenCustomer.FlatAppearance.BorderSize = 0;
+            this.buttonOpenCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenCustomer.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOpenCustomer.ForeColor = System.Drawing.Color.White;
+            this.buttonOpenCustomer.Location = new System.Drawing.Point(1057, 12);
+            this.buttonOpenCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonOpenCustomer.Name = "buttonOpenCustomer";
+            this.buttonOpenCustomer.Size = new System.Drawing.Size(88, 40);
+            this.buttonOpenCustomer.TabIndex = 34;
+            this.buttonOpenCustomer.TabStop = false;
+            this.buttonOpenCustomer.Text = "Open";
+            this.buttonOpenCustomer.UseVisualStyleBackColor = false;
+            this.buttonOpenCustomer.Click += new System.EventHandler(this.buttonOpenCustomer_Click);
             // 
             // buttonExportCustomer
             // 
             this.buttonExportCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonExportCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
+            this.buttonExportCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
             this.buttonExportCustomer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonExportCustomer.FlatAppearance.BorderSize = 0;
             this.buttonExportCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExportCustomer.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExportCustomer.ForeColor = System.Drawing.Color.White;
-            this.buttonExportCustomer.Location = new System.Drawing.Point(1008, 10);
+            this.buttonExportCustomer.Location = new System.Drawing.Point(1262, 12);
             this.buttonExportCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExportCustomer.Name = "buttonExportCustomer";
-            this.buttonExportCustomer.Size = new System.Drawing.Size(70, 32);
+            this.buttonExportCustomer.Size = new System.Drawing.Size(88, 40);
             this.buttonExportCustomer.TabIndex = 33;
             this.buttonExportCustomer.TabStop = false;
             this.buttonExportCustomer.Text = "Export";
@@ -1017,19 +1072,20 @@
             // textBoxFileNameCustomer
             // 
             this.textBoxFileNameCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxFileNameCustomer.Location = new System.Drawing.Point(462, 14);
+            this.textBoxFileNameCustomer.Location = new System.Drawing.Point(580, 18);
+            this.textBoxFileNameCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxFileNameCustomer.Name = "textBoxFileNameCustomer";
             this.textBoxFileNameCustomer.ReadOnly = true;
-            this.textBoxFileNameCustomer.Size = new System.Drawing.Size(377, 26);
+            this.textBoxFileNameCustomer.Size = new System.Drawing.Size(470, 30);
             this.textBoxFileNameCustomer.TabIndex = 32;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::EasyPOS.Properties.Resources.Stock_In;
-            this.pictureBox3.Location = new System.Drawing.Point(11, 14);
+            this.pictureBox3.Location = new System.Drawing.Point(14, 18);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox3.Size = new System.Drawing.Size(48, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 30;
             this.pictureBox3.TabStop = false;
@@ -1038,26 +1094,26 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(50, 14);
+            this.label6.Location = new System.Drawing.Point(62, 18);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(173, 28);
+            this.label6.Size = new System.Drawing.Size(219, 35);
             this.label6.TabIndex = 2;
             this.label6.Text = "Import Customer";
             // 
             // buttonCustomerImport
             // 
             this.buttonCustomerImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCustomerImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonCustomerImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonCustomerImport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonCustomerImport.FlatAppearance.BorderSize = 0;
             this.buttonCustomerImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCustomerImport.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCustomerImport.ForeColor = System.Drawing.Color.White;
-            this.buttonCustomerImport.Location = new System.Drawing.Point(927, 10);
+            this.buttonCustomerImport.Location = new System.Drawing.Point(1161, 12);
             this.buttonCustomerImport.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCustomerImport.Name = "buttonCustomerImport";
-            this.buttonCustomerImport.Size = new System.Drawing.Size(70, 32);
+            this.buttonCustomerImport.Size = new System.Drawing.Size(88, 40);
             this.buttonCustomerImport.TabIndex = 0;
             this.buttonCustomerImport.Text = "Import";
             this.buttonCustomerImport.UseVisualStyleBackColor = false;
@@ -1067,36 +1123,17 @@
             // 
             this.openFileDialogImportCSV.FileName = "openFileDialogImportCSV";
             // 
-            // buttonOpenCustomer
-            // 
-            this.buttonOpenCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOpenCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(188)))), ((int)(((byte)(0)))));
-            this.buttonOpenCustomer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
-            this.buttonOpenCustomer.FlatAppearance.BorderSize = 0;
-            this.buttonOpenCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOpenCustomer.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOpenCustomer.ForeColor = System.Drawing.Color.White;
-            this.buttonOpenCustomer.Location = new System.Drawing.Point(844, 10);
-            this.buttonOpenCustomer.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonOpenCustomer.Name = "buttonOpenCustomer";
-            this.buttonOpenCustomer.Size = new System.Drawing.Size(70, 32);
-            this.buttonOpenCustomer.TabIndex = 34;
-            this.buttonOpenCustomer.TabStop = false;
-            this.buttonOpenCustomer.Text = "Open";
-            this.buttonOpenCustomer.UseVisualStyleBackColor = false;
-            this.buttonOpenCustomer.Click += new System.EventHandler(this.buttonOpenCustomer_Click);
-            // 
             // SysUtilitiesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1096, 560);
+            this.ClientSize = new System.Drawing.Size(1370, 700);
             this.Controls.Add(this.tabControlSystemTable);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "SysUtilitiesForm";
             this.Text = "SysAuditTrailList";
             this.panel3.ResumeLayout(false);

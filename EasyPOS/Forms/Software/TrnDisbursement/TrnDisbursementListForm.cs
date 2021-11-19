@@ -67,7 +67,7 @@ namespace EasyPOS.Forms.Software.TrnDisbursement
             sysUserRights = new Modules.SysUserRightsModule("TrnDisbursement");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -203,12 +203,12 @@ namespace EasyPOS.Forms.Software.TrnDisbursement
         {
             UpdateDisbursementListDataSource();
 
-            dataGridViewDisbursementList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewDisbursementList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewDisbursementList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewDisbursementList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewDisbursementList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewDisbursementList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewDisbursementList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewDisbursementList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewDisbursementList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewDisbursementList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewDisbursementList.DataSource = itemListDataSource;
@@ -230,7 +230,7 @@ namespace EasyPOS.Forms.Software.TrnDisbursement
             }
             else
             {
-                MessageBox.Show(addDisbursement[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(addDisbursement[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -272,11 +272,11 @@ namespace EasyPOS.Forms.Software.TrnDisbursement
 
                 if (isLocked == true)
                 {
-                    MessageBox.Show("Already locked.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Already locked.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    DialogResult deleteDialogResult = MessageBox.Show("Delete Disbursement?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult deleteDialogResult = MessageBox.Show("Delete Disbursement?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (deleteDialogResult == DialogResult.Yes)
                     {
                         Controllers.TrnDisbursementController trnDisbursementController = new Controllers.TrnDisbursementController();
@@ -289,7 +289,7 @@ namespace EasyPOS.Forms.Software.TrnDisbursement
                         }
                         else
                         {
-                            MessageBox.Show(deleteDisbursement[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(deleteDisbursement[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }

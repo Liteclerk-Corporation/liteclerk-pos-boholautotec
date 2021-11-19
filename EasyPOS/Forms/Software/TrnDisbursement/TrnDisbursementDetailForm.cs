@@ -66,7 +66,7 @@ namespace EasyPOS.Forms.Software.TrnDisbursement
             sysUserRights = new Modules.SysUserRightsModule("TrnDisbursementDetail");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -305,7 +305,7 @@ namespace EasyPOS.Forms.Software.TrnDisbursement
             }
             else
             {
-                MessageBox.Show(lockDisbursement[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(lockDisbursement[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -321,7 +321,7 @@ namespace EasyPOS.Forms.Software.TrnDisbursement
             }
             else
             {
-                MessageBox.Show(unlockDisbursement[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(unlockDisbursement[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -338,7 +338,7 @@ namespace EasyPOS.Forms.Software.TrnDisbursement
             }
             else
             {
-                DialogResult closeDialogResult = MessageBox.Show("Save Changes?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult closeDialogResult = MessageBox.Show("Save Changes?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (closeDialogResult == DialogResult.Yes)
                 {
                     Controllers.TrnDisbursementController trnDisbursementController = new Controllers.TrnDisbursementController();
@@ -383,7 +383,7 @@ namespace EasyPOS.Forms.Software.TrnDisbursement
                     }
                     else
                     {
-                        MessageBox.Show(lockDisbursement[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(lockDisbursement[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else

@@ -65,31 +65,32 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
             this.panel1.Controls.Add(this.buttonView);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1096, 50);
+            this.panel1.Size = new System.Drawing.Size(1370, 62);
             this.panel1.TabIndex = 13;
             // 
             // buttonView
             // 
             this.buttonView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonView.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonView.FlatAppearance.BorderSize = 0;
             this.buttonView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonView.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonView.ForeColor = System.Drawing.Color.White;
-            this.buttonView.Location = new System.Drawing.Point(940, 9);
-            this.buttonView.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.buttonView.Location = new System.Drawing.Point(1175, 11);
+            this.buttonView.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.buttonView.Name = "buttonView";
-            this.buttonView.Size = new System.Drawing.Size(70, 32);
+            this.buttonView.Size = new System.Drawing.Size(88, 40);
             this.buttonView.TabIndex = 5;
             this.buttonView.TabStop = false;
             this.buttonView.Text = "CSV";
@@ -99,10 +100,10 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             // pictureBox1
             // 
             this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Reports;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 8);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 38);
+            this.pictureBox1.Size = new System.Drawing.Size(45, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -111,26 +112,26 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(57, 12);
+            this.label1.Location = new System.Drawing.Point(71, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(311, 28);
+            this.label1.Size = new System.Drawing.Size(385, 35);
             this.label1.TabIndex = 2;
             this.label1.Text = "Hourly Top Selling Sales Report";
             // 
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(1015, 9);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.buttonClose.Location = new System.Drawing.Point(1269, 11);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(70, 32);
+            this.buttonClose.Size = new System.Drawing.Size(88, 40);
             this.buttonClose.TabIndex = 1;
             this.buttonClose.TabStop = false;
             this.buttonClose.Text = "Close";
@@ -156,23 +157,26 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.ColumnUnit,
             this.ColumnPrice,
             this.ColumnAmount});
-            this.dataGridViewHourlyTopSellingSalesReport.Location = new System.Drawing.Point(1, 44);
+            this.dataGridViewHourlyTopSellingSalesReport.Location = new System.Drawing.Point(1, 55);
             this.dataGridViewHourlyTopSellingSalesReport.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewHourlyTopSellingSalesReport.MultiSelect = false;
             this.dataGridViewHourlyTopSellingSalesReport.Name = "dataGridViewHourlyTopSellingSalesReport";
             this.dataGridViewHourlyTopSellingSalesReport.ReadOnly = true;
+            this.dataGridViewHourlyTopSellingSalesReport.RowHeadersWidth = 51;
             this.dataGridViewHourlyTopSellingSalesReport.RowTemplate.Height = 24;
             this.dataGridViewHourlyTopSellingSalesReport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewHourlyTopSellingSalesReport.ShowEditingIcon = false;
-            this.dataGridViewHourlyTopSellingSalesReport.Size = new System.Drawing.Size(1094, 434);
+            this.dataGridViewHourlyTopSellingSalesReport.Size = new System.Drawing.Size(1368, 542);
             this.dataGridViewHourlyTopSellingSalesReport.TabIndex = 14;
             // 
             // ColumnHour
             // 
             this.ColumnHour.DataPropertyName = "ColumnHour";
             this.ColumnHour.HeaderText = "Hour";
+            this.ColumnHour.MinimumWidth = 6;
             this.ColumnHour.Name = "ColumnHour";
             this.ColumnHour.ReadOnly = true;
+            this.ColumnHour.Width = 125;
             // 
             // ColumnNo
             // 
@@ -180,8 +184,10 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.ColumnNo.DefaultCellStyle = dataGridViewCellStyle1;
             this.ColumnNo.HeaderText = "No";
+            this.ColumnNo.MinimumWidth = 6;
             this.ColumnNo.Name = "ColumnNo";
             this.ColumnNo.ReadOnly = true;
+            this.ColumnNo.Width = 125;
             // 
             // ColumnCategory
             // 
@@ -189,8 +195,10 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.ColumnCategory.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColumnCategory.HeaderText = "Category";
+            this.ColumnCategory.MinimumWidth = 6;
             this.ColumnCategory.Name = "ColumnCategory";
             this.ColumnCategory.ReadOnly = true;
+            this.ColumnCategory.Width = 125;
             // 
             // ColumnItemDescription
             // 
@@ -199,6 +207,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.ColumnItemDescription.DefaultCellStyle = dataGridViewCellStyle3;
             this.ColumnItemDescription.FillWeight = 250F;
             this.ColumnItemDescription.HeaderText = "Item Description";
+            this.ColumnItemDescription.MinimumWidth = 6;
             this.ColumnItemDescription.Name = "ColumnItemDescription";
             this.ColumnItemDescription.ReadOnly = true;
             this.ColumnItemDescription.Width = 250;
@@ -209,8 +218,10 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.ColumnQuantity.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColumnQuantity.HeaderText = "Quantity";
+            this.ColumnQuantity.MinimumWidth = 6;
             this.ColumnQuantity.Name = "ColumnQuantity";
             this.ColumnQuantity.ReadOnly = true;
+            this.ColumnQuantity.Width = 125;
             // 
             // ColumnUnit
             // 
@@ -218,8 +229,10 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.ColumnUnit.DefaultCellStyle = dataGridViewCellStyle5;
             this.ColumnUnit.HeaderText = "Unit";
+            this.ColumnUnit.MinimumWidth = 6;
             this.ColumnUnit.Name = "ColumnUnit";
             this.ColumnUnit.ReadOnly = true;
+            this.ColumnUnit.Width = 125;
             // 
             // ColumnPrice
             // 
@@ -227,15 +240,19 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.ColumnPrice.DefaultCellStyle = dataGridViewCellStyle6;
             this.ColumnPrice.HeaderText = "Price";
+            this.ColumnPrice.MinimumWidth = 6;
             this.ColumnPrice.Name = "ColumnPrice";
             this.ColumnPrice.ReadOnly = true;
+            this.ColumnPrice.Width = 125;
             // 
             // ColumnAmount
             // 
             this.ColumnAmount.DataPropertyName = "ColumnAmount";
             this.ColumnAmount.HeaderText = "Amount";
+            this.ColumnAmount.MinimumWidth = 6;
             this.ColumnAmount.Name = "ColumnAmount";
             this.ColumnAmount.ReadOnly = true;
+            this.ColumnAmount.Width = 125;
             // 
             // panel4
             // 
@@ -246,10 +263,10 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.panel4.Controls.Add(this.buttonPageListPrevious);
             this.panel4.Controls.Add(this.textBoxPageNumber);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 480);
+            this.panel4.Location = new System.Drawing.Point(0, 600);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1096, 42);
+            this.panel4.Size = new System.Drawing.Size(1370, 52);
             this.panel4.TabIndex = 22;
             // 
             // buttonPageListFirst
@@ -259,10 +276,10 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.buttonPageListFirst.FlatAppearance.BorderSize = 0;
             this.buttonPageListFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPageListFirst.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.buttonPageListFirst.Location = new System.Drawing.Point(10, 8);
+            this.buttonPageListFirst.Location = new System.Drawing.Point(12, 10);
             this.buttonPageListFirst.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPageListFirst.Name = "buttonPageListFirst";
-            this.buttonPageListFirst.Size = new System.Drawing.Size(66, 26);
+            this.buttonPageListFirst.Size = new System.Drawing.Size(82, 32);
             this.buttonPageListFirst.TabIndex = 8;
             this.buttonPageListFirst.TabStop = false;
             this.buttonPageListFirst.Text = "First";
@@ -275,10 +292,10 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.buttonPageListNext.FlatAppearance.BorderSize = 0;
             this.buttonPageListNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPageListNext.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.buttonPageListNext.Location = new System.Drawing.Point(270, 8);
+            this.buttonPageListNext.Location = new System.Drawing.Point(338, 10);
             this.buttonPageListNext.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPageListNext.Name = "buttonPageListNext";
-            this.buttonPageListNext.Size = new System.Drawing.Size(66, 26);
+            this.buttonPageListNext.Size = new System.Drawing.Size(82, 32);
             this.buttonPageListNext.TabIndex = 10;
             this.buttonPageListNext.TabStop = false;
             this.buttonPageListNext.Text = "Next";
@@ -291,10 +308,10 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.buttonPageListLast.FlatAppearance.BorderSize = 0;
             this.buttonPageListLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPageListLast.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.buttonPageListLast.Location = new System.Drawing.Point(338, 8);
+            this.buttonPageListLast.Location = new System.Drawing.Point(422, 10);
             this.buttonPageListLast.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPageListLast.Name = "buttonPageListLast";
-            this.buttonPageListLast.Size = new System.Drawing.Size(66, 26);
+            this.buttonPageListLast.Size = new System.Drawing.Size(82, 32);
             this.buttonPageListLast.TabIndex = 11;
             this.buttonPageListLast.TabStop = false;
             this.buttonPageListLast.Text = "Last";
@@ -308,10 +325,10 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.buttonPageListPrevious.FlatAppearance.BorderSize = 0;
             this.buttonPageListPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPageListPrevious.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.buttonPageListPrevious.Location = new System.Drawing.Point(80, 8);
+            this.buttonPageListPrevious.Location = new System.Drawing.Point(100, 10);
             this.buttonPageListPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPageListPrevious.Name = "buttonPageListPrevious";
-            this.buttonPageListPrevious.Size = new System.Drawing.Size(70, 26);
+            this.buttonPageListPrevious.Size = new System.Drawing.Size(88, 32);
             this.buttonPageListPrevious.TabIndex = 9;
             this.buttonPageListPrevious.TabStop = false;
             this.buttonPageListPrevious.Text = "Previous";
@@ -323,27 +340,27 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.textBoxPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxPageNumber.BackColor = System.Drawing.Color.White;
             this.textBoxPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPageNumber.Location = new System.Drawing.Point(185, 12);
+            this.textBoxPageNumber.Location = new System.Drawing.Point(231, 15);
             this.textBoxPageNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPageNumber.Name = "textBoxPageNumber";
             this.textBoxPageNumber.ReadOnly = true;
-            this.textBoxPageNumber.Size = new System.Drawing.Size(55, 19);
+            this.textBoxPageNumber.Size = new System.Drawing.Size(69, 23);
             this.textBoxPageNumber.TabIndex = 12;
             this.textBoxPageNumber.TabStop = false;
             this.textBoxPageNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // RepHourlyTopSellingSalesReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1096, 522);
+            this.ClientSize = new System.Drawing.Size(1370, 652);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.dataGridViewHourlyTopSellingSalesReport);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "RepHourlyTopSellingSalesReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hourly Top Selling Sales Report";

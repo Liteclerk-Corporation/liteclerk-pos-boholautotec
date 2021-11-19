@@ -106,7 +106,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonLock);
             this.panel1.Controls.Add(this.buttonUnlock);
@@ -114,36 +114,37 @@
             this.panel1.Controls.Add(this.buttonPrint);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1096, 50);
+            this.panel1.Size = new System.Drawing.Size(1370, 62);
             this.panel1.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(50, 14);
+            this.label1.Location = new System.Drawing.Point(62, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 28);
+            this.label1.Size = new System.Drawing.Size(231, 35);
             this.label1.TabIndex = 2;
             this.label1.Text = "Cash In/Out Detail";
             // 
             // buttonLock
             // 
             this.buttonLock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonLock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonLock.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonLock.FlatAppearance.BorderSize = 0;
             this.buttonLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLock.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLock.ForeColor = System.Drawing.Color.White;
-            this.buttonLock.Location = new System.Drawing.Point(794, 10);
+            this.buttonLock.Location = new System.Drawing.Point(992, 12);
             this.buttonLock.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLock.Name = "buttonLock";
-            this.buttonLock.Size = new System.Drawing.Size(70, 32);
+            this.buttonLock.Size = new System.Drawing.Size(88, 40);
             this.buttonLock.TabIndex = 20;
             this.buttonLock.TabStop = false;
             this.buttonLock.Text = "Lock";
@@ -153,16 +154,16 @@
             // buttonUnlock
             // 
             this.buttonUnlock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonUnlock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonUnlock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonUnlock.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonUnlock.FlatAppearance.BorderSize = 0;
             this.buttonUnlock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUnlock.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUnlock.ForeColor = System.Drawing.Color.White;
-            this.buttonUnlock.Location = new System.Drawing.Point(868, 10);
+            this.buttonUnlock.Location = new System.Drawing.Point(1085, 12);
             this.buttonUnlock.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUnlock.Name = "buttonUnlock";
-            this.buttonUnlock.Size = new System.Drawing.Size(70, 32);
+            this.buttonUnlock.Size = new System.Drawing.Size(88, 40);
             this.buttonUnlock.TabIndex = 21;
             this.buttonUnlock.TabStop = false;
             this.buttonUnlock.Text = "Unlock";
@@ -172,16 +173,16 @@
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(1016, 10);
+            this.buttonClose.Location = new System.Drawing.Point(1270, 12);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(70, 32);
+            this.buttonClose.Size = new System.Drawing.Size(88, 40);
             this.buttonClose.TabIndex = 23;
             this.buttonClose.TabStop = false;
             this.buttonClose.Text = "Close";
@@ -191,16 +192,16 @@
             // buttonPrint
             // 
             this.buttonPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonPrint.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonPrint.FlatAppearance.BorderSize = 0;
             this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrint.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint.ForeColor = System.Drawing.Color.White;
-            this.buttonPrint.Location = new System.Drawing.Point(942, 10);
+            this.buttonPrint.Location = new System.Drawing.Point(1178, 12);
             this.buttonPrint.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(70, 32);
+            this.buttonPrint.Size = new System.Drawing.Size(88, 40);
             this.buttonPrint.TabIndex = 22;
             this.buttonPrint.TabStop = false;
             this.buttonPrint.Text = "Print";
@@ -210,10 +211,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Disbursement;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -222,10 +223,10 @@
             // 
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Location = new System.Drawing.Point(0, 62);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1096, 510);
+            this.panel2.Size = new System.Drawing.Size(1370, 638);
             this.panel2.TabIndex = 10;
             // 
             // panel3
@@ -235,7 +236,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1096, 510);
+            this.panel3.Size = new System.Drawing.Size(1370, 638);
             this.panel3.TabIndex = 0;
             // 
             // panel4
@@ -303,8 +304,8 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(8);
-            this.panel4.Size = new System.Drawing.Size(1096, 510);
+            this.panel4.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel4.Size = new System.Drawing.Size(1370, 638);
             this.panel4.TabIndex = 1;
             // 
             // textBoxSalesReturnNumber
@@ -313,30 +314,30 @@
             this.textBoxSalesReturnNumber.Enabled = false;
             this.textBoxSalesReturnNumber.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.textBoxSalesReturnNumber.HideSelection = false;
-            this.textBoxSalesReturnNumber.Location = new System.Drawing.Point(155, 398);
+            this.textBoxSalesReturnNumber.Location = new System.Drawing.Point(194, 498);
             this.textBoxSalesReturnNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSalesReturnNumber.Name = "textBoxSalesReturnNumber";
-            this.textBoxSalesReturnNumber.Size = new System.Drawing.Size(240, 26);
+            this.textBoxSalesReturnNumber.Size = new System.Drawing.Size(299, 30);
             this.textBoxSalesReturnNumber.TabIndex = 70;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label28.Location = new System.Drawing.Point(765, 294);
+            this.label28.Location = new System.Drawing.Point(956, 368);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(40, 19);
+            this.label28.Size = new System.Drawing.Size(48, 23);
             this.label28.TabIndex = 69;
             this.label28.Text = "x C 1";
             // 
             // textBoxAmountDenominationXC1
             // 
             this.textBoxAmountDenominationXC1.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxAmountDenominationXC1.Location = new System.Drawing.Point(702, 292);
+            this.textBoxAmountDenominationXC1.Location = new System.Drawing.Point(878, 365);
             this.textBoxAmountDenominationXC1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmountDenominationXC1.Name = "textBoxAmountDenominationXC1";
-            this.textBoxAmountDenominationXC1.Size = new System.Drawing.Size(59, 26);
+            this.textBoxAmountDenominationXC1.Size = new System.Drawing.Size(73, 30);
             this.textBoxAmountDenominationXC1.TabIndex = 26;
             this.textBoxAmountDenominationXC1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmountDenominationXC1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
@@ -346,20 +347,20 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label29.Location = new System.Drawing.Point(765, 265);
+            this.label29.Location = new System.Drawing.Point(956, 331);
             this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(40, 19);
+            this.label29.Size = new System.Drawing.Size(48, 23);
             this.label29.TabIndex = 67;
             this.label29.Text = "x C 5";
             // 
             // textBoxAmountDenominationXC5
             // 
             this.textBoxAmountDenominationXC5.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxAmountDenominationXC5.Location = new System.Drawing.Point(702, 263);
+            this.textBoxAmountDenominationXC5.Location = new System.Drawing.Point(878, 329);
             this.textBoxAmountDenominationXC5.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmountDenominationXC5.Name = "textBoxAmountDenominationXC5";
-            this.textBoxAmountDenominationXC5.Size = new System.Drawing.Size(59, 26);
+            this.textBoxAmountDenominationXC5.Size = new System.Drawing.Size(73, 30);
             this.textBoxAmountDenominationXC5.TabIndex = 25;
             this.textBoxAmountDenominationXC5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmountDenominationXC5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
@@ -369,20 +370,20 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label30.Location = new System.Drawing.Point(765, 237);
+            this.label30.Location = new System.Drawing.Point(956, 296);
             this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(48, 19);
+            this.label30.Size = new System.Drawing.Size(57, 23);
             this.label30.TabIndex = 65;
             this.label30.Text = "x C 10";
             // 
             // textBoxAmountDenominationXC10
             // 
             this.textBoxAmountDenominationXC10.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxAmountDenominationXC10.Location = new System.Drawing.Point(702, 234);
+            this.textBoxAmountDenominationXC10.Location = new System.Drawing.Point(878, 292);
             this.textBoxAmountDenominationXC10.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmountDenominationXC10.Name = "textBoxAmountDenominationXC10";
-            this.textBoxAmountDenominationXC10.Size = new System.Drawing.Size(59, 26);
+            this.textBoxAmountDenominationXC10.Size = new System.Drawing.Size(73, 30);
             this.textBoxAmountDenominationXC10.TabIndex = 24;
             this.textBoxAmountDenominationXC10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmountDenominationXC10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
@@ -392,20 +393,20 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label31.Location = new System.Drawing.Point(765, 208);
+            this.label31.Location = new System.Drawing.Point(956, 260);
             this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(48, 19);
+            this.label31.Size = new System.Drawing.Size(57, 23);
             this.label31.TabIndex = 63;
             this.label31.Text = "x C 25";
             // 
             // textBoxAmountDenominationXC25
             // 
             this.textBoxAmountDenominationXC25.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxAmountDenominationXC25.Location = new System.Drawing.Point(702, 205);
+            this.textBoxAmountDenominationXC25.Location = new System.Drawing.Point(878, 256);
             this.textBoxAmountDenominationXC25.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmountDenominationXC25.Name = "textBoxAmountDenominationXC25";
-            this.textBoxAmountDenominationXC25.Size = new System.Drawing.Size(59, 26);
+            this.textBoxAmountDenominationXC25.Size = new System.Drawing.Size(73, 30);
             this.textBoxAmountDenominationXC25.TabIndex = 23;
             this.textBoxAmountDenominationXC25.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmountDenominationXC25.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
@@ -415,20 +416,20 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label32.Location = new System.Drawing.Point(765, 179);
+            this.label32.Location = new System.Drawing.Point(956, 224);
             this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(39, 19);
+            this.label32.Size = new System.Drawing.Size(47, 23);
             this.label32.TabIndex = 61;
             this.label32.Text = "x P 1";
             // 
             // textBoxAmountDenominationXP1
             // 
             this.textBoxAmountDenominationXP1.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxAmountDenominationXP1.Location = new System.Drawing.Point(702, 177);
+            this.textBoxAmountDenominationXP1.Location = new System.Drawing.Point(878, 221);
             this.textBoxAmountDenominationXP1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmountDenominationXP1.Name = "textBoxAmountDenominationXP1";
-            this.textBoxAmountDenominationXP1.Size = new System.Drawing.Size(59, 26);
+            this.textBoxAmountDenominationXP1.Size = new System.Drawing.Size(73, 30);
             this.textBoxAmountDenominationXP1.TabIndex = 22;
             this.textBoxAmountDenominationXP1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmountDenominationXP1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
@@ -438,20 +439,20 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label33.Location = new System.Drawing.Point(765, 150);
+            this.label33.Location = new System.Drawing.Point(956, 188);
             this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(39, 19);
+            this.label33.Size = new System.Drawing.Size(47, 23);
             this.label33.TabIndex = 59;
             this.label33.Text = "x P 5";
             // 
             // textBoxAmountDenominationXP5
             // 
             this.textBoxAmountDenominationXP5.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxAmountDenominationXP5.Location = new System.Drawing.Point(702, 148);
+            this.textBoxAmountDenominationXP5.Location = new System.Drawing.Point(878, 185);
             this.textBoxAmountDenominationXP5.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmountDenominationXP5.Name = "textBoxAmountDenominationXP5";
-            this.textBoxAmountDenominationXP5.Size = new System.Drawing.Size(59, 26);
+            this.textBoxAmountDenominationXP5.Size = new System.Drawing.Size(73, 30);
             this.textBoxAmountDenominationXP5.TabIndex = 21;
             this.textBoxAmountDenominationXP5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmountDenominationXP5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
@@ -461,20 +462,20 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label26.Location = new System.Drawing.Point(635, 323);
+            this.label26.Location = new System.Drawing.Point(794, 404);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(47, 19);
+            this.label26.Size = new System.Drawing.Size(56, 23);
             this.label26.TabIndex = 57;
             this.label26.Text = "x P 10";
             // 
             // textBoxAmountDenominationXP10
             // 
             this.textBoxAmountDenominationXP10.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxAmountDenominationXP10.Location = new System.Drawing.Point(571, 321);
+            this.textBoxAmountDenominationXP10.Location = new System.Drawing.Point(714, 401);
             this.textBoxAmountDenominationXP10.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmountDenominationXP10.Name = "textBoxAmountDenominationXP10";
-            this.textBoxAmountDenominationXP10.Size = new System.Drawing.Size(59, 26);
+            this.textBoxAmountDenominationXP10.Size = new System.Drawing.Size(73, 30);
             this.textBoxAmountDenominationXP10.TabIndex = 20;
             this.textBoxAmountDenominationXP10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmountDenominationXP10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
@@ -484,20 +485,20 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label25.Location = new System.Drawing.Point(635, 294);
+            this.label25.Location = new System.Drawing.Point(794, 368);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(47, 19);
+            this.label25.Size = new System.Drawing.Size(56, 23);
             this.label25.TabIndex = 55;
             this.label25.Text = "x P 20";
             // 
             // textBoxAmountDenominationXP20
             // 
             this.textBoxAmountDenominationXP20.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxAmountDenominationXP20.Location = new System.Drawing.Point(571, 292);
+            this.textBoxAmountDenominationXP20.Location = new System.Drawing.Point(714, 365);
             this.textBoxAmountDenominationXP20.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmountDenominationXP20.Name = "textBoxAmountDenominationXP20";
-            this.textBoxAmountDenominationXP20.Size = new System.Drawing.Size(59, 26);
+            this.textBoxAmountDenominationXP20.Size = new System.Drawing.Size(73, 30);
             this.textBoxAmountDenominationXP20.TabIndex = 19;
             this.textBoxAmountDenominationXP20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmountDenominationXP20.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
@@ -507,20 +508,20 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label24.Location = new System.Drawing.Point(635, 265);
+            this.label24.Location = new System.Drawing.Point(794, 331);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(47, 19);
+            this.label24.Size = new System.Drawing.Size(56, 23);
             this.label24.TabIndex = 53;
             this.label24.Text = "x P 50";
             // 
             // textBoxAmountDenominationXP50
             // 
             this.textBoxAmountDenominationXP50.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxAmountDenominationXP50.Location = new System.Drawing.Point(571, 263);
+            this.textBoxAmountDenominationXP50.Location = new System.Drawing.Point(714, 329);
             this.textBoxAmountDenominationXP50.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmountDenominationXP50.Name = "textBoxAmountDenominationXP50";
-            this.textBoxAmountDenominationXP50.Size = new System.Drawing.Size(59, 26);
+            this.textBoxAmountDenominationXP50.Size = new System.Drawing.Size(73, 30);
             this.textBoxAmountDenominationXP50.TabIndex = 18;
             this.textBoxAmountDenominationXP50.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmountDenominationXP50.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
@@ -530,20 +531,20 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label23.Location = new System.Drawing.Point(635, 237);
+            this.label23.Location = new System.Drawing.Point(794, 296);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(55, 19);
+            this.label23.Size = new System.Drawing.Size(65, 23);
             this.label23.TabIndex = 51;
             this.label23.Text = "x P 100";
             // 
             // textBoxAmountDenominationXP100
             // 
             this.textBoxAmountDenominationXP100.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxAmountDenominationXP100.Location = new System.Drawing.Point(571, 234);
+            this.textBoxAmountDenominationXP100.Location = new System.Drawing.Point(714, 292);
             this.textBoxAmountDenominationXP100.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmountDenominationXP100.Name = "textBoxAmountDenominationXP100";
-            this.textBoxAmountDenominationXP100.Size = new System.Drawing.Size(59, 26);
+            this.textBoxAmountDenominationXP100.Size = new System.Drawing.Size(73, 30);
             this.textBoxAmountDenominationXP100.TabIndex = 17;
             this.textBoxAmountDenominationXP100.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmountDenominationXP100.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
@@ -553,20 +554,20 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label22.Location = new System.Drawing.Point(635, 208);
+            this.label22.Location = new System.Drawing.Point(794, 260);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(55, 19);
+            this.label22.Size = new System.Drawing.Size(65, 23);
             this.label22.TabIndex = 49;
             this.label22.Text = "x P 200";
             // 
             // textBoxAmountDenominationXP200
             // 
             this.textBoxAmountDenominationXP200.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxAmountDenominationXP200.Location = new System.Drawing.Point(571, 205);
+            this.textBoxAmountDenominationXP200.Location = new System.Drawing.Point(714, 256);
             this.textBoxAmountDenominationXP200.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmountDenominationXP200.Name = "textBoxAmountDenominationXP200";
-            this.textBoxAmountDenominationXP200.Size = new System.Drawing.Size(59, 26);
+            this.textBoxAmountDenominationXP200.Size = new System.Drawing.Size(73, 30);
             this.textBoxAmountDenominationXP200.TabIndex = 16;
             this.textBoxAmountDenominationXP200.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmountDenominationXP200.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
@@ -576,20 +577,20 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label21.Location = new System.Drawing.Point(635, 179);
+            this.label21.Location = new System.Drawing.Point(794, 224);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(55, 19);
+            this.label21.Size = new System.Drawing.Size(65, 23);
             this.label21.TabIndex = 47;
             this.label21.Text = "x P 500";
             // 
             // textBoxAmountDenominationXP500
             // 
             this.textBoxAmountDenominationXP500.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxAmountDenominationXP500.Location = new System.Drawing.Point(571, 177);
+            this.textBoxAmountDenominationXP500.Location = new System.Drawing.Point(714, 221);
             this.textBoxAmountDenominationXP500.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmountDenominationXP500.Name = "textBoxAmountDenominationXP500";
-            this.textBoxAmountDenominationXP500.Size = new System.Drawing.Size(59, 26);
+            this.textBoxAmountDenominationXP500.Size = new System.Drawing.Size(73, 30);
             this.textBoxAmountDenominationXP500.TabIndex = 15;
             this.textBoxAmountDenominationXP500.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmountDenominationXP500.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
@@ -599,20 +600,20 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label20.Location = new System.Drawing.Point(635, 150);
+            this.label20.Location = new System.Drawing.Point(794, 188);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(66, 19);
+            this.label20.Size = new System.Drawing.Size(78, 23);
             this.label20.TabIndex = 45;
             this.label20.Text = "x P 1,000";
             // 
             // textBoxAmountDenominationXP1000
             // 
             this.textBoxAmountDenominationXP1000.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxAmountDenominationXP1000.Location = new System.Drawing.Point(571, 148);
+            this.textBoxAmountDenominationXP1000.Location = new System.Drawing.Point(714, 185);
             this.textBoxAmountDenominationXP1000.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmountDenominationXP1000.Name = "textBoxAmountDenominationXP1000";
-            this.textBoxAmountDenominationXP1000.Size = new System.Drawing.Size(59, 26);
+            this.textBoxAmountDenominationXP1000.Size = new System.Drawing.Size(73, 30);
             this.textBoxAmountDenominationXP1000.TabIndex = 14;
             this.textBoxAmountDenominationXP1000.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmountDenominationXP1000.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
@@ -622,10 +623,10 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label19.Location = new System.Drawing.Point(478, 121);
+            this.label19.Location = new System.Drawing.Point(598, 151);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(153, 19);
+            this.label19.Size = new System.Drawing.Size(190, 23);
             this.label19.TabIndex = 43;
             this.label19.Text = "Amount Denomination:";
             // 
@@ -634,10 +635,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label10.Location = new System.Drawing.Point(16, 353);
+            this.label10.Location = new System.Drawing.Point(20, 441);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(213, 13);
+            this.label10.Size = new System.Drawing.Size(250, 19);
             this.label10.TabIndex = 42;
             this.label10.Text = "Return information for refund purposes";
             // 
@@ -646,10 +647,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label9.Location = new System.Drawing.Point(16, 153);
+            this.label9.Location = new System.Drawing.Point(20, 191);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(435, 13);
+            this.label9.Size = new System.Drawing.Size(517, 19);
             this.label9.TabIndex = 41;
             this.label9.Text = "You are not limited from just adding/getting cash, you can also add/get checks, e" +
     "tc.";
@@ -659,10 +660,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(16, 101);
+            this.label8.Location = new System.Drawing.Point(20, 126);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(300, 13);
+            this.label8.Size = new System.Drawing.Size(361, 19);
             this.label8.TabIndex = 40;
             this.label8.Text = "Debit - add cash to drawer; Credit - get cash from drawer";
             // 
@@ -670,10 +671,10 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label18.Location = new System.Drawing.Point(15, 401);
+            this.label18.Location = new System.Drawing.Point(19, 501);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(118, 19);
+            this.label18.Size = new System.Drawing.Size(146, 23);
             this.label18.TabIndex = 39;
             this.label18.Text = "Order Return No.:";
             // 
@@ -682,10 +683,10 @@
             this.checkBoxRefund.AutoSize = true;
             this.checkBoxRefund.Enabled = false;
             this.checkBoxRefund.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.checkBoxRefund.Location = new System.Drawing.Point(155, 371);
+            this.checkBoxRefund.Location = new System.Drawing.Point(194, 464);
             this.checkBoxRefund.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxRefund.Name = "checkBoxRefund";
-            this.checkBoxRefund.Size = new System.Drawing.Size(32, 23);
+            this.checkBoxRefund.Size = new System.Drawing.Size(37, 27);
             this.checkBoxRefund.TabIndex = 9;
             this.checkBoxRefund.Text = " ";
             this.checkBoxRefund.UseVisualStyleBackColor = true;
@@ -695,31 +696,31 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label17.Location = new System.Drawing.Point(64, 371);
+            this.label17.Location = new System.Drawing.Point(80, 464);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(69, 19);
+            this.label17.Size = new System.Drawing.Size(85, 23);
             this.label17.TabIndex = 36;
             this.label17.Text = "Is Refund:";
             // 
             // textBoxRemarks
             // 
             this.textBoxRemarks.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxRemarks.Location = new System.Drawing.Point(155, 288);
+            this.textBoxRemarks.Location = new System.Drawing.Point(194, 360);
             this.textBoxRemarks.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRemarks.Multiline = true;
             this.textBoxRemarks.Name = "textBoxRemarks";
-            this.textBoxRemarks.Size = new System.Drawing.Size(316, 56);
+            this.textBoxRemarks.Size = new System.Drawing.Size(394, 69);
             this.textBoxRemarks.TabIndex = 8;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label16.Location = new System.Drawing.Point(15, 291);
+            this.label16.Location = new System.Drawing.Point(19, 364);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(64, 19);
+            this.label16.Size = new System.Drawing.Size(78, 23);
             this.label16.TabIndex = 34;
             this.label16.Text = "Remarks:";
             // 
@@ -727,20 +728,20 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label15.Location = new System.Drawing.Point(15, 266);
+            this.label15.Location = new System.Drawing.Point(19, 332);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(62, 19);
+            this.label15.Size = new System.Drawing.Size(76, 23);
             this.label15.TabIndex = 33;
             this.label15.Text = "Amount:";
             // 
             // textBoxAmount
             // 
             this.textBoxAmount.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxAmount.Location = new System.Drawing.Point(155, 259);
+            this.textBoxAmount.Location = new System.Drawing.Point(194, 324);
             this.textBoxAmount.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmount.Name = "textBoxAmount";
-            this.textBoxAmount.Size = new System.Drawing.Size(158, 26);
+            this.textBoxAmount.Size = new System.Drawing.Size(196, 30);
             this.textBoxAmount.TabIndex = 7;
             this.textBoxAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
@@ -750,30 +751,30 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label14.Location = new System.Drawing.Point(15, 233);
+            this.label14.Location = new System.Drawing.Point(19, 291);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(48, 19);
+            this.label14.Size = new System.Drawing.Size(58, 23);
             this.label14.TabIndex = 31;
             this.label14.Text = "Payee:";
             // 
             // textBoxPayee
             // 
             this.textBoxPayee.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxPayee.Location = new System.Drawing.Point(155, 230);
+            this.textBoxPayee.Location = new System.Drawing.Point(194, 288);
             this.textBoxPayee.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPayee.Name = "textBoxPayee";
-            this.textBoxPayee.Size = new System.Drawing.Size(316, 26);
+            this.textBoxPayee.Size = new System.Drawing.Size(394, 30);
             this.textBoxPayee.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label7.Location = new System.Drawing.Point(15, 204);
+            this.label7.Location = new System.Drawing.Point(19, 255);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 19);
+            this.label7.Size = new System.Drawing.Size(77, 23);
             this.label7.TabIndex = 29;
             this.label7.Text = "Account:";
             // 
@@ -781,20 +782,20 @@
             // 
             this.comboBoxAccount.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.comboBoxAccount.FormattingEnabled = true;
-            this.comboBoxAccount.Location = new System.Drawing.Point(155, 201);
+            this.comboBoxAccount.Location = new System.Drawing.Point(194, 251);
             this.comboBoxAccount.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxAccount.Name = "comboBoxAccount";
-            this.comboBoxAccount.Size = new System.Drawing.Size(240, 27);
+            this.comboBoxAccount.Size = new System.Drawing.Size(299, 31);
             this.comboBoxAccount.TabIndex = 5;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label6.Location = new System.Drawing.Point(15, 177);
+            this.label6.Location = new System.Drawing.Point(19, 221);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 19);
+            this.label6.Size = new System.Drawing.Size(80, 23);
             this.label6.TabIndex = 27;
             this.label6.Text = "Pay Type:";
             // 
@@ -802,20 +803,20 @@
             // 
             this.comboBoxPayType.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.comboBoxPayType.FormattingEnabled = true;
-            this.comboBoxPayType.Location = new System.Drawing.Point(155, 171);
+            this.comboBoxPayType.Location = new System.Drawing.Point(194, 214);
             this.comboBoxPayType.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxPayType.Name = "comboBoxPayType";
-            this.comboBoxPayType.Size = new System.Drawing.Size(158, 27);
+            this.comboBoxPayType.Size = new System.Drawing.Size(196, 31);
             this.comboBoxPayType.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label3.Location = new System.Drawing.Point(15, 121);
+            this.label3.Location = new System.Drawing.Point(19, 151);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 19);
+            this.label3.Size = new System.Drawing.Size(49, 23);
             this.label3.TabIndex = 25;
             this.label3.Text = "Type:";
             // 
@@ -823,20 +824,20 @@
             // 
             this.comboBoxRemittanceType.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.comboBoxRemittanceType.FormattingEnabled = true;
-            this.comboBoxRemittanceType.Location = new System.Drawing.Point(155, 119);
+            this.comboBoxRemittanceType.Location = new System.Drawing.Point(194, 149);
             this.comboBoxRemittanceType.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxRemittanceType.Name = "comboBoxRemittanceType";
-            this.comboBoxRemittanceType.Size = new System.Drawing.Size(158, 27);
+            this.comboBoxRemittanceType.Size = new System.Drawing.Size(196, 31);
             this.comboBoxRemittanceType.TabIndex = 3;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label13.Location = new System.Drawing.Point(464, 71);
+            this.label13.Location = new System.Drawing.Point(580, 89);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(91, 19);
+            this.label13.Size = new System.Drawing.Size(111, 23);
             this.label13.TabIndex = 23;
             this.label13.Text = "Approved by:";
             // 
@@ -844,10 +845,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label12.Location = new System.Drawing.Point(472, 41);
+            this.label12.Location = new System.Drawing.Point(590, 51);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 19);
+            this.label12.Size = new System.Drawing.Size(102, 23);
             this.label12.TabIndex = 22;
             this.label12.Text = "Checked by:";
             // 
@@ -855,10 +856,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label11.Location = new System.Drawing.Point(469, 12);
+            this.label11.Location = new System.Drawing.Point(586, 15);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 19);
+            this.label11.Size = new System.Drawing.Size(106, 23);
             this.label11.TabIndex = 21;
             this.label11.Text = "Prepared by:";
             // 
@@ -866,20 +867,20 @@
             // 
             this.comboBoxApprovedBy.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.comboBoxApprovedBy.FormattingEnabled = true;
-            this.comboBoxApprovedBy.Location = new System.Drawing.Point(571, 68);
+            this.comboBoxApprovedBy.Location = new System.Drawing.Point(714, 85);
             this.comboBoxApprovedBy.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxApprovedBy.Name = "comboBoxApprovedBy";
-            this.comboBoxApprovedBy.Size = new System.Drawing.Size(231, 27);
+            this.comboBoxApprovedBy.Size = new System.Drawing.Size(288, 31);
             this.comboBoxApprovedBy.TabIndex = 13;
             // 
             // comboBoxCheckedBy
             // 
             this.comboBoxCheckedBy.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.comboBoxCheckedBy.FormattingEnabled = true;
-            this.comboBoxCheckedBy.Location = new System.Drawing.Point(571, 38);
+            this.comboBoxCheckedBy.Location = new System.Drawing.Point(714, 48);
             this.comboBoxCheckedBy.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCheckedBy.Name = "comboBoxCheckedBy";
-            this.comboBoxCheckedBy.Size = new System.Drawing.Size(231, 27);
+            this.comboBoxCheckedBy.Size = new System.Drawing.Size(288, 31);
             this.comboBoxCheckedBy.TabIndex = 12;
             // 
             // comboBoxPreparedBy
@@ -887,20 +888,20 @@
             this.comboBoxPreparedBy.Enabled = false;
             this.comboBoxPreparedBy.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.comboBoxPreparedBy.FormattingEnabled = true;
-            this.comboBoxPreparedBy.Location = new System.Drawing.Point(571, 9);
+            this.comboBoxPreparedBy.Location = new System.Drawing.Point(714, 11);
             this.comboBoxPreparedBy.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxPreparedBy.Name = "comboBoxPreparedBy";
-            this.comboBoxPreparedBy.Size = new System.Drawing.Size(231, 27);
+            this.comboBoxPreparedBy.Size = new System.Drawing.Size(288, 31);
             this.comboBoxPreparedBy.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label5.Location = new System.Drawing.Point(14, 40);
+            this.label5.Location = new System.Drawing.Point(18, 50);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 19);
+            this.label5.Size = new System.Drawing.Size(78, 23);
             this.label5.TabIndex = 9;
             this.label5.Text = "Terminal:";
             // 
@@ -908,10 +909,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label4.Location = new System.Drawing.Point(15, 71);
+            this.label4.Location = new System.Drawing.Point(19, 89);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 19);
+            this.label4.Size = new System.Drawing.Size(148, 23);
             this.label4.TabIndex = 8;
             this.label4.Text = "Cash In/Out Date:";
             // 
@@ -919,10 +920,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label2.Location = new System.Drawing.Point(10, 11);
+            this.label2.Location = new System.Drawing.Point(12, 14);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 19);
+            this.label2.Size = new System.Drawing.Size(175, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Cash In/Out Number:";
             // 
@@ -931,20 +932,20 @@
             this.comboBoxTerminal.Enabled = false;
             this.comboBoxTerminal.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.comboBoxTerminal.FormattingEnabled = true;
-            this.comboBoxTerminal.Location = new System.Drawing.Point(155, 37);
+            this.comboBoxTerminal.Location = new System.Drawing.Point(194, 46);
             this.comboBoxTerminal.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTerminal.Name = "comboBoxTerminal";
-            this.comboBoxTerminal.Size = new System.Drawing.Size(158, 27);
+            this.comboBoxTerminal.Size = new System.Drawing.Size(196, 31);
             this.comboBoxTerminal.TabIndex = 1;
             // 
             // dateTimePickerRemittanceDate
             // 
             this.dateTimePickerRemittanceDate.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.dateTimePickerRemittanceDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerRemittanceDate.Location = new System.Drawing.Point(155, 67);
+            this.dateTimePickerRemittanceDate.Location = new System.Drawing.Point(194, 84);
             this.dateTimePickerRemittanceDate.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerRemittanceDate.Name = "dateTimePickerRemittanceDate";
-            this.dateTimePickerRemittanceDate.Size = new System.Drawing.Size(158, 26);
+            this.dateTimePickerRemittanceDate.Size = new System.Drawing.Size(196, 30);
             this.dateTimePickerRemittanceDate.TabIndex = 2;
             // 
             // textBoxRemittanceNumber
@@ -953,23 +954,23 @@
             this.textBoxRemittanceNumber.Enabled = false;
             this.textBoxRemittanceNumber.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.textBoxRemittanceNumber.HideSelection = false;
-            this.textBoxRemittanceNumber.Location = new System.Drawing.Point(155, 9);
+            this.textBoxRemittanceNumber.Location = new System.Drawing.Point(194, 11);
             this.textBoxRemittanceNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRemittanceNumber.Name = "textBoxRemittanceNumber";
-            this.textBoxRemittanceNumber.Size = new System.Drawing.Size(158, 26);
+            this.textBoxRemittanceNumber.Size = new System.Drawing.Size(196, 30);
             this.textBoxRemittanceNumber.TabIndex = 0;
             // 
             // TrnDisbursementDetailForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1096, 560);
+            this.ClientSize = new System.Drawing.Size(1370, 700);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "TrnDisbursementDetailForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrnDisbursementDetailForm";

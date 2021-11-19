@@ -69,7 +69,7 @@ namespace EasyPOS.Forms.Software.TrnDisbursement
 
         public void Refund()
         {
-            DialogResult deleteDialogResult = MessageBox.Show("Refund sales?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult deleteDialogResult = MessageBox.Show("Refund sales?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (deleteDialogResult == DialogResult.Yes)
             {
                 Entities.TrnDisbursementEntity newDisbursement = new Entities.TrnDisbursementEntity()
@@ -82,14 +82,14 @@ namespace EasyPOS.Forms.Software.TrnDisbursement
                 String[] refundSales = trnDisbursementController.Refund(newDisbursement);
                 if (refundSales[1].Equals("0") == false)
                 {
-                    MessageBox.Show("Refund successful.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Refund successful.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     trnDisbursementListForm.UpdateDisbursementListDataSource();
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show(refundSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(refundSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

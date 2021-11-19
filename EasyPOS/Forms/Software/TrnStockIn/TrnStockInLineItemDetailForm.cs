@@ -127,7 +127,7 @@ namespace EasyPOS.Forms.Software.TrnStockIn
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -183,7 +183,7 @@ namespace EasyPOS.Forms.Software.TrnStockIn
                 }
                 else
                 {
-                    MessageBox.Show(addStockInLine[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addStockInLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -196,7 +196,7 @@ namespace EasyPOS.Forms.Software.TrnStockIn
                 }
                 else
                 {
-                    MessageBox.Show(updateStockInLine[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(updateStockInLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

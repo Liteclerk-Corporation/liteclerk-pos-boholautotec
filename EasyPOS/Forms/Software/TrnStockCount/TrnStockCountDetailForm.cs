@@ -64,7 +64,7 @@ namespace EasyPOS.Forms.Software.TrnStockCount
             sysUserRights = new Modules.SysUserRightsModule("TrnStockCountDetail");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -225,7 +225,7 @@ namespace EasyPOS.Forms.Software.TrnStockCount
             }
             else
             {
-                MessageBox.Show(lockStockCount[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(lockStockCount[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -241,7 +241,7 @@ namespace EasyPOS.Forms.Software.TrnStockCount
             }
             else
             {
-                MessageBox.Show(unlockStockCount[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(unlockStockCount[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -351,12 +351,12 @@ namespace EasyPOS.Forms.Software.TrnStockCount
         {
             UpdateStockCountLineListDataSource();
 
-            dataGridViewStockCountLineList.Columns[dataGridViewStockCountLineList.Columns["ColumnStockCountLineListButtonEdit"].Index].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewStockCountLineList.Columns[dataGridViewStockCountLineList.Columns["ColumnStockCountLineListButtonEdit"].Index].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewStockCountLineList.Columns[dataGridViewStockCountLineList.Columns["ColumnStockCountLineListButtonEdit"].Index].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewStockCountLineList.Columns[dataGridViewStockCountLineList.Columns["ColumnStockCountLineListButtonEdit"].Index].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewStockCountLineList.Columns[dataGridViewStockCountLineList.Columns["ColumnStockCountLineListButtonEdit"].Index].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewStockCountLineList.Columns[dataGridViewStockCountLineList.Columns["ColumnStockCountLineListButtonDelete"].Index].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewStockCountLineList.Columns[dataGridViewStockCountLineList.Columns["ColumnStockCountLineListButtonDelete"].Index].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewStockCountLineList.Columns[dataGridViewStockCountLineList.Columns["ColumnStockCountLineListButtonDelete"].Index].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewStockCountLineList.Columns[dataGridViewStockCountLineList.Columns["ColumnStockCountLineListButtonDelete"].Index].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewStockCountLineList.Columns[dataGridViewStockCountLineList.Columns["ColumnStockCountLineListButtonDelete"].Index].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewStockCountLineList.DataSource = stockOutLineDataSource;
@@ -405,7 +405,7 @@ namespace EasyPOS.Forms.Software.TrnStockCount
 
             if (e.RowIndex > -1 && dataGridViewStockCountLineList.CurrentCell.ColumnIndex == dataGridViewStockCountLineList.Columns["ColumnStockCountLineListButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Stock-In?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Stock-In?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     var id = Convert.ToInt32(dataGridViewStockCountLineList.Rows[e.RowIndex].Cells[dataGridViewStockCountLineList.Columns["ColumnStockCountLineListId"].Index].Value);
@@ -419,7 +419,7 @@ namespace EasyPOS.Forms.Software.TrnStockCount
                     }
                     else
                     {
-                        MessageBox.Show(deleteStockCountLine[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteStockCountLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -546,7 +546,7 @@ namespace EasyPOS.Forms.Software.TrnStockCount
                     }
                     else
                 {
-                        MessageBox.Show("Item not found.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Item not found.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
@@ -556,7 +556,7 @@ namespace EasyPOS.Forms.Software.TrnStockCount
 
         private void buttonPost_Click(object sender, EventArgs e)
         {
-            DialogResult cancelDialogResult = MessageBox.Show("Post Inventory?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult cancelDialogResult = MessageBox.Show("Post Inventory?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (cancelDialogResult == DialogResult.Yes)
             {
                 Controllers.TrnStockCountController trnStockCountController = new Controllers.TrnStockCountController();
@@ -578,7 +578,7 @@ namespace EasyPOS.Forms.Software.TrnStockCount
                 }
                 else
                 {
-                    MessageBox.Show(postStockCount[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(postStockCount[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

@@ -118,7 +118,7 @@ namespace EasyPOS.Forms.Software.TrnStockCount
                 }
                 else
                 {
-                    MessageBox.Show(addStockCountLine[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addStockCountLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

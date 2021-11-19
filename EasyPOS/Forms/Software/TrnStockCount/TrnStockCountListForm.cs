@@ -52,7 +52,7 @@ namespace EasyPOS.Forms.Software.TrnStockCount
             sysUserRights = new Modules.SysUserRightsModule("TrnStockCount");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -202,12 +202,12 @@ namespace EasyPOS.Forms.Software.TrnStockCount
         {
             UpdateStockCountListDataSource();
 
-            dataGridViewStockCountList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewStockCountList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewStockCountList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewStockCountList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewStockCountList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewStockCountList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewStockCountList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewStockCountList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewStockCountList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewStockCountList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewStockCountList.DataSource = itemListDataSource;
@@ -229,7 +229,7 @@ namespace EasyPOS.Forms.Software.TrnStockCount
             }
             else
             {
-                MessageBox.Show(addStockCount[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(addStockCount[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -271,11 +271,11 @@ namespace EasyPOS.Forms.Software.TrnStockCount
 
                 if (isLocked == true)
                 {
-                    MessageBox.Show("Already locked.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Already locked.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    DialogResult deleteDialogResult = MessageBox.Show("Delete Stock-Out?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult deleteDialogResult = MessageBox.Show("Delete Stock-Out?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (deleteDialogResult == DialogResult.Yes)
                     {
                         Controllers.TrnStockCountController trnStockCountController = new Controllers.TrnStockCountController();
@@ -288,7 +288,7 @@ namespace EasyPOS.Forms.Software.TrnStockCount
                         }
                         else
                         {
-                            MessageBox.Show(deleteStockCount[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(deleteStockCount[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }

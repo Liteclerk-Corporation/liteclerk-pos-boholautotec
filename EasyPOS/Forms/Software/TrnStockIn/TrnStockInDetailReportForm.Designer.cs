@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrnStockInDetailReportForm));
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -37,20 +38,21 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.label2.Location = new System.Drawing.Point(122, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 19);
+            this.label2.Size = new System.Drawing.Size(160, 23);
             this.label2.TabIndex = 9;
             this.label2.Text = "Exporting PDF File...";
             // 
             // TrnStockInDetailReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(385, 115);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TrnStockInDetailReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock In Detail Report";

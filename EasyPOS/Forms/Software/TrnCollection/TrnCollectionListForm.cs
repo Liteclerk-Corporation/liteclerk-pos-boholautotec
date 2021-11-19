@@ -38,7 +38,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             sysUserRights = new Modules.SysUserRightsModule("TrnCollection");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -171,12 +171,12 @@ namespace EasyPOS.Forms.Software.TrnCollection
         {
             UpdateCollectionListDataSource();
 
-            dataGridViewCollectionList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewCollectionList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewCollectionList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewCollectionList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewCollectionList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewCollectionList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewCollectionList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewCollectionList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewCollectionList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewCollectionList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewCollectionList.DataSource = itemListDataSource;
@@ -204,11 +204,11 @@ namespace EasyPOS.Forms.Software.TrnCollection
 
                 if (isLocked == true)
                 {
-                    MessageBox.Show("Already locked.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Already locked.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    DialogResult deleteDialogResult = MessageBox.Show("Delete Collection?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult deleteDialogResult = MessageBox.Show("Delete Collection?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (deleteDialogResult == DialogResult.Yes)
                     {
                         Controllers.TrnCollectionController trnCollectionController = new Controllers.TrnCollectionController();
@@ -221,7 +221,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
                         }
                         else
                         {
-                            MessageBox.Show(deleteCollection[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(deleteCollection[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -245,7 +245,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             }
             else
             {
-                MessageBox.Show(addCollection[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(addCollection[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

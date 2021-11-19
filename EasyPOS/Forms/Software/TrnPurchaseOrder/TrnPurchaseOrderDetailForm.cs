@@ -31,7 +31,7 @@ namespace EasyPOS.Forms.Software.TrnPurchaseOrder
             sysUserRights = new Modules.SysUserRightsModule("TrnPurchaseOrderDetail");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -190,7 +190,7 @@ namespace EasyPOS.Forms.Software.TrnPurchaseOrder
             }
             else
             {
-                MessageBox.Show(lockPurchaseOrder[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(lockPurchaseOrder[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -206,7 +206,7 @@ namespace EasyPOS.Forms.Software.TrnPurchaseOrder
             }
             else
             {
-                MessageBox.Show(unlockPurchaseOrder[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(unlockPurchaseOrder[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -312,12 +312,12 @@ namespace EasyPOS.Forms.Software.TrnPurchaseOrder
         {
             UpdatePurchaseOrderLineListDataSource();
 
-            dataGridViewPurchaseOrderLineList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewPurchaseOrderLineList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewPurchaseOrderLineList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewPurchaseOrderLineList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewPurchaseOrderLineList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewPurchaseOrderLineList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewPurchaseOrderLineList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewPurchaseOrderLineList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewPurchaseOrderLineList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewPurchaseOrderLineList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
 
@@ -369,7 +369,7 @@ namespace EasyPOS.Forms.Software.TrnPurchaseOrder
 
             if (e.RowIndex > -1 && dataGridViewPurchaseOrderLineList.CurrentCell.ColumnIndex == dataGridViewPurchaseOrderLineList.Columns["ColumnPurchaseOrderLineListButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Purchase Order?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Purchase Order?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     var id = Convert.ToInt32(dataGridViewPurchaseOrderLineList.Rows[e.RowIndex].Cells[dataGridViewPurchaseOrderLineList.Columns["ColumnPurchaseOrderLineListId"].Index].Value);
@@ -383,7 +383,7 @@ namespace EasyPOS.Forms.Software.TrnPurchaseOrder
                     }
                     else
                     {
-                        MessageBox.Show(deletePurchaseOrderLine[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deletePurchaseOrderLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -509,7 +509,7 @@ namespace EasyPOS.Forms.Software.TrnPurchaseOrder
                     }
                     else
                     {
-                        MessageBox.Show("Item not found.", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Item not found.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
@@ -519,7 +519,7 @@ namespace EasyPOS.Forms.Software.TrnPurchaseOrder
 
         private void buttonStockIn_Click(object sender, EventArgs e)
         {
-            DialogResult cancelDialogResult = MessageBox.Show("Add Stock-In?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult cancelDialogResult = MessageBox.Show("Add Stock-In?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (cancelDialogResult == DialogResult.Yes)
             {
                 Controllers.TrnPurchaseOrderController trnPurchaseOrderController = new Controllers.TrnPurchaseOrderController();
@@ -541,7 +541,7 @@ namespace EasyPOS.Forms.Software.TrnPurchaseOrder
                 }
                 else
                 {
-                    MessageBox.Show(postPurchaseOrder[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(postPurchaseOrder[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

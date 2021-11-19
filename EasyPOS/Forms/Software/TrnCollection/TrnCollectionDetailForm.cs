@@ -32,7 +32,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             sysUserRights = new Modules.SysUserRightsModule("TrnCollectionDetail");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -212,12 +212,12 @@ namespace EasyPOS.Forms.Software.TrnCollection
                 }
                 else
                 {
-                    MessageBox.Show(lockCollection[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(lockCollection[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -234,7 +234,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             }
             else
             {
-                MessageBox.Show(unlockCollection[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(unlockCollection[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void UpdateCollectionListDataSource()
@@ -356,12 +356,12 @@ namespace EasyPOS.Forms.Software.TrnCollection
 
             dataGridViewCollectionLineList.AutoGenerateColumns = false;
 
-            dataGridViewCollectionLineList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#01A6F0");
-            dataGridViewCollectionLineList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#01A6F0");
+            dataGridViewCollectionLineList.Columns[0].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+            dataGridViewCollectionLineList.Columns[0].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
             dataGridViewCollectionLineList.Columns[0].DefaultCellStyle.ForeColor = Color.White;
 
-            dataGridViewCollectionLineList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#F34F1C");
-            dataGridViewCollectionLineList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#F34F1C");
+            dataGridViewCollectionLineList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C32938");
+            dataGridViewCollectionLineList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
             dataGridViewCollectionLineList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewCollectionLineList.DataSource = collectionLineDataSource;
@@ -429,7 +429,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
 
             if (e.RowIndex > -1 && dataGridViewCollectionLineList.CurrentCell.ColumnIndex == dataGridViewCollectionLineList.Columns["ColumnCollectionLineListButtonDelete"].Index)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Collection?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Collection?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
                     var id = Convert.ToInt32(dataGridViewCollectionLineList.Rows[e.RowIndex].Cells[dataGridViewCollectionLineList.Columns["ColumnCollectionLineListId"].Index].Value);
@@ -443,7 +443,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
                     }
                     else
                     {
-                        MessageBox.Show(deleteCollectionLine[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteCollectionLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -599,7 +599,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
 
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            DialogResult tenderPrinterReadyDialogResult = MessageBox.Show("Is printer ready?", "Easy POS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult tenderPrinterReadyDialogResult = MessageBox.Show("Is printer ready?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (tenderPrinterReadyDialogResult == DialogResult.Yes)
             {
                 new TrnPOSOfficialReceiptReportForm(Convert.ToInt32(comboBoxSalesNumber.SelectedValue), trnCollectionEntity.Id, false, "");

@@ -29,10 +29,11 @@ namespace EasyPOS.Forms.Software.TrnCollection
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrnCollectionListForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -82,7 +83,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonClose);
@@ -91,16 +92,16 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1080, 50);
+            this.panel1.Size = new System.Drawing.Size(1350, 62);
             this.panel1.TabIndex = 8;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::EasyPOS.Properties.Resources.PurchaseOrder;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -109,26 +110,26 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(50, 14);
+            this.label1.Location = new System.Drawing.Point(62, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 28);
+            this.label1.Size = new System.Drawing.Size(181, 35);
             this.label1.TabIndex = 2;
             this.label1.Text = "Collection List";
             // 
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(999, 10);
+            this.buttonClose.Location = new System.Drawing.Point(1249, 12);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(70, 32);
+            this.buttonClose.Size = new System.Drawing.Size(88, 40);
             this.buttonClose.TabIndex = 21;
             this.buttonClose.TabStop = false;
             this.buttonClose.Text = "Close";
@@ -138,16 +139,16 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // buttonAdd
             // 
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonAdd.FlatAppearance.BorderSize = 0;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
-            this.buttonAdd.Location = new System.Drawing.Point(925, 10);
+            this.buttonAdd.Location = new System.Drawing.Point(1156, 12);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(70, 32);
+            this.buttonAdd.Size = new System.Drawing.Size(88, 40);
             this.buttonAdd.TabIndex = 20;
             this.buttonAdd.TabStop = false;
             this.buttonAdd.Text = "Add";
@@ -192,14 +193,15 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.ColumnCollectionListEntryDateTime,
             this.ColumnCollectionListUpdateUserId,
             this.ColumnCollectionListUpdateDateTime});
-            this.dataGridViewCollectionList.Location = new System.Drawing.Point(10, 84);
+            this.dataGridViewCollectionList.Location = new System.Drawing.Point(12, 105);
             this.dataGridViewCollectionList.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewCollectionList.MultiSelect = false;
             this.dataGridViewCollectionList.Name = "dataGridViewCollectionList";
             this.dataGridViewCollectionList.ReadOnly = true;
+            this.dataGridViewCollectionList.RowHeadersWidth = 51;
             this.dataGridViewCollectionList.RowTemplate.Height = 24;
             this.dataGridViewCollectionList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCollectionList.Size = new System.Drawing.Size(1059, 410);
+            this.dataGridViewCollectionList.Size = new System.Drawing.Size(1324, 512);
             this.dataGridViewCollectionList.TabIndex = 24;
             this.dataGridViewCollectionList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCollectionList_CellClick);
             // 
@@ -208,6 +210,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.ColumnCollectionListButtonEdit.DataPropertyName = "ColumnCollectionListButtonEdit";
             this.ColumnCollectionListButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColumnCollectionListButtonEdit.HeaderText = "";
+            this.ColumnCollectionListButtonEdit.MinimumWidth = 6;
             this.ColumnCollectionListButtonEdit.Name = "ColumnCollectionListButtonEdit";
             this.ColumnCollectionListButtonEdit.ReadOnly = true;
             this.ColumnCollectionListButtonEdit.Width = 70;
@@ -217,6 +220,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.ColumnCollectionListButtonDelete.DataPropertyName = "ColumnCollectionListButtonDelete";
             this.ColumnCollectionListButtonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColumnCollectionListButtonDelete.HeaderText = "";
+            this.ColumnCollectionListButtonDelete.MinimumWidth = 6;
             this.ColumnCollectionListButtonDelete.Name = "ColumnCollectionListButtonDelete";
             this.ColumnCollectionListButtonDelete.ReadOnly = true;
             this.ColumnCollectionListButtonDelete.Width = 70;
@@ -225,22 +229,27 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // 
             this.ColumnCollectionListId.DataPropertyName = "ColumnCollectionListId";
             this.ColumnCollectionListId.HeaderText = "Id";
+            this.ColumnCollectionListId.MinimumWidth = 6;
             this.ColumnCollectionListId.Name = "ColumnCollectionListId";
             this.ColumnCollectionListId.ReadOnly = true;
             this.ColumnCollectionListId.Visible = false;
+            this.ColumnCollectionListId.Width = 125;
             // 
             // ColumnCollectionListPeriodId
             // 
             this.ColumnCollectionListPeriodId.DataPropertyName = "ColumnCollectionListPeriodId";
             this.ColumnCollectionListPeriodId.HeaderText = "PeriodId";
+            this.ColumnCollectionListPeriodId.MinimumWidth = 6;
             this.ColumnCollectionListPeriodId.Name = "ColumnCollectionListPeriodId";
             this.ColumnCollectionListPeriodId.ReadOnly = true;
             this.ColumnCollectionListPeriodId.Visible = false;
+            this.ColumnCollectionListPeriodId.Width = 125;
             // 
             // ColumnCollectionListCollectionDate
             // 
             this.ColumnCollectionListCollectionDate.DataPropertyName = "ColumnCollectionListCollectionDate";
             this.ColumnCollectionListCollectionDate.HeaderText = "Collection Date";
+            this.ColumnCollectionListCollectionDate.MinimumWidth = 6;
             this.ColumnCollectionListCollectionDate.Name = "ColumnCollectionListCollectionDate";
             this.ColumnCollectionListCollectionDate.ReadOnly = true;
             this.ColumnCollectionListCollectionDate.Visible = false;
@@ -250,21 +259,26 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // 
             this.ColumnCollectionListCollectionNumber.DataPropertyName = "ColumnCollectionListCollectionNumber";
             this.ColumnCollectionListCollectionNumber.HeaderText = "Collection No.";
+            this.ColumnCollectionListCollectionNumber.MinimumWidth = 6;
             this.ColumnCollectionListCollectionNumber.Name = "ColumnCollectionListCollectionNumber";
             this.ColumnCollectionListCollectionNumber.ReadOnly = true;
+            this.ColumnCollectionListCollectionNumber.Width = 125;
             // 
             // ColumnCollectionListTerminalId
             // 
             this.ColumnCollectionListTerminalId.DataPropertyName = "ColumnCollectionListTerminalId";
             this.ColumnCollectionListTerminalId.HeaderText = "Terminal Id";
+            this.ColumnCollectionListTerminalId.MinimumWidth = 6;
             this.ColumnCollectionListTerminalId.Name = "ColumnCollectionListTerminalId";
             this.ColumnCollectionListTerminalId.ReadOnly = true;
             this.ColumnCollectionListTerminalId.Visible = false;
+            this.ColumnCollectionListTerminalId.Width = 125;
             // 
             // ColumnCollectionListTerminal
             // 
             this.ColumnCollectionListTerminal.DataPropertyName = "ColumnCollectionListTerminal";
             this.ColumnCollectionListTerminal.HeaderText = "Terminal";
+            this.ColumnCollectionListTerminal.MinimumWidth = 6;
             this.ColumnCollectionListTerminal.Name = "ColumnCollectionListTerminal";
             this.ColumnCollectionListTerminal.ReadOnly = true;
             this.ColumnCollectionListTerminal.Width = 80;
@@ -273,35 +287,44 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // 
             this.ColumnCollectionListCancelledCollectionNumber.DataPropertyName = "ColumnCollectionListCancelledCollectionNumber";
             this.ColumnCollectionListCancelledCollectionNumber.HeaderText = "Cancelled Collection Number";
+            this.ColumnCollectionListCancelledCollectionNumber.MinimumWidth = 6;
             this.ColumnCollectionListCancelledCollectionNumber.Name = "ColumnCollectionListCancelledCollectionNumber";
             this.ColumnCollectionListCancelledCollectionNumber.ReadOnly = true;
+            this.ColumnCollectionListCancelledCollectionNumber.Width = 125;
             // 
             // ColumnCollectionListManualORNumber
             // 
             this.ColumnCollectionListManualORNumber.DataPropertyName = "ColumnCollectionListManualORNumber";
             this.ColumnCollectionListManualORNumber.HeaderText = "Manual OR Number";
+            this.ColumnCollectionListManualORNumber.MinimumWidth = 6;
             this.ColumnCollectionListManualORNumber.Name = "ColumnCollectionListManualORNumber";
             this.ColumnCollectionListManualORNumber.ReadOnly = true;
+            this.ColumnCollectionListManualORNumber.Width = 125;
             // 
             // ColumnCollectionListCustomerId
             // 
             this.ColumnCollectionListCustomerId.DataPropertyName = "ColumnCollectionListCustomerId";
             this.ColumnCollectionListCustomerId.HeaderText = "Customer Id";
+            this.ColumnCollectionListCustomerId.MinimumWidth = 6;
             this.ColumnCollectionListCustomerId.Name = "ColumnCollectionListCustomerId";
             this.ColumnCollectionListCustomerId.ReadOnly = true;
             this.ColumnCollectionListCustomerId.Visible = false;
+            this.ColumnCollectionListCustomerId.Width = 125;
             // 
             // ColumnCollectionListCustomer
             // 
             this.ColumnCollectionListCustomer.DataPropertyName = "ColumnCollectionListCustomer";
             this.ColumnCollectionListCustomer.HeaderText = "Customer";
+            this.ColumnCollectionListCustomer.MinimumWidth = 6;
             this.ColumnCollectionListCustomer.Name = "ColumnCollectionListCustomer";
             this.ColumnCollectionListCustomer.ReadOnly = true;
+            this.ColumnCollectionListCustomer.Width = 125;
             // 
             // ColumnCollectionListRemarks
             // 
             this.ColumnCollectionListRemarks.DataPropertyName = "ColumnCollectionListRemarks";
             this.ColumnCollectionListRemarks.HeaderText = "Remarks";
+            this.ColumnCollectionListRemarks.MinimumWidth = 6;
             this.ColumnCollectionListRemarks.Name = "ColumnCollectionListRemarks";
             this.ColumnCollectionListRemarks.ReadOnly = true;
             this.ColumnCollectionListRemarks.Width = 200;
@@ -309,76 +332,93 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // ColumnCollectionListSalesId
             // 
             this.ColumnCollectionListSalesId.DataPropertyName = "ColumnCollectionListSalesId";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnCollectionListSalesId.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnCollectionListSalesId.DefaultCellStyle = dataGridViewCellStyle1;
             this.ColumnCollectionListSalesId.HeaderText = "Sales Id";
+            this.ColumnCollectionListSalesId.MinimumWidth = 6;
             this.ColumnCollectionListSalesId.Name = "ColumnCollectionListSalesId";
             this.ColumnCollectionListSalesId.ReadOnly = true;
             this.ColumnCollectionListSalesId.Visible = false;
+            this.ColumnCollectionListSalesId.Width = 125;
             // 
             // ColumnCollectionListSalesBalanceAmount
             // 
             this.ColumnCollectionListSalesBalanceAmount.DataPropertyName = "ColumnCollectionListSalesBalanceAmount";
             this.ColumnCollectionListSalesBalanceAmount.HeaderText = "Sales Balance Amount";
+            this.ColumnCollectionListSalesBalanceAmount.MinimumWidth = 6;
             this.ColumnCollectionListSalesBalanceAmount.Name = "ColumnCollectionListSalesBalanceAmount";
             this.ColumnCollectionListSalesBalanceAmount.ReadOnly = true;
+            this.ColumnCollectionListSalesBalanceAmount.Width = 125;
             // 
             // ColumnCollectionListAmount
             // 
             this.ColumnCollectionListAmount.DataPropertyName = "ColumnCollectionListAmount";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnCollectionListAmount.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnCollectionListAmount.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColumnCollectionListAmount.HeaderText = "Amount";
+            this.ColumnCollectionListAmount.MinimumWidth = 6;
             this.ColumnCollectionListAmount.Name = "ColumnCollectionListAmount";
             this.ColumnCollectionListAmount.ReadOnly = true;
             this.ColumnCollectionListAmount.Visible = false;
+            this.ColumnCollectionListAmount.Width = 125;
             // 
             // ColumnCollectionListTenderAmount
             // 
             this.ColumnCollectionListTenderAmount.DataPropertyName = "ColumnCollectionListTenderAmount";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnCollectionListTenderAmount.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnCollectionListTenderAmount.DefaultCellStyle = dataGridViewCellStyle3;
             this.ColumnCollectionListTenderAmount.HeaderText = "Tender Amount";
+            this.ColumnCollectionListTenderAmount.MinimumWidth = 6;
             this.ColumnCollectionListTenderAmount.Name = "ColumnCollectionListTenderAmount";
             this.ColumnCollectionListTenderAmount.ReadOnly = true;
+            this.ColumnCollectionListTenderAmount.Width = 125;
             // 
             // ColumnCollectionListChangeAmount
             // 
             this.ColumnCollectionListChangeAmount.DataPropertyName = "ColumnCollectionListChangeAmount";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnCollectionListChangeAmount.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnCollectionListChangeAmount.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColumnCollectionListChangeAmount.HeaderText = "Change Amount";
+            this.ColumnCollectionListChangeAmount.MinimumWidth = 6;
             this.ColumnCollectionListChangeAmount.Name = "ColumnCollectionListChangeAmount";
             this.ColumnCollectionListChangeAmount.ReadOnly = true;
+            this.ColumnCollectionListChangeAmount.Width = 125;
             // 
             // ColumnCollectionListPreparedBy
             // 
             this.ColumnCollectionListPreparedBy.DataPropertyName = "ColumnCollectionListPreparedBy";
             this.ColumnCollectionListPreparedBy.HeaderText = "Prepared By";
+            this.ColumnCollectionListPreparedBy.MinimumWidth = 6;
             this.ColumnCollectionListPreparedBy.Name = "ColumnCollectionListPreparedBy";
             this.ColumnCollectionListPreparedBy.ReadOnly = true;
             this.ColumnCollectionListPreparedBy.Visible = false;
+            this.ColumnCollectionListPreparedBy.Width = 125;
             // 
             // ColumnCollectionListCheckedBy
             // 
             this.ColumnCollectionListCheckedBy.DataPropertyName = "ColumnCollectionListCheckedBy";
             this.ColumnCollectionListCheckedBy.HeaderText = "Checked By";
+            this.ColumnCollectionListCheckedBy.MinimumWidth = 6;
             this.ColumnCollectionListCheckedBy.Name = "ColumnCollectionListCheckedBy";
             this.ColumnCollectionListCheckedBy.ReadOnly = true;
             this.ColumnCollectionListCheckedBy.Visible = false;
+            this.ColumnCollectionListCheckedBy.Width = 125;
             // 
             // ColumnCollectionListApprovedBy
             // 
             this.ColumnCollectionListApprovedBy.DataPropertyName = "ColumnCollectionListApprovedBy";
             this.ColumnCollectionListApprovedBy.HeaderText = "Approved By";
+            this.ColumnCollectionListApprovedBy.MinimumWidth = 6;
             this.ColumnCollectionListApprovedBy.Name = "ColumnCollectionListApprovedBy";
             this.ColumnCollectionListApprovedBy.ReadOnly = true;
             this.ColumnCollectionListApprovedBy.Visible = false;
+            this.ColumnCollectionListApprovedBy.Width = 125;
             // 
             // ColumnCollectionListIsCancelled
             // 
             this.ColumnCollectionListIsCancelled.DataPropertyName = "ColumnCollectionListIsCancelled";
             this.ColumnCollectionListIsCancelled.HeaderText = "C";
+            this.ColumnCollectionListIsCancelled.MinimumWidth = 6;
             this.ColumnCollectionListIsCancelled.Name = "ColumnCollectionListIsCancelled";
             this.ColumnCollectionListIsCancelled.ReadOnly = true;
             this.ColumnCollectionListIsCancelled.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -389,6 +429,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // 
             this.ColumnCollectionListIsLocked.DataPropertyName = "ColumnCollectionListIsLocked";
             this.ColumnCollectionListIsLocked.HeaderText = "L";
+            this.ColumnCollectionListIsLocked.MinimumWidth = 6;
             this.ColumnCollectionListIsLocked.Name = "ColumnCollectionListIsLocked";
             this.ColumnCollectionListIsLocked.ReadOnly = true;
             this.ColumnCollectionListIsLocked.Width = 35;
@@ -397,51 +438,59 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // 
             this.ColumnCollectionListEntryUserId.DataPropertyName = "ColumnCollectionListEntryUserId";
             this.ColumnCollectionListEntryUserId.HeaderText = "Entry User Id";
+            this.ColumnCollectionListEntryUserId.MinimumWidth = 6;
             this.ColumnCollectionListEntryUserId.Name = "ColumnCollectionListEntryUserId";
             this.ColumnCollectionListEntryUserId.ReadOnly = true;
             this.ColumnCollectionListEntryUserId.Visible = false;
+            this.ColumnCollectionListEntryUserId.Width = 125;
             // 
             // ColumnCollectionListEntryDateTime
             // 
             this.ColumnCollectionListEntryDateTime.DataPropertyName = "ColumnCollectionListEntryDateTime";
             this.ColumnCollectionListEntryDateTime.HeaderText = "Entry Date Time";
+            this.ColumnCollectionListEntryDateTime.MinimumWidth = 6;
             this.ColumnCollectionListEntryDateTime.Name = "ColumnCollectionListEntryDateTime";
             this.ColumnCollectionListEntryDateTime.ReadOnly = true;
             this.ColumnCollectionListEntryDateTime.Visible = false;
+            this.ColumnCollectionListEntryDateTime.Width = 125;
             // 
             // ColumnCollectionListUpdateUserId
             // 
             this.ColumnCollectionListUpdateUserId.DataPropertyName = "ColumnCollectionListUpdateUserId";
             this.ColumnCollectionListUpdateUserId.HeaderText = "Update User Id";
+            this.ColumnCollectionListUpdateUserId.MinimumWidth = 6;
             this.ColumnCollectionListUpdateUserId.Name = "ColumnCollectionListUpdateUserId";
             this.ColumnCollectionListUpdateUserId.ReadOnly = true;
             this.ColumnCollectionListUpdateUserId.Visible = false;
+            this.ColumnCollectionListUpdateUserId.Width = 125;
             // 
             // ColumnCollectionListUpdateDateTime
             // 
             this.ColumnCollectionListUpdateDateTime.DataPropertyName = "ColumnCollectionListUpdateDateTime";
             this.ColumnCollectionListUpdateDateTime.HeaderText = "Update Date Time";
+            this.ColumnCollectionListUpdateDateTime.MinimumWidth = 6;
             this.ColumnCollectionListUpdateDateTime.Name = "ColumnCollectionListUpdateDateTime";
             this.ColumnCollectionListUpdateDateTime.ReadOnly = true;
             this.ColumnCollectionListUpdateDateTime.Visible = false;
+            this.ColumnCollectionListUpdateDateTime.Width = 125;
             // 
             // textBoxCollectionListFilter
             // 
             this.textBoxCollectionListFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCollectionListFilter.Location = new System.Drawing.Point(137, 54);
+            this.textBoxCollectionListFilter.Location = new System.Drawing.Point(171, 68);
             this.textBoxCollectionListFilter.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCollectionListFilter.Name = "textBoxCollectionListFilter";
-            this.textBoxCollectionListFilter.Size = new System.Drawing.Size(932, 26);
+            this.textBoxCollectionListFilter.Size = new System.Drawing.Size(1164, 30);
             this.textBoxCollectionListFilter.TabIndex = 23;
             // 
             // dateTimePickerCollectionListFilter
             // 
             this.dateTimePickerCollectionListFilter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerCollectionListFilter.Location = new System.Drawing.Point(10, 54);
+            this.dateTimePickerCollectionListFilter.Location = new System.Drawing.Point(12, 68);
             this.dateTimePickerCollectionListFilter.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerCollectionListFilter.Name = "dateTimePickerCollectionListFilter";
-            this.dateTimePickerCollectionListFilter.Size = new System.Drawing.Size(123, 26);
+            this.dateTimePickerCollectionListFilter.Size = new System.Drawing.Size(153, 30);
             this.dateTimePickerCollectionListFilter.TabIndex = 22;
             this.dateTimePickerCollectionListFilter.ValueChanged += new System.EventHandler(this.dateTimePickerCollectionListFilter_ValueChanged);
             // 
@@ -454,10 +503,10 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.panel3.Controls.Add(this.buttonCollectionListPageListLast);
             this.panel3.Controls.Add(this.textBoxCollectionListPageNumber);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 498);
+            this.panel3.Location = new System.Drawing.Point(0, 622);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1080, 46);
+            this.panel3.Size = new System.Drawing.Size(1350, 58);
             this.panel3.TabIndex = 25;
             // 
             // buttonCollectionListPageListFirst
@@ -467,10 +516,10 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.buttonCollectionListPageListFirst.FlatAppearance.BorderSize = 0;
             this.buttonCollectionListPageListFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCollectionListPageListFirst.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonCollectionListPageListFirst.Location = new System.Drawing.Point(10, 13);
+            this.buttonCollectionListPageListFirst.Location = new System.Drawing.Point(12, 16);
             this.buttonCollectionListPageListFirst.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCollectionListPageListFirst.Name = "buttonCollectionListPageListFirst";
-            this.buttonCollectionListPageListFirst.Size = new System.Drawing.Size(66, 26);
+            this.buttonCollectionListPageListFirst.Size = new System.Drawing.Size(82, 32);
             this.buttonCollectionListPageListFirst.TabIndex = 13;
             this.buttonCollectionListPageListFirst.Text = "First";
             this.buttonCollectionListPageListFirst.UseVisualStyleBackColor = false;
@@ -483,10 +532,10 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.buttonCollectionListPageListPrevious.FlatAppearance.BorderSize = 0;
             this.buttonCollectionListPageListPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCollectionListPageListPrevious.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonCollectionListPageListPrevious.Location = new System.Drawing.Point(80, 13);
+            this.buttonCollectionListPageListPrevious.Location = new System.Drawing.Point(100, 16);
             this.buttonCollectionListPageListPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCollectionListPageListPrevious.Name = "buttonCollectionListPageListPrevious";
-            this.buttonCollectionListPageListPrevious.Size = new System.Drawing.Size(66, 26);
+            this.buttonCollectionListPageListPrevious.Size = new System.Drawing.Size(82, 32);
             this.buttonCollectionListPageListPrevious.TabIndex = 14;
             this.buttonCollectionListPageListPrevious.Text = "Previous";
             this.buttonCollectionListPageListPrevious.UseVisualStyleBackColor = false;
@@ -498,10 +547,10 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.buttonCollectionListPageListNext.FlatAppearance.BorderSize = 0;
             this.buttonCollectionListPageListNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCollectionListPageListNext.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonCollectionListPageListNext.Location = new System.Drawing.Point(210, 13);
+            this.buttonCollectionListPageListNext.Location = new System.Drawing.Point(262, 16);
             this.buttonCollectionListPageListNext.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCollectionListPageListNext.Name = "buttonCollectionListPageListNext";
-            this.buttonCollectionListPageListNext.Size = new System.Drawing.Size(66, 26);
+            this.buttonCollectionListPageListNext.Size = new System.Drawing.Size(82, 32);
             this.buttonCollectionListPageListNext.TabIndex = 15;
             this.buttonCollectionListPageListNext.Text = "Next";
             this.buttonCollectionListPageListNext.UseVisualStyleBackColor = false;
@@ -513,10 +562,10 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.buttonCollectionListPageListLast.FlatAppearance.BorderSize = 0;
             this.buttonCollectionListPageListLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCollectionListPageListLast.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonCollectionListPageListLast.Location = new System.Drawing.Point(278, 13);
+            this.buttonCollectionListPageListLast.Location = new System.Drawing.Point(348, 16);
             this.buttonCollectionListPageListLast.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCollectionListPageListLast.Name = "buttonCollectionListPageListLast";
-            this.buttonCollectionListPageListLast.Size = new System.Drawing.Size(66, 26);
+            this.buttonCollectionListPageListLast.Size = new System.Drawing.Size(82, 32);
             this.buttonCollectionListPageListLast.TabIndex = 16;
             this.buttonCollectionListPageListLast.Text = "Last";
             this.buttonCollectionListPageListLast.UseVisualStyleBackColor = false;
@@ -528,19 +577,19 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.textBoxCollectionListPageNumber.BackColor = System.Drawing.Color.White;
             this.textBoxCollectionListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCollectionListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBoxCollectionListPageNumber.Location = new System.Drawing.Point(150, 17);
+            this.textBoxCollectionListPageNumber.Location = new System.Drawing.Point(188, 21);
             this.textBoxCollectionListPageNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCollectionListPageNumber.Name = "textBoxCollectionListPageNumber";
             this.textBoxCollectionListPageNumber.ReadOnly = true;
-            this.textBoxCollectionListPageNumber.Size = new System.Drawing.Size(55, 16);
+            this.textBoxCollectionListPageNumber.Size = new System.Drawing.Size(69, 20);
             this.textBoxCollectionListPageNumber.TabIndex = 17;
             this.textBoxCollectionListPageNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TrnCollectionListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1080, 544);
+            this.ClientSize = new System.Drawing.Size(1350, 680);
             this.ControlBox = false;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridViewCollectionList);
@@ -549,6 +598,8 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TrnCollectionListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrnCollectionListForm";

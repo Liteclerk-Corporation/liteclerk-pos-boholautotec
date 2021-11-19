@@ -120,7 +120,7 @@ namespace EasyPOS.Forms.Software.TrnStockIn
                 }
                 else
                 {
-                    MessageBox.Show(addStockInLine[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(addStockInLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

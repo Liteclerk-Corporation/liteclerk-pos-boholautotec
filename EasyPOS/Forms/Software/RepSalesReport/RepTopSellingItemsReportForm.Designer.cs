@@ -99,6 +99,7 @@
             this.dataGridViewTopSellingItemsReport.MultiSelect = false;
             this.dataGridViewTopSellingItemsReport.Name = "dataGridViewTopSellingItemsReport";
             this.dataGridViewTopSellingItemsReport.ReadOnly = true;
+            this.dataGridViewTopSellingItemsReport.RowHeadersWidth = 51;
             this.dataGridViewTopSellingItemsReport.RowTemplate.Height = 24;
             this.dataGridViewTopSellingItemsReport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewTopSellingItemsReport.ShowEditingIcon = false;
@@ -111,13 +112,16 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.ColumnNumber.DefaultCellStyle = dataGridViewCellStyle1;
             this.ColumnNumber.HeaderText = "No.";
+            this.ColumnNumber.MinimumWidth = 6;
             this.ColumnNumber.Name = "ColumnNumber";
             this.ColumnNumber.ReadOnly = true;
+            this.ColumnNumber.Width = 125;
             // 
             // ColumnItemCode
             // 
             this.ColumnItemCode.DataPropertyName = "ColumnItemCode";
             this.ColumnItemCode.HeaderText = "Barcode";
+            this.ColumnItemCode.MinimumWidth = 6;
             this.ColumnItemCode.Name = "ColumnItemCode";
             this.ColumnItemCode.ReadOnly = true;
             this.ColumnItemCode.Width = 120;
@@ -126,6 +130,7 @@
             // 
             this.ColumnItemDescription.DataPropertyName = "ColumnItemDescription";
             this.ColumnItemDescription.HeaderText = "Item Description";
+            this.ColumnItemDescription.MinimumWidth = 6;
             this.ColumnItemDescription.Name = "ColumnItemDescription";
             this.ColumnItemDescription.ReadOnly = true;
             this.ColumnItemDescription.Width = 200;
@@ -134,6 +139,7 @@
             // 
             this.ColumnItemCategory.DataPropertyName = "ColumnItemCategory";
             this.ColumnItemCategory.HeaderText = "Category";
+            this.ColumnItemCategory.MinimumWidth = 6;
             this.ColumnItemCategory.Name = "ColumnItemCategory";
             this.ColumnItemCategory.ReadOnly = true;
             this.ColumnItemCategory.Width = 150;
@@ -142,8 +148,10 @@
             // 
             this.ColumnUnit.DataPropertyName = "ColumnUnit";
             this.ColumnUnit.HeaderText = "Unit";
+            this.ColumnUnit.MinimumWidth = 6;
             this.ColumnUnit.Name = "ColumnUnit";
             this.ColumnUnit.ReadOnly = true;
+            this.ColumnUnit.Width = 125;
             // 
             // ColumnQuantity
             // 
@@ -151,8 +159,10 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.ColumnQuantity.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColumnQuantity.HeaderText = "Quantity";
+            this.ColumnQuantity.MinimumWidth = 6;
             this.ColumnQuantity.Name = "ColumnQuantity";
             this.ColumnQuantity.ReadOnly = true;
+            this.ColumnQuantity.Width = 125;
             // 
             // ColumnPrice
             // 
@@ -160,8 +170,10 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.ColumnPrice.DefaultCellStyle = dataGridViewCellStyle3;
             this.ColumnPrice.HeaderText = "Price";
+            this.ColumnPrice.MinimumWidth = 6;
             this.ColumnPrice.Name = "ColumnPrice";
             this.ColumnPrice.ReadOnly = true;
+            this.ColumnPrice.Width = 125;
             // 
             // ColumnAmount
             // 
@@ -169,17 +181,20 @@
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.ColumnAmount.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColumnAmount.HeaderText = "Amount";
+            this.ColumnAmount.MinimumWidth = 6;
             this.ColumnAmount.Name = "ColumnAmount";
             this.ColumnAmount.ReadOnly = true;
+            this.ColumnAmount.Width = 125;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
             this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Controls.Add(this.buttonGenerateCSV);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.panel1.Name = "panel1";
@@ -189,7 +204,7 @@
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -208,7 +223,7 @@
             // buttonGenerateCSV
             // 
             this.buttonGenerateCSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonGenerateCSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonGenerateCSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonGenerateCSV.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonGenerateCSV.FlatAppearance.BorderSize = 0;
             this.buttonGenerateCSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

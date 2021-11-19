@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrnPurchaseOrderListForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,25 +69,26 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Controls.Add(this.buttonAdd);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1080, 50);
+            this.panel1.Size = new System.Drawing.Size(1350, 62);
             this.panel1.TabIndex = 7;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::EasyPOS.Properties.Resources.PurchaseOrder;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -95,26 +97,26 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(50, 14);
+            this.label1.Location = new System.Drawing.Point(62, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 28);
+            this.label1.Size = new System.Drawing.Size(243, 35);
             this.label1.TabIndex = 2;
             this.label1.Text = "Purchase Order List";
             // 
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(79)))), ((int)(((byte)(28)))));
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(999, 10);
+            this.buttonClose.Location = new System.Drawing.Point(1249, 12);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(70, 32);
+            this.buttonClose.Size = new System.Drawing.Size(88, 40);
             this.buttonClose.TabIndex = 21;
             this.buttonClose.TabStop = false;
             this.buttonClose.Text = "Close";
@@ -124,16 +126,16 @@
             // buttonAdd
             // 
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonAdd.FlatAppearance.BorderSize = 0;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
-            this.buttonAdd.Location = new System.Drawing.Point(925, 10);
+            this.buttonAdd.Location = new System.Drawing.Point(1156, 12);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(70, 32);
+            this.buttonAdd.Size = new System.Drawing.Size(88, 40);
             this.buttonAdd.TabIndex = 20;
             this.buttonAdd.TabStop = false;
             this.buttonAdd.Text = "Add";
@@ -143,10 +145,10 @@
             // dateTimePickerPurchaseOrderListFilter
             // 
             this.dateTimePickerPurchaseOrderListFilter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerPurchaseOrderListFilter.Location = new System.Drawing.Point(10, 54);
+            this.dateTimePickerPurchaseOrderListFilter.Location = new System.Drawing.Point(12, 68);
             this.dateTimePickerPurchaseOrderListFilter.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerPurchaseOrderListFilter.Name = "dateTimePickerPurchaseOrderListFilter";
-            this.dateTimePickerPurchaseOrderListFilter.Size = new System.Drawing.Size(114, 26);
+            this.dateTimePickerPurchaseOrderListFilter.Size = new System.Drawing.Size(142, 30);
             this.dateTimePickerPurchaseOrderListFilter.TabIndex = 8;
             this.dateTimePickerPurchaseOrderListFilter.ValueChanged += new System.EventHandler(this.dateTimePickerPurchaseOrderListFilter_ValueChanged);
             // 
@@ -154,10 +156,10 @@
             // 
             this.textBoxPurchaseOrderListFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPurchaseOrderListFilter.Location = new System.Drawing.Point(128, 54);
+            this.textBoxPurchaseOrderListFilter.Location = new System.Drawing.Point(160, 68);
             this.textBoxPurchaseOrderListFilter.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPurchaseOrderListFilter.Name = "textBoxPurchaseOrderListFilter";
-            this.textBoxPurchaseOrderListFilter.Size = new System.Drawing.Size(941, 26);
+            this.textBoxPurchaseOrderListFilter.Size = new System.Drawing.Size(1175, 30);
             this.textBoxPurchaseOrderListFilter.TabIndex = 9;
             // 
             // dataGridViewPurchaseOrderList
@@ -189,14 +191,15 @@
             this.ColumnPurchaseOrderListUpdateUserId,
             this.ColumnPurchaseOrderListUpdateDateTime,
             this.ColumnPurchaseOrderListRequestedBy});
-            this.dataGridViewPurchaseOrderList.Location = new System.Drawing.Point(10, 82);
+            this.dataGridViewPurchaseOrderList.Location = new System.Drawing.Point(12, 102);
             this.dataGridViewPurchaseOrderList.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewPurchaseOrderList.MultiSelect = false;
             this.dataGridViewPurchaseOrderList.Name = "dataGridViewPurchaseOrderList";
             this.dataGridViewPurchaseOrderList.ReadOnly = true;
+            this.dataGridViewPurchaseOrderList.RowHeadersWidth = 51;
             this.dataGridViewPurchaseOrderList.RowTemplate.Height = 24;
             this.dataGridViewPurchaseOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewPurchaseOrderList.Size = new System.Drawing.Size(1059, 416);
+            this.dataGridViewPurchaseOrderList.Size = new System.Drawing.Size(1324, 520);
             this.dataGridViewPurchaseOrderList.TabIndex = 21;
             this.dataGridViewPurchaseOrderList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPurchaseOrderList_CellClick);
             // 
@@ -205,6 +208,7 @@
             this.ColumnPurchaseOrderListButtonEdit.DataPropertyName = "ColumnPurchaseOrderListButtonEdit";
             this.ColumnPurchaseOrderListButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColumnPurchaseOrderListButtonEdit.HeaderText = "";
+            this.ColumnPurchaseOrderListButtonEdit.MinimumWidth = 6;
             this.ColumnPurchaseOrderListButtonEdit.Name = "ColumnPurchaseOrderListButtonEdit";
             this.ColumnPurchaseOrderListButtonEdit.ReadOnly = true;
             this.ColumnPurchaseOrderListButtonEdit.Width = 70;
@@ -214,6 +218,7 @@
             this.ColumnPurchaseOrderListButtonDelete.DataPropertyName = "ColumnPurchaseOrderListButtonDelete";
             this.ColumnPurchaseOrderListButtonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColumnPurchaseOrderListButtonDelete.HeaderText = "";
+            this.ColumnPurchaseOrderListButtonDelete.MinimumWidth = 6;
             this.ColumnPurchaseOrderListButtonDelete.Name = "ColumnPurchaseOrderListButtonDelete";
             this.ColumnPurchaseOrderListButtonDelete.ReadOnly = true;
             this.ColumnPurchaseOrderListButtonDelete.Width = 70;
@@ -222,22 +227,27 @@
             // 
             this.ColumnPurchaseOrderListId.DataPropertyName = "ColumnPurchaseOrderListId";
             this.ColumnPurchaseOrderListId.HeaderText = "Id";
+            this.ColumnPurchaseOrderListId.MinimumWidth = 6;
             this.ColumnPurchaseOrderListId.Name = "ColumnPurchaseOrderListId";
             this.ColumnPurchaseOrderListId.ReadOnly = true;
             this.ColumnPurchaseOrderListId.Visible = false;
+            this.ColumnPurchaseOrderListId.Width = 125;
             // 
             // ColumnPurchaseOrderListPeriodId
             // 
             this.ColumnPurchaseOrderListPeriodId.DataPropertyName = "ColumnPurchaseOrderListPeriodId";
             this.ColumnPurchaseOrderListPeriodId.HeaderText = "PeriodId";
+            this.ColumnPurchaseOrderListPeriodId.MinimumWidth = 6;
             this.ColumnPurchaseOrderListPeriodId.Name = "ColumnPurchaseOrderListPeriodId";
             this.ColumnPurchaseOrderListPeriodId.ReadOnly = true;
             this.ColumnPurchaseOrderListPeriodId.Visible = false;
+            this.ColumnPurchaseOrderListPeriodId.Width = 125;
             // 
             // ColumnPurchaseOrderListPurchaseOrderDate
             // 
             this.ColumnPurchaseOrderListPurchaseOrderDate.DataPropertyName = "ColumnPurchaseOrderListPurchaseOrderDate";
             this.ColumnPurchaseOrderListPurchaseOrderDate.HeaderText = "Purchase Order Date";
+            this.ColumnPurchaseOrderListPurchaseOrderDate.MinimumWidth = 6;
             this.ColumnPurchaseOrderListPurchaseOrderDate.Name = "ColumnPurchaseOrderListPurchaseOrderDate";
             this.ColumnPurchaseOrderListPurchaseOrderDate.ReadOnly = true;
             this.ColumnPurchaseOrderListPurchaseOrderDate.Visible = false;
@@ -247,21 +257,26 @@
             // 
             this.ColumnPurchaseOrderListPurchaseOrderNumber.DataPropertyName = "ColumnPurchaseOrderListPurchaseOrderNumber";
             this.ColumnPurchaseOrderListPurchaseOrderNumber.HeaderText = "Purchase Order No.";
+            this.ColumnPurchaseOrderListPurchaseOrderNumber.MinimumWidth = 6;
             this.ColumnPurchaseOrderListPurchaseOrderNumber.Name = "ColumnPurchaseOrderListPurchaseOrderNumber";
             this.ColumnPurchaseOrderListPurchaseOrderNumber.ReadOnly = true;
+            this.ColumnPurchaseOrderListPurchaseOrderNumber.Width = 125;
             // 
             // ColumnPurchaseOrderListAmount
             // 
             this.ColumnPurchaseOrderListAmount.DataPropertyName = "ColumnPurchaseOrderListAmount";
             this.ColumnPurchaseOrderListAmount.HeaderText = "Amount";
+            this.ColumnPurchaseOrderListAmount.MinimumWidth = 6;
             this.ColumnPurchaseOrderListAmount.Name = "ColumnPurchaseOrderListAmount";
             this.ColumnPurchaseOrderListAmount.ReadOnly = true;
             this.ColumnPurchaseOrderListAmount.Visible = false;
+            this.ColumnPurchaseOrderListAmount.Width = 125;
             // 
             // ColumnPurchaseOrderListSupplier
             // 
             this.ColumnPurchaseOrderListSupplier.DataPropertyName = "ColumnPurchaseOrderListSupplier";
             this.ColumnPurchaseOrderListSupplier.HeaderText = "Supplier";
+            this.ColumnPurchaseOrderListSupplier.MinimumWidth = 6;
             this.ColumnPurchaseOrderListSupplier.Name = "ColumnPurchaseOrderListSupplier";
             this.ColumnPurchaseOrderListSupplier.ReadOnly = true;
             this.ColumnPurchaseOrderListSupplier.Width = 200;
@@ -270,6 +285,7 @@
             // 
             this.ColumnPurchaseOrderListRemarks.DataPropertyName = "ColumnPurchaseOrderListRemarks";
             this.ColumnPurchaseOrderListRemarks.HeaderText = "Remarks";
+            this.ColumnPurchaseOrderListRemarks.MinimumWidth = 6;
             this.ColumnPurchaseOrderListRemarks.Name = "ColumnPurchaseOrderListRemarks";
             this.ColumnPurchaseOrderListRemarks.ReadOnly = true;
             this.ColumnPurchaseOrderListRemarks.Width = 300;
@@ -278,30 +294,37 @@
             // 
             this.ColumnPurchaseOrderListPreparedBy.DataPropertyName = "ColumnPurchaseOrderListPreparedBy";
             this.ColumnPurchaseOrderListPreparedBy.HeaderText = "Prepared By";
+            this.ColumnPurchaseOrderListPreparedBy.MinimumWidth = 6;
             this.ColumnPurchaseOrderListPreparedBy.Name = "ColumnPurchaseOrderListPreparedBy";
             this.ColumnPurchaseOrderListPreparedBy.ReadOnly = true;
             this.ColumnPurchaseOrderListPreparedBy.Visible = false;
+            this.ColumnPurchaseOrderListPreparedBy.Width = 125;
             // 
             // ColumnPurchaseOrderListCheckedBy
             // 
             this.ColumnPurchaseOrderListCheckedBy.DataPropertyName = "ColumnPurchaseOrderListCheckedBy";
             this.ColumnPurchaseOrderListCheckedBy.HeaderText = "Checked By";
+            this.ColumnPurchaseOrderListCheckedBy.MinimumWidth = 6;
             this.ColumnPurchaseOrderListCheckedBy.Name = "ColumnPurchaseOrderListCheckedBy";
             this.ColumnPurchaseOrderListCheckedBy.ReadOnly = true;
             this.ColumnPurchaseOrderListCheckedBy.Visible = false;
+            this.ColumnPurchaseOrderListCheckedBy.Width = 125;
             // 
             // ColumnPurchaseOrderListApprovedBy
             // 
             this.ColumnPurchaseOrderListApprovedBy.DataPropertyName = "ColumnPurchaseOrderListApprovedBy";
             this.ColumnPurchaseOrderListApprovedBy.HeaderText = "Approved By";
+            this.ColumnPurchaseOrderListApprovedBy.MinimumWidth = 6;
             this.ColumnPurchaseOrderListApprovedBy.Name = "ColumnPurchaseOrderListApprovedBy";
             this.ColumnPurchaseOrderListApprovedBy.ReadOnly = true;
             this.ColumnPurchaseOrderListApprovedBy.Visible = false;
+            this.ColumnPurchaseOrderListApprovedBy.Width = 125;
             // 
             // ColumnPurchaseOrderListIsLocked
             // 
             this.ColumnPurchaseOrderListIsLocked.DataPropertyName = "ColumnPurchaseOrderListIsLocked";
             this.ColumnPurchaseOrderListIsLocked.HeaderText = "L";
+            this.ColumnPurchaseOrderListIsLocked.MinimumWidth = 6;
             this.ColumnPurchaseOrderListIsLocked.Name = "ColumnPurchaseOrderListIsLocked";
             this.ColumnPurchaseOrderListIsLocked.ReadOnly = true;
             this.ColumnPurchaseOrderListIsLocked.Width = 35;
@@ -310,41 +333,51 @@
             // 
             this.ColumnPurchaseOrderListEntryUserId.DataPropertyName = "ColumnPurchaseOrderListEntryUserId";
             this.ColumnPurchaseOrderListEntryUserId.HeaderText = "Entry User Id";
+            this.ColumnPurchaseOrderListEntryUserId.MinimumWidth = 6;
             this.ColumnPurchaseOrderListEntryUserId.Name = "ColumnPurchaseOrderListEntryUserId";
             this.ColumnPurchaseOrderListEntryUserId.ReadOnly = true;
             this.ColumnPurchaseOrderListEntryUserId.Visible = false;
+            this.ColumnPurchaseOrderListEntryUserId.Width = 125;
             // 
             // ColumnPurchaseOrderListEntryDateTime
             // 
             this.ColumnPurchaseOrderListEntryDateTime.DataPropertyName = "ColumnPurchaseOrderListEntryDateTime";
             this.ColumnPurchaseOrderListEntryDateTime.HeaderText = "Entry Date Time";
+            this.ColumnPurchaseOrderListEntryDateTime.MinimumWidth = 6;
             this.ColumnPurchaseOrderListEntryDateTime.Name = "ColumnPurchaseOrderListEntryDateTime";
             this.ColumnPurchaseOrderListEntryDateTime.ReadOnly = true;
             this.ColumnPurchaseOrderListEntryDateTime.Visible = false;
+            this.ColumnPurchaseOrderListEntryDateTime.Width = 125;
             // 
             // ColumnPurchaseOrderListUpdateUserId
             // 
             this.ColumnPurchaseOrderListUpdateUserId.DataPropertyName = "ColumnPurchaseOrderListUpdateUserId";
             this.ColumnPurchaseOrderListUpdateUserId.HeaderText = "Update User Id";
+            this.ColumnPurchaseOrderListUpdateUserId.MinimumWidth = 6;
             this.ColumnPurchaseOrderListUpdateUserId.Name = "ColumnPurchaseOrderListUpdateUserId";
             this.ColumnPurchaseOrderListUpdateUserId.ReadOnly = true;
             this.ColumnPurchaseOrderListUpdateUserId.Visible = false;
+            this.ColumnPurchaseOrderListUpdateUserId.Width = 125;
             // 
             // ColumnPurchaseOrderListUpdateDateTime
             // 
             this.ColumnPurchaseOrderListUpdateDateTime.DataPropertyName = "ColumnPurchaseOrderListUpdateDateTime";
             this.ColumnPurchaseOrderListUpdateDateTime.HeaderText = "Update Date Time";
+            this.ColumnPurchaseOrderListUpdateDateTime.MinimumWidth = 6;
             this.ColumnPurchaseOrderListUpdateDateTime.Name = "ColumnPurchaseOrderListUpdateDateTime";
             this.ColumnPurchaseOrderListUpdateDateTime.ReadOnly = true;
             this.ColumnPurchaseOrderListUpdateDateTime.Visible = false;
+            this.ColumnPurchaseOrderListUpdateDateTime.Width = 125;
             // 
             // ColumnPurchaseOrderListRequestedBy
             // 
             this.ColumnPurchaseOrderListRequestedBy.DataPropertyName = "ColumnPurchaseOrderListRequestedBy";
             this.ColumnPurchaseOrderListRequestedBy.HeaderText = "Requested By";
+            this.ColumnPurchaseOrderListRequestedBy.MinimumWidth = 6;
             this.ColumnPurchaseOrderListRequestedBy.Name = "ColumnPurchaseOrderListRequestedBy";
             this.ColumnPurchaseOrderListRequestedBy.ReadOnly = true;
             this.ColumnPurchaseOrderListRequestedBy.Visible = false;
+            this.ColumnPurchaseOrderListRequestedBy.Width = 125;
             // 
             // panel3
             // 
@@ -355,10 +388,10 @@
             this.panel3.Controls.Add(this.buttonPurchaseOrderListPageListLast);
             this.panel3.Controls.Add(this.textBoxPurchaseOrderListPageNumber);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 502);
+            this.panel3.Location = new System.Drawing.Point(0, 628);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1080, 42);
+            this.panel3.Size = new System.Drawing.Size(1350, 52);
             this.panel3.TabIndex = 22;
             // 
             // buttonPurchaseOrderListPageListFirst
@@ -368,10 +401,10 @@
             this.buttonPurchaseOrderListPageListFirst.FlatAppearance.BorderSize = 0;
             this.buttonPurchaseOrderListPageListFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPurchaseOrderListPageListFirst.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonPurchaseOrderListPageListFirst.Location = new System.Drawing.Point(10, 9);
+            this.buttonPurchaseOrderListPageListFirst.Location = new System.Drawing.Point(12, 11);
             this.buttonPurchaseOrderListPageListFirst.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPurchaseOrderListPageListFirst.Name = "buttonPurchaseOrderListPageListFirst";
-            this.buttonPurchaseOrderListPageListFirst.Size = new System.Drawing.Size(66, 26);
+            this.buttonPurchaseOrderListPageListFirst.Size = new System.Drawing.Size(82, 32);
             this.buttonPurchaseOrderListPageListFirst.TabIndex = 13;
             this.buttonPurchaseOrderListPageListFirst.Text = "First";
             this.buttonPurchaseOrderListPageListFirst.UseVisualStyleBackColor = false;
@@ -384,10 +417,10 @@
             this.buttonPurchaseOrderListPageListPrevious.FlatAppearance.BorderSize = 0;
             this.buttonPurchaseOrderListPageListPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPurchaseOrderListPageListPrevious.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonPurchaseOrderListPageListPrevious.Location = new System.Drawing.Point(80, 9);
+            this.buttonPurchaseOrderListPageListPrevious.Location = new System.Drawing.Point(100, 11);
             this.buttonPurchaseOrderListPageListPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPurchaseOrderListPageListPrevious.Name = "buttonPurchaseOrderListPageListPrevious";
-            this.buttonPurchaseOrderListPageListPrevious.Size = new System.Drawing.Size(66, 26);
+            this.buttonPurchaseOrderListPageListPrevious.Size = new System.Drawing.Size(82, 32);
             this.buttonPurchaseOrderListPageListPrevious.TabIndex = 14;
             this.buttonPurchaseOrderListPageListPrevious.Text = "Previous";
             this.buttonPurchaseOrderListPageListPrevious.UseVisualStyleBackColor = false;
@@ -399,10 +432,10 @@
             this.buttonPurchaseOrderListPageListNext.FlatAppearance.BorderSize = 0;
             this.buttonPurchaseOrderListPageListNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPurchaseOrderListPageListNext.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonPurchaseOrderListPageListNext.Location = new System.Drawing.Point(210, 9);
+            this.buttonPurchaseOrderListPageListNext.Location = new System.Drawing.Point(262, 11);
             this.buttonPurchaseOrderListPageListNext.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPurchaseOrderListPageListNext.Name = "buttonPurchaseOrderListPageListNext";
-            this.buttonPurchaseOrderListPageListNext.Size = new System.Drawing.Size(66, 26);
+            this.buttonPurchaseOrderListPageListNext.Size = new System.Drawing.Size(82, 32);
             this.buttonPurchaseOrderListPageListNext.TabIndex = 15;
             this.buttonPurchaseOrderListPageListNext.Text = "Next";
             this.buttonPurchaseOrderListPageListNext.UseVisualStyleBackColor = false;
@@ -414,10 +447,10 @@
             this.buttonPurchaseOrderListPageListLast.FlatAppearance.BorderSize = 0;
             this.buttonPurchaseOrderListPageListLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPurchaseOrderListPageListLast.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonPurchaseOrderListPageListLast.Location = new System.Drawing.Point(278, 9);
+            this.buttonPurchaseOrderListPageListLast.Location = new System.Drawing.Point(348, 11);
             this.buttonPurchaseOrderListPageListLast.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPurchaseOrderListPageListLast.Name = "buttonPurchaseOrderListPageListLast";
-            this.buttonPurchaseOrderListPageListLast.Size = new System.Drawing.Size(66, 26);
+            this.buttonPurchaseOrderListPageListLast.Size = new System.Drawing.Size(82, 32);
             this.buttonPurchaseOrderListPageListLast.TabIndex = 16;
             this.buttonPurchaseOrderListPageListLast.Text = "Last";
             this.buttonPurchaseOrderListPageListLast.UseVisualStyleBackColor = false;
@@ -429,19 +462,19 @@
             this.textBoxPurchaseOrderListPageNumber.BackColor = System.Drawing.Color.White;
             this.textBoxPurchaseOrderListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPurchaseOrderListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBoxPurchaseOrderListPageNumber.Location = new System.Drawing.Point(150, 13);
+            this.textBoxPurchaseOrderListPageNumber.Location = new System.Drawing.Point(188, 16);
             this.textBoxPurchaseOrderListPageNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPurchaseOrderListPageNumber.Name = "textBoxPurchaseOrderListPageNumber";
             this.textBoxPurchaseOrderListPageNumber.ReadOnly = true;
-            this.textBoxPurchaseOrderListPageNumber.Size = new System.Drawing.Size(55, 16);
+            this.textBoxPurchaseOrderListPageNumber.Size = new System.Drawing.Size(69, 20);
             this.textBoxPurchaseOrderListPageNumber.TabIndex = 17;
             this.textBoxPurchaseOrderListPageNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TrnPurchaseOrderListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1080, 544);
+            this.ClientSize = new System.Drawing.Size(1350, 680);
             this.ControlBox = false;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.dataGridViewPurchaseOrderList);
@@ -450,6 +483,8 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TrnPurchaseOrderListForm";
