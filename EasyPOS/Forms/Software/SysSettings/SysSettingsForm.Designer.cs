@@ -189,6 +189,8 @@
             this.buttonKitchenPageListLast = new System.Windows.Forms.Button();
             this.textBoxKitchenPageNumber = new System.Windows.Forms.TextBox();
             this.backgroundWorkerEasyfisIntegration = new System.ComponentModel.BackgroundWorker();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBoxXMLFilePath = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -346,9 +348,9 @@
             // 
             this.tabPage4.Controls.Add(this.panel6);
             this.tabPage4.Location = new System.Drawing.Point(4, 32);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage4.Size = new System.Drawing.Size(1378, 602);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Company Information";
@@ -365,7 +367,7 @@
             this.panel6.Controls.Add(this.label5);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(4, 4);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1370, 594);
             this.panel6.TabIndex = 0;
@@ -440,9 +442,9 @@
             // 
             this.tabPage1.Controls.Add(this.panel5);
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1378, 602);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "POS Information";
@@ -451,6 +453,8 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel5.Controls.Add(this.textBoxXMLFilePath);
+            this.panel5.Controls.Add(this.label17);
             this.panel5.Controls.Add(this.checkBoxPopupCustomer);
             this.panel5.Controls.Add(this.checkBoxDisableLockTender);
             this.panel5.Controls.Add(this.comboBoxLanguage);
@@ -501,7 +505,7 @@
             this.panel5.Controls.Add(this.label26);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(4, 4);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1370, 594);
             this.panel5.TabIndex = 34;
@@ -754,7 +758,7 @@
             this.checkBoxPromptLoginSales.AutoSize = true;
             this.checkBoxPromptLoginSales.Enabled = false;
             this.checkBoxPromptLoginSales.Location = new System.Drawing.Point(730, 148);
-            this.checkBoxPromptLoginSales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxPromptLoginSales.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxPromptLoginSales.Name = "checkBoxPromptLoginSales";
             this.checkBoxPromptLoginSales.Size = new System.Drawing.Size(179, 27);
             this.checkBoxPromptLoginSales.TabIndex = 80;
@@ -1077,9 +1081,9 @@
             // 
             this.tabPage3.Controls.Add(this.panel7);
             this.tabPage3.Location = new System.Drawing.Point(4, 32);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage3.Size = new System.Drawing.Size(1378, 602);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "BIR Settings";
@@ -1100,7 +1104,7 @@
             this.panel7.Controls.Add(this.label14);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(4, 4);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1370, 594);
             this.panel7.TabIndex = 0;
@@ -1214,9 +1218,9 @@
             // 
             this.tabPage5.Controls.Add(this.panel8);
             this.tabPage5.Location = new System.Drawing.Point(4, 32);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage5.Size = new System.Drawing.Size(1378, 602);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Easypay Settings";
@@ -1235,7 +1239,7 @@
             this.panel8.Controls.Add(this.textBoxEasypayDefaultPassword);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(4, 4);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1370, 594);
             this.panel8.TabIndex = 0;
@@ -1546,9 +1550,9 @@
             // 
             this.tabPage6.Controls.Add(this.panel4);
             this.tabPage6.Location = new System.Drawing.Point(4, 32);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage6.Size = new System.Drawing.Size(1378, 602);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "EasyShop Integration";
@@ -1560,7 +1564,7 @@
             this.panel4.Controls.Add(this.checkBoxEnableEasyShopIntegration);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(4, 4);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1370, 594);
             this.panel4.TabIndex = 1;
@@ -1582,9 +1586,9 @@
             // 
             this.tabPage7.Controls.Add(this.panel9);
             this.tabPage7.Location = new System.Drawing.Point(4, 32);
-            this.tabPage7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage7.Size = new System.Drawing.Size(1378, 602);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Printer Settings";
@@ -1612,7 +1616,7 @@
             this.panel9.Controls.Add(this.label45);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(4, 4);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1370, 594);
             this.panel9.TabIndex = 35;
@@ -1622,7 +1626,7 @@
             this.checkBoxSingleColumnBarcodePrintOut.AutoSize = true;
             this.checkBoxSingleColumnBarcodePrintOut.Enabled = false;
             this.checkBoxSingleColumnBarcodePrintOut.Location = new System.Drawing.Point(896, 218);
-            this.checkBoxSingleColumnBarcodePrintOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxSingleColumnBarcodePrintOut.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxSingleColumnBarcodePrintOut.Name = "checkBoxSingleColumnBarcodePrintOut";
             this.checkBoxSingleColumnBarcodePrintOut.Size = new System.Drawing.Size(285, 27);
             this.checkBoxSingleColumnBarcodePrintOut.TabIndex = 94;
@@ -1807,9 +1811,9 @@
             // 
             this.tabControl10.Controls.Add(this.panel10);
             this.tabControl10.Location = new System.Drawing.Point(4, 32);
-            this.tabControl10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl10.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl10.Name = "tabControl10";
-            this.tabControl10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl10.Padding = new System.Windows.Forms.Padding(4);
             this.tabControl10.Size = new System.Drawing.Size(1378, 602);
             this.tabControl10.TabIndex = 7;
             this.tabControl10.Text = "Customer Display Settings";
@@ -1831,7 +1835,7 @@
             this.panel10.Controls.Add(this.textBoxCustomerDisplayPort);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(4, 4);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(1370, 594);
             this.panel10.TabIndex = 35;
@@ -1961,9 +1965,9 @@
             // 
             this.tabPage8.Controls.Add(this.panel11);
             this.tabPage8.Location = new System.Drawing.Point(4, 32);
-            this.tabPage8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage8.Size = new System.Drawing.Size(1378, 602);
             this.tabPage8.TabIndex = 8;
             this.tabPage8.Text = "Printer Setup";
@@ -2189,6 +2193,27 @@
             this.backgroundWorkerEasyfisIntegration.WorkerSupportsCancellation = true;
             this.backgroundWorkerEasyfisIntegration.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerEasyfisIntegration_DoWork);
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(49, 499);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(116, 23);
+            this.label17.TabIndex = 98;
+            this.label17.Text = "XML File Path:";
+            // 
+            // textBoxXMLFilePath
+            // 
+            this.textBoxXMLFilePath.Enabled = false;
+            this.textBoxXMLFilePath.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxXMLFilePath.Location = new System.Drawing.Point(172, 497);
+            this.textBoxXMLFilePath.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxXMLFilePath.Name = "textBoxXMLFilePath";
+            this.textBoxXMLFilePath.Size = new System.Drawing.Size(406, 30);
+            this.textBoxXMLFilePath.TabIndex = 99;
+            // 
             // SysSettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -2403,5 +2428,7 @@
         private System.Windows.Forms.CheckBox checkBoxRestrictCashin;
         private System.Windows.Forms.CheckBox checkBoxDisableLockTender;
         private System.Windows.Forms.CheckBox checkBoxPopupCustomer;
+        private System.Windows.Forms.TextBox textBoxXMLFilePath;
+        private System.Windows.Forms.Label label17;
     }
 }

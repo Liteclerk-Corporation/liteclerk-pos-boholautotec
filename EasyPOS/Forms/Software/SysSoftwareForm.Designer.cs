@@ -368,7 +368,7 @@
             // 
             // tabPageSysMenu
             // 
-            this.tabPageSysMenu.BackColor = System.Drawing.Color.White;
+            this.tabPageSysMenu.BackColor = System.Drawing.Color.LightGray;
             this.tabPageSysMenu.Location = new System.Drawing.Point(4, 29);
             this.tabPageSysMenu.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageSysMenu.Name = "tabPageSysMenu";

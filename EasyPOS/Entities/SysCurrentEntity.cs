@@ -76,5 +76,6 @@ namespace EasyPOS.Entities
         public Boolean RestrictCashin { get; set; }
         public Boolean DisableLockTender { get; set; }
         public Boolean PopupCustomerInfo { get; set; }
+        public String XMLFilePath { get; set; }
     }
 }
