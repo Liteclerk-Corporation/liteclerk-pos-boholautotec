@@ -255,7 +255,7 @@
             this.Forms.Location = new System.Drawing.Point(0, 62);
             this.Forms.Margin = new System.Windows.Forms.Padding(2);
             this.Forms.Name = "Forms";
-            this.Forms.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.Forms.Padding = new System.Windows.Forms.Padding(10);
             this.Forms.Size = new System.Drawing.Size(1370, 221);
             this.Forms.TabIndex = 9;
             // 
@@ -600,7 +600,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.buttonPurchaseOrderLineListPageListFirst);
             this.panel4.Controls.Add(this.buttonPurchaseOrderLineListPageListPrevious);
             this.panel4.Controls.Add(this.buttonPurchaseOrderLineListPageListNext);
@@ -682,7 +682,7 @@
             // textBoxPurchaseOrderLineListPageNumber
             // 
             this.textBoxPurchaseOrderLineListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxPurchaseOrderLineListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxPurchaseOrderLineListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPurchaseOrderLineListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPurchaseOrderLineListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxPurchaseOrderLineListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -748,6 +748,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1370, 700);
             this.ControlBox = false;
             this.Controls.Add(this.buttonSearchItem);
@@ -760,7 +761,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TrnPurchaseOrderDetailForm";

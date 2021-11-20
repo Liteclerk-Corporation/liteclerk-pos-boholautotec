@@ -116,7 +116,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.buttonCancel);
             this.panel2.Controls.Add(this.buttonReprint);
             this.panel2.Controls.Add(this.buttonDeliver);
@@ -147,7 +147,7 @@
             this.buttonCancel.Location = new System.Drawing.Point(831, 194);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.buttonCancel.Padding = new System.Windows.Forms.Padding(10);
             this.buttonCancel.Size = new System.Drawing.Size(159, 131);
             this.buttonCancel.TabIndex = 11;
             this.buttonCancel.Text = "\r\nF7 - Cancel";
@@ -178,7 +178,7 @@
             this.buttonReprint.Location = new System.Drawing.Point(340, 194);
             this.buttonReprint.Margin = new System.Windows.Forms.Padding(2);
             this.buttonReprint.Name = "buttonReprint";
-            this.buttonReprint.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.buttonReprint.Padding = new System.Windows.Forms.Padding(10);
             this.buttonReprint.Size = new System.Drawing.Size(322, 131);
             this.buttonReprint.TabIndex = 10;
             this.buttonReprint.Text = " \r\nF5 -Reprint";
@@ -206,7 +206,7 @@
             this.buttonDeliver.Location = new System.Drawing.Point(12, 330);
             this.buttonDeliver.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDeliver.Name = "buttonDeliver";
-            this.buttonDeliver.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.buttonDeliver.Padding = new System.Windows.Forms.Padding(10);
             this.buttonDeliver.Size = new System.Drawing.Size(322, 131);
             this.buttonDeliver.TabIndex = 9;
             this.buttonDeliver.Text = "\r\nF8 - Deliver";
@@ -249,7 +249,7 @@
             this.buttonTender.Location = new System.Drawing.Point(668, 58);
             this.buttonTender.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTender.Name = "buttonTender";
-            this.buttonTender.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.buttonTender.Padding = new System.Windows.Forms.Padding(10);
             this.buttonTender.Size = new System.Drawing.Size(322, 131);
             this.buttonTender.TabIndex = 7;
             this.buttonTender.Text = "\r\nF4 - Tender";
@@ -270,7 +270,7 @@
             this.buttonBillOut.Location = new System.Drawing.Point(340, 58);
             this.buttonBillOut.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBillOut.Name = "buttonBillOut";
-            this.buttonBillOut.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.buttonBillOut.Padding = new System.Windows.Forms.Padding(10);
             this.buttonBillOut.Size = new System.Drawing.Size(322, 131);
             this.buttonBillOut.TabIndex = 6;
             this.buttonBillOut.Text = " \r\nF3 -Bill Out";
@@ -292,7 +292,7 @@
             this.buttonDelete.Location = new System.Drawing.Point(668, 194);
             this.buttonDelete.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.buttonDelete.Padding = new System.Windows.Forms.Padding(10);
             this.buttonDelete.Size = new System.Drawing.Size(159, 131);
             this.buttonDelete.TabIndex = 4;
             this.buttonDelete.Text = "\r\nF6 - Delete";
@@ -322,7 +322,7 @@
             this.buttonSplitMergeBill.Location = new System.Drawing.Point(668, 330);
             this.buttonSplitMergeBill.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSplitMergeBill.Name = "buttonSplitMergeBill";
-            this.buttonSplitMergeBill.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.buttonSplitMergeBill.Padding = new System.Windows.Forms.Padding(10);
             this.buttonSplitMergeBill.Size = new System.Drawing.Size(322, 131);
             this.buttonSplitMergeBill.TabIndex = 3;
             this.buttonSplitMergeBill.Text = "\r\nF10 - Split/Merge Bill";
@@ -343,7 +343,7 @@
             this.buttonPrintPartialBill.Location = new System.Drawing.Point(340, 330);
             this.buttonPrintPartialBill.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPrintPartialBill.Name = "buttonPrintPartialBill";
-            this.buttonPrintPartialBill.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.buttonPrintPartialBill.Padding = new System.Windows.Forms.Padding(10);
             this.buttonPrintPartialBill.Size = new System.Drawing.Size(321, 131);
             this.buttonPrintPartialBill.TabIndex = 2;
             this.buttonPrintPartialBill.Text = "\r\nF9 - Print Partial Bill";
@@ -364,7 +364,7 @@
             this.buttonEditOrder.Location = new System.Drawing.Point(14, 58);
             this.buttonEditOrder.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEditOrder.Name = "buttonEditOrder";
-            this.buttonEditOrder.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.buttonEditOrder.Padding = new System.Windows.Forms.Padding(10);
             this.buttonEditOrder.Size = new System.Drawing.Size(321, 268);
             this.buttonEditOrder.TabIndex = 1;
             this.buttonEditOrder.Text = "\r\nF2 - Edit Order";

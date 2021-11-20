@@ -104,6 +104,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panel7);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -115,7 +116,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.buttonStockInLineListPageListFirst);
             this.panel4.Controls.Add(this.buttonStockInLineListPageListPrevious);
             this.panel4.Controls.Add(this.buttonStockInLineListPageListNext);
@@ -193,7 +194,7 @@
             // textBoxStockInLineListPageNumber
             // 
             this.textBoxStockInLineListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxStockInLineListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxStockInLineListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxStockInLineListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxStockInLineListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxStockInLineListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -233,7 +234,7 @@
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel7.Padding = new System.Windows.Forms.Padding(10);
             this.panel7.Size = new System.Drawing.Size(1386, 234);
             this.panel7.TabIndex = 0;
             // 

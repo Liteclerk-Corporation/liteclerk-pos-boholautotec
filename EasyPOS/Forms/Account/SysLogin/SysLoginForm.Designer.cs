@@ -292,6 +292,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.radioButtonSystemDate);
             this.panel3.Controls.Add(this.dateTimePickerLoginDate);
             this.panel3.Controls.Add(this.label8);
@@ -304,7 +305,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.textBoxUserCardNumber);
             this.panel4.Controls.Add(this.textBoxUsername);
             this.panel4.Controls.Add(this.label6);

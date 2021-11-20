@@ -106,7 +106,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.buttonCollectionLineListPageListFirst);
             this.panel4.Controls.Add(this.buttonCollectionLineListPageListPrevious);
             this.panel4.Controls.Add(this.buttonCollectionLineListPageListNext);
@@ -188,7 +188,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // textBoxCollectionLineListPageNumber
             // 
             this.textBoxCollectionLineListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxCollectionLineListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxCollectionLineListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxCollectionLineListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCollectionLineListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxCollectionLineListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -918,6 +918,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1370, 700);
             this.ControlBox = false;
             this.Controls.Add(this.buttonAddCollectionLine);

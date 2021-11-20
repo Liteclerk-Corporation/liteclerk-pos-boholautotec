@@ -451,7 +451,7 @@
             this.panel5.Controls.Add(this.textBoxTotalSalesAmount);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(786, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(584, 72);
             this.panel5.TabIndex = 15;
@@ -626,7 +626,7 @@
             // 
             // panelItems
             // 
-            this.panelItems.BackColor = System.Drawing.Color.White;
+            this.panelItems.BackColor = System.Drawing.Color.LightGray;
             this.panelItems.Controls.Add(this.buttonChangeTable);
             this.panelItems.Controls.Add(this.buttonItemGroupItem28);
             this.panelItems.Controls.Add(this.buttonItemGroupItem29);
@@ -672,7 +672,7 @@
             this.panelItems.Location = new System.Drawing.Point(0, 0);
             this.panelItems.Margin = new System.Windows.Forms.Padding(2);
             this.panelItems.Name = "panelItems";
-            this.panelItems.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panelItems.Padding = new System.Windows.Forms.Padding(5);
             this.panelItems.Size = new System.Drawing.Size(828, 567);
             this.panelItems.TabIndex = 23;
             // 
@@ -1644,13 +1644,14 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.textBoxBarcode);
             this.panel3.Controls.Add(this.dataGridViewSalesLineList);
             this.panel3.Controls.Add(this.buttonBarcode);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(828, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(542, 567);
             this.panel3.TabIndex = 26;
@@ -1661,7 +1662,7 @@
             this.panel6.Controls.Add(this.buttonHideItems);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 502);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(542, 65);
             this.panel6.TabIndex = 26;

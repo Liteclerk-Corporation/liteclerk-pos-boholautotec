@@ -98,6 +98,7 @@
             // 
             // listBoxPOSReport
             // 
+            this.listBoxPOSReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.listBoxPOSReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBoxPOSReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxPOSReport.FormattingEnabled = true;
@@ -121,6 +122,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.dateTimePickerStartDate);
             this.panel4.Controls.Add(this.labelStartDate);
             this.panel4.Controls.Add(this.dateTimePickerEndDate);

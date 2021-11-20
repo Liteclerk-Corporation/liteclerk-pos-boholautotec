@@ -128,7 +128,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.buttonAuditTrailListPageListFirst);
             this.panel3.Controls.Add(this.buttonAuditTrailListPageListPrevious);
             this.panel3.Controls.Add(this.buttonAuditTrailListPageListNext);
@@ -210,7 +210,7 @@
             // textBoxAuditTrailListPageNumber
             // 
             this.textBoxAuditTrailListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxAuditTrailListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxAuditTrailListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxAuditTrailListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxAuditTrailListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxAuditTrailListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -555,7 +555,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BackColor = System.Drawing.Color.LightGray;
             this.panel5.Controls.Add(this.buttonItemListPageListFirst);
             this.panel5.Controls.Add(this.buttonItemListPageListPrevious);
             this.panel5.Controls.Add(this.buttonItemListPageListNext);
@@ -637,7 +637,7 @@
             // textBoxItemListPageNumber
             // 
             this.textBoxItemListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxItemListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxItemListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxItemListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxItemListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxItemListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -811,9 +811,9 @@
             // 
             this.tabPage2.Controls.Add(this.panel7);
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1362, 602);
             this.tabPage2.TabIndex = 2;
             this.tabPage2.Text = "Upload Item";
@@ -835,7 +835,7 @@
             this.panel7.Controls.Add(this.textBoxUpdatePrice);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(4, 4);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1354, 594);
             this.panel7.TabIndex = 20;
@@ -921,7 +921,7 @@
             // 
             this.textBoxFileName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxFileName.Location = new System.Drawing.Point(176, 11);
-            this.textBoxFileName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxFileName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFileName.Name = "textBoxFileName";
             this.textBoxFileName.ReadOnly = true;
             this.textBoxFileName.Size = new System.Drawing.Size(470, 30);
@@ -986,7 +986,7 @@
             // 
             this.textBoxUpdatePrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxUpdatePrice.Location = new System.Drawing.Point(176, 62);
-            this.textBoxUpdatePrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxUpdatePrice.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUpdatePrice.Name = "textBoxUpdatePrice";
             this.textBoxUpdatePrice.ReadOnly = true;
             this.textBoxUpdatePrice.Size = new System.Drawing.Size(470, 30);
@@ -996,9 +996,9 @@
             // 
             this.tabPage3.Controls.Add(this.panel6);
             this.tabPage3.Location = new System.Drawing.Point(4, 32);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage3.Size = new System.Drawing.Size(1362, 602);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Upload Customer";
@@ -1010,7 +1010,7 @@
             this.panel6.Controls.Add(this.panel10);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(4, 4);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1354, 594);
             this.panel6.TabIndex = 21;
@@ -1073,7 +1073,7 @@
             // 
             this.textBoxFileNameCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxFileNameCustomer.Location = new System.Drawing.Point(580, 18);
-            this.textBoxFileNameCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxFileNameCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFileNameCustomer.Name = "textBoxFileNameCustomer";
             this.textBoxFileNameCustomer.ReadOnly = true;
             this.textBoxFileNameCustomer.Size = new System.Drawing.Size(470, 30);
@@ -1127,6 +1127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1370, 700);
             this.Controls.Add(this.tabControlSystemTable);
             this.Controls.Add(this.panel1);

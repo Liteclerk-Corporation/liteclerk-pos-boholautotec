@@ -71,7 +71,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.button1000);
             this.panel1.Controls.Add(this.button500);
             this.panel1.Controls.Add(this.button100);
@@ -402,6 +402,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(546, 573);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBoxNumber);

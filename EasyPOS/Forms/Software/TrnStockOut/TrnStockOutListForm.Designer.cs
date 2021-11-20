@@ -61,7 +61,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.buttonStockOutListPageListFirst);
             this.panel3.Controls.Add(this.buttonStockOutListPageListPrevious);
             this.panel3.Controls.Add(this.buttonStockOutListPageListNext);
@@ -139,7 +139,7 @@
             // textBoxStockOutListPageNumber
             // 
             this.textBoxStockOutListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxStockOutListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxStockOutListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxStockOutListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxStockOutListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxStockOutListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -152,6 +152,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.dateTimePickerStockOutListFilter);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.dataGridViewStockOutList);

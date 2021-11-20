@@ -125,6 +125,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.dateTimePickerCheckDate);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.textBoxCheckBank);
@@ -145,7 +146,7 @@
             this.dateTimePickerCheckDate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dateTimePickerCheckDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerCheckDate.Location = new System.Drawing.Point(169, 50);
-            this.dateTimePickerCheckDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePickerCheckDate.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerCheckDate.Name = "dateTimePickerCheckDate";
             this.dateTimePickerCheckDate.Size = new System.Drawing.Size(175, 34);
             this.dateTimePickerCheckDate.TabIndex = 1;

@@ -190,7 +190,7 @@
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.SystemColors.Control;
+            this.panel9.BackColor = System.Drawing.Color.LightGray;
             this.panel9.Controls.Add(this.dataGridViewSalesItemSplitItems);
             this.panel9.Controls.Add(this.buttonSplit);
             this.panel9.Controls.Add(this.panel15);
@@ -350,7 +350,7 @@
             // 
             // panel15
             // 
-            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.BackColor = System.Drawing.Color.LightGray;
             this.panel15.Controls.Add(this.buttonSalesItemSplitPageListFirst);
             this.panel15.Controls.Add(this.buttonSalesItemSplitPageListPrevious);
             this.panel15.Controls.Add(this.buttonSalesItemSplitPageListNext);
@@ -432,7 +432,7 @@
             // textBoxSalesItemSplitPageNumber
             // 
             this.textBoxSalesItemSplitPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxSalesItemSplitPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxSalesItemSplitPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxSalesItemSplitPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSalesItemSplitPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxSalesItemSplitPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -458,7 +458,7 @@
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.SystemColors.Control;
+            this.panel10.BackColor = System.Drawing.Color.LightGray;
             this.panel10.Controls.Add(this.dataGridViewMergeSalesList);
             this.panel10.Controls.Add(this.buttonMerge);
             this.panel10.Controls.Add(this.comboBoxTableCode);
@@ -613,7 +613,7 @@
             this.comboBoxTableCode.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBoxTableCode.FormattingEnabled = true;
             this.comboBoxTableCode.Location = new System.Drawing.Point(559, 8);
-            this.comboBoxTableCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxTableCode.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxTableCode.Name = "comboBoxTableCode";
             this.comboBoxTableCode.Size = new System.Drawing.Size(409, 36);
             this.comboBoxTableCode.TabIndex = 52;
@@ -623,7 +623,7 @@
             this.comboBoxTableGroup.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBoxTableGroup.FormattingEnabled = true;
             this.comboBoxTableGroup.Location = new System.Drawing.Point(301, 8);
-            this.comboBoxTableGroup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxTableGroup.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxTableGroup.Name = "comboBoxTableGroup";
             this.comboBoxTableGroup.Size = new System.Drawing.Size(249, 36);
             this.comboBoxTableGroup.TabIndex = 50;
@@ -642,7 +642,7 @@
             // 
             // panel16
             // 
-            this.panel16.BackColor = System.Drawing.Color.White;
+            this.panel16.BackColor = System.Drawing.Color.LightGray;
             this.panel16.Controls.Add(this.buttonSalesMergePageListFirst);
             this.panel16.Controls.Add(this.buttonSalesMergePageListPrevious);
             this.panel16.Controls.Add(this.buttonSalesMergePageListNext);
@@ -724,7 +724,7 @@
             // textBoxSalesMergePageNumber
             // 
             this.textBoxSalesMergePageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxSalesMergePageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxSalesMergePageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxSalesMergePageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSalesMergePageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxSalesMergePageNumber.Location = new System.Drawing.Point(188, 16);

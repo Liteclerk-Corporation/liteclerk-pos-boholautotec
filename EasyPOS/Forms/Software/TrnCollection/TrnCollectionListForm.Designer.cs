@@ -110,6 +110,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(62, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
@@ -496,7 +497,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.buttonCollectionListPageListFirst);
             this.panel3.Controls.Add(this.buttonCollectionListPageListPrevious);
             this.panel3.Controls.Add(this.buttonCollectionListPageListNext);
@@ -574,7 +575,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // textBoxCollectionListPageNumber
             // 
             this.textBoxCollectionListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxCollectionListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxCollectionListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxCollectionListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCollectionListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxCollectionListPageNumber.Location = new System.Drawing.Point(188, 21);
@@ -589,6 +590,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1350, 680);
             this.ControlBox = false;
             this.Controls.Add(this.panel3);
@@ -599,7 +601,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TrnCollectionListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrnCollectionListForm";

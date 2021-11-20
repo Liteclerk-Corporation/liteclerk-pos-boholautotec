@@ -126,6 +126,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.textBoxStockCountLineAmount);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label4);
@@ -178,6 +179,7 @@
             // 
             // textBoxStockCountLineCost
             // 
+            this.textBoxStockCountLineCost.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxStockCountLineCost.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.textBoxStockCountLineCost.Location = new System.Drawing.Point(98, 116);
             this.textBoxStockCountLineCost.Margin = new System.Windows.Forms.Padding(2);
@@ -219,6 +221,7 @@
             // textBoxStockCountLineQuantity
             // 
             this.textBoxStockCountLineQuantity.AcceptsTab = true;
+            this.textBoxStockCountLineQuantity.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxStockCountLineQuantity.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.textBoxStockCountLineQuantity.HideSelection = false;
             this.textBoxStockCountLineQuantity.Location = new System.Drawing.Point(98, 44);

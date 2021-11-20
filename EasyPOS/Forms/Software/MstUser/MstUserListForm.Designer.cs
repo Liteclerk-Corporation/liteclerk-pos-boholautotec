@@ -229,7 +229,7 @@
             // textBoxUserListPageNumber
             // 
             this.textBoxUserListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxUserListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxUserListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxUserListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxUserListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxUserListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -304,6 +304,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.dataGridViewUserList);
             this.panel2.Controls.Add(this.textBoxUserListFilter);
@@ -316,7 +317,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.buttonUserListPageListFirst);
             this.panel3.Controls.Add(this.buttonUserListPageListPrevious);
             this.panel3.Controls.Add(this.buttonUserListPageListNext);

@@ -122,7 +122,7 @@
             // 
             // textBoxDisbursementListPageNumber
             // 
-            this.textBoxDisbursementListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxDisbursementListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxDisbursementListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDisbursementListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxDisbursementListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -341,7 +341,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.buttonDisbursementListPageListFirst);
             this.panel3.Controls.Add(this.buttonDisbursementListPageListPrevious);
             this.panel3.Controls.Add(this.buttonDisbursementListPageListNext);
@@ -368,6 +368,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.dateTimePickerDisbursementListFilter);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.dataGridViewDisbursementList);

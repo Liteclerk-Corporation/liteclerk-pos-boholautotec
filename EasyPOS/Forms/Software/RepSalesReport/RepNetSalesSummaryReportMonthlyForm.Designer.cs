@@ -83,7 +83,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.ColumnNetSalesSummaryMarginAmount,
             this.ColumnNetSalesSummaryPercentage});
             this.dataGridViewNetSalesSummaryMonthlyReport.Location = new System.Drawing.Point(0, 62);
-            this.dataGridViewNetSalesSummaryMonthlyReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewNetSalesSummaryMonthlyReport.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewNetSalesSummaryMonthlyReport.MultiSelect = false;
             this.dataGridViewNetSalesSummaryMonthlyReport.Name = "dataGridViewNetSalesSummaryMonthlyReport";
             this.dataGridViewNetSalesSummaryMonthlyReport.ReadOnly = true;
@@ -255,7 +255,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.buttonPageListFirst);
             this.panel4.Controls.Add(this.buttonPageListNext);
             this.panel4.Controls.Add(this.buttonPageListLast);
@@ -337,7 +337,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             // textBoxPageNumber
             // 
             this.textBoxPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPageNumber.Location = new System.Drawing.Point(231, 15);
             this.textBoxPageNumber.Margin = new System.Windows.Forms.Padding(2);
@@ -353,13 +353,14 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1370, 652);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridViewNetSalesSummaryMonthlyReport);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "RepNetSalesSummaryReportMonthlyForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Net Sales Summary Report";

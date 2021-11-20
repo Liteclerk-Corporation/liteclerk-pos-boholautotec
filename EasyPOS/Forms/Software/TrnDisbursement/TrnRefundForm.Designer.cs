@@ -121,6 +121,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.textBoxAmount);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label2);

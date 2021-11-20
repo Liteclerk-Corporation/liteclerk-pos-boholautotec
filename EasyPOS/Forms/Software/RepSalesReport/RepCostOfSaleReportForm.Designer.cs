@@ -238,7 +238,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.textBoxTotalCost);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.buttonPageListFirst);
@@ -256,6 +256,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             // textBoxTotalCost
             // 
             this.textBoxTotalCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTotalCost.BackColor = System.Drawing.Color.LightGray;
             this.textBoxTotalCost.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTotalCost.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTotalCost.Location = new System.Drawing.Point(800, 12);
@@ -346,7 +347,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             // textBoxPageNumber
             // 
             this.textBoxPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPageNumber.Location = new System.Drawing.Point(185, 12);
             this.textBoxPageNumber.Margin = new System.Windows.Forms.Padding(2);
@@ -361,6 +362,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1096, 522);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);

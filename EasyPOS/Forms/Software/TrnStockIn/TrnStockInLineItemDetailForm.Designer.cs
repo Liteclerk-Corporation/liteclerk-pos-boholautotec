@@ -131,6 +131,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.textBoxExpiryDate);
@@ -168,6 +169,7 @@
             // textBoxExpiryDate
             // 
             this.textBoxExpiryDate.AcceptsTab = true;
+            this.textBoxExpiryDate.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxExpiryDate.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.textBoxExpiryDate.HideSelection = false;
             this.textBoxExpiryDate.Location = new System.Drawing.Point(392, 106);
@@ -190,6 +192,7 @@
             // 
             // textBoxStockInLinePrice
             // 
+            this.textBoxStockInLinePrice.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxStockInLinePrice.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.textBoxStockInLinePrice.Location = new System.Drawing.Point(102, 250);
             this.textBoxStockInLinePrice.Margin = new System.Windows.Forms.Padding(2);
@@ -214,6 +217,7 @@
             // 
             // textBoxStockInLineLotNumber
             // 
+            this.textBoxStockInLineLotNumber.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxStockInLineLotNumber.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.textBoxStockInLineLotNumber.Location = new System.Drawing.Point(392, 146);
             this.textBoxStockInLineLotNumber.Margin = new System.Windows.Forms.Padding(2);
@@ -268,6 +272,7 @@
             // 
             // textBoxStockInLineCost
             // 
+            this.textBoxStockInLineCost.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxStockInLineCost.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.textBoxStockInLineCost.Location = new System.Drawing.Point(102, 179);
             this.textBoxStockInLineCost.Margin = new System.Windows.Forms.Padding(2);
@@ -309,6 +314,7 @@
             // textBoxStockInLineQuantity
             // 
             this.textBoxStockInLineQuantity.AcceptsTab = true;
+            this.textBoxStockInLineQuantity.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxStockInLineQuantity.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.textBoxStockInLineQuantity.HideSelection = false;
             this.textBoxStockInLineQuantity.Location = new System.Drawing.Point(102, 106);

@@ -381,7 +381,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.buttonPurchaseOrderListPageListFirst);
             this.panel3.Controls.Add(this.buttonPurchaseOrderListPageListPrevious);
             this.panel3.Controls.Add(this.buttonPurchaseOrderListPageListNext);
@@ -459,7 +459,7 @@
             // textBoxPurchaseOrderListPageNumber
             // 
             this.textBoxPurchaseOrderListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxPurchaseOrderListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxPurchaseOrderListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPurchaseOrderListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPurchaseOrderListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxPurchaseOrderListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -474,6 +474,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1350, 680);
             this.ControlBox = false;
             this.Controls.Add(this.panel3);
@@ -484,7 +485,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TrnPurchaseOrderListForm";

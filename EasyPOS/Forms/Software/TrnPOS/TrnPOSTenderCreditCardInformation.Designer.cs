@@ -133,6 +133,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.comboBoxCreditCardType);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.textBoxCreditCardExpiry);
@@ -161,7 +162,7 @@
             this.comboBoxCreditCardType.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBoxCreditCardType.FormattingEnabled = true;
             this.comboBoxCreditCardType.Location = new System.Drawing.Point(195, 174);
-            this.comboBoxCreditCardType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxCreditCardType.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxCreditCardType.Name = "comboBoxCreditCardType";
             this.comboBoxCreditCardType.Size = new System.Drawing.Size(368, 36);
             this.comboBoxCreditCardType.TabIndex = 4;

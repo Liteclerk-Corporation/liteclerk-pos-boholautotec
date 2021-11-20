@@ -186,6 +186,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.textBoxCustomerAddress);
             this.panel2.Controls.Add(this.label3);

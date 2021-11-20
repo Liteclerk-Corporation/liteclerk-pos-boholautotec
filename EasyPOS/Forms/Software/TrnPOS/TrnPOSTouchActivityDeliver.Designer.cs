@@ -133,7 +133,7 @@
             this.comboBoxDeliveredBy.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBoxDeliveredBy.FormattingEnabled = true;
             this.comboBoxDeliveredBy.Location = new System.Drawing.Point(12, 96);
-            this.comboBoxDeliveredBy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxDeliveredBy.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxDeliveredBy.Name = "comboBoxDeliveredBy";
             this.comboBoxDeliveredBy.Size = new System.Drawing.Size(576, 36);
             this.comboBoxDeliveredBy.TabIndex = 34;
@@ -143,7 +143,7 @@
             // 
             this.textBoxRemarks.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textBoxRemarks.Location = new System.Drawing.Point(12, 170);
-            this.textBoxRemarks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxRemarks.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRemarks.Multiline = true;
             this.textBoxRemarks.Name = "textBoxRemarks";
             this.textBoxRemarks.ReadOnly = true;
@@ -165,6 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(602, 476);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxRemarks);

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MstItemGroupDetailForm));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -96,7 +96,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.Control;
+            this.panel5.BackColor = System.Drawing.Color.LightGray;
             this.panel5.Controls.Add(this.buttonSearchItem);
             this.panel5.Controls.Add(this.dataGridViewItemGroupItemList);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -134,14 +134,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewItemGroupItemList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewItemGroupItemList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewItemGroupItemList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewItemGroupItemList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewItemGroupItemList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnItemGroupItemListButtonEdit,
@@ -156,8 +156,8 @@
             this.dataGridViewItemGroupItemList.MultiSelect = false;
             this.dataGridViewItemGroupItemList.Name = "dataGridViewItemGroupItemList";
             this.dataGridViewItemGroupItemList.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.dataGridViewItemGroupItemList.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.dataGridViewItemGroupItemList.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewItemGroupItemList.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.dataGridViewItemGroupItemList.RowTemplate.Height = 24;
             this.dataGridViewItemGroupItemList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -237,7 +237,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.buttonItemGroupItemListPageListFirst);
             this.panel4.Controls.Add(this.buttonItemGroupItemListPageListPrevious);
             this.panel4.Controls.Add(this.buttonItemGroupItemListPageListNext);
@@ -319,7 +319,7 @@
             // textBoxItemGroupItemListPageNumber
             // 
             this.textBoxItemGroupItemListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxItemGroupItemListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxItemGroupItemListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxItemGroupItemListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxItemGroupItemListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxItemGroupItemListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -344,7 +344,7 @@
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel7.Padding = new System.Windows.Forms.Padding(10);
             this.panel7.Size = new System.Drawing.Size(1370, 132);
             this.panel7.TabIndex = 0;
             // 

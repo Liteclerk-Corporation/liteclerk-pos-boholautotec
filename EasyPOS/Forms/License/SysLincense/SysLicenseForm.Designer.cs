@@ -187,7 +187,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.textBoxLicenseCode);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -222,6 +222,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.textBoxSerialNumber);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -235,10 +236,11 @@
             // 
             this.textBoxSerialNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSerialNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxSerialNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSerialNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 17.25F, System.Drawing.FontStyle.Bold);
             this.textBoxSerialNumber.Location = new System.Drawing.Point(14, 45);
-            this.textBoxSerialNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSerialNumber.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSerialNumber.Name = "textBoxSerialNumber";
             this.textBoxSerialNumber.ReadOnly = true;
             this.textBoxSerialNumber.Size = new System.Drawing.Size(525, 39);

@@ -261,6 +261,9 @@
             this.dataGridViewAccountList.AllowUserToAddRows = false;
             this.dataGridViewAccountList.AllowUserToDeleteRows = false;
             this.dataGridViewAccountList.AllowUserToResizeRows = false;
+            this.dataGridViewAccountList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewAccountList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewAccountList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAccountList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -352,7 +355,7 @@
             // 
             // panel15
             // 
-            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.BackColor = System.Drawing.Color.LightGray;
             this.panel15.Controls.Add(this.buttonAccountListPageListFirst);
             this.panel15.Controls.Add(this.buttonAccountListPageListPrevious);
             this.panel15.Controls.Add(this.buttonAccountListPageListNext);
@@ -434,7 +437,7 @@
             // textBoxAccountListPageNumber
             // 
             this.textBoxAccountListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxAccountListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxAccountListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxAccountListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxAccountListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxAccountListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -581,7 +584,7 @@
             // 
             // panel16
             // 
-            this.panel16.BackColor = System.Drawing.Color.White;
+            this.panel16.BackColor = System.Drawing.Color.LightGray;
             this.panel16.Controls.Add(this.buttonPayTypeListPageListFirst);
             this.panel16.Controls.Add(this.buttonPayTypeListPageListPrevious);
             this.panel16.Controls.Add(this.buttonPayTypeListPageListNext);
@@ -663,7 +666,7 @@
             // textBoxPayTypeListPageNumber
             // 
             this.textBoxPayTypeListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxPayTypeListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxPayTypeListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPayTypeListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPayTypeListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxPayTypeListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -822,7 +825,7 @@
             // 
             // panel17
             // 
-            this.panel17.BackColor = System.Drawing.Color.White;
+            this.panel17.BackColor = System.Drawing.Color.LightGray;
             this.panel17.Controls.Add(this.buttonTaxListPageListFirst);
             this.panel17.Controls.Add(this.buttonTaxListPageListPrevious);
             this.panel17.Controls.Add(this.buttonTaxListPageListNext);
@@ -904,7 +907,7 @@
             // textBoxTaxListPageNumber
             // 
             this.textBoxTaxListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxTaxListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxTaxListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxTaxListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTaxListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxTaxListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -1020,7 +1023,7 @@
             // 
             // panel18
             // 
-            this.panel18.BackColor = System.Drawing.Color.White;
+            this.panel18.BackColor = System.Drawing.Color.LightGray;
             this.panel18.Controls.Add(this.buttonUnitListPageListFirst);
             this.panel18.Controls.Add(this.buttonUnitListPageListPrevious);
             this.panel18.Controls.Add(this.buttonUnitListPageListNext);
@@ -1102,7 +1105,7 @@
             // textBoxUnitListPageNumber
             // 
             this.textBoxUnitListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxUnitListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxUnitListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxUnitListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxUnitListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxUnitListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -1218,7 +1221,7 @@
             // 
             // panel19
             // 
-            this.panel19.BackColor = System.Drawing.Color.White;
+            this.panel19.BackColor = System.Drawing.Color.LightGray;
             this.panel19.Controls.Add(this.buttonPeriodListPageListFirst);
             this.panel19.Controls.Add(this.buttonPeriodListPageListPrevious);
             this.panel19.Controls.Add(this.buttonPeriodListPageListNext);
@@ -1300,7 +1303,7 @@
             // textBoxPeriodListPageNumber
             // 
             this.textBoxPeriodListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxPeriodListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxPeriodListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPeriodListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPeriodListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxPeriodListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -1416,7 +1419,7 @@
             // 
             // panel20
             // 
-            this.panel20.BackColor = System.Drawing.Color.White;
+            this.panel20.BackColor = System.Drawing.Color.LightGray;
             this.panel20.Controls.Add(this.buttonTerminalListPageListFirst);
             this.panel20.Controls.Add(this.buttonTerminalListPageListPrevious);
             this.panel20.Controls.Add(this.buttonTerminalListPageListNext);
@@ -1498,7 +1501,7 @@
             // textBoxTerminalListPageNumber
             // 
             this.textBoxTerminalListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxTerminalListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxTerminalListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxTerminalListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTerminalListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxTerminalListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -1699,7 +1702,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.buttonSupplierListPageListFirst);
             this.panel4.Controls.Add(this.buttonSupplierListPageListPrevious);
             this.panel4.Controls.Add(this.buttonSupplierListPageListNext);
@@ -1781,7 +1784,7 @@
             // textBoxSupplierListPageNumber
             // 
             this.textBoxSupplierListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxSupplierListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxSupplierListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxSupplierListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSupplierListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxSupplierListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -1809,7 +1812,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BackColor = System.Drawing.Color.LightGray;
             this.panel5.Controls.Add(this.buttonLanguageListPageListFirst);
             this.panel5.Controls.Add(this.buttonLanguageListPageListPrevious);
             this.panel5.Controls.Add(this.buttonLanguageListPageListNext);
@@ -1891,7 +1894,7 @@
             // textBoxLanguageListPageNumber
             // 
             this.textBoxLanguageListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxLanguageListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxLanguageListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxLanguageListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLanguageListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxLanguageListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -2073,6 +2076,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1370, 700);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

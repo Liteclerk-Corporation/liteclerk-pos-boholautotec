@@ -123,6 +123,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.comboBoxTableCode);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.comboBoxTableGroup);
@@ -141,7 +142,7 @@
             this.comboBoxTableCode.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBoxTableCode.FormattingEnabled = true;
             this.comboBoxTableCode.Location = new System.Drawing.Point(134, 91);
-            this.comboBoxTableCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxTableCode.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxTableCode.Name = "comboBoxTableCode";
             this.comboBoxTableCode.Size = new System.Drawing.Size(429, 36);
             this.comboBoxTableCode.TabIndex = 48;
@@ -162,7 +163,7 @@
             this.comboBoxTableGroup.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.comboBoxTableGroup.FormattingEnabled = true;
             this.comboBoxTableGroup.Location = new System.Drawing.Point(134, 48);
-            this.comboBoxTableGroup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxTableGroup.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxTableGroup.Name = "comboBoxTableGroup";
             this.comboBoxTableGroup.Size = new System.Drawing.Size(429, 36);
             this.comboBoxTableGroup.TabIndex = 4;

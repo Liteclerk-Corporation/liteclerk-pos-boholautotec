@@ -357,7 +357,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.textBoxTotalAmount);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.buttonPageListFirst);
@@ -375,6 +375,7 @@
             // textBoxTotalAmount
             // 
             this.textBoxTotalAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTotalAmount.BackColor = System.Drawing.Color.LightGray;
             this.textBoxTotalAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTotalAmount.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTotalAmount.Location = new System.Drawing.Point(1000, 15);
@@ -465,7 +466,7 @@
             // textBoxPageNumber
             // 
             this.textBoxPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPageNumber.Location = new System.Drawing.Point(231, 15);
             this.textBoxPageNumber.Margin = new System.Windows.Forms.Padding(2);
@@ -493,6 +494,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1370, 652);
             this.Controls.Add(this.panel2);

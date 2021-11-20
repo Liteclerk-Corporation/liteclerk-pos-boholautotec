@@ -49,6 +49,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.textBoxXMLFilePath = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.checkBoxPopupCustomer = new System.Windows.Forms.CheckBox();
             this.checkBoxDisableLockTender = new System.Windows.Forms.CheckBox();
             this.comboBoxLanguage = new System.Windows.Forms.ComboBox();
@@ -189,8 +191,6 @@
             this.buttonKitchenPageListLast = new System.Windows.Forms.Button();
             this.textBoxKitchenPageNumber = new System.Windows.Forms.TextBox();
             this.backgroundWorkerEasyfisIntegration = new System.ComponentModel.BackgroundWorker();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBoxXMLFilePath = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -358,7 +358,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel6.BackColor = System.Drawing.Color.LightGray;
             this.panel6.Controls.Add(this.textBoxCompanyName);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.textBoxAddress);
@@ -509,6 +509,27 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1370, 594);
             this.panel5.TabIndex = 34;
+            // 
+            // textBoxXMLFilePath
+            // 
+            this.textBoxXMLFilePath.Enabled = false;
+            this.textBoxXMLFilePath.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxXMLFilePath.Location = new System.Drawing.Point(172, 497);
+            this.textBoxXMLFilePath.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxXMLFilePath.Name = "textBoxXMLFilePath";
+            this.textBoxXMLFilePath.Size = new System.Drawing.Size(406, 30);
+            this.textBoxXMLFilePath.TabIndex = 99;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(49, 499);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(116, 23);
+            this.label17.TabIndex = 98;
+            this.label17.Text = "XML File Path:";
             // 
             // checkBoxPopupCustomer
             // 
@@ -2192,27 +2213,6 @@
             this.backgroundWorkerEasyfisIntegration.WorkerReportsProgress = true;
             this.backgroundWorkerEasyfisIntegration.WorkerSupportsCancellation = true;
             this.backgroundWorkerEasyfisIntegration.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerEasyfisIntegration_DoWork);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(49, 499);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(116, 23);
-            this.label17.TabIndex = 98;
-            this.label17.Text = "XML File Path:";
-            // 
-            // textBoxXMLFilePath
-            // 
-            this.textBoxXMLFilePath.Enabled = false;
-            this.textBoxXMLFilePath.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxXMLFilePath.Location = new System.Drawing.Point(172, 497);
-            this.textBoxXMLFilePath.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxXMLFilePath.Name = "textBoxXMLFilePath";
-            this.textBoxXMLFilePath.Size = new System.Drawing.Size(406, 30);
-            this.textBoxXMLFilePath.TabIndex = 99;
             // 
             // SysSettingsForm
             // 

@@ -192,6 +192,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.textBoxCustomerCode2);
             this.panel2.Controls.Add(this.textBoxCustomerCode);

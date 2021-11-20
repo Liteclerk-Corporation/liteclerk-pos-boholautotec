@@ -241,7 +241,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.textBoxSalesReturnNumber);
             this.panel4.Controls.Add(this.label28);
             this.panel4.Controls.Add(this.textBoxAmountDenominationXC1);
@@ -304,7 +304,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel4.Padding = new System.Windows.Forms.Padding(10);
             this.panel4.Size = new System.Drawing.Size(1370, 638);
             this.panel4.TabIndex = 1;
             // 

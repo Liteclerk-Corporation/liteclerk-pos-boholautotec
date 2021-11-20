@@ -194,7 +194,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.Control;
+            this.panel5.BackColor = System.Drawing.Color.LightGray;
             this.panel5.Controls.Add(this.dataGridViewUserFormList);
             this.panel5.Controls.Add(this.buttonCopyUseRights);
             this.panel5.Controls.Add(this.buttonAddUserForm);
@@ -501,7 +501,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.buttonUserFormListPageListFirst);
             this.panel4.Controls.Add(this.buttonUserFormListPageListPrevious);
             this.panel4.Controls.Add(this.buttonUserFormListPageListNext);
@@ -583,7 +583,7 @@
             // textBoxUserFormListPageNumber
             // 
             this.textBoxUserFormListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxUserFormListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxUserFormListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxUserFormListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxUserFormListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxUserFormListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -610,7 +610,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel3.Padding = new System.Windows.Forms.Padding(10);
             this.panel3.Size = new System.Drawing.Size(1370, 131);
             this.panel3.TabIndex = 0;
             // 

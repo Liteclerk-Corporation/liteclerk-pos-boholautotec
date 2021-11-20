@@ -277,7 +277,7 @@
             this.dataGridViewSalesList.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewSalesList.RowTemplate.Height = 35;
             this.dataGridViewSalesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewSalesList.Size = new System.Drawing.Size(865, 536);
+            this.dataGridViewSalesList.Size = new System.Drawing.Size(811, 536);
             this.dataGridViewSalesList.TabIndex = 1;
             this.dataGridViewSalesList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSalesList_CellClick);
             this.dataGridViewSalesList.SelectionChanged += new System.EventHandler(this.dataGridViewSalesList_SelectionChanged);
@@ -515,10 +515,10 @@
             this.panel2.Controls.Add(this.labelPreparedBy);
             this.panel2.Controls.Add(this.labelTerminal);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(1026, 0);
+            this.panel2.Location = new System.Drawing.Point(971, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(344, 164);
+            this.panel2.Size = new System.Drawing.Size(399, 164);
             this.panel2.TabIndex = 17;
             // 
             // label8
@@ -676,6 +676,7 @@
             this.dataGridViewSalesLineItemDisplay.AllowUserToResizeRows = false;
             this.dataGridViewSalesLineItemDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewSalesLineItemDisplay.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridViewSalesLineItemDisplay.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewSalesLineItemDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewSalesLineItemDisplay.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -698,7 +699,7 @@
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewSalesLineItemDisplay.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewSalesLineItemDisplay.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridViewSalesLineItemDisplay.Location = new System.Drawing.Point(1026, 160);
+            this.dataGridViewSalesLineItemDisplay.Location = new System.Drawing.Point(971, 160);
             this.dataGridViewSalesLineItemDisplay.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewSalesLineItemDisplay.Name = "dataGridViewSalesLineItemDisplay";
             this.dataGridViewSalesLineItemDisplay.ReadOnly = true;
@@ -715,7 +716,7 @@
             this.dataGridViewSalesLineItemDisplay.RowTemplate.ReadOnly = true;
             this.dataGridViewSalesLineItemDisplay.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewSalesLineItemDisplay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewSalesLineItemDisplay.Size = new System.Drawing.Size(341, 429);
+            this.dataGridViewSalesLineItemDisplay.Size = new System.Drawing.Size(396, 429);
             this.dataGridViewSalesLineItemDisplay.TabIndex = 18;
             // 
             // ColumnSalesLineItemQuantity
@@ -765,7 +766,7 @@
             this.textBoxSalesListFilter.Location = new System.Drawing.Point(486, 6);
             this.textBoxSalesListFilter.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSalesListFilter.Name = "textBoxSalesListFilter";
-            this.textBoxSalesListFilter.Size = new System.Drawing.Size(426, 30);
+            this.textBoxSalesListFilter.Size = new System.Drawing.Size(373, 30);
             this.textBoxSalesListFilter.TabIndex = 0;
             this.textBoxSalesListFilter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSalesListFilter_KeyDown);
             // 
@@ -850,7 +851,7 @@
             // textBoxPageNumber
             // 
             this.textBoxPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -872,7 +873,7 @@
             this.buttonAutoRefresh.Location = new System.Drawing.Point(2, 10);
             this.buttonAutoRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAutoRefresh.Name = "buttonAutoRefresh";
-            this.buttonAutoRefresh.Size = new System.Drawing.Size(166, 36);
+            this.buttonAutoRefresh.Size = new System.Drawing.Size(148, 36);
             this.buttonAutoRefresh.TabIndex = 14;
             this.buttonAutoRefresh.TabStop = false;
             this.buttonAutoRefresh.Text = "Start";
@@ -881,7 +882,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.buttonCancel);
             this.panel3.Controls.Add(this.buttonReprint);
             this.panel3.Controls.Add(this.buttonClose);
@@ -907,7 +908,7 @@
             this.comboBoxLockOption.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxLockOption.Font = new System.Drawing.Font("Segoe UI", 9.8F);
             this.comboBoxLockOption.FormattingEnabled = true;
-            this.comboBoxLockOption.Location = new System.Drawing.Point(919, 6);
+            this.comboBoxLockOption.Location = new System.Drawing.Point(865, 6);
             this.comboBoxLockOption.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxLockOption.Name = "comboBoxLockOption";
             this.comboBoxLockOption.Size = new System.Drawing.Size(102, 29);
@@ -916,7 +917,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.labelLastChange);
             this.panel4.Controls.Add(this.buttonSalesListPageListFirst);
             this.panel4.Controls.Add(this.buttonSalesListPageListNext);
@@ -941,7 +942,7 @@
             this.labelLastChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.labelLastChange.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.labelLastChange.ForeColor = System.Drawing.Color.Transparent;
-            this.labelLastChange.Location = new System.Drawing.Point(1118, 15);
+            this.labelLastChange.Location = new System.Drawing.Point(1105, 15);
             this.labelLastChange.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLastChange.Name = "labelLastChange";
             this.labelLastChange.Size = new System.Drawing.Size(124, 25);
@@ -955,11 +956,11 @@
             this.textBoxLastChange.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLastChange.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.textBoxLastChange.ForeColor = System.Drawing.Color.Transparent;
-            this.textBoxLastChange.Location = new System.Drawing.Point(1240, 15);
+            this.textBoxLastChange.Location = new System.Drawing.Point(1233, 15);
             this.textBoxLastChange.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxLastChange.Name = "textBoxLastChange";
             this.textBoxLastChange.ReadOnly = true;
-            this.textBoxLastChange.Size = new System.Drawing.Size(118, 25);
+            this.textBoxLastChange.Size = new System.Drawing.Size(130, 25);
             this.textBoxLastChange.TabIndex = 15;
             this.textBoxLastChange.Text = "0.00";
             // 

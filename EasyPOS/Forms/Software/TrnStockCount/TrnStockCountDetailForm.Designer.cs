@@ -241,7 +241,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.Control;
+            this.panel5.BackColor = System.Drawing.Color.LightGray;
             this.panel5.Controls.Add(this.buttonExport);
             this.panel5.Controls.Add(this.buttonImport);
             this.panel5.Controls.Add(this.dataGridViewStockCountLineList);
@@ -514,7 +514,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.buttonStockCountLineListPageListFirst);
             this.panel4.Controls.Add(this.buttonStockCountLineListPageListPrevious);
             this.panel4.Controls.Add(this.buttonStockCountLineListPageListNext);
@@ -596,7 +596,7 @@
             // textBoxStockCountLineListPageNumber
             // 
             this.textBoxStockCountLineListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxStockCountLineListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxStockCountLineListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxStockCountLineListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxStockCountLineListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxStockCountLineListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -627,7 +627,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel3.Padding = new System.Windows.Forms.Padding(10);
             this.panel3.Size = new System.Drawing.Size(1370, 244);
             this.panel3.TabIndex = 0;
             // 

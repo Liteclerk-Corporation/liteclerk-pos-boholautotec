@@ -117,7 +117,7 @@
             // textBoxFileName
             // 
             this.textBoxFileName.Location = new System.Drawing.Point(12, 69);
-            this.textBoxFileName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxFileName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFileName.Name = "textBoxFileName";
             this.textBoxFileName.ReadOnly = true;
             this.textBoxFileName.Size = new System.Drawing.Size(470, 30);
@@ -125,19 +125,21 @@
             // 
             // buttonOpenFile
             // 
+            this.buttonOpenFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
             this.buttonOpenFile.Location = new System.Drawing.Point(491, 69);
-            this.buttonOpenFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonOpenFile.Margin = new System.Windows.Forms.Padding(4);
             this.buttonOpenFile.Name = "buttonOpenFile";
             this.buttonOpenFile.Size = new System.Drawing.Size(88, 32);
             this.buttonOpenFile.TabIndex = 31;
             this.buttonOpenFile.Text = "Open";
-            this.buttonOpenFile.UseVisualStyleBackColor = true;
+            this.buttonOpenFile.UseVisualStyleBackColor = false;
             this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
             // 
             // TrnStockCountLineDetailImportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(590, 110);
             this.Controls.Add(this.buttonOpenFile);
             this.Controls.Add(this.textBoxFileName);
@@ -145,7 +147,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TrnStockCountLineDetailImportForm";

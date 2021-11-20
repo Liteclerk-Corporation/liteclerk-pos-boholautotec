@@ -325,7 +325,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.buttonSearchItemListPageListFirst);
             this.panel3.Controls.Add(this.buttonSearchItemListPageListPrevious);
             this.panel3.Controls.Add(this.buttonSearchItemListPageListNext);
@@ -407,7 +407,7 @@
             // textBoxSearchItemListPageNumber
             // 
             this.textBoxSearchItemListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxSearchItemListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxSearchItemListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxSearchItemListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSearchItemListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxSearchItemListPageNumber.Location = new System.Drawing.Point(188, 14);
@@ -421,6 +421,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.textBoxSearchItemListFilter);
             this.panel2.Controls.Add(this.dataGridViewSearchItemList);

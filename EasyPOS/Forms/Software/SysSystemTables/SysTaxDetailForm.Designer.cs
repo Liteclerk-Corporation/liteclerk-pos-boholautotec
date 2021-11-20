@@ -208,6 +208,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(531, 218);
             this.Controls.Add(this.textBoxCode);
             this.Controls.Add(this.comboBoxAccount);

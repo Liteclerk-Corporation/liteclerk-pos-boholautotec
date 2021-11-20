@@ -132,6 +132,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.dateTimePickerEndDateFilter);
             this.panel4.Controls.Add(this.labelEndDate);
             this.panel4.Controls.Add(this.comboBoxRemittanceNumber);
@@ -213,6 +214,7 @@
             // 
             // listBoxRemittanceReport
             // 
+            this.listBoxRemittanceReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.listBoxRemittanceReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBoxRemittanceReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxRemittanceReport.FormattingEnabled = true;

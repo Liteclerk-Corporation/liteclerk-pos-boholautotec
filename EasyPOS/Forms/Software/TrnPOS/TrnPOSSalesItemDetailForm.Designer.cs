@@ -441,6 +441,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.textBoxItemDescription);
             this.panel2.Controls.Add(this.textBoxSalesLineRemarks);

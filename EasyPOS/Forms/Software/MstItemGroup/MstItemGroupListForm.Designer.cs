@@ -128,6 +128,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.dataGridViewItemGroupList);
             this.panel2.Controls.Add(this.textBoxItemGroupListFilter);
@@ -139,7 +140,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.buttonItemGroupListPageListFirst);
             this.panel3.Controls.Add(this.buttonItemGroupListPageListPrevious);
             this.panel3.Controls.Add(this.buttonItemGroupListPageListNext);
@@ -216,7 +217,7 @@
             // textBoxItemGroupListPageNumber
             // 
             this.textBoxItemGroupListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxItemGroupListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxItemGroupListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxItemGroupListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxItemGroupListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxItemGroupListPageNumber.Location = new System.Drawing.Point(188, 16);

@@ -145,6 +145,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.comboBoxIsLocked);
             this.panel2.Controls.Add(this.comboBoxIsInventory);
             this.panel2.Controls.Add(this.panel3);
@@ -162,7 +163,7 @@
             this.comboBoxIsLocked.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxIsLocked.FormattingEnabled = true;
             this.comboBoxIsLocked.Location = new System.Drawing.Point(1206, 5);
-            this.comboBoxIsLocked.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxIsLocked.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxIsLocked.Name = "comboBoxIsLocked";
             this.comboBoxIsLocked.Size = new System.Drawing.Size(150, 31);
             this.comboBoxIsLocked.TabIndex = 19;
@@ -173,7 +174,7 @@
             this.comboBoxIsInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxIsInventory.FormattingEnabled = true;
             this.comboBoxIsInventory.Location = new System.Drawing.Point(1009, 5);
-            this.comboBoxIsInventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxIsInventory.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxIsInventory.Name = "comboBoxIsInventory";
             this.comboBoxIsInventory.Size = new System.Drawing.Size(190, 31);
             this.comboBoxIsInventory.TabIndex = 18;
@@ -181,7 +182,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.buttonItemListPageListFirst);
             this.panel3.Controls.Add(this.buttonItemListPageListPrevious);
             this.panel3.Controls.Add(this.buttonItemListPageListNext);
@@ -263,7 +264,7 @@
             // textBoxItemListPageNumber
             // 
             this.textBoxItemListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxItemListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxItemListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxItemListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxItemListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxItemListPageNumber.Location = new System.Drawing.Point(188, 16);

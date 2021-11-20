@@ -119,6 +119,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.textBoxCollectionLineOtherInformation);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;

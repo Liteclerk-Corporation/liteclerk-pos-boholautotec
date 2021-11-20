@@ -110,7 +110,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.panel15);
             this.panel2.Controls.Add(this.dataGridViewItemPriceList);
             this.panel2.Controls.Add(this.textBoxItemDescription);
@@ -123,7 +123,7 @@
             // 
             // panel15
             // 
-            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.BackColor = System.Drawing.Color.LightGray;
             this.panel15.Controls.Add(this.buttonItemPriceListPageListFirst);
             this.panel15.Controls.Add(this.buttonItemPriceListPageListPrevious);
             this.panel15.Controls.Add(this.buttonItemPriceListPageListNext);
@@ -197,7 +197,7 @@
             // textBoxItemPriceListPageNumber
             // 
             this.textBoxItemPriceListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxItemPriceListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxItemPriceListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxItemPriceListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxItemPriceListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxItemPriceListPageNumber.Location = new System.Drawing.Point(188, 14);
@@ -285,6 +285,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(675, 376);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

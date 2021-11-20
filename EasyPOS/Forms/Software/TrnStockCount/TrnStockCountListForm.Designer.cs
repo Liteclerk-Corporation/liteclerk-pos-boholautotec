@@ -60,7 +60,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.buttonStockCountListPageListFirst);
             this.panel3.Controls.Add(this.buttonStockCountListPageListPrevious);
             this.panel3.Controls.Add(this.buttonStockCountListPageListNext);
@@ -142,7 +142,7 @@
             // textBoxStockCountListPageNumber
             // 
             this.textBoxStockCountListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxStockCountListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxStockCountListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxStockCountListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxStockCountListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxStockCountListPageNumber.Location = new System.Drawing.Point(188, 16);
@@ -156,6 +156,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.dateTimePickerStockCountListFilter);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.dataGridViewStockCountList);

@@ -80,6 +80,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(62, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
@@ -125,6 +126,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.textBoxStockOutLinePrice);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.textBoxStockOutLineAmount);
@@ -202,6 +204,7 @@
             // 
             // textBoxStockOutLineCost
             // 
+            this.textBoxStockOutLineCost.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxStockOutLineCost.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.textBoxStockOutLineCost.Location = new System.Drawing.Point(118, 116);
             this.textBoxStockOutLineCost.Margin = new System.Windows.Forms.Padding(2);
@@ -243,6 +246,7 @@
             // textBoxStockOutLineQuantity
             // 
             this.textBoxStockOutLineQuantity.AcceptsTab = true;
+            this.textBoxStockOutLineQuantity.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxStockOutLineQuantity.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.textBoxStockOutLineQuantity.HideSelection = false;
             this.textBoxStockOutLineQuantity.Location = new System.Drawing.Point(118, 44);

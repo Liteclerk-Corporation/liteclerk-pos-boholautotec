@@ -327,7 +327,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.buttonSearchItemListPageListFirst);
             this.panel3.Controls.Add(this.buttonSearchItemListPageListPrevious);
             this.panel3.Controls.Add(this.buttonSearchItemListPageListNext);
@@ -423,6 +423,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.textBoxSearchItemListFilter);
             this.panel2.Controls.Add(this.dataGridViewSearchItemList);

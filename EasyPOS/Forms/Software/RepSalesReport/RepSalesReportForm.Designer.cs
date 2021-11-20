@@ -68,6 +68,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.comboBoxItemFilter);
             this.panel4.Controls.Add(this.labelItem);
             this.panel4.Controls.Add(this.comboBoxSupplier);
@@ -269,6 +270,7 @@
             // 
             // listBoxSalesReport
             // 
+            this.listBoxSalesReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.listBoxSalesReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBoxSalesReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxSalesReport.FormattingEnabled = true;

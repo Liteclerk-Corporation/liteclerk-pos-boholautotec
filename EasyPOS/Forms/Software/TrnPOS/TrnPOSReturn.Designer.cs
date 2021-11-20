@@ -149,7 +149,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.textBoxReturnSalesNumber);
             this.panel2.Controls.Add(this.label2);
@@ -199,7 +199,7 @@
             // 
             // panel15
             // 
-            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.BackColor = System.Drawing.Color.LightGray;
             this.panel15.Controls.Add(this.buttonReturnPageListFirst);
             this.panel15.Controls.Add(this.buttonReturnPageListPrevious);
             this.panel15.Controls.Add(this.buttonReturnPageListNext);
@@ -277,7 +277,7 @@
             // textBoxReturnPageNumber
             // 
             this.textBoxReturnPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxReturnPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxReturnPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxReturnPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxReturnPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxReturnPageNumber.Location = new System.Drawing.Point(188, 14);

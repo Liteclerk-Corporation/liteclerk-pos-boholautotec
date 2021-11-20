@@ -59,6 +59,7 @@
             // 
             // buttonAdd
             // 
+            this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonAdd.FlatAppearance.BorderSize = 0;
@@ -133,6 +134,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.dataGridViewDiscountList);
             this.panel2.Controls.Add(this.textBoxDiscountListFilter);
@@ -145,7 +147,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.buttonDiscountListPageListFirst);
             this.panel3.Controls.Add(this.buttonDiscountListPageListPrevious);
             this.panel3.Controls.Add(this.buttonDiscountListPageListNext);
@@ -227,7 +229,7 @@
             // textBoxDiscountListPageNumber
             // 
             this.textBoxDiscountListPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxDiscountListPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxDiscountListPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxDiscountListPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDiscountListPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxDiscountListPageNumber.Location = new System.Drawing.Point(188, 16);

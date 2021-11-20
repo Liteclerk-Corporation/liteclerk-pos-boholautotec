@@ -306,6 +306,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.textBoxFilter);
             this.panel2.Controls.Add(this.dataGridViewSearchItemList);
@@ -321,13 +322,14 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.buttonPageListFirst);
             this.panel3.Controls.Add(this.buttonPageListNext);
             this.panel3.Controls.Add(this.buttonPageListLast);
             this.panel3.Controls.Add(this.buttonPageListPrevious);
             this.panel3.Controls.Add(this.textBoxPageNumber);
             this.panel3.Location = new System.Drawing.Point(12, 445);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1059, 41);
             this.panel3.TabIndex = 2;
@@ -397,7 +399,7 @@
             // textBoxPageNumber
             // 
             this.textBoxPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPageNumber.Location = new System.Drawing.Point(224, 10);
             this.textBoxPageNumber.Margin = new System.Windows.Forms.Padding(2);

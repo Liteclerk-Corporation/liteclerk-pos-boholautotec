@@ -240,7 +240,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.buttonPageListFirst);
             this.panel4.Controls.Add(this.buttonPageListNext);
             this.panel4.Controls.Add(this.buttonPageListLast);
@@ -322,7 +322,7 @@
             // textBoxPageNumber
             // 
             this.textBoxPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxPageNumber.BackColor = System.Drawing.Color.White;
+            this.textBoxPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPageNumber.Location = new System.Drawing.Point(231, 15);
             this.textBoxPageNumber.Margin = new System.Windows.Forms.Padding(2);

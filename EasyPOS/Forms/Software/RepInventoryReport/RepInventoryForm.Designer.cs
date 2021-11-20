@@ -58,6 +58,7 @@
             // 
             // listBoxInventoryReport
             // 
+            this.listBoxInventoryReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.listBoxInventoryReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBoxInventoryReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxInventoryReport.FormattingEnabled = true;
@@ -84,6 +85,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
             this.panel4.Controls.Add(this.checkBoxFilter);
             this.panel4.Controls.Add(this.labelFilter);
             this.panel4.Controls.Add(this.comboBoxCategory);

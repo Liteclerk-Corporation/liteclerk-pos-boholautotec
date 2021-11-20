@@ -1293,6 +1293,7 @@
             // 
             // panelWalkIn
             // 
+            this.panelWalkIn.BackColor = System.Drawing.Color.LightGray;
             this.panelWalkIn.Controls.Add(this.buttonWalkIn);
             this.panelWalkIn.Controls.Add(this.buttonDelivery);
             this.panelWalkIn.Controls.Add(this.textBoxFilter);
@@ -1383,7 +1384,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.BackColor = System.Drawing.Color.LightGray;
             this.panel6.Controls.Add(this.buttonTableGroup4);
             this.panel6.Controls.Add(this.buttonTableGroup5);
             this.panel6.Controls.Add(this.buttonTableGroup6);

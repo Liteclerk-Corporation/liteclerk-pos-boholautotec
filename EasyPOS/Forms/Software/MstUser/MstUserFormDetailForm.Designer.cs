@@ -128,6 +128,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.checkBoxCanReturn);
             this.panel2.Controls.Add(this.checkBoxCanCancel);
             this.panel2.Controls.Add(this.checkBoxCanSplit);
