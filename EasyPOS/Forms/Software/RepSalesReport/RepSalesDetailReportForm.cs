@@ -303,94 +303,112 @@ namespace EasyPOS.Forms.Software.RepSalesReport
         private void buttonXML_Click(object sender, EventArgs e)
         {
             Controllers.RepSalesReportController repSalesSummaryReportController = new Controllers.RepSalesReportController();
-            var salesList = repSalesSummaryReportController.SalesDetailReport(dateStart, dateEnd, filterTerminalId, filterCustomerId, filterSupplierId, filterSalesAgentId, filterItemId);
+            var salesHeaders = repSalesSummaryReportController.XMLSalesSummaryReport(dateStart, dateEnd, filterTerminalId);
 
-
-
-            if (salesList.Any())
+            if (salesHeaders.Any())
             {
-                foreach (var sales in salesList)
-                {
-                    XDocument srcTree = new XDocument(
-                       new XComment("Copyright 1994-2010 SYSPRO Ltd."),
-                       new XComment("This is an example XML instance to demonstrate use of the Sales Order Transaction Posting Business Object"),
-                       new XElement("SalesOrders",
-                           new XElement("Orders",
-                               new XElement("OrderHeader",
-                                   new XElement("CustomerPoNumber", "C1000"),
-                                   new XElement("OrderActionType", "A"),
-                                   new XElement("NewCustomerPoNumber", ""),
-                                   new XElement("Supplier", sales.Supplier),
-                                   new XElement("Customer", sales.CustomerCode),
-                                   new XElement("OrderDate", ""),
-                                   new XElement("InvoiceTerms", "01"),
-                                   new XElement("Currency", "Php"),
-                                   new XElement("ShippingInstrs", ""),
-                                   new XElement("ShippingInstrsCode", ""),
-                                   new XElement("CustomerName", "Store 1"),
-                                   new XElement("ShipAddress1", "This is the alternate delivery address 1"),
-                                   new XElement("ShipAddress2", "This is the alternate delivery address 2"),
-                                   new XElement("ShipAddress3", "This is the alternate delivery address 3"),
-                                   new XElement("ShipAddress3Locality", "This is the delivery address 3 location"),
-                                   new XElement("ShipAddress4", "This is the alternate delivery address 4"),
-                                   new XElement("ShipAddress5", "This is the alternate delivery address 5"),
-                                   new XElement("ShipPostalCode", ""),
-                                   new XElement("ShipGpsLat", ""),
-                                   new XElement("ShipGpsLong", ""),
-                                   new XElement("LanguageCode", ""),
-                                   new XElement("Warehouse", "2"),
-                                   new XElement("SpecialInstrs", ""),
-                                   new XElement("SpecialInstrs", ""),
-                                   new XElement("SalesOrder", ""),
-                                   new XElement("OrderType", "1"),
-                                   new XElement("MultiShipCode", ""),
-                                   new XElement("ShipAddressPerLine", ""),
-                                   new XElement("AlternateReference", ""),
-                                   new XElement("Salesperson", ""),
-                                   new XElement("Branch", ""),
-                                   new XElement("Area", ""),
-                                   new XElement("RequestedShipDate", "")),
-                                       new XElement("OrderDetails",
-                                           new XElement("StockLine",
-                                               new XElement("CustomerPoLine", "1"),
-                                               new XElement("LineActionType", "A"),
-                                               new XElement("LineCancelCode", ""),
-                                               new XElement("StockCode", sales.ItemCode),
-                                               new XElement("StockDescription", sales.ItemDescription),
-                                               new XElement("Warehouse", "2"),
-                                               new XElement("CustomersPartNumber", ""),
-                                               new XElement("OrderQty", sales.Quantity),
-                                               new XElement("OrderUom", sales.Unit),
-                                               new XElement("Price", sales.Price),
-                                               new XElement("PriceUom", sales.Unit),
-                                               new XElement("PriceCode", ""),
-                                               new XElement("AlwaysUsePriceEntered", ""),
-                                               new XElement("Units", ""),
-                                               new XElement("Pieces", ""),
-                                               new XElement("ProductClass", ""),
-                                               new XElement("LineDiscPercent1", "0"),
-                                               new XElement("LineDiscPercent2", "0"),
-                                               new XElement("LineDiscPercent3", "0"),
-                                               new XElement("AlwaysUseDiscountEntered", "N"),
-                                               new XElement("CustRequestDate", "2021-08-31"),
-                                               new XElement("CommissionCode", ""),
-                                               new XElement("LineShipDate", ""),
-                                               new XElement("LineDiscValue", "0"),
-                                               new XElement("LineDiscValFlag", ""),
-                                               new XElement("UserDefined", "USER"))
-                                            )
-                                        )
-                                    )
-                                );
-                    var xmlFilePath = Modules.SysCurrentModule.GetCurrentSettings().XMLFilePath;
-                    string fileName = @"" + xmlFilePath + "\\SalesOrder_" + DateTime.Now.ToString("yyyyMMdd_hhmmss") + ".xml";
-                    if (!File.Exists(fileName))
-                    {
-                        srcTree.Save(fileName);
-                        MessageBox.Show("Generate XML Successful!", "Generate XML", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Close();
+                XDocument salesHeaderXDoc = new XDocument();
+                salesHeaderXDoc.Add(
+                    new XComment("Copyright 1994-2010 SYSPRO Ltd."),
+                    new XComment("This is an example XML instance to demonstrate use of the Sales Order Transaction Posting Business Object")
+                );
 
+                XElement salesOrderXElem = new XElement("Orders");
+                foreach (var salesHeader in salesHeaders)
+                {
+                    XElement salesOrderDetailsXElem = new XElement("OrderDetails");
+
+                    var salesLines = repSalesSummaryReportController.XMLSalesDetailReport(salesHeader.Id);
+
+                    if (salesLines.Any())
+                    {
+                        foreach (var salesLine in salesLines)
+                        {
+                            salesOrderDetailsXElem.Add(
+                                new XElement("StockLine",
+                                    new XElement("CustomerPoLine", "1"),
+                                    new XElement("LineActionType", "A"),
+                                    new XElement("LineCancelCode", ""),
+                                    new XElement("StockCode", salesLine.ItemCode),
+                                    new XElement("StockDescription", salesLine.ItemDescription),
+                                    new XElement("Warehouse", "2"),
+                                    new XElement("CustomersPartNumber", ""),
+                                    new XElement("OrderQty", salesLine.Quantity),
+                                    new XElement("OrderUom", salesLine.Unit),
+                                    new XElement("Price", salesLine.Price),
+                                    new XElement("PriceUom", salesLine.Unit),
+                                    new XElement("PriceCode", ""),
+                                    new XElement("AlwaysUsePriceEntered", ""),
+                                    new XElement("Units", ""),
+                                    new XElement("Pieces", ""),
+                                    new XElement("ProductClass", ""),
+                                    new XElement("LineDiscPercent1", "0"),
+                                    new XElement("LineDiscPercent2", "0"),
+                                    new XElement("LineDiscPercent3", "0"),
+                                    new XElement("AlwaysUseDiscountEntered", "N"),
+                                    new XElement("CustRequestDate", "2021-08-31"),
+                                    new XElement("CommissionCode", ""),
+                                    new XElement("LineShipDate", ""),
+                                    new XElement("LineDiscValue", "0"),
+                                    new XElement("LineDiscValFlag", ""),
+                                    new XElement("UserDefined", "USER")
+                                )
+                            );
+                        }
                     }
+
+                    salesOrderXElem.Add(
+                        new XElement("OrderHeader",
+                            new XElement("CustomerPoNumber", "C1000"),
+                                new XElement("OrderActionType", "A"),
+                                new XElement("NewCustomerPoNumber", ""),
+                                new XElement("Supplier", ""),
+                                new XElement("Customer", salesHeader.CustomerCode),
+                                new XElement("OrderDate", ""),
+                                new XElement("InvoiceTerms", "01"),
+                                new XElement("Currency", "Php"),
+                                new XElement("ShippingInstrs", ""),
+                                new XElement("ShippingInstrsCode", ""),
+                                new XElement("CustomerName", "Store 1"),
+                                new XElement("ShipAddress1", "This is the alternate delivery address 1"),
+                                new XElement("ShipAddress2", "This is the alternate delivery address 2"),
+                                new XElement("ShipAddress3", "This is the alternate delivery address 3"),
+                                new XElement("ShipAddress3Locality", "This is the delivery address 3 location"),
+                                new XElement("ShipAddress4", "This is the alternate delivery address 4"),
+                                new XElement("ShipAddress5", "This is the alternate delivery address 5"),
+                                new XElement("ShipPostalCode", ""),
+                                new XElement("ShipGpsLat", ""),
+                                new XElement("ShipGpsLong", ""),
+                                new XElement("LanguageCode", ""),
+                                new XElement("Warehouse", "2"),
+                                new XElement("SpecialInstrs", ""),
+                                new XElement("SpecialInstrs", ""),
+                                new XElement("SalesOrder", ""),
+                                new XElement("OrderType", "1"),
+                                new XElement("MultiShipCode", ""),
+                                new XElement("ShipAddressPerLine", ""),
+                                new XElement("AlternateReference", ""),
+                                new XElement("Salesperson", ""),
+                                new XElement("Branch", ""),
+                                new XElement("Area", ""),
+                                new XElement("RequestedShipDate", ""),
+                                    salesOrderDetailsXElem
+                        )
+                    );
+                }
+
+                salesHeaderXDoc.Add(
+                    new XElement("SalesOrders", salesOrderXElem)
+                );
+
+                var xmlFilePath = Modules.SysCurrentModule.GetCurrentSettings().XMLFilePath;
+                string fileName = @"" + xmlFilePath + "\\SalesOrder_" + DateTime.Now.ToString("yyyyMMdd_hhmmss") + ".xml";
+                if (!File.Exists(fileName))
+                {
+                    salesHeaderXDoc.Save(fileName);
+                    MessageBox.Show("Generate XML Successful!", "Generate XML", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
+
                 }
             }
         }
