@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RepSalesSummaryReportForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonXML = new System.Windows.Forms.Button();
             this.buttonPrint = new System.Windows.Forms.Button();
             this.buttonGenerateCSV = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -70,7 +69,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
-            this.panel1.Controls.Add(this.buttonXML);
             this.panel1.Controls.Add(this.buttonPrint);
             this.panel1.Controls.Add(this.buttonGenerateCSV);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -83,25 +81,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1370, 62);
             this.panel1.TabIndex = 8;
-            // 
-            // buttonXML
-            // 
-            this.buttonXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonXML.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
-            this.buttonXML.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
-            this.buttonXML.FlatAppearance.BorderSize = 0;
-            this.buttonXML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonXML.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXML.ForeColor = System.Drawing.Color.White;
-            this.buttonXML.Location = new System.Drawing.Point(990, 11);
-            this.buttonXML.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonXML.Name = "buttonXML";
-            this.buttonXML.Size = new System.Drawing.Size(88, 40);
-            this.buttonXML.TabIndex = 27;
-            this.buttonXML.TabStop = false;
-            this.buttonXML.Text = "XML";
-            this.buttonXML.UseVisualStyleBackColor = false;
-            this.buttonXML.Click += new System.EventHandler(this.buttonXML_Click);
             // 
             // buttonPrint
             // 
@@ -522,6 +501,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCashier;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEntryDateTime;
-        private System.Windows.Forms.Button buttonXML;
     }
 }

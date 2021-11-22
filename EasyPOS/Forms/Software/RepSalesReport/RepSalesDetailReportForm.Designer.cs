@@ -73,6 +73,7 @@
             this.textBoxPageNumber = new System.Windows.Forms.TextBox();
             this.folderBrowserDialogGenerateCSV = new System.Windows.Forms.FolderBrowserDialog();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonXML = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSalesDetailReport)).BeginInit();
             this.panel1.SuspendLayout();
@@ -339,6 +340,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
+            this.panel1.Controls.Add(this.buttonXML);
             this.panel1.Controls.Add(this.buttonPrint);
             this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Controls.Add(this.buttonGenerateCSV);
@@ -554,6 +556,25 @@
             this.panel2.Size = new System.Drawing.Size(1370, 652);
             this.panel2.TabIndex = 21;
             // 
+            // buttonXML
+            // 
+            this.buttonXML.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonXML.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
+            this.buttonXML.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonXML.FlatAppearance.BorderSize = 0;
+            this.buttonXML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonXML.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXML.ForeColor = System.Drawing.Color.White;
+            this.buttonXML.Location = new System.Drawing.Point(990, 11);
+            this.buttonXML.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonXML.Name = "buttonXML";
+            this.buttonXML.Size = new System.Drawing.Size(88, 40);
+            this.buttonXML.TabIndex = 28;
+            this.buttonXML.TabStop = false;
+            this.buttonXML.Text = "XML";
+            this.buttonXML.UseVisualStyleBackColor = false;
+            this.buttonXML.Click += new System.EventHandler(this.buttonXML_Click);
+            // 
             // RepSalesDetailReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -619,5 +640,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTax;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTaxRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTaxAmount;
+        private System.Windows.Forms.Button buttonXML;
     }
 }

@@ -66,5 +66,5 @@
   "RestrictCashin": false,
   "DisableLockTender": false,
   "PopupCustomerInfo": false,
-  "XMLFilePath": ""
+  "XMLFilePath": "C:\\EasyPOS"
 }
