@@ -99,7 +99,6 @@
             // 
             // buttonItem
             // 
-            this.buttonItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonItem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonItem.FlatAppearance.BorderSize = 0;
@@ -109,7 +108,7 @@
             this.buttonItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonItem.ImageIndex = 4;
             this.buttonItem.ImageList = this.imageListMenuIcons;
-            this.buttonItem.Location = new System.Drawing.Point(490, 447);
+            this.buttonItem.Location = new System.Drawing.Point(11, 447);
             this.buttonItem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItem.Name = "buttonItem";
             this.buttonItem.Padding = new System.Windows.Forms.Padding(10);
@@ -123,7 +122,6 @@
             // 
             // buttonUser
             // 
-            this.buttonUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonUser.FlatAppearance.BorderSize = 0;
@@ -132,7 +130,7 @@
             this.buttonUser.ForeColor = System.Drawing.Color.White;
             this.buttonUser.ImageIndex = 8;
             this.buttonUser.ImageList = this.imageListMenuIcons;
-            this.buttonUser.Location = new System.Drawing.Point(722, 550);
+            this.buttonUser.Location = new System.Drawing.Point(243, 550);
             this.buttonUser.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUser.Name = "buttonUser";
             this.buttonUser.Padding = new System.Windows.Forms.Padding(10);
@@ -145,7 +143,6 @@
             // 
             // buttonPOS
             // 
-            this.buttonPOS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPOS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
             this.buttonPOS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonPOS.FlatAppearance.BorderSize = 0;
@@ -154,7 +151,7 @@
             this.buttonPOS.ForeColor = System.Drawing.Color.White;
             this.buttonPOS.ImageIndex = 5;
             this.buttonPOS.ImageList = this.imageListMenuIcons;
-            this.buttonPOS.Location = new System.Drawing.Point(490, 11);
+            this.buttonPOS.Location = new System.Drawing.Point(11, 11);
             this.buttonPOS.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPOS.Name = "buttonPOS";
             this.buttonPOS.Padding = new System.Windows.Forms.Padding(10);
@@ -168,7 +165,6 @@
             // 
             // buttonUtilities
             // 
-            this.buttonUtilities.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUtilities.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonUtilities.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonUtilities.FlatAppearance.BorderSize = 0;
@@ -177,7 +173,7 @@
             this.buttonUtilities.ForeColor = System.Drawing.Color.White;
             this.buttonUtilities.ImageKey = "Utilities.png";
             this.buttonUtilities.ImageList = this.imageListMenuIcons;
-            this.buttonUtilities.Location = new System.Drawing.Point(954, 447);
+            this.buttonUtilities.Location = new System.Drawing.Point(475, 447);
             this.buttonUtilities.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUtilities.Name = "buttonUtilities";
             this.buttonUtilities.Padding = new System.Windows.Forms.Padding(10);
@@ -190,7 +186,6 @@
             // 
             // buttonDiscounting
             // 
-            this.buttonDiscounting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDiscounting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonDiscounting.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonDiscounting.FlatAppearance.BorderSize = 0;
@@ -199,7 +194,7 @@
             this.buttonDiscounting.ForeColor = System.Drawing.Color.White;
             this.buttonDiscounting.ImageIndex = 2;
             this.buttonDiscounting.ImageList = this.imageListMenuIcons;
-            this.buttonDiscounting.Location = new System.Drawing.Point(490, 550);
+            this.buttonDiscounting.Location = new System.Drawing.Point(11, 550);
             this.buttonDiscounting.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDiscounting.Name = "buttonDiscounting";
             this.buttonDiscounting.Padding = new System.Windows.Forms.Padding(10);
@@ -212,7 +207,6 @@
             // 
             // buttonSettings
             // 
-            this.buttonSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonSettings.FlatAppearance.BorderSize = 0;
@@ -221,7 +215,7 @@
             this.buttonSettings.ForeColor = System.Drawing.Color.White;
             this.buttonSettings.ImageKey = "Settings.png";
             this.buttonSettings.ImageList = this.imageListMenuIcons;
-            this.buttonSettings.Location = new System.Drawing.Point(954, 550);
+            this.buttonSettings.Location = new System.Drawing.Point(475, 550);
             this.buttonSettings.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSettings.Name = "buttonSettings";
             this.buttonSettings.Padding = new System.Windows.Forms.Padding(10);
@@ -234,7 +228,6 @@
             // 
             // buttonCustomer
             // 
-            this.buttonCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonCustomer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonCustomer.FlatAppearance.BorderSize = 0;
@@ -243,7 +236,7 @@
             this.buttonCustomer.ForeColor = System.Drawing.Color.White;
             this.buttonCustomer.ImageIndex = 0;
             this.buttonCustomer.ImageList = this.imageListMenuIcons;
-            this.buttonCustomer.Location = new System.Drawing.Point(722, 447);
+            this.buttonCustomer.Location = new System.Drawing.Point(243, 447);
             this.buttonCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCustomer.Name = "buttonCustomer";
             this.buttonCustomer.Padding = new System.Windows.Forms.Padding(10);
@@ -256,7 +249,6 @@
             // 
             // buttonPOSReport
             // 
-            this.buttonPOSReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPOSReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonPOSReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonPOSReport.FlatAppearance.BorderSize = 0;
@@ -265,7 +257,7 @@
             this.buttonPOSReport.ForeColor = System.Drawing.Color.White;
             this.buttonPOSReport.ImageKey = "Reports.png";
             this.buttonPOSReport.ImageList = this.imageListMenuIcons;
-            this.buttonPOSReport.Location = new System.Drawing.Point(954, 229);
+            this.buttonPOSReport.Location = new System.Drawing.Point(475, 229);
             this.buttonPOSReport.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPOSReport.Name = "buttonPOSReport";
             this.buttonPOSReport.Padding = new System.Windows.Forms.Padding(10);
@@ -278,7 +270,6 @@
             // 
             // buttonSystemTables
             // 
-            this.buttonSystemTables.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSystemTables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonSystemTables.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonSystemTables.FlatAppearance.BorderSize = 0;
@@ -287,7 +278,7 @@
             this.buttonSystemTables.ForeColor = System.Drawing.Color.White;
             this.buttonSystemTables.ImageIndex = 13;
             this.buttonSystemTables.ImageList = this.imageListMenuIcons;
-            this.buttonSystemTables.Location = new System.Drawing.Point(954, 338);
+            this.buttonSystemTables.Location = new System.Drawing.Point(475, 338);
             this.buttonSystemTables.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSystemTables.Name = "buttonSystemTables";
             this.buttonSystemTables.Padding = new System.Windows.Forms.Padding(10);
@@ -300,7 +291,6 @@
             // 
             // buttonStockCount
             // 
-            this.buttonStockCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonStockCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
             this.buttonStockCount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonStockCount.FlatAppearance.BorderSize = 0;
@@ -309,7 +299,7 @@
             this.buttonStockCount.ForeColor = System.Drawing.Color.White;
             this.buttonStockCount.ImageIndex = 12;
             this.buttonStockCount.ImageList = this.imageListMenuIcons;
-            this.buttonStockCount.Location = new System.Drawing.Point(954, 11);
+            this.buttonStockCount.Location = new System.Drawing.Point(475, 11);
             this.buttonStockCount.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStockCount.Name = "buttonStockCount";
             this.buttonStockCount.Padding = new System.Windows.Forms.Padding(10);
@@ -322,7 +312,6 @@
             // 
             // buttonDisbursement
             // 
-            this.buttonDisbursement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDisbursement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
             this.buttonDisbursement.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonDisbursement.FlatAppearance.BorderSize = 0;
@@ -331,7 +320,7 @@
             this.buttonDisbursement.ForeColor = System.Drawing.Color.White;
             this.buttonDisbursement.ImageIndex = 1;
             this.buttonDisbursement.ImageList = this.imageListMenuIcons;
-            this.buttonDisbursement.Location = new System.Drawing.Point(722, 11);
+            this.buttonDisbursement.Location = new System.Drawing.Point(243, 11);
             this.buttonDisbursement.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDisbursement.Name = "buttonDisbursement";
             this.buttonDisbursement.Padding = new System.Windows.Forms.Padding(10);
@@ -345,7 +334,6 @@
             // 
             // buttonInventory
             // 
-            this.buttonInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonInventory.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonInventory.FlatAppearance.BorderSize = 0;
@@ -354,7 +342,7 @@
             this.buttonInventory.ForeColor = System.Drawing.Color.White;
             this.buttonInventory.ImageIndex = 6;
             this.buttonInventory.ImageList = this.imageListMenuIcons;
-            this.buttonInventory.Location = new System.Drawing.Point(490, 229);
+            this.buttonInventory.Location = new System.Drawing.Point(11, 229);
             this.buttonInventory.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInventory.Name = "buttonInventory";
             this.buttonInventory.Padding = new System.Windows.Forms.Padding(10);
@@ -368,7 +356,6 @@
             // 
             // buttonStockOut
             // 
-            this.buttonStockOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonStockOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
             this.buttonStockOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonStockOut.FlatAppearance.BorderSize = 0;
@@ -377,7 +364,7 @@
             this.buttonStockOut.ForeColor = System.Drawing.Color.White;
             this.buttonStockOut.ImageIndex = 10;
             this.buttonStockOut.ImageList = this.imageListMenuIcons;
-            this.buttonStockOut.Location = new System.Drawing.Point(954, 120);
+            this.buttonStockOut.Location = new System.Drawing.Point(475, 120);
             this.buttonStockOut.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStockOut.Name = "buttonStockOut";
             this.buttonStockOut.Padding = new System.Windows.Forms.Padding(10);
@@ -391,7 +378,6 @@
             // 
             // buttonRemittanceReport
             // 
-            this.buttonRemittanceReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRemittanceReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonRemittanceReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonRemittanceReport.FlatAppearance.BorderSize = 0;
@@ -400,7 +386,7 @@
             this.buttonRemittanceReport.ForeColor = System.Drawing.Color.White;
             this.buttonRemittanceReport.ImageKey = "Reports.png";
             this.buttonRemittanceReport.ImageList = this.imageListMenuIcons;
-            this.buttonRemittanceReport.Location = new System.Drawing.Point(722, 338);
+            this.buttonRemittanceReport.Location = new System.Drawing.Point(243, 338);
             this.buttonRemittanceReport.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRemittanceReport.Name = "buttonRemittanceReport";
             this.buttonRemittanceReport.Padding = new System.Windows.Forms.Padding(10);
@@ -413,7 +399,6 @@
             // 
             // buttonStockIn
             // 
-            this.buttonStockIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonStockIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
             this.buttonStockIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonStockIn.FlatAppearance.BorderSize = 0;
@@ -422,7 +407,7 @@
             this.buttonStockIn.ForeColor = System.Drawing.Color.White;
             this.buttonStockIn.ImageIndex = 9;
             this.buttonStockIn.ImageList = this.imageListMenuIcons;
-            this.buttonStockIn.Location = new System.Drawing.Point(722, 120);
+            this.buttonStockIn.Location = new System.Drawing.Point(243, 120);
             this.buttonStockIn.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStockIn.Name = "buttonStockIn";
             this.buttonStockIn.Padding = new System.Windows.Forms.Padding(10);
@@ -435,7 +420,6 @@
             // 
             // buttonSalesReport
             // 
-            this.buttonSalesReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSalesReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
             this.buttonSalesReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
             this.buttonSalesReport.FlatAppearance.BorderSize = 0;
@@ -444,7 +428,7 @@
             this.buttonSalesReport.ForeColor = System.Drawing.Color.White;
             this.buttonSalesReport.ImageKey = "Reports.png";
             this.buttonSalesReport.ImageList = this.imageListMenuIcons;
-            this.buttonSalesReport.Location = new System.Drawing.Point(722, 229);
+            this.buttonSalesReport.Location = new System.Drawing.Point(243, 229);
             this.buttonSalesReport.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalesReport.Name = "buttonSalesReport";
             this.buttonSalesReport.Padding = new System.Windows.Forms.Padding(10);

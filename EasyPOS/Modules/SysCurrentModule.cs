@@ -110,7 +110,8 @@ namespace EasyPOS.Modules
                 RestrictCashin = currentSettings.RestrictCashin,
                 DisableLockTender = currentSettings.DisableLockTender,
                 PopupCustomerInfo = currentSettings.PopupCustomerInfo,
-                XMLFilePath = currentSettings.XMLFilePath
+                XMLFilePath = currentSettings.XMLFilePath,
+                CustomerCode = currentSettings.CustomerCode
             };
 
             String newJson = new JavaScriptSerializer().Serialize(newEntities);
@@ -194,7 +195,8 @@ namespace EasyPOS.Modules
                 RestrictCashin = objSysCurrentEntity.RestrictCashin,
                 DisableLockTender = objSysCurrentEntity.DisableLockTender,
                 PopupCustomerInfo = objSysCurrentEntity.PopupCustomerInfo,
-                XMLFilePath = objSysCurrentEntity.XMLFilePath
+                XMLFilePath = objSysCurrentEntity.XMLFilePath,
+                CustomerCode = objSysCurrentEntity.CustomerCode
             };
 
             String newJson = new JavaScriptSerializer().Serialize(newSysCurrentEntities);
@@ -279,7 +281,8 @@ namespace EasyPOS.Modules
                 RestrictCashin = currentSettings.RestrictCashin,
                 DisableLockTender = currentSettings.DisableLockTender,
                 PopupCustomerInfo = currentSettings.PopupCustomerInfo,
-                XMLFilePath = currentSettings.XMLFilePath
+                XMLFilePath = currentSettings.XMLFilePath,
+                CustomerCode = currentSettings.CustomerCode
             };
 
             String newJson = new JavaScriptSerializer().Serialize(newEntities);

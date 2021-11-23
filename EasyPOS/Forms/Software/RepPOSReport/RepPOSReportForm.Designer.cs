@@ -107,6 +107,8 @@
             "Z Reading Report",
             "X Reading Report",
             "",
+            "Sales Report (XML)",
+            "",
             "E-Journal Report (ejournal.txt)",
             "E-Sales Report (esales.csv)",
             "",

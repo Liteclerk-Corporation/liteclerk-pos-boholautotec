@@ -15,6 +15,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
         SysSoftwareForm sysSoftwareForm;
         private Modules.SysUserRightsModule sysUserRights;
 
+
         public List<Entities.SysLanguageEntity> sysLanguageEntities = new List<Entities.SysLanguageEntity>();
 
         public RepSalesReportForm(SysSoftwareForm softwareForm)
@@ -840,6 +841,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         buttonView.Text = "View";
 
                         break;
+
                     default:
                         labelStartDate.Visible = false;
                         dateTimePickerStartDate.Visible = false;
@@ -1351,6 +1353,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                                 }
                             }
                             break;
+
 
                         default:
                             MessageBox.Show("Please select a report.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);

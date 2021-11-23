@@ -191,6 +191,8 @@
             this.buttonKitchenPageListLast = new System.Windows.Forms.Button();
             this.textBoxKitchenPageNumber = new System.Windows.Forms.TextBox();
             this.backgroundWorkerEasyfisIntegration = new System.ComponentModel.BackgroundWorker();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBoxCustomerCode = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -453,6 +455,8 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel5.Controls.Add(this.textBoxCustomerCode);
+            this.panel5.Controls.Add(this.label33);
             this.panel5.Controls.Add(this.textBoxXMLFilePath);
             this.panel5.Controls.Add(this.label17);
             this.panel5.Controls.Add(this.checkBoxPopupCustomer);
@@ -2214,6 +2218,27 @@
             this.backgroundWorkerEasyfisIntegration.WorkerSupportsCancellation = true;
             this.backgroundWorkerEasyfisIntegration.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerEasyfisIntegration_DoWork);
             // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(32, 536);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(133, 23);
+            this.label33.TabIndex = 100;
+            this.label33.Text = "Customer Code:";
+            // 
+            // textBoxCustomerCode
+            // 
+            this.textBoxCustomerCode.Enabled = false;
+            this.textBoxCustomerCode.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCustomerCode.Location = new System.Drawing.Point(172, 535);
+            this.textBoxCustomerCode.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxCustomerCode.Name = "textBoxCustomerCode";
+            this.textBoxCustomerCode.Size = new System.Drawing.Size(248, 30);
+            this.textBoxCustomerCode.TabIndex = 101;
+            // 
             // SysSettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -2430,5 +2455,7 @@
         private System.Windows.Forms.CheckBox checkBoxPopupCustomer;
         private System.Windows.Forms.TextBox textBoxXMLFilePath;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBoxCustomerCode;
+        private System.Windows.Forms.Label label33;
     }
 }

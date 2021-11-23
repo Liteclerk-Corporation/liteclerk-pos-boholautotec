@@ -18,6 +18,11 @@ namespace EasyPOS.Forms.Software.RepPOSReport
         public SysSoftwareForm sysSoftwareForm;
         private Modules.SysUserRightsModule sysUserRights;
 
+        public Int32 filterCustomerId;
+        public Int32 filterSalesAgentId;
+        public Int32 filterSupplierId;
+        public Int32 filterItemId;
+
         public RepPOSReportForm(SysSoftwareForm softwareForm)
         {
             InitializeComponent();
@@ -166,6 +171,24 @@ namespace EasyPOS.Forms.Software.RepPOSReport
                         comboBoxTerminal.Focus();
                         break;
 
+                    case "Sales Report (XML)":
+                        labelTerminal.Visible = true;
+                        comboBoxTerminal.Visible = true;
+
+                        dateTimePickerDate.Visible = false;
+                        labelDate.Visible = false;
+
+                        comboBoxUser.Visible = false;
+                        labelUser.Visible = false;
+
+                        dateTimePickerStartDate.Visible = true;
+                        labelStartDate.Visible = true;
+
+                        dateTimePickerEndDate.Visible = true;
+                        labelEndDate.Visible = true;
+                        comboBoxTerminal.Focus();
+                        break;
+
                     default:
                         labelTerminal.Visible = false;
                         comboBoxTerminal.Visible = false;
@@ -248,6 +271,29 @@ namespace EasyPOS.Forms.Software.RepPOSReport
                                 MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
+                        break;
+
+                    case "Sales Report (XML)":
+                        //case "应收账款":
+                        sysUserRights = new Modules.SysUserRightsModule("RepSalesDetail");
+
+                        if (sysUserRights.GetUserRights() == null)
+                        {
+                            MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            if (sysUserRights.GetUserRights().CanView == true)
+                            {
+                                RepSalesReport.RepSalesDetailReportForm repSalesDetailReportForm = new RepSalesReport.RepSalesDetailReportForm(dateTimePickerStartDate.Value.Date, dateTimePickerEndDate.Value.Date, Convert.ToInt32(comboBoxTerminal.SelectedValue), filterCustomerId, filterSalesAgentId, filterSupplierId, filterItemId);
+                                repSalesDetailReportForm.ShowDialog();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        break;
 
                         break;
                     case "E-Journal Report (ejournal.txt)":

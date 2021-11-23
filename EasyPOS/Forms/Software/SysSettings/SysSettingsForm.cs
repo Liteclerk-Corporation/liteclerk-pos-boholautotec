@@ -549,6 +549,7 @@ namespace EasyPOS.Forms.Software.SysSettings
                 checkBoxDisableLockTender.Checked = Convert.ToBoolean(sysCurrent.DisableLockTender);
                 checkBoxPopupCustomer.Checked = Convert.ToBoolean(sysCurrent.PopupCustomerInfo);
                 textBoxXMLFilePath.Text = sysCurrent.XMLFilePath;
+                textBoxCustomerCode.Text = sysCurrent.CustomerCode;
             }
         }
 
@@ -636,7 +637,9 @@ namespace EasyPOS.Forms.Software.SysSettings
                 RestrictCashin = checkBoxRestrictCashin.Checked,
                 DisableLockTender = checkBoxDisableLockTender.Checked,
                 PopupCustomerInfo = checkBoxPopupCustomer.Checked,
-                XMLFilePath = textBoxXMLFilePath.Text
+                XMLFilePath = textBoxXMLFilePath.Text,
+                CustomerCode = textBoxCustomerCode.Text
+                
             };
 
             String[] saveSysCurrent = sysSettingsController.UpdateSysCurrent(sysCurrentEntity);
@@ -705,6 +708,7 @@ namespace EasyPOS.Forms.Software.SysSettings
                 checkBoxDisableLockTender.Enabled = false;
                 checkBoxPopupCustomer.Enabled = false;
                 textBoxXMLFilePath.Enabled = false;
+                textBoxCustomerCode.Enabled = false;
             }
             else
             {
@@ -798,6 +802,7 @@ namespace EasyPOS.Forms.Software.SysSettings
                 checkBoxDisableLockTender.Enabled = true;
                 checkBoxPopupCustomer.Enabled = true;
                 textBoxXMLFilePath.Enabled = true;
+                textBoxCustomerCode.Enabled = true;
             }
         }
 

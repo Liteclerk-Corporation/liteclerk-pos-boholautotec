@@ -305,6 +305,8 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             Controllers.IntCloudSettingsController intCloudSettingsController = new Controllers.IntCloudSettingsController();
             var cloudSettings = intCloudSettingsController.DetailCloudSettings();
 
+            var customerCode = Modules.SysCurrentModule.GetCurrentSettings().CustomerCode;
+
             Controllers.RepSalesReportController repSalesSummaryReportController = new Controllers.RepSalesReportController();
             var salesHeaders = repSalesSummaryReportController.XMLSalesSummaryReport(dateStart, dateEnd, filterTerminalId);
             
@@ -337,7 +339,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                                     new XElement("Warehouse", cloudSettings.BranchCode),
                                     new XElement("CustomersPartNumber", ""),
                                     new XElement("OrderQty", salesLine.Quantity),
-                                    new XElement("OrderUom", salesLine.Unit),
+                                    new XElement("OrderUom", ""),
                                     new XElement("Price", salesLine.Price),
                                     new XElement("PriceUom", salesLine.Unit),
                                     new XElement("PriceCode", ""),
@@ -366,7 +368,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                                 new XElement("OrderActionType", "A"),
                                 new XElement("NewCustomerPoNumber", ""),
                                 new XElement("Supplier", salesLines.FirstOrDefault().Supplier),
-                                new XElement("Customer", salesHeader.CustomerCode),
+                                new XElement("Customer", customerCode),
                                 new XElement("OrderDate", ""),
                                 new XElement("InvoiceTerms", "01"),
                                 new XElement("Currency", "Php"),

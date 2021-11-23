@@ -354,6 +354,7 @@
             this.label7.Size = new System.Drawing.Size(80, 23);
             this.label7.TabIndex = 13;
             this.label7.Text = "Remarks:";
+            this.label7.Visible = false;
             // 
             // labelRemarks
             // 
@@ -367,6 +368,7 @@
             this.labelRemarks.Size = new System.Drawing.Size(79, 23);
             this.labelRemarks.TabIndex = 14;
             this.labelRemarks.Text = "Remarks";
+            this.labelRemarks.Visible = false;
             // 
             // label2
             // 
@@ -379,6 +381,7 @@
             this.label2.Size = new System.Drawing.Size(54, 23);
             this.label2.TabIndex = 11;
             this.label2.Text = "Code:";
+            this.label2.Visible = false;
             // 
             // labelCustomerCode
             // 
@@ -391,6 +394,7 @@
             this.labelCustomerCode.Size = new System.Drawing.Size(110, 23);
             this.labelCustomerCode.TabIndex = 12;
             this.labelCustomerCode.Text = "0000000000";
+            this.labelCustomerCode.Visible = false;
             // 
             // label6
             // 
@@ -403,6 +407,7 @@
             this.label6.Size = new System.Drawing.Size(89, 23);
             this.label6.TabIndex = 9;
             this.label6.Text = "Customer:";
+            this.label6.Visible = false;
             // 
             // labelCustomer
             // 
@@ -415,6 +420,7 @@
             this.labelCustomer.Size = new System.Drawing.Size(139, 23);
             this.labelCustomer.TabIndex = 10;
             this.labelCustomer.Text = "Customer Name";
+            this.labelCustomer.Visible = false;
             // 
             // label4
             // 
@@ -427,6 +433,7 @@
             this.label4.Size = new System.Drawing.Size(99, 23);
             this.label4.TabIndex = 7;
             this.label4.Text = "Order Date:";
+            this.label4.Visible = false;
             // 
             // labelInvoiceDate
             // 
@@ -439,6 +446,7 @@
             this.labelInvoiceDate.Size = new System.Drawing.Size(116, 23);
             this.labelInvoiceDate.TabIndex = 8;
             this.labelInvoiceDate.Text = "MM/dd/yyyy";
+            this.labelInvoiceDate.Visible = false;
             // 
             // label3
             // 
@@ -451,6 +459,7 @@
             this.label3.Size = new System.Drawing.Size(90, 23);
             this.label3.TabIndex = 5;
             this.label3.Text = "Order No.:";
+            this.label3.Visible = false;
             // 
             // labelInvoiceNumber
             // 
@@ -463,6 +472,7 @@
             this.labelInvoiceNumber.Size = new System.Drawing.Size(110, 23);
             this.labelInvoiceNumber.TabIndex = 6;
             this.labelInvoiceNumber.Text = "0000000000";
+            this.labelInvoiceNumber.Visible = false;
             // 
             // dataGridViewSalesLineList
             // 
