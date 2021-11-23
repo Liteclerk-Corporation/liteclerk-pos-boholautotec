@@ -302,9 +302,12 @@ namespace EasyPOS.Forms.Software.RepSalesReport
 
         private void buttonXML_Click(object sender, EventArgs e)
         {
+            Controllers.IntCloudSettingsController intCloudSettingsController = new Controllers.IntCloudSettingsController();
+            var cloudSettings = intCloudSettingsController.DetailCloudSettings();
+
             Controllers.RepSalesReportController repSalesSummaryReportController = new Controllers.RepSalesReportController();
             var salesHeaders = repSalesSummaryReportController.XMLSalesSummaryReport(dateStart, dateEnd, filterTerminalId);
-
+            
             if (salesHeaders.Any())
             {
                 XDocument salesHeaderXDoc = new XDocument();
@@ -331,7 +334,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                                     new XElement("LineCancelCode", ""),
                                     new XElement("StockCode", salesLine.ItemCode),
                                     new XElement("StockDescription", salesLine.ItemDescription),
-                                    new XElement("Warehouse", "2"),
+                                    new XElement("Warehouse", cloudSettings.BranchCode),
                                     new XElement("CustomersPartNumber", ""),
                                     new XElement("OrderQty", salesLine.Quantity),
                                     new XElement("OrderUom", salesLine.Unit),
@@ -362,14 +365,14 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                             new XElement("CustomerPoNumber", "C1000"),
                                 new XElement("OrderActionType", "A"),
                                 new XElement("NewCustomerPoNumber", ""),
-                                new XElement("Supplier", ""),
+                                new XElement("Supplier", salesLines.FirstOrDefault().Supplier),
                                 new XElement("Customer", salesHeader.CustomerCode),
                                 new XElement("OrderDate", ""),
                                 new XElement("InvoiceTerms", "01"),
                                 new XElement("Currency", "Php"),
                                 new XElement("ShippingInstrs", ""),
                                 new XElement("ShippingInstrsCode", ""),
-                                new XElement("CustomerName", "Store 1"),
+                                new XElement("CustomerName", salesLines.FirstOrDefault().Customer),
                                 new XElement("ShipAddress1", "This is the alternate delivery address 1"),
                                 new XElement("ShipAddress2", "This is the alternate delivery address 2"),
                                 new XElement("ShipAddress3", "This is the alternate delivery address 3"),
@@ -380,7 +383,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                                 new XElement("ShipGpsLat", ""),
                                 new XElement("ShipGpsLong", ""),
                                 new XElement("LanguageCode", ""),
-                                new XElement("Warehouse", "2"),
+                                new XElement("Warehouse", cloudSettings.BranchCode),
                                 new XElement("SpecialInstrs", ""),
                                 new XElement("SpecialInstrs", ""),
                                 new XElement("SalesOrder", ""),
@@ -388,7 +391,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                                 new XElement("MultiShipCode", ""),
                                 new XElement("ShipAddressPerLine", ""),
                                 new XElement("AlternateReference", ""),
-                                new XElement("Salesperson", ""),
+                                new XElement("Salesperson", salesHeader.SalesAgent),
                                 new XElement("Branch", ""),
                                 new XElement("Area", ""),
                                 new XElement("RequestedShipDate", ""),
