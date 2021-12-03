@@ -1820,6 +1820,7 @@ namespace EasyPOS.Controllers
 
                     var updateSales = sales.FirstOrDefault();
                     updateSales.TableId = tableId;
+                    updateSales.MstTable.TableCode = tableCode;
                     updateSales.UpdateUserId = Convert.ToInt32(Modules.SysCurrentModule.GetCurrentSettings().CurrentUserId);
                     updateSales.UpdateDateTime = DateTime.Now;
                     db.SubmitChanges();

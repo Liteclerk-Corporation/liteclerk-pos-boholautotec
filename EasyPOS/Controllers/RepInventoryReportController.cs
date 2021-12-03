@@ -13,9 +13,9 @@ namespace EasyPOS.Controllers
         // ============
         public Data.easyposdbDataContext db = new Data.easyposdbDataContext(Modules.SysConnectionStringModule.GetConnectionString());
 
-        // ======================
+        // ==================
         // Dropdown List Item
-        // ======================
+        // ==================
         public List<Entities.MstItemEntity> DropdownListItem()
         {
             var items = from d in db.MstItems
@@ -30,9 +30,9 @@ namespace EasyPOS.Controllers
 
             return items.OrderBy(d => d.ItemDescription).ToList();
         }
-        // ======================
+        // ===========================
         // Dropdown List Item Category
-        // ======================
+        // ===========================
         public List<Entities.MstItemEntity> DropdownListItemCategory()
         {
             var items = from d in db.MstItems
