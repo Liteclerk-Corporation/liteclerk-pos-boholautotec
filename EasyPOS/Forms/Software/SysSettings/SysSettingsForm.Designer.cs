@@ -49,6 +49,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.textBoxCustomerCode = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
             this.textBoxXMLFilePath = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.checkBoxPopupCustomer = new System.Windows.Forms.CheckBox();
@@ -191,8 +193,6 @@
             this.buttonKitchenPageListLast = new System.Windows.Forms.Button();
             this.textBoxKitchenPageNumber = new System.Windows.Forms.TextBox();
             this.backgroundWorkerEasyfisIntegration = new System.ComponentModel.BackgroundWorker();
-            this.label33 = new System.Windows.Forms.Label();
-            this.textBoxCustomerCode = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -514,6 +514,27 @@
             this.panel5.Size = new System.Drawing.Size(1370, 594);
             this.panel5.TabIndex = 34;
             // 
+            // textBoxCustomerCode
+            // 
+            this.textBoxCustomerCode.Enabled = false;
+            this.textBoxCustomerCode.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCustomerCode.Location = new System.Drawing.Point(172, 535);
+            this.textBoxCustomerCode.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxCustomerCode.Name = "textBoxCustomerCode";
+            this.textBoxCustomerCode.Size = new System.Drawing.Size(248, 30);
+            this.textBoxCustomerCode.TabIndex = 101;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(32, 536);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(133, 23);
+            this.label33.TabIndex = 100;
+            this.label33.Text = "Customer Code:";
+            // 
             // textBoxXMLFilePath
             // 
             this.textBoxXMLFilePath.Enabled = false;
@@ -556,9 +577,9 @@
             this.checkBoxDisableLockTender.Location = new System.Drawing.Point(1092, 109);
             this.checkBoxDisableLockTender.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDisableLockTender.Name = "checkBoxDisableLockTender";
-            this.checkBoxDisableLockTender.Size = new System.Drawing.Size(222, 27);
+            this.checkBoxDisableLockTender.Size = new System.Drawing.Size(207, 27);
             this.checkBoxDisableLockTender.TabIndex = 97;
-            this.checkBoxDisableLockTender.Text = "Disable Lock after Tender";
+            this.checkBoxDisableLockTender.Text = "Disable Tender on Lock";
             this.checkBoxDisableLockTender.UseVisualStyleBackColor = true;
             // 
             // comboBoxLanguage
@@ -2217,27 +2238,6 @@
             this.backgroundWorkerEasyfisIntegration.WorkerReportsProgress = true;
             this.backgroundWorkerEasyfisIntegration.WorkerSupportsCancellation = true;
             this.backgroundWorkerEasyfisIntegration.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerEasyfisIntegration_DoWork);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(32, 536);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(133, 23);
-            this.label33.TabIndex = 100;
-            this.label33.Text = "Customer Code:";
-            // 
-            // textBoxCustomerCode
-            // 
-            this.textBoxCustomerCode.Enabled = false;
-            this.textBoxCustomerCode.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerCode.Location = new System.Drawing.Point(172, 535);
-            this.textBoxCustomerCode.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxCustomerCode.Name = "textBoxCustomerCode";
-            this.textBoxCustomerCode.Size = new System.Drawing.Size(248, 30);
-            this.textBoxCustomerCode.TabIndex = 101;
             // 
             // SysSettingsForm
             // 
