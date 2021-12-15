@@ -44,6 +44,10 @@ namespace EasyPOS.Forms.Software.TrnPOS
         {
             InitializeComponent();
 
+            //var logoFilePath = Modules.SysCurrentModule.GetCurrentSettings().LogoPath;
+            pictureBoxPOSTouch.Image = Image.FromFile(@"C:\\Liteclerk_POS\\LITECLERK.png");
+            pictureBoxPOSTouch.SizeMode = PictureBoxSizeMode.StretchImage;
+
             String currentDate = DateTime.Today.ToShortDateString() + "\t\t";
             if (Modules.SysCurrentModule.GetCurrentSettings().IsLoginDate == true)
             {
@@ -196,8 +200,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
                         }
                         else
                         {
-                            tableButtons[i].BackColor = SystemColors.Control;
-                            tableButtons[i].ForeColor = Color.Black;
+                            tableButtons[i].BackColor = SystemColors.GrayText;
+                            tableButtons[i].ForeColor = Color.White;
                         }
 
                         tableButtons[i].Text = listTablePage[i].TableCode;
