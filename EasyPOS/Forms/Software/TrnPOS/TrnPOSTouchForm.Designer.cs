@@ -117,25 +117,6 @@
             this.tabPageBilledOutColumnSpace = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageCollected = new System.Windows.Forms.TabPage();
             this.dataGridViewCollectedSalesList = new System.Windows.Forms.DataGridView();
-            this.tabPageCollectedColumnEdit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.tabPageCollectedColumnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.tabPageCollectedColumnTable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageCollectedColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageCollectedColumnTerminal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageCollectedColumnSalesDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageCollectedColumnSalesNumber = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.tabPageCollectedColumnManualSalesNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageCollectedColumnCollectionNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageCollectedColumnCustomerCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageCollectedColumnCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageCollectedColumnSalesAgent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageCollectedColumnIsLocked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.tabPageCollectedColumnIsTendered = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.tabPageCollectedColumnIsCancelled = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.tabPageCollectedColumnRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageCollectedColumnDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageCollectedColumnAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageCollectedColumnSpace = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxTotalAmount = new System.Windows.Forms.TextBox();
             this.buttonTenderAll = new System.Windows.Forms.Button();
             this.buttonWalkIn = new System.Windows.Forms.Button();
@@ -184,6 +165,25 @@
             this.buttonTableGroupPageNext = new System.Windows.Forms.Button();
             this.buttonTablePrevious = new System.Windows.Forms.Button();
             this.buttonTableGroupPagePrevious = new System.Windows.Forms.Button();
+            this.tabPageCollectedColumnEdit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tabPageCollectedColumnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tabPageCollectedColumnTable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageCollectedColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageCollectedColumnTerminal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageCollectedColumnSalesDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageCollectedColumnSalesNumber = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.tabPageCollectedColumnManualSalesNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageCollectedColumnCollectionNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageCollectedColumnCustomerCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageCollectedColumnCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageCollectedColumnSalesAgent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageCollectedColumnIsLocked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tabPageCollectedColumnIsTendered = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tabPageCollectedColumnIsCancelled = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tabPageCollectedColumnRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageCollectedColumnDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageCollectedColumnAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageCollectedColumnSpace = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel7.SuspendLayout();
@@ -1063,204 +1063,6 @@
             this.dataGridViewCollectedSalesList.TabIndex = 10;
             this.dataGridViewCollectedSalesList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCollectedSalesList_CellClick);
             // 
-            // tabPageCollectedColumnEdit
-            // 
-            this.tabPageCollectedColumnEdit.DataPropertyName = "ColumnEdit";
-            this.tabPageCollectedColumnEdit.HeaderText = "Edit";
-            this.tabPageCollectedColumnEdit.MinimumWidth = 6;
-            this.tabPageCollectedColumnEdit.Name = "tabPageCollectedColumnEdit";
-            this.tabPageCollectedColumnEdit.ReadOnly = true;
-            this.tabPageCollectedColumnEdit.Visible = false;
-            this.tabPageCollectedColumnEdit.Width = 125;
-            // 
-            // tabPageCollectedColumnDelete
-            // 
-            this.tabPageCollectedColumnDelete.DataPropertyName = "ColumnDelete";
-            this.tabPageCollectedColumnDelete.HeaderText = "Delete";
-            this.tabPageCollectedColumnDelete.MinimumWidth = 6;
-            this.tabPageCollectedColumnDelete.Name = "tabPageCollectedColumnDelete";
-            this.tabPageCollectedColumnDelete.ReadOnly = true;
-            this.tabPageCollectedColumnDelete.Visible = false;
-            this.tabPageCollectedColumnDelete.Width = 125;
-            // 
-            // tabPageCollectedColumnTable
-            // 
-            this.tabPageCollectedColumnTable.DataPropertyName = "ColumnTable";
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageCollectedColumnTable.DefaultCellStyle = dataGridViewCellStyle21;
-            this.tabPageCollectedColumnTable.HeaderText = "Table";
-            this.tabPageCollectedColumnTable.MinimumWidth = 6;
-            this.tabPageCollectedColumnTable.Name = "tabPageCollectedColumnTable";
-            this.tabPageCollectedColumnTable.ReadOnly = true;
-            this.tabPageCollectedColumnTable.Width = 125;
-            // 
-            // tabPageCollectedColumnId
-            // 
-            this.tabPageCollectedColumnId.DataPropertyName = "ColumnId";
-            this.tabPageCollectedColumnId.HeaderText = "Id";
-            this.tabPageCollectedColumnId.MinimumWidth = 6;
-            this.tabPageCollectedColumnId.Name = "tabPageCollectedColumnId";
-            this.tabPageCollectedColumnId.ReadOnly = true;
-            this.tabPageCollectedColumnId.Visible = false;
-            this.tabPageCollectedColumnId.Width = 125;
-            // 
-            // tabPageCollectedColumnTerminal
-            // 
-            this.tabPageCollectedColumnTerminal.DataPropertyName = "ColumnTerminal";
-            this.tabPageCollectedColumnTerminal.HeaderText = "Terminal";
-            this.tabPageCollectedColumnTerminal.MinimumWidth = 6;
-            this.tabPageCollectedColumnTerminal.Name = "tabPageCollectedColumnTerminal";
-            this.tabPageCollectedColumnTerminal.ReadOnly = true;
-            this.tabPageCollectedColumnTerminal.Visible = false;
-            this.tabPageCollectedColumnTerminal.Width = 125;
-            // 
-            // tabPageCollectedColumnSalesDate
-            // 
-            this.tabPageCollectedColumnSalesDate.DataPropertyName = "ColumnSalesDate";
-            this.tabPageCollectedColumnSalesDate.HeaderText = "SalesDate";
-            this.tabPageCollectedColumnSalesDate.MinimumWidth = 6;
-            this.tabPageCollectedColumnSalesDate.Name = "tabPageCollectedColumnSalesDate";
-            this.tabPageCollectedColumnSalesDate.ReadOnly = true;
-            this.tabPageCollectedColumnSalesDate.Visible = false;
-            this.tabPageCollectedColumnSalesDate.Width = 125;
-            // 
-            // tabPageCollectedColumnSalesNumber
-            // 
-            this.tabPageCollectedColumnSalesNumber.ActiveLinkColor = System.Drawing.Color.Black;
-            this.tabPageCollectedColumnSalesNumber.DataPropertyName = "ColumnSalesNumber";
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageCollectedColumnSalesNumber.DefaultCellStyle = dataGridViewCellStyle22;
-            this.tabPageCollectedColumnSalesNumber.HeaderText = "Order No.";
-            this.tabPageCollectedColumnSalesNumber.LinkColor = System.Drawing.Color.Black;
-            this.tabPageCollectedColumnSalesNumber.MinimumWidth = 6;
-            this.tabPageCollectedColumnSalesNumber.Name = "tabPageCollectedColumnSalesNumber";
-            this.tabPageCollectedColumnSalesNumber.ReadOnly = true;
-            this.tabPageCollectedColumnSalesNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabPageCollectedColumnSalesNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.tabPageCollectedColumnSalesNumber.VisitedLinkColor = System.Drawing.Color.Black;
-            this.tabPageCollectedColumnSalesNumber.Width = 130;
-            // 
-            // tabPageCollectedColumnManualSalesNumber
-            // 
-            this.tabPageCollectedColumnManualSalesNumber.DataPropertyName = "ColumnManualSalesNumber";
-            this.tabPageCollectedColumnManualSalesNumber.HeaderText = "Manual No.";
-            this.tabPageCollectedColumnManualSalesNumber.MinimumWidth = 6;
-            this.tabPageCollectedColumnManualSalesNumber.Name = "tabPageCollectedColumnManualSalesNumber";
-            this.tabPageCollectedColumnManualSalesNumber.ReadOnly = true;
-            this.tabPageCollectedColumnManualSalesNumber.Width = 130;
-            // 
-            // tabPageCollectedColumnCollectionNumber
-            // 
-            this.tabPageCollectedColumnCollectionNumber.DataPropertyName = "ColumnRececiptInvoiceNumber";
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.tabPageCollectedColumnCollectionNumber.DefaultCellStyle = dataGridViewCellStyle23;
-            this.tabPageCollectedColumnCollectionNumber.HeaderText = "Collection No.";
-            this.tabPageCollectedColumnCollectionNumber.MinimumWidth = 6;
-            this.tabPageCollectedColumnCollectionNumber.Name = "tabPageCollectedColumnCollectionNumber";
-            this.tabPageCollectedColumnCollectionNumber.ReadOnly = true;
-            this.tabPageCollectedColumnCollectionNumber.Width = 130;
-            // 
-            // tabPageCollectedColumnCustomerCode
-            // 
-            this.tabPageCollectedColumnCustomerCode.DataPropertyName = "ColumnCustomerCode";
-            this.tabPageCollectedColumnCustomerCode.HeaderText = "Customer Code";
-            this.tabPageCollectedColumnCustomerCode.MinimumWidth = 6;
-            this.tabPageCollectedColumnCustomerCode.Name = "tabPageCollectedColumnCustomerCode";
-            this.tabPageCollectedColumnCustomerCode.ReadOnly = true;
-            this.tabPageCollectedColumnCustomerCode.Visible = false;
-            this.tabPageCollectedColumnCustomerCode.Width = 125;
-            // 
-            // tabPageCollectedColumnCustomer
-            // 
-            this.tabPageCollectedColumnCustomer.DataPropertyName = "ColumnCustomer";
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageCollectedColumnCustomer.DefaultCellStyle = dataGridViewCellStyle24;
-            this.tabPageCollectedColumnCustomer.HeaderText = "Customer";
-            this.tabPageCollectedColumnCustomer.MinimumWidth = 6;
-            this.tabPageCollectedColumnCustomer.Name = "tabPageCollectedColumnCustomer";
-            this.tabPageCollectedColumnCustomer.ReadOnly = true;
-            this.tabPageCollectedColumnCustomer.Width = 125;
-            // 
-            // tabPageCollectedColumnSalesAgent
-            // 
-            this.tabPageCollectedColumnSalesAgent.DataPropertyName = "ColumnSalesAgent";
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageCollectedColumnSalesAgent.DefaultCellStyle = dataGridViewCellStyle25;
-            this.tabPageCollectedColumnSalesAgent.HeaderText = "User";
-            this.tabPageCollectedColumnSalesAgent.MinimumWidth = 6;
-            this.tabPageCollectedColumnSalesAgent.Name = "tabPageCollectedColumnSalesAgent";
-            this.tabPageCollectedColumnSalesAgent.ReadOnly = true;
-            this.tabPageCollectedColumnSalesAgent.Width = 130;
-            // 
-            // tabPageCollectedColumnIsLocked
-            // 
-            this.tabPageCollectedColumnIsLocked.DataPropertyName = "ColumnIsLocked";
-            this.tabPageCollectedColumnIsLocked.HeaderText = "L";
-            this.tabPageCollectedColumnIsLocked.MinimumWidth = 6;
-            this.tabPageCollectedColumnIsLocked.Name = "tabPageCollectedColumnIsLocked";
-            this.tabPageCollectedColumnIsLocked.ReadOnly = true;
-            this.tabPageCollectedColumnIsLocked.Visible = false;
-            this.tabPageCollectedColumnIsLocked.Width = 125;
-            // 
-            // tabPageCollectedColumnIsTendered
-            // 
-            this.tabPageCollectedColumnIsTendered.DataPropertyName = "ColumnIsTendered";
-            this.tabPageCollectedColumnIsTendered.HeaderText = "T";
-            this.tabPageCollectedColumnIsTendered.MinimumWidth = 6;
-            this.tabPageCollectedColumnIsTendered.Name = "tabPageCollectedColumnIsTendered";
-            this.tabPageCollectedColumnIsTendered.ReadOnly = true;
-            this.tabPageCollectedColumnIsTendered.Visible = false;
-            this.tabPageCollectedColumnIsTendered.Width = 125;
-            // 
-            // tabPageCollectedColumnIsCancelled
-            // 
-            this.tabPageCollectedColumnIsCancelled.DataPropertyName = "ColumnIsCancelled";
-            this.tabPageCollectedColumnIsCancelled.HeaderText = "C";
-            this.tabPageCollectedColumnIsCancelled.MinimumWidth = 6;
-            this.tabPageCollectedColumnIsCancelled.Name = "tabPageCollectedColumnIsCancelled";
-            this.tabPageCollectedColumnIsCancelled.ReadOnly = true;
-            this.tabPageCollectedColumnIsCancelled.Width = 50;
-            // 
-            // tabPageCollectedColumnRemarks
-            // 
-            this.tabPageCollectedColumnRemarks.DataPropertyName = "ColumnRemarks";
-            this.tabPageCollectedColumnRemarks.HeaderText = "Remarks";
-            this.tabPageCollectedColumnRemarks.MinimumWidth = 6;
-            this.tabPageCollectedColumnRemarks.Name = "tabPageCollectedColumnRemarks";
-            this.tabPageCollectedColumnRemarks.ReadOnly = true;
-            this.tabPageCollectedColumnRemarks.Width = 200;
-            // 
-            // tabPageCollectedColumnDelivery
-            // 
-            this.tabPageCollectedColumnDelivery.DataPropertyName = "ColumnDelivery";
-            this.tabPageCollectedColumnDelivery.HeaderText = "Delivered By";
-            this.tabPageCollectedColumnDelivery.MinimumWidth = 6;
-            this.tabPageCollectedColumnDelivery.Name = "tabPageCollectedColumnDelivery";
-            this.tabPageCollectedColumnDelivery.ReadOnly = true;
-            this.tabPageCollectedColumnDelivery.Width = 150;
-            // 
-            // tabPageCollectedColumnAmount
-            // 
-            this.tabPageCollectedColumnAmount.DataPropertyName = "ColumnAmount";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageCollectedColumnAmount.DefaultCellStyle = dataGridViewCellStyle26;
-            this.tabPageCollectedColumnAmount.HeaderText = "Amount";
-            this.tabPageCollectedColumnAmount.MinimumWidth = 6;
-            this.tabPageCollectedColumnAmount.Name = "tabPageCollectedColumnAmount";
-            this.tabPageCollectedColumnAmount.ReadOnly = true;
-            this.tabPageCollectedColumnAmount.Width = 120;
-            // 
-            // tabPageCollectedColumnSpace
-            // 
-            this.tabPageCollectedColumnSpace.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tabPageCollectedColumnSpace.DataPropertyName = "ColumnSpace";
-            this.tabPageCollectedColumnSpace.HeaderText = "";
-            this.tabPageCollectedColumnSpace.MinimumWidth = 6;
-            this.tabPageCollectedColumnSpace.Name = "tabPageCollectedColumnSpace";
-            this.tabPageCollectedColumnSpace.ReadOnly = true;
-            this.tabPageCollectedColumnSpace.Visible = false;
-            // 
             // textBoxTotalAmount
             // 
             this.textBoxTotalAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -1979,6 +1781,202 @@
             this.buttonTableGroupPagePrevious.UseVisualStyleBackColor = false;
             this.buttonTableGroupPagePrevious.Click += new System.EventHandler(this.buttonTableGroupPagePrevious_Click);
             // 
+            // tabPageCollectedColumnEdit
+            // 
+            this.tabPageCollectedColumnEdit.DataPropertyName = "ColumnEdit";
+            this.tabPageCollectedColumnEdit.HeaderText = "Edit";
+            this.tabPageCollectedColumnEdit.MinimumWidth = 6;
+            this.tabPageCollectedColumnEdit.Name = "tabPageCollectedColumnEdit";
+            this.tabPageCollectedColumnEdit.ReadOnly = true;
+            this.tabPageCollectedColumnEdit.Visible = false;
+            this.tabPageCollectedColumnEdit.Width = 125;
+            // 
+            // tabPageCollectedColumnDelete
+            // 
+            this.tabPageCollectedColumnDelete.DataPropertyName = "ColumnDelete";
+            this.tabPageCollectedColumnDelete.HeaderText = "Delete";
+            this.tabPageCollectedColumnDelete.MinimumWidth = 6;
+            this.tabPageCollectedColumnDelete.Name = "tabPageCollectedColumnDelete";
+            this.tabPageCollectedColumnDelete.ReadOnly = true;
+            this.tabPageCollectedColumnDelete.Visible = false;
+            this.tabPageCollectedColumnDelete.Width = 125;
+            // 
+            // tabPageCollectedColumnTable
+            // 
+            this.tabPageCollectedColumnTable.DataPropertyName = "ColumnTable";
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageCollectedColumnTable.DefaultCellStyle = dataGridViewCellStyle21;
+            this.tabPageCollectedColumnTable.HeaderText = "Table";
+            this.tabPageCollectedColumnTable.MinimumWidth = 6;
+            this.tabPageCollectedColumnTable.Name = "tabPageCollectedColumnTable";
+            this.tabPageCollectedColumnTable.ReadOnly = true;
+            this.tabPageCollectedColumnTable.Width = 125;
+            // 
+            // tabPageCollectedColumnId
+            // 
+            this.tabPageCollectedColumnId.DataPropertyName = "ColumnId";
+            this.tabPageCollectedColumnId.HeaderText = "Id";
+            this.tabPageCollectedColumnId.MinimumWidth = 6;
+            this.tabPageCollectedColumnId.Name = "tabPageCollectedColumnId";
+            this.tabPageCollectedColumnId.ReadOnly = true;
+            this.tabPageCollectedColumnId.Visible = false;
+            this.tabPageCollectedColumnId.Width = 125;
+            // 
+            // tabPageCollectedColumnTerminal
+            // 
+            this.tabPageCollectedColumnTerminal.DataPropertyName = "ColumnTerminal";
+            this.tabPageCollectedColumnTerminal.HeaderText = "Terminal";
+            this.tabPageCollectedColumnTerminal.MinimumWidth = 6;
+            this.tabPageCollectedColumnTerminal.Name = "tabPageCollectedColumnTerminal";
+            this.tabPageCollectedColumnTerminal.ReadOnly = true;
+            this.tabPageCollectedColumnTerminal.Visible = false;
+            this.tabPageCollectedColumnTerminal.Width = 125;
+            // 
+            // tabPageCollectedColumnSalesDate
+            // 
+            this.tabPageCollectedColumnSalesDate.DataPropertyName = "ColumnSalesDate";
+            this.tabPageCollectedColumnSalesDate.HeaderText = "Time";
+            this.tabPageCollectedColumnSalesDate.MinimumWidth = 6;
+            this.tabPageCollectedColumnSalesDate.Name = "tabPageCollectedColumnSalesDate";
+            this.tabPageCollectedColumnSalesDate.ReadOnly = true;
+            // 
+            // tabPageCollectedColumnSalesNumber
+            // 
+            this.tabPageCollectedColumnSalesNumber.ActiveLinkColor = System.Drawing.Color.Black;
+            this.tabPageCollectedColumnSalesNumber.DataPropertyName = "ColumnSalesNumber";
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageCollectedColumnSalesNumber.DefaultCellStyle = dataGridViewCellStyle22;
+            this.tabPageCollectedColumnSalesNumber.HeaderText = "Order No.";
+            this.tabPageCollectedColumnSalesNumber.LinkColor = System.Drawing.Color.Black;
+            this.tabPageCollectedColumnSalesNumber.MinimumWidth = 6;
+            this.tabPageCollectedColumnSalesNumber.Name = "tabPageCollectedColumnSalesNumber";
+            this.tabPageCollectedColumnSalesNumber.ReadOnly = true;
+            this.tabPageCollectedColumnSalesNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabPageCollectedColumnSalesNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.tabPageCollectedColumnSalesNumber.VisitedLinkColor = System.Drawing.Color.Black;
+            this.tabPageCollectedColumnSalesNumber.Width = 130;
+            // 
+            // tabPageCollectedColumnManualSalesNumber
+            // 
+            this.tabPageCollectedColumnManualSalesNumber.DataPropertyName = "ColumnManualSalesNumber";
+            this.tabPageCollectedColumnManualSalesNumber.HeaderText = "Manual No.";
+            this.tabPageCollectedColumnManualSalesNumber.MinimumWidth = 6;
+            this.tabPageCollectedColumnManualSalesNumber.Name = "tabPageCollectedColumnManualSalesNumber";
+            this.tabPageCollectedColumnManualSalesNumber.ReadOnly = true;
+            this.tabPageCollectedColumnManualSalesNumber.Width = 130;
+            // 
+            // tabPageCollectedColumnCollectionNumber
+            // 
+            this.tabPageCollectedColumnCollectionNumber.DataPropertyName = "ColumnRececiptInvoiceNumber";
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tabPageCollectedColumnCollectionNumber.DefaultCellStyle = dataGridViewCellStyle23;
+            this.tabPageCollectedColumnCollectionNumber.HeaderText = "Collection No.";
+            this.tabPageCollectedColumnCollectionNumber.MinimumWidth = 6;
+            this.tabPageCollectedColumnCollectionNumber.Name = "tabPageCollectedColumnCollectionNumber";
+            this.tabPageCollectedColumnCollectionNumber.ReadOnly = true;
+            this.tabPageCollectedColumnCollectionNumber.Width = 130;
+            // 
+            // tabPageCollectedColumnCustomerCode
+            // 
+            this.tabPageCollectedColumnCustomerCode.DataPropertyName = "ColumnCustomerCode";
+            this.tabPageCollectedColumnCustomerCode.HeaderText = "Customer Code";
+            this.tabPageCollectedColumnCustomerCode.MinimumWidth = 6;
+            this.tabPageCollectedColumnCustomerCode.Name = "tabPageCollectedColumnCustomerCode";
+            this.tabPageCollectedColumnCustomerCode.ReadOnly = true;
+            this.tabPageCollectedColumnCustomerCode.Visible = false;
+            this.tabPageCollectedColumnCustomerCode.Width = 125;
+            // 
+            // tabPageCollectedColumnCustomer
+            // 
+            this.tabPageCollectedColumnCustomer.DataPropertyName = "ColumnCustomer";
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageCollectedColumnCustomer.DefaultCellStyle = dataGridViewCellStyle24;
+            this.tabPageCollectedColumnCustomer.HeaderText = "Customer";
+            this.tabPageCollectedColumnCustomer.MinimumWidth = 6;
+            this.tabPageCollectedColumnCustomer.Name = "tabPageCollectedColumnCustomer";
+            this.tabPageCollectedColumnCustomer.ReadOnly = true;
+            this.tabPageCollectedColumnCustomer.Width = 125;
+            // 
+            // tabPageCollectedColumnSalesAgent
+            // 
+            this.tabPageCollectedColumnSalesAgent.DataPropertyName = "ColumnSalesAgent";
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageCollectedColumnSalesAgent.DefaultCellStyle = dataGridViewCellStyle25;
+            this.tabPageCollectedColumnSalesAgent.HeaderText = "User";
+            this.tabPageCollectedColumnSalesAgent.MinimumWidth = 6;
+            this.tabPageCollectedColumnSalesAgent.Name = "tabPageCollectedColumnSalesAgent";
+            this.tabPageCollectedColumnSalesAgent.ReadOnly = true;
+            this.tabPageCollectedColumnSalesAgent.Width = 130;
+            // 
+            // tabPageCollectedColumnIsLocked
+            // 
+            this.tabPageCollectedColumnIsLocked.DataPropertyName = "ColumnIsLocked";
+            this.tabPageCollectedColumnIsLocked.HeaderText = "L";
+            this.tabPageCollectedColumnIsLocked.MinimumWidth = 6;
+            this.tabPageCollectedColumnIsLocked.Name = "tabPageCollectedColumnIsLocked";
+            this.tabPageCollectedColumnIsLocked.ReadOnly = true;
+            this.tabPageCollectedColumnIsLocked.Visible = false;
+            this.tabPageCollectedColumnIsLocked.Width = 125;
+            // 
+            // tabPageCollectedColumnIsTendered
+            // 
+            this.tabPageCollectedColumnIsTendered.DataPropertyName = "ColumnIsTendered";
+            this.tabPageCollectedColumnIsTendered.HeaderText = "T";
+            this.tabPageCollectedColumnIsTendered.MinimumWidth = 6;
+            this.tabPageCollectedColumnIsTendered.Name = "tabPageCollectedColumnIsTendered";
+            this.tabPageCollectedColumnIsTendered.ReadOnly = true;
+            this.tabPageCollectedColumnIsTendered.Visible = false;
+            this.tabPageCollectedColumnIsTendered.Width = 125;
+            // 
+            // tabPageCollectedColumnIsCancelled
+            // 
+            this.tabPageCollectedColumnIsCancelled.DataPropertyName = "ColumnIsCancelled";
+            this.tabPageCollectedColumnIsCancelled.HeaderText = "C";
+            this.tabPageCollectedColumnIsCancelled.MinimumWidth = 6;
+            this.tabPageCollectedColumnIsCancelled.Name = "tabPageCollectedColumnIsCancelled";
+            this.tabPageCollectedColumnIsCancelled.ReadOnly = true;
+            this.tabPageCollectedColumnIsCancelled.Width = 50;
+            // 
+            // tabPageCollectedColumnRemarks
+            // 
+            this.tabPageCollectedColumnRemarks.DataPropertyName = "ColumnRemarks";
+            this.tabPageCollectedColumnRemarks.HeaderText = "Remarks";
+            this.tabPageCollectedColumnRemarks.MinimumWidth = 6;
+            this.tabPageCollectedColumnRemarks.Name = "tabPageCollectedColumnRemarks";
+            this.tabPageCollectedColumnRemarks.ReadOnly = true;
+            this.tabPageCollectedColumnRemarks.Width = 200;
+            // 
+            // tabPageCollectedColumnDelivery
+            // 
+            this.tabPageCollectedColumnDelivery.DataPropertyName = "ColumnDelivery";
+            this.tabPageCollectedColumnDelivery.HeaderText = "Delivered By";
+            this.tabPageCollectedColumnDelivery.MinimumWidth = 6;
+            this.tabPageCollectedColumnDelivery.Name = "tabPageCollectedColumnDelivery";
+            this.tabPageCollectedColumnDelivery.ReadOnly = true;
+            this.tabPageCollectedColumnDelivery.Width = 150;
+            // 
+            // tabPageCollectedColumnAmount
+            // 
+            this.tabPageCollectedColumnAmount.DataPropertyName = "ColumnAmount";
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageCollectedColumnAmount.DefaultCellStyle = dataGridViewCellStyle26;
+            this.tabPageCollectedColumnAmount.HeaderText = "Amount";
+            this.tabPageCollectedColumnAmount.MinimumWidth = 6;
+            this.tabPageCollectedColumnAmount.Name = "tabPageCollectedColumnAmount";
+            this.tabPageCollectedColumnAmount.ReadOnly = true;
+            this.tabPageCollectedColumnAmount.Width = 120;
+            // 
+            // tabPageCollectedColumnSpace
+            // 
+            this.tabPageCollectedColumnSpace.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tabPageCollectedColumnSpace.DataPropertyName = "ColumnSpace";
+            this.tabPageCollectedColumnSpace.HeaderText = "";
+            this.tabPageCollectedColumnSpace.MinimumWidth = 6;
+            this.tabPageCollectedColumnSpace.Name = "tabPageCollectedColumnSpace";
+            this.tabPageCollectedColumnSpace.ReadOnly = true;
+            this.tabPageCollectedColumnSpace.Visible = false;
+            // 
             // TrnPOSTouchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -2124,6 +2122,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tabPageBilledOutColumnDelivery;
         private System.Windows.Forms.DataGridViewTextBoxColumn tabPageBilledOutColumnAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn tabPageBilledOutColumnSpace;
+        private System.Windows.Forms.PictureBox pictureBoxPOSTouch;
         private System.Windows.Forms.DataGridViewButtonColumn tabPageCollectedColumnEdit;
         private System.Windows.Forms.DataGridViewButtonColumn tabPageCollectedColumnDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn tabPageCollectedColumnTable;
@@ -2143,6 +2142,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tabPageCollectedColumnDelivery;
         private System.Windows.Forms.DataGridViewTextBoxColumn tabPageCollectedColumnAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn tabPageCollectedColumnSpace;
-        private System.Windows.Forms.PictureBox pictureBoxPOSTouch;
     }
 }
