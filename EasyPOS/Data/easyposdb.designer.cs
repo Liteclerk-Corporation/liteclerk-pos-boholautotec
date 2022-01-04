@@ -120,6 +120,9 @@ namespace EasyPOS.Data
     partial void InsertSysLabel(SysLabel instance);
     partial void UpdateSysLabel(SysLabel instance);
     partial void DeleteSysLabel(SysLabel instance);
+    partial void InsertSysReadingPrevAccNetSale(SysReadingPrevAccNetSale instance);
+    partial void UpdateSysReadingPrevAccNetSale(SysReadingPrevAccNetSale instance);
+    partial void DeleteSysReadingPrevAccNetSale(SysReadingPrevAccNetSale instance);
     partial void InsertSysReadingPrintCount(SysReadingPrintCount instance);
     partial void UpdateSysReadingPrintCount(SysReadingPrintCount instance);
     partial void DeleteSysReadingPrintCount(SysReadingPrintCount instance);
@@ -177,7 +180,7 @@ namespace EasyPOS.Data
     #endregion
 		
 		public easyposdbDataContext() : 
-				base(global::EasyPOS.Properties.Settings.Default.easyposConnectionString2, mappingSource)
+				base(global::EasyPOS.Properties.Settings.Default.easyposConnectionString3, mappingSource)
 		{
 			OnCreated();
 		}
@@ -443,6 +446,14 @@ namespace EasyPOS.Data
 			get
 			{
 				return this.GetTable<SysLabel>();
+			}
+		}
+		
+		public System.Data.Linq.Table<SysReadingPrevAccNetSale> SysReadingPrevAccNetSales
+		{
+			get
+			{
+				return this.GetTable<SysReadingPrevAccNetSale>();
 			}
 		}
 		
@@ -2569,7 +2580,7 @@ namespace EasyPOS.Data
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PriceLevel", DbType="NVarChar(255)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PriceLevel", DbType="NVarChar(100)")]
 		public string PriceLevel
 		{
 			get
@@ -13150,6 +13161,116 @@ namespace EasyPOS.Data
 					this._Language = value;
 					this.SendPropertyChanged("Language");
 					this.OnLanguageChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SysReadingPrevAccNetSales")]
+	public partial class SysReadingPrevAccNetSale : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private System.DateTime _ReadingDate;
+		
+		private decimal _AccumulatedNetSales;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnReadingDateChanging(System.DateTime value);
+    partial void OnReadingDateChanged();
+    partial void OnAccumulatedNetSalesChanging(decimal value);
+    partial void OnAccumulatedNetSalesChanged();
+    #endregion
+		
+		public SysReadingPrevAccNetSale()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReadingDate", DbType="DateTime NOT NULL")]
+		public System.DateTime ReadingDate
+		{
+			get
+			{
+				return this._ReadingDate;
+			}
+			set
+			{
+				if ((this._ReadingDate != value))
+				{
+					this.OnReadingDateChanging(value);
+					this.SendPropertyChanging();
+					this._ReadingDate = value;
+					this.SendPropertyChanged("ReadingDate");
+					this.OnReadingDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccumulatedNetSales", DbType="Decimal(18,5) NOT NULL")]
+		public decimal AccumulatedNetSales
+		{
+			get
+			{
+				return this._AccumulatedNetSales;
+			}
+			set
+			{
+				if ((this._AccumulatedNetSales != value))
+				{
+					this.OnAccumulatedNetSalesChanging(value);
+					this.SendPropertyChanging();
+					this._AccumulatedNetSales = value;
+					this.SendPropertyChanged("AccumulatedNetSales");
+					this.OnAccumulatedNetSalesChanged();
 				}
 			}
 		}
