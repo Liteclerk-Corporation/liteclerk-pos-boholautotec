@@ -853,5 +853,36 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 panelWalkIn.Visible = true;
             }
         }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            switch (keyData)
+            {
+                case Keys.F2:
+                    {
+                        if (buttonWalkIn.Enabled == true)
+                        {
+                            buttonWalkIn.PerformClick();
+                        }
+
+                        break;
+                    }
+                case Keys.F3:
+                    {
+                        if (buttonDelivery.Enabled == true)
+                        {
+                            buttonDelivery.PerformClick();
+                        }
+
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }

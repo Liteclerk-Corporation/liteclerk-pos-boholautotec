@@ -39,6 +39,9 @@ namespace EasyPOS.Forms.Software.TrnPOS
         {
             InitializeComponent();
 
+            pictureBoxPOSTouchDetail.Image = Image.FromFile(@"C:\\Liteclerk_POS\\LITECLERK.png");
+            pictureBoxPOSTouchDetail.SizeMode = PictureBoxSizeMode.StretchImage;
+
             sysSoftwareForm = softwareForm;
             trnPOSTouchForm = POSTouchForm;
             trnSalesEntity = salesEntity;
@@ -1246,6 +1249,109 @@ namespace EasyPOS.Forms.Software.TrnPOS
         {
             TrnPOSTouchChangeTableForm trnPOSTouchChangeTableForm = new TrnPOSTouchChangeTableForm(sysSoftwareForm, trnPOSTouchForm, this, trnSalesEntity, Convert.ToDateTime(trnSalesEntity.SalesDate));
             trnPOSTouchChangeTableForm.ShowDialog();
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            switch (keyData)
+            {
+                case Keys.F2:
+                    {
+                        if (buttonSearchItem.Enabled == true)
+                        {
+                            buttonSearchItem.PerformClick();
+                        }
+
+                        break;
+                    }
+                case Keys.F3:
+                    {
+                        if (buttonDownload.Enabled == true)
+                        {
+                            buttonDownload.PerformClick();
+                        }
+
+                        break;
+                    }
+                case Keys.F4:
+                    {
+                        if (buttonPrint.Enabled == true)
+                        {
+                            buttonPrint.PerformClick();
+                        }
+
+                        break;
+                    }
+                case Keys.F5:
+                    {
+                        if (buttonLock.Enabled == true)
+                        {
+                            buttonLock.PerformClick();
+                        }
+
+                        break;
+                    }
+                case Keys.F6:
+                    {
+                        if (buttonUnlock.Enabled == true)
+                        {
+                            buttonUnlock.PerformClick();
+                        }
+
+                        break;
+                    }
+                case Keys.F7:
+                    {
+                        if (buttonReturn.Enabled == true)
+                        {
+                            buttonReturn.PerformClick();
+                        }
+
+                        break;
+                    }
+                case Keys.F8:
+                    {
+                        if (buttonDiscount.Enabled == true)
+                        {
+                            buttonDiscount.PerformClick();
+                        }
+
+                        break;
+                    }
+                case Keys.F9:
+                    {
+                        if (buttonTender.Enabled == true)
+                        {
+                            buttonTender.PerformClick();
+                        }
+
+                        break;
+                    }
+                case Keys.F10:
+                    {
+                        if (buttonOverRide.Enabled == true)
+                        {
+                            buttonOverRide.PerformClick();
+                        }
+
+                        break;
+                    }
+                case Keys.F11:
+                    {
+                        if (buttonChangeTable.Enabled == true)
+                        {
+                            buttonChangeTable.PerformClick();
+                        }
+
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }
