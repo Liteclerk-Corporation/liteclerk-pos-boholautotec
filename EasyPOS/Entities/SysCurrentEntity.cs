@@ -78,5 +78,6 @@ namespace EasyPOS.Entities
         public Boolean PopupCustomerInfo { get; set; }
         public String XMLFilePath { get; set; }
         public String CustomerCode { get; set; }
+        public String LogoFilePath { get; set; }
     }
 }

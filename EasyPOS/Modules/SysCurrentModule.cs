@@ -111,7 +111,8 @@ namespace EasyPOS.Modules
                 DisableLockTender = currentSettings.DisableLockTender,
                 PopupCustomerInfo = currentSettings.PopupCustomerInfo,
                 XMLFilePath = currentSettings.XMLFilePath,
-                CustomerCode = currentSettings.CustomerCode
+                CustomerCode = currentSettings.CustomerCode,
+                LogoFilePath = currentSettings.LogoFilePath
             };
 
             String newJson = new JavaScriptSerializer().Serialize(newEntities);
@@ -196,7 +197,8 @@ namespace EasyPOS.Modules
                 DisableLockTender = objSysCurrentEntity.DisableLockTender,
                 PopupCustomerInfo = objSysCurrentEntity.PopupCustomerInfo,
                 XMLFilePath = objSysCurrentEntity.XMLFilePath,
-                CustomerCode = objSysCurrentEntity.CustomerCode
+                CustomerCode = objSysCurrentEntity.CustomerCode,
+                LogoFilePath = objSysCurrentEntity.LogoFilePath
             };
 
             String newJson = new JavaScriptSerializer().Serialize(newSysCurrentEntities);
@@ -282,7 +284,8 @@ namespace EasyPOS.Modules
                 DisableLockTender = currentSettings.DisableLockTender,
                 PopupCustomerInfo = currentSettings.PopupCustomerInfo,
                 XMLFilePath = currentSettings.XMLFilePath,
-                CustomerCode = currentSettings.CustomerCode
+                CustomerCode = currentSettings.CustomerCode,
+                LogoFilePath = currentSettings.LogoFilePath
             };
 
             String newJson = new JavaScriptSerializer().Serialize(newEntities);

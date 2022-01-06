@@ -39,7 +39,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
         {
             InitializeComponent();
 
-            pictureBoxPOSTouchDetail.Image = Image.FromFile(@"C:\\Liteclerk_POS\\LITECLERK.png");
+            var logoFilePath = Modules.SysCurrentModule.GetCurrentSettings().LogoFilePath;
+            pictureBoxPOSTouchDetail.Image = Image.FromFile(@""+ logoFilePath);
             pictureBoxPOSTouchDetail.SizeMode = PictureBoxSizeMode.StretchImage;
 
             sysSoftwareForm = softwareForm;

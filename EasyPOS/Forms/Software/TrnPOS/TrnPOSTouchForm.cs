@@ -44,8 +44,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
         {
             InitializeComponent();
 
-            //var logoFilePath = Modules.SysCurrentModule.GetCurrentSettings().LogoPath;
-            pictureBoxPOSTouch.Image = Image.FromFile(@"C:\\Liteclerk_POS\\LITECLERK.png");
+            var logoFilePath = Modules.SysCurrentModule.GetCurrentSettings().LogoFilePath;
+            pictureBoxPOSTouch.Image = Image.FromFile(@""+logoFilePath);
             pictureBoxPOSTouch.SizeMode = PictureBoxSizeMode.StretchImage;
 
             String currentDate = DateTime.Today.ToShortDateString() + "\t\t";

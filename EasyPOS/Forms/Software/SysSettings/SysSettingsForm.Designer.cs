@@ -193,6 +193,8 @@
             this.buttonKitchenPageListLast = new System.Windows.Forms.Button();
             this.textBoxKitchenPageNumber = new System.Windows.Forms.TextBox();
             this.backgroundWorkerEasyfisIntegration = new System.ComponentModel.BackgroundWorker();
+            this.textBoxLogoFilePath = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -361,6 +363,8 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.LightGray;
+            this.panel6.Controls.Add(this.label38);
+            this.panel6.Controls.Add(this.textBoxLogoFilePath);
             this.panel6.Controls.Add(this.textBoxCompanyName);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.textBoxAddress);
@@ -2239,6 +2243,27 @@
             this.backgroundWorkerEasyfisIntegration.WorkerSupportsCancellation = true;
             this.backgroundWorkerEasyfisIntegration.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerEasyfisIntegration_DoWork);
             // 
+            // textBoxLogoFilePath
+            // 
+            this.textBoxLogoFilePath.Enabled = false;
+            this.textBoxLogoFilePath.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLogoFilePath.Location = new System.Drawing.Point(156, 182);
+            this.textBoxLogoFilePath.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxLogoFilePath.Name = "textBoxLogoFilePath";
+            this.textBoxLogoFilePath.Size = new System.Drawing.Size(553, 30);
+            this.textBoxLogoFilePath.TabIndex = 5;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(29, 185);
+            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(121, 23);
+            this.label38.TabIndex = 6;
+            this.label38.Text = "Logo File Path:";
+            // 
             // SysSettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -2457,5 +2482,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBoxCustomerCode;
         private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox textBoxLogoFilePath;
     }
 }

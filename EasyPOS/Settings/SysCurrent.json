@@ -67,5 +67,6 @@
   "DisableLockTender": false,
   "PopupCustomerInfo": false,
   "XMLFilePath": "C:\\EasyPOS",
-  "CustomerCode": "STR1"
+  "CustomerCode": "STR1",
+  "LogoFilePath": "C:\\Liteclerk_POS\\LITECLERK.png"
 }

@@ -550,6 +550,7 @@ namespace EasyPOS.Forms.Software.SysSettings
                 checkBoxPopupCustomer.Checked = Convert.ToBoolean(sysCurrent.PopupCustomerInfo);
                 textBoxXMLFilePath.Text = sysCurrent.XMLFilePath;
                 textBoxCustomerCode.Text = sysCurrent.CustomerCode;
+                textBoxLogoFilePath.Text = sysCurrent.LogoFilePath;
             }
         }
 
@@ -638,7 +639,8 @@ namespace EasyPOS.Forms.Software.SysSettings
                 DisableLockTender = checkBoxDisableLockTender.Checked,
                 PopupCustomerInfo = checkBoxPopupCustomer.Checked,
                 XMLFilePath = textBoxXMLFilePath.Text,
-                CustomerCode = textBoxCustomerCode.Text
+                CustomerCode = textBoxCustomerCode.Text,
+                LogoFilePath = textBoxLogoFilePath.Text
                 
             };
 
@@ -709,6 +711,7 @@ namespace EasyPOS.Forms.Software.SysSettings
                 checkBoxPopupCustomer.Enabled = false;
                 textBoxXMLFilePath.Enabled = false;
                 textBoxCustomerCode.Enabled = false;
+                textBoxLogoFilePath.Enabled = false;
             }
             else
             {
@@ -803,6 +806,7 @@ namespace EasyPOS.Forms.Software.SysSettings
                 checkBoxPopupCustomer.Enabled = true;
                 textBoxXMLFilePath.Enabled = true;
                 textBoxCustomerCode.Enabled = true;
+                textBoxLogoFilePath.Enabled = true;
             }
         }
 
