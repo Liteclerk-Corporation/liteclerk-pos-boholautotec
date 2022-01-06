@@ -243,6 +243,7 @@ namespace EasyPOS.Forms.Software.RepPOSReport
                     );
                 }
 
+                Decimal NONVATSalesReturn = 0;
                 Decimal VATSalesReturn = 0;
                 Decimal VATAmountSalesReturn = 0;
                 Decimal VATExemptSalesReturn = 0;
@@ -259,6 +260,10 @@ namespace EasyPOS.Forms.Software.RepPOSReport
 
                 if (salesReturnLinesQuery.Any())
                 {
+                    NONVATSalesReturn = salesReturnLinesQuery.Sum(d =>
+                        d.MstTax.Code == "NONVAT" ? d.Amount : 0
+                    );
+
                     var salesReturnLines = salesReturnLinesQuery.ToArray();
 
                     VATSalesReturn = salesReturnLines.Sum(d =>
@@ -277,7 +282,7 @@ namespace EasyPOS.Forms.Software.RepPOSReport
                         d.MstTax.Code == "EXEMPTVAT" ? ((d.Price * (d.Quantity * -1)) / (1 + (d.MstItem.MstTax1.Rate / 100)) * (d.MstItem.MstTax1.Rate / 100)) : d.TaxAmount
                     ) * -1;
 
-                    totalSalesReturn = (VATSalesReturn + VATExemptSalesReturn);
+                    totalSalesReturn = (VATSalesReturn + VATExemptSalesReturn + NONVATSalesReturn);
                 }
 
                 repXReadingReportEntity.TotalGrossSales = totalGrossSales;
