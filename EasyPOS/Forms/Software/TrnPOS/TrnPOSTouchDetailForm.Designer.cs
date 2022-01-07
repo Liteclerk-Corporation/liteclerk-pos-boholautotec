@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrnPOSTouchDetailForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,6 +72,7 @@
             this.imageListPOSTouchDetail = new System.Windows.Forms.ImageList(this.components);
             this.printDialogSelectPrinter = new System.Windows.Forms.PrintDialog();
             this.panelItems = new System.Windows.Forms.Panel();
+            this.pictureBoxPOSTouchDetail = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.labelLastChange = new System.Windows.Forms.Label();
             this.textBoxLastChange = new System.Windows.Forms.TextBox();
@@ -151,17 +152,16 @@
             this.textBoxBarcode = new System.Windows.Forms.TextBox();
             this.buttonBarcode = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBoxPOSTouchDetail = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panelItems.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPOSTouchDetail)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSalesLineList)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPOSTouchDetail)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -445,6 +445,7 @@
             this.labelTableNumber.Size = new System.Drawing.Size(108, 20);
             this.labelTableNumber.TabIndex = 17;
             this.labelTableNumber.Text = "Table Number";
+            this.labelTableNumber.Visible = false;
             // 
             // label5
             // 
@@ -457,6 +458,7 @@
             this.label5.Size = new System.Drawing.Size(49, 20);
             this.label5.TabIndex = 16;
             this.label5.Text = "Table:";
+            this.label5.Visible = false;
             // 
             // panel5
             // 
@@ -496,6 +498,7 @@
             this.label7.Size = new System.Drawing.Size(48, 20);
             this.label7.TabIndex = 13;
             this.label7.Text = "Code:";
+            this.label7.Visible = false;
             // 
             // labelCustomerCode
             // 
@@ -508,6 +511,7 @@
             this.labelCustomerCode.Size = new System.Drawing.Size(90, 20);
             this.labelCustomerCode.TabIndex = 14;
             this.labelCustomerCode.Text = "000000000";
+            this.labelCustomerCode.Visible = false;
             // 
             // label2
             // 
@@ -520,6 +524,7 @@
             this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "Remarks:";
+            this.label2.Visible = false;
             // 
             // labelRemarks
             // 
@@ -533,6 +538,7 @@
             this.labelRemarks.Size = new System.Drawing.Size(70, 20);
             this.labelRemarks.TabIndex = 12;
             this.labelRemarks.Text = "Remarks";
+            this.labelRemarks.Visible = false;
             // 
             // label6
             // 
@@ -545,6 +551,7 @@
             this.label6.Size = new System.Drawing.Size(79, 20);
             this.label6.TabIndex = 9;
             this.label6.Text = "Customer:";
+            this.label6.Visible = false;
             // 
             // labelCustomer
             // 
@@ -557,6 +564,7 @@
             this.labelCustomer.Size = new System.Drawing.Size(123, 20);
             this.labelCustomer.TabIndex = 10;
             this.labelCustomer.Text = "Customer Name";
+            this.labelCustomer.Visible = false;
             // 
             // label4
             // 
@@ -569,6 +577,7 @@
             this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Order Date:";
+            this.label4.Visible = false;
             // 
             // labelInvoiceDate
             // 
@@ -581,6 +590,7 @@
             this.labelInvoiceDate.Size = new System.Drawing.Size(101, 20);
             this.labelInvoiceDate.TabIndex = 8;
             this.labelInvoiceDate.Text = "MM/dd/yyyy";
+            this.labelInvoiceDate.Visible = false;
             // 
             // label3
             // 
@@ -593,6 +603,7 @@
             this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Order No.:";
+            this.label3.Visible = false;
             // 
             // labelInvoiceNumber
             // 
@@ -605,6 +616,7 @@
             this.labelInvoiceNumber.Size = new System.Drawing.Size(99, 20);
             this.labelInvoiceNumber.TabIndex = 6;
             this.labelInvoiceNumber.Text = "0000000000";
+            this.labelInvoiceNumber.Visible = false;
             // 
             // buttonChangeTable
             // 
@@ -691,6 +703,16 @@
             this.panelItems.Size = new System.Drawing.Size(1225, 489);
             this.panelItems.TabIndex = 23;
             // 
+            // pictureBoxPOSTouchDetail
+            // 
+            this.pictureBoxPOSTouchDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxPOSTouchDetail.Location = new System.Drawing.Point(825, 7);
+            this.pictureBoxPOSTouchDetail.Name = "pictureBoxPOSTouchDetail";
+            this.pictureBoxPOSTouchDetail.Size = new System.Drawing.Size(396, 431);
+            this.pictureBoxPOSTouchDetail.TabIndex = 61;
+            this.pictureBoxPOSTouchDetail.TabStop = false;
+            // 
             // panel8
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -739,7 +761,7 @@
             this.buttonItemGroupItem28.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem28.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem28.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem28.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem28.Location = new System.Drawing.Point(418, 408);
             this.buttonItemGroupItem28.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem28.Name = "buttonItemGroupItem28";
@@ -753,7 +775,7 @@
             this.buttonItemGroupItem29.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem29.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem29.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem29.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem29.Location = new System.Drawing.Point(530, 408);
             this.buttonItemGroupItem29.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem29.Name = "buttonItemGroupItem29";
@@ -767,7 +789,7 @@
             this.buttonItemGroupItem30.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem30.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem30.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem30.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem30.Location = new System.Drawing.Point(642, 408);
             this.buttonItemGroupItem30.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem30.Name = "buttonItemGroupItem30";
@@ -781,7 +803,7 @@
             this.buttonItemGroupItem25.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem25.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem25.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem25.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem25.Location = new System.Drawing.Point(79, 408);
             this.buttonItemGroupItem25.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem25.Name = "buttonItemGroupItem25";
@@ -795,7 +817,7 @@
             this.buttonItemGroupItem26.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem26.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem26.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem26.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem26.Location = new System.Drawing.Point(192, 408);
             this.buttonItemGroupItem26.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem26.Name = "buttonItemGroupItem26";
@@ -809,7 +831,7 @@
             this.buttonItemGroupItem27.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem27.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem27.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem27.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem27.Location = new System.Drawing.Point(305, 408);
             this.buttonItemGroupItem27.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem27.Name = "buttonItemGroupItem27";
@@ -913,7 +935,7 @@
             this.buttonItemGroupItem4.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem4.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem4.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem4.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem4.Location = new System.Drawing.Point(418, 76);
             this.buttonItemGroupItem4.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem4.Name = "buttonItemGroupItem4";
@@ -927,7 +949,7 @@
             this.buttonItemGroupItem5.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem5.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem5.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem5.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem5.Location = new System.Drawing.Point(530, 76);
             this.buttonItemGroupItem5.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem5.Name = "buttonItemGroupItem5";
@@ -941,7 +963,7 @@
             this.buttonItemGroupItem6.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem6.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem6.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem6.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem6.Location = new System.Drawing.Point(642, 76);
             this.buttonItemGroupItem6.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem6.Name = "buttonItemGroupItem6";
@@ -955,7 +977,7 @@
             this.buttonItemGroupItem10.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem10.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem10.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem10.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem10.Location = new System.Drawing.Point(418, 159);
             this.buttonItemGroupItem10.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem10.Name = "buttonItemGroupItem10";
@@ -969,7 +991,7 @@
             this.buttonItemGroupItem11.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem11.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem11.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem11.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem11.Location = new System.Drawing.Point(530, 159);
             this.buttonItemGroupItem11.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem11.Name = "buttonItemGroupItem11";
@@ -983,7 +1005,7 @@
             this.buttonItemGroupItem12.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem12.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem12.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem12.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem12.Location = new System.Drawing.Point(642, 159);
             this.buttonItemGroupItem12.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem12.Name = "buttonItemGroupItem12";
@@ -997,7 +1019,7 @@
             this.buttonItemGroupItem16.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem16.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem16.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem16.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem16.Location = new System.Drawing.Point(418, 242);
             this.buttonItemGroupItem16.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem16.Name = "buttonItemGroupItem16";
@@ -1011,7 +1033,7 @@
             this.buttonItemGroupItem17.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem17.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem17.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem17.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem17.Location = new System.Drawing.Point(530, 242);
             this.buttonItemGroupItem17.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem17.Name = "buttonItemGroupItem17";
@@ -1025,7 +1047,7 @@
             this.buttonItemGroupItem18.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem18.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem18.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem18.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem18.Location = new System.Drawing.Point(642, 242);
             this.buttonItemGroupItem18.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem18.Name = "buttonItemGroupItem18";
@@ -1039,7 +1061,7 @@
             this.buttonItemGroupItem1.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem1.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem1.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem1.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem1.Location = new System.Drawing.Point(79, 76);
             this.buttonItemGroupItem1.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem1.Name = "buttonItemGroupItem1";
@@ -1053,7 +1075,7 @@
             this.buttonItemGroupItem2.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem2.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem2.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem2.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem2.Location = new System.Drawing.Point(192, 76);
             this.buttonItemGroupItem2.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem2.Name = "buttonItemGroupItem2";
@@ -1067,7 +1089,7 @@
             this.buttonItemGroupItem3.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem3.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem3.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem3.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem3.Location = new System.Drawing.Point(305, 76);
             this.buttonItemGroupItem3.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem3.Name = "buttonItemGroupItem3";
@@ -1081,7 +1103,7 @@
             this.buttonItemGroupItem7.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem7.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem7.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem7.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem7.Location = new System.Drawing.Point(79, 159);
             this.buttonItemGroupItem7.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem7.Name = "buttonItemGroupItem7";
@@ -1095,7 +1117,7 @@
             this.buttonItemGroupItem8.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem8.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem8.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem8.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem8.Location = new System.Drawing.Point(192, 159);
             this.buttonItemGroupItem8.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem8.Name = "buttonItemGroupItem8";
@@ -1109,7 +1131,7 @@
             this.buttonItemGroupItem9.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem9.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem9.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem9.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem9.Location = new System.Drawing.Point(305, 159);
             this.buttonItemGroupItem9.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem9.Name = "buttonItemGroupItem9";
@@ -1123,7 +1145,7 @@
             this.buttonItemGroupItem13.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem13.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem13.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem13.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem13.Location = new System.Drawing.Point(79, 242);
             this.buttonItemGroupItem13.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem13.Name = "buttonItemGroupItem13";
@@ -1137,7 +1159,7 @@
             this.buttonItemGroupItem14.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem14.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem14.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem14.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem14.Location = new System.Drawing.Point(192, 242);
             this.buttonItemGroupItem14.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem14.Name = "buttonItemGroupItem14";
@@ -1151,7 +1173,7 @@
             this.buttonItemGroupItem15.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem15.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem15.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem15.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem15.Location = new System.Drawing.Point(305, 242);
             this.buttonItemGroupItem15.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem15.Name = "buttonItemGroupItem15";
@@ -1165,7 +1187,7 @@
             this.buttonItemGroupItem22.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem22.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem22.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem22.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem22.Location = new System.Drawing.Point(418, 325);
             this.buttonItemGroupItem22.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem22.Name = "buttonItemGroupItem22";
@@ -1179,7 +1201,7 @@
             this.buttonItemGroupItem23.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem23.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem23.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem23.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem23.Location = new System.Drawing.Point(530, 325);
             this.buttonItemGroupItem23.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem23.Name = "buttonItemGroupItem23";
@@ -1193,7 +1215,7 @@
             this.buttonItemGroupItem24.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem24.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem24.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem24.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem24.Location = new System.Drawing.Point(642, 325);
             this.buttonItemGroupItem24.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem24.Name = "buttonItemGroupItem24";
@@ -1207,7 +1229,7 @@
             this.buttonItemGroupItem19.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem19.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem19.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem19.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem19.Location = new System.Drawing.Point(79, 325);
             this.buttonItemGroupItem19.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem19.Name = "buttonItemGroupItem19";
@@ -1221,7 +1243,7 @@
             this.buttonItemGroupItem20.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem20.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem20.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem20.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem20.Location = new System.Drawing.Point(192, 325);
             this.buttonItemGroupItem20.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem20.Name = "buttonItemGroupItem20";
@@ -1235,7 +1257,7 @@
             this.buttonItemGroupItem21.FlatAppearance.BorderSize = 0;
             this.buttonItemGroupItem21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemGroupItem21.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.buttonItemGroupItem21.ForeColor = System.Drawing.Color.Black;
+            this.buttonItemGroupItem21.ForeColor = System.Drawing.Color.White;
             this.buttonItemGroupItem21.Location = new System.Drawing.Point(305, 325);
             this.buttonItemGroupItem21.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItemGroupItem21.Name = "buttonItemGroupItem21";
@@ -1331,14 +1353,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewSalesLineList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewSalesLineList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSalesLineList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewSalesLineList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSalesLineList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnSalesLineEdit,
@@ -1444,8 +1466,8 @@
             // 
             // ColumnSalesLineQuantity
             // 
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnSalesLineQuantity.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnSalesLineQuantity.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColumnSalesLineQuantity.HeaderText = "Quantity";
             this.ColumnSalesLineQuantity.MinimumWidth = 6;
             this.ColumnSalesLineQuantity.Name = "ColumnSalesLineQuantity";
@@ -1471,8 +1493,8 @@
             // 
             // ColumnSalesLinePrice
             // 
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnSalesLinePrice.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnSalesLinePrice.DefaultCellStyle = dataGridViewCellStyle3;
             this.ColumnSalesLinePrice.HeaderText = "Price";
             this.ColumnSalesLinePrice.MinimumWidth = 6;
             this.ColumnSalesLinePrice.Name = "ColumnSalesLinePrice";
@@ -1499,8 +1521,8 @@
             // 
             // ColumnSalesLineDiscountRate
             // 
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnSalesLineDiscountRate.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnSalesLineDiscountRate.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColumnSalesLineDiscountRate.HeaderText = "Discount %";
             this.ColumnSalesLineDiscountRate.MinimumWidth = 6;
             this.ColumnSalesLineDiscountRate.Name = "ColumnSalesLineDiscountRate";
@@ -1509,8 +1531,8 @@
             // 
             // ColumnSalesLineDiscountAmount
             // 
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnSalesLineDiscountAmount.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnSalesLineDiscountAmount.DefaultCellStyle = dataGridViewCellStyle5;
             this.ColumnSalesLineDiscountAmount.HeaderText = "Discount";
             this.ColumnSalesLineDiscountAmount.MinimumWidth = 6;
             this.ColumnSalesLineDiscountAmount.Name = "ColumnSalesLineDiscountAmount";
@@ -1519,8 +1541,8 @@
             // 
             // ColumnSalesLineNetPrice
             // 
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnSalesLineNetPrice.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnSalesLineNetPrice.DefaultCellStyle = dataGridViewCellStyle6;
             this.ColumnSalesLineNetPrice.HeaderText = "Net Price";
             this.ColumnSalesLineNetPrice.MinimumWidth = 6;
             this.ColumnSalesLineNetPrice.Name = "ColumnSalesLineNetPrice";
@@ -1529,8 +1551,8 @@
             // 
             // ColumnSalesLineAmount
             // 
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnSalesLineAmount.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnSalesLineAmount.DefaultCellStyle = dataGridViewCellStyle7;
             this.ColumnSalesLineAmount.HeaderText = "Amount";
             this.ColumnSalesLineAmount.MinimumWidth = 6;
             this.ColumnSalesLineAmount.Name = "ColumnSalesLineAmount";
@@ -1557,8 +1579,8 @@
             // 
             // ColumnSalesLineTaxRate
             // 
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnSalesLineTaxRate.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnSalesLineTaxRate.DefaultCellStyle = dataGridViewCellStyle8;
             this.ColumnSalesLineTaxRate.HeaderText = "Tax %";
             this.ColumnSalesLineTaxRate.MinimumWidth = 6;
             this.ColumnSalesLineTaxRate.Name = "ColumnSalesLineTaxRate";
@@ -1567,8 +1589,8 @@
             // 
             // ColumnSalesLineTaxAmount
             // 
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnSalesLineTaxAmount.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnSalesLineTaxAmount.DefaultCellStyle = dataGridViewCellStyle9;
             this.ColumnSalesLineTaxAmount.HeaderText = "Tax";
             this.ColumnSalesLineTaxAmount.MinimumWidth = 6;
             this.ColumnSalesLineTaxAmount.Name = "ColumnSalesLineTaxAmount";
@@ -1719,16 +1741,6 @@
             this.panel4.Size = new System.Drawing.Size(1227, 566);
             this.panel4.TabIndex = 25;
             // 
-            // pictureBoxPOSTouchDetail
-            // 
-            this.pictureBoxPOSTouchDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxPOSTouchDetail.Location = new System.Drawing.Point(825, 7);
-            this.pictureBoxPOSTouchDetail.Name = "pictureBoxPOSTouchDetail";
-            this.pictureBoxPOSTouchDetail.Size = new System.Drawing.Size(396, 431);
-            this.pictureBoxPOSTouchDetail.TabIndex = 61;
-            this.pictureBoxPOSTouchDetail.TabStop = false;
-            // 
             // TrnPOSTouchDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1762,13 +1774,13 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panelItems.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPOSTouchDetail)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSalesLineList)).EndInit();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPOSTouchDetail)).EndInit();
             this.ResumeLayout(false);
 
         }
