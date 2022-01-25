@@ -792,8 +792,8 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         labelTerminal.Visible = false;
                         comboBoxTerminal.Visible = false;
 
-                        labelCustomer.Visible = false;
-                        comboBoxCustomer.Visible = false;
+                        labelCustomer.Visible = true;
+                        comboBoxCustomer.Visible = true;
 
                         labelAgent.Visible = false;
                         comboBoxSalesAgent.Visible = false;
@@ -1322,7 +1322,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                             {
                                 if (sysUserRights.GetUserRights().CanView == true)
                                 {
-                                    RepAccountsReceivableSummaryReportForm repAccountsReceivableSummaryReportForm = new RepAccountsReceivableSummaryReportForm(dateTimePickerDateAsOf.Value.Date);
+                                    RepAccountsReceivableSummaryReportForm repAccountsReceivableSummaryReportForm = new RepAccountsReceivableSummaryReportForm(dateTimePickerDateAsOf.Value.Date, Convert.ToInt32(comboBoxCustomer.SelectedValue));
                                     repAccountsReceivableSummaryReportForm.ShowDialog();
                                 }
                                 else
