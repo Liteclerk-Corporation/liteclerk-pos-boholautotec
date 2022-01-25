@@ -209,6 +209,11 @@ namespace EasyPOS.Forms.Software.MstUser
 
         private void buttonLock_Click(object sender, EventArgs e)
         {
+            if (textBoxUserCardNumber.Text == "")
+            {
+                textBoxUserCardNumber.Text = "NA";
+            }
+
             Controllers.MstUserController mstUserController = new Controllers.MstUserController();
 
             Entities.MstUserEntity newUserEntity = new Entities.MstUserEntity()
