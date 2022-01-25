@@ -21,6 +21,24 @@ namespace EasyPOS.Forms.Software.SysMenu
         {
             InitializeComponent();
 
+            chartMonthlySales.Series["Sales"].Points.AddXY("Jan.", 50000);
+            chartMonthlySales.Series["Sales"].Points.AddXY("Feb.", 35000);
+            chartMonthlySales.Series["Sales"].Points.AddXY("March", 25000);
+            chartMonthlySales.Series["Sales"].Points.AddXY("April", 15000);
+            chartMonthlySales.Series["Sales"].Points.AddXY("May", 30000);
+            chartMonthlySales.Series["Sales"].Points.AddXY("June", 33000);
+            chartMonthlySales.Series["Sales"].Points.AddXY("July", 42000);
+            chartMonthlySales.Series["Sales"].Points.AddXY("Aug.", 13000);
+            chartMonthlySales.Series["Sales"].Points.AddXY("Sept.", 10000);
+            chartMonthlySales.Series["Sales"].Points.AddXY("Oct.", 38908);
+            chartMonthlySales.Series["Sales"].Points.AddXY("Nov.", 43990);
+            chartMonthlySales.Series["Sales"].Points.AddXY("Dec.", 16123);
+            chartMonthlySales.Series["Sales"].Color = ColorTranslator.FromHtml("#91C354");
+
+            chartTopSellingItems.Series["TopSelling"].Points.AddXY("Coke", 50);
+            chartTopSellingItems.Series["TopSelling"].Points.AddXY("Royal", 35);
+            chartTopSellingItems.Series["TopSelling"].Points.AddXY("Red Horse", 75);
+
             buttonItem.Text = SetLabel(buttonItem.Text);
             buttonDiscounting.Text = SetLabel(buttonDiscounting.Text);
             buttonCustomer.Text = SetLabel(buttonCustomer.Text);
