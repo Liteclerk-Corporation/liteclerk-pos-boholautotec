@@ -106,6 +106,14 @@
             this.buttonCustomerImport = new System.Windows.Forms.Button();
             this.folderBrowserDialogGenerateCSV = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialogImportCSV = new System.Windows.Forms.OpenFileDialog();
+            this.tabPageRecalculateInventory = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cboItemDescription = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cboBarcode = new System.Windows.Forms.ComboBox();
+            this.buttonRecalculate = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAuditTrailList)).BeginInit();
@@ -124,6 +132,8 @@
             this.panel6.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.tabPageRecalculateInventory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -498,6 +508,7 @@
             this.tabControlSystemTable.Controls.Add(this.tabPageBarcodePrinting);
             this.tabControlSystemTable.Controls.Add(this.tabPage2);
             this.tabControlSystemTable.Controls.Add(this.tabPage3);
+            this.tabControlSystemTable.Controls.Add(this.tabPageRecalculateInventory);
             this.tabControlSystemTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlSystemTable.Location = new System.Drawing.Point(0, 62);
             this.tabControlSystemTable.Margin = new System.Windows.Forms.Padding(2);
@@ -1123,6 +1134,105 @@
             // 
             this.openFileDialogImportCSV.FileName = "openFileDialogImportCSV";
             // 
+            // tabPageRecalculateInventory
+            // 
+            this.tabPageRecalculateInventory.Controls.Add(this.label10);
+            this.tabPageRecalculateInventory.Controls.Add(this.cboItemDescription);
+            this.tabPageRecalculateInventory.Controls.Add(this.label9);
+            this.tabPageRecalculateInventory.Controls.Add(this.cboBarcode);
+            this.tabPageRecalculateInventory.Controls.Add(this.buttonRecalculate);
+            this.tabPageRecalculateInventory.Controls.Add(this.label7);
+            this.tabPageRecalculateInventory.Controls.Add(this.pictureBox2);
+            this.tabPageRecalculateInventory.Location = new System.Drawing.Point(4, 32);
+            this.tabPageRecalculateInventory.Name = "tabPageRecalculateInventory";
+            this.tabPageRecalculateInventory.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageRecalculateInventory.Size = new System.Drawing.Size(1362, 602);
+            this.tabPageRecalculateInventory.TabIndex = 4;
+            this.tabPageRecalculateInventory.Text = "Recalculate Inventory";
+            this.tabPageRecalculateInventory.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::EasyPOS.Properties.Resources.Stock_In;
+            this.pictureBox2.Location = new System.Drawing.Point(28, 25);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 31;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(83, 32);
+            this.label7.Margin = new System.Windows.Forms.Padding(0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(331, 35);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Recalculate Item Inventory";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 7F);
+            this.label10.Location = new System.Drawing.Point(301, 82);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(131, 15);
+            this.label10.TabIndex = 43;
+            this.label10.Text = "Select Item Description:";
+            // 
+            // cboItemDescription
+            // 
+            this.cboItemDescription.FormattingEnabled = true;
+            this.cboItemDescription.Location = new System.Drawing.Point(301, 98);
+            this.cboItemDescription.Margin = new System.Windows.Forms.Padding(2);
+            this.cboItemDescription.Name = "cboItemDescription";
+            this.cboItemDescription.Size = new System.Drawing.Size(528, 31);
+            this.cboItemDescription.TabIndex = 41;
+            this.cboItemDescription.SelectedIndexChanged += new System.EventHandler(this.cboItemDescription_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 7F);
+            this.label9.Location = new System.Drawing.Point(90, 82);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 15);
+            this.label9.TabIndex = 44;
+            this.label9.Text = "Select Barcode:";
+            // 
+            // cboBarcode
+            // 
+            this.cboBarcode.FormattingEnabled = true;
+            this.cboBarcode.Location = new System.Drawing.Point(90, 98);
+            this.cboBarcode.Margin = new System.Windows.Forms.Padding(2);
+            this.cboBarcode.Name = "cboBarcode";
+            this.cboBarcode.Size = new System.Drawing.Size(205, 31);
+            this.cboBarcode.TabIndex = 42;
+            this.cboBarcode.SelectedIndexChanged += new System.EventHandler(this.cboBarcode_SelectedIndexChanged);
+            // 
+            // buttonRecalculate
+            // 
+            this.buttonRecalculate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
+            this.buttonRecalculate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonRecalculate.FlatAppearance.BorderSize = 0;
+            this.buttonRecalculate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRecalculate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRecalculate.ForeColor = System.Drawing.Color.White;
+            this.buttonRecalculate.Location = new System.Drawing.Point(90, 145);
+            this.buttonRecalculate.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonRecalculate.Name = "buttonRecalculate";
+            this.buttonRecalculate.Size = new System.Drawing.Size(206, 56);
+            this.buttonRecalculate.TabIndex = 40;
+            this.buttonRecalculate.TabStop = false;
+            this.buttonRecalculate.Text = "Recalculate";
+            this.buttonRecalculate.UseVisualStyleBackColor = false;
+            this.buttonRecalculate.Click += new System.EventHandler(this.buttonRecalculate_Click);
+            // 
             // SysUtilitiesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1162,6 +1272,9 @@
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.tabPageRecalculateInventory.ResumeLayout(false);
+            this.tabPageRecalculateInventory.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1244,5 +1357,13 @@
         private System.Windows.Forms.Button buttonImport;
         private System.Windows.Forms.TextBox textBoxUpdatePrice;
         private System.Windows.Forms.Button buttonOpenCustomer;
+        private System.Windows.Forms.TabPage tabPageRecalculateInventory;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cboItemDescription;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cboBarcode;
+        private System.Windows.Forms.Button buttonRecalculate;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

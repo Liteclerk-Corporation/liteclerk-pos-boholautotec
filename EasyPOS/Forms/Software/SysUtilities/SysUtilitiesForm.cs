@@ -167,6 +167,8 @@ namespace EasyPOS.Forms.Software.SysUtilities
             dataGridViewAuditTrailList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewAuditTrailList.DataSource = audiTrailListDataSource;
+
+            GetItemBarcodeList();
         }
 
 
@@ -423,6 +425,8 @@ namespace EasyPOS.Forms.Software.SysUtilities
             dataGridViewItemList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
             dataGridViewItemList.DataSource = itemListDataSource;
+
+            GetItemBarcodeList();
         }
 
         public void GetItemListCurrentSelectedCell(Int32 rowIndex)
@@ -719,7 +723,7 @@ namespace EasyPOS.Forms.Software.SysUtilities
                                 Address = dataWords[2],
                                 ContactPerson = dataWords[3],
                                 ContactNumber = dataWords[4],
-                                CreditLimit = Convert.ToDecimal(dataWords[5]) ,
+                                CreditLimit = Convert.ToDecimal(dataWords[5]),
                                 Term = dataWords[6],
                                 TIN = dataWords[7],
                                 WithReward = Convert.ToBoolean(dataWords[8]),
@@ -786,7 +790,7 @@ namespace EasyPOS.Forms.Software.SysUtilities
                     {
                         foreach (var stockInLine in inventoryListReport)
                         {
-                            
+
                             String[] data = {
                               //"\""+stockInLine.BarCode.ToString()+"\"",
                               "="+"\""+stockInLine.BarCode+"\"",
@@ -862,8 +866,7 @@ namespace EasyPOS.Forms.Software.SysUtilities
                 String[] updateItemPrice = mstItemController.UpdateItemPrice(itemList);
                 if (updateItemPrice[1].Equals("0") == false)
                 {
-                    MessageBox.Show("Update Successfully");
-
+                    MessageBox.Show("Updated Successfully", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -875,5 +878,68 @@ namespace EasyPOS.Forms.Software.SysUtilities
                 MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void GetItemBarcodeList()
+        {
+            Controllers.MstItemController mstItemController = new Controllers.MstItemController();
+            var items = mstItemController.DropdownListRecalculateItemInventoryList();
+            if (items.Any())
+            {
+                cboBarcode.DataSource = items;
+                cboBarcode.ValueMember = "Id";
+                cboBarcode.DisplayMember = "BarCode";
+            }
+
+            GetItemDescriptionList();
+        }
+        public void GetItemDescriptionList()
+        {
+            Controllers.MstItemController mstItemController = new Controllers.MstItemController();
+            var itemdesc = mstItemController.DropdownListRecalculateItemInventoryList();
+            if (itemdesc.Any())
+            {
+                cboItemDescription.DataSource = itemdesc;
+                cboItemDescription.ValueMember = "Id";
+                cboItemDescription.DisplayMember = "ItemDescription";
+            }
+        }
+        private void buttonRecalculate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Controllers.MstItemController mstItemController = new Controllers.MstItemController();
+                String[] updateItemInventory = mstItemController.UpdateItemInventory(Convert.ToInt32(cboBarcode.SelectedValue));
+                if (updateItemInventory[1].Equals("0") == false)
+                {
+                    MessageBox.Show("Updated Successfully", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show(updateItemInventory[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cboBarcode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboBarcode.SelectedIndex > -1)
+            {
+                cboItemDescription.SelectedValue = cboBarcode.SelectedValue;
+            }
+        }
+
+        private void cboItemDescription_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboItemDescription.SelectedIndex > -1)
+            {
+                cboBarcode.SelectedValue = cboItemDescription.SelectedValue;
+            }
+        }
     }
 }
+

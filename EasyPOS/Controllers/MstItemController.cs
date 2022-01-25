@@ -451,6 +451,26 @@ namespace EasyPOS.Controllers
     
             return itemList.OrderBy(d => d.ItemDescription).ToList();
         }
+
+        // ==============================================
+        // Dropdown List - For Recalculate Item Inventory
+        // ==============================================
+        public List<Entities.MstItemEntity> DropdownListRecalculateItemInventoryList()
+        {
+            var itemList = from d in db.MstItems
+                           where d.IsInventory == true
+                           && d.IsLocked == true
+                           select new Entities.MstItemEntity
+                           {
+                               Id = d.Id,
+                               BarCode = d.BarCode,
+                               ItemDescription = d.ItemDescription
+                           };
+
+
+            return itemList.OrderBy(d => d.ItemDescription).ToList();
+        }
+
         // ==============================
         // Dropdown List - Get Child Item
         // ==============================
@@ -938,7 +958,116 @@ namespace EasyPOS.Controllers
             {
                 return new String[] { e.Message, "0" };
             }
-        }       
+        }
+
+        // =====================
+        // Update Item Inventory
+        // =====================
+        public String[] UpdateItemInventory(Int32 itemId)
+        {
+            try
+            {
+                var currentUserLogin = from d in db.MstUsers where d.Id == Convert.ToInt32(Modules.SysCurrentModule.GetCurrentSettings().CurrentUserId) select d;
+                if (currentUserLogin.Any() == false)
+                {
+                    return new String[] { "Current login user not found.", "0" };
+                }
+
+                var item = from d in db.MstItems
+                           where d.Id == itemId
+                           select d;
+
+                if (item.Any())
+                {
+                    var currentInInventories = from d in db.TrnStockInLines
+                                               where d.TrnStockIn.IsLocked == true
+                                               && d.ItemId == itemId
+                                               select d;
+                    Decimal stockInQty = 0;
+                    if (currentInInventories.Any())
+                    {
+                        stockInQty = currentInInventories.Sum(d => d.Quantity);
+                    }
+
+                    var currentSoldInventories = from d in db.TrnSalesLines
+                                                 where d.TrnSale.IsLocked == true
+                                                 && d.TrnSale.IsCancelled == false
+                                                 && d.ItemId == itemId
+                                                 select d;
+
+                    Decimal salesQty = 0;
+                    if (currentSoldInventories.Any())
+                    {
+                        salesQty = currentSoldInventories.Sum(d => d.Quantity);
+                    }
+
+                    var currentSoldComponents = from d in db.TrnSalesLines
+                                                where d.TrnSale.IsLocked == true
+                                                && d.TrnSale.IsCancelled == false
+                                                && d.MstItem.MstItemComponents.Any() == true
+                                                && d.ItemId == itemId
+                                                select d;
+
+                    Decimal componentQty = 0;
+                    Decimal totalComponentQty = 0;
+                    if (currentSoldComponents.ToList().Any() == true)
+                    {
+                        foreach (var currentSoldComponent in currentSoldComponents.ToList())
+                        {
+                            var itemComponents = from d in currentSoldComponent.MstItem.MstItemComponents.ToList()
+                                                 where d.ComponentItemId == itemId
+                                                 select d;
+
+                            if (itemComponents.Any() == true)
+                            {
+                                foreach (var itemComponent in itemComponents.ToList())
+                                {
+                                    componentQty = itemComponent.Quantity * currentSoldComponent.Quantity;
+                                    totalComponentQty += componentQty;
+                                }
+                            }
+                        }
+                    }
+
+                    var currentOutInventories = from d in db.TrnStockOutLines
+                                                where d.TrnStockOut.IsLocked == true
+                                                && d.ItemId == itemId
+                                                select d;
+
+                    Decimal stockOutQty = 0;
+                    if (currentOutInventories.Any())
+                    {
+                        stockOutQty = currentOutInventories.Sum(d => d.Quantity);
+                    }
+
+                    Decimal totalInQty = 0;
+                    Decimal totalOutQty = 0;
+
+                    totalInQty = stockInQty;
+                    totalOutQty = salesQty + totalComponentQty + stockOutQty;
+
+                    Decimal onhandQty = 0;
+
+                    onhandQty = totalInQty - totalOutQty;
+
+                    var updateItem = item.FirstOrDefault();
+                    updateItem.OnhandQuantity = onhandQty;
+                    db.SubmitChanges();
+
+                    return new String[] { "", "" };
+                }
+                else
+                {
+                    return new String[] { "Item not found.", "0" };
+                }
+            }
+
+            catch (Exception e)
+            {
+                return new String[] { e.Message, "0" };
+            }
+        }
+
         // =========
         // Save Item
         // =========
