@@ -101,7 +101,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBoxChange = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonDownload = new System.Windows.Forms.Button();
             this.printDialogSalesOrder = new System.Windows.Forms.PrintDialog();
             this.printDialogSalesInvoice = new System.Windows.Forms.PrintDialog();
@@ -479,7 +478,8 @@
             this.dataGridViewSalesLineList.AllowUserToAddRows = false;
             this.dataGridViewSalesLineList.AllowUserToDeleteRows = false;
             this.dataGridViewSalesLineList.AllowUserToResizeRows = false;
-            this.dataGridViewSalesLineList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridViewSalesLineList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewSalesLineList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -523,7 +523,7 @@
             this.ColumnSalesLinePrice2,
             this.ColumnSalesLinePrice2LessTax,
             this.ColumnSalesLinePriceSplitPercentage});
-            this.dataGridViewSalesLineList.Location = new System.Drawing.Point(12, 84);
+            this.dataGridViewSalesLineList.Location = new System.Drawing.Point(12, 82);
             this.dataGridViewSalesLineList.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewSalesLineList.MultiSelect = false;
             this.dataGridViewSalesLineList.Name = "dataGridViewSalesLineList";
@@ -532,7 +532,7 @@
             this.dataGridViewSalesLineList.RowHeadersWidth = 51;
             this.dataGridViewSalesLineList.RowTemplate.Height = 24;
             this.dataGridViewSalesLineList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewSalesLineList.Size = new System.Drawing.Size(1224, 525);
+            this.dataGridViewSalesLineList.Size = new System.Drawing.Size(1224, 348);
             this.dataGridViewSalesLineList.TabIndex = 1;
             this.dataGridViewSalesLineList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSalesLineList_CellClick);
             this.dataGridViewSalesLineList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridViewSalesLineList_KeyDown);
@@ -896,13 +896,13 @@
             // panel5
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.panel5.Controls.Add(this.textBoxChange);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Location = new System.Drawing.Point(841, 441);
+            this.panel5.Location = new System.Drawing.Point(889, 436);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(403, 54);
+            this.panel5.Size = new System.Drawing.Size(347, 45);
             this.panel5.TabIndex = 8;
             // 
             // textBoxChange
@@ -910,13 +910,13 @@
             this.textBoxChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.textBoxChange.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxChange.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.textBoxChange.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxChange.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBoxChange.Location = new System.Drawing.Point(191, 15);
+            this.textBoxChange.Location = new System.Drawing.Point(199, 8);
             this.textBoxChange.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxChange.Name = "textBoxChange";
             this.textBoxChange.ReadOnly = true;
-            this.textBoxChange.Size = new System.Drawing.Size(134, 25);
+            this.textBoxChange.Size = new System.Drawing.Size(134, 31);
             this.textBoxChange.TabIndex = 2;
             this.textBoxChange.TabStop = false;
             this.textBoxChange.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -928,23 +928,12 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(67, 14);
+            this.label5.Location = new System.Drawing.Point(11, 10);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 25);
             this.label5.TabIndex = 2;
             this.label5.Text = "Last Change:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(2, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(401, 54);
-            this.textBox1.TabIndex = 3;
             // 
             // buttonDownload
             // 
@@ -1082,6 +1071,5 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox textBoxChange;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

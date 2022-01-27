@@ -636,21 +636,24 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 trnSalesDetailSalesItemDetailForm.ShowDialog();
             }
 
-            if (e.RowIndex > -1 && dataGridViewSalesLineList.CurrentCell.ColumnIndex == dataGridViewSalesLineList.Columns["ColumnSalesLineDelete"].Index)
+            if (dataGridViewSalesLineList.Rows.Count > 0)
             {
-                DialogResult deleteDialogResult = MessageBox.Show("Delete Sales?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (deleteDialogResult == DialogResult.Yes)
+                if (e.RowIndex > -1 && dataGridViewSalesLineList.CurrentCell.ColumnIndex == dataGridViewSalesLineList.Columns["ColumnSalesLineDelete"].Index)
                 {
-                    Controllers.TrnSalesLineController trnPOSSalesLineController = new Controllers.TrnSalesLineController();
+                    DialogResult deleteDialogResult = MessageBox.Show("Delete Item?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (deleteDialogResult == DialogResult.Yes)
+                    {
+                        Controllers.TrnSalesLineController trnPOSSalesLineController = new Controllers.TrnSalesLineController();
 
-                    String[] deleteSalesLine = trnPOSSalesLineController.DeleteSalesLine(Convert.ToInt32(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[2].Value));
-                    if (deleteSalesLine[1].Equals("0") == false)
-                    {
-                        GetSalesLineList();
-                    }
-                    else
-                    {
-                        MessageBox.Show(deleteSalesLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        String[] deleteSalesLine = trnPOSSalesLineController.DeleteSalesLine(Convert.ToInt32(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[2].Value));
+                        if (deleteSalesLine[1].Equals("0") == false)
+                        {
+                            GetSalesLineList();
+                        }
+                        else
+                        {
+                            MessageBox.Show(deleteSalesLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
@@ -926,65 +929,65 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 }
             }
 
-            }
+        }
 
-            private void buttonUnlock_Click(object sender, EventArgs e)
+        private void buttonUnlock_Click(object sender, EventArgs e)
+        {
+            Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
+            String[] lockSales = trnPOSSalesController.UnlockSales(trnSalesEntity.Id);
+            if (lockSales[1].Equals("0") == false)
             {
-                Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
-                String[] lockSales = trnPOSSalesController.UnlockSales(trnSalesEntity.Id);
-                if (lockSales[1].Equals("0") == false)
-                {
-                    LockComponents(false);
-                }
-                else
-                {
-                    MessageBox.Show(lockSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                LockComponents(false);
             }
-
-            private void buttonPrint_Click(object sender, EventArgs e)
+            else
             {
-                if (Modules.SysCurrentModule.GetCurrentSettings().ChoosePrinter == true)
-                {
-                    DialogResult printDialogResult = printDialogSalesOrder.ShowDialog();
-                    if (printDialogResult == DialogResult.OK)
-                    {
-                        if (trnSalesEntity.IsReturned == true)
-                        {
-                            new TrnPOSReturnReportForm(trnSalesEntity.Id);
-                        }
-                        else
-                        {
-                            Debug.WriteLine(Modules.SysCurrentModule.GetCurrentSettings().SalesOrderPrinterType);
+                MessageBox.Show(lockSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-                            if (Modules.SysCurrentModule.GetCurrentSettings().SalesOrderPrinterType == "Label Printer")
-                            {
-                                new TrnPOSSalesOrderReportFormLabelPrinter(trnSalesEntity.Id, printDialogSalesOrder.PrinterSettings.PrinterName);
-                            }
-
-                            else
-                            {
-                                new TrnPOSSalesOrderReportForm(trnSalesEntity.Id, printDialogSalesOrder.PrinterSettings.PrinterName);
-                            }
-                        }
-                    }
-                }
-                else
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            if (Modules.SysCurrentModule.GetCurrentSettings().ChoosePrinter == true)
+            {
+                DialogResult printDialogResult = printDialogSalesOrder.ShowDialog();
+                if (printDialogResult == DialogResult.OK)
                 {
                     if (trnSalesEntity.IsReturned == true)
                     {
                         new TrnPOSReturnReportForm(trnSalesEntity.Id);
                     }
-                    else if (Modules.SysCurrentModule.GetCurrentSettings().SalesOrderPrinterType == "Letter Printer")
-                    {
-                        new TrnPOSSalesInvoicePDFReportForm(trnSalesEntity.Id);
-                    }
                     else
                     {
-                        new TrnPOSSalesOrderReportForm(trnSalesEntity.Id, "");
+                        Debug.WriteLine(Modules.SysCurrentModule.GetCurrentSettings().SalesOrderPrinterType);
+
+                        if (Modules.SysCurrentModule.GetCurrentSettings().SalesOrderPrinterType == "Label Printer")
+                        {
+                            new TrnPOSSalesOrderReportFormLabelPrinter(trnSalesEntity.Id, printDialogSalesOrder.PrinterSettings.PrinterName);
+                        }
+
+                        else
+                        {
+                            new TrnPOSSalesOrderReportForm(trnSalesEntity.Id, printDialogSalesOrder.PrinterSettings.PrinterName);
+                        }
                     }
                 }
             }
+            else
+            {
+                if (trnSalesEntity.IsReturned == true)
+                {
+                    new TrnPOSReturnReportForm(trnSalesEntity.Id);
+                }
+                else if (Modules.SysCurrentModule.GetCurrentSettings().SalesOrderPrinterType == "Letter Printer")
+                {
+                    new TrnPOSSalesInvoicePDFReportForm(trnSalesEntity.Id);
+                }
+                else
+                {
+                    new TrnPOSSalesOrderReportForm(trnSalesEntity.Id, "");
+                }
+            }
+        }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {

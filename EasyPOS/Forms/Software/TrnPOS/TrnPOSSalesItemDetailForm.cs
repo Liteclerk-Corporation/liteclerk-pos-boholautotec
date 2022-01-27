@@ -284,6 +284,21 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 {
                     MessageBox.Show(addSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+                if (Convert.ToDecimal(textBoxSalesLineQuantity.Text) == 0)
+                {
+                    Controllers.TrnSalesLineController trnSalesLineController = new Controllers.TrnSalesLineController();
+
+                    String[] deleteSalesLine = trnSalesLineController.DeleteSalesLine(trnSalesLineEntity.Id);
+                    if (deleteSalesLine[1].Equals("0") == false)
+                    {
+                        trnSalesDetailForm.GetSalesLineList();
+                    }
+                    else
+                    {
+                        MessageBox.Show(deleteSalesLine[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
         //private bool CheckFormOpened(string name)
