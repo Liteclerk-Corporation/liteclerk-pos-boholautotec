@@ -40,12 +40,18 @@ namespace EasyPOS.Forms.Software.SysMenu
             var topSellingItems = repTopSellingItemsReportController.TopSellingItemsReportPieChart();
             if (topSellingItems.Any())
             {
+                Decimal totalQuantity = 0;
+                totalQuantity = topSellingItems.Sum(d => d.Quantity);
+
                 foreach (var topSellingItem in topSellingItems)
                 {
                     if (itemCounter < 10)
                     {
+                        //Decimal percentage = Math.Round(((topSellingItem.Quantity / totalQuantity) * 100),2);
+                        Decimal percentage = (topSellingItem.Quantity * Convert.ToDecimal(1.0) / totalQuantity);
                         chartTopSellingItems.Series["TopSelling"].IsValueShownAsLabel = true;
-                        chartTopSellingItems.Series["TopSelling"].Points.AddXY(topSellingItem.ItemDescription, topSellingItem.Quantity);
+                        chartTopSellingItems.Series["TopSelling"].LabelFormat = "#.##%";
+                        chartTopSellingItems.Series["TopSelling"].Points.AddXY(topSellingItem.ItemDescription, percentage);
                         itemCounter += 1;
                     }
                 }
