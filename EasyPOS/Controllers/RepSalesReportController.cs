@@ -829,6 +829,34 @@ namespace EasyPOS.Controllers
             return topSellingItems.OrderByDescending(d => d.Quantity).ToList();
         }
 
+        public List<Entities.RepSalesReportTopSellingItemsReportEntity> TopSellingItemsReportPieChart()
+        {
+            var topSellingItems = from d in db.TrnSalesLines
+                                  where d.TrnSale.SalesDate <= Convert.ToDateTime(DateTime.Now.ToShortDateString())
+                                  && d.TrnSale.IsLocked == true
+                                  && d.TrnSale.IsCancelled == false
+                                  group d by new
+                                  {
+                                      d.MstItem.ItemCode,
+                                      d.MstItem.ItemDescription,
+                                      d.MstItem.Category,
+                                      d.MstUnit.Unit,
+                                      d.Price
+                                  } into g
+                                  select new Entities.RepSalesReportTopSellingItemsReportEntity
+                                  {
+                                      ItemCode = g.Key.ItemCode,
+                                      ItemDescription = g.Key.ItemDescription,
+                                      ItemCategory = g.Key.Category,
+                                      Quantity = g.Sum(d => d.Quantity),
+                                      Unit = g.Key.Unit,
+                                      Price = g.Key.Price,
+                                      Amount = g.Sum(d => d.Amount)
+                                  };
+
+            return topSellingItems.OrderByDescending(d => d.Quantity).ToList();
+        }
+
         // ==========================
         // Sales Return Detail Report
         // ==========================

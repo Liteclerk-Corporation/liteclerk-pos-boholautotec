@@ -35,9 +35,21 @@ namespace EasyPOS.Forms.Software.SysMenu
             chartMonthlySales.Series["Sales"].Points.AddXY("Dec.", 16123);
             chartMonthlySales.Series["Sales"].Color = ColorTranslator.FromHtml("#91C354");
 
-            chartTopSellingItems.Series["TopSelling"].Points.AddXY("Coke", 50);
-            chartTopSellingItems.Series["TopSelling"].Points.AddXY("Royal", 35);
-            chartTopSellingItems.Series["TopSelling"].Points.AddXY("Red Horse", 75);
+            Int32 itemCounter = 0;
+            Controllers.RepSalesReportController repTopSellingItemsReportController = new Controllers.RepSalesReportController();
+            var topSellingItems = repTopSellingItemsReportController.TopSellingItemsReportPieChart();
+            if (topSellingItems.Any())
+            {
+                foreach (var topSellingItem in topSellingItems)
+                {
+                    if (itemCounter < 10)
+                    {
+                        chartTopSellingItems.Series["TopSelling"].IsValueShownAsLabel = true;
+                        chartTopSellingItems.Series["TopSelling"].Points.AddXY(topSellingItem.ItemDescription, topSellingItem.Quantity);
+                        itemCounter += 1;
+                    }
+                }
+            }
 
             buttonItem.Text = SetLabel(buttonItem.Text);
             buttonDiscounting.Text = SetLabel(buttonDiscounting.Text);
