@@ -835,6 +835,7 @@ namespace EasyPOS.Controllers
                                   where d.TrnSale.SalesDate <= Convert.ToDateTime(DateTime.Now.ToShortDateString())
                                   && d.TrnSale.IsLocked == true
                                   && d.TrnSale.IsCancelled == false
+                                  && d.MstItem.ItemCode != "0000000001"
                                   group d by new
                                   {
                                       d.MstItem.ItemCode,
