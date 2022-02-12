@@ -47,7 +47,6 @@ namespace EasyPOS.Forms.Software.SysMenu
                 {
                     if (itemCounter < 10)
                     {
-                        //Decimal percentage = Math.Round(((topSellingItem.Quantity / totalQuantity) * 100),2);
                         Decimal percentage = (topSellingItem.Quantity * Convert.ToDecimal(1.0) / totalQuantity);
                         chartTopSellingItems.Series["TopSelling"].IsValueShownAsLabel = true;
                         chartTopSellingItems.Series["TopSelling"].LabelFormat = "#.##%";
