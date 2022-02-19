@@ -378,6 +378,7 @@
     <Compile Include="Entities\DgvSysUtilitiesBarcodePrintingItemList.cs" />
     <Compile Include="Entities\DgvRepUnsoldItemEntity.cs" />
     <Compile Include="Entities\DgvMstSystemTablesLanguageListEntity.cs" />
+    <Compile Include="Entities\RepSalesReportPerMonthSummaryReportEntity.cs" />
     <Compile Include="Entities\SysKitchenPrinterEntity.cs" />
     <Compile Include="Entities\EspCardDetailsEntity.cs" />
     <Compile Include="Entities\EspTokenEntity.cs" />

@@ -135,8 +135,9 @@
             legend1.Name = "Legend1";
             this.chartTopSellingItems.Legends.Add(legend1);
             this.chartTopSellingItems.Location = new System.Drawing.Point(22, 282);
-            this.chartTopSellingItems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chartTopSellingItems.Margin = new System.Windows.Forms.Padding(2);
             this.chartTopSellingItems.Name = "chartTopSellingItems";
+            this.chartTopSellingItems.Padding = new System.Windows.Forms.Padding(2);
             this.chartTopSellingItems.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -162,9 +163,9 @@
             legend2.Name = "Legend1";
             this.chartMonthlySales.Legends.Add(legend2);
             this.chartMonthlySales.Location = new System.Drawing.Point(22, 16);
-            this.chartMonthlySales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chartMonthlySales.Margin = new System.Windows.Forms.Padding(2);
             this.chartMonthlySales.Name = "chartMonthlySales";
-            this.chartMonthlySales.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            this.chartMonthlySales.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartMonthlySales.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))))};
             series2.ChartArea = "ChartArea1";
@@ -198,7 +199,7 @@
             this.buttonItem.Location = new System.Drawing.Point(470, 365);
             this.buttonItem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItem.Name = "buttonItem";
-            this.buttonItem.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonItem.Padding = new System.Windows.Forms.Padding(8);
             this.buttonItem.Size = new System.Drawing.Size(182, 79);
             this.buttonItem.TabIndex = 0;
             this.buttonItem.Text = "Item";
@@ -221,7 +222,7 @@
             this.buttonUser.Location = new System.Drawing.Point(655, 447);
             this.buttonUser.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUser.Name = "buttonUser";
-            this.buttonUser.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonUser.Padding = new System.Windows.Forms.Padding(8);
             this.buttonUser.Size = new System.Drawing.Size(182, 84);
             this.buttonUser.TabIndex = 3;
             this.buttonUser.Text = "User";
@@ -243,7 +244,7 @@
             this.buttonPOS.Location = new System.Drawing.Point(470, 16);
             this.buttonPOS.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPOS.Name = "buttonPOS";
-            this.buttonPOS.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonPOS.Padding = new System.Windows.Forms.Padding(8);
             this.buttonPOS.Size = new System.Drawing.Size(182, 171);
             this.buttonPOS.TabIndex = 4;
             this.buttonPOS.Text = "POS";
@@ -266,7 +267,7 @@
             this.buttonUtilities.Location = new System.Drawing.Point(841, 365);
             this.buttonUtilities.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUtilities.Name = "buttonUtilities";
-            this.buttonUtilities.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonUtilities.Padding = new System.Windows.Forms.Padding(8);
             this.buttonUtilities.Size = new System.Drawing.Size(182, 79);
             this.buttonUtilities.TabIndex = 14;
             this.buttonUtilities.Text = "Utilities";
@@ -288,7 +289,7 @@
             this.buttonDiscounting.Location = new System.Drawing.Point(470, 447);
             this.buttonDiscounting.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDiscounting.Name = "buttonDiscounting";
-            this.buttonDiscounting.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonDiscounting.Padding = new System.Windows.Forms.Padding(8);
             this.buttonDiscounting.Size = new System.Drawing.Size(182, 84);
             this.buttonDiscounting.TabIndex = 1;
             this.buttonDiscounting.Text = "Discounting";
@@ -310,7 +311,7 @@
             this.buttonSettings.Location = new System.Drawing.Point(841, 447);
             this.buttonSettings.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSettings.Name = "buttonSettings";
-            this.buttonSettings.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonSettings.Padding = new System.Windows.Forms.Padding(8);
             this.buttonSettings.Size = new System.Drawing.Size(182, 84);
             this.buttonSettings.TabIndex = 13;
             this.buttonSettings.Text = "Settings";
@@ -332,7 +333,7 @@
             this.buttonCustomer.Location = new System.Drawing.Point(655, 365);
             this.buttonCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCustomer.Name = "buttonCustomer";
-            this.buttonCustomer.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonCustomer.Padding = new System.Windows.Forms.Padding(8);
             this.buttonCustomer.Size = new System.Drawing.Size(182, 79);
             this.buttonCustomer.TabIndex = 2;
             this.buttonCustomer.Text = "Customer";
@@ -354,7 +355,7 @@
             this.buttonPOSReport.Location = new System.Drawing.Point(841, 190);
             this.buttonPOSReport.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPOSReport.Name = "buttonPOSReport";
-            this.buttonPOSReport.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonPOSReport.Padding = new System.Windows.Forms.Padding(8);
             this.buttonPOSReport.Size = new System.Drawing.Size(182, 84);
             this.buttonPOSReport.TabIndex = 12;
             this.buttonPOSReport.Text = "POS Report";
@@ -376,7 +377,7 @@
             this.buttonSystemTables.Location = new System.Drawing.Point(841, 278);
             this.buttonSystemTables.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSystemTables.Name = "buttonSystemTables";
-            this.buttonSystemTables.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonSystemTables.Padding = new System.Windows.Forms.Padding(8);
             this.buttonSystemTables.Size = new System.Drawing.Size(182, 84);
             this.buttonSystemTables.TabIndex = 15;
             this.buttonSystemTables.Text = "System Tables";
@@ -398,7 +399,7 @@
             this.buttonStockCount.Location = new System.Drawing.Point(841, 16);
             this.buttonStockCount.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStockCount.Name = "buttonStockCount";
-            this.buttonStockCount.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonStockCount.Padding = new System.Windows.Forms.Padding(8);
             this.buttonStockCount.Size = new System.Drawing.Size(182, 84);
             this.buttonStockCount.TabIndex = 11;
             this.buttonStockCount.Text = "Stock Count";
@@ -420,7 +421,7 @@
             this.buttonDisbursement.Location = new System.Drawing.Point(655, 16);
             this.buttonDisbursement.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDisbursement.Name = "buttonDisbursement";
-            this.buttonDisbursement.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonDisbursement.Padding = new System.Windows.Forms.Padding(8);
             this.buttonDisbursement.Size = new System.Drawing.Size(182, 84);
             this.buttonDisbursement.TabIndex = 5;
             this.buttonDisbursement.Text = "Cash In/Out";
@@ -443,7 +444,7 @@
             this.buttonInventory.Location = new System.Drawing.Point(470, 190);
             this.buttonInventory.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInventory.Name = "buttonInventory";
-            this.buttonInventory.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonInventory.Padding = new System.Windows.Forms.Padding(8);
             this.buttonInventory.Size = new System.Drawing.Size(182, 171);
             this.buttonInventory.TabIndex = 10;
             this.buttonInventory.Text = "Inventory Report";
@@ -466,7 +467,7 @@
             this.buttonStockOut.Location = new System.Drawing.Point(841, 103);
             this.buttonStockOut.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStockOut.Name = "buttonStockOut";
-            this.buttonStockOut.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonStockOut.Padding = new System.Windows.Forms.Padding(8);
             this.buttonStockOut.Size = new System.Drawing.Size(182, 84);
             this.buttonStockOut.TabIndex = 7;
             this.buttonStockOut.Text = "Stock Out";
@@ -489,7 +490,7 @@
             this.buttonRemittanceReport.Location = new System.Drawing.Point(655, 278);
             this.buttonRemittanceReport.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRemittanceReport.Name = "buttonRemittanceReport";
-            this.buttonRemittanceReport.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonRemittanceReport.Padding = new System.Windows.Forms.Padding(8);
             this.buttonRemittanceReport.Size = new System.Drawing.Size(182, 84);
             this.buttonRemittanceReport.TabIndex = 9;
             this.buttonRemittanceReport.Text = "Remittance Report";
@@ -511,7 +512,7 @@
             this.buttonStockIn.Location = new System.Drawing.Point(655, 103);
             this.buttonStockIn.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStockIn.Name = "buttonStockIn";
-            this.buttonStockIn.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonStockIn.Padding = new System.Windows.Forms.Padding(8);
             this.buttonStockIn.Size = new System.Drawing.Size(182, 84);
             this.buttonStockIn.TabIndex = 6;
             this.buttonStockIn.Text = "Stock In";
@@ -533,7 +534,7 @@
             this.buttonSalesReport.Location = new System.Drawing.Point(655, 190);
             this.buttonSalesReport.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalesReport.Name = "buttonSalesReport";
-            this.buttonSalesReport.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.buttonSalesReport.Padding = new System.Windows.Forms.Padding(8);
             this.buttonSalesReport.Size = new System.Drawing.Size(182, 84);
             this.buttonSalesReport.TabIndex = 8;
             this.buttonSalesReport.Text = "Sales Report";

@@ -21,19 +21,7 @@ namespace EasyPOS.Forms.Software.SysMenu
         {
             InitializeComponent();
 
-            chartMonthlySales.Series["Sales"].Points.AddXY("Jan.", 50000);
-            chartMonthlySales.Series["Sales"].Points.AddXY("Feb.", 35000);
-            chartMonthlySales.Series["Sales"].Points.AddXY("March", 25000);
-            chartMonthlySales.Series["Sales"].Points.AddXY("April", 15000);
-            chartMonthlySales.Series["Sales"].Points.AddXY("May", 30000);
-            chartMonthlySales.Series["Sales"].Points.AddXY("June", 33000);
-            chartMonthlySales.Series["Sales"].Points.AddXY("July", 42000);
-            chartMonthlySales.Series["Sales"].Points.AddXY("Aug.", 13000);
-            chartMonthlySales.Series["Sales"].Points.AddXY("Sept.", 10000);
-            chartMonthlySales.Series["Sales"].Points.AddXY("Oct.", 38908);
-            chartMonthlySales.Series["Sales"].Points.AddXY("Nov.", 43990);
-            chartMonthlySales.Series["Sales"].Points.AddXY("Dec.", 16123);
-            chartMonthlySales.Series["Sales"].Color = ColorTranslator.FromHtml("#91C354");
+            SalesSummaryPerMonth();
 
             Int32 itemCounter = 0;
             Controllers.RepSalesReportController repTopSellingItemsReportController = new Controllers.RepSalesReportController();
@@ -337,7 +325,170 @@ namespace EasyPOS.Forms.Software.SysMenu
             {
                 sysSoftwareForm.AddTabPageUtilities();
             }
-            
+
+        }
+        public void SalesSummaryPerMonth()
+        {
+            // ============
+            // Data Context
+            // ============
+            Data.easyposdbDataContext db = new Data.easyposdbDataContext(Modules.SysConnectionStringModule.GetConnectionString());
+
+            Int32 currentYear = Convert.ToInt32(DateTime.Now.Year);
+            Decimal januaryAmount = 0;
+            Decimal februaryAmount = 0;
+            Decimal marchAmount = 0;
+            Decimal aprilAmount = 0;
+            Decimal mayAmount = 0;
+            Decimal juneAmount = 0;
+            Decimal julyAmount = 0;
+            Decimal augustAmount = 0;
+            Decimal septemberAmount = 0;
+            Decimal octoberAmount = 0;
+            Decimal novemberAmount = 0;
+            Decimal decemberAmount = 0;
+
+            var sales = from d in db.TrnSales
+                        where d.SalesDate.Year >= currentYear
+                        && d.IsLocked == true
+                        && d.IsCancelled == false
+                        select d;
+            // =================
+            // Sales for January
+            // =================
+            var salesJanuary = from d in sales
+                               where d.SalesDate.Month == 1
+                               select d;
+            if (salesJanuary.Any())
+            {
+                januaryAmount = salesJanuary.Sum(d => d.Amount);
+            }
+            // ==================
+            // Sales for February
+            // ==================
+            var salesFebruary = from d in sales
+                                where d.SalesDate.Month == 2
+                                select d;
+            if (salesFebruary.Any())
+            {
+                februaryAmount = salesFebruary.Sum(d => d.Amount);
+            }
+            // ===============
+            // Sales for March
+            // ===============
+            var salesMarch = from d in sales
+                             where d.SalesDate.Month == 3
+                             select d;
+            if (salesMarch.Any())
+            {
+                marchAmount = salesMarch.Sum(d => d.Amount);
+            }
+            // ===============
+            // Sales for April
+            // ===============
+            var salesApril = from d in sales
+                             where d.SalesDate.Month == 4
+                             select d;
+            if (salesApril.Any())
+            {
+                aprilAmount = salesApril.Sum(d => d.Amount);
+            }
+            // =============
+            // Sales for May
+            // =============
+            var salesMay = from d in sales
+                           where d.SalesDate.Month == 5
+                           select d;
+            if (salesMay.Any())
+            {
+                mayAmount = salesMay.Sum(d => d.Amount);
+            }
+            // ==============
+            // Sales for June
+            // ==============
+            var salesJune = from d in sales
+                            where d.SalesDate.Month == 6
+                            select d;
+            if (salesJune.Any())
+            {
+                juneAmount = salesJune.Sum(d => d.Amount);
+            }
+            // ==============
+            // Sales for July
+            // ==============
+            var salesJuly = from d in sales
+                            where d.SalesDate.Month == 7
+                            select d;
+            if (salesJuly.Any())
+            {
+                julyAmount = salesJuly.Sum(d => d.Amount);
+            }
+            // ================
+            // Sales for August
+            // ================
+            var salesAugust = from d in sales
+                              where d.SalesDate.Month == 8
+                              select d;
+            if (salesAugust.Any())
+            {
+                augustAmount = salesAugust.Sum(d => d.Amount);
+            }
+            // ===================
+            // Sales for September
+            // ===================
+            var salesSeptember = from d in sales
+                                 where d.SalesDate.Month == 9
+                                 select d;
+            if (salesSeptember.Any())
+            {
+                septemberAmount = salesSeptember.Sum(d => d.Amount);
+            }
+            // =================
+            // Sales for October
+            // =================
+            var salesOctober = from d in sales
+                               where d.SalesDate.Month == 10
+                               select d;
+            if (salesOctober.Any())
+            {
+                octoberAmount = salesOctober.Sum(d => d.Amount);
+            }
+            // ==================
+            // Sales for November
+            // ==================
+            var salesNovember = from d in sales
+                                where d.SalesDate.Month == 11
+                                select d;
+            if (salesNovember.Any())
+            {
+                novemberAmount = salesNovember.Sum(d => d.Amount);
+            }
+            // ==================
+            // Sales for December
+            // ==================
+            var salesDecember = from d in sales
+                                where d.SalesDate.Month == 12
+                                select d;
+            if (salesDecember.Any())
+            {
+                decemberAmount = salesDecember.Sum(d => d.Amount);
+            }
+
+            chartMonthlySales.Series["Sales"].LabelFormat = "0.00";
+            chartMonthlySales.Series["Sales"].Points.AddXY("Jan.", januaryAmount);
+            chartMonthlySales.Series["Sales"].Points.AddXY("Feb.", februaryAmount);
+            chartMonthlySales.Series["Sales"].Points.AddXY("March", marchAmount);
+            chartMonthlySales.Series["Sales"].Points.AddXY("April", aprilAmount);
+            chartMonthlySales.Series["Sales"].Points.AddXY("May", mayAmount);
+            chartMonthlySales.Series["Sales"].Points.AddXY("June", juneAmount);
+            chartMonthlySales.Series["Sales"].Points.AddXY("July", julyAmount);
+            chartMonthlySales.Series["Sales"].Points.AddXY("Aug.", augustAmount);
+            chartMonthlySales.Series["Sales"].Points.AddXY("Sept.", septemberAmount);
+            chartMonthlySales.Series["Sales"].Points.AddXY("Oct.", octoberAmount);
+            chartMonthlySales.Series["Sales"].Points.AddXY("Nov.", novemberAmount);
+            chartMonthlySales.Series["Sales"].Points.AddXY("Dec.", decemberAmount);
+            chartMonthlySales.Series["Sales"].Color = ColorTranslator.FromHtml("#91C354");
+
         }
 
     }
