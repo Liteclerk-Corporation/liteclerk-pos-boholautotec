@@ -142,7 +142,7 @@
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.buttonCancel.ForeColor = System.Drawing.Color.White;
-            this.buttonCancel.ImageIndex = 0;
+            this.buttonCancel.ImageIndex = 7;
             this.buttonCancel.ImageList = this.imageListPOSTouchOthers;
             this.buttonCancel.Location = new System.Drawing.Point(831, 194);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(2);
@@ -164,6 +164,11 @@
             this.imageListPOSTouchOthers.Images.SetKeyName(2, "splitMergeBill.png");
             this.imageListPOSTouchOthers.Images.SetKeyName(3, "tender.png");
             this.imageListPOSTouchOthers.Images.SetKeyName(4, "DeliveryMan.png");
+            this.imageListPOSTouchOthers.Images.SetKeyName(5, "Print_Bills1.png");
+            this.imageListPOSTouchOthers.Images.SetKeyName(6, "Tender1.png");
+            this.imageListPOSTouchOthers.Images.SetKeyName(7, "Cancel1.png");
+            this.imageListPOSTouchOthers.Images.SetKeyName(8, "Split_Bills1.png");
+            this.imageListPOSTouchOthers.Images.SetKeyName(9, "Delivery1.png");
             // 
             // buttonReprint
             // 
@@ -173,7 +178,7 @@
             this.buttonReprint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonReprint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.buttonReprint.ForeColor = System.Drawing.Color.White;
-            this.buttonReprint.ImageIndex = 0;
+            this.buttonReprint.ImageIndex = 1;
             this.buttonReprint.ImageList = this.imageListPOSTouchBIllOut;
             this.buttonReprint.Location = new System.Drawing.Point(340, 194);
             this.buttonReprint.Margin = new System.Windows.Forms.Padding(2);
@@ -192,6 +197,7 @@
             this.imageListPOSTouchBIllOut.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListPOSTouchBIllOut.ImageStream")));
             this.imageListPOSTouchBIllOut.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListPOSTouchBIllOut.Images.SetKeyName(0, "print.png");
+            this.imageListPOSTouchBIllOut.Images.SetKeyName(1, "Print_Bills1.png");
             // 
             // buttonDeliver
             // 
@@ -201,7 +207,7 @@
             this.buttonDeliver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeliver.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.buttonDeliver.ForeColor = System.Drawing.Color.White;
-            this.buttonDeliver.ImageIndex = 4;
+            this.buttonDeliver.ImageIndex = 9;
             this.buttonDeliver.ImageList = this.imageListPOSTouchOthers;
             this.buttonDeliver.Location = new System.Drawing.Point(12, 330);
             this.buttonDeliver.Margin = new System.Windows.Forms.Padding(2);
@@ -244,7 +250,7 @@
             this.buttonTender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTender.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.buttonTender.ForeColor = System.Drawing.Color.White;
-            this.buttonTender.ImageIndex = 3;
+            this.buttonTender.ImageIndex = 6;
             this.buttonTender.ImageList = this.imageListPOSTouchOthers;
             this.buttonTender.Location = new System.Drawing.Point(668, 58);
             this.buttonTender.Margin = new System.Windows.Forms.Padding(2);
@@ -265,7 +271,7 @@
             this.buttonBillOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBillOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.buttonBillOut.ForeColor = System.Drawing.Color.White;
-            this.buttonBillOut.ImageIndex = 0;
+            this.buttonBillOut.ImageIndex = 1;
             this.buttonBillOut.ImageList = this.imageListPOSTouchBIllOut;
             this.buttonBillOut.Location = new System.Drawing.Point(340, 58);
             this.buttonBillOut.Margin = new System.Windows.Forms.Padding(2);
@@ -287,7 +293,7 @@
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.buttonDelete.ForeColor = System.Drawing.Color.White;
-            this.buttonDelete.ImageIndex = 3;
+            this.buttonDelete.ImageIndex = 4;
             this.buttonDelete.ImageList = this.imageListPOSTouchCancel;
             this.buttonDelete.Location = new System.Drawing.Point(668, 194);
             this.buttonDelete.Margin = new System.Windows.Forms.Padding(2);
@@ -308,6 +314,7 @@
             this.imageListPOSTouchCancel.Images.SetKeyName(1, "delete.png");
             this.imageListPOSTouchCancel.Images.SetKeyName(2, "splitMergeBill.png");
             this.imageListPOSTouchCancel.Images.SetKeyName(3, "delete.png");
+            this.imageListPOSTouchCancel.Images.SetKeyName(4, "Delete1.png");
             // 
             // buttonSplitMergeBill
             // 
@@ -317,7 +324,7 @@
             this.buttonSplitMergeBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSplitMergeBill.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.buttonSplitMergeBill.ForeColor = System.Drawing.Color.White;
-            this.buttonSplitMergeBill.ImageIndex = 2;
+            this.buttonSplitMergeBill.ImageIndex = 8;
             this.buttonSplitMergeBill.ImageList = this.imageListPOSTouchOthers;
             this.buttonSplitMergeBill.Location = new System.Drawing.Point(668, 330);
             this.buttonSplitMergeBill.Margin = new System.Windows.Forms.Padding(2);
@@ -338,7 +345,7 @@
             this.buttonPrintPartialBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrintPartialBill.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.buttonPrintPartialBill.ForeColor = System.Drawing.Color.White;
-            this.buttonPrintPartialBill.ImageIndex = 1;
+            this.buttonPrintPartialBill.ImageIndex = 5;
             this.buttonPrintPartialBill.ImageList = this.imageListPOSTouchOthers;
             this.buttonPrintPartialBill.Location = new System.Drawing.Point(340, 330);
             this.buttonPrintPartialBill.Margin = new System.Windows.Forms.Padding(2);
@@ -359,7 +366,7 @@
             this.buttonEditOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEditOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.buttonEditOrder.ForeColor = System.Drawing.Color.White;
-            this.buttonEditOrder.ImageIndex = 1;
+            this.buttonEditOrder.ImageIndex = 6;
             this.buttonEditOrder.ImageList = this.imageListPOSTouchEditOrder;
             this.buttonEditOrder.Location = new System.Drawing.Point(14, 58);
             this.buttonEditOrder.Margin = new System.Windows.Forms.Padding(2);
@@ -383,6 +390,16 @@
             this.imageListPOSTouchEditOrder.Images.SetKeyName(3, "printBills.png");
             this.imageListPOSTouchEditOrder.Images.SetKeyName(4, "splitMergeBill.png");
             this.imageListPOSTouchEditOrder.Images.SetKeyName(5, "tender.png");
+            this.imageListPOSTouchEditOrder.Images.SetKeyName(6, "Edit_Orders1.png");
+            this.imageListPOSTouchEditOrder.Images.SetKeyName(7, "Print_Bills1.png");
+            this.imageListPOSTouchEditOrder.Images.SetKeyName(8, "Delete1.png");
+            this.imageListPOSTouchEditOrder.Images.SetKeyName(9, "Cancel1.png");
+            this.imageListPOSTouchEditOrder.Images.SetKeyName(10, "Change_Table1.png");
+            this.imageListPOSTouchEditOrder.Images.SetKeyName(11, "Delivery1.png");
+            this.imageListPOSTouchEditOrder.Images.SetKeyName(12, "Split_Bills1.png");
+            this.imageListPOSTouchEditOrder.Images.SetKeyName(13, "Tender1.png");
+            this.imageListPOSTouchEditOrder.Images.SetKeyName(14, "WalkIn1.png");
+            this.imageListPOSTouchEditOrder.Images.SetKeyName(15, "Item_Group1.png");
             // 
             // printDialogReprintOR
             // 
