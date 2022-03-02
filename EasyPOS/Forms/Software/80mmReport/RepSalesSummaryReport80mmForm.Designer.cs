@@ -51,10 +51,10 @@ namespace EasyPOS.Forms.Software._80mmReport
             // panel2
             // 
             this.panel2.Controls.Add(this.printPreviewControl80mmSalesSummaryReport);
-            this.panel2.Location = new System.Drawing.Point(0, 50);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(0, 62);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(531, 523);
+            this.panel2.Size = new System.Drawing.Size(708, 644);
             this.panel2.TabIndex = 7;
             // 
             // printPreviewControl80mmSalesSummaryReport
@@ -63,9 +63,9 @@ namespace EasyPOS.Forms.Software._80mmReport
             this.printPreviewControl80mmSalesSummaryReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.printPreviewControl80mmSalesSummaryReport.Document = this.printDocumentSalesSummaryReport;
             this.printPreviewControl80mmSalesSummaryReport.Location = new System.Drawing.Point(0, 0);
-            this.printPreviewControl80mmSalesSummaryReport.Margin = new System.Windows.Forms.Padding(2);
+            this.printPreviewControl80mmSalesSummaryReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.printPreviewControl80mmSalesSummaryReport.Name = "printPreviewControl80mmSalesSummaryReport";
-            this.printPreviewControl80mmSalesSummaryReport.Size = new System.Drawing.Size(531, 523);
+            this.printPreviewControl80mmSalesSummaryReport.Size = new System.Drawing.Size(708, 644);
             this.printPreviewControl80mmSalesSummaryReport.TabIndex = 0;
             this.printPreviewControl80mmSalesSummaryReport.Zoom = 1.5D;
             // 
@@ -82,9 +82,9 @@ namespace EasyPOS.Forms.Software._80mmReport
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(530, 50);
+            this.panel1.Size = new System.Drawing.Size(707, 62);
             this.panel1.TabIndex = 9;
             // 
             // buttonPrint
@@ -98,10 +98,10 @@ namespace EasyPOS.Forms.Software._80mmReport
             this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrint.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint.ForeColor = System.Drawing.Color.White;
-            this.buttonPrint.Location = new System.Drawing.Point(375, 10);
-            this.buttonPrint.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonPrint.Location = new System.Drawing.Point(500, 12);
+            this.buttonPrint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(70, 32);
+            this.buttonPrint.Size = new System.Drawing.Size(93, 39);
             this.buttonPrint.TabIndex = 4;
             this.buttonPrint.TabStop = false;
             this.buttonPrint.Text = "Print";
@@ -110,11 +110,11 @@ namespace EasyPOS.Forms.Software._80mmReport
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Reports;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Reports1;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(51, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -130,10 +130,10 @@ namespace EasyPOS.Forms.Software._80mmReport
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(450, 10);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonClose.Location = new System.Drawing.Point(600, 12);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(70, 32);
+            this.buttonClose.Size = new System.Drawing.Size(93, 39);
             this.buttonClose.TabIndex = 1;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = false;
@@ -143,22 +143,23 @@ namespace EasyPOS.Forms.Software._80mmReport
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(50, 14);
+            this.label1.Location = new System.Drawing.Point(67, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(293, 28);
+            this.label1.Size = new System.Drawing.Size(362, 35);
             this.label1.TabIndex = 2;
             this.label1.Text = "80mm Sales Summary Report";
             // 
             // RepSalesSummaryReport80mmForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 573);
+            this.ClientSize = new System.Drawing.Size(707, 705);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RepSalesSummaryReport80mmForm";

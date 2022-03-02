@@ -71,7 +71,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.User;
+            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.User1;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 40);

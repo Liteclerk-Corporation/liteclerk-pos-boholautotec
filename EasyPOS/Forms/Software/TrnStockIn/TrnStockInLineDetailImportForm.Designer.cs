@@ -79,8 +79,8 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::EasyPOS.Properties.Resources.Stock_In;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 18);
+            this.pictureBox2.Image = global::EasyPOS.Properties.Resources.StockIn1;
+            this.pictureBox2.Location = new System.Drawing.Point(14, 13);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 40);
@@ -92,7 +92,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(62, 18);
+            this.label1.Location = new System.Drawing.Point(62, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 35);

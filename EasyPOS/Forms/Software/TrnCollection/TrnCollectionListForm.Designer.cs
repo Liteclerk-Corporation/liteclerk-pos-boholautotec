@@ -97,7 +97,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.PurchaseOrder;
+            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Purchase_Order1;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";

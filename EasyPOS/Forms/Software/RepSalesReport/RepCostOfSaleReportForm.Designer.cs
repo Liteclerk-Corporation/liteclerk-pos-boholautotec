@@ -216,7 +216,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::EasyPOS.Properties.Resources.Reports;
+            this.pictureBox2.Image = global::EasyPOS.Properties.Resources.Reports1;
             this.pictureBox2.Location = new System.Drawing.Point(11, 6);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox2.Name = "pictureBox2";

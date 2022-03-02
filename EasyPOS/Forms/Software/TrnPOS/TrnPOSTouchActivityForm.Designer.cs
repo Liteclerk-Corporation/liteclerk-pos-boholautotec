@@ -75,7 +75,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.POS_Touch;
+            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.POSTouch1;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";

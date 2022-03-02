@@ -74,7 +74,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.User;
+            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.User1;
             this.pictureBox1.Location = new System.Drawing.Point(12, 6);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";

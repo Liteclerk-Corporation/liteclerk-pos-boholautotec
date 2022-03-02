@@ -72,7 +72,7 @@ namespace EasyPOS.Forms.Software.SysMenu
             var sysCurrent = Modules.SysCurrentModule.GetCurrentSettings();
             if (sysCurrent.POSType == "POS Touch")
             {
-                buttonPOS.ImageIndex = 14;
+                buttonPOS.ImageIndex = 17;
             }
         }
 

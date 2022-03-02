@@ -104,16 +104,16 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.buttonCustomerImport = new System.Windows.Forms.Button();
-            this.folderBrowserDialogGenerateCSV = new System.Windows.Forms.FolderBrowserDialog();
-            this.openFileDialogImportCSV = new System.Windows.Forms.OpenFileDialog();
             this.tabPageRecalculateInventory = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.cboItemDescription = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cboBarcode = new System.Windows.Forms.ComboBox();
             this.buttonRecalculate = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.folderBrowserDialogGenerateCSV = new System.Windows.Forms.FolderBrowserDialog();
+            this.openFileDialogImportCSV = new System.Windows.Forms.OpenFileDialog();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAuditTrailList)).BeginInit();
@@ -463,7 +463,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Utilities;
+            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Utilities1;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -1130,10 +1130,6 @@
             this.buttonCustomerImport.UseVisualStyleBackColor = false;
             this.buttonCustomerImport.Click += new System.EventHandler(this.buttonCustomerImport_Click);
             // 
-            // openFileDialogImportCSV
-            // 
-            this.openFileDialogImportCSV.FileName = "openFileDialogImportCSV";
-            // 
             // tabPageRecalculateInventory
             // 
             this.tabPageRecalculateInventory.Controls.Add(this.label10);
@@ -1150,28 +1146,6 @@
             this.tabPageRecalculateInventory.TabIndex = 4;
             this.tabPageRecalculateInventory.Text = "Recalculate Inventory";
             this.tabPageRecalculateInventory.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::EasyPOS.Properties.Resources.Stock_In;
-            this.pictureBox2.Location = new System.Drawing.Point(28, 25);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 31;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(83, 32);
-            this.label7.Margin = new System.Windows.Forms.Padding(0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(331, 35);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "Recalculate Item Inventory";
             // 
             // label10
             // 
@@ -1232,6 +1206,32 @@
             this.buttonRecalculate.Text = "Recalculate";
             this.buttonRecalculate.UseVisualStyleBackColor = false;
             this.buttonRecalculate.Click += new System.EventHandler(this.buttonRecalculate_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(83, 32);
+            this.label7.Margin = new System.Windows.Forms.Padding(0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(331, 35);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Recalculate Item Inventory";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::EasyPOS.Properties.Resources.Stock_In;
+            this.pictureBox2.Location = new System.Drawing.Point(28, 25);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 31;
+            this.pictureBox2.TabStop = false;
+            // 
+            // openFileDialogImportCSV
+            // 
+            this.openFileDialogImportCSV.FileName = "openFileDialogImportCSV";
             // 
             // SysUtilitiesForm
             // 

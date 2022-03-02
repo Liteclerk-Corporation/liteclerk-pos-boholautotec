@@ -117,7 +117,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Reports;
+            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Reports1;
             this.pictureBox1.Location = new System.Drawing.Point(14, 8);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.pictureBox1.Name = "pictureBox1";
@@ -369,7 +369,7 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "RepItemExpiryReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Item Expiry Report";

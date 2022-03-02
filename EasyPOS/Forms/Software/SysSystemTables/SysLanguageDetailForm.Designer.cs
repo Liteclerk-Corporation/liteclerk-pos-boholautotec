@@ -58,7 +58,7 @@ namespace EasyPOS.Forms.Software.SysSystemTables
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
-            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Settings;
+            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.System_Table;
             this.pictureBox1.Location = new System.Drawing.Point(15, 14);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";

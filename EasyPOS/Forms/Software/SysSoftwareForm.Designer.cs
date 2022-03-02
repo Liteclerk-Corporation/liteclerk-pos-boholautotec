@@ -412,7 +412,7 @@
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.menuToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.easypos;
+            this.menuToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.liteclerkicon;
             this.menuToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -430,7 +430,7 @@
             this.toolStripSeparator1,
             this.userToolStripMenuItem});
             this.setupToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.setupToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Item;
+            this.setupToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Items1;
             this.setupToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.setupToolStripMenuItem.Name = "setupToolStripMenuItem";
             this.setupToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -440,7 +440,7 @@
             // 
             // itemToolStripMenuItem
             // 
-            this.itemToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Item;
+            this.itemToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Items1;
             this.itemToolStripMenuItem.Name = "itemToolStripMenuItem";
             this.itemToolStripMenuItem.Size = new System.Drawing.Size(185, 28);
             this.itemToolStripMenuItem.Text = "Item";
@@ -448,7 +448,7 @@
             // 
             // customerToolStripMenuItem
             // 
-            this.customerToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Customer;
+            this.customerToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Customer1;
             this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
             this.customerToolStripMenuItem.Size = new System.Drawing.Size(185, 28);
             this.customerToolStripMenuItem.Text = "Customer";
@@ -456,7 +456,7 @@
             // 
             // discountToolStripMenuItem
             // 
-            this.discountToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Discounting;
+            this.discountToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Discount1;
             this.discountToolStripMenuItem.Name = "discountToolStripMenuItem";
             this.discountToolStripMenuItem.Size = new System.Drawing.Size(185, 28);
             this.discountToolStripMenuItem.Text = "Discounting";
@@ -469,7 +469,7 @@
             // 
             // userToolStripMenuItem
             // 
-            this.userToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.User;
+            this.userToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.User1;
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
             this.userToolStripMenuItem.Size = new System.Drawing.Size(185, 28);
             this.userToolStripMenuItem.Text = "User";
@@ -484,7 +484,7 @@
             this.toolStripMenuItemKitchenDisplay,
             this.toolStripMenuItemDispatchStation});
             this.toolStripMenuItemRestaurant.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.toolStripMenuItemRestaurant.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemRestaurant.Image")));
+            this.toolStripMenuItemRestaurant.Image = global::EasyPOS.Properties.Resources.Change_Table1;
             this.toolStripMenuItemRestaurant.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolStripMenuItemRestaurant.Name = "toolStripMenuItemRestaurant";
             this.toolStripMenuItemRestaurant.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -494,7 +494,7 @@
             // 
             // toolStripMenuItemTabeGroup
             // 
-            this.toolStripMenuItemTabeGroup.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemTabeGroup.Image")));
+            this.toolStripMenuItemTabeGroup.Image = global::EasyPOS.Properties.Resources.Change_Table1;
             this.toolStripMenuItemTabeGroup.Name = "toolStripMenuItemTabeGroup";
             this.toolStripMenuItemTabeGroup.Size = new System.Drawing.Size(218, 28);
             this.toolStripMenuItemTabeGroup.Text = "Table Group";
@@ -502,7 +502,7 @@
             // 
             // toolStripMenuItemItemGroup
             // 
-            this.toolStripMenuItemItemGroup.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemItemGroup.Image")));
+            this.toolStripMenuItemItemGroup.Image = global::EasyPOS.Properties.Resources.Item_Group1;
             this.toolStripMenuItemItemGroup.Name = "toolStripMenuItemItemGroup";
             this.toolStripMenuItemItemGroup.Size = new System.Drawing.Size(218, 28);
             this.toolStripMenuItemItemGroup.Text = "Item Group";
@@ -515,7 +515,7 @@
             // 
             // toolStripMenuItemKitchenDisplay
             // 
-            this.toolStripMenuItemKitchenDisplay.Image = global::EasyPOS.Properties.Resources.Kitchen;
+            this.toolStripMenuItemKitchenDisplay.Image = global::EasyPOS.Properties.Resources.Kitchen1;
             this.toolStripMenuItemKitchenDisplay.Name = "toolStripMenuItemKitchenDisplay";
             this.toolStripMenuItemKitchenDisplay.Size = new System.Drawing.Size(218, 28);
             this.toolStripMenuItemKitchenDisplay.Text = "Kitchen Display";
@@ -523,7 +523,7 @@
             // 
             // toolStripMenuItemDispatchStation
             // 
-            this.toolStripMenuItemDispatchStation.Image = global::EasyPOS.Properties.Resources.Dispatch;
+            this.toolStripMenuItemDispatchStation.Image = global::EasyPOS.Properties.Resources.Delivery1;
             this.toolStripMenuItemDispatchStation.Name = "toolStripMenuItemDispatchStation";
             this.toolStripMenuItemDispatchStation.Size = new System.Drawing.Size(218, 28);
             this.toolStripMenuItemDispatchStation.Text = "Dispatch Station";
@@ -542,7 +542,7 @@
             this.purchaseOrderToolStripMenuItem,
             this.collectionToolStripMenuItem});
             this.activityToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.activityToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.POS;
+            this.activityToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.POS_Barcode;
             this.activityToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.activityToolStripMenuItem.Name = "activityToolStripMenuItem";
             this.activityToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -555,14 +555,14 @@
             this.pOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pOSToolStripMenuItem1,
             this.pOSTouchToolStripMenuItem});
-            this.pOSToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.POS;
+            this.pOSToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.POS_Barcode;
             this.pOSToolStripMenuItem.Name = "pOSToolStripMenuItem";
             this.pOSToolStripMenuItem.Size = new System.Drawing.Size(212, 28);
             this.pOSToolStripMenuItem.Text = "Sales";
             // 
             // pOSToolStripMenuItem1
             // 
-            this.pOSToolStripMenuItem1.Image = global::EasyPOS.Properties.Resources.POS;
+            this.pOSToolStripMenuItem1.Image = global::EasyPOS.Properties.Resources.POS_Barcode;
             this.pOSToolStripMenuItem1.Name = "pOSToolStripMenuItem1";
             this.pOSToolStripMenuItem1.Size = new System.Drawing.Size(193, 28);
             this.pOSToolStripMenuItem1.Text = "POS Barcode";
@@ -570,7 +570,7 @@
             // 
             // pOSTouchToolStripMenuItem
             // 
-            this.pOSTouchToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.POS_Touch;
+            this.pOSTouchToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.POSTouch1;
             this.pOSTouchToolStripMenuItem.Name = "pOSTouchToolStripMenuItem";
             this.pOSTouchToolStripMenuItem.Size = new System.Drawing.Size(193, 28);
             this.pOSTouchToolStripMenuItem.Text = "POS Touch";
@@ -578,7 +578,7 @@
             // 
             // remittanceToolStripMenuItem
             // 
-            this.remittanceToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Disbursement;
+            this.remittanceToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Cash_In_Out;
             this.remittanceToolStripMenuItem.Name = "remittanceToolStripMenuItem";
             this.remittanceToolStripMenuItem.Size = new System.Drawing.Size(212, 28);
             this.remittanceToolStripMenuItem.Text = "Remittance";
@@ -591,7 +591,7 @@
             // 
             // stockInToolStripMenuItem
             // 
-            this.stockInToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Stock_In;
+            this.stockInToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.StockIn1;
             this.stockInToolStripMenuItem.Name = "stockInToolStripMenuItem";
             this.stockInToolStripMenuItem.Size = new System.Drawing.Size(212, 28);
             this.stockInToolStripMenuItem.Text = "Stock In";
@@ -599,7 +599,7 @@
             // 
             // stockOutToolStripMenuItem
             // 
-            this.stockOutToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Stock_Out;
+            this.stockOutToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.StockOut1;
             this.stockOutToolStripMenuItem.Name = "stockOutToolStripMenuItem";
             this.stockOutToolStripMenuItem.Size = new System.Drawing.Size(212, 28);
             this.stockOutToolStripMenuItem.Text = "Stock Out";
@@ -607,7 +607,7 @@
             // 
             // stockCountToolStripMenuItem
             // 
-            this.stockCountToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Stock_Count;
+            this.stockCountToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.StockCount1;
             this.stockCountToolStripMenuItem.Name = "stockCountToolStripMenuItem";
             this.stockCountToolStripMenuItem.Size = new System.Drawing.Size(212, 28);
             this.stockCountToolStripMenuItem.Text = "Stock Count";
@@ -620,7 +620,7 @@
             // 
             // purchaseOrderToolStripMenuItem
             // 
-            this.purchaseOrderToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.PurchaseOrder;
+            this.purchaseOrderToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Purchase_Order1;
             this.purchaseOrderToolStripMenuItem.Name = "purchaseOrderToolStripMenuItem";
             this.purchaseOrderToolStripMenuItem.Size = new System.Drawing.Size(212, 28);
             this.purchaseOrderToolStripMenuItem.Text = "Purchase Order";
@@ -628,7 +628,7 @@
             // 
             // collectionToolStripMenuItem
             // 
-            this.collectionToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.PurchaseOrder;
+            this.collectionToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Purchase_Order1;
             this.collectionToolStripMenuItem.Name = "collectionToolStripMenuItem";
             this.collectionToolStripMenuItem.Size = new System.Drawing.Size(212, 28);
             this.collectionToolStripMenuItem.Text = "Collection";
@@ -640,7 +640,7 @@
             this.systemTablesToolStripMenuItem,
             this.utilitiesToolStripMenuItem});
             this.systemToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.systemToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.System_Tables;
+            this.systemToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.System_Table;
             this.systemToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.systemToolStripMenuItem.Name = "systemToolStripMenuItem";
             this.systemToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -650,17 +650,17 @@
             // 
             // systemTablesToolStripMenuItem
             // 
-            this.systemTablesToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.System_Tables;
+            this.systemTablesToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.System_Table1;
             this.systemTablesToolStripMenuItem.Name = "systemTablesToolStripMenuItem";
-            this.systemTablesToolStripMenuItem.Size = new System.Drawing.Size(199, 28);
+            this.systemTablesToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.systemTablesToolStripMenuItem.Text = "System Tables";
             this.systemTablesToolStripMenuItem.Click += new System.EventHandler(this.systemTablesToolStripMenuItem_Click);
             // 
             // utilitiesToolStripMenuItem
             // 
-            this.utilitiesToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Utilities;
+            this.utilitiesToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Utilities1;
             this.utilitiesToolStripMenuItem.Name = "utilitiesToolStripMenuItem";
-            this.utilitiesToolStripMenuItem.Size = new System.Drawing.Size(199, 28);
+            this.utilitiesToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.utilitiesToolStripMenuItem.Text = "Utilities";
             this.utilitiesToolStripMenuItem.Click += new System.EventHandler(this.utilitiesToolStripMenuItem_Click);
             // 
@@ -672,7 +672,7 @@
             this.remittanceReportToolStripMenuItem,
             this.inventoryReportToolStripMenuItem});
             this.reportsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.reportsToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Reports;
+            this.reportsToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Reports1;
             this.reportsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -682,7 +682,7 @@
             // 
             // pOSReportToolStripMenuItem
             // 
-            this.pOSReportToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Reports;
+            this.pOSReportToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Reports1;
             this.pOSReportToolStripMenuItem.Name = "pOSReportToolStripMenuItem";
             this.pOSReportToolStripMenuItem.Size = new System.Drawing.Size(236, 28);
             this.pOSReportToolStripMenuItem.Text = "POS Report";
@@ -690,7 +690,7 @@
             // 
             // salesReportToolStripMenuItem
             // 
-            this.salesReportToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Reports;
+            this.salesReportToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Reports1;
             this.salesReportToolStripMenuItem.Name = "salesReportToolStripMenuItem";
             this.salesReportToolStripMenuItem.Size = new System.Drawing.Size(236, 28);
             this.salesReportToolStripMenuItem.Text = "Sales Report";
@@ -698,7 +698,7 @@
             // 
             // remittanceReportToolStripMenuItem
             // 
-            this.remittanceReportToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Reports;
+            this.remittanceReportToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Reports1;
             this.remittanceReportToolStripMenuItem.Name = "remittanceReportToolStripMenuItem";
             this.remittanceReportToolStripMenuItem.Size = new System.Drawing.Size(236, 28);
             this.remittanceReportToolStripMenuItem.Text = "Remittance Report";
@@ -706,7 +706,7 @@
             // 
             // inventoryReportToolStripMenuItem
             // 
-            this.inventoryReportToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Reports;
+            this.inventoryReportToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Reports1;
             this.inventoryReportToolStripMenuItem.Name = "inventoryReportToolStripMenuItem";
             this.inventoryReportToolStripMenuItem.Size = new System.Drawing.Size(236, 28);
             this.inventoryReportToolStripMenuItem.Text = "Inventory Report";
@@ -714,7 +714,7 @@
             // 
             // settingsToolStripMenuItem
             // 
-            this.settingsToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Settings;
+            this.settingsToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Settings1;
             this.settingsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);

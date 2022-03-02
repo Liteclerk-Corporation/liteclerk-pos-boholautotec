@@ -41,6 +41,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label38 = new System.Windows.Forms.Label();
+            this.textBoxLogoFilePath = new System.Windows.Forms.TextBox();
             this.textBoxCompanyName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
@@ -193,8 +195,6 @@
             this.buttonKitchenPageListLast = new System.Windows.Forms.Button();
             this.textBoxKitchenPageNumber = new System.Windows.Forms.TextBox();
             this.backgroundWorkerEasyfisIntegration = new System.ComponentModel.BackgroundWorker();
-            this.textBoxLogoFilePath = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -279,7 +279,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Settings;
+            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Settings1;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -377,6 +377,27 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1370, 594);
             this.panel6.TabIndex = 0;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(29, 185);
+            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(121, 23);
+            this.label38.TabIndex = 6;
+            this.label38.Text = "Logo File Path:";
+            // 
+            // textBoxLogoFilePath
+            // 
+            this.textBoxLogoFilePath.Enabled = false;
+            this.textBoxLogoFilePath.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLogoFilePath.Location = new System.Drawing.Point(156, 182);
+            this.textBoxLogoFilePath.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxLogoFilePath.Name = "textBoxLogoFilePath";
+            this.textBoxLogoFilePath.Size = new System.Drawing.Size(553, 30);
+            this.textBoxLogoFilePath.TabIndex = 5;
             // 
             // textBoxCompanyName
             // 
@@ -2242,27 +2263,6 @@
             this.backgroundWorkerEasyfisIntegration.WorkerReportsProgress = true;
             this.backgroundWorkerEasyfisIntegration.WorkerSupportsCancellation = true;
             this.backgroundWorkerEasyfisIntegration.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerEasyfisIntegration_DoWork);
-            // 
-            // textBoxLogoFilePath
-            // 
-            this.textBoxLogoFilePath.Enabled = false;
-            this.textBoxLogoFilePath.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLogoFilePath.Location = new System.Drawing.Point(156, 182);
-            this.textBoxLogoFilePath.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxLogoFilePath.Name = "textBoxLogoFilePath";
-            this.textBoxLogoFilePath.Size = new System.Drawing.Size(553, 30);
-            this.textBoxLogoFilePath.TabIndex = 5;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(29, 185);
-            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(121, 23);
-            this.label38.TabIndex = 6;
-            this.label38.Text = "Logo File Path:";
             // 
             // SysSettingsForm
             // 
