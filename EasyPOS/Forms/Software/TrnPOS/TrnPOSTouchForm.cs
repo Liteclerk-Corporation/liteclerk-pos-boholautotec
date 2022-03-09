@@ -73,12 +73,12 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 sysSoftwareForm = softwareForm;
                 if (Modules.SysCurrentModule.GetCurrentSettings().HideSalesAmount == true)
                 {
-                    textBoxTotalAmount.Visible = false;
+                    //textBoxTotalAmount.Visible = false;
                     tabPageCollectedColumnAmount.Visible = false;
                 }
                 else
                 {
-                    textBoxTotalAmount.Visible = true;
+                    //textBoxTotalAmount.Visible = true;
                     tabPageCollectedColumnAmount.Visible = true;
                 }
             }

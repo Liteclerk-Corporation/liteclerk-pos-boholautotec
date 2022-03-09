@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SysMenuForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.imageListMenuIcons = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.chartTopSellingItems = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -136,67 +136,67 @@
             this.chartTopSellingItems.BorderlineColor = System.Drawing.Color.Transparent;
             this.chartTopSellingItems.BorderSkin.BackColor = System.Drawing.Color.Transparent;
             this.chartTopSellingItems.BorderSkin.PageColor = System.Drawing.Color.Transparent;
-            chartArea5.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
-            chartArea5.Area3DStyle.Enable3D = true;
-            chartArea5.Area3DStyle.Inclination = 50;
-            chartArea5.Area3DStyle.IsRightAngleAxes = false;
-            chartArea5.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea5.Area3DStyle.PointDepth = 110;
-            chartArea5.BackColor = System.Drawing.Color.Transparent;
-            chartArea5.BackSecondaryColor = System.Drawing.Color.Transparent;
-            chartArea5.Name = "ChartArea1";
-            this.chartTopSellingItems.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartTopSellingItems.Legends.Add(legend5);
+            chartArea1.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
+            chartArea1.Area3DStyle.Enable3D = true;
+            chartArea1.Area3DStyle.Inclination = 50;
+            chartArea1.Area3DStyle.IsRightAngleAxes = false;
+            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea1.Area3DStyle.PointDepth = 110;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chartTopSellingItems.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartTopSellingItems.Legends.Add(legend1);
             this.chartTopSellingItems.Location = new System.Drawing.Point(28, 352);
             this.chartTopSellingItems.Margin = new System.Windows.Forms.Padding(2);
             this.chartTopSellingItems.Name = "chartTopSellingItems";
             this.chartTopSellingItems.Padding = new System.Windows.Forms.Padding(2);
             this.chartTopSellingItems.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series5.Legend = "Legend1";
-            series5.Name = "TopSelling";
-            this.chartTopSellingItems.Series.Add(series5);
-            this.chartTopSellingItems.Size = new System.Drawing.Size(532, 311);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "TopSelling";
+            this.chartTopSellingItems.Series.Add(series1);
+            this.chartTopSellingItems.Size = new System.Drawing.Size(587, 311);
             this.chartTopSellingItems.TabIndex = 17;
             this.chartTopSellingItems.Text = "chart2";
-            title5.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title5.Name = "Title1";
-            title5.Text = "Top Selling Items";
-            this.chartTopSellingItems.Titles.Add(title5);
+            title1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "Top Selling Items";
+            this.chartTopSellingItems.Titles.Add(title1);
             // 
             // chartMonthlySales
             // 
             this.chartMonthlySales.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chartMonthlySales.BackColor = System.Drawing.Color.DarkGray;
-            chartArea6.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea6.Name = "ChartArea1";
-            this.chartMonthlySales.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartMonthlySales.Legends.Add(legend6);
+            chartArea2.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea2.Name = "ChartArea1";
+            this.chartMonthlySales.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartMonthlySales.Legends.Add(legend2);
             this.chartMonthlySales.Location = new System.Drawing.Point(28, 20);
             this.chartMonthlySales.Margin = new System.Windows.Forms.Padding(2);
             this.chartMonthlySales.Name = "chartMonthlySales";
             this.chartMonthlySales.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartMonthlySales.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))))};
-            series6.ChartArea = "ChartArea1";
-            series6.IsValueShownAsLabel = true;
-            series6.LabelAngle = 15;
-            series6.Legend = "Legend1";
-            series6.MarkerSize = 3;
-            series6.Name = "Sales";
-            this.chartMonthlySales.Series.Add(series6);
-            this.chartMonthlySales.Size = new System.Drawing.Size(532, 311);
+            series2.ChartArea = "ChartArea1";
+            series2.IsValueShownAsLabel = true;
+            series2.LabelAngle = 15;
+            series2.Legend = "Legend1";
+            series2.MarkerSize = 3;
+            series2.Name = "Sales";
+            this.chartMonthlySales.Series.Add(series2);
+            this.chartMonthlySales.Size = new System.Drawing.Size(587, 311);
             this.chartMonthlySales.TabIndex = 16;
             this.chartMonthlySales.TabStop = false;
             this.chartMonthlySales.Text = "chart1";
-            title6.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title6.Name = "Titles";
-            title6.Text = "Monthly Sales";
-            this.chartMonthlySales.Titles.Add(title6);
+            title2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Titles";
+            title2.Text = "Monthly Sales";
+            this.chartMonthlySales.Titles.Add(title2);
             // 
             // buttonItem
             // 
@@ -209,7 +209,7 @@
             this.buttonItem.ForeColor = System.Drawing.Color.White;
             this.buttonItem.ImageIndex = 22;
             this.buttonItem.ImageList = this.imageListMenuIcons;
-            this.buttonItem.Location = new System.Drawing.Point(588, 456);
+            this.buttonItem.Location = new System.Drawing.Point(634, 456);
             this.buttonItem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonItem.Name = "buttonItem";
             this.buttonItem.Padding = new System.Windows.Forms.Padding(10);
@@ -232,7 +232,7 @@
             this.buttonUser.ForeColor = System.Drawing.Color.White;
             this.buttonUser.ImageIndex = 26;
             this.buttonUser.ImageList = this.imageListMenuIcons;
-            this.buttonUser.Location = new System.Drawing.Point(819, 559);
+            this.buttonUser.Location = new System.Drawing.Point(865, 559);
             this.buttonUser.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUser.Name = "buttonUser";
             this.buttonUser.Padding = new System.Windows.Forms.Padding(10);
@@ -254,7 +254,7 @@
             this.buttonPOS.ForeColor = System.Drawing.Color.White;
             this.buttonPOS.ImageIndex = 15;
             this.buttonPOS.ImageList = this.imageListMenuIcons;
-            this.buttonPOS.Location = new System.Drawing.Point(588, 20);
+            this.buttonPOS.Location = new System.Drawing.Point(634, 20);
             this.buttonPOS.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPOS.Name = "buttonPOS";
             this.buttonPOS.Padding = new System.Windows.Forms.Padding(10);
@@ -277,7 +277,7 @@
             this.buttonUtilities.ForeColor = System.Drawing.Color.White;
             this.buttonUtilities.ImageIndex = 24;
             this.buttonUtilities.ImageList = this.imageListMenuIcons;
-            this.buttonUtilities.Location = new System.Drawing.Point(1051, 456);
+            this.buttonUtilities.Location = new System.Drawing.Point(1097, 456);
             this.buttonUtilities.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUtilities.Name = "buttonUtilities";
             this.buttonUtilities.Padding = new System.Windows.Forms.Padding(10);
@@ -299,7 +299,7 @@
             this.buttonDiscounting.ForeColor = System.Drawing.Color.White;
             this.buttonDiscounting.ImageIndex = 25;
             this.buttonDiscounting.ImageList = this.imageListMenuIcons;
-            this.buttonDiscounting.Location = new System.Drawing.Point(588, 559);
+            this.buttonDiscounting.Location = new System.Drawing.Point(634, 559);
             this.buttonDiscounting.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDiscounting.Name = "buttonDiscounting";
             this.buttonDiscounting.Padding = new System.Windows.Forms.Padding(10);
@@ -321,7 +321,7 @@
             this.buttonSettings.ForeColor = System.Drawing.Color.White;
             this.buttonSettings.ImageIndex = 27;
             this.buttonSettings.ImageList = this.imageListMenuIcons;
-            this.buttonSettings.Location = new System.Drawing.Point(1051, 559);
+            this.buttonSettings.Location = new System.Drawing.Point(1097, 559);
             this.buttonSettings.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSettings.Name = "buttonSettings";
             this.buttonSettings.Padding = new System.Windows.Forms.Padding(10);
@@ -343,7 +343,7 @@
             this.buttonCustomer.ForeColor = System.Drawing.Color.White;
             this.buttonCustomer.ImageIndex = 23;
             this.buttonCustomer.ImageList = this.imageListMenuIcons;
-            this.buttonCustomer.Location = new System.Drawing.Point(819, 456);
+            this.buttonCustomer.Location = new System.Drawing.Point(865, 456);
             this.buttonCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCustomer.Name = "buttonCustomer";
             this.buttonCustomer.Padding = new System.Windows.Forms.Padding(10);
@@ -365,7 +365,7 @@
             this.buttonPOSReport.ForeColor = System.Drawing.Color.White;
             this.buttonPOSReport.ImageIndex = 18;
             this.buttonPOSReport.ImageList = this.imageListMenuIcons;
-            this.buttonPOSReport.Location = new System.Drawing.Point(1051, 238);
+            this.buttonPOSReport.Location = new System.Drawing.Point(1097, 238);
             this.buttonPOSReport.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPOSReport.Name = "buttonPOSReport";
             this.buttonPOSReport.Padding = new System.Windows.Forms.Padding(10);
@@ -387,7 +387,7 @@
             this.buttonSystemTables.ForeColor = System.Drawing.Color.White;
             this.buttonSystemTables.ImageIndex = 21;
             this.buttonSystemTables.ImageList = this.imageListMenuIcons;
-            this.buttonSystemTables.Location = new System.Drawing.Point(1051, 348);
+            this.buttonSystemTables.Location = new System.Drawing.Point(1097, 348);
             this.buttonSystemTables.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSystemTables.Name = "buttonSystemTables";
             this.buttonSystemTables.Padding = new System.Windows.Forms.Padding(10);
@@ -409,7 +409,7 @@
             this.buttonStockCount.ForeColor = System.Drawing.Color.White;
             this.buttonStockCount.ImageIndex = 19;
             this.buttonStockCount.ImageList = this.imageListMenuIcons;
-            this.buttonStockCount.Location = new System.Drawing.Point(1051, 20);
+            this.buttonStockCount.Location = new System.Drawing.Point(1097, 20);
             this.buttonStockCount.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStockCount.Name = "buttonStockCount";
             this.buttonStockCount.Padding = new System.Windows.Forms.Padding(10);
@@ -431,7 +431,7 @@
             this.buttonDisbursement.ForeColor = System.Drawing.Color.White;
             this.buttonDisbursement.ImageIndex = 16;
             this.buttonDisbursement.ImageList = this.imageListMenuIcons;
-            this.buttonDisbursement.Location = new System.Drawing.Point(819, 20);
+            this.buttonDisbursement.Location = new System.Drawing.Point(865, 20);
             this.buttonDisbursement.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDisbursement.Name = "buttonDisbursement";
             this.buttonDisbursement.Padding = new System.Windows.Forms.Padding(10);
@@ -454,7 +454,7 @@
             this.buttonInventory.ForeColor = System.Drawing.Color.White;
             this.buttonInventory.ImageIndex = 18;
             this.buttonInventory.ImageList = this.imageListMenuIcons;
-            this.buttonInventory.Location = new System.Drawing.Point(588, 238);
+            this.buttonInventory.Location = new System.Drawing.Point(634, 238);
             this.buttonInventory.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInventory.Name = "buttonInventory";
             this.buttonInventory.Padding = new System.Windows.Forms.Padding(10);
@@ -477,7 +477,7 @@
             this.buttonStockOut.ForeColor = System.Drawing.Color.White;
             this.buttonStockOut.ImageIndex = 20;
             this.buttonStockOut.ImageList = this.imageListMenuIcons;
-            this.buttonStockOut.Location = new System.Drawing.Point(1051, 129);
+            this.buttonStockOut.Location = new System.Drawing.Point(1097, 129);
             this.buttonStockOut.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStockOut.Name = "buttonStockOut";
             this.buttonStockOut.Padding = new System.Windows.Forms.Padding(10);
@@ -500,7 +500,7 @@
             this.buttonRemittanceReport.ForeColor = System.Drawing.Color.White;
             this.buttonRemittanceReport.ImageIndex = 18;
             this.buttonRemittanceReport.ImageList = this.imageListMenuIcons;
-            this.buttonRemittanceReport.Location = new System.Drawing.Point(819, 348);
+            this.buttonRemittanceReport.Location = new System.Drawing.Point(865, 348);
             this.buttonRemittanceReport.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRemittanceReport.Name = "buttonRemittanceReport";
             this.buttonRemittanceReport.Padding = new System.Windows.Forms.Padding(10);
@@ -522,7 +522,7 @@
             this.buttonStockIn.ForeColor = System.Drawing.Color.White;
             this.buttonStockIn.ImageIndex = 28;
             this.buttonStockIn.ImageList = this.imageListMenuIcons;
-            this.buttonStockIn.Location = new System.Drawing.Point(819, 129);
+            this.buttonStockIn.Location = new System.Drawing.Point(865, 129);
             this.buttonStockIn.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStockIn.Name = "buttonStockIn";
             this.buttonStockIn.Padding = new System.Windows.Forms.Padding(10);
@@ -544,7 +544,7 @@
             this.buttonSalesReport.ForeColor = System.Drawing.Color.White;
             this.buttonSalesReport.ImageIndex = 18;
             this.buttonSalesReport.ImageList = this.imageListMenuIcons;
-            this.buttonSalesReport.Location = new System.Drawing.Point(819, 238);
+            this.buttonSalesReport.Location = new System.Drawing.Point(865, 238);
             this.buttonSalesReport.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalesReport.Name = "buttonSalesReport";
             this.buttonSalesReport.Padding = new System.Windows.Forms.Padding(10);
