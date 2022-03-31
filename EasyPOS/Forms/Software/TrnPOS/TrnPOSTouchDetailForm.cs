@@ -1239,10 +1239,16 @@ namespace EasyPOS.Forms.Software.TrnPOS
             if (panelItems.Visible == true)
             {
                 panelItems.Visible = false;
+                dataGridViewSalesLineList.Dock = DockStyle.Fill;
             }
             else
             {
                 panelItems.Visible = true;
+                dataGridViewSalesLineList.Dock = DockStyle.None;
+                dataGridViewSalesLineList.Anchor = AnchorStyles.Top;
+                dataGridViewSalesLineList.Anchor = AnchorStyles.Bottom;
+                dataGridViewSalesLineList.Anchor = AnchorStyles.Left;
+                dataGridViewSalesLineList.Anchor = AnchorStyles.Right;
             }
         }
 

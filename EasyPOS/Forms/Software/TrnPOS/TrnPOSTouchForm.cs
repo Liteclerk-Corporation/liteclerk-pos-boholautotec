@@ -73,12 +73,10 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 sysSoftwareForm = softwareForm;
                 if (Modules.SysCurrentModule.GetCurrentSettings().HideSalesAmount == true)
                 {
-                    //textBoxTotalAmount.Visible = false;
                     tabPageCollectedColumnAmount.Visible = false;
                 }
                 else
                 {
-                    //textBoxTotalAmount.Visible = true;
                     tabPageCollectedColumnAmount.Visible = true;
                 }
             }
@@ -847,10 +845,17 @@ namespace EasyPOS.Forms.Software.TrnPOS
             if (panelWalkIn.Visible == true)
             {
                 panelWalkIn.Visible = false;
+                tabControlSales.Dock = DockStyle.Fill;
             }
             else
             {
                 panelWalkIn.Visible = true;
+                tabControlSales.Dock = DockStyle.None;
+                tabControlSales.Anchor = AnchorStyles.Top;
+                tabControlSales.Anchor = AnchorStyles.Bottom;
+                tabControlSales.Anchor = AnchorStyles.Right;
+                tabControlSales.Anchor = AnchorStyles.Left;
+
             }
         }
 

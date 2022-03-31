@@ -30,46 +30,96 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrnPOSTouchForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle141 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle142 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle148 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle149 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle143 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle144 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle145 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle146 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle147 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle150 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle151 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle157 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle158 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle152 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle153 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle154 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle155 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle156 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle159 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle160 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle167 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle168 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle161 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle162 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle163 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle164 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle165 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle166 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonClose = new System.Windows.Forms.Button();
             this.imageListPOSTouch = new System.Windows.Forms.ImageList(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panelWalkIn = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.buttonHideItems = new System.Windows.Forms.Button();
+            this.buttonWalkIn = new System.Windows.Forms.Button();
+            this.buttonTenderAll = new System.Windows.Forms.Button();
+            this.textBoxTotalAmount = new System.Windows.Forms.TextBox();
+            this.buttonDelivery = new System.Windows.Forms.Button();
+            this.panelWalkIn = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.buttonTableGroup4 = new System.Windows.Forms.Button();
+            this.buttonTableGroup5 = new System.Windows.Forms.Button();
+            this.buttonTableGroup6 = new System.Windows.Forms.Button();
+            this.buttonTableGroup1 = new System.Windows.Forms.Button();
+            this.buttonTableGroup2 = new System.Windows.Forms.Button();
+            this.buttonTableGroup3 = new System.Windows.Forms.Button();
+            this.buttonTable4 = new System.Windows.Forms.Button();
+            this.buttonTable5 = new System.Windows.Forms.Button();
+            this.buttonTable6 = new System.Windows.Forms.Button();
+            this.buttonTable10 = new System.Windows.Forms.Button();
+            this.buttonTable11 = new System.Windows.Forms.Button();
+            this.buttonTable12 = new System.Windows.Forms.Button();
+            this.buttonTable16 = new System.Windows.Forms.Button();
+            this.buttonTable17 = new System.Windows.Forms.Button();
+            this.buttonTable18 = new System.Windows.Forms.Button();
+            this.buttonTable22 = new System.Windows.Forms.Button();
+            this.buttonTable23 = new System.Windows.Forms.Button();
+            this.buttonTable24 = new System.Windows.Forms.Button();
+            this.buttonTable1 = new System.Windows.Forms.Button();
+            this.buttonTable2 = new System.Windows.Forms.Button();
+            this.buttonTable3 = new System.Windows.Forms.Button();
+            this.buttonTable7 = new System.Windows.Forms.Button();
+            this.buttonTable8 = new System.Windows.Forms.Button();
+            this.buttonTable9 = new System.Windows.Forms.Button();
+            this.buttonTable13 = new System.Windows.Forms.Button();
+            this.buttonTable14 = new System.Windows.Forms.Button();
+            this.buttonTable15 = new System.Windows.Forms.Button();
+            this.buttonTable19 = new System.Windows.Forms.Button();
+            this.buttonTable20 = new System.Windows.Forms.Button();
+            this.buttonTable21 = new System.Windows.Forms.Button();
+            this.buttonTable28 = new System.Windows.Forms.Button();
+            this.buttonTable29 = new System.Windows.Forms.Button();
+            this.buttonTable30 = new System.Windows.Forms.Button();
+            this.buttonTable25 = new System.Windows.Forms.Button();
+            this.buttonTable26 = new System.Windows.Forms.Button();
+            this.buttonTable27 = new System.Windows.Forms.Button();
+            this.buttonTableNext = new System.Windows.Forms.Button();
+            this.buttonTableGroupPageNext = new System.Windows.Forms.Button();
+            this.buttonTablePrevious = new System.Windows.Forms.Button();
+            this.buttonTableGroupPagePrevious = new System.Windows.Forms.Button();
             this.pictureBoxPOSTouch = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.textBoxLastChange = new System.Windows.Forms.TextBox();
             this.labelLastChange = new System.Windows.Forms.Label();
+            this.textBoxFilter = new System.Windows.Forms.TextBox();
+            this.comboBoxTerminal = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerSalesDate = new System.Windows.Forms.DateTimePicker();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.tabControlSales = new System.Windows.Forms.TabControl();
             this.tabPageOpen = new System.Windows.Forms.TabPage();
             this.dataGridViewOpenSalesList = new System.Windows.Forms.DataGridView();
@@ -134,62 +184,15 @@
             this.tabPageCollectedColumnDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageCollectedColumnAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageCollectedColumnSpace = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxTotalAmount = new System.Windows.Forms.TextBox();
-            this.buttonTenderAll = new System.Windows.Forms.Button();
-            this.buttonWalkIn = new System.Windows.Forms.Button();
-            this.buttonDelivery = new System.Windows.Forms.Button();
-            this.textBoxFilter = new System.Windows.Forms.TextBox();
-            this.comboBoxTerminal = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerSalesDate = new System.Windows.Forms.DateTimePicker();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.buttonTableGroup4 = new System.Windows.Forms.Button();
-            this.buttonTableGroup5 = new System.Windows.Forms.Button();
-            this.buttonTableGroup6 = new System.Windows.Forms.Button();
-            this.buttonTableGroup1 = new System.Windows.Forms.Button();
-            this.buttonTableGroup2 = new System.Windows.Forms.Button();
-            this.buttonTableGroup3 = new System.Windows.Forms.Button();
-            this.buttonTable4 = new System.Windows.Forms.Button();
-            this.buttonTable5 = new System.Windows.Forms.Button();
-            this.buttonTable6 = new System.Windows.Forms.Button();
-            this.buttonTable10 = new System.Windows.Forms.Button();
-            this.buttonTable11 = new System.Windows.Forms.Button();
-            this.buttonTable12 = new System.Windows.Forms.Button();
-            this.buttonTable16 = new System.Windows.Forms.Button();
-            this.buttonTable17 = new System.Windows.Forms.Button();
-            this.buttonTable18 = new System.Windows.Forms.Button();
-            this.buttonTable22 = new System.Windows.Forms.Button();
-            this.buttonTable23 = new System.Windows.Forms.Button();
-            this.buttonTable24 = new System.Windows.Forms.Button();
-            this.buttonTable1 = new System.Windows.Forms.Button();
-            this.buttonTable2 = new System.Windows.Forms.Button();
-            this.buttonTable3 = new System.Windows.Forms.Button();
-            this.buttonTable7 = new System.Windows.Forms.Button();
-            this.buttonTable8 = new System.Windows.Forms.Button();
-            this.buttonTable9 = new System.Windows.Forms.Button();
-            this.buttonTable13 = new System.Windows.Forms.Button();
-            this.buttonTable14 = new System.Windows.Forms.Button();
-            this.buttonTable15 = new System.Windows.Forms.Button();
-            this.buttonTable19 = new System.Windows.Forms.Button();
-            this.buttonTable20 = new System.Windows.Forms.Button();
-            this.buttonTable21 = new System.Windows.Forms.Button();
-            this.buttonTable28 = new System.Windows.Forms.Button();
-            this.buttonTable29 = new System.Windows.Forms.Button();
-            this.buttonTable30 = new System.Windows.Forms.Button();
-            this.buttonTable25 = new System.Windows.Forms.Button();
-            this.buttonTable26 = new System.Windows.Forms.Button();
-            this.buttonTable27 = new System.Windows.Forms.Button();
-            this.buttonTableNext = new System.Windows.Forms.Button();
-            this.buttonTableGroupPageNext = new System.Windows.Forms.Button();
-            this.buttonTablePrevious = new System.Windows.Forms.Button();
-            this.buttonTableGroupPagePrevious = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panelWalkIn.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPOSTouch)).BeginInit();
             this.panel8.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.tabControlSales.SuspendLayout();
             this.tabPageOpen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOpenSalesList)).BeginInit();
@@ -197,9 +200,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBilledOutSalesList)).BeginInit();
             this.tabPageCollected.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCollectedSalesList)).BeginInit();
-            this.panel6.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -270,8 +270,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.panel2);
-            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panelWalkIn);
+            this.panel3.Controls.Add(this.panel4);
             this.panel3.ForeColor = System.Drawing.Color.White;
             this.panel3.Location = new System.Drawing.Point(0, 56);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
@@ -279,20 +279,18 @@
             this.panel3.Size = new System.Drawing.Size(1370, 645);
             this.panel3.TabIndex = 15;
             // 
-            // panelWalkIn
+            // panel2
             // 
-            this.panelWalkIn.BackColor = System.Drawing.Color.LightGray;
-            this.panelWalkIn.Controls.Add(this.panel6);
-            this.panelWalkIn.Controls.Add(this.pictureBoxPOSTouch);
-            this.panelWalkIn.Controls.Add(this.panel8);
-            this.panelWalkIn.Controls.Add(this.textBoxFilter);
-            this.panelWalkIn.Controls.Add(this.comboBoxTerminal);
-            this.panelWalkIn.Controls.Add(this.dateTimePickerSalesDate);
-            this.panelWalkIn.Location = new System.Drawing.Point(0, -6);
-            this.panelWalkIn.Margin = new System.Windows.Forms.Padding(4);
-            this.panelWalkIn.Name = "panelWalkIn";
-            this.panelWalkIn.Size = new System.Drawing.Size(1268, 489);
-            this.panelWalkIn.TabIndex = 16;
+            this.panel2.Controls.Add(this.buttonHideItems);
+            this.panel2.Controls.Add(this.buttonWalkIn);
+            this.panel2.Controls.Add(this.buttonTenderAll);
+            this.panel2.Controls.Add(this.textBoxTotalAmount);
+            this.panel2.Controls.Add(this.buttonDelivery);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1270, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(100, 645);
+            this.panel2.TabIndex = 61;
             // 
             // buttonHideItems
             // 
@@ -313,933 +311,23 @@
             this.buttonHideItems.UseVisualStyleBackColor = false;
             this.buttonHideItems.Click += new System.EventHandler(this.buttonHideItems_Click);
             // 
-            // pictureBoxPOSTouch
-            // 
-            this.pictureBoxPOSTouch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxPOSTouch.Location = new System.Drawing.Point(827, 55);
-            this.pictureBoxPOSTouch.Name = "pictureBoxPOSTouch";
-            this.pictureBoxPOSTouch.Size = new System.Drawing.Size(333, 231);
-            this.pictureBoxPOSTouch.TabIndex = 60;
-            this.pictureBoxPOSTouch.TabStop = false;
-            // 
-            // panel8
-            // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
-            this.panel8.Controls.Add(this.textBoxLastChange);
-            this.panel8.Controls.Add(this.labelLastChange);
-            this.panel8.Location = new System.Drawing.Point(827, 446);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(333, 38);
-            this.panel8.TabIndex = 57;
-            // 
-            // textBoxLastChange
-            // 
-            this.textBoxLastChange.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBoxLastChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
-            this.textBoxLastChange.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxLastChange.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.textBoxLastChange.ForeColor = System.Drawing.Color.White;
-            this.textBoxLastChange.Location = new System.Drawing.Point(225, 0);
-            this.textBoxLastChange.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxLastChange.Name = "textBoxLastChange";
-            this.textBoxLastChange.ReadOnly = true;
-            this.textBoxLastChange.Size = new System.Drawing.Size(108, 34);
-            this.textBoxLastChange.TabIndex = 17;
-            this.textBoxLastChange.Text = "0.00";
-            this.textBoxLastChange.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // labelLastChange
-            // 
-            this.labelLastChange.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelLastChange.AutoSize = true;
-            this.labelLastChange.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.labelLastChange.ForeColor = System.Drawing.Color.White;
-            this.labelLastChange.Location = new System.Drawing.Point(12, 6);
-            this.labelLastChange.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelLastChange.Name = "labelLastChange";
-            this.labelLastChange.Size = new System.Drawing.Size(124, 25);
-            this.labelLastChange.TabIndex = 16;
-            this.labelLastChange.Text = "Last Change:";
-            this.labelLastChange.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tabControlSales
-            // 
-            this.tabControlSales.Controls.Add(this.tabPageOpen);
-            this.tabControlSales.Controls.Add(this.tabPageBilledOut);
-            this.tabControlSales.Controls.Add(this.tabPageCollected);
-            this.tabControlSales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlSales.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.tabControlSales.Location = new System.Drawing.Point(0, 0);
-            this.tabControlSales.Margin = new System.Windows.Forms.Padding(2);
-            this.tabControlSales.Name = "tabControlSales";
-            this.tabControlSales.SelectedIndex = 0;
-            this.tabControlSales.Size = new System.Drawing.Size(1261, 159);
-            this.tabControlSales.TabIndex = 41;
-            this.tabControlSales.SelectedIndexChanged += new System.EventHandler(this.tabControlSales_SelectedIndexChanged);
-            // 
-            // tabPageOpen
-            // 
-            this.tabPageOpen.Controls.Add(this.dataGridViewOpenSalesList);
-            this.tabPageOpen.Location = new System.Drawing.Point(4, 37);
-            this.tabPageOpen.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageOpen.Name = "tabPageOpen";
-            this.tabPageOpen.Size = new System.Drawing.Size(1253, 118);
-            this.tabPageOpen.TabIndex = 0;
-            this.tabPageOpen.Text = "Open";
-            this.tabPageOpen.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewOpenSalesList
-            // 
-            this.dataGridViewOpenSalesList.AllowUserToAddRows = false;
-            this.dataGridViewOpenSalesList.AllowUserToDeleteRows = false;
-            this.dataGridViewOpenSalesList.AllowUserToResizeColumns = false;
-            this.dataGridViewOpenSalesList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle141.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle141.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewOpenSalesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle141;
-            this.dataGridViewOpenSalesList.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewOpenSalesList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewOpenSalesList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle142.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle142.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle142.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle142.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle142.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewOpenSalesList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle142;
-            this.dataGridViewOpenSalesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOpenSalesList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TabPageOpenColumnEdit,
-            this.TabPageOpenColumnDelete,
-            this.TabPageOpenColumnTable,
-            this.TabPageOpenColumnTerminal,
-            this.TabPageOpenColumnId,
-            this.TabPageOpenColumnSalesDate,
-            this.TabPageOpenColumnSalesNumber,
-            this.TabPageOpenColumnManualSalesNumber,
-            this.TabPageOpenColumnRececiptInvoiceNumber,
-            this.TabPageOpenColumnCustomerCode,
-            this.TabPageOpenColumnCustomer,
-            this.TabPageOpenColumnSalesAgent,
-            this.TabPageOpenColumnIsLocked,
-            this.TabPageOpenColumnIsTendered,
-            this.TabPageOpenColumnIsCancelled,
-            this.TabPageOpenColumnRemarks,
-            this.TabPageOpenColumnDelivery,
-            this.TabPageOpenColumnAmount,
-            this.TabPageOpenColumnSpace});
-            dataGridViewCellStyle148.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle148.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle148.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle148.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle148.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle148.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle148.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewOpenSalesList.DefaultCellStyle = dataGridViewCellStyle148;
-            this.dataGridViewOpenSalesList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewOpenSalesList.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridViewOpenSalesList.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewOpenSalesList.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridViewOpenSalesList.Name = "dataGridViewOpenSalesList";
-            this.dataGridViewOpenSalesList.ReadOnly = true;
-            this.dataGridViewOpenSalesList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle149.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle149.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle149.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle149.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle149.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewOpenSalesList.RowHeadersDefaultCellStyle = dataGridViewCellStyle149;
-            this.dataGridViewOpenSalesList.RowHeadersVisible = false;
-            this.dataGridViewOpenSalesList.RowHeadersWidth = 51;
-            this.dataGridViewOpenSalesList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridViewOpenSalesList.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewOpenSalesList.RowTemplate.Height = 30;
-            this.dataGridViewOpenSalesList.RowTemplate.ReadOnly = true;
-            this.dataGridViewOpenSalesList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewOpenSalesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewOpenSalesList.Size = new System.Drawing.Size(1253, 118);
-            this.dataGridViewOpenSalesList.TabIndex = 8;
-            this.dataGridViewOpenSalesList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOpenSalesList_CellClick);
-            // 
-            // TabPageOpenColumnEdit
-            // 
-            this.TabPageOpenColumnEdit.DataPropertyName = "ColumnEdit";
-            this.TabPageOpenColumnEdit.HeaderText = "Edit";
-            this.TabPageOpenColumnEdit.MinimumWidth = 6;
-            this.TabPageOpenColumnEdit.Name = "TabPageOpenColumnEdit";
-            this.TabPageOpenColumnEdit.ReadOnly = true;
-            this.TabPageOpenColumnEdit.Visible = false;
-            this.TabPageOpenColumnEdit.Width = 125;
-            // 
-            // TabPageOpenColumnDelete
-            // 
-            this.TabPageOpenColumnDelete.DataPropertyName = "ColumnDelete";
-            this.TabPageOpenColumnDelete.HeaderText = "Delete";
-            this.TabPageOpenColumnDelete.MinimumWidth = 6;
-            this.TabPageOpenColumnDelete.Name = "TabPageOpenColumnDelete";
-            this.TabPageOpenColumnDelete.ReadOnly = true;
-            this.TabPageOpenColumnDelete.Visible = false;
-            this.TabPageOpenColumnDelete.Width = 125;
-            // 
-            // TabPageOpenColumnTable
-            // 
-            this.TabPageOpenColumnTable.DataPropertyName = "ColumnTable";
-            dataGridViewCellStyle143.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TabPageOpenColumnTable.DefaultCellStyle = dataGridViewCellStyle143;
-            this.TabPageOpenColumnTable.HeaderText = "Table";
-            this.TabPageOpenColumnTable.MinimumWidth = 6;
-            this.TabPageOpenColumnTable.Name = "TabPageOpenColumnTable";
-            this.TabPageOpenColumnTable.ReadOnly = true;
-            this.TabPageOpenColumnTable.Width = 125;
-            // 
-            // TabPageOpenColumnTerminal
-            // 
-            this.TabPageOpenColumnTerminal.DataPropertyName = "ColumnTerminal";
-            this.TabPageOpenColumnTerminal.HeaderText = "Terminal";
-            this.TabPageOpenColumnTerminal.MinimumWidth = 6;
-            this.TabPageOpenColumnTerminal.Name = "TabPageOpenColumnTerminal";
-            this.TabPageOpenColumnTerminal.ReadOnly = true;
-            this.TabPageOpenColumnTerminal.Visible = false;
-            this.TabPageOpenColumnTerminal.Width = 125;
-            // 
-            // TabPageOpenColumnId
-            // 
-            this.TabPageOpenColumnId.DataPropertyName = "ColumnId";
-            this.TabPageOpenColumnId.HeaderText = "Id";
-            this.TabPageOpenColumnId.MinimumWidth = 6;
-            this.TabPageOpenColumnId.Name = "TabPageOpenColumnId";
-            this.TabPageOpenColumnId.ReadOnly = true;
-            this.TabPageOpenColumnId.Visible = false;
-            this.TabPageOpenColumnId.Width = 125;
-            // 
-            // TabPageOpenColumnSalesDate
-            // 
-            this.TabPageOpenColumnSalesDate.DataPropertyName = "ColumnSalesDate";
-            this.TabPageOpenColumnSalesDate.HeaderText = "SalesDate";
-            this.TabPageOpenColumnSalesDate.MinimumWidth = 6;
-            this.TabPageOpenColumnSalesDate.Name = "TabPageOpenColumnSalesDate";
-            this.TabPageOpenColumnSalesDate.ReadOnly = true;
-            this.TabPageOpenColumnSalesDate.Visible = false;
-            this.TabPageOpenColumnSalesDate.Width = 125;
-            // 
-            // TabPageOpenColumnSalesNumber
-            // 
-            this.TabPageOpenColumnSalesNumber.ActiveLinkColor = System.Drawing.Color.Black;
-            this.TabPageOpenColumnSalesNumber.DataPropertyName = "ColumnSalesNumber";
-            dataGridViewCellStyle144.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TabPageOpenColumnSalesNumber.DefaultCellStyle = dataGridViewCellStyle144;
-            this.TabPageOpenColumnSalesNumber.HeaderText = "Order No.";
-            this.TabPageOpenColumnSalesNumber.LinkColor = System.Drawing.Color.Black;
-            this.TabPageOpenColumnSalesNumber.MinimumWidth = 6;
-            this.TabPageOpenColumnSalesNumber.Name = "TabPageOpenColumnSalesNumber";
-            this.TabPageOpenColumnSalesNumber.ReadOnly = true;
-            this.TabPageOpenColumnSalesNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TabPageOpenColumnSalesNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.TabPageOpenColumnSalesNumber.VisitedLinkColor = System.Drawing.Color.Black;
-            this.TabPageOpenColumnSalesNumber.Width = 130;
-            // 
-            // TabPageOpenColumnManualSalesNumber
-            // 
-            this.TabPageOpenColumnManualSalesNumber.DataPropertyName = "ColumnManualSalesNumber";
-            this.TabPageOpenColumnManualSalesNumber.HeaderText = "Manual No.";
-            this.TabPageOpenColumnManualSalesNumber.MinimumWidth = 6;
-            this.TabPageOpenColumnManualSalesNumber.Name = "TabPageOpenColumnManualSalesNumber";
-            this.TabPageOpenColumnManualSalesNumber.ReadOnly = true;
-            this.TabPageOpenColumnManualSalesNumber.Width = 130;
-            // 
-            // TabPageOpenColumnRececiptInvoiceNumber
-            // 
-            this.TabPageOpenColumnRececiptInvoiceNumber.DataPropertyName = "ColumnRececiptInvoiceNumber";
-            this.TabPageOpenColumnRececiptInvoiceNumber.HeaderText = "Collection No.";
-            this.TabPageOpenColumnRececiptInvoiceNumber.MinimumWidth = 6;
-            this.TabPageOpenColumnRececiptInvoiceNumber.Name = "TabPageOpenColumnRececiptInvoiceNumber";
-            this.TabPageOpenColumnRececiptInvoiceNumber.ReadOnly = true;
-            this.TabPageOpenColumnRececiptInvoiceNumber.Visible = false;
-            this.TabPageOpenColumnRececiptInvoiceNumber.Width = 130;
-            // 
-            // TabPageOpenColumnCustomerCode
-            // 
-            this.TabPageOpenColumnCustomerCode.DataPropertyName = "ColumnCustomerCode";
-            this.TabPageOpenColumnCustomerCode.HeaderText = "Customer Code";
-            this.TabPageOpenColumnCustomerCode.MinimumWidth = 6;
-            this.TabPageOpenColumnCustomerCode.Name = "TabPageOpenColumnCustomerCode";
-            this.TabPageOpenColumnCustomerCode.ReadOnly = true;
-            this.TabPageOpenColumnCustomerCode.Visible = false;
-            this.TabPageOpenColumnCustomerCode.Width = 125;
-            // 
-            // TabPageOpenColumnCustomer
-            // 
-            this.TabPageOpenColumnCustomer.DataPropertyName = "ColumnCustomer";
-            dataGridViewCellStyle145.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TabPageOpenColumnCustomer.DefaultCellStyle = dataGridViewCellStyle145;
-            this.TabPageOpenColumnCustomer.HeaderText = "Customer";
-            this.TabPageOpenColumnCustomer.MinimumWidth = 6;
-            this.TabPageOpenColumnCustomer.Name = "TabPageOpenColumnCustomer";
-            this.TabPageOpenColumnCustomer.ReadOnly = true;
-            this.TabPageOpenColumnCustomer.Width = 125;
-            // 
-            // TabPageOpenColumnSalesAgent
-            // 
-            this.TabPageOpenColumnSalesAgent.DataPropertyName = "ColumnSalesAgent";
-            dataGridViewCellStyle146.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TabPageOpenColumnSalesAgent.DefaultCellStyle = dataGridViewCellStyle146;
-            this.TabPageOpenColumnSalesAgent.HeaderText = "User";
-            this.TabPageOpenColumnSalesAgent.MinimumWidth = 6;
-            this.TabPageOpenColumnSalesAgent.Name = "TabPageOpenColumnSalesAgent";
-            this.TabPageOpenColumnSalesAgent.ReadOnly = true;
-            this.TabPageOpenColumnSalesAgent.Width = 130;
-            // 
-            // TabPageOpenColumnIsLocked
-            // 
-            this.TabPageOpenColumnIsLocked.DataPropertyName = "ColumnIsLocked";
-            this.TabPageOpenColumnIsLocked.HeaderText = "L";
-            this.TabPageOpenColumnIsLocked.MinimumWidth = 6;
-            this.TabPageOpenColumnIsLocked.Name = "TabPageOpenColumnIsLocked";
-            this.TabPageOpenColumnIsLocked.ReadOnly = true;
-            this.TabPageOpenColumnIsLocked.Visible = false;
-            this.TabPageOpenColumnIsLocked.Width = 125;
-            // 
-            // TabPageOpenColumnIsTendered
-            // 
-            this.TabPageOpenColumnIsTendered.DataPropertyName = "ColumnIsTendered";
-            this.TabPageOpenColumnIsTendered.HeaderText = "T";
-            this.TabPageOpenColumnIsTendered.MinimumWidth = 6;
-            this.TabPageOpenColumnIsTendered.Name = "TabPageOpenColumnIsTendered";
-            this.TabPageOpenColumnIsTendered.ReadOnly = true;
-            this.TabPageOpenColumnIsTendered.Visible = false;
-            this.TabPageOpenColumnIsTendered.Width = 125;
-            // 
-            // TabPageOpenColumnIsCancelled
-            // 
-            this.TabPageOpenColumnIsCancelled.DataPropertyName = "ColumnIsCancelled";
-            this.TabPageOpenColumnIsCancelled.HeaderText = "C";
-            this.TabPageOpenColumnIsCancelled.MinimumWidth = 6;
-            this.TabPageOpenColumnIsCancelled.Name = "TabPageOpenColumnIsCancelled";
-            this.TabPageOpenColumnIsCancelled.ReadOnly = true;
-            this.TabPageOpenColumnIsCancelled.Visible = false;
-            this.TabPageOpenColumnIsCancelled.Width = 125;
-            // 
-            // TabPageOpenColumnRemarks
-            // 
-            this.TabPageOpenColumnRemarks.DataPropertyName = "ColumnRemarks";
-            this.TabPageOpenColumnRemarks.HeaderText = "Remarks";
-            this.TabPageOpenColumnRemarks.MinimumWidth = 6;
-            this.TabPageOpenColumnRemarks.Name = "TabPageOpenColumnRemarks";
-            this.TabPageOpenColumnRemarks.ReadOnly = true;
-            this.TabPageOpenColumnRemarks.Width = 200;
-            // 
-            // TabPageOpenColumnDelivery
-            // 
-            this.TabPageOpenColumnDelivery.DataPropertyName = "ColumnDelivery";
-            this.TabPageOpenColumnDelivery.HeaderText = "Delivered By";
-            this.TabPageOpenColumnDelivery.MinimumWidth = 6;
-            this.TabPageOpenColumnDelivery.Name = "TabPageOpenColumnDelivery";
-            this.TabPageOpenColumnDelivery.ReadOnly = true;
-            this.TabPageOpenColumnDelivery.Visible = false;
-            this.TabPageOpenColumnDelivery.Width = 150;
-            // 
-            // TabPageOpenColumnAmount
-            // 
-            this.TabPageOpenColumnAmount.DataPropertyName = "ColumnAmount";
-            dataGridViewCellStyle147.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle147.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TabPageOpenColumnAmount.DefaultCellStyle = dataGridViewCellStyle147;
-            this.TabPageOpenColumnAmount.HeaderText = "Amount";
-            this.TabPageOpenColumnAmount.MinimumWidth = 6;
-            this.TabPageOpenColumnAmount.Name = "TabPageOpenColumnAmount";
-            this.TabPageOpenColumnAmount.ReadOnly = true;
-            this.TabPageOpenColumnAmount.Width = 120;
-            // 
-            // TabPageOpenColumnSpace
-            // 
-            this.TabPageOpenColumnSpace.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TabPageOpenColumnSpace.DataPropertyName = "ColumnSpace";
-            this.TabPageOpenColumnSpace.HeaderText = "";
-            this.TabPageOpenColumnSpace.MinimumWidth = 6;
-            this.TabPageOpenColumnSpace.Name = "TabPageOpenColumnSpace";
-            this.TabPageOpenColumnSpace.ReadOnly = true;
-            this.TabPageOpenColumnSpace.Visible = false;
-            // 
-            // tabPageBilledOut
-            // 
-            this.tabPageBilledOut.Controls.Add(this.dataGridViewBilledOutSalesList);
-            this.tabPageBilledOut.Location = new System.Drawing.Point(4, 37);
-            this.tabPageBilledOut.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageBilledOut.Name = "tabPageBilledOut";
-            this.tabPageBilledOut.Size = new System.Drawing.Size(1253, 118);
-            this.tabPageBilledOut.TabIndex = 1;
-            this.tabPageBilledOut.Text = "Billed Out";
-            this.tabPageBilledOut.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewBilledOutSalesList
-            // 
-            this.dataGridViewBilledOutSalesList.AllowUserToAddRows = false;
-            this.dataGridViewBilledOutSalesList.AllowUserToDeleteRows = false;
-            this.dataGridViewBilledOutSalesList.AllowUserToResizeColumns = false;
-            this.dataGridViewBilledOutSalesList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle150.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle150.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewBilledOutSalesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle150;
-            this.dataGridViewBilledOutSalesList.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewBilledOutSalesList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewBilledOutSalesList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle151.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle151.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle151.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle151.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle151.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBilledOutSalesList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle151;
-            this.dataGridViewBilledOutSalesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBilledOutSalesList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tabPageBilledOutColumnEdit,
-            this.tabPageBilledOutColumnDelete,
-            this.tabPageBilledOutColumnTable,
-            this.tabPageBilledOutColumnId,
-            this.tabPageBilledOutColumnSalesDate,
-            this.tabPageBilledOutColumnSalesNumber,
-            this.tabPageBilledOutColumnManualSalesNumber,
-            this.tabPageBilledOutColumnInvoiceNumber,
-            this.tabPageBilledOutColumnTerminal,
-            this.tabPageBilledOutColumnCustomerCode,
-            this.tabPageBilledOutColumnCustomer,
-            this.tabPageBilledOutColumnSalesAgent,
-            this.tabPageBilledOutColumnIsLocked,
-            this.tabPageBilledOutColumnIsTendered,
-            this.tabPageBilledOutColumnIsCancelled,
-            this.tabPageBilledOutColumnRemarks,
-            this.tabPageBilledOutColumnDelivery,
-            this.tabPageBilledOutColumnAmount,
-            this.tabPageBilledOutColumnSpace});
-            dataGridViewCellStyle157.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle157.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle157.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle157.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle157.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle157.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle157.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBilledOutSalesList.DefaultCellStyle = dataGridViewCellStyle157;
-            this.dataGridViewBilledOutSalesList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewBilledOutSalesList.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridViewBilledOutSalesList.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewBilledOutSalesList.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridViewBilledOutSalesList.Name = "dataGridViewBilledOutSalesList";
-            this.dataGridViewBilledOutSalesList.ReadOnly = true;
-            this.dataGridViewBilledOutSalesList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle158.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle158.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle158.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle158.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle158.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBilledOutSalesList.RowHeadersDefaultCellStyle = dataGridViewCellStyle158;
-            this.dataGridViewBilledOutSalesList.RowHeadersVisible = false;
-            this.dataGridViewBilledOutSalesList.RowHeadersWidth = 51;
-            this.dataGridViewBilledOutSalesList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridViewBilledOutSalesList.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewBilledOutSalesList.RowTemplate.Height = 30;
-            this.dataGridViewBilledOutSalesList.RowTemplate.ReadOnly = true;
-            this.dataGridViewBilledOutSalesList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBilledOutSalesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewBilledOutSalesList.Size = new System.Drawing.Size(1253, 118);
-            this.dataGridViewBilledOutSalesList.TabIndex = 9;
-            this.dataGridViewBilledOutSalesList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBilledOutSalesList_CellClick);
-            // 
-            // tabPageBilledOutColumnEdit
-            // 
-            this.tabPageBilledOutColumnEdit.DataPropertyName = "ColumnEdit";
-            this.tabPageBilledOutColumnEdit.HeaderText = "Edit";
-            this.tabPageBilledOutColumnEdit.MinimumWidth = 6;
-            this.tabPageBilledOutColumnEdit.Name = "tabPageBilledOutColumnEdit";
-            this.tabPageBilledOutColumnEdit.ReadOnly = true;
-            this.tabPageBilledOutColumnEdit.Visible = false;
-            this.tabPageBilledOutColumnEdit.Width = 125;
-            // 
-            // tabPageBilledOutColumnDelete
-            // 
-            this.tabPageBilledOutColumnDelete.DataPropertyName = "ColumnDelete";
-            this.tabPageBilledOutColumnDelete.HeaderText = "Delete";
-            this.tabPageBilledOutColumnDelete.MinimumWidth = 6;
-            this.tabPageBilledOutColumnDelete.Name = "tabPageBilledOutColumnDelete";
-            this.tabPageBilledOutColumnDelete.ReadOnly = true;
-            this.tabPageBilledOutColumnDelete.Visible = false;
-            this.tabPageBilledOutColumnDelete.Width = 125;
-            // 
-            // tabPageBilledOutColumnTable
-            // 
-            this.tabPageBilledOutColumnTable.DataPropertyName = "ColumnTable";
-            dataGridViewCellStyle152.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageBilledOutColumnTable.DefaultCellStyle = dataGridViewCellStyle152;
-            this.tabPageBilledOutColumnTable.HeaderText = "Table";
-            this.tabPageBilledOutColumnTable.MinimumWidth = 6;
-            this.tabPageBilledOutColumnTable.Name = "tabPageBilledOutColumnTable";
-            this.tabPageBilledOutColumnTable.ReadOnly = true;
-            this.tabPageBilledOutColumnTable.Width = 125;
-            // 
-            // tabPageBilledOutColumnId
-            // 
-            this.tabPageBilledOutColumnId.DataPropertyName = "ColumnId";
-            this.tabPageBilledOutColumnId.HeaderText = "Id";
-            this.tabPageBilledOutColumnId.MinimumWidth = 6;
-            this.tabPageBilledOutColumnId.Name = "tabPageBilledOutColumnId";
-            this.tabPageBilledOutColumnId.ReadOnly = true;
-            this.tabPageBilledOutColumnId.Visible = false;
-            this.tabPageBilledOutColumnId.Width = 125;
-            // 
-            // tabPageBilledOutColumnSalesDate
-            // 
-            this.tabPageBilledOutColumnSalesDate.DataPropertyName = "ColumnSalesDate";
-            this.tabPageBilledOutColumnSalesDate.HeaderText = "SalesDate";
-            this.tabPageBilledOutColumnSalesDate.MinimumWidth = 6;
-            this.tabPageBilledOutColumnSalesDate.Name = "tabPageBilledOutColumnSalesDate";
-            this.tabPageBilledOutColumnSalesDate.ReadOnly = true;
-            this.tabPageBilledOutColumnSalesDate.Visible = false;
-            this.tabPageBilledOutColumnSalesDate.Width = 125;
-            // 
-            // tabPageBilledOutColumnSalesNumber
-            // 
-            this.tabPageBilledOutColumnSalesNumber.ActiveLinkColor = System.Drawing.Color.Black;
-            this.tabPageBilledOutColumnSalesNumber.DataPropertyName = "ColumnSalesNumber";
-            dataGridViewCellStyle153.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageBilledOutColumnSalesNumber.DefaultCellStyle = dataGridViewCellStyle153;
-            this.tabPageBilledOutColumnSalesNumber.HeaderText = "Order No.";
-            this.tabPageBilledOutColumnSalesNumber.LinkColor = System.Drawing.Color.Black;
-            this.tabPageBilledOutColumnSalesNumber.MinimumWidth = 6;
-            this.tabPageBilledOutColumnSalesNumber.Name = "tabPageBilledOutColumnSalesNumber";
-            this.tabPageBilledOutColumnSalesNumber.ReadOnly = true;
-            this.tabPageBilledOutColumnSalesNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabPageBilledOutColumnSalesNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.tabPageBilledOutColumnSalesNumber.VisitedLinkColor = System.Drawing.Color.Black;
-            this.tabPageBilledOutColumnSalesNumber.Width = 130;
-            // 
-            // tabPageBilledOutColumnManualSalesNumber
-            // 
-            this.tabPageBilledOutColumnManualSalesNumber.DataPropertyName = "ColumnManualSalesNumber";
-            this.tabPageBilledOutColumnManualSalesNumber.HeaderText = "Manual No.";
-            this.tabPageBilledOutColumnManualSalesNumber.MinimumWidth = 6;
-            this.tabPageBilledOutColumnManualSalesNumber.Name = "tabPageBilledOutColumnManualSalesNumber";
-            this.tabPageBilledOutColumnManualSalesNumber.ReadOnly = true;
-            this.tabPageBilledOutColumnManualSalesNumber.Width = 130;
-            // 
-            // tabPageBilledOutColumnInvoiceNumber
-            // 
-            this.tabPageBilledOutColumnInvoiceNumber.DataPropertyName = "ColumnRececiptInvoiceNumber";
-            this.tabPageBilledOutColumnInvoiceNumber.HeaderText = "Collection No.";
-            this.tabPageBilledOutColumnInvoiceNumber.MinimumWidth = 6;
-            this.tabPageBilledOutColumnInvoiceNumber.Name = "tabPageBilledOutColumnInvoiceNumber";
-            this.tabPageBilledOutColumnInvoiceNumber.ReadOnly = true;
-            this.tabPageBilledOutColumnInvoiceNumber.Visible = false;
-            this.tabPageBilledOutColumnInvoiceNumber.Width = 130;
-            // 
-            // tabPageBilledOutColumnTerminal
-            // 
-            this.tabPageBilledOutColumnTerminal.DataPropertyName = "ColumnTerminal";
-            this.tabPageBilledOutColumnTerminal.HeaderText = "Terminal";
-            this.tabPageBilledOutColumnTerminal.MinimumWidth = 6;
-            this.tabPageBilledOutColumnTerminal.Name = "tabPageBilledOutColumnTerminal";
-            this.tabPageBilledOutColumnTerminal.ReadOnly = true;
-            this.tabPageBilledOutColumnTerminal.Visible = false;
-            this.tabPageBilledOutColumnTerminal.Width = 125;
-            // 
-            // tabPageBilledOutColumnCustomerCode
-            // 
-            this.tabPageBilledOutColumnCustomerCode.DataPropertyName = "ColumnCustomerCode";
-            this.tabPageBilledOutColumnCustomerCode.HeaderText = "Customer Code";
-            this.tabPageBilledOutColumnCustomerCode.MinimumWidth = 6;
-            this.tabPageBilledOutColumnCustomerCode.Name = "tabPageBilledOutColumnCustomerCode";
-            this.tabPageBilledOutColumnCustomerCode.ReadOnly = true;
-            this.tabPageBilledOutColumnCustomerCode.Visible = false;
-            this.tabPageBilledOutColumnCustomerCode.Width = 125;
-            // 
-            // tabPageBilledOutColumnCustomer
-            // 
-            this.tabPageBilledOutColumnCustomer.DataPropertyName = "ColumnCustomer";
-            dataGridViewCellStyle154.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageBilledOutColumnCustomer.DefaultCellStyle = dataGridViewCellStyle154;
-            this.tabPageBilledOutColumnCustomer.HeaderText = "Customer";
-            this.tabPageBilledOutColumnCustomer.MinimumWidth = 6;
-            this.tabPageBilledOutColumnCustomer.Name = "tabPageBilledOutColumnCustomer";
-            this.tabPageBilledOutColumnCustomer.ReadOnly = true;
-            this.tabPageBilledOutColumnCustomer.Width = 125;
-            // 
-            // tabPageBilledOutColumnSalesAgent
-            // 
-            this.tabPageBilledOutColumnSalesAgent.DataPropertyName = "ColumnSalesAgent";
-            dataGridViewCellStyle155.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageBilledOutColumnSalesAgent.DefaultCellStyle = dataGridViewCellStyle155;
-            this.tabPageBilledOutColumnSalesAgent.HeaderText = "User";
-            this.tabPageBilledOutColumnSalesAgent.MinimumWidth = 6;
-            this.tabPageBilledOutColumnSalesAgent.Name = "tabPageBilledOutColumnSalesAgent";
-            this.tabPageBilledOutColumnSalesAgent.ReadOnly = true;
-            this.tabPageBilledOutColumnSalesAgent.Width = 130;
-            // 
-            // tabPageBilledOutColumnIsLocked
-            // 
-            this.tabPageBilledOutColumnIsLocked.DataPropertyName = "ColumnIsLocked";
-            this.tabPageBilledOutColumnIsLocked.HeaderText = "L";
-            this.tabPageBilledOutColumnIsLocked.MinimumWidth = 6;
-            this.tabPageBilledOutColumnIsLocked.Name = "tabPageBilledOutColumnIsLocked";
-            this.tabPageBilledOutColumnIsLocked.ReadOnly = true;
-            this.tabPageBilledOutColumnIsLocked.Visible = false;
-            this.tabPageBilledOutColumnIsLocked.Width = 125;
-            // 
-            // tabPageBilledOutColumnIsTendered
-            // 
-            this.tabPageBilledOutColumnIsTendered.DataPropertyName = "ColumnIsTendered";
-            this.tabPageBilledOutColumnIsTendered.HeaderText = "T";
-            this.tabPageBilledOutColumnIsTendered.MinimumWidth = 6;
-            this.tabPageBilledOutColumnIsTendered.Name = "tabPageBilledOutColumnIsTendered";
-            this.tabPageBilledOutColumnIsTendered.ReadOnly = true;
-            this.tabPageBilledOutColumnIsTendered.Visible = false;
-            this.tabPageBilledOutColumnIsTendered.Width = 125;
-            // 
-            // tabPageBilledOutColumnIsCancelled
-            // 
-            this.tabPageBilledOutColumnIsCancelled.DataPropertyName = "ColumnIsCancelled";
-            this.tabPageBilledOutColumnIsCancelled.HeaderText = "C";
-            this.tabPageBilledOutColumnIsCancelled.MinimumWidth = 6;
-            this.tabPageBilledOutColumnIsCancelled.Name = "tabPageBilledOutColumnIsCancelled";
-            this.tabPageBilledOutColumnIsCancelled.ReadOnly = true;
-            this.tabPageBilledOutColumnIsCancelled.Visible = false;
-            this.tabPageBilledOutColumnIsCancelled.Width = 125;
-            // 
-            // tabPageBilledOutColumnRemarks
-            // 
-            this.tabPageBilledOutColumnRemarks.DataPropertyName = "ColumnRemarks";
-            this.tabPageBilledOutColumnRemarks.HeaderText = "Remarks";
-            this.tabPageBilledOutColumnRemarks.MinimumWidth = 6;
-            this.tabPageBilledOutColumnRemarks.Name = "tabPageBilledOutColumnRemarks";
-            this.tabPageBilledOutColumnRemarks.ReadOnly = true;
-            this.tabPageBilledOutColumnRemarks.Width = 200;
-            // 
-            // tabPageBilledOutColumnDelivery
-            // 
-            this.tabPageBilledOutColumnDelivery.DataPropertyName = "ColumnDelivery";
-            this.tabPageBilledOutColumnDelivery.HeaderText = "Delivered By";
-            this.tabPageBilledOutColumnDelivery.MinimumWidth = 6;
-            this.tabPageBilledOutColumnDelivery.Name = "tabPageBilledOutColumnDelivery";
-            this.tabPageBilledOutColumnDelivery.ReadOnly = true;
-            this.tabPageBilledOutColumnDelivery.Width = 150;
-            // 
-            // tabPageBilledOutColumnAmount
-            // 
-            this.tabPageBilledOutColumnAmount.DataPropertyName = "ColumnAmount";
-            dataGridViewCellStyle156.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle156.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageBilledOutColumnAmount.DefaultCellStyle = dataGridViewCellStyle156;
-            this.tabPageBilledOutColumnAmount.HeaderText = "Amount";
-            this.tabPageBilledOutColumnAmount.MinimumWidth = 6;
-            this.tabPageBilledOutColumnAmount.Name = "tabPageBilledOutColumnAmount";
-            this.tabPageBilledOutColumnAmount.ReadOnly = true;
-            this.tabPageBilledOutColumnAmount.Width = 120;
-            // 
-            // tabPageBilledOutColumnSpace
-            // 
-            this.tabPageBilledOutColumnSpace.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tabPageBilledOutColumnSpace.DataPropertyName = "ColumnSpace";
-            this.tabPageBilledOutColumnSpace.HeaderText = "";
-            this.tabPageBilledOutColumnSpace.MinimumWidth = 6;
-            this.tabPageBilledOutColumnSpace.Name = "tabPageBilledOutColumnSpace";
-            this.tabPageBilledOutColumnSpace.ReadOnly = true;
-            this.tabPageBilledOutColumnSpace.Visible = false;
-            // 
-            // tabPageCollected
-            // 
-            this.tabPageCollected.Controls.Add(this.dataGridViewCollectedSalesList);
-            this.tabPageCollected.Location = new System.Drawing.Point(4, 37);
-            this.tabPageCollected.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageCollected.Name = "tabPageCollected";
-            this.tabPageCollected.Size = new System.Drawing.Size(1253, 118);
-            this.tabPageCollected.TabIndex = 2;
-            this.tabPageCollected.Text = "Collected";
-            this.tabPageCollected.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewCollectedSalesList
-            // 
-            this.dataGridViewCollectedSalesList.AllowUserToAddRows = false;
-            this.dataGridViewCollectedSalesList.AllowUserToDeleteRows = false;
-            this.dataGridViewCollectedSalesList.AllowUserToResizeColumns = false;
-            this.dataGridViewCollectedSalesList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle159.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle159.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewCollectedSalesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle159;
-            this.dataGridViewCollectedSalesList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewCollectedSalesList.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewCollectedSalesList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewCollectedSalesList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle160.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle160.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle160.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle160.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle160.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCollectedSalesList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle160;
-            this.dataGridViewCollectedSalesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCollectedSalesList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tabPageCollectedColumnEdit,
-            this.tabPageCollectedColumnDelete,
-            this.tabPageCollectedColumnTable,
-            this.tabPageCollectedColumnId,
-            this.tabPageCollectedColumnTerminal,
-            this.tabPageCollectedColumnSalesDate,
-            this.tabPageCollectedColumnSalesNumber,
-            this.tabPageCollectedColumnManualSalesNumber,
-            this.tabPageCollectedColumnCollectionNumber,
-            this.tabPageCollectedColumnCustomerCode,
-            this.tabPageCollectedColumnCustomer,
-            this.tabPageCollectedColumnSalesAgent,
-            this.tabPageCollectedColumnIsLocked,
-            this.tabPageCollectedColumnIsTendered,
-            this.tabPageCollectedColumnIsCancelled,
-            this.tabPageCollectedColumnRemarks,
-            this.tabPageCollectedColumnDelivery,
-            this.tabPageCollectedColumnAmount,
-            this.tabPageCollectedColumnSpace});
-            dataGridViewCellStyle167.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle167.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle167.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle167.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle167.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle167.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle167.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCollectedSalesList.DefaultCellStyle = dataGridViewCellStyle167;
-            this.dataGridViewCollectedSalesList.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridViewCollectedSalesList.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewCollectedSalesList.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridViewCollectedSalesList.Name = "dataGridViewCollectedSalesList";
-            this.dataGridViewCollectedSalesList.ReadOnly = true;
-            this.dataGridViewCollectedSalesList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle168.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle168.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle168.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle168.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle168.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCollectedSalesList.RowHeadersDefaultCellStyle = dataGridViewCellStyle168;
-            this.dataGridViewCollectedSalesList.RowHeadersVisible = false;
-            this.dataGridViewCollectedSalesList.RowHeadersWidth = 51;
-            this.dataGridViewCollectedSalesList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridViewCollectedSalesList.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewCollectedSalesList.RowTemplate.Height = 30;
-            this.dataGridViewCollectedSalesList.RowTemplate.ReadOnly = true;
-            this.dataGridViewCollectedSalesList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCollectedSalesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCollectedSalesList.Size = new System.Drawing.Size(1258, 125);
-            this.dataGridViewCollectedSalesList.TabIndex = 10;
-            this.dataGridViewCollectedSalesList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCollectedSalesList_CellClick);
-            // 
-            // tabPageCollectedColumnEdit
-            // 
-            this.tabPageCollectedColumnEdit.DataPropertyName = "ColumnEdit";
-            this.tabPageCollectedColumnEdit.HeaderText = "Edit";
-            this.tabPageCollectedColumnEdit.MinimumWidth = 6;
-            this.tabPageCollectedColumnEdit.Name = "tabPageCollectedColumnEdit";
-            this.tabPageCollectedColumnEdit.ReadOnly = true;
-            this.tabPageCollectedColumnEdit.Visible = false;
-            this.tabPageCollectedColumnEdit.Width = 125;
-            // 
-            // tabPageCollectedColumnDelete
-            // 
-            this.tabPageCollectedColumnDelete.DataPropertyName = "ColumnDelete";
-            this.tabPageCollectedColumnDelete.HeaderText = "Delete";
-            this.tabPageCollectedColumnDelete.MinimumWidth = 6;
-            this.tabPageCollectedColumnDelete.Name = "tabPageCollectedColumnDelete";
-            this.tabPageCollectedColumnDelete.ReadOnly = true;
-            this.tabPageCollectedColumnDelete.Visible = false;
-            this.tabPageCollectedColumnDelete.Width = 125;
-            // 
-            // tabPageCollectedColumnTable
-            // 
-            this.tabPageCollectedColumnTable.DataPropertyName = "ColumnTable";
-            dataGridViewCellStyle161.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageCollectedColumnTable.DefaultCellStyle = dataGridViewCellStyle161;
-            this.tabPageCollectedColumnTable.HeaderText = "Table";
-            this.tabPageCollectedColumnTable.MinimumWidth = 6;
-            this.tabPageCollectedColumnTable.Name = "tabPageCollectedColumnTable";
-            this.tabPageCollectedColumnTable.ReadOnly = true;
-            this.tabPageCollectedColumnTable.Width = 125;
-            // 
-            // tabPageCollectedColumnId
-            // 
-            this.tabPageCollectedColumnId.DataPropertyName = "ColumnId";
-            this.tabPageCollectedColumnId.HeaderText = "Id";
-            this.tabPageCollectedColumnId.MinimumWidth = 6;
-            this.tabPageCollectedColumnId.Name = "tabPageCollectedColumnId";
-            this.tabPageCollectedColumnId.ReadOnly = true;
-            this.tabPageCollectedColumnId.Visible = false;
-            this.tabPageCollectedColumnId.Width = 125;
-            // 
-            // tabPageCollectedColumnTerminal
-            // 
-            this.tabPageCollectedColumnTerminal.DataPropertyName = "ColumnTerminal";
-            this.tabPageCollectedColumnTerminal.HeaderText = "Terminal";
-            this.tabPageCollectedColumnTerminal.MinimumWidth = 6;
-            this.tabPageCollectedColumnTerminal.Name = "tabPageCollectedColumnTerminal";
-            this.tabPageCollectedColumnTerminal.ReadOnly = true;
-            this.tabPageCollectedColumnTerminal.Visible = false;
-            this.tabPageCollectedColumnTerminal.Width = 125;
-            // 
-            // tabPageCollectedColumnSalesDate
-            // 
-            this.tabPageCollectedColumnSalesDate.DataPropertyName = "ColumnSalesDate";
-            this.tabPageCollectedColumnSalesDate.HeaderText = "Time";
-            this.tabPageCollectedColumnSalesDate.MinimumWidth = 6;
-            this.tabPageCollectedColumnSalesDate.Name = "tabPageCollectedColumnSalesDate";
-            this.tabPageCollectedColumnSalesDate.ReadOnly = true;
-            this.tabPageCollectedColumnSalesDate.Width = 125;
-            // 
-            // tabPageCollectedColumnSalesNumber
-            // 
-            this.tabPageCollectedColumnSalesNumber.ActiveLinkColor = System.Drawing.Color.Black;
-            this.tabPageCollectedColumnSalesNumber.DataPropertyName = "ColumnSalesNumber";
-            dataGridViewCellStyle162.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageCollectedColumnSalesNumber.DefaultCellStyle = dataGridViewCellStyle162;
-            this.tabPageCollectedColumnSalesNumber.HeaderText = "Order No.";
-            this.tabPageCollectedColumnSalesNumber.LinkColor = System.Drawing.Color.Black;
-            this.tabPageCollectedColumnSalesNumber.MinimumWidth = 6;
-            this.tabPageCollectedColumnSalesNumber.Name = "tabPageCollectedColumnSalesNumber";
-            this.tabPageCollectedColumnSalesNumber.ReadOnly = true;
-            this.tabPageCollectedColumnSalesNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabPageCollectedColumnSalesNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.tabPageCollectedColumnSalesNumber.VisitedLinkColor = System.Drawing.Color.Black;
-            this.tabPageCollectedColumnSalesNumber.Width = 130;
-            // 
-            // tabPageCollectedColumnManualSalesNumber
-            // 
-            this.tabPageCollectedColumnManualSalesNumber.DataPropertyName = "ColumnManualSalesNumber";
-            this.tabPageCollectedColumnManualSalesNumber.HeaderText = "Manual No.";
-            this.tabPageCollectedColumnManualSalesNumber.MinimumWidth = 6;
-            this.tabPageCollectedColumnManualSalesNumber.Name = "tabPageCollectedColumnManualSalesNumber";
-            this.tabPageCollectedColumnManualSalesNumber.ReadOnly = true;
-            this.tabPageCollectedColumnManualSalesNumber.Width = 130;
-            // 
-            // tabPageCollectedColumnCollectionNumber
-            // 
-            this.tabPageCollectedColumnCollectionNumber.DataPropertyName = "ColumnRececiptInvoiceNumber";
-            dataGridViewCellStyle163.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.tabPageCollectedColumnCollectionNumber.DefaultCellStyle = dataGridViewCellStyle163;
-            this.tabPageCollectedColumnCollectionNumber.HeaderText = "Collection No.";
-            this.tabPageCollectedColumnCollectionNumber.MinimumWidth = 6;
-            this.tabPageCollectedColumnCollectionNumber.Name = "tabPageCollectedColumnCollectionNumber";
-            this.tabPageCollectedColumnCollectionNumber.ReadOnly = true;
-            this.tabPageCollectedColumnCollectionNumber.Width = 130;
-            // 
-            // tabPageCollectedColumnCustomerCode
-            // 
-            this.tabPageCollectedColumnCustomerCode.DataPropertyName = "ColumnCustomerCode";
-            this.tabPageCollectedColumnCustomerCode.HeaderText = "Customer Code";
-            this.tabPageCollectedColumnCustomerCode.MinimumWidth = 6;
-            this.tabPageCollectedColumnCustomerCode.Name = "tabPageCollectedColumnCustomerCode";
-            this.tabPageCollectedColumnCustomerCode.ReadOnly = true;
-            this.tabPageCollectedColumnCustomerCode.Visible = false;
-            this.tabPageCollectedColumnCustomerCode.Width = 125;
-            // 
-            // tabPageCollectedColumnCustomer
-            // 
-            this.tabPageCollectedColumnCustomer.DataPropertyName = "ColumnCustomer";
-            dataGridViewCellStyle164.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageCollectedColumnCustomer.DefaultCellStyle = dataGridViewCellStyle164;
-            this.tabPageCollectedColumnCustomer.HeaderText = "Customer";
-            this.tabPageCollectedColumnCustomer.MinimumWidth = 6;
-            this.tabPageCollectedColumnCustomer.Name = "tabPageCollectedColumnCustomer";
-            this.tabPageCollectedColumnCustomer.ReadOnly = true;
-            this.tabPageCollectedColumnCustomer.Width = 125;
-            // 
-            // tabPageCollectedColumnSalesAgent
-            // 
-            this.tabPageCollectedColumnSalesAgent.DataPropertyName = "ColumnSalesAgent";
-            dataGridViewCellStyle165.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageCollectedColumnSalesAgent.DefaultCellStyle = dataGridViewCellStyle165;
-            this.tabPageCollectedColumnSalesAgent.HeaderText = "User";
-            this.tabPageCollectedColumnSalesAgent.MinimumWidth = 6;
-            this.tabPageCollectedColumnSalesAgent.Name = "tabPageCollectedColumnSalesAgent";
-            this.tabPageCollectedColumnSalesAgent.ReadOnly = true;
-            this.tabPageCollectedColumnSalesAgent.Width = 130;
-            // 
-            // tabPageCollectedColumnIsLocked
-            // 
-            this.tabPageCollectedColumnIsLocked.DataPropertyName = "ColumnIsLocked";
-            this.tabPageCollectedColumnIsLocked.HeaderText = "L";
-            this.tabPageCollectedColumnIsLocked.MinimumWidth = 6;
-            this.tabPageCollectedColumnIsLocked.Name = "tabPageCollectedColumnIsLocked";
-            this.tabPageCollectedColumnIsLocked.ReadOnly = true;
-            this.tabPageCollectedColumnIsLocked.Visible = false;
-            this.tabPageCollectedColumnIsLocked.Width = 125;
-            // 
-            // tabPageCollectedColumnIsTendered
-            // 
-            this.tabPageCollectedColumnIsTendered.DataPropertyName = "ColumnIsTendered";
-            this.tabPageCollectedColumnIsTendered.HeaderText = "T";
-            this.tabPageCollectedColumnIsTendered.MinimumWidth = 6;
-            this.tabPageCollectedColumnIsTendered.Name = "tabPageCollectedColumnIsTendered";
-            this.tabPageCollectedColumnIsTendered.ReadOnly = true;
-            this.tabPageCollectedColumnIsTendered.Visible = false;
-            this.tabPageCollectedColumnIsTendered.Width = 125;
-            // 
-            // tabPageCollectedColumnIsCancelled
-            // 
-            this.tabPageCollectedColumnIsCancelled.DataPropertyName = "ColumnIsCancelled";
-            this.tabPageCollectedColumnIsCancelled.HeaderText = "C";
-            this.tabPageCollectedColumnIsCancelled.MinimumWidth = 6;
-            this.tabPageCollectedColumnIsCancelled.Name = "tabPageCollectedColumnIsCancelled";
-            this.tabPageCollectedColumnIsCancelled.ReadOnly = true;
-            this.tabPageCollectedColumnIsCancelled.Width = 50;
-            // 
-            // tabPageCollectedColumnRemarks
-            // 
-            this.tabPageCollectedColumnRemarks.DataPropertyName = "ColumnRemarks";
-            this.tabPageCollectedColumnRemarks.HeaderText = "Remarks";
-            this.tabPageCollectedColumnRemarks.MinimumWidth = 6;
-            this.tabPageCollectedColumnRemarks.Name = "tabPageCollectedColumnRemarks";
-            this.tabPageCollectedColumnRemarks.ReadOnly = true;
-            this.tabPageCollectedColumnRemarks.Width = 200;
-            // 
-            // tabPageCollectedColumnDelivery
-            // 
-            this.tabPageCollectedColumnDelivery.DataPropertyName = "ColumnDelivery";
-            this.tabPageCollectedColumnDelivery.HeaderText = "Delivered By";
-            this.tabPageCollectedColumnDelivery.MinimumWidth = 6;
-            this.tabPageCollectedColumnDelivery.Name = "tabPageCollectedColumnDelivery";
-            this.tabPageCollectedColumnDelivery.ReadOnly = true;
-            this.tabPageCollectedColumnDelivery.Width = 150;
-            // 
-            // tabPageCollectedColumnAmount
-            // 
-            this.tabPageCollectedColumnAmount.DataPropertyName = "ColumnAmount";
-            dataGridViewCellStyle166.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle166.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageCollectedColumnAmount.DefaultCellStyle = dataGridViewCellStyle166;
-            this.tabPageCollectedColumnAmount.HeaderText = "Amount";
-            this.tabPageCollectedColumnAmount.MinimumWidth = 6;
-            this.tabPageCollectedColumnAmount.Name = "tabPageCollectedColumnAmount";
-            this.tabPageCollectedColumnAmount.ReadOnly = true;
-            this.tabPageCollectedColumnAmount.Width = 120;
-            // 
-            // tabPageCollectedColumnSpace
-            // 
-            this.tabPageCollectedColumnSpace.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tabPageCollectedColumnSpace.DataPropertyName = "ColumnSpace";
-            this.tabPageCollectedColumnSpace.HeaderText = "";
-            this.tabPageCollectedColumnSpace.MinimumWidth = 6;
-            this.tabPageCollectedColumnSpace.Name = "tabPageCollectedColumnSpace";
-            this.tabPageCollectedColumnSpace.ReadOnly = true;
-            this.tabPageCollectedColumnSpace.Visible = false;
-            // 
-            // textBoxTotalAmount
-            // 
-            this.textBoxTotalAmount.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBoxTotalAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
-            this.textBoxTotalAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTotalAmount.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.textBoxTotalAmount.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxTotalAmount.Location = new System.Drawing.Point(7, 454);
-            this.textBoxTotalAmount.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxTotalAmount.Name = "textBoxTotalAmount";
-            this.textBoxTotalAmount.Size = new System.Drawing.Size(88, 34);
-            this.textBoxTotalAmount.TabIndex = 17;
-            this.textBoxTotalAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxTotalAmount.Visible = false;
+            // buttonWalkIn
+            // 
+            this.buttonWalkIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
+            this.buttonWalkIn.FlatAppearance.BorderSize = 0;
+            this.buttonWalkIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonWalkIn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonWalkIn.ForeColor = System.Drawing.Color.White;
+            this.buttonWalkIn.ImageList = this.imageListPOSTouch;
+            this.buttonWalkIn.Location = new System.Drawing.Point(7, 4);
+            this.buttonWalkIn.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonWalkIn.Name = "buttonWalkIn";
+            this.buttonWalkIn.Size = new System.Drawing.Size(88, 65);
+            this.buttonWalkIn.TabIndex = 44;
+            this.buttonWalkIn.Text = "F2 \r\nWalk In";
+            this.buttonWalkIn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttonWalkIn.UseVisualStyleBackColor = false;
+            this.buttonWalkIn.Click += new System.EventHandler(this.buttonWalkIn_Click);
             // 
             // buttonTenderAll
             // 
@@ -1258,23 +346,20 @@
             this.buttonTenderAll.Visible = false;
             this.buttonTenderAll.Click += new System.EventHandler(this.buttonTenderAll_Click);
             // 
-            // buttonWalkIn
+            // textBoxTotalAmount
             // 
-            this.buttonWalkIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
-            this.buttonWalkIn.FlatAppearance.BorderSize = 0;
-            this.buttonWalkIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonWalkIn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonWalkIn.ForeColor = System.Drawing.Color.White;
-            this.buttonWalkIn.ImageList = this.imageListPOSTouch;
-            this.buttonWalkIn.Location = new System.Drawing.Point(7, 4);
-            this.buttonWalkIn.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonWalkIn.Name = "buttonWalkIn";
-            this.buttonWalkIn.Size = new System.Drawing.Size(88, 65);
-            this.buttonWalkIn.TabIndex = 44;
-            this.buttonWalkIn.Text = "F2 \r\nWalk In";
-            this.buttonWalkIn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.buttonWalkIn.UseVisualStyleBackColor = false;
-            this.buttonWalkIn.Click += new System.EventHandler(this.buttonWalkIn_Click);
+            this.textBoxTotalAmount.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxTotalAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
+            this.textBoxTotalAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTotalAmount.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.textBoxTotalAmount.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxTotalAmount.Location = new System.Drawing.Point(7, 454);
+            this.textBoxTotalAmount.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxTotalAmount.Name = "textBoxTotalAmount";
+            this.textBoxTotalAmount.Size = new System.Drawing.Size(88, 34);
+            this.textBoxTotalAmount.TabIndex = 17;
+            this.textBoxTotalAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxTotalAmount.Visible = false;
             // 
             // buttonDelivery
             // 
@@ -1295,36 +380,23 @@
             this.buttonDelivery.Visible = false;
             this.buttonDelivery.Click += new System.EventHandler(this.buttonDelivery_Click);
             // 
-            // textBoxFilter
+            // panelWalkIn
             // 
-            this.textBoxFilter.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textBoxFilter.Location = new System.Drawing.Point(380, 10);
-            this.textBoxFilter.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxFilter.Name = "textBoxFilter";
-            this.textBoxFilter.Size = new System.Drawing.Size(431, 34);
-            this.textBoxFilter.TabIndex = 23;
-            // 
-            // comboBoxTerminal
-            // 
-            this.comboBoxTerminal.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.comboBoxTerminal.FormattingEnabled = true;
-            this.comboBoxTerminal.Location = new System.Drawing.Point(170, 10);
-            this.comboBoxTerminal.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxTerminal.Name = "comboBoxTerminal";
-            this.comboBoxTerminal.Size = new System.Drawing.Size(204, 36);
-            this.comboBoxTerminal.TabIndex = 21;
-            this.comboBoxTerminal.SelectedIndexChanged += new System.EventHandler(this.comboBoxTerminal_SelectedIndexChanged);
-            // 
-            // dateTimePickerSalesDate
-            // 
-            this.dateTimePickerSalesDate.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.dateTimePickerSalesDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerSalesDate.Location = new System.Drawing.Point(10, 10);
-            this.dateTimePickerSalesDate.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerSalesDate.Name = "dateTimePickerSalesDate";
-            this.dateTimePickerSalesDate.Size = new System.Drawing.Size(156, 34);
-            this.dateTimePickerSalesDate.TabIndex = 22;
-            this.dateTimePickerSalesDate.ValueChanged += new System.EventHandler(this.dateTimePickerSalesDate_ValueChanged);
+            this.panelWalkIn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelWalkIn.BackColor = System.Drawing.Color.LightGray;
+            this.panelWalkIn.Controls.Add(this.panel6);
+            this.panelWalkIn.Controls.Add(this.pictureBoxPOSTouch);
+            this.panelWalkIn.Controls.Add(this.panel8);
+            this.panelWalkIn.Controls.Add(this.textBoxFilter);
+            this.panelWalkIn.Controls.Add(this.comboBoxTerminal);
+            this.panelWalkIn.Controls.Add(this.dateTimePickerSalesDate);
+            this.panelWalkIn.Location = new System.Drawing.Point(0, -6);
+            this.panelWalkIn.Margin = new System.Windows.Forms.Padding(4);
+            this.panelWalkIn.Name = "panelWalkIn";
+            this.panelWalkIn.Size = new System.Drawing.Size(1260, 489);
+            this.panelWalkIn.TabIndex = 16;
             // 
             // panel6
             // 
@@ -1375,7 +447,7 @@
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(5);
-            this.panel6.Size = new System.Drawing.Size(820, 440);
+            this.panel6.Size = new System.Drawing.Size(812, 440);
             this.panel6.TabIndex = 24;
             // 
             // buttonTableGroup4
@@ -1944,18 +1016,89 @@
             this.buttonTableGroupPagePrevious.UseVisualStyleBackColor = false;
             this.buttonTableGroupPagePrevious.Click += new System.EventHandler(this.buttonTableGroupPagePrevious_Click);
             // 
-            // panel2
+            // pictureBoxPOSTouch
             // 
-            this.panel2.Controls.Add(this.buttonHideItems);
-            this.panel2.Controls.Add(this.buttonWalkIn);
-            this.panel2.Controls.Add(this.buttonTenderAll);
-            this.panel2.Controls.Add(this.textBoxTotalAmount);
-            this.panel2.Controls.Add(this.buttonDelivery);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1270, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(100, 645);
-            this.panel2.TabIndex = 61;
+            this.pictureBoxPOSTouch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxPOSTouch.Location = new System.Drawing.Point(827, 55);
+            this.pictureBoxPOSTouch.Name = "pictureBoxPOSTouch";
+            this.pictureBoxPOSTouch.Size = new System.Drawing.Size(325, 231);
+            this.pictureBoxPOSTouch.TabIndex = 60;
+            this.pictureBoxPOSTouch.TabStop = false;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
+            this.panel8.Controls.Add(this.textBoxLastChange);
+            this.panel8.Controls.Add(this.labelLastChange);
+            this.panel8.Location = new System.Drawing.Point(827, 446);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(325, 38);
+            this.panel8.TabIndex = 57;
+            // 
+            // textBoxLastChange
+            // 
+            this.textBoxLastChange.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxLastChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
+            this.textBoxLastChange.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxLastChange.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.textBoxLastChange.ForeColor = System.Drawing.Color.White;
+            this.textBoxLastChange.Location = new System.Drawing.Point(217, 0);
+            this.textBoxLastChange.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxLastChange.Name = "textBoxLastChange";
+            this.textBoxLastChange.ReadOnly = true;
+            this.textBoxLastChange.Size = new System.Drawing.Size(108, 34);
+            this.textBoxLastChange.TabIndex = 17;
+            this.textBoxLastChange.Text = "0.00";
+            this.textBoxLastChange.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelLastChange
+            // 
+            this.labelLastChange.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelLastChange.AutoSize = true;
+            this.labelLastChange.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.labelLastChange.ForeColor = System.Drawing.Color.White;
+            this.labelLastChange.Location = new System.Drawing.Point(12, 6);
+            this.labelLastChange.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelLastChange.Name = "labelLastChange";
+            this.labelLastChange.Size = new System.Drawing.Size(124, 25);
+            this.labelLastChange.TabIndex = 16;
+            this.labelLastChange.Text = "Last Change:";
+            this.labelLastChange.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxFilter
+            // 
+            this.textBoxFilter.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textBoxFilter.Location = new System.Drawing.Point(380, 10);
+            this.textBoxFilter.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxFilter.Name = "textBoxFilter";
+            this.textBoxFilter.Size = new System.Drawing.Size(431, 34);
+            this.textBoxFilter.TabIndex = 23;
+            // 
+            // comboBoxTerminal
+            // 
+            this.comboBoxTerminal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.comboBoxTerminal.FormattingEnabled = true;
+            this.comboBoxTerminal.Location = new System.Drawing.Point(170, 10);
+            this.comboBoxTerminal.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxTerminal.Name = "comboBoxTerminal";
+            this.comboBoxTerminal.Size = new System.Drawing.Size(204, 36);
+            this.comboBoxTerminal.TabIndex = 21;
+            this.comboBoxTerminal.SelectedIndexChanged += new System.EventHandler(this.comboBoxTerminal_SelectedIndexChanged);
+            // 
+            // dateTimePickerSalesDate
+            // 
+            this.dateTimePickerSalesDate.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.dateTimePickerSalesDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerSalesDate.Location = new System.Drawing.Point(10, 10);
+            this.dateTimePickerSalesDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerSalesDate.Name = "dateTimePickerSalesDate";
+            this.dateTimePickerSalesDate.Size = new System.Drawing.Size(156, 34);
+            this.dateTimePickerSalesDate.TabIndex = 22;
+            this.dateTimePickerSalesDate.ValueChanged += new System.EventHandler(this.dateTimePickerSalesDate_ValueChanged);
             // 
             // panel4
             // 
@@ -1963,10 +1106,874 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.tabControlSales);
-            this.panel4.Location = new System.Drawing.Point(3, 484);
+            this.panel4.Location = new System.Drawing.Point(3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1261, 159);
+            this.panel4.Size = new System.Drawing.Size(1261, 639);
             this.panel4.TabIndex = 62;
+            // 
+            // tabControlSales
+            // 
+            this.tabControlSales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlSales.Controls.Add(this.tabPageOpen);
+            this.tabControlSales.Controls.Add(this.tabPageBilledOut);
+            this.tabControlSales.Controls.Add(this.tabPageCollected);
+            this.tabControlSales.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tabControlSales.Location = new System.Drawing.Point(0, 478);
+            this.tabControlSales.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControlSales.Name = "tabControlSales";
+            this.tabControlSales.SelectedIndex = 0;
+            this.tabControlSales.Size = new System.Drawing.Size(1265, 161);
+            this.tabControlSales.TabIndex = 41;
+            this.tabControlSales.SelectedIndexChanged += new System.EventHandler(this.tabControlSales_SelectedIndexChanged);
+            // 
+            // tabPageOpen
+            // 
+            this.tabPageOpen.Controls.Add(this.dataGridViewOpenSalesList);
+            this.tabPageOpen.Location = new System.Drawing.Point(4, 37);
+            this.tabPageOpen.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageOpen.Name = "tabPageOpen";
+            this.tabPageOpen.Size = new System.Drawing.Size(1257, 120);
+            this.tabPageOpen.TabIndex = 0;
+            this.tabPageOpen.Text = "Open";
+            this.tabPageOpen.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewOpenSalesList
+            // 
+            this.dataGridViewOpenSalesList.AllowUserToAddRows = false;
+            this.dataGridViewOpenSalesList.AllowUserToDeleteRows = false;
+            this.dataGridViewOpenSalesList.AllowUserToResizeColumns = false;
+            this.dataGridViewOpenSalesList.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewOpenSalesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewOpenSalesList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewOpenSalesList.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewOpenSalesList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewOpenSalesList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewOpenSalesList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewOpenSalesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOpenSalesList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TabPageOpenColumnEdit,
+            this.TabPageOpenColumnDelete,
+            this.TabPageOpenColumnTable,
+            this.TabPageOpenColumnTerminal,
+            this.TabPageOpenColumnId,
+            this.TabPageOpenColumnSalesDate,
+            this.TabPageOpenColumnSalesNumber,
+            this.TabPageOpenColumnManualSalesNumber,
+            this.TabPageOpenColumnRececiptInvoiceNumber,
+            this.TabPageOpenColumnCustomerCode,
+            this.TabPageOpenColumnCustomer,
+            this.TabPageOpenColumnSalesAgent,
+            this.TabPageOpenColumnIsLocked,
+            this.TabPageOpenColumnIsTendered,
+            this.TabPageOpenColumnIsCancelled,
+            this.TabPageOpenColumnRemarks,
+            this.TabPageOpenColumnDelivery,
+            this.TabPageOpenColumnAmount,
+            this.TabPageOpenColumnSpace});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewOpenSalesList.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewOpenSalesList.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridViewOpenSalesList.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewOpenSalesList.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewOpenSalesList.Name = "dataGridViewOpenSalesList";
+            this.dataGridViewOpenSalesList.ReadOnly = true;
+            this.dataGridViewOpenSalesList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewOpenSalesList.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewOpenSalesList.RowHeadersVisible = false;
+            this.dataGridViewOpenSalesList.RowHeadersWidth = 51;
+            this.dataGridViewOpenSalesList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewOpenSalesList.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewOpenSalesList.RowTemplate.Height = 30;
+            this.dataGridViewOpenSalesList.RowTemplate.ReadOnly = true;
+            this.dataGridViewOpenSalesList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewOpenSalesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewOpenSalesList.Size = new System.Drawing.Size(1253, 120);
+            this.dataGridViewOpenSalesList.TabIndex = 8;
+            this.dataGridViewOpenSalesList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOpenSalesList_CellClick);
+            // 
+            // TabPageOpenColumnEdit
+            // 
+            this.TabPageOpenColumnEdit.DataPropertyName = "ColumnEdit";
+            this.TabPageOpenColumnEdit.HeaderText = "Edit";
+            this.TabPageOpenColumnEdit.MinimumWidth = 6;
+            this.TabPageOpenColumnEdit.Name = "TabPageOpenColumnEdit";
+            this.TabPageOpenColumnEdit.ReadOnly = true;
+            this.TabPageOpenColumnEdit.Visible = false;
+            this.TabPageOpenColumnEdit.Width = 125;
+            // 
+            // TabPageOpenColumnDelete
+            // 
+            this.TabPageOpenColumnDelete.DataPropertyName = "ColumnDelete";
+            this.TabPageOpenColumnDelete.HeaderText = "Delete";
+            this.TabPageOpenColumnDelete.MinimumWidth = 6;
+            this.TabPageOpenColumnDelete.Name = "TabPageOpenColumnDelete";
+            this.TabPageOpenColumnDelete.ReadOnly = true;
+            this.TabPageOpenColumnDelete.Visible = false;
+            this.TabPageOpenColumnDelete.Width = 125;
+            // 
+            // TabPageOpenColumnTable
+            // 
+            this.TabPageOpenColumnTable.DataPropertyName = "ColumnTable";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabPageOpenColumnTable.DefaultCellStyle = dataGridViewCellStyle3;
+            this.TabPageOpenColumnTable.HeaderText = "Table";
+            this.TabPageOpenColumnTable.MinimumWidth = 6;
+            this.TabPageOpenColumnTable.Name = "TabPageOpenColumnTable";
+            this.TabPageOpenColumnTable.ReadOnly = true;
+            this.TabPageOpenColumnTable.Width = 125;
+            // 
+            // TabPageOpenColumnTerminal
+            // 
+            this.TabPageOpenColumnTerminal.DataPropertyName = "ColumnTerminal";
+            this.TabPageOpenColumnTerminal.HeaderText = "Terminal";
+            this.TabPageOpenColumnTerminal.MinimumWidth = 6;
+            this.TabPageOpenColumnTerminal.Name = "TabPageOpenColumnTerminal";
+            this.TabPageOpenColumnTerminal.ReadOnly = true;
+            this.TabPageOpenColumnTerminal.Visible = false;
+            this.TabPageOpenColumnTerminal.Width = 125;
+            // 
+            // TabPageOpenColumnId
+            // 
+            this.TabPageOpenColumnId.DataPropertyName = "ColumnId";
+            this.TabPageOpenColumnId.HeaderText = "Id";
+            this.TabPageOpenColumnId.MinimumWidth = 6;
+            this.TabPageOpenColumnId.Name = "TabPageOpenColumnId";
+            this.TabPageOpenColumnId.ReadOnly = true;
+            this.TabPageOpenColumnId.Visible = false;
+            this.TabPageOpenColumnId.Width = 125;
+            // 
+            // TabPageOpenColumnSalesDate
+            // 
+            this.TabPageOpenColumnSalesDate.DataPropertyName = "ColumnSalesDate";
+            this.TabPageOpenColumnSalesDate.HeaderText = "SalesDate";
+            this.TabPageOpenColumnSalesDate.MinimumWidth = 6;
+            this.TabPageOpenColumnSalesDate.Name = "TabPageOpenColumnSalesDate";
+            this.TabPageOpenColumnSalesDate.ReadOnly = true;
+            this.TabPageOpenColumnSalesDate.Visible = false;
+            this.TabPageOpenColumnSalesDate.Width = 125;
+            // 
+            // TabPageOpenColumnSalesNumber
+            // 
+            this.TabPageOpenColumnSalesNumber.ActiveLinkColor = System.Drawing.Color.Black;
+            this.TabPageOpenColumnSalesNumber.DataPropertyName = "ColumnSalesNumber";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabPageOpenColumnSalesNumber.DefaultCellStyle = dataGridViewCellStyle4;
+            this.TabPageOpenColumnSalesNumber.HeaderText = "Order No.";
+            this.TabPageOpenColumnSalesNumber.LinkColor = System.Drawing.Color.Black;
+            this.TabPageOpenColumnSalesNumber.MinimumWidth = 6;
+            this.TabPageOpenColumnSalesNumber.Name = "TabPageOpenColumnSalesNumber";
+            this.TabPageOpenColumnSalesNumber.ReadOnly = true;
+            this.TabPageOpenColumnSalesNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TabPageOpenColumnSalesNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.TabPageOpenColumnSalesNumber.VisitedLinkColor = System.Drawing.Color.Black;
+            this.TabPageOpenColumnSalesNumber.Width = 130;
+            // 
+            // TabPageOpenColumnManualSalesNumber
+            // 
+            this.TabPageOpenColumnManualSalesNumber.DataPropertyName = "ColumnManualSalesNumber";
+            this.TabPageOpenColumnManualSalesNumber.HeaderText = "Manual No.";
+            this.TabPageOpenColumnManualSalesNumber.MinimumWidth = 6;
+            this.TabPageOpenColumnManualSalesNumber.Name = "TabPageOpenColumnManualSalesNumber";
+            this.TabPageOpenColumnManualSalesNumber.ReadOnly = true;
+            this.TabPageOpenColumnManualSalesNumber.Width = 130;
+            // 
+            // TabPageOpenColumnRececiptInvoiceNumber
+            // 
+            this.TabPageOpenColumnRececiptInvoiceNumber.DataPropertyName = "ColumnRececiptInvoiceNumber";
+            this.TabPageOpenColumnRececiptInvoiceNumber.HeaderText = "Collection No.";
+            this.TabPageOpenColumnRececiptInvoiceNumber.MinimumWidth = 6;
+            this.TabPageOpenColumnRececiptInvoiceNumber.Name = "TabPageOpenColumnRececiptInvoiceNumber";
+            this.TabPageOpenColumnRececiptInvoiceNumber.ReadOnly = true;
+            this.TabPageOpenColumnRececiptInvoiceNumber.Visible = false;
+            this.TabPageOpenColumnRececiptInvoiceNumber.Width = 130;
+            // 
+            // TabPageOpenColumnCustomerCode
+            // 
+            this.TabPageOpenColumnCustomerCode.DataPropertyName = "ColumnCustomerCode";
+            this.TabPageOpenColumnCustomerCode.HeaderText = "Customer Code";
+            this.TabPageOpenColumnCustomerCode.MinimumWidth = 6;
+            this.TabPageOpenColumnCustomerCode.Name = "TabPageOpenColumnCustomerCode";
+            this.TabPageOpenColumnCustomerCode.ReadOnly = true;
+            this.TabPageOpenColumnCustomerCode.Visible = false;
+            this.TabPageOpenColumnCustomerCode.Width = 125;
+            // 
+            // TabPageOpenColumnCustomer
+            // 
+            this.TabPageOpenColumnCustomer.DataPropertyName = "ColumnCustomer";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabPageOpenColumnCustomer.DefaultCellStyle = dataGridViewCellStyle5;
+            this.TabPageOpenColumnCustomer.HeaderText = "Customer";
+            this.TabPageOpenColumnCustomer.MinimumWidth = 6;
+            this.TabPageOpenColumnCustomer.Name = "TabPageOpenColumnCustomer";
+            this.TabPageOpenColumnCustomer.ReadOnly = true;
+            this.TabPageOpenColumnCustomer.Width = 125;
+            // 
+            // TabPageOpenColumnSalesAgent
+            // 
+            this.TabPageOpenColumnSalesAgent.DataPropertyName = "ColumnSalesAgent";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabPageOpenColumnSalesAgent.DefaultCellStyle = dataGridViewCellStyle6;
+            this.TabPageOpenColumnSalesAgent.HeaderText = "User";
+            this.TabPageOpenColumnSalesAgent.MinimumWidth = 6;
+            this.TabPageOpenColumnSalesAgent.Name = "TabPageOpenColumnSalesAgent";
+            this.TabPageOpenColumnSalesAgent.ReadOnly = true;
+            this.TabPageOpenColumnSalesAgent.Width = 130;
+            // 
+            // TabPageOpenColumnIsLocked
+            // 
+            this.TabPageOpenColumnIsLocked.DataPropertyName = "ColumnIsLocked";
+            this.TabPageOpenColumnIsLocked.HeaderText = "L";
+            this.TabPageOpenColumnIsLocked.MinimumWidth = 6;
+            this.TabPageOpenColumnIsLocked.Name = "TabPageOpenColumnIsLocked";
+            this.TabPageOpenColumnIsLocked.ReadOnly = true;
+            this.TabPageOpenColumnIsLocked.Visible = false;
+            this.TabPageOpenColumnIsLocked.Width = 125;
+            // 
+            // TabPageOpenColumnIsTendered
+            // 
+            this.TabPageOpenColumnIsTendered.DataPropertyName = "ColumnIsTendered";
+            this.TabPageOpenColumnIsTendered.HeaderText = "T";
+            this.TabPageOpenColumnIsTendered.MinimumWidth = 6;
+            this.TabPageOpenColumnIsTendered.Name = "TabPageOpenColumnIsTendered";
+            this.TabPageOpenColumnIsTendered.ReadOnly = true;
+            this.TabPageOpenColumnIsTendered.Visible = false;
+            this.TabPageOpenColumnIsTendered.Width = 125;
+            // 
+            // TabPageOpenColumnIsCancelled
+            // 
+            this.TabPageOpenColumnIsCancelled.DataPropertyName = "ColumnIsCancelled";
+            this.TabPageOpenColumnIsCancelled.HeaderText = "C";
+            this.TabPageOpenColumnIsCancelled.MinimumWidth = 6;
+            this.TabPageOpenColumnIsCancelled.Name = "TabPageOpenColumnIsCancelled";
+            this.TabPageOpenColumnIsCancelled.ReadOnly = true;
+            this.TabPageOpenColumnIsCancelled.Visible = false;
+            this.TabPageOpenColumnIsCancelled.Width = 125;
+            // 
+            // TabPageOpenColumnRemarks
+            // 
+            this.TabPageOpenColumnRemarks.DataPropertyName = "ColumnRemarks";
+            this.TabPageOpenColumnRemarks.HeaderText = "Remarks";
+            this.TabPageOpenColumnRemarks.MinimumWidth = 6;
+            this.TabPageOpenColumnRemarks.Name = "TabPageOpenColumnRemarks";
+            this.TabPageOpenColumnRemarks.ReadOnly = true;
+            this.TabPageOpenColumnRemarks.Width = 200;
+            // 
+            // TabPageOpenColumnDelivery
+            // 
+            this.TabPageOpenColumnDelivery.DataPropertyName = "ColumnDelivery";
+            this.TabPageOpenColumnDelivery.HeaderText = "Delivered By";
+            this.TabPageOpenColumnDelivery.MinimumWidth = 6;
+            this.TabPageOpenColumnDelivery.Name = "TabPageOpenColumnDelivery";
+            this.TabPageOpenColumnDelivery.ReadOnly = true;
+            this.TabPageOpenColumnDelivery.Visible = false;
+            this.TabPageOpenColumnDelivery.Width = 150;
+            // 
+            // TabPageOpenColumnAmount
+            // 
+            this.TabPageOpenColumnAmount.DataPropertyName = "ColumnAmount";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabPageOpenColumnAmount.DefaultCellStyle = dataGridViewCellStyle7;
+            this.TabPageOpenColumnAmount.HeaderText = "Amount";
+            this.TabPageOpenColumnAmount.MinimumWidth = 6;
+            this.TabPageOpenColumnAmount.Name = "TabPageOpenColumnAmount";
+            this.TabPageOpenColumnAmount.ReadOnly = true;
+            this.TabPageOpenColumnAmount.Width = 120;
+            // 
+            // TabPageOpenColumnSpace
+            // 
+            this.TabPageOpenColumnSpace.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TabPageOpenColumnSpace.DataPropertyName = "ColumnSpace";
+            this.TabPageOpenColumnSpace.HeaderText = "";
+            this.TabPageOpenColumnSpace.MinimumWidth = 6;
+            this.TabPageOpenColumnSpace.Name = "TabPageOpenColumnSpace";
+            this.TabPageOpenColumnSpace.ReadOnly = true;
+            this.TabPageOpenColumnSpace.Visible = false;
+            // 
+            // tabPageBilledOut
+            // 
+            this.tabPageBilledOut.Controls.Add(this.dataGridViewBilledOutSalesList);
+            this.tabPageBilledOut.Location = new System.Drawing.Point(4, 37);
+            this.tabPageBilledOut.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageBilledOut.Name = "tabPageBilledOut";
+            this.tabPageBilledOut.Size = new System.Drawing.Size(1253, 120);
+            this.tabPageBilledOut.TabIndex = 1;
+            this.tabPageBilledOut.Text = "Billed Out";
+            this.tabPageBilledOut.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewBilledOutSalesList
+            // 
+            this.dataGridViewBilledOutSalesList.AllowUserToAddRows = false;
+            this.dataGridViewBilledOutSalesList.AllowUserToDeleteRows = false;
+            this.dataGridViewBilledOutSalesList.AllowUserToResizeColumns = false;
+            this.dataGridViewBilledOutSalesList.AllowUserToResizeRows = false;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewBilledOutSalesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewBilledOutSalesList.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewBilledOutSalesList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewBilledOutSalesList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBilledOutSalesList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridViewBilledOutSalesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBilledOutSalesList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabPageBilledOutColumnEdit,
+            this.tabPageBilledOutColumnDelete,
+            this.tabPageBilledOutColumnTable,
+            this.tabPageBilledOutColumnId,
+            this.tabPageBilledOutColumnSalesDate,
+            this.tabPageBilledOutColumnSalesNumber,
+            this.tabPageBilledOutColumnManualSalesNumber,
+            this.tabPageBilledOutColumnInvoiceNumber,
+            this.tabPageBilledOutColumnTerminal,
+            this.tabPageBilledOutColumnCustomerCode,
+            this.tabPageBilledOutColumnCustomer,
+            this.tabPageBilledOutColumnSalesAgent,
+            this.tabPageBilledOutColumnIsLocked,
+            this.tabPageBilledOutColumnIsTendered,
+            this.tabPageBilledOutColumnIsCancelled,
+            this.tabPageBilledOutColumnRemarks,
+            this.tabPageBilledOutColumnDelivery,
+            this.tabPageBilledOutColumnAmount,
+            this.tabPageBilledOutColumnSpace});
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBilledOutSalesList.DefaultCellStyle = dataGridViewCellStyle17;
+            this.dataGridViewBilledOutSalesList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewBilledOutSalesList.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridViewBilledOutSalesList.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewBilledOutSalesList.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewBilledOutSalesList.Name = "dataGridViewBilledOutSalesList";
+            this.dataGridViewBilledOutSalesList.ReadOnly = true;
+            this.dataGridViewBilledOutSalesList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBilledOutSalesList.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.dataGridViewBilledOutSalesList.RowHeadersVisible = false;
+            this.dataGridViewBilledOutSalesList.RowHeadersWidth = 51;
+            this.dataGridViewBilledOutSalesList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewBilledOutSalesList.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewBilledOutSalesList.RowTemplate.Height = 30;
+            this.dataGridViewBilledOutSalesList.RowTemplate.ReadOnly = true;
+            this.dataGridViewBilledOutSalesList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBilledOutSalesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewBilledOutSalesList.Size = new System.Drawing.Size(1253, 120);
+            this.dataGridViewBilledOutSalesList.TabIndex = 9;
+            this.dataGridViewBilledOutSalesList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBilledOutSalesList_CellClick);
+            // 
+            // tabPageBilledOutColumnEdit
+            // 
+            this.tabPageBilledOutColumnEdit.DataPropertyName = "ColumnEdit";
+            this.tabPageBilledOutColumnEdit.HeaderText = "Edit";
+            this.tabPageBilledOutColumnEdit.MinimumWidth = 6;
+            this.tabPageBilledOutColumnEdit.Name = "tabPageBilledOutColumnEdit";
+            this.tabPageBilledOutColumnEdit.ReadOnly = true;
+            this.tabPageBilledOutColumnEdit.Visible = false;
+            this.tabPageBilledOutColumnEdit.Width = 125;
+            // 
+            // tabPageBilledOutColumnDelete
+            // 
+            this.tabPageBilledOutColumnDelete.DataPropertyName = "ColumnDelete";
+            this.tabPageBilledOutColumnDelete.HeaderText = "Delete";
+            this.tabPageBilledOutColumnDelete.MinimumWidth = 6;
+            this.tabPageBilledOutColumnDelete.Name = "tabPageBilledOutColumnDelete";
+            this.tabPageBilledOutColumnDelete.ReadOnly = true;
+            this.tabPageBilledOutColumnDelete.Visible = false;
+            this.tabPageBilledOutColumnDelete.Width = 125;
+            // 
+            // tabPageBilledOutColumnTable
+            // 
+            this.tabPageBilledOutColumnTable.DataPropertyName = "ColumnTable";
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageBilledOutColumnTable.DefaultCellStyle = dataGridViewCellStyle12;
+            this.tabPageBilledOutColumnTable.HeaderText = "Table";
+            this.tabPageBilledOutColumnTable.MinimumWidth = 6;
+            this.tabPageBilledOutColumnTable.Name = "tabPageBilledOutColumnTable";
+            this.tabPageBilledOutColumnTable.ReadOnly = true;
+            this.tabPageBilledOutColumnTable.Width = 125;
+            // 
+            // tabPageBilledOutColumnId
+            // 
+            this.tabPageBilledOutColumnId.DataPropertyName = "ColumnId";
+            this.tabPageBilledOutColumnId.HeaderText = "Id";
+            this.tabPageBilledOutColumnId.MinimumWidth = 6;
+            this.tabPageBilledOutColumnId.Name = "tabPageBilledOutColumnId";
+            this.tabPageBilledOutColumnId.ReadOnly = true;
+            this.tabPageBilledOutColumnId.Visible = false;
+            this.tabPageBilledOutColumnId.Width = 125;
+            // 
+            // tabPageBilledOutColumnSalesDate
+            // 
+            this.tabPageBilledOutColumnSalesDate.DataPropertyName = "ColumnSalesDate";
+            this.tabPageBilledOutColumnSalesDate.HeaderText = "SalesDate";
+            this.tabPageBilledOutColumnSalesDate.MinimumWidth = 6;
+            this.tabPageBilledOutColumnSalesDate.Name = "tabPageBilledOutColumnSalesDate";
+            this.tabPageBilledOutColumnSalesDate.ReadOnly = true;
+            this.tabPageBilledOutColumnSalesDate.Visible = false;
+            this.tabPageBilledOutColumnSalesDate.Width = 125;
+            // 
+            // tabPageBilledOutColumnSalesNumber
+            // 
+            this.tabPageBilledOutColumnSalesNumber.ActiveLinkColor = System.Drawing.Color.Black;
+            this.tabPageBilledOutColumnSalesNumber.DataPropertyName = "ColumnSalesNumber";
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageBilledOutColumnSalesNumber.DefaultCellStyle = dataGridViewCellStyle13;
+            this.tabPageBilledOutColumnSalesNumber.HeaderText = "Order No.";
+            this.tabPageBilledOutColumnSalesNumber.LinkColor = System.Drawing.Color.Black;
+            this.tabPageBilledOutColumnSalesNumber.MinimumWidth = 6;
+            this.tabPageBilledOutColumnSalesNumber.Name = "tabPageBilledOutColumnSalesNumber";
+            this.tabPageBilledOutColumnSalesNumber.ReadOnly = true;
+            this.tabPageBilledOutColumnSalesNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabPageBilledOutColumnSalesNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.tabPageBilledOutColumnSalesNumber.VisitedLinkColor = System.Drawing.Color.Black;
+            this.tabPageBilledOutColumnSalesNumber.Width = 130;
+            // 
+            // tabPageBilledOutColumnManualSalesNumber
+            // 
+            this.tabPageBilledOutColumnManualSalesNumber.DataPropertyName = "ColumnManualSalesNumber";
+            this.tabPageBilledOutColumnManualSalesNumber.HeaderText = "Manual No.";
+            this.tabPageBilledOutColumnManualSalesNumber.MinimumWidth = 6;
+            this.tabPageBilledOutColumnManualSalesNumber.Name = "tabPageBilledOutColumnManualSalesNumber";
+            this.tabPageBilledOutColumnManualSalesNumber.ReadOnly = true;
+            this.tabPageBilledOutColumnManualSalesNumber.Width = 130;
+            // 
+            // tabPageBilledOutColumnInvoiceNumber
+            // 
+            this.tabPageBilledOutColumnInvoiceNumber.DataPropertyName = "ColumnRececiptInvoiceNumber";
+            this.tabPageBilledOutColumnInvoiceNumber.HeaderText = "Collection No.";
+            this.tabPageBilledOutColumnInvoiceNumber.MinimumWidth = 6;
+            this.tabPageBilledOutColumnInvoiceNumber.Name = "tabPageBilledOutColumnInvoiceNumber";
+            this.tabPageBilledOutColumnInvoiceNumber.ReadOnly = true;
+            this.tabPageBilledOutColumnInvoiceNumber.Visible = false;
+            this.tabPageBilledOutColumnInvoiceNumber.Width = 130;
+            // 
+            // tabPageBilledOutColumnTerminal
+            // 
+            this.tabPageBilledOutColumnTerminal.DataPropertyName = "ColumnTerminal";
+            this.tabPageBilledOutColumnTerminal.HeaderText = "Terminal";
+            this.tabPageBilledOutColumnTerminal.MinimumWidth = 6;
+            this.tabPageBilledOutColumnTerminal.Name = "tabPageBilledOutColumnTerminal";
+            this.tabPageBilledOutColumnTerminal.ReadOnly = true;
+            this.tabPageBilledOutColumnTerminal.Visible = false;
+            this.tabPageBilledOutColumnTerminal.Width = 125;
+            // 
+            // tabPageBilledOutColumnCustomerCode
+            // 
+            this.tabPageBilledOutColumnCustomerCode.DataPropertyName = "ColumnCustomerCode";
+            this.tabPageBilledOutColumnCustomerCode.HeaderText = "Customer Code";
+            this.tabPageBilledOutColumnCustomerCode.MinimumWidth = 6;
+            this.tabPageBilledOutColumnCustomerCode.Name = "tabPageBilledOutColumnCustomerCode";
+            this.tabPageBilledOutColumnCustomerCode.ReadOnly = true;
+            this.tabPageBilledOutColumnCustomerCode.Visible = false;
+            this.tabPageBilledOutColumnCustomerCode.Width = 125;
+            // 
+            // tabPageBilledOutColumnCustomer
+            // 
+            this.tabPageBilledOutColumnCustomer.DataPropertyName = "ColumnCustomer";
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageBilledOutColumnCustomer.DefaultCellStyle = dataGridViewCellStyle14;
+            this.tabPageBilledOutColumnCustomer.HeaderText = "Customer";
+            this.tabPageBilledOutColumnCustomer.MinimumWidth = 6;
+            this.tabPageBilledOutColumnCustomer.Name = "tabPageBilledOutColumnCustomer";
+            this.tabPageBilledOutColumnCustomer.ReadOnly = true;
+            this.tabPageBilledOutColumnCustomer.Width = 125;
+            // 
+            // tabPageBilledOutColumnSalesAgent
+            // 
+            this.tabPageBilledOutColumnSalesAgent.DataPropertyName = "ColumnSalesAgent";
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageBilledOutColumnSalesAgent.DefaultCellStyle = dataGridViewCellStyle15;
+            this.tabPageBilledOutColumnSalesAgent.HeaderText = "User";
+            this.tabPageBilledOutColumnSalesAgent.MinimumWidth = 6;
+            this.tabPageBilledOutColumnSalesAgent.Name = "tabPageBilledOutColumnSalesAgent";
+            this.tabPageBilledOutColumnSalesAgent.ReadOnly = true;
+            this.tabPageBilledOutColumnSalesAgent.Width = 130;
+            // 
+            // tabPageBilledOutColumnIsLocked
+            // 
+            this.tabPageBilledOutColumnIsLocked.DataPropertyName = "ColumnIsLocked";
+            this.tabPageBilledOutColumnIsLocked.HeaderText = "L";
+            this.tabPageBilledOutColumnIsLocked.MinimumWidth = 6;
+            this.tabPageBilledOutColumnIsLocked.Name = "tabPageBilledOutColumnIsLocked";
+            this.tabPageBilledOutColumnIsLocked.ReadOnly = true;
+            this.tabPageBilledOutColumnIsLocked.Visible = false;
+            this.tabPageBilledOutColumnIsLocked.Width = 125;
+            // 
+            // tabPageBilledOutColumnIsTendered
+            // 
+            this.tabPageBilledOutColumnIsTendered.DataPropertyName = "ColumnIsTendered";
+            this.tabPageBilledOutColumnIsTendered.HeaderText = "T";
+            this.tabPageBilledOutColumnIsTendered.MinimumWidth = 6;
+            this.tabPageBilledOutColumnIsTendered.Name = "tabPageBilledOutColumnIsTendered";
+            this.tabPageBilledOutColumnIsTendered.ReadOnly = true;
+            this.tabPageBilledOutColumnIsTendered.Visible = false;
+            this.tabPageBilledOutColumnIsTendered.Width = 125;
+            // 
+            // tabPageBilledOutColumnIsCancelled
+            // 
+            this.tabPageBilledOutColumnIsCancelled.DataPropertyName = "ColumnIsCancelled";
+            this.tabPageBilledOutColumnIsCancelled.HeaderText = "C";
+            this.tabPageBilledOutColumnIsCancelled.MinimumWidth = 6;
+            this.tabPageBilledOutColumnIsCancelled.Name = "tabPageBilledOutColumnIsCancelled";
+            this.tabPageBilledOutColumnIsCancelled.ReadOnly = true;
+            this.tabPageBilledOutColumnIsCancelled.Visible = false;
+            this.tabPageBilledOutColumnIsCancelled.Width = 125;
+            // 
+            // tabPageBilledOutColumnRemarks
+            // 
+            this.tabPageBilledOutColumnRemarks.DataPropertyName = "ColumnRemarks";
+            this.tabPageBilledOutColumnRemarks.HeaderText = "Remarks";
+            this.tabPageBilledOutColumnRemarks.MinimumWidth = 6;
+            this.tabPageBilledOutColumnRemarks.Name = "tabPageBilledOutColumnRemarks";
+            this.tabPageBilledOutColumnRemarks.ReadOnly = true;
+            this.tabPageBilledOutColumnRemarks.Width = 200;
+            // 
+            // tabPageBilledOutColumnDelivery
+            // 
+            this.tabPageBilledOutColumnDelivery.DataPropertyName = "ColumnDelivery";
+            this.tabPageBilledOutColumnDelivery.HeaderText = "Delivered By";
+            this.tabPageBilledOutColumnDelivery.MinimumWidth = 6;
+            this.tabPageBilledOutColumnDelivery.Name = "tabPageBilledOutColumnDelivery";
+            this.tabPageBilledOutColumnDelivery.ReadOnly = true;
+            this.tabPageBilledOutColumnDelivery.Width = 150;
+            // 
+            // tabPageBilledOutColumnAmount
+            // 
+            this.tabPageBilledOutColumnAmount.DataPropertyName = "ColumnAmount";
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageBilledOutColumnAmount.DefaultCellStyle = dataGridViewCellStyle16;
+            this.tabPageBilledOutColumnAmount.HeaderText = "Amount";
+            this.tabPageBilledOutColumnAmount.MinimumWidth = 6;
+            this.tabPageBilledOutColumnAmount.Name = "tabPageBilledOutColumnAmount";
+            this.tabPageBilledOutColumnAmount.ReadOnly = true;
+            this.tabPageBilledOutColumnAmount.Width = 120;
+            // 
+            // tabPageBilledOutColumnSpace
+            // 
+            this.tabPageBilledOutColumnSpace.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tabPageBilledOutColumnSpace.DataPropertyName = "ColumnSpace";
+            this.tabPageBilledOutColumnSpace.HeaderText = "";
+            this.tabPageBilledOutColumnSpace.MinimumWidth = 6;
+            this.tabPageBilledOutColumnSpace.Name = "tabPageBilledOutColumnSpace";
+            this.tabPageBilledOutColumnSpace.ReadOnly = true;
+            this.tabPageBilledOutColumnSpace.Visible = false;
+            // 
+            // tabPageCollected
+            // 
+            this.tabPageCollected.Controls.Add(this.dataGridViewCollectedSalesList);
+            this.tabPageCollected.Location = new System.Drawing.Point(4, 37);
+            this.tabPageCollected.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageCollected.Name = "tabPageCollected";
+            this.tabPageCollected.Size = new System.Drawing.Size(1253, 120);
+            this.tabPageCollected.TabIndex = 2;
+            this.tabPageCollected.Text = "Collected";
+            this.tabPageCollected.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewCollectedSalesList
+            // 
+            this.dataGridViewCollectedSalesList.AllowUserToAddRows = false;
+            this.dataGridViewCollectedSalesList.AllowUserToDeleteRows = false;
+            this.dataGridViewCollectedSalesList.AllowUserToResizeColumns = false;
+            this.dataGridViewCollectedSalesList.AllowUserToResizeRows = false;
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewCollectedSalesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridViewCollectedSalesList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewCollectedSalesList.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewCollectedSalesList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewCollectedSalesList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCollectedSalesList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridViewCollectedSalesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCollectedSalesList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tabPageCollectedColumnEdit,
+            this.tabPageCollectedColumnDelete,
+            this.tabPageCollectedColumnTable,
+            this.tabPageCollectedColumnId,
+            this.tabPageCollectedColumnTerminal,
+            this.tabPageCollectedColumnSalesDate,
+            this.tabPageCollectedColumnSalesNumber,
+            this.tabPageCollectedColumnManualSalesNumber,
+            this.tabPageCollectedColumnCollectionNumber,
+            this.tabPageCollectedColumnCustomerCode,
+            this.tabPageCollectedColumnCustomer,
+            this.tabPageCollectedColumnSalesAgent,
+            this.tabPageCollectedColumnIsLocked,
+            this.tabPageCollectedColumnIsTendered,
+            this.tabPageCollectedColumnIsCancelled,
+            this.tabPageCollectedColumnRemarks,
+            this.tabPageCollectedColumnDelivery,
+            this.tabPageCollectedColumnAmount,
+            this.tabPageCollectedColumnSpace});
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCollectedSalesList.DefaultCellStyle = dataGridViewCellStyle27;
+            this.dataGridViewCollectedSalesList.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridViewCollectedSalesList.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewCollectedSalesList.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewCollectedSalesList.Name = "dataGridViewCollectedSalesList";
+            this.dataGridViewCollectedSalesList.ReadOnly = true;
+            this.dataGridViewCollectedSalesList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCollectedSalesList.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            this.dataGridViewCollectedSalesList.RowHeadersVisible = false;
+            this.dataGridViewCollectedSalesList.RowHeadersWidth = 51;
+            this.dataGridViewCollectedSalesList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewCollectedSalesList.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewCollectedSalesList.RowTemplate.Height = 30;
+            this.dataGridViewCollectedSalesList.RowTemplate.ReadOnly = true;
+            this.dataGridViewCollectedSalesList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCollectedSalesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewCollectedSalesList.Size = new System.Drawing.Size(1258, 125);
+            this.dataGridViewCollectedSalesList.TabIndex = 10;
+            this.dataGridViewCollectedSalesList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCollectedSalesList_CellClick);
+            // 
+            // tabPageCollectedColumnEdit
+            // 
+            this.tabPageCollectedColumnEdit.DataPropertyName = "ColumnEdit";
+            this.tabPageCollectedColumnEdit.HeaderText = "Edit";
+            this.tabPageCollectedColumnEdit.MinimumWidth = 6;
+            this.tabPageCollectedColumnEdit.Name = "tabPageCollectedColumnEdit";
+            this.tabPageCollectedColumnEdit.ReadOnly = true;
+            this.tabPageCollectedColumnEdit.Visible = false;
+            this.tabPageCollectedColumnEdit.Width = 125;
+            // 
+            // tabPageCollectedColumnDelete
+            // 
+            this.tabPageCollectedColumnDelete.DataPropertyName = "ColumnDelete";
+            this.tabPageCollectedColumnDelete.HeaderText = "Delete";
+            this.tabPageCollectedColumnDelete.MinimumWidth = 6;
+            this.tabPageCollectedColumnDelete.Name = "tabPageCollectedColumnDelete";
+            this.tabPageCollectedColumnDelete.ReadOnly = true;
+            this.tabPageCollectedColumnDelete.Visible = false;
+            this.tabPageCollectedColumnDelete.Width = 125;
+            // 
+            // tabPageCollectedColumnTable
+            // 
+            this.tabPageCollectedColumnTable.DataPropertyName = "ColumnTable";
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageCollectedColumnTable.DefaultCellStyle = dataGridViewCellStyle21;
+            this.tabPageCollectedColumnTable.HeaderText = "Table";
+            this.tabPageCollectedColumnTable.MinimumWidth = 6;
+            this.tabPageCollectedColumnTable.Name = "tabPageCollectedColumnTable";
+            this.tabPageCollectedColumnTable.ReadOnly = true;
+            this.tabPageCollectedColumnTable.Width = 125;
+            // 
+            // tabPageCollectedColumnId
+            // 
+            this.tabPageCollectedColumnId.DataPropertyName = "ColumnId";
+            this.tabPageCollectedColumnId.HeaderText = "Id";
+            this.tabPageCollectedColumnId.MinimumWidth = 6;
+            this.tabPageCollectedColumnId.Name = "tabPageCollectedColumnId";
+            this.tabPageCollectedColumnId.ReadOnly = true;
+            this.tabPageCollectedColumnId.Visible = false;
+            this.tabPageCollectedColumnId.Width = 125;
+            // 
+            // tabPageCollectedColumnTerminal
+            // 
+            this.tabPageCollectedColumnTerminal.DataPropertyName = "ColumnTerminal";
+            this.tabPageCollectedColumnTerminal.HeaderText = "Terminal";
+            this.tabPageCollectedColumnTerminal.MinimumWidth = 6;
+            this.tabPageCollectedColumnTerminal.Name = "tabPageCollectedColumnTerminal";
+            this.tabPageCollectedColumnTerminal.ReadOnly = true;
+            this.tabPageCollectedColumnTerminal.Visible = false;
+            this.tabPageCollectedColumnTerminal.Width = 125;
+            // 
+            // tabPageCollectedColumnSalesDate
+            // 
+            this.tabPageCollectedColumnSalesDate.DataPropertyName = "ColumnSalesDate";
+            this.tabPageCollectedColumnSalesDate.HeaderText = "Time";
+            this.tabPageCollectedColumnSalesDate.MinimumWidth = 6;
+            this.tabPageCollectedColumnSalesDate.Name = "tabPageCollectedColumnSalesDate";
+            this.tabPageCollectedColumnSalesDate.ReadOnly = true;
+            this.tabPageCollectedColumnSalesDate.Width = 125;
+            // 
+            // tabPageCollectedColumnSalesNumber
+            // 
+            this.tabPageCollectedColumnSalesNumber.ActiveLinkColor = System.Drawing.Color.Black;
+            this.tabPageCollectedColumnSalesNumber.DataPropertyName = "ColumnSalesNumber";
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageCollectedColumnSalesNumber.DefaultCellStyle = dataGridViewCellStyle22;
+            this.tabPageCollectedColumnSalesNumber.HeaderText = "Order No.";
+            this.tabPageCollectedColumnSalesNumber.LinkColor = System.Drawing.Color.Black;
+            this.tabPageCollectedColumnSalesNumber.MinimumWidth = 6;
+            this.tabPageCollectedColumnSalesNumber.Name = "tabPageCollectedColumnSalesNumber";
+            this.tabPageCollectedColumnSalesNumber.ReadOnly = true;
+            this.tabPageCollectedColumnSalesNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabPageCollectedColumnSalesNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.tabPageCollectedColumnSalesNumber.VisitedLinkColor = System.Drawing.Color.Black;
+            this.tabPageCollectedColumnSalesNumber.Width = 130;
+            // 
+            // tabPageCollectedColumnManualSalesNumber
+            // 
+            this.tabPageCollectedColumnManualSalesNumber.DataPropertyName = "ColumnManualSalesNumber";
+            this.tabPageCollectedColumnManualSalesNumber.HeaderText = "Manual No.";
+            this.tabPageCollectedColumnManualSalesNumber.MinimumWidth = 6;
+            this.tabPageCollectedColumnManualSalesNumber.Name = "tabPageCollectedColumnManualSalesNumber";
+            this.tabPageCollectedColumnManualSalesNumber.ReadOnly = true;
+            this.tabPageCollectedColumnManualSalesNumber.Width = 130;
+            // 
+            // tabPageCollectedColumnCollectionNumber
+            // 
+            this.tabPageCollectedColumnCollectionNumber.DataPropertyName = "ColumnRececiptInvoiceNumber";
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tabPageCollectedColumnCollectionNumber.DefaultCellStyle = dataGridViewCellStyle23;
+            this.tabPageCollectedColumnCollectionNumber.HeaderText = "Collection No.";
+            this.tabPageCollectedColumnCollectionNumber.MinimumWidth = 6;
+            this.tabPageCollectedColumnCollectionNumber.Name = "tabPageCollectedColumnCollectionNumber";
+            this.tabPageCollectedColumnCollectionNumber.ReadOnly = true;
+            this.tabPageCollectedColumnCollectionNumber.Width = 130;
+            // 
+            // tabPageCollectedColumnCustomerCode
+            // 
+            this.tabPageCollectedColumnCustomerCode.DataPropertyName = "ColumnCustomerCode";
+            this.tabPageCollectedColumnCustomerCode.HeaderText = "Customer Code";
+            this.tabPageCollectedColumnCustomerCode.MinimumWidth = 6;
+            this.tabPageCollectedColumnCustomerCode.Name = "tabPageCollectedColumnCustomerCode";
+            this.tabPageCollectedColumnCustomerCode.ReadOnly = true;
+            this.tabPageCollectedColumnCustomerCode.Visible = false;
+            this.tabPageCollectedColumnCustomerCode.Width = 125;
+            // 
+            // tabPageCollectedColumnCustomer
+            // 
+            this.tabPageCollectedColumnCustomer.DataPropertyName = "ColumnCustomer";
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageCollectedColumnCustomer.DefaultCellStyle = dataGridViewCellStyle24;
+            this.tabPageCollectedColumnCustomer.HeaderText = "Customer";
+            this.tabPageCollectedColumnCustomer.MinimumWidth = 6;
+            this.tabPageCollectedColumnCustomer.Name = "tabPageCollectedColumnCustomer";
+            this.tabPageCollectedColumnCustomer.ReadOnly = true;
+            this.tabPageCollectedColumnCustomer.Width = 125;
+            // 
+            // tabPageCollectedColumnSalesAgent
+            // 
+            this.tabPageCollectedColumnSalesAgent.DataPropertyName = "ColumnSalesAgent";
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageCollectedColumnSalesAgent.DefaultCellStyle = dataGridViewCellStyle25;
+            this.tabPageCollectedColumnSalesAgent.HeaderText = "User";
+            this.tabPageCollectedColumnSalesAgent.MinimumWidth = 6;
+            this.tabPageCollectedColumnSalesAgent.Name = "tabPageCollectedColumnSalesAgent";
+            this.tabPageCollectedColumnSalesAgent.ReadOnly = true;
+            this.tabPageCollectedColumnSalesAgent.Width = 130;
+            // 
+            // tabPageCollectedColumnIsLocked
+            // 
+            this.tabPageCollectedColumnIsLocked.DataPropertyName = "ColumnIsLocked";
+            this.tabPageCollectedColumnIsLocked.HeaderText = "L";
+            this.tabPageCollectedColumnIsLocked.MinimumWidth = 6;
+            this.tabPageCollectedColumnIsLocked.Name = "tabPageCollectedColumnIsLocked";
+            this.tabPageCollectedColumnIsLocked.ReadOnly = true;
+            this.tabPageCollectedColumnIsLocked.Visible = false;
+            this.tabPageCollectedColumnIsLocked.Width = 125;
+            // 
+            // tabPageCollectedColumnIsTendered
+            // 
+            this.tabPageCollectedColumnIsTendered.DataPropertyName = "ColumnIsTendered";
+            this.tabPageCollectedColumnIsTendered.HeaderText = "T";
+            this.tabPageCollectedColumnIsTendered.MinimumWidth = 6;
+            this.tabPageCollectedColumnIsTendered.Name = "tabPageCollectedColumnIsTendered";
+            this.tabPageCollectedColumnIsTendered.ReadOnly = true;
+            this.tabPageCollectedColumnIsTendered.Visible = false;
+            this.tabPageCollectedColumnIsTendered.Width = 125;
+            // 
+            // tabPageCollectedColumnIsCancelled
+            // 
+            this.tabPageCollectedColumnIsCancelled.DataPropertyName = "ColumnIsCancelled";
+            this.tabPageCollectedColumnIsCancelled.HeaderText = "C";
+            this.tabPageCollectedColumnIsCancelled.MinimumWidth = 6;
+            this.tabPageCollectedColumnIsCancelled.Name = "tabPageCollectedColumnIsCancelled";
+            this.tabPageCollectedColumnIsCancelled.ReadOnly = true;
+            this.tabPageCollectedColumnIsCancelled.Width = 50;
+            // 
+            // tabPageCollectedColumnRemarks
+            // 
+            this.tabPageCollectedColumnRemarks.DataPropertyName = "ColumnRemarks";
+            this.tabPageCollectedColumnRemarks.HeaderText = "Remarks";
+            this.tabPageCollectedColumnRemarks.MinimumWidth = 6;
+            this.tabPageCollectedColumnRemarks.Name = "tabPageCollectedColumnRemarks";
+            this.tabPageCollectedColumnRemarks.ReadOnly = true;
+            this.tabPageCollectedColumnRemarks.Width = 200;
+            // 
+            // tabPageCollectedColumnDelivery
+            // 
+            this.tabPageCollectedColumnDelivery.DataPropertyName = "ColumnDelivery";
+            this.tabPageCollectedColumnDelivery.HeaderText = "Delivered By";
+            this.tabPageCollectedColumnDelivery.MinimumWidth = 6;
+            this.tabPageCollectedColumnDelivery.Name = "tabPageCollectedColumnDelivery";
+            this.tabPageCollectedColumnDelivery.ReadOnly = true;
+            this.tabPageCollectedColumnDelivery.Width = 150;
+            // 
+            // tabPageCollectedColumnAmount
+            // 
+            this.tabPageCollectedColumnAmount.DataPropertyName = "ColumnAmount";
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageCollectedColumnAmount.DefaultCellStyle = dataGridViewCellStyle26;
+            this.tabPageCollectedColumnAmount.HeaderText = "Amount";
+            this.tabPageCollectedColumnAmount.MinimumWidth = 6;
+            this.tabPageCollectedColumnAmount.Name = "tabPageCollectedColumnAmount";
+            this.tabPageCollectedColumnAmount.ReadOnly = true;
+            this.tabPageCollectedColumnAmount.Width = 120;
+            // 
+            // tabPageCollectedColumnSpace
+            // 
+            this.tabPageCollectedColumnSpace.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tabPageCollectedColumnSpace.DataPropertyName = "ColumnSpace";
+            this.tabPageCollectedColumnSpace.HeaderText = "";
+            this.tabPageCollectedColumnSpace.MinimumWidth = 6;
+            this.tabPageCollectedColumnSpace.Name = "tabPageCollectedColumnSpace";
+            this.tabPageCollectedColumnSpace.ReadOnly = true;
+            this.tabPageCollectedColumnSpace.Visible = false;
             // 
             // TrnPOSTouchForm
             // 
@@ -1986,11 +1993,15 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panelWalkIn.ResumeLayout(false);
             this.panelWalkIn.PerformLayout();
+            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPOSTouch)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.tabControlSales.ResumeLayout(false);
             this.tabPageOpen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOpenSalesList)).EndInit();
@@ -1998,10 +2009,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBilledOutSalesList)).EndInit();
             this.tabPageCollected.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCollectedSalesList)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
