@@ -40,7 +40,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             InitializeComponent();
 
             var logoFilePath = Modules.SysCurrentModule.GetCurrentSettings().LogoFilePath;
-            pictureBoxPOSTouchDetail.Image = Image.FromFile(@""+ logoFilePath);
+            pictureBoxPOSTouchDetail.Image = Image.FromFile(@"" + logoFilePath);
             pictureBoxPOSTouchDetail.SizeMode = PictureBoxSizeMode.StretchImage;
 
             sysSoftwareForm = softwareForm;
@@ -147,23 +147,23 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 {
                     if (trnSalesEntity.IsLocked == true)
                     {
-                        buttonBarcode.Enabled = false;
-                        textBoxBarcode.Enabled = false;
+                        //buttonBarcode.Enabled = false;
+                        //textBoxBarcode.Enabled = false;
                         buttonSearchItem.Enabled = false;
                         buttonDownload.Enabled = false;
                     }
                     else
                     {
-                        buttonBarcode.Enabled = true;
-                        textBoxBarcode.Enabled = true;
+                        //buttonBarcode.Enabled = true;
+                        //textBoxBarcode.Enabled = true;
                         buttonSearchItem.Enabled = true;
                         buttonDownload.Enabled = true;
                     }
                 }
                 else
                 {
-                    buttonBarcode.Enabled = false;
-                    textBoxBarcode.Enabled = false;
+                    //buttonBarcode.Enabled = false;
+                    //textBoxBarcode.Enabled = false;
                     buttonSearchItem.Enabled = false;
                     buttonDownload.Enabled = false;
                 }
@@ -449,8 +449,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
         private void buttonBarcode_Click(object sender, EventArgs e)
         {
-            textBoxBarcode.Focus();
-            textBoxBarcode.SelectAll();
+            //textBoxBarcode.Focus();
+            //textBoxBarcode.SelectAll();
         }
 
         private void buttonTender_Click(object sender, EventArgs e)
@@ -594,12 +594,12 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                 if (Modules.SysCurrentModule.GetCurrentSettings().IsBarcodeQuantityAlwaysOne == true)
                 {
-                    trnPOSSalesLineController.BarcodeSalesLine(trnSalesEntity.Id, textBoxBarcode.Text);
+                    //trnPOSSalesLineController.BarcodeSalesLine(trnSalesEntity.Id, textBoxBarcode.Text);
                     GetSalesLineList();
                 }
                 else
                 {
-                    Entities.MstItemEntity detailItem = trnPOSSalesLineController.DetailItem(textBoxBarcode.Text);
+                    Entities.MstItemEntity detailItem = trnPOSSalesLineController.DetailItem("");
                     if (detailItem != null)
                     {
                         Int32 ItemId = detailItem.Id;
@@ -656,7 +656,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     }
                 }
 
-                textBoxBarcode.SelectAll();
+                //textBoxBarcode.SelectAll();
             }
         }
 
@@ -686,7 +686,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                     dataGridViewSalesLineList.Rows.Add(
                         "Edit",
-                        "Delete",                        
+                        "Delete",
                         objSalesLineList.Id,
                         objSalesLineList.SalesId,
                         objSalesLineList.ItemId,
@@ -769,7 +769,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 Decimal Price2 = Convert.ToDecimal(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[28].Value);
                 Decimal Price2LessTax = Convert.ToDecimal(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[29].Value);
                 Decimal PriceSplitPercentage = Convert.ToDecimal(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[30].Value);
-                
+
 
                 Entities.TrnSalesLineEntity trnSalesLineEntity = new Entities.TrnSalesLineEntity()
                 {
@@ -837,8 +837,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
             buttonUnlock.Enabled = isLocked;
             buttonReturn.Enabled = !isLocked;
             buttonDiscount.Enabled = !isLocked;
-            buttonBarcode.Enabled = !isLocked;
-            textBoxBarcode.Enabled = !isLocked;
+            //buttonBarcode.Enabled = !isLocked;
+            //textBoxBarcode.Enabled = !isLocked;
 
             dataGridViewSalesLineList.Columns[0].Visible = !isLocked;
             dataGridViewSalesLineList.Columns[1].Visible = !isLocked;
@@ -1176,23 +1176,23 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 {
                     if (trnSalesEntity.IsLocked == true)
                     {
-                        buttonBarcode.Enabled = false;
-                        textBoxBarcode.Enabled = false;
+                        //buttonBarcode.Enabled = false;
+                        //textBoxBarcode.Enabled = false;
                         buttonSearchItem.Enabled = false;
                         buttonDownload.Enabled = false;
                     }
                     else
                     {
-                        buttonBarcode.Enabled = true;
-                        textBoxBarcode.Enabled = true;
+                        //buttonBarcode.Enabled = true;
+                        //textBoxBarcode.Enabled = true;
                         buttonSearchItem.Enabled = true;
                         buttonDownload.Enabled = true;
                     }
                 }
                 else
                 {
-                    buttonBarcode.Enabled = false;
-                    textBoxBarcode.Enabled = false;
+                    //buttonBarcode.Enabled = false;
+                    //textBoxBarcode.Enabled = false;
                     buttonSearchItem.Enabled = false;
                     buttonDownload.Enabled = false;
                 }
@@ -1236,19 +1236,13 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
         private void buttonHideItems_Click(object sender, EventArgs e)
         {
-            if (panelItems.Visible == true)
+            if (panelTouch.Visible == true)
             {
-                panelItems.Visible = false;
-                dataGridViewSalesLineList.Dock = DockStyle.Fill;
+                panelTouch.Visible = false;
             }
             else
             {
-                panelItems.Visible = true;
-                dataGridViewSalesLineList.Dock = DockStyle.None;
-                dataGridViewSalesLineList.Anchor = AnchorStyles.Top;
-                dataGridViewSalesLineList.Anchor = AnchorStyles.Bottom;
-                dataGridViewSalesLineList.Anchor = AnchorStyles.Left;
-                dataGridViewSalesLineList.Anchor = AnchorStyles.Right;
+                panelTouch.Visible = true;
             }
         }
 

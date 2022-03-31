@@ -45,7 +45,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             InitializeComponent();
 
             var logoFilePath = Modules.SysCurrentModule.GetCurrentSettings().LogoFilePath;
-            pictureBoxPOSTouch.Image = Image.FromFile(@""+logoFilePath);
+            pictureBoxPOSTouch.Image = Image.FromFile(@"" + logoFilePath);
             pictureBoxPOSTouch.SizeMode = PictureBoxSizeMode.StretchImage;
 
             String currentDate = DateTime.Today.ToShortDateString() + "\t\t";
@@ -842,20 +842,15 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
         private void buttonHideItems_Click(object sender, EventArgs e)
         {
-            if (panelWalkIn.Visible == true)
+            if (panelPosTouch.Visible == true && panelPicturebox.Visible == true)
             {
-                panelWalkIn.Visible = false;
-                tabControlSales.Dock = DockStyle.Fill;
+                panelPosTouch.Visible = false;
+                panelPicturebox.Visible = false;
             }
             else
             {
-                panelWalkIn.Visible = true;
-                tabControlSales.Dock = DockStyle.None;
-                tabControlSales.Anchor = AnchorStyles.Top;
-                tabControlSales.Anchor = AnchorStyles.Bottom;
-                tabControlSales.Anchor = AnchorStyles.Right;
-                tabControlSales.Anchor = AnchorStyles.Left;
-
+                panelPosTouch.Visible = true;
+                panelPicturebox.Visible = true;
             }
         }
 
