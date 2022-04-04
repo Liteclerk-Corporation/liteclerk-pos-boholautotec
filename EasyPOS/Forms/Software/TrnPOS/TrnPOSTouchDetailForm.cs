@@ -39,9 +39,9 @@ namespace EasyPOS.Forms.Software.TrnPOS
         {
             InitializeComponent();
 
-            var logoFilePath = Modules.SysCurrentModule.GetCurrentSettings().LogoFilePath;
-            pictureBoxPOSTouchDetail.Image = Image.FromFile(@"" + logoFilePath);
-            pictureBoxPOSTouchDetail.SizeMode = PictureBoxSizeMode.StretchImage;
+            //var logoFilePath = Modules.SysCurrentModule.GetCurrentSettings().LogoFilePath;
+            //pictureBoxPOSTouchDetail.Image = Image.FromFile(@"" + logoFilePath);
+            //pictureBoxPOSTouchDetail.SizeMode = PictureBoxSizeMode.StretchImage;
 
             sysSoftwareForm = softwareForm;
             trnPOSTouchForm = POSTouchForm;
@@ -1236,13 +1236,13 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
         private void buttonHideItems_Click(object sender, EventArgs e)
         {
-            if (panelTouch.Visible == true)
+            if (panel11.Visible == true)
             {
-                panelTouch.Visible = false;
+                panel11.Visible = false;
             }
             else
             {
-                panelTouch.Visible = true;
+                panel11.Visible = true;
             }
         }
 

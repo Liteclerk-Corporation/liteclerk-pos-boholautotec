@@ -56,7 +56,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
             dateTimePickerSalesDate.Value = Convert.ToDateTime(currentDate);
 
-            sysUserRights = new Modules.SysUserRightsModule("TrnSales");
+            sysUserRights = new Modules.SysUserRightsModule("TrnRestaurant");
             if (sysUserRights.GetUserRights() == null)
             {
                 MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
