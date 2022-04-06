@@ -324,10 +324,10 @@
             this.buttonOpenSidebarMenu.Location = new System.Drawing.Point(2, 4);
             this.buttonOpenSidebarMenu.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOpenSidebarMenu.Name = "buttonOpenSidebarMenu";
-            this.buttonOpenSidebarMenu.Size = new System.Drawing.Size(32, 29);
+            this.buttonOpenSidebarMenu.Size = new System.Drawing.Size(62, 29);
             this.buttonOpenSidebarMenu.TabIndex = 1;
             this.buttonOpenSidebarMenu.TabStop = false;
-            this.buttonOpenSidebarMenu.Text = "=";
+            this.buttonOpenSidebarMenu.Text = "➤";
             this.buttonOpenSidebarMenu.UseVisualStyleBackColor = true;
             this.buttonOpenSidebarMenu.Click += new System.EventHandler(this.buttonOpenSidebarMenu_Click);
             // 
@@ -652,7 +652,7 @@
             // 
             this.systemTablesToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.System_Table1;
             this.systemTablesToolStripMenuItem.Name = "systemTablesToolStripMenuItem";
-            this.systemTablesToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.systemTablesToolStripMenuItem.Size = new System.Drawing.Size(199, 28);
             this.systemTablesToolStripMenuItem.Text = "System Tables";
             this.systemTablesToolStripMenuItem.Click += new System.EventHandler(this.systemTablesToolStripMenuItem_Click);
             // 
@@ -660,7 +660,7 @@
             // 
             this.utilitiesToolStripMenuItem.Image = global::EasyPOS.Properties.Resources.Utilities1;
             this.utilitiesToolStripMenuItem.Name = "utilitiesToolStripMenuItem";
-            this.utilitiesToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.utilitiesToolStripMenuItem.Size = new System.Drawing.Size(199, 28);
             this.utilitiesToolStripMenuItem.Text = "Utilities";
             this.utilitiesToolStripMenuItem.Click += new System.EventHandler(this.utilitiesToolStripMenuItem_Click);
             // 
