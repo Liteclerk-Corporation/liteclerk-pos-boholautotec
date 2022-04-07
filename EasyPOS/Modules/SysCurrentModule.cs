@@ -112,7 +112,8 @@ namespace EasyPOS.Modules
                 PopupCustomerInfo = currentSettings.PopupCustomerInfo,
                 XMLFilePath = currentSettings.XMLFilePath,
                 CustomerCode = currentSettings.CustomerCode,
-                LogoFilePath = currentSettings.LogoFilePath
+                LogoFilePath = currentSettings.LogoFilePath,
+                BodegaTransaction = currentSettings.BodegaTransaction
             };
 
             String newJson = new JavaScriptSerializer().Serialize(newEntities);
@@ -198,7 +199,8 @@ namespace EasyPOS.Modules
                 PopupCustomerInfo = objSysCurrentEntity.PopupCustomerInfo,
                 XMLFilePath = objSysCurrentEntity.XMLFilePath,
                 CustomerCode = objSysCurrentEntity.CustomerCode,
-                LogoFilePath = objSysCurrentEntity.LogoFilePath
+                LogoFilePath = objSysCurrentEntity.LogoFilePath,
+                BodegaTransaction = objSysCurrentEntity.BodegaTransaction
             };
 
             String newJson = new JavaScriptSerializer().Serialize(newSysCurrentEntities);
@@ -285,7 +287,8 @@ namespace EasyPOS.Modules
                 PopupCustomerInfo = currentSettings.PopupCustomerInfo,
                 XMLFilePath = currentSettings.XMLFilePath,
                 CustomerCode = currentSettings.CustomerCode,
-                LogoFilePath = currentSettings.LogoFilePath
+                LogoFilePath = currentSettings.LogoFilePath,
+                BodegaTransaction = currentSettings.BodegaTransaction
             };
 
             String newJson = new JavaScriptSerializer().Serialize(newEntities);

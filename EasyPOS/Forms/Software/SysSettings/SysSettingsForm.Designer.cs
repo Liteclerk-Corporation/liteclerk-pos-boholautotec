@@ -195,6 +195,7 @@
             this.buttonKitchenPageListLast = new System.Windows.Forms.Button();
             this.textBoxKitchenPageNumber = new System.Windows.Forms.TextBox();
             this.backgroundWorkerEasyfisIntegration = new System.ComponentModel.BackgroundWorker();
+            this.checkBoxBodega = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -480,6 +481,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel5.Controls.Add(this.checkBoxBodega);
             this.panel5.Controls.Add(this.textBoxCustomerCode);
             this.panel5.Controls.Add(this.label33);
             this.panel5.Controls.Add(this.textBoxXMLFilePath);
@@ -790,7 +792,7 @@
             this.checkBoxHideSalesAmount.AutoSize = true;
             this.checkBoxHideSalesAmount.Enabled = false;
             this.checkBoxHideSalesAmount.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxHideSalesAmount.Location = new System.Drawing.Point(730, 244);
+            this.checkBoxHideSalesAmount.Location = new System.Drawing.Point(728, 244);
             this.checkBoxHideSalesAmount.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxHideSalesAmount.Name = "checkBoxHideSalesAmount";
             this.checkBoxHideSalesAmount.Size = new System.Drawing.Size(177, 27);
@@ -803,7 +805,7 @@
             this.checkBoxDateLogin.AutoSize = true;
             this.checkBoxDateLogin.Enabled = false;
             this.checkBoxDateLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxDateLogin.Location = new System.Drawing.Point(730, 210);
+            this.checkBoxDateLogin.Location = new System.Drawing.Point(728, 210);
             this.checkBoxDateLogin.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDateLogin.Name = "checkBoxDateLogin";
             this.checkBoxDateLogin.Size = new System.Drawing.Size(115, 27);
@@ -816,7 +818,7 @@
             this.checkBoxSwipeLogin.AutoSize = true;
             this.checkBoxSwipeLogin.Enabled = false;
             this.checkBoxSwipeLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxSwipeLogin.Location = new System.Drawing.Point(730, 176);
+            this.checkBoxSwipeLogin.Location = new System.Drawing.Point(728, 176);
             this.checkBoxSwipeLogin.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSwipeLogin.Name = "checkBoxSwipeLogin";
             this.checkBoxSwipeLogin.Size = new System.Drawing.Size(123, 27);
@@ -828,7 +830,7 @@
             // 
             this.checkBoxPromptLoginSales.AutoSize = true;
             this.checkBoxPromptLoginSales.Enabled = false;
-            this.checkBoxPromptLoginSales.Location = new System.Drawing.Point(730, 148);
+            this.checkBoxPromptLoginSales.Location = new System.Drawing.Point(728, 148);
             this.checkBoxPromptLoginSales.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxPromptLoginSales.Name = "checkBoxPromptLoginSales";
             this.checkBoxPromptLoginSales.Size = new System.Drawing.Size(179, 27);
@@ -863,7 +865,7 @@
             this.checkBoxAllowNegativeInventory.AutoSize = true;
             this.checkBoxAllowNegativeInventory.Enabled = false;
             this.checkBoxAllowNegativeInventory.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxAllowNegativeInventory.Location = new System.Drawing.Point(730, 80);
+            this.checkBoxAllowNegativeInventory.Location = new System.Drawing.Point(728, 80);
             this.checkBoxAllowNegativeInventory.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxAllowNegativeInventory.Name = "checkBoxAllowNegativeInventory";
             this.checkBoxAllowNegativeInventory.Size = new System.Drawing.Size(223, 27);
@@ -898,7 +900,7 @@
             this.checkBoxActivateAuditTrail.AutoSize = true;
             this.checkBoxActivateAuditTrail.Enabled = false;
             this.checkBoxActivateAuditTrail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxActivateAuditTrail.Location = new System.Drawing.Point(730, 114);
+            this.checkBoxActivateAuditTrail.Location = new System.Drawing.Point(728, 114);
             this.checkBoxActivateAuditTrail.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxActivateAuditTrail.Name = "checkBoxActivateAuditTrail";
             this.checkBoxActivateAuditTrail.Size = new System.Drawing.Size(175, 27);
@@ -987,7 +989,7 @@
             this.checkBoxIsBarcodeQuantityAlwaysOne.AutoSize = true;
             this.checkBoxIsBarcodeQuantityAlwaysOne.Enabled = false;
             this.checkBoxIsBarcodeQuantityAlwaysOne.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxIsBarcodeQuantityAlwaysOne.Location = new System.Drawing.Point(730, 46);
+            this.checkBoxIsBarcodeQuantityAlwaysOne.Location = new System.Drawing.Point(728, 46);
             this.checkBoxIsBarcodeQuantityAlwaysOne.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxIsBarcodeQuantityAlwaysOne.Name = "checkBoxIsBarcodeQuantityAlwaysOne";
             this.checkBoxIsBarcodeQuantityAlwaysOne.Size = new System.Drawing.Size(258, 27);
@@ -1118,7 +1120,7 @@
             this.checkBoxIsTenderPrint.AutoSize = true;
             this.checkBoxIsTenderPrint.Enabled = false;
             this.checkBoxIsTenderPrint.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxIsTenderPrint.Location = new System.Drawing.Point(730, 12);
+            this.checkBoxIsTenderPrint.Location = new System.Drawing.Point(728, 12);
             this.checkBoxIsTenderPrint.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxIsTenderPrint.Name = "checkBoxIsTenderPrint";
             this.checkBoxIsTenderPrint.Size = new System.Drawing.Size(124, 27);
@@ -2264,6 +2266,19 @@
             this.backgroundWorkerEasyfisIntegration.WorkerSupportsCancellation = true;
             this.backgroundWorkerEasyfisIntegration.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerEasyfisIntegration_DoWork);
             // 
+            // checkBoxBodega
+            // 
+            this.checkBoxBodega.AutoSize = true;
+            this.checkBoxBodega.Enabled = false;
+            this.checkBoxBodega.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxBodega.Location = new System.Drawing.Point(1092, 173);
+            this.checkBoxBodega.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxBodega.Name = "checkBoxBodega";
+            this.checkBoxBodega.Size = new System.Drawing.Size(182, 27);
+            this.checkBoxBodega.TabIndex = 102;
+            this.checkBoxBodega.Text = "Bodega Transaction";
+            this.checkBoxBodega.UseVisualStyleBackColor = true;
+            // 
             // SysSettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -2484,5 +2499,6 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.TextBox textBoxLogoFilePath;
+        private System.Windows.Forms.CheckBox checkBoxBodega;
     }
 }

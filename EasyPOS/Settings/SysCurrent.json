@@ -68,5 +68,6 @@
   "PopupCustomerInfo": false,
   "XMLFilePath": "C:\\EasyPOS",
   "CustomerCode": "STR1",
-  "LogoFilePath": "C:\\Liteclerk_POS\\LITECLERK.png"
+  "LogoFilePath": "C:\\Liteclerk_POS\\LITECLERK.png",
+  "BodegaTransaction": false
 }

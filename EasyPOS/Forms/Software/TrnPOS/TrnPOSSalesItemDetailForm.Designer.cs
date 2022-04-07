@@ -60,6 +60,8 @@
             this.textBoxSalesLineRemarks = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBoxBodegaItemQty = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -420,11 +422,11 @@
             // textBoxSalesLineRemarks
             // 
             this.textBoxSalesLineRemarks.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textBoxSalesLineRemarks.Location = new System.Drawing.Point(458, 92);
+            this.textBoxSalesLineRemarks.Location = new System.Drawing.Point(458, 172);
             this.textBoxSalesLineRemarks.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSalesLineRemarks.Multiline = true;
             this.textBoxSalesLineRemarks.Name = "textBoxSalesLineRemarks";
-            this.textBoxSalesLineRemarks.Size = new System.Drawing.Size(392, 396);
+            this.textBoxSalesLineRemarks.Size = new System.Drawing.Size(392, 316);
             this.textBoxSalesLineRemarks.TabIndex = 12;
             this.textBoxSalesLineRemarks.TabStop = false;
             // 
@@ -432,7 +434,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label13.Location = new System.Drawing.Point(458, 55);
+            this.label13.Location = new System.Drawing.Point(455, 136);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(209, 28);
@@ -442,6 +444,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Controls.Add(this.textBoxBodegaItemQty);
+            this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.textBoxItemDescription);
             this.panel2.Controls.Add(this.textBoxSalesLineRemarks);
@@ -473,6 +477,29 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(860, 500);
             this.panel2.TabIndex = 31;
+            // 
+            // textBoxBodegaItemQty
+            // 
+            this.textBoxBodegaItemQty.AcceptsTab = true;
+            this.textBoxBodegaItemQty.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textBoxBodegaItemQty.HideSelection = false;
+            this.textBoxBodegaItemQty.Location = new System.Drawing.Point(588, 54);
+            this.textBoxBodegaItemQty.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxBodegaItemQty.Name = "textBoxBodegaItemQty";
+            this.textBoxBodegaItemQty.Size = new System.Drawing.Size(261, 34);
+            this.textBoxBodegaItemQty.TabIndex = 31;
+            this.textBoxBodegaItemQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label14.Location = new System.Drawing.Point(467, 56);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(117, 28);
+            this.label14.TabIndex = 32;
+            this.label14.Text = "For Bodega:";
             // 
             // TrnPOSSalesItemDetailForm
             // 
@@ -530,5 +557,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBoxBodegaItemQty;
+        private System.Windows.Forms.Label label14;
     }
 }

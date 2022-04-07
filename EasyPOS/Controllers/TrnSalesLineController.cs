@@ -58,7 +58,8 @@ namespace EasyPOS.Controllers
                                  PriceSplitPercentage = d.PriceSplitPercentage,
                                  TableId = d.TrnSale.TableId,
                                  TableCode = d.TrnSale.TableId != null ? d.TrnSale.MstTable.TableCode : "",
-                                 IsPrinted = d.IsPrinted
+                                 IsPrinted = d.IsPrinted,
+                                 BodegaItemQty = Convert.ToDecimal(d.BodegaItemQty),
                              };
 
             return salesLines.OrderByDescending(d => d.Id).ToList();
@@ -286,7 +287,8 @@ namespace EasyPOS.Controllers
                     Price1 = 0,
                     Price2 = 0,
                     Price2LessTax = 0,
-                    PriceSplitPercentage = 0
+                    PriceSplitPercentage = 0,
+                    BodegaItemQty = objSalesLine.BodegaItemQty
                 };
 
                 db.TrnSalesLines.InsertOnSubmit(newSaleLine);
@@ -404,6 +406,7 @@ namespace EasyPOS.Controllers
                     updateSalesLine.UserId = user.FirstOrDefault().Id;
                     updateSalesLine.Preparation = objSalesLine.Preparation;
                     updateSalesLine.IsPrinted = objSalesLine.IsPrinted;
+                    updateSalesLine.BodegaItemQty = objSalesLine.BodegaItemQty;
                     db.SubmitChanges();
 
                     String newObject = Modules.SysAuditTrailModule.GetObjectString(salesLine.FirstOrDefault());

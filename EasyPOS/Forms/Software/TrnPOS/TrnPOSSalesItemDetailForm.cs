@@ -172,6 +172,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             textBoxSalesLineVATRate.Text = trnSalesLineEntity.TaxRate.ToString("#,##0.00");
             textBoxSalesLineVATAmount.Text = trnSalesLineEntity.TaxAmount.ToString("#,##0.00");
             textBoxSalesLineRemarks.Text = trnSalesLineEntity.Preparation;
+            textBoxBodegaItemQty.Text = trnSalesLineEntity.BodegaItemQty.ToString("#,##0.00");
 
             Int32? discountId = null;
 
@@ -233,7 +234,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 Price2 = 0,
                 Price2LessTax = 0,
                 PriceSplitPercentage = 0,
-                
+                BodegaItemQty = Convert.ToDecimal(textBoxBodegaItemQty.Text)
             };
 
             Controllers.TrnSalesLineController trnPOSSalesLineController = new Controllers.TrnSalesLineController();
@@ -268,6 +269,13 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 String[] addSales = trnPOSSalesLineController.UpdateSalesLine(trnSalesLineEntity.Id, newSalesLineEntity);
                 if (addSales[1].Equals("0") == false)
                 {
+                    if (Convert.ToDecimal(textBoxSalesLineQuantity.Text) == 0)
+                    {
+                        Controllers.TrnSalesLineController trnSalesLineController = new Controllers.TrnSalesLineController();
+
+                        String[] deleteSalesLine = trnSalesLineController.DeleteSalesLine(trnSalesLineEntity.Id);
+                    }
+
                     if (trnSalesDetailForm != null)
                     {
                         trnSalesDetailForm.GetSalesLineList();
@@ -283,21 +291,6 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 else
                 {
                     MessageBox.Show(addSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                if (Convert.ToDecimal(textBoxSalesLineQuantity.Text) == 0)
-                {
-                    Controllers.TrnSalesLineController trnSalesLineController = new Controllers.TrnSalesLineController();
-
-                    String[] deleteSalesLine = trnSalesLineController.DeleteSalesLine(trnSalesLineEntity.Id);
-                    if (deleteSalesLine[1].Equals("0") == false)
-                    {
-                        trnSalesDetailForm.GetSalesLineList();
-                    }
-                    else
-                    {
-                        MessageBox.Show(deleteSalesLine[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
                 }
             }
         }

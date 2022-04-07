@@ -338,6 +338,7 @@
       <Column Name="TableGroupId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="TopLocation" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="LeftLocation" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SortNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="MstTable_TrnSale" Member="TrnSales" ThisKey="Id" OtherKey="TableId" Type="TrnSale" />
       <Association Name="MstTableGroup_MstTable" Member="MstTableGroup" ThisKey="TableGroupId" OtherKey="Id" Type="MstTableGroup" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
@@ -414,6 +415,9 @@
       <Column Name="UpdateUserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="UpdateDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="IsLocked" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CanEditPrice" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CanOpenDrawer" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsOrderTaker" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="MstUser_IntCloudSetting" Member="IntCloudSettings" ThisKey="Id" OtherKey="PostUserId" Type="IntCloudSetting" />
       <Association Name="MstUser_MstCustomer" Member="MstCustomers" ThisKey="Id" OtherKey="EntryUserId" Type="MstCustomer" />
       <Association Name="MstUser_MstCustomer1" Member="MstCustomers1" ThisKey="Id" OtherKey="UpdateUserId" Type="MstCustomer" />
@@ -546,6 +550,7 @@
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ReadingDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="AccumulatedNetSales" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
+      <Column Name="AccumulatedGrossSalesNetOfVat" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.SysReadingPrintCount" Member="SysReadingPrintCounts">
@@ -833,6 +838,10 @@
       <Column Name="Pax" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="PostCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="DiscountedPax" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CollectedAmount" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
+      <Column Name="OrderChangeAmount" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
+      <Column Name="IsDelivery" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DeliveryType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Association Name="TrnSale_SysSalesLocked" Member="SysSalesLockeds" ThisKey="Id" OtherKey="SalesId" Type="SysSalesLocked" />
       <Association Name="TrnSale_TrnCollection" Member="TrnCollections" ThisKey="Id" OtherKey="SalesId" Type="TrnCollection" />
       <Association Name="TrnSale_TrnCollectionLine" Member="TrnCollectionLines" ThisKey="Id" OtherKey="SalesReturnSalesId" Type="TrnCollectionLine" />
@@ -903,6 +912,7 @@
       <Column Name="Price2LessTax" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
       <Column Name="PriceSplitPercentage" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
       <Column Name="IsPrinted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BodegaItemQty" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
       <Association Name="MstAccount_TrnSalesLine" Member="MstAccount" ThisKey="SalesAccountId" OtherKey="Id" Type="MstAccount" IsForeignKey="true" />
       <Association Name="MstAccount_TrnSalesLine1" Member="MstAccount1" ThisKey="AssetAccountId" OtherKey="Id" Type="MstAccount" IsForeignKey="true" />
       <Association Name="MstAccount_TrnSalesLine2" Member="MstAccount2" ThisKey="CostAccountId" OtherKey="Id" Type="MstAccount" IsForeignKey="true" />
@@ -913,6 +923,39 @@
       <Association Name="MstUnit_TrnSalesLine" Member="MstUnit" ThisKey="UnitId" OtherKey="Id" Type="MstUnit" IsForeignKey="true" />
       <Association Name="MstUser_TrnSalesLine" Member="MstUser" ThisKey="UserId" OtherKey="Id" Type="MstUser" IsForeignKey="true" />
       <Association Name="TrnSale_TrnSalesLine" Member="TrnSale" ThisKey="SalesId" OtherKey="Id" Type="TrnSale" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TrnSalesLineDeleted" Member="TrnSalesLineDeleteds">
+    <Type Name="TrnSalesLineDeleted">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SalesId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SalesNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ItemDescription" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="UnitId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Unit" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Discount" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountRate" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
+      <Column Name="DiscountAmount" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
+      <Column Name="NetPrice" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
+      <Column Name="TaxId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tax" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TaxRate" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
+      <Column Name="TaxAmount" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SalesDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DeletedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsPrinted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SalesLineId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ItemKitchen" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Preparation" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TableId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TableCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.TrnStockCount" Member="TrnStockCounts">

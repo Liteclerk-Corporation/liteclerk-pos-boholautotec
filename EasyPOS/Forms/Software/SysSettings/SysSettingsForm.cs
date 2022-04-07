@@ -461,7 +461,9 @@ namespace EasyPOS.Forms.Software.SysSettings
             {
                 "Dot Matrix Printer",
                 "Thermal Printer",
-                "58mm Printer"
+                "58mm Printer",
+                "HP A799",
+                "ZiJiang Label Printer"
             };
 
             comboBoxPrinterType.DataSource = printerType;
@@ -551,6 +553,7 @@ namespace EasyPOS.Forms.Software.SysSettings
                 textBoxXMLFilePath.Text = sysCurrent.XMLFilePath;
                 textBoxCustomerCode.Text = sysCurrent.CustomerCode;
                 textBoxLogoFilePath.Text = sysCurrent.LogoFilePath;
+                checkBoxBodega.Checked = Convert.ToBoolean(sysCurrent.BodegaTransaction);
             }
         }
 
@@ -640,8 +643,9 @@ namespace EasyPOS.Forms.Software.SysSettings
                 PopupCustomerInfo = checkBoxPopupCustomer.Checked,
                 XMLFilePath = textBoxXMLFilePath.Text,
                 CustomerCode = textBoxCustomerCode.Text,
-                LogoFilePath = textBoxLogoFilePath.Text
-                
+                LogoFilePath = textBoxLogoFilePath.Text,
+                BodegaTransaction = checkBoxBodega.Checked
+
             };
 
             String[] saveSysCurrent = sysSettingsController.UpdateSysCurrent(sysCurrentEntity);
@@ -712,6 +716,7 @@ namespace EasyPOS.Forms.Software.SysSettings
                 textBoxXMLFilePath.Enabled = false;
                 textBoxCustomerCode.Enabled = false;
                 textBoxLogoFilePath.Enabled = false;
+                checkBoxBodega.Enabled = false;
             }
             else
             {
@@ -807,6 +812,7 @@ namespace EasyPOS.Forms.Software.SysSettings
                 textBoxXMLFilePath.Enabled = true;
                 textBoxCustomerCode.Enabled = true;
                 textBoxLogoFilePath.Enabled = true;
+                checkBoxBodega.Enabled = true;
             }
         }
 

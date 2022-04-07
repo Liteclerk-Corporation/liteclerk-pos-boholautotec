@@ -162,6 +162,9 @@ namespace EasyPOS.Data
     partial void InsertTrnSalesLine(TrnSalesLine instance);
     partial void UpdateTrnSalesLine(TrnSalesLine instance);
     partial void DeleteTrnSalesLine(TrnSalesLine instance);
+    partial void InsertTrnSalesLineDeleted(TrnSalesLineDeleted instance);
+    partial void UpdateTrnSalesLineDeleted(TrnSalesLineDeleted instance);
+    partial void DeleteTrnSalesLineDeleted(TrnSalesLineDeleted instance);
     partial void InsertTrnStockCount(TrnStockCount instance);
     partial void UpdateTrnStockCount(TrnStockCount instance);
     partial void DeleteTrnStockCount(TrnStockCount instance);
@@ -558,6 +561,14 @@ namespace EasyPOS.Data
 			get
 			{
 				return this.GetTable<TrnSalesLine>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TrnSalesLineDeleted> TrnSalesLineDeleteds
+		{
+			get
+			{
+				return this.GetTable<TrnSalesLineDeleted>();
 			}
 		}
 		
@@ -8485,6 +8496,8 @@ namespace EasyPOS.Data
 		
 		private System.Nullable<int> _LeftLocation;
 		
+		private int _SortNumber;
+		
 		private EntitySet<TrnSale> _TrnSales;
 		
 		private EntityRef<MstTableGroup> _MstTableGroup;
@@ -8503,6 +8516,8 @@ namespace EasyPOS.Data
     partial void OnTopLocationChanged();
     partial void OnLeftLocationChanging(System.Nullable<int> value);
     partial void OnLeftLocationChanged();
+    partial void OnSortNumberChanging(int value);
+    partial void OnSortNumberChanged();
     #endregion
 		
 		public MstTable()
@@ -8612,6 +8627,26 @@ namespace EasyPOS.Data
 					this._LeftLocation = value;
 					this.SendPropertyChanged("LeftLocation");
 					this.OnLeftLocationChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SortNumber", DbType="Int NOT NULL")]
+		public int SortNumber
+		{
+			get
+			{
+				return this._SortNumber;
+			}
+			set
+			{
+				if ((this._SortNumber != value))
+				{
+					this.OnSortNumberChanging(value);
+					this.SendPropertyChanging();
+					this._SortNumber = value;
+					this.SendPropertyChanged("SortNumber");
+					this.OnSortNumberChanged();
 				}
 			}
 		}
@@ -9995,6 +10030,12 @@ namespace EasyPOS.Data
 		
 		private bool _IsLocked;
 		
+		private bool _CanEditPrice;
+		
+		private bool _CanOpenDrawer;
+		
+		private bool _IsOrderTaker;
+		
 		private EntitySet<IntCloudSetting> _IntCloudSettings;
 		
 		private EntitySet<MstCustomer> _MstCustomers;
@@ -10135,6 +10176,12 @@ namespace EasyPOS.Data
     partial void OnUpdateDateTimeChanged();
     partial void OnIsLockedChanging(bool value);
     partial void OnIsLockedChanged();
+    partial void OnCanEditPriceChanging(bool value);
+    partial void OnCanEditPriceChanged();
+    partial void OnCanOpenDrawerChanging(bool value);
+    partial void OnCanOpenDrawerChanged();
+    partial void OnIsOrderTakerChanging(bool value);
+    partial void OnIsOrderTakerChanged();
     #endregion
 		
 		public MstUser()
@@ -10396,6 +10443,66 @@ namespace EasyPOS.Data
 					this._IsLocked = value;
 					this.SendPropertyChanged("IsLocked");
 					this.OnIsLockedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CanEditPrice", DbType="Bit NOT NULL")]
+		public bool CanEditPrice
+		{
+			get
+			{
+				return this._CanEditPrice;
+			}
+			set
+			{
+				if ((this._CanEditPrice != value))
+				{
+					this.OnCanEditPriceChanging(value);
+					this.SendPropertyChanging();
+					this._CanEditPrice = value;
+					this.SendPropertyChanged("CanEditPrice");
+					this.OnCanEditPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CanOpenDrawer", DbType="Bit NOT NULL")]
+		public bool CanOpenDrawer
+		{
+			get
+			{
+				return this._CanOpenDrawer;
+			}
+			set
+			{
+				if ((this._CanOpenDrawer != value))
+				{
+					this.OnCanOpenDrawerChanging(value);
+					this.SendPropertyChanging();
+					this._CanOpenDrawer = value;
+					this.SendPropertyChanged("CanOpenDrawer");
+					this.OnCanOpenDrawerChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsOrderTaker", DbType="Bit NOT NULL")]
+		public bool IsOrderTaker
+		{
+			get
+			{
+				return this._IsOrderTaker;
+			}
+			set
+			{
+				if ((this._IsOrderTaker != value))
+				{
+					this.OnIsOrderTakerChanging(value);
+					this.SendPropertyChanging();
+					this._IsOrderTaker = value;
+					this.SendPropertyChanged("IsOrderTaker");
+					this.OnIsOrderTakerChanged();
 				}
 			}
 		}
@@ -13198,6 +13305,8 @@ namespace EasyPOS.Data
 		
 		private decimal _AccumulatedNetSales;
 		
+		private decimal _AccumulatedGrossSalesNetOfVat;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -13208,6 +13317,8 @@ namespace EasyPOS.Data
     partial void OnReadingDateChanged();
     partial void OnAccumulatedNetSalesChanging(decimal value);
     partial void OnAccumulatedNetSalesChanged();
+    partial void OnAccumulatedGrossSalesNetOfVatChanging(decimal value);
+    partial void OnAccumulatedGrossSalesNetOfVatChanged();
     #endregion
 		
 		public SysReadingPrevAccNetSale()
@@ -13271,6 +13382,26 @@ namespace EasyPOS.Data
 					this._AccumulatedNetSales = value;
 					this.SendPropertyChanged("AccumulatedNetSales");
 					this.OnAccumulatedNetSalesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccumulatedGrossSalesNetOfVat", DbType="Decimal(18,5) NOT NULL")]
+		public decimal AccumulatedGrossSalesNetOfVat
+		{
+			get
+			{
+				return this._AccumulatedGrossSalesNetOfVat;
+			}
+			set
+			{
+				if ((this._AccumulatedGrossSalesNetOfVat != value))
+				{
+					this.OnAccumulatedGrossSalesNetOfVatChanging(value);
+					this.SendPropertyChanging();
+					this._AccumulatedGrossSalesNetOfVat = value;
+					this.SendPropertyChanged("AccumulatedGrossSalesNetOfVat");
+					this.OnAccumulatedGrossSalesNetOfVatChanged();
 				}
 			}
 		}
@@ -19541,6 +19672,14 @@ namespace EasyPOS.Data
 		
 		private System.Nullable<int> _DiscountedPax;
 		
+		private decimal _CollectedAmount;
+		
+		private decimal _OrderChangeAmount;
+		
+		private System.Nullable<bool> _IsDelivery;
+		
+		private string _DeliveryType;
+		
 		private EntitySet<SysSalesLocked> _SysSalesLockeds;
 		
 		private EntitySet<TrnCollection> _TrnCollections;
@@ -19667,6 +19806,14 @@ namespace EasyPOS.Data
     partial void OnPostCodeChanged();
     partial void OnDiscountedPaxChanging(System.Nullable<int> value);
     partial void OnDiscountedPaxChanged();
+    partial void OnCollectedAmountChanging(decimal value);
+    partial void OnCollectedAmountChanged();
+    partial void OnOrderChangeAmountChanging(decimal value);
+    partial void OnOrderChangeAmountChanged();
+    partial void OnIsDeliveryChanging(System.Nullable<bool> value);
+    partial void OnIsDeliveryChanged();
+    partial void OnDeliveryTypeChanging(string value);
+    partial void OnDeliveryTypeChanged();
     #endregion
 		
 		public TrnSale()
@@ -20558,6 +20705,86 @@ namespace EasyPOS.Data
 					this._DiscountedPax = value;
 					this.SendPropertyChanged("DiscountedPax");
 					this.OnDiscountedPaxChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CollectedAmount", DbType="Decimal(18,5) NOT NULL")]
+		public decimal CollectedAmount
+		{
+			get
+			{
+				return this._CollectedAmount;
+			}
+			set
+			{
+				if ((this._CollectedAmount != value))
+				{
+					this.OnCollectedAmountChanging(value);
+					this.SendPropertyChanging();
+					this._CollectedAmount = value;
+					this.SendPropertyChanged("CollectedAmount");
+					this.OnCollectedAmountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrderChangeAmount", DbType="Decimal(18,5) NOT NULL")]
+		public decimal OrderChangeAmount
+		{
+			get
+			{
+				return this._OrderChangeAmount;
+			}
+			set
+			{
+				if ((this._OrderChangeAmount != value))
+				{
+					this.OnOrderChangeAmountChanging(value);
+					this.SendPropertyChanging();
+					this._OrderChangeAmount = value;
+					this.SendPropertyChanged("OrderChangeAmount");
+					this.OnOrderChangeAmountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsDelivery", DbType="Bit")]
+		public System.Nullable<bool> IsDelivery
+		{
+			get
+			{
+				return this._IsDelivery;
+			}
+			set
+			{
+				if ((this._IsDelivery != value))
+				{
+					this.OnIsDeliveryChanging(value);
+					this.SendPropertyChanging();
+					this._IsDelivery = value;
+					this.SendPropertyChanged("IsDelivery");
+					this.OnIsDeliveryChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeliveryType", DbType="NVarChar(255)")]
+		public string DeliveryType
+		{
+			get
+			{
+				return this._DeliveryType;
+			}
+			set
+			{
+				if ((this._DeliveryType != value))
+				{
+					this.OnDeliveryTypeChanging(value);
+					this.SendPropertyChanging();
+					this._DeliveryType = value;
+					this.SendPropertyChanged("DeliveryType");
+					this.OnDeliveryTypeChanged();
 				}
 			}
 		}
@@ -21666,6 +21893,8 @@ namespace EasyPOS.Data
 		
 		private System.Nullable<bool> _IsPrinted;
 		
+		private decimal _BodegaItemQty;
+		
 		private EntityRef<MstAccount> _MstAccount;
 		
 		private EntityRef<MstAccount> _MstAccount1;
@@ -21744,6 +21973,8 @@ namespace EasyPOS.Data
     partial void OnPriceSplitPercentageChanged();
     partial void OnIsPrintedChanging(System.Nullable<bool> value);
     partial void OnIsPrintedChanged();
+    partial void OnBodegaItemQtyChanging(decimal value);
+    partial void OnBodegaItemQtyChanged();
     #endregion
 		
 		public TrnSalesLine()
@@ -22341,6 +22572,26 @@ namespace EasyPOS.Data
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BodegaItemQty", DbType="Decimal(18,5) NOT NULL")]
+		public decimal BodegaItemQty
+		{
+			get
+			{
+				return this._BodegaItemQty;
+			}
+			set
+			{
+				if ((this._BodegaItemQty != value))
+				{
+					this.OnBodegaItemQtyChanging(value);
+					this.SendPropertyChanging();
+					this._BodegaItemQty = value;
+					this.SendPropertyChanged("BodegaItemQty");
+					this.OnBodegaItemQtyChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MstAccount_TrnSalesLine", Storage="_MstAccount", ThisKey="SalesAccountId", OtherKey="Id", IsForeignKey=true)]
 		public MstAccount MstAccount
 		{
@@ -22677,6 +22928,740 @@ namespace EasyPOS.Data
 						this._SalesId = default(int);
 					}
 					this.SendPropertyChanged("TrnSale");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TrnSalesLineDeleted")]
+	public partial class TrnSalesLineDeleted : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _SalesId;
+		
+		private string _SalesNumber;
+		
+		private int _ItemId;
+		
+		private string _ItemDescription;
+		
+		private int _UnitId;
+		
+		private string _Unit;
+		
+		private decimal _Price;
+		
+		private int _DiscountId;
+		
+		private string _Discount;
+		
+		private decimal _DiscountRate;
+		
+		private decimal _DiscountAmount;
+		
+		private decimal _NetPrice;
+		
+		private decimal _Quantity;
+		
+		private decimal _Amount;
+		
+		private int _TaxId;
+		
+		private string _Tax;
+		
+		private decimal _TaxRate;
+		
+		private decimal _TaxAmount;
+		
+		private int _UserId;
+		
+		private string _UserName;
+		
+		private System.DateTime _SalesDate;
+		
+		private System.DateTime _DeletedDate;
+		
+		private bool _IsPrinted;
+		
+		private int _SalesLineId;
+		
+		private string _ItemKitchen;
+		
+		private string _Preparation;
+		
+		private int _TableId;
+		
+		private string _TableCode;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnSalesIdChanging(int value);
+    partial void OnSalesIdChanged();
+    partial void OnSalesNumberChanging(string value);
+    partial void OnSalesNumberChanged();
+    partial void OnItemIdChanging(int value);
+    partial void OnItemIdChanged();
+    partial void OnItemDescriptionChanging(string value);
+    partial void OnItemDescriptionChanged();
+    partial void OnUnitIdChanging(int value);
+    partial void OnUnitIdChanged();
+    partial void OnUnitChanging(string value);
+    partial void OnUnitChanged();
+    partial void OnPriceChanging(decimal value);
+    partial void OnPriceChanged();
+    partial void OnDiscountIdChanging(int value);
+    partial void OnDiscountIdChanged();
+    partial void OnDiscountChanging(string value);
+    partial void OnDiscountChanged();
+    partial void OnDiscountRateChanging(decimal value);
+    partial void OnDiscountRateChanged();
+    partial void OnDiscountAmountChanging(decimal value);
+    partial void OnDiscountAmountChanged();
+    partial void OnNetPriceChanging(decimal value);
+    partial void OnNetPriceChanged();
+    partial void OnQuantityChanging(decimal value);
+    partial void OnQuantityChanged();
+    partial void OnAmountChanging(decimal value);
+    partial void OnAmountChanged();
+    partial void OnTaxIdChanging(int value);
+    partial void OnTaxIdChanged();
+    partial void OnTaxChanging(string value);
+    partial void OnTaxChanged();
+    partial void OnTaxRateChanging(decimal value);
+    partial void OnTaxRateChanged();
+    partial void OnTaxAmountChanging(decimal value);
+    partial void OnTaxAmountChanged();
+    partial void OnUserIdChanging(int value);
+    partial void OnUserIdChanged();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnSalesDateChanging(System.DateTime value);
+    partial void OnSalesDateChanged();
+    partial void OnDeletedDateChanging(System.DateTime value);
+    partial void OnDeletedDateChanged();
+    partial void OnIsPrintedChanging(bool value);
+    partial void OnIsPrintedChanged();
+    partial void OnSalesLineIdChanging(int value);
+    partial void OnSalesLineIdChanged();
+    partial void OnItemKitchenChanging(string value);
+    partial void OnItemKitchenChanged();
+    partial void OnPreparationChanging(string value);
+    partial void OnPreparationChanged();
+    partial void OnTableIdChanging(int value);
+    partial void OnTableIdChanged();
+    partial void OnTableCodeChanging(string value);
+    partial void OnTableCodeChanged();
+    #endregion
+		
+		public TrnSalesLineDeleted()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SalesId", DbType="Int NOT NULL")]
+		public int SalesId
+		{
+			get
+			{
+				return this._SalesId;
+			}
+			set
+			{
+				if ((this._SalesId != value))
+				{
+					this.OnSalesIdChanging(value);
+					this.SendPropertyChanging();
+					this._SalesId = value;
+					this.SendPropertyChanged("SalesId");
+					this.OnSalesIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SalesNumber", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string SalesNumber
+		{
+			get
+			{
+				return this._SalesNumber;
+			}
+			set
+			{
+				if ((this._SalesNumber != value))
+				{
+					this.OnSalesNumberChanging(value);
+					this.SendPropertyChanging();
+					this._SalesNumber = value;
+					this.SendPropertyChanged("SalesNumber");
+					this.OnSalesNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ItemId", DbType="Int NOT NULL")]
+		public int ItemId
+		{
+			get
+			{
+				return this._ItemId;
+			}
+			set
+			{
+				if ((this._ItemId != value))
+				{
+					this.OnItemIdChanging(value);
+					this.SendPropertyChanging();
+					this._ItemId = value;
+					this.SendPropertyChanged("ItemId");
+					this.OnItemIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ItemDescription", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string ItemDescription
+		{
+			get
+			{
+				return this._ItemDescription;
+			}
+			set
+			{
+				if ((this._ItemDescription != value))
+				{
+					this.OnItemDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._ItemDescription = value;
+					this.SendPropertyChanged("ItemDescription");
+					this.OnItemDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UnitId", DbType="Int NOT NULL")]
+		public int UnitId
+		{
+			get
+			{
+				return this._UnitId;
+			}
+			set
+			{
+				if ((this._UnitId != value))
+				{
+					this.OnUnitIdChanging(value);
+					this.SendPropertyChanging();
+					this._UnitId = value;
+					this.SendPropertyChanged("UnitId");
+					this.OnUnitIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Unit", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Unit
+		{
+			get
+			{
+				return this._Unit;
+			}
+			set
+			{
+				if ((this._Unit != value))
+				{
+					this.OnUnitChanging(value);
+					this.SendPropertyChanging();
+					this._Unit = value;
+					this.SendPropertyChanged("Unit");
+					this.OnUnitChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Decimal(18,5) NOT NULL")]
+		public decimal Price
+		{
+			get
+			{
+				return this._Price;
+			}
+			set
+			{
+				if ((this._Price != value))
+				{
+					this.OnPriceChanging(value);
+					this.SendPropertyChanging();
+					this._Price = value;
+					this.SendPropertyChanged("Price");
+					this.OnPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiscountId", DbType="Int NOT NULL")]
+		public int DiscountId
+		{
+			get
+			{
+				return this._DiscountId;
+			}
+			set
+			{
+				if ((this._DiscountId != value))
+				{
+					this.OnDiscountIdChanging(value);
+					this.SendPropertyChanging();
+					this._DiscountId = value;
+					this.SendPropertyChanged("DiscountId");
+					this.OnDiscountIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Discount", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Discount
+		{
+			get
+			{
+				return this._Discount;
+			}
+			set
+			{
+				if ((this._Discount != value))
+				{
+					this.OnDiscountChanging(value);
+					this.SendPropertyChanging();
+					this._Discount = value;
+					this.SendPropertyChanged("Discount");
+					this.OnDiscountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiscountRate", DbType="Decimal(18,5) NOT NULL")]
+		public decimal DiscountRate
+		{
+			get
+			{
+				return this._DiscountRate;
+			}
+			set
+			{
+				if ((this._DiscountRate != value))
+				{
+					this.OnDiscountRateChanging(value);
+					this.SendPropertyChanging();
+					this._DiscountRate = value;
+					this.SendPropertyChanged("DiscountRate");
+					this.OnDiscountRateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiscountAmount", DbType="Decimal(18,5) NOT NULL")]
+		public decimal DiscountAmount
+		{
+			get
+			{
+				return this._DiscountAmount;
+			}
+			set
+			{
+				if ((this._DiscountAmount != value))
+				{
+					this.OnDiscountAmountChanging(value);
+					this.SendPropertyChanging();
+					this._DiscountAmount = value;
+					this.SendPropertyChanged("DiscountAmount");
+					this.OnDiscountAmountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NetPrice", DbType="Decimal(18,5) NOT NULL")]
+		public decimal NetPrice
+		{
+			get
+			{
+				return this._NetPrice;
+			}
+			set
+			{
+				if ((this._NetPrice != value))
+				{
+					this.OnNetPriceChanging(value);
+					this.SendPropertyChanging();
+					this._NetPrice = value;
+					this.SendPropertyChanged("NetPrice");
+					this.OnNetPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Decimal(18,5) NOT NULL")]
+		public decimal Quantity
+		{
+			get
+			{
+				return this._Quantity;
+			}
+			set
+			{
+				if ((this._Quantity != value))
+				{
+					this.OnQuantityChanging(value);
+					this.SendPropertyChanging();
+					this._Quantity = value;
+					this.SendPropertyChanged("Quantity");
+					this.OnQuantityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Amount", DbType="Decimal(18,5) NOT NULL")]
+		public decimal Amount
+		{
+			get
+			{
+				return this._Amount;
+			}
+			set
+			{
+				if ((this._Amount != value))
+				{
+					this.OnAmountChanging(value);
+					this.SendPropertyChanging();
+					this._Amount = value;
+					this.SendPropertyChanged("Amount");
+					this.OnAmountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TaxId", DbType="Int NOT NULL")]
+		public int TaxId
+		{
+			get
+			{
+				return this._TaxId;
+			}
+			set
+			{
+				if ((this._TaxId != value))
+				{
+					this.OnTaxIdChanging(value);
+					this.SendPropertyChanging();
+					this._TaxId = value;
+					this.SendPropertyChanged("TaxId");
+					this.OnTaxIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tax", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Tax
+		{
+			get
+			{
+				return this._Tax;
+			}
+			set
+			{
+				if ((this._Tax != value))
+				{
+					this.OnTaxChanging(value);
+					this.SendPropertyChanging();
+					this._Tax = value;
+					this.SendPropertyChanged("Tax");
+					this.OnTaxChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TaxRate", DbType="Decimal(18,5) NOT NULL")]
+		public decimal TaxRate
+		{
+			get
+			{
+				return this._TaxRate;
+			}
+			set
+			{
+				if ((this._TaxRate != value))
+				{
+					this.OnTaxRateChanging(value);
+					this.SendPropertyChanging();
+					this._TaxRate = value;
+					this.SendPropertyChanged("TaxRate");
+					this.OnTaxRateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TaxAmount", DbType="Decimal(18,5) NOT NULL")]
+		public decimal TaxAmount
+		{
+			get
+			{
+				return this._TaxAmount;
+			}
+			set
+			{
+				if ((this._TaxAmount != value))
+				{
+					this.OnTaxAmountChanging(value);
+					this.SendPropertyChanging();
+					this._TaxAmount = value;
+					this.SendPropertyChanged("TaxAmount");
+					this.OnTaxAmountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserId", DbType="Int NOT NULL")]
+		public int UserId
+		{
+			get
+			{
+				return this._UserId;
+			}
+			set
+			{
+				if ((this._UserId != value))
+				{
+					this.OnUserIdChanging(value);
+					this.SendPropertyChanging();
+					this._UserId = value;
+					this.SendPropertyChanged("UserId");
+					this.OnUserIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this.OnUserNameChanging(value);
+					this.SendPropertyChanging();
+					this._UserName = value;
+					this.SendPropertyChanged("UserName");
+					this.OnUserNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SalesDate", DbType="DateTime NOT NULL")]
+		public System.DateTime SalesDate
+		{
+			get
+			{
+				return this._SalesDate;
+			}
+			set
+			{
+				if ((this._SalesDate != value))
+				{
+					this.OnSalesDateChanging(value);
+					this.SendPropertyChanging();
+					this._SalesDate = value;
+					this.SendPropertyChanged("SalesDate");
+					this.OnSalesDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeletedDate", DbType="DateTime NOT NULL")]
+		public System.DateTime DeletedDate
+		{
+			get
+			{
+				return this._DeletedDate;
+			}
+			set
+			{
+				if ((this._DeletedDate != value))
+				{
+					this.OnDeletedDateChanging(value);
+					this.SendPropertyChanging();
+					this._DeletedDate = value;
+					this.SendPropertyChanged("DeletedDate");
+					this.OnDeletedDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsPrinted", DbType="Bit NOT NULL")]
+		public bool IsPrinted
+		{
+			get
+			{
+				return this._IsPrinted;
+			}
+			set
+			{
+				if ((this._IsPrinted != value))
+				{
+					this.OnIsPrintedChanging(value);
+					this.SendPropertyChanging();
+					this._IsPrinted = value;
+					this.SendPropertyChanged("IsPrinted");
+					this.OnIsPrintedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SalesLineId", DbType="Int NOT NULL")]
+		public int SalesLineId
+		{
+			get
+			{
+				return this._SalesLineId;
+			}
+			set
+			{
+				if ((this._SalesLineId != value))
+				{
+					this.OnSalesLineIdChanging(value);
+					this.SendPropertyChanging();
+					this._SalesLineId = value;
+					this.SendPropertyChanged("SalesLineId");
+					this.OnSalesLineIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ItemKitchen", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string ItemKitchen
+		{
+			get
+			{
+				return this._ItemKitchen;
+			}
+			set
+			{
+				if ((this._ItemKitchen != value))
+				{
+					this.OnItemKitchenChanging(value);
+					this.SendPropertyChanging();
+					this._ItemKitchen = value;
+					this.SendPropertyChanged("ItemKitchen");
+					this.OnItemKitchenChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Preparation", DbType="VarChar(255)")]
+		public string Preparation
+		{
+			get
+			{
+				return this._Preparation;
+			}
+			set
+			{
+				if ((this._Preparation != value))
+				{
+					this.OnPreparationChanging(value);
+					this.SendPropertyChanging();
+					this._Preparation = value;
+					this.SendPropertyChanged("Preparation");
+					this.OnPreparationChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TableId", DbType="Int NOT NULL")]
+		public int TableId
+		{
+			get
+			{
+				return this._TableId;
+			}
+			set
+			{
+				if ((this._TableId != value))
+				{
+					this.OnTableIdChanging(value);
+					this.SendPropertyChanging();
+					this._TableId = value;
+					this.SendPropertyChanged("TableId");
+					this.OnTableIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TableCode", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string TableCode
+		{
+			get
+			{
+				return this._TableCode;
+			}
+			set
+			{
+				if ((this._TableCode != value))
+				{
+					this.OnTableCodeChanging(value);
+					this.SendPropertyChanging();
+					this._TableCode = value;
+					this.SendPropertyChanged("TableCode");
+					this.OnTableCodeChanged();
 				}
 			}
 		}
