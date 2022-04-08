@@ -1,4 +1,5 @@
-﻿namespace EasyPOS.Forms.Software.TrnPOS
+﻿
+namespace EasyPOS.Forms.Software.TrnPOS
 {
     partial class TrnPOSSalesOrderBodegaForm
     {
@@ -32,24 +33,16 @@
             this.printDocumentReturnReport = new System.Drawing.Printing.PrintDocument();
             this.SuspendLayout();
             // 
-            // printDocumentReturnReport
-            // 
-            this.printDocumentReturnReport.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocumentReturnReport_PrintPage);
-            // 
             // TrnPOSSalesOrderBodegaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 51);
             this.ControlBox = false;
-            this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.MaximumSize = new System.Drawing.Size(499, 98);
-            this.MinimumSize = new System.Drawing.Size(499, 98);
             this.Name = "TrnPOSSalesOrderBodegaForm";
-            this.Text = "Return Report";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Sales Order Bodega Report";
             this.ResumeLayout(false);
 
         }

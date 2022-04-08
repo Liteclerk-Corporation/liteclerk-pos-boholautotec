@@ -10,12 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace EasyPOS.Forms.Software.TrnPOS
 {
     public partial class TrnPOSSalesOrderBodegaForm : Form
     {
         public Int32 trnSalesId = 0;
-
         public TrnPOSSalesOrderBodegaForm(Int32 salesId, String printerName)
         {
             InitializeComponent();

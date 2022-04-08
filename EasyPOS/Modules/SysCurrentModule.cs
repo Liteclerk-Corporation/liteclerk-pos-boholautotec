@@ -113,7 +113,11 @@ namespace EasyPOS.Modules
                 XMLFilePath = currentSettings.XMLFilePath,
                 CustomerCode = currentSettings.CustomerCode,
                 LogoFilePath = currentSettings.LogoFilePath,
-                BodegaTransaction = currentSettings.BodegaTransaction
+                BodegaTransaction = currentSettings.BodegaTransaction,
+                ChangeComputationOnLock = currentSettings.ChangeComputationOnLock,
+                EnablePOSTouchPrintDeletedItem = currentSettings.EnablePOSTouchPrintDeletedItem,
+                DisableSalesDate = currentSettings.DisableSalesDate,
+                EnableSelectOrderTaker = currentSettings.EnableSelectOrderTaker
             };
 
             String newJson = new JavaScriptSerializer().Serialize(newEntities);
@@ -200,7 +204,11 @@ namespace EasyPOS.Modules
                 XMLFilePath = objSysCurrentEntity.XMLFilePath,
                 CustomerCode = objSysCurrentEntity.CustomerCode,
                 LogoFilePath = objSysCurrentEntity.LogoFilePath,
-                BodegaTransaction = objSysCurrentEntity.BodegaTransaction
+                BodegaTransaction = objSysCurrentEntity.BodegaTransaction,
+                ChangeComputationOnLock = objSysCurrentEntity.ChangeComputationOnLock,
+                EnablePOSTouchPrintDeletedItem = objSysCurrentEntity.EnablePOSTouchPrintDeletedItem,
+                DisableSalesDate = objSysCurrentEntity.DisableSalesDate,
+                EnableSelectOrderTaker = objSysCurrentEntity.EnableSelectOrderTaker
             };
 
             String newJson = new JavaScriptSerializer().Serialize(newSysCurrentEntities);
@@ -288,7 +296,11 @@ namespace EasyPOS.Modules
                 XMLFilePath = currentSettings.XMLFilePath,
                 CustomerCode = currentSettings.CustomerCode,
                 LogoFilePath = currentSettings.LogoFilePath,
-                BodegaTransaction = currentSettings.BodegaTransaction
+                BodegaTransaction = currentSettings.BodegaTransaction,
+                ChangeComputationOnLock = currentSettings.ChangeComputationOnLock,
+                EnablePOSTouchPrintDeletedItem = currentSettings.EnablePOSTouchPrintDeletedItem,
+                DisableSalesDate = currentSettings.DisableSalesDate,
+                EnableSelectOrderTaker = currentSettings.EnableSelectOrderTaker
             };
 
             String newJson = new JavaScriptSerializer().Serialize(newEntities);

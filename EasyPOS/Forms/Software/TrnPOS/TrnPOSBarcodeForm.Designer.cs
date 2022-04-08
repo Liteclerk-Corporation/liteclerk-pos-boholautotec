@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,6 +37,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrnPOSBarcodeForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,26 +51,6 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonSales = new System.Windows.Forms.Button();
             this.dataGridViewSalesList = new System.Windows.Forms.DataGridView();
-            this.ColumnEdit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ColumnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTerminal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSalesDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSalesNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnRececiptInvoiceNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCustomerCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSalesAgent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCashier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnIsLocked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColumnIsTendered = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColumnIsCancelled = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColumnRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnManualSalesNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSpace = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.labelCustomerCode = new System.Windows.Forms.Label();
@@ -106,6 +86,27 @@
             this.labelLastChange = new System.Windows.Forms.Label();
             this.textBoxLastChange = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ColumnEdit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ColumnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTerminal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSalesDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSalesNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnRececiptInvoiceNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCustomerCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSalesAgent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCashier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTenderedAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnIsLocked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColumnIsTendered = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColumnIsCancelled = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColumnRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnManualSalesNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSpace = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSalesList)).BeginInit();
@@ -258,6 +259,7 @@
             this.ColumnSalesAgent,
             this.ColumnCashier,
             this.ColumnAmount,
+            this.ColumnTenderedAmount,
             this.ColumnIsLocked,
             this.ColumnIsTendered,
             this.ColumnIsCancelled,
@@ -266,7 +268,7 @@
             this.ColumnManualSalesNumber,
             this.ColumnDelivery,
             this.ColumnSpace});
-            this.dataGridViewSalesList.Location = new System.Drawing.Point(156, 42);
+            this.dataGridViewSalesList.Location = new System.Drawing.Point(156, 52);
             this.dataGridViewSalesList.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewSalesList.MultiSelect = false;
             this.dataGridViewSalesList.Name = "dataGridViewSalesList";
@@ -281,220 +283,6 @@
             this.dataGridViewSalesList.TabIndex = 1;
             this.dataGridViewSalesList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSalesList_CellClick);
             this.dataGridViewSalesList.SelectionChanged += new System.EventHandler(this.dataGridViewSalesList_SelectionChanged);
-            // 
-            // ColumnEdit
-            // 
-            this.ColumnEdit.DataPropertyName = "ColumnEdit";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
-            this.ColumnEdit.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ColumnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ColumnEdit.Frozen = true;
-            this.ColumnEdit.HeaderText = "";
-            this.ColumnEdit.MinimumWidth = 6;
-            this.ColumnEdit.Name = "ColumnEdit";
-            this.ColumnEdit.ReadOnly = true;
-            this.ColumnEdit.Width = 55;
-            // 
-            // ColumnDelete
-            // 
-            this.ColumnDelete.DataPropertyName = "ColumnDelete";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
-            this.ColumnDelete.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ColumnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ColumnDelete.Frozen = true;
-            this.ColumnDelete.HeaderText = "";
-            this.ColumnDelete.MinimumWidth = 6;
-            this.ColumnDelete.Name = "ColumnDelete";
-            this.ColumnDelete.ReadOnly = true;
-            this.ColumnDelete.Width = 55;
-            // 
-            // ColumnId
-            // 
-            this.ColumnId.DataPropertyName = "ColumnId";
-            this.ColumnId.HeaderText = "Id";
-            this.ColumnId.MinimumWidth = 6;
-            this.ColumnId.Name = "ColumnId";
-            this.ColumnId.ReadOnly = true;
-            this.ColumnId.Visible = false;
-            this.ColumnId.Width = 125;
-            // 
-            // ColumnTerminal
-            // 
-            this.ColumnTerminal.DataPropertyName = "ColumnTerminal";
-            this.ColumnTerminal.HeaderText = "Terminal";
-            this.ColumnTerminal.MinimumWidth = 6;
-            this.ColumnTerminal.Name = "ColumnTerminal";
-            this.ColumnTerminal.ReadOnly = true;
-            this.ColumnTerminal.Visible = false;
-            this.ColumnTerminal.Width = 70;
-            // 
-            // ColumnSalesDate
-            // 
-            this.ColumnSalesDate.DataPropertyName = "ColumnSalesDate";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnSalesDate.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ColumnSalesDate.HeaderText = "Order Date";
-            this.ColumnSalesDate.MinimumWidth = 6;
-            this.ColumnSalesDate.Name = "ColumnSalesDate";
-            this.ColumnSalesDate.ReadOnly = true;
-            this.ColumnSalesDate.Visible = false;
-            this.ColumnSalesDate.Width = 95;
-            // 
-            // ColumnSalesNumber
-            // 
-            this.ColumnSalesNumber.DataPropertyName = "ColumnSalesNumber";
-            this.ColumnSalesNumber.HeaderText = "Order No.";
-            this.ColumnSalesNumber.MinimumWidth = 6;
-            this.ColumnSalesNumber.Name = "ColumnSalesNumber";
-            this.ColumnSalesNumber.ReadOnly = true;
-            this.ColumnSalesNumber.Width = 90;
-            // 
-            // ColumnRececiptInvoiceNumber
-            // 
-            this.ColumnRececiptInvoiceNumber.DataPropertyName = "ColumnRececiptInvoiceNumber";
-            this.ColumnRececiptInvoiceNumber.HeaderText = "Receipt / Invoice No.";
-            this.ColumnRececiptInvoiceNumber.MinimumWidth = 6;
-            this.ColumnRececiptInvoiceNumber.Name = "ColumnRececiptInvoiceNumber";
-            this.ColumnRececiptInvoiceNumber.ReadOnly = true;
-            this.ColumnRececiptInvoiceNumber.Width = 90;
-            // 
-            // ColumnCustomerCode
-            // 
-            this.ColumnCustomerCode.DataPropertyName = "ColumnCustomerCode";
-            this.ColumnCustomerCode.HeaderText = "Customer Code";
-            this.ColumnCustomerCode.MinimumWidth = 6;
-            this.ColumnCustomerCode.Name = "ColumnCustomerCode";
-            this.ColumnCustomerCode.ReadOnly = true;
-            this.ColumnCustomerCode.Width = 90;
-            // 
-            // ColumnCustomer
-            // 
-            this.ColumnCustomer.DataPropertyName = "ColumnCustomer";
-            this.ColumnCustomer.HeaderText = "Customer";
-            this.ColumnCustomer.MinimumWidth = 6;
-            this.ColumnCustomer.Name = "ColumnCustomer";
-            this.ColumnCustomer.ReadOnly = true;
-            this.ColumnCustomer.Width = 130;
-            // 
-            // ColumnSalesAgent
-            // 
-            this.ColumnSalesAgent.DataPropertyName = "ColumnSalesAgent";
-            this.ColumnSalesAgent.HeaderText = "Order Taker";
-            this.ColumnSalesAgent.MinimumWidth = 6;
-            this.ColumnSalesAgent.Name = "ColumnSalesAgent";
-            this.ColumnSalesAgent.ReadOnly = true;
-            this.ColumnSalesAgent.Width = 120;
-            // 
-            // ColumnCashier
-            // 
-            this.ColumnCashier.DataPropertyName = "ColumnCashier";
-            this.ColumnCashier.HeaderText = "Cashier";
-            this.ColumnCashier.MinimumWidth = 6;
-            this.ColumnCashier.Name = "ColumnCashier";
-            this.ColumnCashier.ReadOnly = true;
-            this.ColumnCashier.Width = 125;
-            // 
-            // ColumnAmount
-            // 
-            this.ColumnAmount.DataPropertyName = "ColumnAmount";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.NullValue = null;
-            this.ColumnAmount.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ColumnAmount.HeaderText = "Amount";
-            this.ColumnAmount.MinimumWidth = 6;
-            this.ColumnAmount.Name = "ColumnAmount";
-            this.ColumnAmount.ReadOnly = true;
-            this.ColumnAmount.Width = 120;
-            // 
-            // ColumnIsLocked
-            // 
-            this.ColumnIsLocked.DataPropertyName = "ColumnIsLocked";
-            this.ColumnIsLocked.HeaderText = "L";
-            this.ColumnIsLocked.MinimumWidth = 6;
-            this.ColumnIsLocked.Name = "ColumnIsLocked";
-            this.ColumnIsLocked.ReadOnly = true;
-            this.ColumnIsLocked.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnIsLocked.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColumnIsLocked.Width = 35;
-            // 
-            // ColumnIsTendered
-            // 
-            this.ColumnIsTendered.DataPropertyName = "ColumnIsTendered";
-            this.ColumnIsTendered.HeaderText = "T";
-            this.ColumnIsTendered.MinimumWidth = 6;
-            this.ColumnIsTendered.Name = "ColumnIsTendered";
-            this.ColumnIsTendered.ReadOnly = true;
-            this.ColumnIsTendered.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnIsTendered.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColumnIsTendered.Width = 35;
-            // 
-            // ColumnIsCancelled
-            // 
-            this.ColumnIsCancelled.DataPropertyName = "ColumnIsCancelled";
-            this.ColumnIsCancelled.HeaderText = "C";
-            this.ColumnIsCancelled.MinimumWidth = 6;
-            this.ColumnIsCancelled.Name = "ColumnIsCancelled";
-            this.ColumnIsCancelled.ReadOnly = true;
-            this.ColumnIsCancelled.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnIsCancelled.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColumnIsCancelled.Width = 35;
-            // 
-            // ColumnRemarks
-            // 
-            this.ColumnRemarks.DataPropertyName = "ColumnRemarks";
-            this.ColumnRemarks.HeaderText = "Remarks";
-            this.ColumnRemarks.MinimumWidth = 6;
-            this.ColumnRemarks.Name = "ColumnRemarks";
-            this.ColumnRemarks.ReadOnly = true;
-            this.ColumnRemarks.Width = 200;
-            // 
-            // ColumnTable
-            // 
-            this.ColumnTable.DataPropertyName = "ColumnTable";
-            this.ColumnTable.HeaderText = "Table";
-            this.ColumnTable.MinimumWidth = 6;
-            this.ColumnTable.Name = "ColumnTable";
-            this.ColumnTable.ReadOnly = true;
-            this.ColumnTable.Visible = false;
-            this.ColumnTable.Width = 125;
-            // 
-            // ColumnManualSalesNumber
-            // 
-            this.ColumnManualSalesNumber.DataPropertyName = "ColumnManualSalesNumber";
-            this.ColumnManualSalesNumber.HeaderText = "Manual Sales No.";
-            this.ColumnManualSalesNumber.MinimumWidth = 6;
-            this.ColumnManualSalesNumber.Name = "ColumnManualSalesNumber";
-            this.ColumnManualSalesNumber.ReadOnly = true;
-            this.ColumnManualSalesNumber.Visible = false;
-            this.ColumnManualSalesNumber.Width = 125;
-            // 
-            // ColumnDelivery
-            // 
-            this.ColumnDelivery.DataPropertyName = "ColumnDelivery";
-            this.ColumnDelivery.HeaderText = "Delivered By";
-            this.ColumnDelivery.MinimumWidth = 6;
-            this.ColumnDelivery.Name = "ColumnDelivery";
-            this.ColumnDelivery.ReadOnly = true;
-            this.ColumnDelivery.Visible = false;
-            this.ColumnDelivery.Width = 125;
-            // 
-            // ColumnSpace
-            // 
-            this.ColumnSpace.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnSpace.DataPropertyName = "ColumnSpace";
-            this.ColumnSpace.HeaderText = "";
-            this.ColumnSpace.MinimumWidth = 6;
-            this.ColumnSpace.Name = "ColumnSpace";
-            this.ColumnSpace.ReadOnly = true;
-            this.ColumnSpace.Width = 6;
             // 
             // panel2
             // 
@@ -789,10 +577,12 @@
             // buttonSalesListPageListFirst
             // 
             this.buttonSalesListPageListFirst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSalesListPageListFirst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonSalesListPageListFirst.Enabled = false;
             this.buttonSalesListPageListFirst.FlatAppearance.BorderSize = 0;
             this.buttonSalesListPageListFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalesListPageListFirst.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.buttonSalesListPageListFirst.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonSalesListPageListFirst.Location = new System.Drawing.Point(171, 11);
             this.buttonSalesListPageListFirst.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalesListPageListFirst.Name = "buttonSalesListPageListFirst";
@@ -805,10 +595,12 @@
             // buttonSalesListPageListPrevious
             // 
             this.buttonSalesListPageListPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSalesListPageListPrevious.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonSalesListPageListPrevious.Enabled = false;
             this.buttonSalesListPageListPrevious.FlatAppearance.BorderSize = 0;
             this.buttonSalesListPageListPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalesListPageListPrevious.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.buttonSalesListPageListPrevious.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonSalesListPageListPrevious.Location = new System.Drawing.Point(259, 11);
             this.buttonSalesListPageListPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalesListPageListPrevious.Name = "buttonSalesListPageListPrevious";
@@ -821,9 +613,11 @@
             // buttonSalesListPageListNext
             // 
             this.buttonSalesListPageListNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSalesListPageListNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonSalesListPageListNext.FlatAppearance.BorderSize = 0;
             this.buttonSalesListPageListNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalesListPageListNext.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.buttonSalesListPageListNext.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonSalesListPageListNext.Location = new System.Drawing.Point(421, 11);
             this.buttonSalesListPageListNext.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalesListPageListNext.Name = "buttonSalesListPageListNext";
@@ -836,9 +630,11 @@
             // buttonSalesListPageListLast
             // 
             this.buttonSalesListPageListLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSalesListPageListLast.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.buttonSalesListPageListLast.FlatAppearance.BorderSize = 0;
             this.buttonSalesListPageListLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalesListPageListLast.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.buttonSalesListPageListLast.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonSalesListPageListLast.Location = new System.Drawing.Point(506, 11);
             this.buttonSalesListPageListLast.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalesListPageListLast.Name = "buttonSalesListPageListLast";
@@ -851,9 +647,10 @@
             // textBoxPageNumber
             // 
             this.textBoxPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxPageNumber.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxPageNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.textBoxPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPageNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxPageNumber.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxPageNumber.Location = new System.Drawing.Point(188, 16);
             this.textBoxPageNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPageNumber.Name = "textBoxPageNumber";
@@ -966,18 +763,243 @@
             // 
             // textBox1
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(1044, 9);
+            this.textBox1.Location = new System.Drawing.Point(156, 9);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(324, 36);
+            this.textBox1.Size = new System.Drawing.Size(1212, 36);
             this.textBox1.TabIndex = 16;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // ColumnEdit
+            // 
+            this.ColumnEdit.DataPropertyName = "ColumnEdit";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))));
+            this.ColumnEdit.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ColumnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ColumnEdit.Frozen = true;
+            this.ColumnEdit.HeaderText = "";
+            this.ColumnEdit.MinimumWidth = 6;
+            this.ColumnEdit.Name = "ColumnEdit";
+            this.ColumnEdit.ReadOnly = true;
+            this.ColumnEdit.Width = 55;
+            // 
+            // ColumnDelete
+            // 
+            this.ColumnDelete.DataPropertyName = "ColumnDelete";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
+            this.ColumnDelete.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColumnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ColumnDelete.Frozen = true;
+            this.ColumnDelete.HeaderText = "";
+            this.ColumnDelete.MinimumWidth = 6;
+            this.ColumnDelete.Name = "ColumnDelete";
+            this.ColumnDelete.ReadOnly = true;
+            this.ColumnDelete.Width = 55;
+            // 
+            // ColumnId
+            // 
+            this.ColumnId.DataPropertyName = "ColumnId";
+            this.ColumnId.HeaderText = "Id";
+            this.ColumnId.MinimumWidth = 6;
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
+            this.ColumnId.Visible = false;
+            this.ColumnId.Width = 125;
+            // 
+            // ColumnTerminal
+            // 
+            this.ColumnTerminal.DataPropertyName = "ColumnTerminal";
+            this.ColumnTerminal.HeaderText = "Terminal";
+            this.ColumnTerminal.MinimumWidth = 6;
+            this.ColumnTerminal.Name = "ColumnTerminal";
+            this.ColumnTerminal.ReadOnly = true;
+            this.ColumnTerminal.Visible = false;
+            this.ColumnTerminal.Width = 70;
+            // 
+            // ColumnSalesDate
+            // 
+            this.ColumnSalesDate.DataPropertyName = "ColumnSalesDate";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnSalesDate.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ColumnSalesDate.HeaderText = "Order Date";
+            this.ColumnSalesDate.MinimumWidth = 6;
+            this.ColumnSalesDate.Name = "ColumnSalesDate";
+            this.ColumnSalesDate.ReadOnly = true;
+            this.ColumnSalesDate.Visible = false;
+            this.ColumnSalesDate.Width = 95;
+            // 
+            // ColumnSalesNumber
+            // 
+            this.ColumnSalesNumber.DataPropertyName = "ColumnSalesNumber";
+            this.ColumnSalesNumber.HeaderText = "Order No.";
+            this.ColumnSalesNumber.MinimumWidth = 6;
+            this.ColumnSalesNumber.Name = "ColumnSalesNumber";
+            this.ColumnSalesNumber.ReadOnly = true;
+            this.ColumnSalesNumber.Width = 90;
+            // 
+            // ColumnRececiptInvoiceNumber
+            // 
+            this.ColumnRececiptInvoiceNumber.DataPropertyName = "ColumnRececiptInvoiceNumber";
+            this.ColumnRececiptInvoiceNumber.HeaderText = "Receipt / Invoice No.";
+            this.ColumnRececiptInvoiceNumber.MinimumWidth = 6;
+            this.ColumnRececiptInvoiceNumber.Name = "ColumnRececiptInvoiceNumber";
+            this.ColumnRececiptInvoiceNumber.ReadOnly = true;
+            this.ColumnRececiptInvoiceNumber.Width = 90;
+            // 
+            // ColumnCustomerCode
+            // 
+            this.ColumnCustomerCode.DataPropertyName = "ColumnCustomerCode";
+            this.ColumnCustomerCode.HeaderText = "Customer Code";
+            this.ColumnCustomerCode.MinimumWidth = 6;
+            this.ColumnCustomerCode.Name = "ColumnCustomerCode";
+            this.ColumnCustomerCode.ReadOnly = true;
+            this.ColumnCustomerCode.Width = 90;
+            // 
+            // ColumnCustomer
+            // 
+            this.ColumnCustomer.DataPropertyName = "ColumnCustomer";
+            this.ColumnCustomer.HeaderText = "Customer";
+            this.ColumnCustomer.MinimumWidth = 6;
+            this.ColumnCustomer.Name = "ColumnCustomer";
+            this.ColumnCustomer.ReadOnly = true;
+            this.ColumnCustomer.Width = 130;
+            // 
+            // ColumnSalesAgent
+            // 
+            this.ColumnSalesAgent.DataPropertyName = "ColumnSalesAgent";
+            this.ColumnSalesAgent.HeaderText = "Order Taker";
+            this.ColumnSalesAgent.MinimumWidth = 6;
+            this.ColumnSalesAgent.Name = "ColumnSalesAgent";
+            this.ColumnSalesAgent.ReadOnly = true;
+            this.ColumnSalesAgent.Width = 120;
+            // 
+            // ColumnCashier
+            // 
+            this.ColumnCashier.DataPropertyName = "ColumnCashier";
+            this.ColumnCashier.HeaderText = "Cashier";
+            this.ColumnCashier.MinimumWidth = 6;
+            this.ColumnCashier.Name = "ColumnCashier";
+            this.ColumnCashier.ReadOnly = true;
+            this.ColumnCashier.Width = 125;
+            // 
+            // ColumnAmount
+            // 
+            this.ColumnAmount.DataPropertyName = "ColumnAmount";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.NullValue = null;
+            this.ColumnAmount.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ColumnAmount.HeaderText = "Amount";
+            this.ColumnAmount.MinimumWidth = 6;
+            this.ColumnAmount.Name = "ColumnAmount";
+            this.ColumnAmount.ReadOnly = true;
+            this.ColumnAmount.Width = 120;
+            // 
+            // ColumnTenderedAmount
+            // 
+            this.ColumnTenderedAmount.DataPropertyName = "ColumnTenderedAmount";
+            this.ColumnTenderedAmount.HeaderText = "Tendered Amount";
+            this.ColumnTenderedAmount.MinimumWidth = 6;
+            this.ColumnTenderedAmount.Name = "ColumnTenderedAmount";
+            this.ColumnTenderedAmount.ReadOnly = true;
+            this.ColumnTenderedAmount.Visible = false;
+            this.ColumnTenderedAmount.Width = 125;
+            // 
+            // ColumnIsLocked
+            // 
+            this.ColumnIsLocked.DataPropertyName = "ColumnIsLocked";
+            this.ColumnIsLocked.HeaderText = "L";
+            this.ColumnIsLocked.MinimumWidth = 6;
+            this.ColumnIsLocked.Name = "ColumnIsLocked";
+            this.ColumnIsLocked.ReadOnly = true;
+            this.ColumnIsLocked.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnIsLocked.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColumnIsLocked.Width = 35;
+            // 
+            // ColumnIsTendered
+            // 
+            this.ColumnIsTendered.DataPropertyName = "ColumnIsTendered";
+            this.ColumnIsTendered.HeaderText = "T";
+            this.ColumnIsTendered.MinimumWidth = 6;
+            this.ColumnIsTendered.Name = "ColumnIsTendered";
+            this.ColumnIsTendered.ReadOnly = true;
+            this.ColumnIsTendered.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnIsTendered.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColumnIsTendered.Width = 35;
+            // 
+            // ColumnIsCancelled
+            // 
+            this.ColumnIsCancelled.DataPropertyName = "ColumnIsCancelled";
+            this.ColumnIsCancelled.HeaderText = "C";
+            this.ColumnIsCancelled.MinimumWidth = 6;
+            this.ColumnIsCancelled.Name = "ColumnIsCancelled";
+            this.ColumnIsCancelled.ReadOnly = true;
+            this.ColumnIsCancelled.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnIsCancelled.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColumnIsCancelled.Width = 35;
+            // 
+            // ColumnRemarks
+            // 
+            this.ColumnRemarks.DataPropertyName = "ColumnRemarks";
+            this.ColumnRemarks.HeaderText = "Remarks";
+            this.ColumnRemarks.MinimumWidth = 6;
+            this.ColumnRemarks.Name = "ColumnRemarks";
+            this.ColumnRemarks.ReadOnly = true;
+            this.ColumnRemarks.Width = 200;
+            // 
+            // ColumnTable
+            // 
+            this.ColumnTable.DataPropertyName = "ColumnTable";
+            this.ColumnTable.HeaderText = "Table";
+            this.ColumnTable.MinimumWidth = 6;
+            this.ColumnTable.Name = "ColumnTable";
+            this.ColumnTable.ReadOnly = true;
+            this.ColumnTable.Visible = false;
+            this.ColumnTable.Width = 125;
+            // 
+            // ColumnManualSalesNumber
+            // 
+            this.ColumnManualSalesNumber.DataPropertyName = "ColumnManualSalesNumber";
+            this.ColumnManualSalesNumber.HeaderText = "Manual Sales No.";
+            this.ColumnManualSalesNumber.MinimumWidth = 6;
+            this.ColumnManualSalesNumber.Name = "ColumnManualSalesNumber";
+            this.ColumnManualSalesNumber.ReadOnly = true;
+            this.ColumnManualSalesNumber.Visible = false;
+            this.ColumnManualSalesNumber.Width = 125;
+            // 
+            // ColumnDelivery
+            // 
+            this.ColumnDelivery.DataPropertyName = "ColumnDelivery";
+            this.ColumnDelivery.HeaderText = "Delivered By";
+            this.ColumnDelivery.MinimumWidth = 6;
+            this.ColumnDelivery.Name = "ColumnDelivery";
+            this.ColumnDelivery.ReadOnly = true;
+            this.ColumnDelivery.Visible = false;
+            this.ColumnDelivery.Width = 125;
+            // 
+            // ColumnSpace
+            // 
+            this.ColumnSpace.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnSpace.DataPropertyName = "ColumnSpace";
+            this.ColumnSpace.HeaderText = "";
+            this.ColumnSpace.MinimumWidth = 6;
+            this.ColumnSpace.Name = "ColumnSpace";
+            this.ColumnSpace.ReadOnly = true;
+            this.ColumnSpace.Width = 6;
             // 
             // TrnPOSBarcodeForm
             // 
@@ -1065,6 +1087,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSalesAgent;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCashier;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTenderedAmount;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnIsLocked;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnIsTendered;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnIsCancelled;

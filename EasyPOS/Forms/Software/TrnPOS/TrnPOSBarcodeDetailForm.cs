@@ -451,7 +451,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     CustomerId = trnSalesEntity.CustomerId,
                     CustomerCode = trnSalesEntity.CustomerCode,
                     Customer = trnSalesEntity.Customer,
-                    Remarks = trnSalesEntity.Remarks
+                    Remarks = trnSalesEntity.Remarks,
+                    SalesAgent = trnSalesEntity.SalesAgent
                 };
                 if (Modules.SysCurrentModule.GetCurrentSettings().RestrictCashin == true)
                 {
@@ -491,6 +492,15 @@ namespace EasyPOS.Forms.Software.TrnPOS
         {
             Decimal totalSalesAmount = 0;
 
+            if (Modules.SysCurrentModule.GetCurrentSettings().BodegaTransaction == false)
+            {
+                dataGridViewSalesLineList.Columns[7].Visible = false;
+            }
+            else
+            {
+                dataGridViewSalesLineList.Columns[7].Visible = true;
+            }
+
             dataGridViewSalesLineList.Rows.Clear();
             dataGridViewSalesLineList.Refresh();
 
@@ -519,6 +529,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                         objSalesLineList.ItemId,
                         objSalesLineList.ItemDescription,
                         objSalesLineList.Quantity.ToString("#,##0.00"),
+                        objSalesLineList.BodegaItemQty.ToString("#,##0.00"),
                         objSalesLineList.UnitId,
                         objSalesLineList.Unit,
                         objSalesLineList.Price.ToString("#,##0.00"),
@@ -542,8 +553,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                         objSalesLineList.Price1.ToString("#,##0.00"),
                         objSalesLineList.Price2.ToString("#,##0.00"),
                         objSalesLineList.Price2LessTax.ToString("#,##0.00"),
-                        objSalesLineList.PriceSplitPercentage.ToString("#,##0.00"),
-                        objSalesLineList.BodegaItemQty.ToString("#,##0.00")
+                        objSalesLineList.PriceSplitPercentage.ToString("#,##0.00")
                     );
                 }
             }
@@ -905,11 +915,6 @@ namespace EasyPOS.Forms.Software.TrnPOS
             {
                 TrnPOSLockSalesForm trnPOSLockSalesForm = new TrnPOSLockSalesForm(this, null, trnSalesEntity);
                 trnPOSLockSalesForm.ShowDialog();
-
-                if (Modules.SysCurrentModule.GetCurrentSettings().DisableLockTender == true)
-                {
-                    buttonTender.Enabled = false;
-                }
             }
             else
             {
@@ -925,11 +930,10 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 {
                     trnSalesListForm.buttonAutoSales();
                 }
-
-                if (Modules.SysCurrentModule.GetCurrentSettings().DisableLockTender == true)
-                {
-                    buttonTender.Enabled = false;
-                }
+            }
+            if (Modules.SysCurrentModule.GetCurrentSettings().DisableLockTender == true)
+            {
+                buttonTender.Enabled = false;
             }
 
         }
@@ -1212,6 +1216,12 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     trnSalesDetailSalesItemDetailForm.ShowDialog();
                 }
             }
+        }
+
+        private void buttonOpenCashDrawer_Click(object sender, EventArgs e)
+        {
+            Account.SysLogin.SysLoginOpenDrawerForm login = new Account.SysLogin.SysLoginOpenDrawerForm();
+            login.ShowDialog();
         }
     }
 }

@@ -80,5 +80,9 @@ namespace EasyPOS.Entities
         public String CustomerCode { get; set; }
         public String LogoFilePath { get; set; }
         public Boolean BodegaTransaction { get; set; }
+        public Boolean ChangeComputationOnLock { get; set; }
+        public Boolean EnablePOSTouchPrintDeletedItem { get; set; }
+        public Boolean DisableSalesDate { get; set; }
+        public Boolean EnableSelectOrderTaker { get; set; }
     }
 }

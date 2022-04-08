@@ -100,6 +100,15 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
             dateTimePickerSalesDate.Value = Convert.ToDateTime(currentDate);
 
+            if (Modules.SysCurrentModule.GetCurrentSettings().DisableSalesDate == true)
+            {
+                dateTimePickerSalesDate.Enabled = false;
+            }
+            else
+            {
+                dateTimePickerSalesDate.Enabled = true;
+            }
+
             sysUserRights = new Modules.SysUserRightsModule("TrnSales");
             if (sysUserRights.GetUserRights() == null)
             {
@@ -154,6 +163,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
             Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
             textBoxLastChange.Text = trnPOSSalesController.GetLastChange(Convert.ToInt32(Modules.SysCurrentModule.GetCurrentSettings().TerminalId)).ToString("#,##0.00");
+            labelTerminal.Text = dataGridViewSalesList.Columns["ColumnTerminal"].ToString();
         }
 
         public string SetLabel(string label)
@@ -403,7 +413,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
                                   ColumnSpace = "",
                                   ColumnTable = d.Table,
                                   ColumnManualSalesNumber = d.ManualInvoiceNumber,
-                                  ColumnDelivery = d.DeliveryDriver
+                                  ColumnDelivery = d.DeliveryDriver,
+                                  ColumnTenderedAmount = d.CollectedAmount.ToString("#,##0.00")
                               };
 
                     rowList = row.ToList();
@@ -506,6 +517,19 @@ namespace EasyPOS.Forms.Software.TrnPOS
                             }
                         }
                     }
+                }
+            }
+            if (Modules.SysCurrentModule.GetCurrentSettings().DisableLockTender == true)
+            {
+                Boolean isLocked = Convert.ToBoolean(dataGridViewSalesList.Rows[dataGridViewSalesList.CurrentCell.RowIndex].Cells[dataGridViewSalesList.Columns["ColumnIsLocked"].Index].Value);
+                Boolean isTendered = Convert.ToBoolean(dataGridViewSalesList.Rows[dataGridViewSalesList.CurrentCell.RowIndex].Cells[dataGridViewSalesList.Columns["ColumnIsTendered"].Index].Value);
+                if (isLocked == true && isTendered == false)
+                {
+                    buttonTender.Enabled = false;
+                }
+                else
+                {
+                    buttonTender.Enabled = true;
                 }
             }
         }

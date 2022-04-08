@@ -554,6 +554,10 @@ namespace EasyPOS.Forms.Software.SysSettings
                 textBoxCustomerCode.Text = sysCurrent.CustomerCode;
                 textBoxLogoFilePath.Text = sysCurrent.LogoFilePath;
                 checkBoxBodega.Checked = Convert.ToBoolean(sysCurrent.BodegaTransaction);
+                checkBoxChangeComputeOnLock.Checked = Convert.ToBoolean(sysCurrent.ChangeComputationOnLock);
+                checkBoxPrintDeletedItem.Checked = Convert.ToBoolean(sysCurrent.EnablePOSTouchPrintDeletedItem);
+                checkBoxDisableSalesDate.Checked = Convert.ToBoolean(sysCurrent.DisableSalesDate);
+                checkBoxEnableSelectOrderTaker.Checked = Convert.ToBoolean(sysCurrent.EnableSelectOrderTaker);
             }
         }
 
@@ -644,7 +648,11 @@ namespace EasyPOS.Forms.Software.SysSettings
                 XMLFilePath = textBoxXMLFilePath.Text,
                 CustomerCode = textBoxCustomerCode.Text,
                 LogoFilePath = textBoxLogoFilePath.Text,
-                BodegaTransaction = checkBoxBodega.Checked
+                BodegaTransaction = checkBoxBodega.Checked,
+                ChangeComputationOnLock = checkBoxChangeComputeOnLock.Checked,
+                EnablePOSTouchPrintDeletedItem = checkBoxPrintDeletedItem.Checked,
+                DisableSalesDate = checkBoxDisableSalesDate.Checked,
+                EnableSelectOrderTaker = checkBoxEnableSelectOrderTaker.Checked
 
             };
 
@@ -717,6 +725,10 @@ namespace EasyPOS.Forms.Software.SysSettings
                 textBoxCustomerCode.Enabled = false;
                 textBoxLogoFilePath.Enabled = false;
                 checkBoxBodega.Enabled = false;
+                checkBoxChangeComputeOnLock.Enabled = false;
+                checkBoxPrintDeletedItem.Enabled = false;
+                checkBoxDisableSalesDate.Enabled = false;
+                checkBoxEnableSelectOrderTaker.Enabled = false;
             }
             else
             {
@@ -813,6 +825,10 @@ namespace EasyPOS.Forms.Software.SysSettings
                 textBoxCustomerCode.Enabled = true;
                 textBoxLogoFilePath.Enabled = true;
                 checkBoxBodega.Enabled = true;
+                checkBoxChangeComputeOnLock.Enabled = true;
+                checkBoxPrintDeletedItem.Enabled = true;
+                checkBoxDisableSalesDate.Enabled = true;
+                checkBoxEnableSelectOrderTaker.Enabled = true;
             }
         }
 
@@ -1055,6 +1071,18 @@ namespace EasyPOS.Forms.Software.SysSettings
             if (e.KeyCode == Keys.Enter)
             {
                 UpdateKitchenDataSource();
+            }
+        }
+
+        private void checkBoxIsLoginDate_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxIsLoginDate.Checked == true)
+            {
+                dateTimePickerLoginDate.Enabled = true;
+            }
+            else
+            {
+                dateTimePickerLoginDate.Enabled = false;
             }
         }
     }
