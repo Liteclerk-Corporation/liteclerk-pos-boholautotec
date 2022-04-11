@@ -1,7 +1,7 @@
 ﻿
-namespace EasyPOS.Forms.Software.TrnPOS
+namespace EasyPOS.Forms.Software.RepSalesReport
 {
-    partial class TrnPOSTouchDeletedItemsForm
+    partial class RepDeletedItemReportPDFForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,29 +29,22 @@ namespace EasyPOS.Forms.Software.TrnPOS
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrnPOSTouchDeletedItemsForm));
-            this.printDocumentDeletedItems = new System.Drawing.Printing.PrintDocument();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RepDeletedItemReportPDFForm));
             this.SuspendLayout();
             // 
-            // printDocumentDeletedItems
-            // 
-            this.printDocumentDeletedItems.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocumentDeletedItems_PrintPage);
-            // 
-            // TrnPOSTouchDeletedItemsForm
+            // RepDeletedItemReportPDFForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 94);
+            this.ClientSize = new System.Drawing.Size(535, 338);
             this.ControlBox = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "TrnPOSTouchDeletedItemsForm";
-            this.Text = "Deleted Items";
+            this.Name = "RepDeletedItemReportPDFForm";
+            this.Text = "Deleted Item Report PDF Form";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Drawing.Printing.PrintDocument printDocumentDeletedItems;
     }
 }

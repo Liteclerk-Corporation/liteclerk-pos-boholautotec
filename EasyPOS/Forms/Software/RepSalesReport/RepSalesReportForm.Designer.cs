@@ -265,7 +265,7 @@
             this.panel2.Location = new System.Drawing.Point(12, 6);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(380, 619);
+            this.panel2.Size = new System.Drawing.Size(380, 630);
             this.panel2.TabIndex = 22;
             // 
             // listBoxSalesReport
@@ -305,11 +305,13 @@
             "Unsold Item Report",
             "Cost Of Sales Report",
             "",
-            "Accounts Receivable"});
+            "Accounts Receivable",
+            "",
+            "POS Touch Deleted Items"});
             this.listBoxSalesReport.Location = new System.Drawing.Point(0, 0);
             this.listBoxSalesReport.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxSalesReport.Name = "listBoxSalesReport";
-            this.listBoxSalesReport.Size = new System.Drawing.Size(380, 619);
+            this.listBoxSalesReport.Size = new System.Drawing.Size(380, 630);
             this.listBoxSalesReport.TabIndex = 4;
             this.listBoxSalesReport.SelectedIndexChanged += new System.EventHandler(this.listBoxSalesReport_SelectedIndexChanged);
             // 

@@ -842,6 +842,36 @@ namespace EasyPOS.Forms.Software.RepSalesReport
 
                         break;
 
+                    case "POS Touch Deleted Items":
+                        labelStartDate.Visible = true;
+                        dateTimePickerStartDate.Visible = true;
+
+                        labelEndDate.Visible = true;
+                        dateTimePickerEndDate.Visible = true;
+
+                        labelTerminal.Visible = false;
+                        comboBoxTerminal.Visible = false;
+
+                        labelCustomer.Visible = false;
+                        comboBoxCustomer.Visible = false;
+
+                        labelAgent.Visible = false;
+                        comboBoxSalesAgent.Visible = false;
+
+                        labelSupplier.Visible = false;
+                        comboBoxSupplier.Visible = false;
+
+                        labelItem.Visible = false;
+                        comboBoxItemFilter.Visible = false;
+
+                        labelDateAsOf.Visible = false;
+                        dateTimePickerDateAsOf.Visible = false;
+
+                        dateTimePickerStartDate.Focus();
+                        buttonView.Text = SetLabel("Print");
+
+                        break;
+
                     default:
                         labelStartDate.Visible = false;
                         dateTimePickerStartDate.Visible = false;
@@ -1354,6 +1384,26 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                             }
                             break;
 
+                        case "POS Touch Deleted Items":
+                            sysUserRights = new Modules.SysUserRightsModule("RepSalesDetail");
+
+                            if (sysUserRights.GetUserRights() == null)
+                            {
+                                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                if (sysUserRights.GetUserRights().CanView == true)
+                                {
+                                    RepDeletedItemReportForm repDeletedItemReportForm = new RepDeletedItemReportForm(dateTimePickerStartDate.Value.Date, dateTimePickerEndDate.Value.Date);
+                                    repDeletedItemReportForm.ShowDialog();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                            }
+                            break;
 
                         default:
                             MessageBox.Show("Please select a report.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);

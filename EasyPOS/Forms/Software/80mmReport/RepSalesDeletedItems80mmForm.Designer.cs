@@ -1,7 +1,7 @@
 ﻿
 namespace EasyPOS.Forms.Software._80mmReport
 {
-    partial class RepSalesStatusReport80mmForm
+    partial class RepSalesDeletedItems80mmForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,28 +29,26 @@ namespace EasyPOS.Forms.Software._80mmReport
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RepSalesStatusReport80mmForm));
-            this.printDocument80mm = new System.Drawing.Printing.PrintDocument();
-            this.printDialogSalesStatusReport = new System.Windows.Forms.PrintDialog();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RepSalesDeletedItems80mmForm));
+            this.printDialogDeletedItem = new System.Windows.Forms.PrintDialog();
+            this.printDocumentDeletedItem = new System.Drawing.Printing.PrintDocument();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonPrint = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.printPreviewControl80mmSalesStatusReport = new System.Windows.Forms.PrintPreviewControl();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.printPreviewControl80mmDeletedItemReport = new System.Windows.Forms.PrintPreviewControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // printDocument80mm
+            // printDialogDeletedItem
             // 
-            this.printDocument80mm.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument80mm_PrintPage);
+            this.printDialogDeletedItem.UseEXDialog = true;
             // 
-            // printDialogSalesStatusReport
+            // printDocumentDeletedItem
             // 
-            this.printDialogSalesStatusReport.UseEXDialog = true;
+            this.printDocumentDeletedItem.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocumentDeletedItem_PrintPage);
             // 
             // panel1
             // 
@@ -63,8 +61,8 @@ namespace EasyPOS.Forms.Software._80mmReport
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(687, 62);
-            this.panel1.TabIndex = 10;
+            this.panel1.Size = new System.Drawing.Size(664, 62);
+            this.panel1.TabIndex = 12;
             // 
             // buttonPrint
             // 
@@ -77,7 +75,7 @@ namespace EasyPOS.Forms.Software._80mmReport
             this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrint.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint.ForeColor = System.Drawing.Color.White;
-            this.buttonPrint.Location = new System.Drawing.Point(480, 12);
+            this.buttonPrint.Location = new System.Drawing.Point(457, 12);
             this.buttonPrint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(93, 39);
@@ -109,7 +107,7 @@ namespace EasyPOS.Forms.Software._80mmReport
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(580, 12);
+            this.buttonClose.Location = new System.Drawing.Point(557, 12);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(93, 39);
@@ -125,62 +123,49 @@ namespace EasyPOS.Forms.Software._80mmReport
             this.label1.Location = new System.Drawing.Point(67, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(322, 35);
+            this.label1.Size = new System.Drawing.Size(338, 35);
             this.label1.TabIndex = 2;
-            this.label1.Text = "80mm Sales Status Report";
+            this.label1.Text = "80mm Deleted Item Report";
             // 
-            // printPreviewControl80mmSalesStatusReport
+            // printPreviewControl80mmDeletedItemReport
             // 
-            this.printPreviewControl80mmSalesStatusReport.AutoZoom = false;
-            this.printPreviewControl80mmSalesStatusReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.printPreviewControl80mmSalesStatusReport.Document = this.printDocument80mm;
-            this.printPreviewControl80mmSalesStatusReport.Location = new System.Drawing.Point(0, 0);
-            this.printPreviewControl80mmSalesStatusReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.printPreviewControl80mmSalesStatusReport.Name = "printPreviewControl80mmSalesStatusReport";
-            this.printPreviewControl80mmSalesStatusReport.Size = new System.Drawing.Size(708, 644);
-            this.printPreviewControl80mmSalesStatusReport.TabIndex = 0;
-            this.printPreviewControl80mmSalesStatusReport.Zoom = 1.5D;
+            this.printPreviewControl80mmDeletedItemReport.AutoZoom = false;
+            this.printPreviewControl80mmDeletedItemReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.printPreviewControl80mmDeletedItemReport.Document = this.printDocumentDeletedItem;
+            this.printPreviewControl80mmDeletedItemReport.Location = new System.Drawing.Point(0, 62);
+            this.printPreviewControl80mmDeletedItemReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.printPreviewControl80mmDeletedItemReport.Name = "printPreviewControl80mmDeletedItemReport";
+            this.printPreviewControl80mmDeletedItemReport.Size = new System.Drawing.Size(664, 654);
+            this.printPreviewControl80mmDeletedItemReport.TabIndex = 13;
+            this.printPreviewControl80mmDeletedItemReport.Zoom = 1.5D;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.printPreviewControl80mmSalesStatusReport);
-            this.panel2.Location = new System.Drawing.Point(0, 66);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(708, 644);
-            this.panel2.TabIndex = 12;
-            // 
-            // RepSalesStatusReport80mmForm
+            // RepSalesDeletedItems80mmForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 596);
+            this.ClientSize = new System.Drawing.Size(664, 716);
             this.ControlBox = false;
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.printPreviewControl80mmDeletedItemReport);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "RepSalesStatusReport80mmForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "80mm Sales Status Report";
+            this.Name = "RepSalesDeletedItems80mmForm";
+            this.Text = "80mm Deleted Item Form";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Drawing.Printing.PrintDocument printDocument80mm;
-        private System.Windows.Forms.PrintDialog printDialogSalesStatusReport;
+        private System.Windows.Forms.PrintDialog printDialogDeletedItem;
+        private System.Drawing.Printing.PrintDocument printDocumentDeletedItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonPrint;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PrintPreviewControl printPreviewControl80mmSalesStatusReport;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PrintPreviewControl printPreviewControl80mmDeletedItemReport;
     }
 }
