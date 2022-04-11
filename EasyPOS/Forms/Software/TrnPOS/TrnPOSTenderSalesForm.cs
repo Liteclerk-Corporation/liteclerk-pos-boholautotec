@@ -167,6 +167,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
             {
                 if (trnSalesDetailTenderForm != null)
                 {
+                    trnPOSBarcodeDetailForm.trnSalesEntity.CustomerId = newSalesEntity.CustomerId;
+                    trnPOSBarcodeDetailForm.trnSalesEntity.TermId = newSalesEntity.TermId;
                     trnSalesDetailTenderForm.trnSalesEntity.CustomerCode = customerCode;
                     trnSalesDetailTenderForm.trnSalesEntity.Customer = customerName;
                     trnSalesDetailTenderForm.trnSalesEntity.Remarks = newSalesEntity.Remarks;
@@ -175,6 +177,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                 if (trnPOSBarcodeDetailForm != null)
                 {
+                    trnPOSBarcodeDetailForm.trnSalesEntity.CustomerId = newSalesEntity.CustomerId;
+                    trnPOSBarcodeDetailForm.trnSalesEntity.TermId = newSalesEntity.TermId;
                     trnPOSBarcodeDetailForm.trnSalesEntity.CustomerCode = customerCode;
                     trnPOSBarcodeDetailForm.trnSalesEntity.Customer = customerName;
                     trnPOSBarcodeDetailForm.trnSalesEntity.Remarks = newSalesEntity.Remarks;

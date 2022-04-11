@@ -35,13 +35,14 @@ namespace EasyPOS.Forms.Software.TrnPOS
         private int itemGroupItemPage = 1;
         Button[] itemGroupItemButtons;
 
+        // ============
+        // Data Context
+        // ============
+        public Data.easyposdbDataContext db = new Data.easyposdbDataContext(Modules.SysConnectionStringModule.GetConnectionString());
+
         public TrnPOSTouchDetailForm(SysSoftwareForm softwareForm, TrnPOSTouchForm POSTouchForm, Entities.TrnSalesEntity salesEntity)
         {
             InitializeComponent();
-
-            //var logoFilePath = Modules.SysCurrentModule.GetCurrentSettings().LogoFilePath;
-            //pictureBoxPOSTouchDetail.Image = Image.FromFile(@"" + logoFilePath);
-            //pictureBoxPOSTouchDetail.SizeMode = PictureBoxSizeMode.StretchImage;
 
             sysSoftwareForm = softwareForm;
             trnPOSTouchForm = POSTouchForm;
@@ -50,7 +51,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             sysUserRights = new Modules.SysUserRightsModule("TrnSalesDetail");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -58,7 +59,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 {
                     if (trnSalesEntity.IsLocked == true)
                     {
-                        buttonLock.Enabled = false;
+                       buttonLock.Enabled = false;
                     }
                     else
                     {
@@ -147,23 +148,17 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 {
                     if (trnSalesEntity.IsLocked == true)
                     {
-                        //buttonBarcode.Enabled = false;
-                        //textBoxBarcode.Enabled = false;
                         buttonSearchItem.Enabled = false;
                         buttonDownload.Enabled = false;
                     }
                     else
                     {
-                        //buttonBarcode.Enabled = true;
-                        //textBoxBarcode.Enabled = true;
                         buttonSearchItem.Enabled = true;
                         buttonDownload.Enabled = true;
                     }
                 }
                 else
                 {
-                    //buttonBarcode.Enabled = false;
-                    //textBoxBarcode.Enabled = false;
                     buttonSearchItem.Enabled = false;
                     buttonDownload.Enabled = false;
                 }
@@ -199,10 +194,19 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 {
                     dataGridViewSalesLineList.Columns[1].Visible = false;
                 }
-
-                GetSalesDetail();
-                GetSalesLineList();
             }
+
+            if (trnSalesEntity.IsLocked == true && trnSalesEntity.IsTendered == true)
+            {
+                buttonUnlock.Enabled = false;
+                buttonTender.Enabled = false;
+                buttonOverRide.Enabled = false;
+                panelItems.Visible = false;
+            }
+
+            GetSalesDetail();
+            GetSalesLineList();
+
             var id = trnSalesEntity.Id;
 
             Controllers.TrnSalesController newSales = new Controllers.TrnSalesController();
@@ -263,7 +267,6 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     itemGroupItemButtons[i].Enabled = true;
                 }
             }
-
             FillItemGroup();
         }
 
@@ -466,7 +469,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     CustomerId = trnSalesEntity.CustomerId,
                     CustomerCode = trnSalesEntity.CustomerCode,
                     Customer = trnSalesEntity.Customer,
-                    Remarks = trnSalesEntity.Remarks
+                    Remarks = trnSalesEntity.Remarks,
+                    SalesAgent = trnSalesEntity.SalesAgent
                 };
 
                 TrnPOSTenderForm trnSalesDetailTenderForm = new TrnPOSTenderForm(sysSoftwareForm, null, null, trnPOSTouchForm, this, newSalesEntity);
@@ -583,6 +587,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
         private void buttonClose_Click(object sender, EventArgs e)
         {
             Close();
+            trnPOSTouchForm.UpdateSalesListGridDataSource();
             sysSoftwareForm.RemoveTabPage();
         }
 
@@ -813,8 +818,73 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 DialogResult deleteDialogResult = MessageBox.Show("Delete Sales?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (deleteDialogResult == DialogResult.Yes)
                 {
-                    Controllers.TrnSalesLineController trnPOSSalesLineController = new Controllers.TrnSalesLineController();
+                    var isPrintedOrder = from d in db.TrnSalesLines
+                                         where d.Id == Convert.ToInt32(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[2].Value)
+                                         && d.IsPrinted == true
+                                         select d;
 
+                    if (isPrintedOrder.Any())
+                    {
+                        Int32 Id = Convert.ToInt32(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[2].Value);
+                        Int32 SalesId = Convert.ToInt32(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[3].Value);
+                        Int32 ItemId = Convert.ToInt32(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[4].Value);
+                        String ItemDescription = dataGridViewSalesLineList.Rows[e.RowIndex].Cells[5].Value.ToString();
+                        Decimal Quantity = Convert.ToDecimal(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[6].Value);
+                        Int32 UnitId = Convert.ToInt32(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[7].Value);
+                        String Unit = dataGridViewSalesLineList.Rows[e.RowIndex].Cells[8].Value.ToString();
+                        Decimal Price = Convert.ToDecimal(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[9].Value);
+                        Int32 DiscountId = Convert.ToInt32(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[10].Value);
+                        String Discount = dataGridViewSalesLineList.Rows[e.RowIndex].Cells[11].Value.ToString(); ;
+                        Decimal DiscountRate = Convert.ToDecimal(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[12].Value);
+                        Decimal DiscountAmount = Convert.ToDecimal(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[13].Value);
+                        Decimal NetPrice = Convert.ToDecimal(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[14].Value);
+                        Decimal Amount = Convert.ToDecimal(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[15].Value);
+                        Int32 TaxId = Convert.ToInt32(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[16].Value);
+                        String Tax = dataGridViewSalesLineList.Rows[e.RowIndex].Cells[17].Value.ToString();
+                        Decimal TaxRate = Convert.ToDecimal(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[18].Value);
+                        Decimal TaxAmount = Convert.ToDecimal(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[19].Value);
+                        Int32 UserId = Convert.ToInt32(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[25].Value);
+
+
+                        Entities.TrnSalesLineEntity trnSalesLineEntity = new Entities.TrnSalesLineEntity()
+                        {
+                            Id = Id,
+                            SalesId = SalesId,
+                            ItemId = ItemId,
+                            ItemDescription = ItemDescription,
+                            UnitId = UnitId,
+                            Unit = Unit,
+                            Price = Price,
+                            DiscountId = DiscountId,
+                            Discount = Discount,
+                            DiscountRate = DiscountRate,
+                            DiscountAmount = DiscountAmount,
+                            NetPrice = NetPrice,
+                            Quantity = Quantity,
+                            Amount = Amount,
+                            TaxId = TaxId,
+                            Tax = Tax,
+                            TaxRate = TaxRate,
+                            TaxAmount = TaxAmount,
+                            UserId = UserId,
+                        };
+
+                        if (Modules.SysCurrentModule.GetCurrentSettings().EnablePOSTouchPrintDeletedItem == true)
+                        {
+                            Controllers.TrnSalesLineDeletedController trnPOSSalesLineDeletedController = new Controllers.TrnSalesLineDeletedController();
+
+                            trnPOSSalesLineDeletedController.AddDeletedSalesLine(trnSalesLineEntity);
+
+                            if (Modules.SysCurrentModule.GetCurrentSettings().SalesOrderPrinterType == "Kitchen Printer")
+                            {
+                                new TrnPOSTouchDeletedItemsForm("");
+                            }
+
+                            trnPOSSalesLineDeletedController.IsPrinted(trnSalesLineEntity.Id);
+                        }
+                    }
+
+                    Controllers.TrnSalesLineController trnPOSSalesLineController = new Controllers.TrnSalesLineController();
                     String[] deleteSalesLine = trnPOSSalesLineController.DeleteSalesLine(Convert.ToInt32(dataGridViewSalesLineList.Rows[e.RowIndex].Cells[2].Value));
                     if (deleteSalesLine[1].Equals("0") == false)
                     {
@@ -822,7 +892,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     }
                     else
                     {
-                        MessageBox.Show(deleteSalesLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(deleteSalesLine[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -853,7 +923,10 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
         private void buttonLock_Click(object sender, EventArgs e)
         {
-            TrnPOSLockSalesForm trnPOSLockSalesForm = new TrnPOSLockSalesForm(null, this, trnSalesEntity);
+            Controllers.TrnSalesController newSales = new Controllers.TrnSalesController();
+            var detail = newSales.DetailSales(trnSalesEntity.Id);
+
+            TrnPOSLockSalesForm trnPOSLockSalesForm = new TrnPOSLockSalesForm(null, this, detail);
             trnPOSLockSalesForm.ShowDialog();
         }
 

@@ -57,28 +57,22 @@ namespace EasyPOS.Forms.Software.TrnPOS
             dateTimePickerSalesDate.Value = Convert.ToDateTime(currentDate);
 
             sysUserRights = new Modules.SysUserRightsModule("TrnRestaurant");
-            if (sysUserRights.GetUserRights() == null)
+
+            if (sysUserRights.GetUserRights().CanAdd == false)
             {
-                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                buttonWalkIn.Enabled = false;
+            }
+
+            GetTerminalList();
+
+            sysSoftwareForm = softwareForm;
+            if (Modules.SysCurrentModule.GetCurrentSettings().HideSalesAmount == true)
+            {
+                tabPageCollectedColumnAmount.Visible = false;
             }
             else
             {
-                if (sysUserRights.GetUserRights().CanAdd == false)
-                {
-                    buttonWalkIn.Enabled = false;
-                }
-
-                GetTerminalList();
-
-                sysSoftwareForm = softwareForm;
-                if (Modules.SysCurrentModule.GetCurrentSettings().HideSalesAmount == true)
-                {
-                    tabPageCollectedColumnAmount.Visible = false;
-                }
-                else
-                {
-                    tabPageCollectedColumnAmount.Visible = true;
-                }
+                tabPageCollectedColumnAmount.Visible = true;
             }
 
             Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
@@ -867,15 +861,6 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                         break;
                     }
-                case Keys.F3:
-                    {
-                        if (buttonDelivery.Enabled == true)
-                        {
-                            buttonDelivery.PerformClick();
-                        }
-
-                        break;
-                    }
                 default:
                     {
                         break;
@@ -883,6 +868,12 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
 
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void buttonOpenCashDrawer_Click(object sender, EventArgs e)
+        {
+            Account.SysLogin.SysLoginOpenDrawerForm login = new Account.SysLogin.SysLoginOpenDrawerForm();
+            login.ShowDialog();
         }
     }
 }

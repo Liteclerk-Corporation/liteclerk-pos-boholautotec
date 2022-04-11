@@ -1151,15 +1151,7 @@ namespace EasyPOS.Forms.Software.MstItem
 
         private void textBoxPrice_Leave(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(textBoxPrice.Text))
-            {
-                textBoxPrice.Text = "0.00";
-            }
-            else
-            {
-                ComputeMarkUpPrice();
-                textBoxPrice.Text = Convert.ToDecimal(textBoxPrice.Text).ToString();
-            }
+            
         }
 
         private void textBoxConversionValue_KeyPress(object sender, KeyPressEventArgs e)
@@ -1172,6 +1164,24 @@ namespace EasyPOS.Forms.Software.MstItem
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void textBoxMarkUp_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (String.IsNullOrEmpty(textBoxMarkUp.Text))
+                {
+                    textBoxMarkUp.Text = "0.00";
+                }
+                else
+                {
+                    ComputePriceMarkUp();
+                    textBoxMarkUp.Text = Convert.ToDecimal(textBoxMarkUp.Text).ToString();
+                    textBoxPrice.Focus();
+                    textBoxPrice.SelectAll();
+                }
             }
         }
     }

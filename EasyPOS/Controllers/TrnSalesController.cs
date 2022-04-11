@@ -198,7 +198,9 @@ namespace EasyPOS.Controllers
                                 Pax = d.Pax,
                                 PostCode = d.PostCode,
                                 CollectedAmount = d.CollectedAmount,
-                                OrderChangeAmount = d.OrderChangeAmount
+                                OrderChangeAmount = d.OrderChangeAmount,
+                                IsDelivery = d.IsDelivery,
+                                DeliveryType = d.DeliveryType
                             };
 
                 return sales.OrderByDescending(d => d.Id).ToList();
@@ -271,7 +273,9 @@ namespace EasyPOS.Controllers
                                 Pax = d.Pax,
                                 PostCode = d.PostCode,
                                 CollectedAmount = d.CollectedAmount,
-                                OrderChangeAmount = d.OrderChangeAmount
+                                OrderChangeAmount = d.OrderChangeAmount,
+                                IsDelivery = d.IsDelivery,
+                                DeliveryType = d.DeliveryType
                             };
 
                 return sales.OrderByDescending(d => d.Id).ToList();
@@ -344,7 +348,9 @@ namespace EasyPOS.Controllers
                                 Pax = d.Pax,
                                 PostCode = d.PostCode,
                                 CollectedAmount = d.CollectedAmount,
-                                OrderChangeAmount = d.OrderChangeAmount
+                                OrderChangeAmount = d.OrderChangeAmount,
+                                IsDelivery = d.IsDelivery,
+                                DeliveryType = d.DeliveryType
                             };
 
                 return sales.OrderByDescending(d => d.Id).ToList();
@@ -424,7 +430,9 @@ namespace EasyPOS.Controllers
                                 Pax = d.Pax,
                                 PostCode = d.PostCode,
                                 CollectedAmount = d.CollectedAmount,
-                                OrderChangeAmount = d.OrderChangeAmount
+                                OrderChangeAmount = d.OrderChangeAmount,
+                                IsDelivery = d.IsDelivery,
+                                DeliveryType = d.DeliveryType
                             };
 
                 return sales.OrderByDescending(d => d.Id).ToList();
@@ -498,7 +506,9 @@ namespace EasyPOS.Controllers
                             Pax = d.Pax,
                             PostCode = d.PostCode,
                             CollectedAmount = d.CollectedAmount,
-                            OrderChangeAmount = d.OrderChangeAmount
+                            OrderChangeAmount = d.OrderChangeAmount,
+                            IsDelivery = d.IsDelivery,
+                            DeliveryType = d.DeliveryType
                         };
 
             return sales.FirstOrDefault();
@@ -623,7 +633,9 @@ namespace EasyPOS.Controllers
                     UpdateUserId = user.FirstOrDefault().Id,
                     UpdateDateTime = DateTime.Now,
                     Pax = null,
-                    PostCode = null
+                    PostCode = null,
+                    IsDelivery = false,
+                    DeliveryType = "Paid"
                 };
 
                 db.TrnSales.InsertOnSubmit(newSales);
@@ -1707,6 +1719,7 @@ namespace EasyPOS.Controllers
 
                         var previousSalesBalance = from d in customerSales
                                                    where d.Id != salesId
+                                                   && d.IsLocked == true
                                                    && d.BalanceAmount > 0
                                                    select d;
 
@@ -1743,6 +1756,23 @@ namespace EasyPOS.Controllers
                             }
                         }
                     }
+                    else
+                    {
+                        var customerCreditLimit = from d in db.MstCustomers
+                                                  where d.Id == objSales.CustomerId
+                                                  select d;
+                        if (customerCreditLimit.FirstOrDefault().CreditLimit == 0)
+                        {
+                            return new String[] { "Exceeds Credit Limit.", "0" };
+                        }
+                        else
+                        {
+                            if (objSales.Amount > customerCreditLimit.FirstOrDefault().CreditLimit)
+                            {
+                                return new String[] { "Exceeds Credit Limit.", "0" };
+                            }
+                        }
+                    }
 
                     var lockSales = sales.FirstOrDefault();
                     lockSales.CustomerId = objSales.CustomerId;
@@ -1755,6 +1785,8 @@ namespace EasyPOS.Controllers
                     lockSales.UpdateDateTime = DateTime.Now;
                     lockSales.CollectedAmount = objSales.CollectedAmount;
                     lockSales.OrderChangeAmount = objSales.OrderChangeAmount;
+                    lockSales.IsDelivery = objSales.IsDelivery;
+                    lockSales.DeliveryType = objSales.DeliveryType;
                     db.SubmitChanges();
 
                     Modules.TrnInventoryModule trnInventoryModule = new Modules.TrnInventoryModule();

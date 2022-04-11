@@ -187,6 +187,8 @@
             this.panelPicturebox = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.buttonOpenCashDrawer = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -206,11 +208,13 @@
             this.panelPicturebox.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
+            this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonClose);
@@ -272,11 +276,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Controls.Add(this.buttonOpenCashDrawer);
             this.panel2.Controls.Add(this.buttonHideItems);
             this.panel2.Controls.Add(this.buttonWalkIn);
-            this.panel2.Controls.Add(this.buttonTenderAll);
-            this.panel2.Controls.Add(this.textBoxTotalAmount);
-            this.panel2.Controls.Add(this.buttonDelivery);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1270, 58);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -324,13 +326,14 @@
             // buttonTenderAll
             // 
             this.buttonTenderAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
+            this.buttonTenderAll.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonTenderAll.FlatAppearance.BorderSize = 0;
             this.buttonTenderAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTenderAll.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTenderAll.Location = new System.Drawing.Point(8, 326);
+            this.buttonTenderAll.Location = new System.Drawing.Point(0, 0);
             this.buttonTenderAll.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTenderAll.Name = "buttonTenderAll";
-            this.buttonTenderAll.Size = new System.Drawing.Size(88, 54);
+            this.buttonTenderAll.Size = new System.Drawing.Size(62, 34);
             this.buttonTenderAll.TabIndex = 59;
             this.buttonTenderAll.Text = "Tender All";
             this.buttonTenderAll.UseVisualStyleBackColor = false;
@@ -339,15 +342,15 @@
             // 
             // textBoxTotalAmount
             // 
-            this.textBoxTotalAmount.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.textBoxTotalAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
             this.textBoxTotalAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTotalAmount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxTotalAmount.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.textBoxTotalAmount.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxTotalAmount.Location = new System.Drawing.Point(8, 451);
+            this.textBoxTotalAmount.Location = new System.Drawing.Point(0, 0);
             this.textBoxTotalAmount.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTotalAmount.Name = "textBoxTotalAmount";
-            this.textBoxTotalAmount.Size = new System.Drawing.Size(88, 34);
+            this.textBoxTotalAmount.Size = new System.Drawing.Size(62, 34);
             this.textBoxTotalAmount.TabIndex = 17;
             this.textBoxTotalAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxTotalAmount.Visible = false;
@@ -355,15 +358,16 @@
             // buttonDelivery
             // 
             this.buttonDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
+            this.buttonDelivery.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonDelivery.FlatAppearance.BorderSize = 0;
             this.buttonDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDelivery.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDelivery.ForeColor = System.Drawing.Color.White;
             this.buttonDelivery.ImageList = this.imageListPOSTouch;
-            this.buttonDelivery.Location = new System.Drawing.Point(8, 385);
+            this.buttonDelivery.Location = new System.Drawing.Point(0, 0);
             this.buttonDelivery.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDelivery.Name = "buttonDelivery";
-            this.buttonDelivery.Size = new System.Drawing.Size(88, 65);
+            this.buttonDelivery.Size = new System.Drawing.Size(62, 34);
             this.buttonDelivery.TabIndex = 45;
             this.buttonDelivery.Text = "F3 Delivery";
             this.buttonDelivery.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -2003,6 +2007,35 @@
             this.panel5.Size = new System.Drawing.Size(1270, 157);
             this.panel5.TabIndex = 64;
             // 
+            // buttonOpenCashDrawer
+            // 
+            this.buttonOpenCashDrawer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOpenCashDrawer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
+            this.buttonOpenCashDrawer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonOpenCashDrawer.FlatAppearance.BorderSize = 0;
+            this.buttonOpenCashDrawer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenCashDrawer.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOpenCashDrawer.ForeColor = System.Drawing.Color.White;
+            this.buttonOpenCashDrawer.Location = new System.Drawing.Point(8, 73);
+            this.buttonOpenCashDrawer.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonOpenCashDrawer.Name = "buttonOpenCashDrawer";
+            this.buttonOpenCashDrawer.Size = new System.Drawing.Size(88, 65);
+            this.buttonOpenCashDrawer.TabIndex = 60;
+            this.buttonOpenCashDrawer.TabStop = false;
+            this.buttonOpenCashDrawer.Text = "Open Drawer";
+            this.buttonOpenCashDrawer.UseVisualStyleBackColor = false;
+            this.buttonOpenCashDrawer.Click += new System.EventHandler(this.buttonOpenCashDrawer_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.textBoxTotalAmount);
+            this.panel7.Controls.Add(this.buttonDelivery);
+            this.panel7.Controls.Add(this.buttonTenderAll);
+            this.panel7.Location = new System.Drawing.Point(275, 12);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(62, 34);
+            this.panel7.TabIndex = 4;
+            // 
             // TrnPOSTouchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -2023,7 +2056,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPOSTouch)).EndInit();
             this.panel8.ResumeLayout(false);
@@ -2042,6 +2074,8 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2177,5 +2211,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button buttonOpenCashDrawer;
+        private System.Windows.Forms.Panel panel7;
     }
 }

@@ -56,6 +56,10 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
             trnSalesLineEntity = salesLineEntity;
 
+            Controllers.MstUserController mstUserController = new Controllers.MstUserController();
+            var currentUserId = Modules.SysCurrentModule.GetCurrentSettings().CurrentUserId;
+            Boolean canEditPrice = mstUserController.CheckUserCanEditPrice(currentUserId);
+
             if (Modules.SysCurrentModule.GetCurrentSettings().EnableEditPrice == false)
             {
                 textBoxSalesLinePrice.ReadOnly = true;
@@ -74,7 +78,16 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 textBoxSalesLinePrice.Enabled = false;
             }
 
-                GetDiscountList();
+            if (canEditPrice == true)
+            {
+                textBoxSalesLinePrice.Enabled = true;
+            }
+            else
+            {
+                textBoxSalesLinePrice.Enabled = false;
+            }
+
+            GetDiscountList();
 
             textBoxSalesLineQuantity.Focus();
             textBoxSalesLineQuantity.SelectAll();

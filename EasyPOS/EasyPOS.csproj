@@ -271,6 +271,7 @@
     <Compile Include="Controllers\TrnPurchaseOrderLineController.cs" />
     <Compile Include="Controllers\TrnSalesController.cs" />
     <Compile Include="Controllers\TrnSalesLineController.cs" />
+    <Compile Include="Controllers\TrnSalesLineDeletedController.cs" />
     <Compile Include="Controllers\TrnStockCountController.cs" />
     <Compile Include="Controllers\TrnStockCountLineController.cs" />
     <Compile Include="Controllers\TrnStockInController.cs" />
@@ -448,6 +449,7 @@
     <Compile Include="Entities\TrnPurchaseOrderEntity.cs" />
     <Compile Include="Entities\TrnPurchaseOrderLineEntity.cs" />
     <Compile Include="Entities\TrnSalesEntity.cs" />
+    <Compile Include="Entities\TrnSalesLineDeletedEntity.cs" />
     <Compile Include="Entities\TrnSalesLineEntity.cs" />
     <Compile Include="Entities\TrnStockCountEntity.cs" />
     <Compile Include="Entities\TrnStockCountLineEntity.cs" />
@@ -983,6 +985,12 @@
     </Compile>
     <Compile Include="Forms\Software\TrnPOS\TrnPOSSalesOrderBodegaForm.Designer.cs">
       <DependentUpon>TrnPOSSalesOrderBodegaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Software\TrnPOS\TrnPOSTouchDeletedItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Software\TrnPOS\TrnPOSTouchDeletedItemsForm.Designer.cs">
+      <DependentUpon>TrnPOSTouchDeletedItemsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Software\TrnPOS\TrnPOSTouchOrderReportFormKitchenPrinter.cs">
       <SubType>Form</SubType>
@@ -1743,6 +1751,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Software\TrnPOS\TrnPOSSalesOrderBodegaForm.resx">
       <DependentUpon>TrnPOSSalesOrderBodegaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Software\TrnPOS\TrnPOSTouchDeletedItemsForm.resx">
+      <DependentUpon>TrnPOSTouchDeletedItemsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Software\TrnPOS\TrnPOSTouchOrderReportFormKitchenPrinter.resx">
       <DependentUpon>TrnPOSTouchOrderReportFormKitchenPrinter.cs</DependentUpon>

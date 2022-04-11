@@ -42,6 +42,7 @@
             this.ColumnSearchItemBarcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSearchItemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSearchItemGenericName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSearchItemCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSearchItemOutTaxId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSearchItemOutTax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSearchItemOutTaxRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,7 +77,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1082, 62);
+            this.panel1.Size = new System.Drawing.Size(1450, 62);
             this.panel1.TabIndex = 4;
             // 
             // pictureBox1
@@ -110,7 +111,7 @@
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(935, 12);
+            this.buttonClose.Location = new System.Drawing.Point(1303, 12);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(136, 40);
@@ -127,7 +128,7 @@
             this.textBoxFilter.Location = new System.Drawing.Point(12, 6);
             this.textBoxFilter.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFilter.Name = "textBoxFilter";
-            this.textBoxFilter.Size = new System.Drawing.Size(1058, 30);
+            this.textBoxFilter.Size = new System.Drawing.Size(1426, 30);
             this.textBoxFilter.TabIndex = 0;
             this.textBoxFilter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxFilter_KeyDown);
             // 
@@ -146,6 +147,7 @@
             this.ColumnSearchItemBarcode,
             this.ColumnSearchItemDescription,
             this.ColumnSearchItemGenericName,
+            this.ColumnSearchItemCategory,
             this.ColumnSearchItemOutTaxId,
             this.ColumnSearchItemOutTax,
             this.ColumnSearchItemOutTaxRate,
@@ -163,7 +165,7 @@
             this.dataGridViewSearchItemList.RowHeadersWidth = 51;
             this.dataGridViewSearchItemList.RowTemplate.Height = 24;
             this.dataGridViewSearchItemList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewSearchItemList.Size = new System.Drawing.Size(1058, 396);
+            this.dataGridViewSearchItemList.Size = new System.Drawing.Size(1426, 410);
             this.dataGridViewSearchItemList.TabIndex = 1;
             this.dataGridViewSearchItemList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSearchItemList_CellClick);
             this.dataGridViewSearchItemList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridViewSearchItemList_KeyDown);
@@ -189,22 +191,30 @@
             // 
             // ColumnSearchItemDescription
             // 
-            this.ColumnSearchItemDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColumnSearchItemDescription.DataPropertyName = "ColumnSearchItemDescription";
             this.ColumnSearchItemDescription.HeaderText = "Item Description";
             this.ColumnSearchItemDescription.MinimumWidth = 6;
             this.ColumnSearchItemDescription.Name = "ColumnSearchItemDescription";
             this.ColumnSearchItemDescription.ReadOnly = true;
+            this.ColumnSearchItemDescription.Width = 250;
             // 
             // ColumnSearchItemGenericName
             // 
-            this.ColumnSearchItemGenericName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColumnSearchItemGenericName.DataPropertyName = "ColumnSearchItemGenericName";
             this.ColumnSearchItemGenericName.HeaderText = "Generic Name";
             this.ColumnSearchItemGenericName.MinimumWidth = 6;
             this.ColumnSearchItemGenericName.Name = "ColumnSearchItemGenericName";
             this.ColumnSearchItemGenericName.ReadOnly = true;
-            this.ColumnSearchItemGenericName.Visible = false;
+            this.ColumnSearchItemGenericName.Width = 180;
+            // 
+            // ColumnSearchItemCategory
+            // 
+            this.ColumnSearchItemCategory.DataPropertyName = "ColumnSearchItemCategory";
+            this.ColumnSearchItemCategory.HeaderText = "Category";
+            this.ColumnSearchItemCategory.MinimumWidth = 6;
+            this.ColumnSearchItemCategory.Name = "ColumnSearchItemCategory";
+            this.ColumnSearchItemCategory.ReadOnly = true;
+            this.ColumnSearchItemCategory.Width = 200;
             // 
             // ColumnSearchItemOutTaxId
             // 
@@ -269,7 +279,6 @@
             // 
             // ColumnSearchItemOnHandQuantity
             // 
-            this.ColumnSearchItemOnHandQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.ColumnSearchItemOnHandQuantity.DataPropertyName = "ColumnSearchItemOnHandQuantity";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.ColumnSearchItemOnHandQuantity.DefaultCellStyle = dataGridViewCellStyle2;
@@ -277,7 +286,7 @@
             this.ColumnSearchItemOnHandQuantity.MinimumWidth = 6;
             this.ColumnSearchItemOnHandQuantity.Name = "ColumnSearchItemOnHandQuantity";
             this.ColumnSearchItemOnHandQuantity.ReadOnly = true;
-            this.ColumnSearchItemOnHandQuantity.Width = 144;
+            this.ColumnSearchItemOnHandQuantity.Width = 125;
             // 
             // ColumnSearchItemIsInventory
             // 
@@ -314,7 +323,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 62);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1082, 490);
+            this.panel2.Size = new System.Drawing.Size(1450, 504);
             this.panel2.TabIndex = 7;
             // 
             // panel3
@@ -331,7 +340,7 @@
             this.panel3.Location = new System.Drawing.Point(12, 445);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1059, 41);
+            this.panel3.Size = new System.Drawing.Size(1427, 55);
             this.panel3.TabIndex = 2;
             // 
             // buttonPageListFirst
@@ -341,7 +350,7 @@
             this.buttonPageListFirst.FlatAppearance.BorderSize = 0;
             this.buttonPageListFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPageListFirst.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.buttonPageListFirst.Location = new System.Drawing.Point(5, 5);
+            this.buttonPageListFirst.Location = new System.Drawing.Point(5, 19);
             this.buttonPageListFirst.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPageListFirst.Name = "buttonPageListFirst";
             this.buttonPageListFirst.Size = new System.Drawing.Size(89, 32);
@@ -356,7 +365,7 @@
             this.buttonPageListNext.FlatAppearance.BorderSize = 0;
             this.buttonPageListNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPageListNext.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.buttonPageListNext.Location = new System.Drawing.Point(330, 5);
+            this.buttonPageListNext.Location = new System.Drawing.Point(330, 19);
             this.buttonPageListNext.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPageListNext.Name = "buttonPageListNext";
             this.buttonPageListNext.Size = new System.Drawing.Size(89, 32);
@@ -371,7 +380,7 @@
             this.buttonPageListLast.FlatAppearance.BorderSize = 0;
             this.buttonPageListLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPageListLast.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.buttonPageListLast.Location = new System.Drawing.Point(415, 5);
+            this.buttonPageListLast.Location = new System.Drawing.Point(415, 19);
             this.buttonPageListLast.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPageListLast.Name = "buttonPageListLast";
             this.buttonPageListLast.Size = new System.Drawing.Size(89, 32);
@@ -387,7 +396,7 @@
             this.buttonPageListPrevious.FlatAppearance.BorderSize = 0;
             this.buttonPageListPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPageListPrevious.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.buttonPageListPrevious.Location = new System.Drawing.Point(92, 5);
+            this.buttonPageListPrevious.Location = new System.Drawing.Point(92, 19);
             this.buttonPageListPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPageListPrevious.Name = "buttonPageListPrevious";
             this.buttonPageListPrevious.Size = new System.Drawing.Size(89, 32);
@@ -401,7 +410,7 @@
             this.textBoxPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxPageNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPageNumber.Location = new System.Drawing.Point(224, 10);
+            this.textBoxPageNumber.Location = new System.Drawing.Point(224, 24);
             this.textBoxPageNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPageNumber.Name = "textBoxPageNumber";
             this.textBoxPageNumber.ReadOnly = true;
@@ -413,7 +422,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1082, 552);
+            this.ClientSize = new System.Drawing.Size(1450, 566);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
@@ -455,6 +464,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSearchItemBarcode;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSearchItemDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSearchItemGenericName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSearchItemCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSearchItemOutTaxId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSearchItemOutTax;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSearchItemOutTaxRate;

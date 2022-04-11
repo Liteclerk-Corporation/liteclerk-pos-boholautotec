@@ -553,7 +553,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
                         objSalesLineList.Price1.ToString("#,##0.00"),
                         objSalesLineList.Price2.ToString("#,##0.00"),
                         objSalesLineList.Price2LessTax.ToString("#,##0.00"),
-                        objSalesLineList.PriceSplitPercentage.ToString("#,##0.00")
+                        objSalesLineList.PriceSplitPercentage.ToString("#,##0.00"),
+                        objSalesLineList.BodegaItemQty.ToString("#,##0.00")
                     );
                 }
             }
@@ -1114,6 +1115,16 @@ namespace EasyPOS.Forms.Software.TrnPOS
                         if (buttonOverRide.Enabled == true)
                         {
                             buttonOverRide.PerformClick();
+                            Focus();
+                        }
+
+                        break;
+                    }
+                case Keys.F12:
+                    {
+                        if (buttonClose.Enabled == true)
+                        {
+                            buttonOpenCashDrawer.PerformClick();
                             Focus();
                         }
 

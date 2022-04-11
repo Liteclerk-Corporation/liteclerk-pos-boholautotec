@@ -14,6 +14,7 @@ namespace EasyPOS.Forms.Software
 {
     public partial class SysSoftwareForm : Form
     {
+        private Modules.SysUserRightsModule sysUserRights;
         public SysSoftwareForm()
         {
             InitializeComponent();
@@ -411,8 +412,26 @@ namespace EasyPOS.Forms.Software
 
             if (Modules.SysCurrentModule.GetCurrentSettings().PopupCustomerInfo == true)
             {
-                TrnPOSTenderSalesForm trnSalesDetailTenderSalesForm = new TrnPOSTenderSalesForm(salesListForm, trnSalesDetailForm, null, null, null, salesEntity);
-                trnSalesDetailTenderSalesForm.ShowDialog();
+                if (Modules.SysCurrentModule.GetCurrentSettings().DisableLockTender == true)
+                {
+                    if (salesEntity.IsLocked == false)
+                    {
+                        TrnPOSTenderSalesForm trnSalesDetailTenderSalesForm = new TrnPOSTenderSalesForm(salesListForm, trnSalesDetailForm, null, null, null, salesEntity);
+                        trnSalesDetailTenderSalesForm.ShowDialog();
+
+                        trnSalesDetailForm.buttonTender.Enabled = true;
+
+                    }
+                    else
+                    {
+                        trnSalesDetailForm.buttonTender.Enabled = false;
+                    }
+                }
+                else
+                {
+                    TrnPOSTenderSalesForm trnSalesDetailTenderSalesForm = new TrnPOSTenderSalesForm(salesListForm, trnSalesDetailForm, null, null, null, salesEntity);
+                    trnSalesDetailTenderSalesForm.ShowDialog();
+                }
             }
         }
 
@@ -1104,12 +1123,28 @@ namespace EasyPOS.Forms.Software
 
         private void pOSToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AddTabPagePOSSalesList();
+            sysUserRights = new Modules.SysUserRightsModule("TrnSales");
+            if (sysUserRights.GetUserRights() == null)
+            {
+                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                AddTabPagePOSSalesList();
+            }
         }
 
         private void pOSTouchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddTabPagePOSTouchSalesList();
+            sysUserRights = new Modules.SysUserRightsModule("TrnRestaurant");
+            if (sysUserRights.GetUserRights() == null)
+            {
+                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                AddTabPagePOSTouchSalesList();
+            }
         }
 
         private void remittanceToolStripMenuItem_Click(object sender, EventArgs e)

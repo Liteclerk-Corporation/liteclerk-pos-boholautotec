@@ -313,6 +313,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                                 {
                                     hasServiceCharge = true;
                                     totalServiceCharge += salesLine.Amount;
+
                                 }
                             }
                         }
@@ -466,6 +467,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     // ==========
                     Decimal totalAmount = 0;
                     Decimal totalNumberOfItems = 0;
+                    Decimal totalTenderedAmount = 0;
 
                     String itemLabel = "\nITEM";
                     String amountLabel = "\nAMOUNT";
@@ -529,7 +531,14 @@ namespace EasyPOS.Forms.Software.TrnPOS
                         {
                             foreach (var salesLine in salesLineGroupbyItem.ToList())
                             {
-                                totalNumberOfItems += 1;
+                                if (salesLine.MstItem.ItemCode != "0000000001")
+                                {
+                                    totalNumberOfItems += 1;
+                                }
+                                else
+                                {
+                                    totalNumberOfItems += 0;
+                                }
 
                                 totalAmount += salesLine.Amount;
 
@@ -542,7 +551,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                                     {
                                         X = x,
                                         Y = y,
-                                        Size = new Size(150, ((int)graphics.MeasureString(itemData, fontArial8Regular, 150, StringFormat.GenericDefault).Height))
+                                        Size = new Size(200, ((int)graphics.MeasureString(itemData, fontArial8Regular, 200, StringFormat.GenericDefault).Height))
                                     };
                                     graphics.DrawString(itemData, fontArial8Regular, Brushes.Black, itemDataRectangle, drawFormatLeft);
 
@@ -589,6 +598,21 @@ namespace EasyPOS.Forms.Software.TrnPOS
                         graphics.DrawString(totalSalesLabel, fontArial8Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatLeft);
                         graphics.DrawString(totalSalesAmount, fontArial8Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatRight);
                         y += graphics.MeasureString(totalSalesAmount, fontArial8Bold).Height;
+
+                        if (Modules.SysCurrentModule.GetCurrentSettings().ChangeComputationOnLock == true)
+                        {
+                            String totalCollectedAmountLabel = "Tendered Amount";
+                            Decimal totalCollectedAmount = sales.FirstOrDefault().CollectedAmount;
+                            graphics.DrawString(totalCollectedAmountLabel, fontArial8Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatLeft);
+                            graphics.DrawString(totalCollectedAmount.ToString("#,##0.00"), fontArial8Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatRight);
+                            y += graphics.MeasureString(totalCollectedAmount.ToString(), fontArial8Regular).Height;
+
+                            String totalChangeLabel = "Change";
+                            Decimal totalChangeAmount = sales.FirstOrDefault().OrderChangeAmount;
+                            graphics.DrawString(totalChangeLabel, fontArial8Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatLeft);
+                            graphics.DrawString(totalChangeAmount.ToString("#,##0.00"), fontArial8Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatRight);
+                            y += graphics.MeasureString(totalChangeAmount.ToString(), fontArial8Regular).Height;
+                        }
                     }
                     else
                     {
@@ -597,6 +621,21 @@ namespace EasyPOS.Forms.Software.TrnPOS
                         graphics.DrawString(totalSalesLabel, fontArial8Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatLeft);
                         graphics.DrawString(totalSalesAmount, fontArial8Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatRight);
                         y += graphics.MeasureString(totalSalesAmount, fontArial8Bold).Height;
+
+                        if (Modules.SysCurrentModule.GetCurrentSettings().ChangeComputationOnLock == true)
+                        {
+                            String totalCollectedAmountLabel = "Tendered Amount";
+                            Decimal totalCollectedAmount = sales.FirstOrDefault().CollectedAmount;
+                            graphics.DrawString(totalCollectedAmountLabel, fontArial8Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatLeft);
+                            graphics.DrawString(totalCollectedAmount.ToString("#,##0.00"), fontArial8Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatRight);
+                            y += graphics.MeasureString(totalCollectedAmount.ToString(), fontArial8Regular).Height;
+
+                            String totalChangeLabel = "Change";
+                            Decimal totalChangeAmount = sales.FirstOrDefault().OrderChangeAmount;
+                            graphics.DrawString(totalChangeLabel, fontArial8Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatLeft);
+                            graphics.DrawString(totalChangeAmount.ToString("#,##0.00"), fontArial8Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatRight);
+                            y += graphics.MeasureString(totalChangeAmount.ToString(), fontArial8Regular).Height;
+                        }
                     }
 
                     String totalNumberOfItemsLabel = "Total No. of Item(s)";

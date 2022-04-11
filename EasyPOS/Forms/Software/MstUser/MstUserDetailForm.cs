@@ -171,6 +171,7 @@ namespace EasyPOS.Forms.Software.MstUser
             textBoxUserName.Text = mstUserEntity.UserName;
             textBoxPassword.Text = mstUserEntity.Password;
             textBoxUserCardNumber.Text = mstUserEntity.UserCardNumber;
+            checkBoxCanEditPrice.Checked = mstUserEntity.CanEditPrice;
 
             CreateUserFormListDataGridView();
         }
@@ -198,6 +199,9 @@ namespace EasyPOS.Forms.Software.MstUser
             textBoxFullName.Enabled = !isLocked;
             textBoxUserName.Enabled = !isLocked;
             textBoxPassword.Enabled = !isLocked;
+            checkBoxCanEditPrice.Enabled = !isLocked;
+            checkBoxCanOpenDrawer.Enabled = !isLocked;
+            checkBoxOrderTaker.Enabled = !isLocked;
 
             buttonAddUserForm.Enabled = !isLocked;
             buttonCopyUseRights.Enabled = !isLocked;
@@ -222,6 +226,9 @@ namespace EasyPOS.Forms.Software.MstUser
                 Password = textBoxPassword.Text,
                 FullName = textBoxFullName.Text,
                 UserCardNumber = textBoxUserCardNumber.Text,
+                CanEditPrice = checkBoxCanEditPrice.Checked,
+                CanOpenDrawer = checkBoxCanOpenDrawer.Checked,
+                IsOrderTaker = checkBoxOrderTaker.Checked
             };
 
             String[] lockUser = mstUserController.LockUser(mstUserEntity.Id, newUserEntity);

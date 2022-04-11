@@ -256,6 +256,7 @@ namespace EasyPOS.Forms.Account.SysLogin
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SysLoginOpenDrawerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Authentication - Open Cash Drawer";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

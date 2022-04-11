@@ -652,6 +652,7 @@
             this.textBoxMarkUp.Size = new System.Drawing.Size(214, 30);
             this.textBoxMarkUp.TabIndex = 8;
             this.textBoxMarkUp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxMarkUp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxMarkUp_KeyDown);
             this.textBoxMarkUp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMarkUp_KeyPress);
             this.textBoxMarkUp.Leave += new System.EventHandler(this.textBoxMarkUp_Leave);
             // 

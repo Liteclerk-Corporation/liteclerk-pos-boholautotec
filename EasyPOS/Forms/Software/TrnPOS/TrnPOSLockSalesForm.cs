@@ -48,7 +48,36 @@ namespace EasyPOS.Forms.Software.TrnPOS
             trnPOSTouchDetailForm = POSTouchDetailForm;
             trnSalesEntity = salesEntity;
 
+            List<String> deliveryType = new List<String>
+            {
+                "Paid",
+                "COD",
+                "Reserve"
+            };
+            comboBoxDeliveryType.DataSource = deliveryType;
+
             GetTermList();
+
+            if (Modules.SysCurrentModule.GetCurrentSettings().ChangeComputationOnLock == true)
+            {
+                textBoxTenderedAmount.Enabled = true;
+                checkBoxIsDelivery.Enabled = true;
+
+                if (checkBoxIsDelivery.Checked == true)
+                {
+                    comboBoxDeliveryType.Enabled = true;
+                }
+                else
+                {
+                    comboBoxDeliveryType.Enabled = false;
+                }
+            }
+            else
+            {
+                textBoxTenderedAmount.Enabled = false;
+                checkBoxIsDelivery.Enabled = false;
+                comboBoxDeliveryType.Enabled = false;
+            }
         }
         public string SetLabel(string label)
         {
@@ -116,13 +145,16 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 comboBoxTenderSalesUsers.DisplayMember = "FullName";
 
                 var currentUserId = Modules.SysCurrentModule.GetCurrentSettings().CurrentUserId;
-                comboBoxTenderSalesUsers.SelectedValue = Convert.ToInt32(currentUserId);
+                comboBoxTenderSalesUsers.SelectedValue = trnSalesEntity.SalesAgent;
             }
 
             textBoxCustomerCode.Text = trnSalesEntity.CustomerCode;
             comboBoxTenderSalesCustomer.SelectedValue = trnSalesEntity.CustomerId;
             comboBoxTenderSalesTerms.SelectedValue = trnSalesEntity.TermId;
             textBoxTenderSalesRemarks.Text = trnSalesEntity.Remarks;
+            textBoxTenderedAmount.Text = trnSalesEntity.CollectedAmount.ToString("#,##0.00");
+            checkBoxIsDelivery.Checked = Convert.ToBoolean(trnSalesEntity.IsDelivery);
+            comboBoxDeliveryType.Text = trnSalesEntity.DeliveryType.ToString();
         }
 
         private void comboBoxTenderSalesCustomer_SelectedIndexChanged(object sender, EventArgs e)
@@ -140,60 +172,150 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 textBoxTenderSalesRewardAvailable.Text = selectedItemCustomer.AvailableReward.ToString("#,##0.00");
                 comboBoxTenderSalesTerms.SelectedValue = selectedItemCustomer.TermId;
                 textBoxCustomerCode2.Text = selectedItemCustomer.CustomerCode;
-
             }
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            Entities.TrnSalesEntity newSalesEntity = new Entities.TrnSalesEntity()
+            if (Modules.SysCurrentModule.GetCurrentSettings().ChangeComputationOnLock == true)
             {
-                CustomerId = Convert.ToInt32(comboBoxTenderSalesCustomer.SelectedValue),
-                TermId = Convert.ToInt32(comboBoxTenderSalesTerms.SelectedValue),
-                Remarks = textBoxTenderSalesRemarks.Text,
-                SalesAgent = Convert.ToInt32(comboBoxTenderSalesUsers.SelectedValue),
-                Amount = trnSalesEntity.Amount
-            };
-
-            Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
-            String[] updateSales = trnPOSSalesController.LockSales(trnSalesEntity.Id, newSalesEntity);
-            if (updateSales[1].Equals("0") == false)
-            {
-                if (trnPOSBarcodeDetailForm != null)
+                if ((Convert.ToDecimal(textBoxTenderedAmount.Text) > 0 && Convert.ToDecimal(textBoxTenderedAmount.Text) >= trnSalesEntity.Amount) && textBoxTenderedAmount.Text != "")
                 {
-                    trnPOSBarcodeDetailForm.trnSalesEntity.CustomerCode = customerCode;
-                    trnPOSBarcodeDetailForm.trnSalesEntity.Customer = customerName;
-                    trnPOSBarcodeDetailForm.trnSalesEntity.Remarks = newSalesEntity.Remarks;
+                    Entities.TrnSalesEntity newSalesEntity = new Entities.TrnSalesEntity()
+                    {
+                        CustomerId = Convert.ToInt32(comboBoxTenderSalesCustomer.SelectedValue),
+                        TermId = Convert.ToInt32(comboBoxTenderSalesTerms.SelectedValue),
+                        Remarks = textBoxTenderSalesRemarks.Text,
+                        SalesAgent = Convert.ToInt32(comboBoxTenderSalesUsers.SelectedValue),
+                        Amount = trnSalesEntity.Amount,
+                        CollectedAmount = Convert.ToDecimal(textBoxTenderedAmount.Text),
+                        OrderChangeAmount = Convert.ToDecimal(textBoxTenderedAmount.Text) - trnSalesEntity.Amount,
+                    };
 
-                    trnPOSBarcodeDetailForm.GetSalesDetail();
-                    trnPOSBarcodeDetailForm.LockComponents(true);
+                    Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
+                    String[] updateSales = trnPOSSalesController.LockSales(trnSalesEntity.Id, newSalesEntity);
+                    if (updateSales[1].Equals("0") == false)
+                    {
+                        if (trnPOSBarcodeDetailForm != null)
+                        {
+                            trnPOSBarcodeDetailForm.trnSalesEntity.CustomerCode = customerCode;
+                            trnPOSBarcodeDetailForm.trnSalesEntity.Customer = customerName;
+                            trnSalesEntity.CollectedAmount = newSalesEntity.CollectedAmount;
+                            trnSalesEntity.OrderChangeAmount = newSalesEntity.OrderChangeAmount;
 
-                    trnPOSBarcodeDetailForm.trnSalesEntity.CustomerId = newSalesEntity.CustomerId;
-                    trnPOSBarcodeDetailForm.trnSalesEntity.TermId = newSalesEntity.TermId;
-                    trnPOSBarcodeDetailForm.trnSalesEntity.Remarks = newSalesEntity.Remarks;
-                    trnPOSBarcodeDetailForm.trnSalesEntity.SalesAgent = newSalesEntity.SalesAgent;
+                            trnPOSBarcodeDetailForm.GetSalesDetail();
+                            trnPOSBarcodeDetailForm.LockComponents(true);
+
+                            trnPOSBarcodeDetailForm.trnSalesEntity.CustomerId = newSalesEntity.CustomerId;
+                            trnPOSBarcodeDetailForm.trnSalesEntity.TermId = newSalesEntity.TermId;
+                            trnPOSBarcodeDetailForm.trnSalesEntity.Remarks = newSalesEntity.Remarks;
+                            trnPOSBarcodeDetailForm.trnSalesEntity.SalesAgent = newSalesEntity.SalesAgent;
+                            trnSalesEntity.CollectedAmount = newSalesEntity.CollectedAmount;
+                            trnSalesEntity.OrderChangeAmount = newSalesEntity.OrderChangeAmount;
+                            trnSalesEntity.IsDelivery = newSalesEntity.IsDelivery;
+                            trnSalesEntity.DeliveryType = newSalesEntity.DeliveryType;
+                        }
+
+                        if (trnPOSTouchDetailForm != null)
+                        {
+                            trnPOSTouchDetailForm.trnSalesEntity.CustomerCode = customerCode;
+                            trnPOSTouchDetailForm.trnSalesEntity.Customer = customerName;
+                            trnPOSTouchDetailForm.trnSalesEntity.Remarks = newSalesEntity.Remarks;
+
+                            trnPOSTouchDetailForm.GetSalesDetail();
+                            trnPOSTouchDetailForm.LockComponents(true);
+
+                            trnPOSTouchDetailForm.trnSalesEntity.CustomerId = newSalesEntity.CustomerId;
+                            trnPOSTouchDetailForm.trnSalesEntity.TermId = newSalesEntity.TermId;
+                            trnPOSTouchDetailForm.trnSalesEntity.Remarks = newSalesEntity.Remarks;
+                            trnPOSTouchDetailForm.trnSalesEntity.SalesAgent = newSalesEntity.SalesAgent;
+                            trnSalesEntity.IsDelivery = newSalesEntity.IsDelivery;
+                            trnSalesEntity.DeliveryType = newSalesEntity.DeliveryType;
+                        }
+
+                        if (Modules.SysCurrentModule.GetCurrentSettings().DisableLockTender == true)
+                        {
+                            trnPOSBarcodeDetailForm.buttonTender.Enabled = false;
+                        }
+
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(updateSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-
-                if (trnPOSTouchDetailForm != null)
+                else
                 {
-                    trnPOSTouchDetailForm.trnSalesEntity.CustomerCode = customerCode;
-                    trnPOSTouchDetailForm.trnSalesEntity.Customer = customerName;
-                    trnPOSTouchDetailForm.trnSalesEntity.Remarks = newSalesEntity.Remarks;
-
-                    trnPOSTouchDetailForm.GetSalesDetail();
-                    trnPOSTouchDetailForm.LockComponents(true);
-
-                    trnPOSTouchDetailForm.trnSalesEntity.CustomerId = newSalesEntity.CustomerId;
-                    trnPOSTouchDetailForm.trnSalesEntity.TermId = newSalesEntity.TermId;
-                    trnPOSTouchDetailForm.trnSalesEntity.Remarks = newSalesEntity.Remarks;
-                    trnPOSTouchDetailForm.trnSalesEntity.SalesAgent = newSalesEntity.SalesAgent;
+                    MessageBox.Show("Invalid Tendered Amount!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBoxTenderedAmount.Focus();
+                    textBoxTenderedAmount.SelectAll();
                 }
-
-                Close();
             }
             else
             {
-                MessageBox.Show(updateSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Entities.TrnSalesEntity newSalesEntity = new Entities.TrnSalesEntity()
+                {
+                    CustomerId = Convert.ToInt32(comboBoxTenderSalesCustomer.SelectedValue),
+                    TermId = Convert.ToInt32(comboBoxTenderSalesTerms.SelectedValue),
+                    Remarks = textBoxTenderSalesRemarks.Text,
+                    SalesAgent = Convert.ToInt32(comboBoxTenderSalesUsers.SelectedValue),
+                    Amount = trnSalesEntity.Amount,
+                    CollectedAmount = 0,
+                    OrderChangeAmount = 0,
+                    IsDelivery = Convert.ToBoolean(checkBoxIsDelivery.Checked),
+                    DeliveryType = comboBoxDeliveryType.Text
+                };
+
+                Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
+                String[] updateSales = trnPOSSalesController.LockSales(trnSalesEntity.Id, newSalesEntity);
+                if (updateSales[1].Equals("0") == false)
+                {
+                    if (trnPOSBarcodeDetailForm != null)
+                    {
+                        trnPOSBarcodeDetailForm.trnSalesEntity.CustomerCode = customerCode;
+                        trnPOSBarcodeDetailForm.trnSalesEntity.Customer = customerName;
+                        trnSalesEntity.CollectedAmount = newSalesEntity.CollectedAmount;
+                        trnSalesEntity.OrderChangeAmount = newSalesEntity.OrderChangeAmount;
+
+                        trnPOSBarcodeDetailForm.GetSalesDetail();
+                        trnPOSBarcodeDetailForm.LockComponents(true);
+
+                        trnPOSBarcodeDetailForm.trnSalesEntity.CustomerId = newSalesEntity.CustomerId;
+                        trnPOSBarcodeDetailForm.trnSalesEntity.TermId = newSalesEntity.TermId;
+                        trnPOSBarcodeDetailForm.trnSalesEntity.Remarks = newSalesEntity.Remarks;
+                        trnPOSBarcodeDetailForm.trnSalesEntity.SalesAgent = newSalesEntity.SalesAgent;
+                        trnSalesEntity.CollectedAmount = newSalesEntity.CollectedAmount;
+                        trnSalesEntity.OrderChangeAmount = newSalesEntity.OrderChangeAmount;
+                        trnSalesEntity.IsDelivery = newSalesEntity.IsDelivery;
+                        trnSalesEntity.DeliveryType = newSalesEntity.DeliveryType;
+                    }
+
+                    if (trnPOSTouchDetailForm != null)
+                    {
+                        trnPOSTouchDetailForm.trnSalesEntity.CustomerCode = customerCode;
+                        trnPOSTouchDetailForm.trnSalesEntity.Customer = customerName;
+                        trnPOSTouchDetailForm.trnSalesEntity.Remarks = newSalesEntity.Remarks;
+
+                        trnPOSTouchDetailForm.GetSalesDetail();
+                        trnPOSTouchDetailForm.LockComponents(true);
+
+                        trnPOSTouchDetailForm.trnSalesEntity.CustomerId = newSalesEntity.CustomerId;
+                        trnPOSTouchDetailForm.trnSalesEntity.TermId = newSalesEntity.TermId;
+                        trnPOSTouchDetailForm.trnSalesEntity.Remarks = newSalesEntity.Remarks;
+                        trnPOSTouchDetailForm.trnSalesEntity.SalesAgent = newSalesEntity.SalesAgent;
+                        trnSalesEntity.CollectedAmount = newSalesEntity.CollectedAmount;
+                        trnSalesEntity.OrderChangeAmount = newSalesEntity.OrderChangeAmount;
+                        trnSalesEntity.IsDelivery = newSalesEntity.IsDelivery;
+                        trnSalesEntity.DeliveryType = newSalesEntity.DeliveryType;
+                    }
+
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show(updateSales[0], "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -256,6 +378,17 @@ namespace EasyPOS.Forms.Software.TrnPOS
             {
                 String inputString = comboBoxTenderSalesCustomer.Text;
                 comboBoxTenderSalesCustomer.SelectedIndex = comboBoxTenderSalesCustomer.FindString(inputString);
+            }
+        }
+        private void checkBoxIsDelivery_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (checkBoxIsDelivery.Checked == true)
+            {
+                comboBoxDeliveryType.Enabled = true;
+            }
+            else
+            {
+                comboBoxDeliveryType.Enabled = false;
             }
         }
     }
