@@ -63,23 +63,27 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
             if (isLocked == true && isTendered == true && isCanclled == false)
             {
-                buttonEditOrder.Enabled = false;
+                buttonEditOrder.Enabled = true;
                 buttonBillOut.Enabled = false;
-                buttonPrintPartialBill.Enabled = false;
+                buttonSelectOrderTaker.Enabled = false;
                 buttonSplitMergeBill.Enabled = false;
                 buttonTender.Enabled = false;
                 buttonDeliver.Enabled = false;
                 buttonDelete.Enabled = false;
+
+                buttonEditOrder.Text = "F2 - View Order";
             }
             else if (isLocked == true && isTendered == true && isCanclled == true)
             {
-                buttonEditOrder.Enabled = false;
+                buttonEditOrder.Enabled = true;
                 buttonBillOut.Enabled = false;
-                buttonPrintPartialBill.Enabled = false;
+                buttonSelectOrderTaker.Enabled = false;
                 buttonSplitMergeBill.Enabled = false;
                 buttonTender.Enabled = false;
                 buttonCancel.Enabled = false;
                 buttonDeliver.Enabled = false;
+
+                buttonEditOrder.Text = "F2 - View Order";
             }
             else if (isLocked == true)
             {
@@ -129,8 +133,11 @@ namespace EasyPOS.Forms.Software.TrnPOS
                         Amount = trnSalesEntity.Amount,
                         SalesNumber = trnSalesEntity.SalesNumber,
                         SalesDate = trnSalesEntity.SalesDate.ToString(),
+                        CustomerId = trnSalesEntity.CustomerId,
+                        CustomerCode = trnSalesEntity.CustomerCode,
                         Customer = trnSalesEntity.Customer,
-                        Remarks = trnSalesEntity.Remarks
+                        Remarks = trnSalesEntity.Remarks,
+                        SalesAgent = trnSalesEntity.SalesAgent
                     };
 
                     String line1 = Modules.SysCurrentModule.GetCurrentSettings().CustomerDisplayFirstLineMessage;
@@ -257,9 +264,9 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     }
                 case Keys.F9:
                     {
-                        if (buttonPrintPartialBill.Enabled == true)
+                        if (buttonSelectOrderTaker.Enabled == true)
                         {
-                            buttonPrintPartialBill.PerformClick();
+                            buttonSelectOrderTaker.PerformClick();
                             Close();
                         }
 
@@ -399,9 +406,10 @@ namespace EasyPOS.Forms.Software.TrnPOS
             trnPOSTouchActivitySplitMergeForm.ShowDialog();
         }
 
-        private void buttonPrintPartialBill_Click(object sender, EventArgs e)
+        private void buttonSelectOrderTaker_Click(object sender, EventArgs e)
         {
-
+            //TrnPOSTouchSelectOrderTaker trnPOSTouchSelectOrderTaker = new TrnPOSTouchSelectOrderTaker(trnPOSTouchForm, this, trnSalesEntity);
+            //trnPOSTouchSelectOrderTaker.ShowDialog();
         }
     }
 }

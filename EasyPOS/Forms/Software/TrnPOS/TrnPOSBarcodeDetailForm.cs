@@ -517,6 +517,15 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 dataGridViewSalesLineList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#C32938");
                 dataGridViewSalesLineList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
 
+                if (Modules.SysCurrentModule.GetCurrentSettings().BodegaTransaction == false)
+                {
+                    dataGridViewSalesLineList.Columns[7].Visible = false;
+                }
+                else
+                {
+                    dataGridViewSalesLineList.Columns[7].Visible = true;
+                }
+
                 foreach (var objSalesLineList in salesLineList)
                 {
                     totalSalesAmount += objSalesLineList.Amount;
@@ -553,8 +562,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                         objSalesLineList.Price1.ToString("#,##0.00"),
                         objSalesLineList.Price2.ToString("#,##0.00"),
                         objSalesLineList.Price2LessTax.ToString("#,##0.00"),
-                        objSalesLineList.PriceSplitPercentage.ToString("#,##0.00"),
-                        objSalesLineList.BodegaItemQty.ToString("#,##0.00")
+                        objSalesLineList.PriceSplitPercentage.ToString("#,##0.00")
                     );
                 }
             }

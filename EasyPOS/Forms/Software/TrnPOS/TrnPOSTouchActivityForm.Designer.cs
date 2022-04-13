@@ -47,12 +47,12 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.imageListPOSTouchCancel = new System.Windows.Forms.ImageList(this.components);
             this.buttonSplitMergeBill = new System.Windows.Forms.Button();
-            this.buttonPrintPartialBill = new System.Windows.Forms.Button();
+            this.buttonSelectOrderTaker = new System.Windows.Forms.Button();
             this.buttonEditOrder = new System.Windows.Forms.Button();
             this.imageListPOSTouchEditOrder = new System.Windows.Forms.ImageList(this.components);
             this.printDialogReprintOR = new System.Windows.Forms.PrintDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageListPOSTouchOrderTaker = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -125,7 +125,7 @@
             this.panel2.Controls.Add(this.buttonBillOut);
             this.panel2.Controls.Add(this.buttonDelete);
             this.panel2.Controls.Add(this.buttonSplitMergeBill);
-            this.panel2.Controls.Add(this.buttonPrintPartialBill);
+            this.panel2.Controls.Add(this.buttonSelectOrderTaker);
             this.panel2.Controls.Add(this.buttonEditOrder);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 62);
@@ -337,26 +337,26 @@
             this.buttonSplitMergeBill.UseVisualStyleBackColor = false;
             this.buttonSplitMergeBill.Click += new System.EventHandler(this.buttonSplitMergeBill_Click);
             // 
-            // buttonPrintPartialBill
+            // buttonSelectOrderTaker
             // 
-            this.buttonPrintPartialBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
-            this.buttonPrintPartialBill.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
-            this.buttonPrintPartialBill.FlatAppearance.BorderSize = 0;
-            this.buttonPrintPartialBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPrintPartialBill.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonPrintPartialBill.ForeColor = System.Drawing.Color.White;
-            this.buttonPrintPartialBill.ImageIndex = 5;
-            this.buttonPrintPartialBill.ImageList = this.imageListPOSTouchOthers;
-            this.buttonPrintPartialBill.Location = new System.Drawing.Point(340, 330);
-            this.buttonPrintPartialBill.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonPrintPartialBill.Name = "buttonPrintPartialBill";
-            this.buttonPrintPartialBill.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonPrintPartialBill.Size = new System.Drawing.Size(321, 131);
-            this.buttonPrintPartialBill.TabIndex = 2;
-            this.buttonPrintPartialBill.Text = "\r\nF9 - Print Partial Bill";
-            this.buttonPrintPartialBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonPrintPartialBill.UseVisualStyleBackColor = false;
-            this.buttonPrintPartialBill.Click += new System.EventHandler(this.buttonPrintPartialBill_Click);
+            this.buttonSelectOrderTaker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
+            this.buttonSelectOrderTaker.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonSelectOrderTaker.FlatAppearance.BorderSize = 0;
+            this.buttonSelectOrderTaker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSelectOrderTaker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonSelectOrderTaker.ForeColor = System.Drawing.Color.White;
+            this.buttonSelectOrderTaker.ImageIndex = 0;
+            this.buttonSelectOrderTaker.ImageList = this.imageListPOSTouchOrderTaker;
+            this.buttonSelectOrderTaker.Location = new System.Drawing.Point(340, 330);
+            this.buttonSelectOrderTaker.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSelectOrderTaker.Name = "buttonSelectOrderTaker";
+            this.buttonSelectOrderTaker.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonSelectOrderTaker.Size = new System.Drawing.Size(321, 131);
+            this.buttonSelectOrderTaker.TabIndex = 2;
+            this.buttonSelectOrderTaker.Text = "F9 - Select Order Taker";
+            this.buttonSelectOrderTaker.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonSelectOrderTaker.UseVisualStyleBackColor = false;
+            this.buttonSelectOrderTaker.Click += new System.EventHandler(this.buttonSelectOrderTaker_Click);
             // 
             // buttonEditOrder
             // 
@@ -409,11 +409,11 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
-            // imageList1
+            // imageListPOSTouchOrderTaker
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListPOSTouchOrderTaker.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListPOSTouchOrderTaker.ImageStream")));
+            this.imageListPOSTouchOrderTaker.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListPOSTouchOrderTaker.Images.SetKeyName(0, "Customer1.png");
             // 
             // TrnPOSTouchActivityForm
             // 
@@ -426,6 +426,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TrnPOSTouchActivityForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POS Touch Activity";
@@ -448,7 +449,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonSplitMergeBill;
-        private System.Windows.Forms.Button buttonPrintPartialBill;
+        private System.Windows.Forms.Button buttonSelectOrderTaker;
         private System.Windows.Forms.Button buttonEditOrder;
         private System.Windows.Forms.Button buttonTender;
         private System.Windows.Forms.Button buttonBillOut;
@@ -463,6 +464,6 @@
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.ImageList imageListPOSTouchCancel;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ImageList imageListPOSTouchOrderTaker;
     }
 }

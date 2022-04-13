@@ -547,6 +547,10 @@ namespace EasyPOS.Controllers
 
                     tableId = table.FirstOrDefault().Id;
                 }
+                else
+                {
+                    return new String[] { "Table not found.", "0" };
+                }
 
                 var customer = from d in db.MstCustomers where d.Id == customerId select d;
                 if (customer.Any() == false)
@@ -1868,34 +1872,47 @@ namespace EasyPOS.Controllers
         {
             try
             {
+                Int32? tableId = null;
+
+                var table = from d in db.MstTables
+                            where d.TableCode == tableCode
+                            select d;
+
                 var sales = from d in db.TrnSales
                             where d.Id == salesId
                             select d;
 
+                var salesTable = from d in db.TrnSales
+                                 where d.IsTendered == false
+                                 && d.SalesDate == Convert.ToDateTime(DateTime.Today.ToShortDateString())
+                                 && d.TableId == table.FirstOrDefault().Id
+                                 select d;
+
                 if (sales.Any())
                 {
-                    Int32? tableId = null;
-
-                    var table = from d in db.MstTables
-                                where d.TableCode == tableCode
-                                select d;
-
                     if (table.Any() == true)
                     {
                         tableId = table.FirstOrDefault().Id;
                     }
 
-                    var updateSales = sales.FirstOrDefault();
-                    updateSales.TableId = tableId;
-                    updateSales.MstTable.TableCode = tableCode;
-                    updateSales.UpdateUserId = Convert.ToInt32(Modules.SysCurrentModule.GetCurrentSettings().CurrentUserId);
-                    updateSales.UpdateDateTime = DateTime.Now;
-                    db.SubmitChanges();
+                    if (salesTable.Any() == false)
+                    {
+                        var updateSales = sales.FirstOrDefault();
+                        updateSales.TableId = tableId;
+                        updateSales.MstTable.TableCode = tableCode;
+                        updateSales.UpdateUserId = Convert.ToInt32(Modules.SysCurrentModule.GetCurrentSettings().CurrentUserId);
+                        updateSales.UpdateDateTime = DateTime.Now;
+                        db.SubmitChanges();
 
-                    Modules.TrnInventoryModule trnInventoryModule = new Modules.TrnInventoryModule();
-                    trnInventoryModule.UpdateSalesInventory(salesId);
+                        Modules.TrnInventoryModule trnInventoryModule = new Modules.TrnInventoryModule();
+                        trnInventoryModule.UpdateSalesInventory(salesId);
 
-                    return new String[] { "", "1" };
+                        return new String[] { "", "1" };
+                    }
+                    else
+                    {
+                        return new String[] { "Table Occupied!", "0" };
+                    }
                 }
                 else
                 {
@@ -3176,7 +3193,9 @@ namespace EasyPOS.Controllers
                                 UpdateUserId = currentUserLogin.FirstOrDefault().Id,
                                 UpdateDateTime = DateTime.Now,
                                 Pax = null,
-                                PostCode = null
+                                PostCode = null,
+                                IsDelivery = false,
+                                DeliveryType = "Paid"
                             };
 
                             db.TrnSales.InsertOnSubmit(newSales);
@@ -3551,7 +3570,9 @@ namespace EasyPOS.Controllers
                         UpdateUserId = user.FirstOrDefault().Id,
                         UpdateDateTime = DateTime.Now,
                         Pax = null,
-                        PostCode = null
+                        PostCode = null,
+                        IsDelivery = false,
+                        DeliveryType = "Paid"
                     };
 
                     db.TrnSales.InsertOnSubmit(newSales);

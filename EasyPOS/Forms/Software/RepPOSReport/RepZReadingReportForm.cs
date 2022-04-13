@@ -392,6 +392,13 @@ namespace EasyPOS.Forms.Software.RepPOSReport
             Decimal totalAccumulatedPWDDiscount = 0;
             Decimal totalAccumulatedSalesReturn = 0;
 
+            // -------- Custom Previous Accumulated Net Sales --------------------------
+            DateTime minusDay = filterDate.AddDays(-1);
+            var accNetSales = from d in db.SysReadingPrevAccNetSales
+                              where d.ReadingDate == minusDay
+                              select d;
+            // -------------------------------------------------------------------------
+
             var previousCollectionSalesLineQuery = from d in db.TrnSalesLines
                                                    where d.TrnSale.TrnCollections.Any() == true
                                                    && d.TrnSale.TrnCollections.Where(
@@ -507,13 +514,6 @@ namespace EasyPOS.Forms.Software.RepPOSReport
                 }
             }
 
-            // -------- Custom Previous Accumulated Net Sales --------------------------
-            DateTime minusDay = filterDate.AddDays(-1);
-            var accNetSales = from d in db.SysReadingPrevAccNetSales
-                              where d.ReadingDate == minusDay
-                              select d;
-            // -------------------------------------------------------------------------
-
             repZReadingReportEntity.GrossSalesTotalPreviousReading = totalAccumulatedGrossSales;
             repZReadingReportEntity.GrossSalesRunningTotal = (repZReadingReportEntity.TotalGrossSales * currentDeclareRate) + repZReadingReportEntity.GrossSalesTotalPreviousReading;
 
@@ -543,7 +543,7 @@ namespace EasyPOS.Forms.Software.RepPOSReport
             repZReadingReportEntity.NetSalesTotalPreviousReading = _totalAccumulatedPreviousNetSales;
             repZReadingReportEntity.NetSalesRunningTotal = repZReadingReportEntity.TotalNetSales + repZReadingReportEntity.NetSalesTotalPreviousReading;
 
-            // -------- Custom Previous Accumulated Net Sales --------------------------
+            // -------- Custom Previous Accumulated Net and Gross Sales --------------------------
             var accNetSalesCurrent = from d in db.SysReadingPrevAccNetSales
                                      where d.ReadingDate == Convert.ToDateTime(filterDate.ToShortDateString())
                                      select d;
@@ -551,7 +551,8 @@ namespace EasyPOS.Forms.Software.RepPOSReport
             Entities.SysReadingPrevAccNetSales newPrevAccNetSales = new Entities.SysReadingPrevAccNetSales()
             {
                 ReadingDate = Convert.ToDateTime(filterDate.ToShortDateString()),
-                AccumulatedNetSales = repZReadingReportEntity.NetSalesRunningTotal
+                AccumulatedNetSales = repZReadingReportEntity.NetSalesRunningTotal,
+                AccumulatedGrossSalesNetOfVat = repZReadingReportEntity.GrossSalesRunningTotal
             };
 
             Controllers.SysReadingPrevAccNetSales addAccNetSales = new Controllers.SysReadingPrevAccNetSales();

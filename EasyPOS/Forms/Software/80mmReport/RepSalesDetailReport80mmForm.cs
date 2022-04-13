@@ -163,7 +163,23 @@ namespace EasyPOS.Forms.Software._80mmReport
                         {
                             var items = from d in salesLineItem
                                         where d.MstItem.Category == category
-                                        select d;
+                                        group d by new
+                                        {
+                                            d.ItemId,
+                                            d.MstItem.BarCode,
+                                            d.MstItem.ItemDescription,
+                                            d.MstUnit.Unit
+                                        }
+                                        into g
+                                        select new
+                                        {
+                                            g.Key.ItemId,
+                                            g.Key.BarCode,
+                                            g.Key.ItemDescription,
+                                            g.Key.Unit,
+                                            Quantity = g.Sum(d => d.Quantity),
+                                            Amount = g.Sum(d => d.Amount)
+                                        };
                             // Label Category
                             String Category = category;
                             graphics.DrawString(Category + "\n", fontArial8Bold, Brushes.Black, new RectangleF(x, y + 15, 240, 150), drawFormatLeft);
@@ -174,9 +190,9 @@ namespace EasyPOS.Forms.Software._80mmReport
 
                                 foreach (var item in items)
                                 {
-                                    subItemTotal = item.Amount;
-                                    String salesData = "\n" + item.MstItem.BarCode + " - " + item.MstItem.ItemDescription;
-                                    String salesQuantityUnit = "\n" + "                         " + item.Quantity.ToString("#,##0.00") + item.MstUnit.Unit;
+                                    subItemTotal = Convert.ToDecimal(item);
+                                    String salesData = "\n" + item.BarCode + " - " + item.ItemDescription;
+                                    String salesQuantityUnit = "\n" + "                         " + item.Quantity.ToString("#,##0.00") + item.Unit;
 
                                     RectangleF itemDataRectangle = new RectangleF
                                     {
@@ -244,11 +260,9 @@ namespace EasyPOS.Forms.Software._80mmReport
                 Point firstLineSecondPoint = new Point(500, Convert.ToInt32(y) + 5);
                 graphics.DrawLine(blackPen, firstLineFirstPoint, firstLineSecondPoint);
 
-                // ===============
-                // Stock-in Line
-                // ===============
-
-
+                // ==========
+                // Sales Line
+                // ==========
                 String salesItem = "\nItem";
                 String amount = "\nAmount";
                 graphics.DrawString(salesItem, fontArial8Bold, drawBrush, new RectangleF(x + 20, y, width, height), drawFormatLeft);
@@ -284,8 +298,27 @@ namespace EasyPOS.Forms.Software._80mmReport
                         {
                             var items = from d in salesLineItem
                                         where d.MstItem.Category == category
-                                        select d;
+                                        group d by new
+                                        {
+                                            d.ItemId,
+                                            d.MstItem.BarCode,
+                                            d.MstItem.ItemDescription,
+                                            d.MstUnit.Unit
+                                        }
+                                        into g
+                                        select new
+                                        {
+                                            g.Key.ItemId,
+                                            g.Key.BarCode,
+                                            g.Key.ItemDescription,
+                                            g.Key.Unit,
+                                            Quantity = g.Sum(d => d.Quantity),
+                                            Amount = g.Sum(d => d.Amount)
+                                        };
+
+                            //===============
                             // Label Category
+                            //===============
                             String Category = category;
                             graphics.DrawString(Category + "\n", fontArial10Bold, Brushes.Black, new RectangleF(x, y + 15, 240, 150), drawFormatLeft);
                             if (items.Any())
@@ -296,8 +329,8 @@ namespace EasyPOS.Forms.Software._80mmReport
                                 foreach (var item in items)
                                 {
                                     subItemTotal = item.Amount;
-                                    String salesData = "\n" + item.MstItem.BarCode + " - " + item.MstItem.ItemDescription;
-                                    String salesQuantityUnit = "\n" + "                         " + item.Quantity.ToString("#,##0.00") + item.MstUnit.Unit;
+                                    String salesData = "\n" + item.BarCode + " - " + item.ItemDescription;
+                                    String salesQuantityUnit = "\n" + "                         " + item.Quantity.ToString("#,##0.00") + item.Unit;
 
                                     RectangleF itemDataRectangle = new RectangleF
                                     {

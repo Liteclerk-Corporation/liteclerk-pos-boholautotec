@@ -51,6 +51,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dateTimePickerLoginDate = new System.Windows.Forms.DateTimePicker();
+            this.checkBoxIsLoginDate = new System.Windows.Forms.CheckBox();
             this.checkBoxEnableSelectOrderTaker = new System.Windows.Forms.CheckBox();
             this.checkBoxDisableSalesDate = new System.Windows.Forms.CheckBox();
             this.checkBoxPrintDeletedItem = new System.Windows.Forms.CheckBox();
@@ -200,8 +202,6 @@
             this.buttonKitchenPageListLast = new System.Windows.Forms.Button();
             this.textBoxKitchenPageNumber = new System.Windows.Forms.TextBox();
             this.backgroundWorkerEasyfisIntegration = new System.ComponentModel.BackgroundWorker();
-            this.dateTimePickerLoginDate = new System.Windows.Forms.DateTimePicker();
-            this.checkBoxIsLoginDate = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -486,6 +486,7 @@
             // 
             // panel5
             // 
+            this.panel5.AutoScroll = true;
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel5.Controls.Add(this.dateTimePickerLoginDate);
             this.panel5.Controls.Add(this.checkBoxIsLoginDate);
@@ -553,12 +554,36 @@
             this.panel5.Size = new System.Drawing.Size(1370, 594);
             this.panel5.TabIndex = 34;
             // 
+            // dateTimePickerLoginDate
+            // 
+            this.dateTimePickerLoginDate.Enabled = false;
+            this.dateTimePickerLoginDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerLoginDate.Location = new System.Drawing.Point(1121, 322);
+            this.dateTimePickerLoginDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerLoginDate.Name = "dateTimePickerLoginDate";
+            this.dateTimePickerLoginDate.Size = new System.Drawing.Size(150, 30);
+            this.dateTimePickerLoginDate.TabIndex = 108;
+            // 
+            // checkBoxIsLoginDate
+            // 
+            this.checkBoxIsLoginDate.AutoSize = true;
+            this.checkBoxIsLoginDate.Enabled = false;
+            this.checkBoxIsLoginDate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsLoginDate.Location = new System.Drawing.Point(1000, 325);
+            this.checkBoxIsLoginDate.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxIsLoginDate.Name = "checkBoxIsLoginDate";
+            this.checkBoxIsLoginDate.Size = new System.Drawing.Size(115, 27);
+            this.checkBoxIsLoginDate.TabIndex = 107;
+            this.checkBoxIsLoginDate.Text = "Login Date";
+            this.checkBoxIsLoginDate.UseVisualStyleBackColor = true;
+            this.checkBoxIsLoginDate.CheckedChanged += new System.EventHandler(this.checkBoxIsLoginDate_CheckedChanged);
+            // 
             // checkBoxEnableSelectOrderTaker
             // 
             this.checkBoxEnableSelectOrderTaker.AutoSize = true;
             this.checkBoxEnableSelectOrderTaker.Enabled = false;
             this.checkBoxEnableSelectOrderTaker.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxEnableSelectOrderTaker.Location = new System.Drawing.Point(1030, 294);
+            this.checkBoxEnableSelectOrderTaker.Location = new System.Drawing.Point(1000, 294);
             this.checkBoxEnableSelectOrderTaker.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxEnableSelectOrderTaker.Name = "checkBoxEnableSelectOrderTaker";
             this.checkBoxEnableSelectOrderTaker.Size = new System.Drawing.Size(323, 27);
@@ -571,7 +596,7 @@
             this.checkBoxDisableSalesDate.AutoSize = true;
             this.checkBoxDisableSalesDate.Enabled = false;
             this.checkBoxDisableSalesDate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxDisableSalesDate.Location = new System.Drawing.Point(1030, 265);
+            this.checkBoxDisableSalesDate.Location = new System.Drawing.Point(1000, 265);
             this.checkBoxDisableSalesDate.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDisableSalesDate.Name = "checkBoxDisableSalesDate";
             this.checkBoxDisableSalesDate.Size = new System.Drawing.Size(285, 27);
@@ -584,7 +609,7 @@
             this.checkBoxPrintDeletedItem.AutoSize = true;
             this.checkBoxPrintDeletedItem.Enabled = false;
             this.checkBoxPrintDeletedItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxPrintDeletedItem.Location = new System.Drawing.Point(1030, 235);
+            this.checkBoxPrintDeletedItem.Location = new System.Drawing.Point(1000, 235);
             this.checkBoxPrintDeletedItem.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxPrintDeletedItem.Name = "checkBoxPrintDeletedItem";
             this.checkBoxPrintDeletedItem.Size = new System.Drawing.Size(315, 27);
@@ -597,7 +622,7 @@
             this.checkBoxChangeComputeOnLock.AutoSize = true;
             this.checkBoxChangeComputeOnLock.Enabled = false;
             this.checkBoxChangeComputeOnLock.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxChangeComputeOnLock.Location = new System.Drawing.Point(1030, 204);
+            this.checkBoxChangeComputeOnLock.Location = new System.Drawing.Point(1000, 204);
             this.checkBoxChangeComputeOnLock.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxChangeComputeOnLock.Name = "checkBoxChangeComputeOnLock";
             this.checkBoxChangeComputeOnLock.Size = new System.Drawing.Size(261, 27);
@@ -610,7 +635,7 @@
             this.checkBoxBodega.AutoSize = true;
             this.checkBoxBodega.Enabled = false;
             this.checkBoxBodega.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxBodega.Location = new System.Drawing.Point(1030, 173);
+            this.checkBoxBodega.Location = new System.Drawing.Point(1000, 173);
             this.checkBoxBodega.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxBodega.Name = "checkBoxBodega";
             this.checkBoxBodega.Size = new System.Drawing.Size(182, 27);
@@ -665,7 +690,7 @@
             this.checkBoxPopupCustomer.AutoSize = true;
             this.checkBoxPopupCustomer.Enabled = false;
             this.checkBoxPopupCustomer.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxPopupCustomer.Location = new System.Drawing.Point(1030, 142);
+            this.checkBoxPopupCustomer.Location = new System.Drawing.Point(1000, 142);
             this.checkBoxPopupCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxPopupCustomer.Name = "checkBoxPopupCustomer";
             this.checkBoxPopupCustomer.Size = new System.Drawing.Size(202, 27);
@@ -678,7 +703,7 @@
             this.checkBoxDisableLockTender.AutoSize = true;
             this.checkBoxDisableLockTender.Enabled = false;
             this.checkBoxDisableLockTender.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxDisableLockTender.Location = new System.Drawing.Point(1030, 109);
+            this.checkBoxDisableLockTender.Location = new System.Drawing.Point(1000, 109);
             this.checkBoxDisableLockTender.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDisableLockTender.Name = "checkBoxDisableLockTender";
             this.checkBoxDisableLockTender.Size = new System.Drawing.Size(207, 27);
@@ -713,7 +738,7 @@
             this.checkBoxRestrictCashin.AutoSize = true;
             this.checkBoxRestrictCashin.Enabled = false;
             this.checkBoxRestrictCashin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxRestrictCashin.Location = new System.Drawing.Point(1030, 78);
+            this.checkBoxRestrictCashin.Location = new System.Drawing.Point(1000, 78);
             this.checkBoxRestrictCashin.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxRestrictCashin.Name = "checkBoxRestrictCashin";
             this.checkBoxRestrictCashin.Size = new System.Drawing.Size(151, 27);
@@ -726,7 +751,7 @@
             this.checkBoxDisableSalesCustomerSelection.AutoSize = true;
             this.checkBoxDisableSalesCustomerSelection.Enabled = false;
             this.checkBoxDisableSalesCustomerSelection.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxDisableSalesCustomerSelection.Location = new System.Drawing.Point(1030, 44);
+            this.checkBoxDisableSalesCustomerSelection.Location = new System.Drawing.Point(1000, 44);
             this.checkBoxDisableSalesCustomerSelection.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDisableSalesCustomerSelection.Name = "checkBoxDisableSalesCustomerSelection";
             this.checkBoxDisableSalesCustomerSelection.Size = new System.Drawing.Size(283, 27);
@@ -739,7 +764,7 @@
             this.checkBoxEnableEditPrice.AutoSize = true;
             this.checkBoxEnableEditPrice.Enabled = false;
             this.checkBoxEnableEditPrice.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxEnableEditPrice.Location = new System.Drawing.Point(1030, 14);
+            this.checkBoxEnableEditPrice.Location = new System.Drawing.Point(1000, 14);
             this.checkBoxEnableEditPrice.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxEnableEditPrice.Name = "checkBoxEnableEditPrice";
             this.checkBoxEnableEditPrice.Size = new System.Drawing.Size(159, 27);
@@ -1746,6 +1771,7 @@
             // 
             // panel9
             // 
+            this.panel9.AutoScroll = true;
             this.panel9.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel9.Controls.Add(this.checkBoxSingleColumnBarcodePrintOut);
             this.panel9.Controls.Add(this.comboBoxSalesOrderPrinterType);
@@ -2343,30 +2369,6 @@
             this.backgroundWorkerEasyfisIntegration.WorkerReportsProgress = true;
             this.backgroundWorkerEasyfisIntegration.WorkerSupportsCancellation = true;
             this.backgroundWorkerEasyfisIntegration.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerEasyfisIntegration_DoWork);
-            // 
-            // dateTimePickerLoginDate
-            // 
-            this.dateTimePickerLoginDate.Enabled = false;
-            this.dateTimePickerLoginDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerLoginDate.Location = new System.Drawing.Point(1151, 322);
-            this.dateTimePickerLoginDate.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerLoginDate.Name = "dateTimePickerLoginDate";
-            this.dateTimePickerLoginDate.Size = new System.Drawing.Size(150, 30);
-            this.dateTimePickerLoginDate.TabIndex = 108;
-            // 
-            // checkBoxIsLoginDate
-            // 
-            this.checkBoxIsLoginDate.AutoSize = true;
-            this.checkBoxIsLoginDate.Enabled = false;
-            this.checkBoxIsLoginDate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxIsLoginDate.Location = new System.Drawing.Point(1030, 325);
-            this.checkBoxIsLoginDate.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBoxIsLoginDate.Name = "checkBoxIsLoginDate";
-            this.checkBoxIsLoginDate.Size = new System.Drawing.Size(115, 27);
-            this.checkBoxIsLoginDate.TabIndex = 107;
-            this.checkBoxIsLoginDate.Text = "Login Date";
-            this.checkBoxIsLoginDate.UseVisualStyleBackColor = true;
-            this.checkBoxIsLoginDate.CheckedChanged += new System.EventHandler(this.checkBoxIsLoginDate_CheckedChanged);
             // 
             // SysSettingsForm
             // 

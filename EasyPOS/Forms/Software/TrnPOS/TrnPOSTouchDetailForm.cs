@@ -201,7 +201,9 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 buttonUnlock.Enabled = false;
                 buttonTender.Enabled = false;
                 buttonOverRide.Enabled = false;
-                panelItems.Visible = false;
+                buttonChangeTable.Enabled = false;
+                buttonHideItems.Enabled = false;
+                panel11.Visible = false;
             }
 
             GetSalesDetail();

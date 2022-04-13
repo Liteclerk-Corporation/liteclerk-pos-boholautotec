@@ -57,7 +57,7 @@ namespace EasyPOS.Forms.Software._80mm_Report
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(687, 62);
+            this.panel1.Size = new System.Drawing.Size(664, 62);
             this.panel1.TabIndex = 12;
             // 
             // buttonPrint
@@ -71,7 +71,7 @@ namespace EasyPOS.Forms.Software._80mm_Report
             this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrint.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint.ForeColor = System.Drawing.Color.White;
-            this.buttonPrint.Location = new System.Drawing.Point(480, 12);
+            this.buttonPrint.Location = new System.Drawing.Point(457, 12);
             this.buttonPrint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(93, 39);
@@ -103,7 +103,7 @@ namespace EasyPOS.Forms.Software._80mm_Report
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(580, 12);
+            this.buttonClose.Location = new System.Drawing.Point(557, 12);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(93, 39);
@@ -131,7 +131,7 @@ namespace EasyPOS.Forms.Software._80mm_Report
             this.printPreviewControl80mmSalesDetailReport.Location = new System.Drawing.Point(0, 62);
             this.printPreviewControl80mmSalesDetailReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.printPreviewControl80mmSalesDetailReport.Name = "printPreviewControl80mmSalesDetailReport";
-            this.printPreviewControl80mmSalesDetailReport.Size = new System.Drawing.Size(687, 534);
+            this.printPreviewControl80mmSalesDetailReport.Size = new System.Drawing.Size(664, 654);
             this.printPreviewControl80mmSalesDetailReport.TabIndex = 13;
             this.printPreviewControl80mmSalesDetailReport.Zoom = 1.5D;
             // 
@@ -143,7 +143,7 @@ namespace EasyPOS.Forms.Software._80mm_Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 596);
+            this.ClientSize = new System.Drawing.Size(664, 716);
             this.ControlBox = false;
             this.Controls.Add(this.printPreviewControl80mmSalesDetailReport);
             this.Controls.Add(this.panel1);
