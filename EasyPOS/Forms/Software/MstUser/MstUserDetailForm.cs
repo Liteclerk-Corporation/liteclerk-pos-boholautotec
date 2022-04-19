@@ -172,6 +172,8 @@ namespace EasyPOS.Forms.Software.MstUser
             textBoxPassword.Text = mstUserEntity.Password;
             textBoxUserCardNumber.Text = mstUserEntity.UserCardNumber;
             checkBoxCanEditPrice.Checked = mstUserEntity.CanEditPrice;
+            checkBoxCanOpenDrawer.Checked = mstUserEntity.CanOpenDrawer;
+            checkBoxOrderTaker.Checked = mstUserEntity.IsOrderTaker;
 
             CreateUserFormListDataGridView();
         }

@@ -364,6 +364,8 @@ namespace EasyPOS.Controllers
                     saveUser.UpdateUserId = currentUserLogin.FirstOrDefault().Id;
                     saveUser.UpdateDateTime = DateTime.Now;
                     saveUser.CanEditPrice = objUser.CanEditPrice;
+                    saveUser.CanOpenDrawer = objUser.CanOpenDrawer;
+                    saveUser.IsOrderTaker = objUser.IsOrderTaker;
                     db.SubmitChanges();
 
                     String newObject = Modules.SysAuditTrailModule.GetObjectString(user.FirstOrDefault());

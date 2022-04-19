@@ -408,8 +408,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
         private void buttonSelectOrderTaker_Click(object sender, EventArgs e)
         {
-            //TrnPOSTouchSelectOrderTaker trnPOSTouchSelectOrderTaker = new TrnPOSTouchSelectOrderTaker(trnPOSTouchForm, this, trnSalesEntity);
-            //trnPOSTouchSelectOrderTaker.ShowDialog();
+            TrnPOSTouchSelectOrderTakerForm trnPOSTouchSelectOrderTaker = new TrnPOSTouchSelectOrderTakerForm(trnPOSTouchForm, this, trnSalesEntity);
+            trnPOSTouchSelectOrderTaker.ShowDialog();
         }
     }
 }

@@ -315,7 +315,7 @@
             this.comboBoxChildItem.MaxDropDownItems = 10;
             this.comboBoxChildItem.Name = "comboBoxChildItem";
             this.comboBoxChildItem.Size = new System.Drawing.Size(312, 31);
-            this.comboBoxChildItem.TabIndex = 26;
+            this.comboBoxChildItem.TabIndex = 20;
             // 
             // label22
             // 
@@ -335,7 +335,7 @@
             this.textBoxConversionValue.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxConversionValue.Name = "textBoxConversionValue";
             this.textBoxConversionValue.Size = new System.Drawing.Size(312, 30);
-            this.textBoxConversionValue.TabIndex = 22;
+            this.textBoxConversionValue.TabIndex = 19;
             this.textBoxConversionValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxConversionValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxConversionValue_KeyPress);
             // 
@@ -363,7 +363,7 @@
             this.comboBoxCategory.MaxDropDownItems = 10;
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(312, 31);
-            this.comboBoxCategory.TabIndex = 21;
+            this.comboBoxCategory.TabIndex = 4;
             // 
             // comboBoxSalesVAT
             // 
@@ -585,7 +585,7 @@
             this.textBoxOnHandQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOnHandQuantity.Name = "textBoxOnHandQuantity";
             this.textBoxOnHandQuantity.Size = new System.Drawing.Size(214, 30);
-            this.textBoxOnHandQuantity.TabIndex = 10;
+            this.textBoxOnHandQuantity.TabIndex = 11;
             this.textBoxOnHandQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxOnHandQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxOnHandQuantity_KeyPress);
             // 
@@ -603,7 +603,7 @@
             // textBoxStockLevelQuantity
             // 
             this.textBoxStockLevelQuantity.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxStockLevelQuantity.Location = new System.Drawing.Point(195, 446);
+            this.textBoxStockLevelQuantity.Location = new System.Drawing.Point(196, 443);
             this.textBoxStockLevelQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxStockLevelQuantity.Name = "textBoxStockLevelQuantity";
             this.textBoxStockLevelQuantity.Size = new System.Drawing.Size(214, 30);

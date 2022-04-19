@@ -49,6 +49,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBoxUserCardNumber = new System.Windows.Forms.TextBox();
+            this.buttonChangeLoginDate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -190,7 +191,7 @@
             this.dateTimePickerLoginDate.CalendarFont = new System.Drawing.Font("Segoe UI", 12F);
             this.dateTimePickerLoginDate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dateTimePickerLoginDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerLoginDate.Location = new System.Drawing.Point(186, 45);
+            this.dateTimePickerLoginDate.Location = new System.Drawing.Point(159, 43);
             this.dateTimePickerLoginDate.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerLoginDate.Name = "dateTimePickerLoginDate";
             this.dateTimePickerLoginDate.Size = new System.Drawing.Size(286, 34);
@@ -200,20 +201,20 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(69, 48);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(158, 22);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 25);
+            this.label8.Size = new System.Drawing.Size(76, 19);
             this.label8.TabIndex = 16;
-            this.label8.Text = "Login Date:";
+            this.label8.Text = "Login Date";
             // 
             // radioButtonSystemDate
             // 
             this.radioButtonSystemDate.AutoSize = true;
             this.radioButtonSystemDate.Checked = true;
             this.radioButtonSystemDate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonSystemDate.Location = new System.Drawing.Point(186, 12);
+            this.radioButtonSystemDate.Location = new System.Drawing.Point(9, 12);
             this.radioButtonSystemDate.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonSystemDate.Name = "radioButtonSystemDate";
             this.radioButtonSystemDate.Size = new System.Drawing.Size(135, 29);
@@ -227,7 +228,7 @@
             // 
             this.radioButtonLoginDate.AutoSize = true;
             this.radioButtonLoginDate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonLoginDate.Location = new System.Drawing.Point(326, 12);
+            this.radioButtonLoginDate.Location = new System.Drawing.Point(10, 50);
             this.radioButtonLoginDate.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonLoginDate.Name = "radioButtonLoginDate";
             this.radioButtonLoginDate.Size = new System.Drawing.Size(124, 29);
@@ -293,6 +294,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Controls.Add(this.buttonChangeLoginDate);
             this.panel3.Controls.Add(this.radioButtonSystemDate);
             this.panel3.Controls.Add(this.dateTimePickerLoginDate);
             this.panel3.Controls.Add(this.label8);
@@ -330,6 +332,27 @@
             this.textBoxUserCardNumber.TabIndex = 0;
             this.textBoxUserCardNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxUserCardNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxUserCardNumber_KeyDown);
+            // 
+            // buttonChangeLoginDate
+            // 
+            this.buttonChangeLoginDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonChangeLoginDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonChangeLoginDate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonChangeLoginDate.FlatAppearance.BorderSize = 0;
+            this.buttonChangeLoginDate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(126)))), ((int)(((byte)(181)))));
+            this.buttonChangeLoginDate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(126)))), ((int)(((byte)(181)))));
+            this.buttonChangeLoginDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChangeLoginDate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonChangeLoginDate.ForeColor = System.Drawing.Color.White;
+            this.buttonChangeLoginDate.Location = new System.Drawing.Point(450, 42);
+            this.buttonChangeLoginDate.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonChangeLoginDate.Name = "buttonChangeLoginDate";
+            this.buttonChangeLoginDate.Size = new System.Drawing.Size(105, 36);
+            this.buttonChangeLoginDate.TabIndex = 17;
+            this.buttonChangeLoginDate.TabStop = false;
+            this.buttonChangeLoginDate.Text = "Change";
+            this.buttonChangeLoginDate.UseVisualStyleBackColor = false;
+            this.buttonChangeLoginDate.Click += new System.EventHandler(this.buttonChangeLoginDate_Click);
             // 
             // SysLoginForm
             // 
@@ -374,7 +397,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePickerLoginDate;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RadioButton radioButtonSystemDate;
         private System.Windows.Forms.RadioButton radioButtonLoginDate;
@@ -385,5 +407,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBoxUserCardNumber;
+        private System.Windows.Forms.Button buttonChangeLoginDate;
+        public System.Windows.Forms.DateTimePicker dateTimePickerLoginDate;
     }
 }

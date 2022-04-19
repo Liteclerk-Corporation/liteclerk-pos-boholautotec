@@ -531,7 +531,8 @@ namespace EasyPOS.Forms.Software.SysSettings
                 checkBoxSwipeLogin.Checked = Convert.ToBoolean(sysCurrent.SwipeLogin);
                 textBoxWithdrawalFooter.Text = sysCurrent.WithdrawalFooter;
                 textBoxWithdrawalPrintTitle.Text = sysCurrent.WithdrawalPrintTitle;
-                checkBoxDateLogin.Checked = Convert.ToBoolean(sysCurrent.DateLogin);
+                checkBoxIsLoginDate.Checked = Convert.ToBoolean(sysCurrent.IsLoginDate);
+                dateTimePickerLoginDate.Value = Convert.ToDateTime(sysCurrent.DateLogin);
                 checkBoxHideSalesAmount.Checked = Convert.ToBoolean(sysCurrent.HideSalesAmount);
                 checkBoxStockInPriceAndCost.Checked = Convert.ToBoolean(sysCurrent.HideStockInPriceAndCost);
                 checkBoxHideTouchSalesItemDetail.Checked = Convert.ToBoolean(sysCurrent.HideSalesItemDetail);
@@ -559,6 +560,7 @@ namespace EasyPOS.Forms.Software.SysSettings
                 checkBoxDisableSalesDate.Checked = Convert.ToBoolean(sysCurrent.DisableSalesDate);
                 checkBoxEnableSelectOrderTaker.Checked = Convert.ToBoolean(sysCurrent.EnableSelectOrderTaker);
             }
+            dateTimePickerLoginDate.Enabled = false;
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -619,14 +621,14 @@ namespace EasyPOS.Forms.Software.SysSettings
                 FacepayImagePath = currentSettings.FacepayImagePath,
                 POSType = comboBoxPOSType.Text,
                 AllowNegativeInventory = checkBoxAllowNegativeInventory.Checked,
-                IsLoginDate = currentSettings.IsLoginDate,
+                IsLoginDate = checkBoxIsLoginDate.Checked,
                 EnableEasyShopIntegration = checkBoxEnableEasyShopIntegration.Checked,
                 PromptLoginSales = checkBoxPromptLoginSales.Checked,
                 PrinterType = comboBoxPrinterType.Text,
                 SwipeLogin = checkBoxSwipeLogin.Checked,
                 WithdrawalFooter = textBoxWithdrawalFooter.Text,
                 WithdrawalPrintTitle = textBoxWithdrawalPrintTitle.Text,
-                DateLogin = checkBoxDateLogin.Checked,
+                DateLogin = dateTimePickerLoginDate.Value.ToShortDateString(),
                 HideSalesAmount = checkBoxHideSalesAmount.Checked,
                 HideStockInPriceAndCost = checkBoxStockInPriceAndCost.Checked,
                 HideSalesItemDetail = checkBoxHideTouchSalesItemDetail.Checked,
@@ -702,7 +704,8 @@ namespace EasyPOS.Forms.Software.SysSettings
                 checkBoxSwipeLogin.Enabled = false;
                 textBoxWithdrawalFooter.Enabled = false;
                 textBoxWithdrawalPrintTitle.Enabled = false;
-                checkBoxDateLogin.Enabled = false;
+                checkBoxIsLoginDate.Enabled = false;
+                dateTimePickerLoginDate.Enabled = false;
                 checkBoxHideSalesAmount.Enabled = false;
                 checkBoxStockInPriceAndCost.Enabled = false;
                 checkBoxHideTouchSalesItemDetail.Enabled = false;
@@ -802,7 +805,15 @@ namespace EasyPOS.Forms.Software.SysSettings
                 checkBoxSwipeLogin.Enabled = true;
                 textBoxWithdrawalFooter.Enabled = true;
                 textBoxWithdrawalPrintTitle.Enabled = true;
-                checkBoxDateLogin.Enabled = true;
+                checkBoxIsLoginDate.Enabled = true;
+                if (checkBoxIsLoginDate.Checked == true)
+                {
+                    dateTimePickerLoginDate.Enabled = true;
+                }
+                else
+                {
+                    dateTimePickerLoginDate.Enabled = false;
+                }
                 checkBoxHideSalesAmount.Enabled = true;
                 checkBoxStockInPriceAndCost.Enabled = true;
                 checkBoxHideTouchSalesItemDetail.Enabled = true;

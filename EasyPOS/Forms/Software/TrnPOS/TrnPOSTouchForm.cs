@@ -246,6 +246,9 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     {
                         sysSoftwareForm.AddTabPagePOSTouchSalesDetail(this, trnPOSSalesController.DetailSales(Convert.ToInt32(addSales[1])));
                         UpdateSalesListGridDataSource();
+
+                        TrnPOSTouchSelectOrderTakerForm trnPOSTouchSelectOrderTaker = new TrnPOSTouchSelectOrderTakerForm(this, null, trnPOSSalesController.DetailSales(Convert.ToInt32(addSales[1])));
+                        trnPOSTouchSelectOrderTaker.ShowDialog();
                     }
                     else
                     {

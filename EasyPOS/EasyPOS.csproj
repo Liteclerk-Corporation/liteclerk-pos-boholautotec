@@ -459,6 +459,12 @@
     <Compile Include="Entities\TrnStockOutEntity.cs" />
     <Compile Include="Entities\TrnStockOutLineEntity.cs" />
     <Compile Include="Entities\MstUserFormEntity.cs" />
+    <Compile Include="Forms\Account\SysLogin\SysChangeLoginDateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Account\SysLogin\SysChangeLoginDateForm.Designer.cs">
+      <DependentUpon>SysChangeLoginDateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Account\SysLogin\SysLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1329,6 +1335,12 @@
     <Compile Include="Forms\Software\TrnPOS\TrnPOSTouchPrintOrderDetailForm.Designer.cs">
       <DependentUpon>TrnPOSTouchPrintOrderDetailForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Software\TrnPOS\TrnPOSTouchSelectOrderTakerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Software\TrnPOS\TrnPOSTouchSelectOrderTakerForm.Designer.cs">
+      <DependentUpon>TrnPOSTouchSelectOrderTakerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Software\TrnPurchaseOrder\TrnPurchaseOrderDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1522,6 +1534,9 @@
     <Compile Include="Forms\Software\RepPOSReport\RepZReadingReportForm.Designer.cs">
       <DependentUpon>RepZReadingReportForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Account\SysLogin\SysChangeLoginDateForm.resx">
+      <DependentUpon>SysChangeLoginDateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Account\SysLogin\SysLoginOpenDrawerForm.resx">
       <DependentUpon>SysLoginOpenDrawerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1921,6 +1936,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Software\TrnPOS\TrnPOSTouchPrintOrderDetailForm.resx">
       <DependentUpon>TrnPOSTouchPrintOrderDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Software\TrnPOS\TrnPOSTouchSelectOrderTakerForm.resx">
+      <DependentUpon>TrnPOSTouchSelectOrderTakerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Software\TrnPurchaseOrder\TrnPurchaseOrderDetailForm.resx">
       <DependentUpon>TrnPurchaseOrderDetailForm.cs</DependentUpon>
