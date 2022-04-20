@@ -36,6 +36,8 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxTableCode = new System.Windows.Forms.TextBox();
+            this.textBoxSortNumber = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -131,12 +133,34 @@
             this.textBoxTableCode.Size = new System.Drawing.Size(292, 30);
             this.textBoxTableCode.TabIndex = 0;
             // 
+            // textBoxSortNumber
+            // 
+            this.textBoxSortNumber.AcceptsTab = true;
+            this.textBoxSortNumber.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.textBoxSortNumber.HideSelection = false;
+            this.textBoxSortNumber.Location = new System.Drawing.Point(116, 105);
+            this.textBoxSortNumber.Name = "textBoxSortNumber";
+            this.textBoxSortNumber.Size = new System.Drawing.Size(292, 30);
+            this.textBoxSortNumber.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.label3.Location = new System.Drawing.Point(-3, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 23);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Sort Number:";
+            // 
             // MstTableDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(420, 108);
+            this.ClientSize = new System.Drawing.Size(420, 151);
+            this.Controls.Add(this.textBoxSortNumber);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxTableCode);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -163,5 +187,7 @@
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxTableCode;
+        private System.Windows.Forms.TextBox textBoxSortNumber;
+        private System.Windows.Forms.Label label3;
     }
 }

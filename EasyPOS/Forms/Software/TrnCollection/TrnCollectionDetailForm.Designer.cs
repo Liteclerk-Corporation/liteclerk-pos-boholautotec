@@ -29,12 +29,12 @@ namespace EasyPOS.Forms.Software.TrnCollection
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.buttonCollectionLineListPageListFirst = new System.Windows.Forms.Button();
             this.buttonCollectionLineListPageListPrevious = new System.Windows.Forms.Button();
@@ -97,11 +97,13 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePickerCollectionDate = new System.Windows.Forms.DateTimePicker();
             this.buttonAddCollectionLine = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCollectionLineList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.Forms.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -208,14 +210,14 @@ namespace EasyPOS.Forms.Software.TrnCollection
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewCollectionLineList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCollectionLineList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCollectionLineList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewCollectionLineList.ColumnHeadersHeight = 45;
             this.dataGridViewCollectionLineList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCollectionLineListButtonEdit,
@@ -245,8 +247,8 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.dataGridViewCollectionLineList.Name = "dataGridViewCollectionLineList";
             this.dataGridViewCollectionLineList.ReadOnly = true;
             this.dataGridViewCollectionLineList.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.dataGridViewCollectionLineList.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.dataGridViewCollectionLineList.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewCollectionLineList.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.dataGridViewCollectionLineList.RowTemplate.Height = 24;
             this.dataGridViewCollectionLineList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -317,8 +319,8 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // ColumnCollectionLineListAmount
             // 
             this.ColumnCollectionLineListAmount.DataPropertyName = "ColumnCollectionLineListAmount";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnCollectionLineListAmount.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnCollectionLineListAmount.DefaultCellStyle = dataGridViewCellStyle8;
             this.ColumnCollectionLineListAmount.HeaderText = "Amount";
             this.ColumnCollectionLineListAmount.MinimumWidth = 6;
             this.ColumnCollectionLineListAmount.Name = "ColumnCollectionLineListAmount";
@@ -346,8 +348,8 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // ColumnCollectionLineListCheckBank
             // 
             this.ColumnCollectionLineListCheckBank.DataPropertyName = "ColumnCollectionLineListCheckBank";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnCollectionLineListCheckBank.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnCollectionLineListCheckBank.DefaultCellStyle = dataGridViewCellStyle9;
             this.ColumnCollectionLineListCheckBank.HeaderText = "Check Bank";
             this.ColumnCollectionLineListCheckBank.MinimumWidth = 6;
             this.ColumnCollectionLineListCheckBank.Name = "ColumnCollectionLineListCheckBank";
@@ -357,8 +359,8 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // ColumnCollectionLineListCreditCardVerificationCode
             // 
             this.ColumnCollectionLineListCreditCardVerificationCode.DataPropertyName = "ColumnCollectionLineListCreditCardVerificationCode";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnCollectionLineListCreditCardVerificationCode.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnCollectionLineListCreditCardVerificationCode.DefaultCellStyle = dataGridViewCellStyle10;
             this.ColumnCollectionLineListCreditCardVerificationCode.HeaderText = "Verification";
             this.ColumnCollectionLineListCreditCardVerificationCode.MinimumWidth = 6;
             this.ColumnCollectionLineListCreditCardVerificationCode.Name = "ColumnCollectionLineListCreditCardVerificationCode";
@@ -368,8 +370,8 @@ namespace EasyPOS.Forms.Software.TrnCollection
             // ColumnCollectionLineListCreditCardNumber
             // 
             this.ColumnCollectionLineListCreditCardNumber.DataPropertyName = "ColumnCollectionLineListCreditCardNumber";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnCollectionLineListCreditCardNumber.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnCollectionLineListCreditCardNumber.DefaultCellStyle = dataGridViewCellStyle11;
             this.ColumnCollectionLineListCreditCardNumber.HeaderText = "Credit Card No.";
             this.ColumnCollectionLineListCreditCardNumber.MinimumWidth = 6;
             this.ColumnCollectionLineListCreditCardNumber.Name = "ColumnCollectionLineListCreditCardNumber";
@@ -904,7 +906,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.buttonAddCollectionLine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddCollectionLine.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.buttonAddCollectionLine.ForeColor = System.Drawing.Color.White;
-            this.buttonAddCollectionLine.Location = new System.Drawing.Point(1270, 275);
+            this.buttonAddCollectionLine.Location = new System.Drawing.Point(1268, 4);
             this.buttonAddCollectionLine.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAddCollectionLine.Name = "buttonAddCollectionLine";
             this.buttonAddCollectionLine.Size = new System.Drawing.Size(88, 40);
@@ -914,6 +916,15 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.buttonAddCollectionLine.UseVisualStyleBackColor = false;
             this.buttonAddCollectionLine.Click += new System.EventHandler(this.buttonAddCollectionLine_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.buttonAddCollectionLine);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 270);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1370, 45);
+            this.panel2.TabIndex = 47;
+            // 
             // TrnCollectionDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -921,7 +932,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1370, 700);
             this.ControlBox = false;
-            this.Controls.Add(this.buttonAddCollectionLine);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.Forms);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.dataGridViewCollectionLineList);
@@ -941,6 +952,7 @@ namespace EasyPOS.Forms.Software.TrnCollection
             this.panel1.PerformLayout();
             this.Forms.ResumeLayout(false);
             this.Forms.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1008,5 +1020,6 @@ namespace EasyPOS.Forms.Software.TrnCollection
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCollectionLineListCreditCardReferenceNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCollectionLineListCreditCardHolderName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCollectionLineListCreditCardExpiry;
+        private System.Windows.Forms.Panel panel2;
     }
 }

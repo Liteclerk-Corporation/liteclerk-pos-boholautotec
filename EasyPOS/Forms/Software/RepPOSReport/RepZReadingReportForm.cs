@@ -423,24 +423,59 @@ namespace EasyPOS.Forms.Software.RepPOSReport
                     var salesLines = salesLinesQuery.ToArray();
                     var previousDeclareRatesValues = previousDeclareRates.ToArray();
 
-                    totalAccumulatedGrossSales = salesLines.Sum(d =>
+                    //==================================================
+                    //Custom Previous Accumulated Gross Sales Net of Vat
+                    //==================================================
+                    if (accNetSales.Any())
+                    {
+                        var prevAccGrossSalesNetOfVat = accNetSales.FirstOrDefault().AccumulatedGrossSalesNetOfVat;
+                        if (prevAccGrossSalesNetOfVat > 0)
+                        {
+                            totalAccumulatedGrossSales = prevAccGrossSalesNetOfVat;
+                        }
+                        else
+                        {
+                            totalAccumulatedGrossSales = salesLines.Sum(d =>
+                            previousDeclareRatesValues.Where(p => p.Date == d.TrnSale.SalesDate).Any() == true ?
+                                (
+                                    d.MstTax.Code == "EXEMPTVAT" ?
+                                        d.MstTax.Rate > 0 ?
+                                            (d.Price * d.Quantity) - ((d.Price * d.Quantity) / (1 + (d.MstTax.Rate / 100)) * (d.MstTax.Rate / 100)) : d.Price * d.Quantity
+                                    : d.MstTax.Rate > 0 ?
+                                            (d.Price * d.Quantity) - d.TaxAmount : d.Price * d.Quantity
+                                ) * Convert.ToDecimal(previousDeclareRatesValues.Where(p => p.Date == d.TrnSale.SalesDate).FirstOrDefault().DeclareRate)
+                            :
+                                (
+                                    d.MstTax.Code == "EXEMPTVAT" ?
+                                        d.MstItem.MstTax1.Rate > 0 ?
+                                            (d.Price * d.Quantity) - ((d.Price * d.Quantity) / (1 + (d.MstTax.Rate / 100)) * (d.MstTax.Rate / 100)) : d.Price * d.Quantity
+                                    : d.MstTax.Rate > 0 ?
+                                            (d.Price * d.Quantity) - d.TaxAmount : d.Price * d.Quantity
+                                ) * currentDeclareRate
+                            );
+                        }
+                    }
+                    else
+                    {
+                        totalAccumulatedGrossSales = salesLines.Sum(d =>
                         previousDeclareRatesValues.Where(p => p.Date == d.TrnSale.SalesDate).Any() == true ?
                             (
                                 d.MstTax.Code == "EXEMPTVAT" ?
-                                    d.MstItem.MstTax1.Rate > 0 ?
-                                        (d.Price * d.Quantity) - ((d.Price * d.Quantity) / (1 + (d.MstItem.MstTax1.Rate / 100)) * (d.MstItem.MstTax1.Rate / 100)) : d.Price * d.Quantity
+                                    d.MstTax.Rate > 0 ?
+                                        (d.Price * d.Quantity) - ((d.Price * d.Quantity) / (1 + (d.MstTax.Rate / 100)) * (d.MstTax.Rate / 100)) : d.Price * d.Quantity
                                 : d.MstTax.Rate > 0 ?
                                         (d.Price * d.Quantity) - d.TaxAmount : d.Price * d.Quantity
                             ) * Convert.ToDecimal(previousDeclareRatesValues.Where(p => p.Date == d.TrnSale.SalesDate).FirstOrDefault().DeclareRate)
                         :
                             (
                                 d.MstTax.Code == "EXEMPTVAT" ?
-                                    d.MstItem.MstTax1.Rate > 0 ?
-                                        (d.Price * d.Quantity) - ((d.Price * d.Quantity) / (1 + (d.MstItem.MstTax1.Rate / 100)) * (d.MstItem.MstTax1.Rate / 100)) : d.Price * d.Quantity
+                                    d.MstTax.Rate > 0 ?
+                                        (d.Price * d.Quantity) - ((d.Price * d.Quantity) / (1 + (d.MstTax.Rate / 100)) * (d.MstTax.Rate / 100)) : d.Price * d.Quantity
                                 : d.MstTax.Rate > 0 ?
                                         (d.Price * d.Quantity) - d.TaxAmount : d.Price * d.Quantity
                             ) * currentDeclareRate
-                    );
+                        );
+                    }
 
                     totalAccumulatedRegularDiscount = salesLines.Sum(d =>
                         previousDeclareRatesValues.Where(p => p.Date == d.TrnSale.SalesDate).Any() == true ?

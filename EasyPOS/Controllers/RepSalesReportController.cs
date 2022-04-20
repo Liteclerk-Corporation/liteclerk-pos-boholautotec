@@ -114,8 +114,8 @@ namespace EasyPOS.Controllers
                                 Customer = d.MstCustomer.Customer,
                                 Term = d.MstTerm.Term,
                                 Remarks = d.Remarks,
-                                PreparedByUserName = d.MstUser.UserName,
-                                UpdatedUserName = d.MstUser4.UserName,
+                                PreparedByUserName = d.MstUser.FullName,
+                                UpdatedUserName = d.MstUser4.FullName,
                                 Amount = d.Amount,
                                 EntryDateTime = d.EntryDateTime.ToShortTimeString()
 
@@ -143,6 +143,7 @@ namespace EasyPOS.Controllers
                                 Term = d.MstTerm.Term,
                                 Remarks = d.Remarks,
                                 PreparedByUserName = d.MstUser.FullName,
+                                UpdatedUserName = d.MstUser4.FullName,
                                 Amount = d.Amount,
                                 EntryDateTime = d.EntryDateTime.ToShortTimeString()
 
@@ -1155,6 +1156,7 @@ namespace EasyPOS.Controllers
 
                         newSales.Add(new Entities.DgvRepSalesReportAccountsReceivableSummaryReportListEntity
                         {
+                            ColumnCustomerCode = sale.MstCustomer.CustomerCode,
                             ColumnCustomer = sale.MstCustomer.Customer,
                             ColumnTerm = sale.MstTerm.Term,
                             ColumnCreditLimit = sale.MstCustomer.CreditLimit.ToString("#,##0.00"),
@@ -1206,6 +1208,7 @@ namespace EasyPOS.Controllers
 
                         newSales.Add(new Entities.DgvRepSalesReportAccountsReceivableSummaryReportListEntity
                         {
+                            ColumnCustomerCode = sale.MstCustomer.CustomerCode,
                             ColumnCustomer = sale.MstCustomer.Customer,
                             ColumnTerm = sale.MstTerm.Term,
                             ColumnCreditLimit = sale.MstCustomer.CreditLimit.ToString("#,##0.00"),

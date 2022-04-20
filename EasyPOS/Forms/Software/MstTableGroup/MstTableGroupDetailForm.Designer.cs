@@ -36,11 +36,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.buttonAddTable = new System.Windows.Forms.Button();
             this.dataGridViewTableList = new System.Windows.Forms.DataGridView();
-            this.ColumnTableListButtonEdit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ColumnTableListButtonDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ColumnTableListId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTableListTableCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTableListTableGroupId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.buttonTableListPageListFirst = new System.Windows.Forms.Button();
             this.buttonTableListPageListPrevious = new System.Windows.Forms.Button();
@@ -56,6 +51,12 @@
             this.buttonUnlock = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ColumnTableListButtonEdit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ColumnTableListButtonDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ColumnTableListId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTableListTableCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTableListSortNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTableListTableGroupId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -142,6 +143,7 @@
             this.ColumnTableListButtonDelete,
             this.ColumnTableListId,
             this.ColumnTableListTableCode,
+            this.ColumnTableListSortNumber,
             this.ColumnTableListTableGroupId});
             this.dataGridViewTableList.Location = new System.Drawing.Point(12, 52);
             this.dataGridViewTableList.Margin = new System.Windows.Forms.Padding(2);
@@ -158,55 +160,6 @@
             this.dataGridViewTableList.TabIndex = 1;
             this.dataGridViewTableList.TabStop = false;
             this.dataGridViewTableList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTableList_CellClick);
-            // 
-            // ColumnTableListButtonEdit
-            // 
-            this.ColumnTableListButtonEdit.DataPropertyName = "ColumnTableListButtonEdit";
-            this.ColumnTableListButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ColumnTableListButtonEdit.HeaderText = "";
-            this.ColumnTableListButtonEdit.MinimumWidth = 6;
-            this.ColumnTableListButtonEdit.Name = "ColumnTableListButtonEdit";
-            this.ColumnTableListButtonEdit.ReadOnly = true;
-            this.ColumnTableListButtonEdit.Width = 70;
-            // 
-            // ColumnTableListButtonDelete
-            // 
-            this.ColumnTableListButtonDelete.DataPropertyName = "ColumnTableListButtonDelete";
-            this.ColumnTableListButtonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ColumnTableListButtonDelete.HeaderText = "";
-            this.ColumnTableListButtonDelete.MinimumWidth = 6;
-            this.ColumnTableListButtonDelete.Name = "ColumnTableListButtonDelete";
-            this.ColumnTableListButtonDelete.ReadOnly = true;
-            this.ColumnTableListButtonDelete.Width = 70;
-            // 
-            // ColumnTableListId
-            // 
-            this.ColumnTableListId.DataPropertyName = "ColumnTableListId";
-            this.ColumnTableListId.HeaderText = "Id";
-            this.ColumnTableListId.MinimumWidth = 6;
-            this.ColumnTableListId.Name = "ColumnTableListId";
-            this.ColumnTableListId.ReadOnly = true;
-            this.ColumnTableListId.Visible = false;
-            this.ColumnTableListId.Width = 125;
-            // 
-            // ColumnTableListTableCode
-            // 
-            this.ColumnTableListTableCode.DataPropertyName = "ColumnTableListTableCode";
-            this.ColumnTableListTableCode.HeaderText = "Table Code";
-            this.ColumnTableListTableCode.MinimumWidth = 6;
-            this.ColumnTableListTableCode.Name = "ColumnTableListTableCode";
-            this.ColumnTableListTableCode.ReadOnly = true;
-            this.ColumnTableListTableCode.Width = 300;
-            // 
-            // ColumnTableListTableGroupId
-            // 
-            this.ColumnTableListTableGroupId.DataPropertyName = "ColumnTableListTableGroupId";
-            this.ColumnTableListTableGroupId.HeaderText = "Table Group Id";
-            this.ColumnTableListTableGroupId.MinimumWidth = 6;
-            this.ColumnTableListTableGroupId.Name = "ColumnTableListTableGroupId";
-            this.ColumnTableListTableGroupId.ReadOnly = true;
-            this.ColumnTableListTableGroupId.Visible = false;
-            this.ColumnTableListTableGroupId.Width = 125;
             // 
             // panel4
             // 
@@ -434,6 +387,64 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // ColumnTableListButtonEdit
+            // 
+            this.ColumnTableListButtonEdit.DataPropertyName = "ColumnTableListButtonEdit";
+            this.ColumnTableListButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ColumnTableListButtonEdit.HeaderText = "";
+            this.ColumnTableListButtonEdit.MinimumWidth = 6;
+            this.ColumnTableListButtonEdit.Name = "ColumnTableListButtonEdit";
+            this.ColumnTableListButtonEdit.ReadOnly = true;
+            this.ColumnTableListButtonEdit.Width = 70;
+            // 
+            // ColumnTableListButtonDelete
+            // 
+            this.ColumnTableListButtonDelete.DataPropertyName = "ColumnTableListButtonDelete";
+            this.ColumnTableListButtonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ColumnTableListButtonDelete.HeaderText = "";
+            this.ColumnTableListButtonDelete.MinimumWidth = 6;
+            this.ColumnTableListButtonDelete.Name = "ColumnTableListButtonDelete";
+            this.ColumnTableListButtonDelete.ReadOnly = true;
+            this.ColumnTableListButtonDelete.Width = 70;
+            // 
+            // ColumnTableListId
+            // 
+            this.ColumnTableListId.DataPropertyName = "ColumnTableListId";
+            this.ColumnTableListId.HeaderText = "Id";
+            this.ColumnTableListId.MinimumWidth = 6;
+            this.ColumnTableListId.Name = "ColumnTableListId";
+            this.ColumnTableListId.ReadOnly = true;
+            this.ColumnTableListId.Visible = false;
+            this.ColumnTableListId.Width = 125;
+            // 
+            // ColumnTableListTableCode
+            // 
+            this.ColumnTableListTableCode.DataPropertyName = "ColumnTableListTableCode";
+            this.ColumnTableListTableCode.HeaderText = "Table Code";
+            this.ColumnTableListTableCode.MinimumWidth = 6;
+            this.ColumnTableListTableCode.Name = "ColumnTableListTableCode";
+            this.ColumnTableListTableCode.ReadOnly = true;
+            this.ColumnTableListTableCode.Width = 300;
+            // 
+            // ColumnTableListSortNumber
+            // 
+            this.ColumnTableListSortNumber.DataPropertyName = "ColumnTableListSortNumber";
+            this.ColumnTableListSortNumber.HeaderText = "Sort Number";
+            this.ColumnTableListSortNumber.MinimumWidth = 6;
+            this.ColumnTableListSortNumber.Name = "ColumnTableListSortNumber";
+            this.ColumnTableListSortNumber.ReadOnly = true;
+            this.ColumnTableListSortNumber.Width = 150;
+            // 
+            // ColumnTableListTableGroupId
+            // 
+            this.ColumnTableListTableGroupId.DataPropertyName = "ColumnTableListTableGroupId";
+            this.ColumnTableListTableGroupId.HeaderText = "Table Group Id";
+            this.ColumnTableListTableGroupId.MinimumWidth = 6;
+            this.ColumnTableListTableGroupId.Name = "ColumnTableListTableGroupId";
+            this.ColumnTableListTableGroupId.ReadOnly = true;
+            this.ColumnTableListTableGroupId.Visible = false;
+            this.ColumnTableListTableGroupId.Width = 125;
+            // 
             // MstTableGroupDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -488,6 +499,7 @@
         private System.Windows.Forms.DataGridViewButtonColumn ColumnTableListButtonDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTableListId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTableListTableCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTableListSortNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTableListTableGroupId;
     }
 }

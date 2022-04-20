@@ -31,14 +31,6 @@ namespace EasyPOS.Forms.Software.RepSalesReport
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RepCostOfSaleReportForm));
             this.dataGridViewCostOfSalesReport = new System.Windows.Forms.DataGridView();
-            this.ColumnTerminal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSalesNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnBarCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnItemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCostAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -53,6 +45,18 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.buttonPageListPrevious = new System.Windows.Forms.Button();
             this.textBoxPageNumber = new System.Windows.Forms.TextBox();
             this.folderBrowserDialogGenerateCSV = new System.Windows.Forms.FolderBrowserDialog();
+            this.ColumnTerminal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSalesNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnBarCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnItemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCostAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCostSellingPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCostProfit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxTotalProfit = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCostOfSalesReport)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -77,7 +81,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.ColumnItemDescription,
             this.ColumnQuantity,
             this.ColumnCost,
-            this.ColumnCostAmount});
+            this.ColumnCostAmount,
+            this.ColumnCostSellingPrice,
+            this.ColumnCostProfit});
             this.dataGridViewCostOfSalesReport.Location = new System.Drawing.Point(0, 50);
             this.dataGridViewCostOfSalesReport.MultiSelect = false;
             this.dataGridViewCostOfSalesReport.Name = "dataGridViewCostOfSalesReport";
@@ -88,78 +94,6 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.dataGridViewCostOfSalesReport.ShowEditingIcon = false;
             this.dataGridViewCostOfSalesReport.Size = new System.Drawing.Size(1096, 433);
             this.dataGridViewCostOfSalesReport.TabIndex = 12;
-            // 
-            // ColumnTerminal
-            // 
-            this.ColumnTerminal.DataPropertyName = "ColumnTerminal";
-            this.ColumnTerminal.HeaderText = "Terminal";
-            this.ColumnTerminal.MinimumWidth = 6;
-            this.ColumnTerminal.Name = "ColumnTerminal";
-            this.ColumnTerminal.ReadOnly = true;
-            this.ColumnTerminal.Width = 125;
-            // 
-            // ColumnDate
-            // 
-            this.ColumnDate.DataPropertyName = "ColumnDate";
-            this.ColumnDate.HeaderText = "Sales Date";
-            this.ColumnDate.MinimumWidth = 6;
-            this.ColumnDate.Name = "ColumnDate";
-            this.ColumnDate.ReadOnly = true;
-            this.ColumnDate.Width = 120;
-            // 
-            // ColumnSalesNumber
-            // 
-            this.ColumnSalesNumber.DataPropertyName = "ColumnSalesNumber";
-            this.ColumnSalesNumber.HeaderText = "Sales No.";
-            this.ColumnSalesNumber.MinimumWidth = 6;
-            this.ColumnSalesNumber.Name = "ColumnSalesNumber";
-            this.ColumnSalesNumber.ReadOnly = true;
-            this.ColumnSalesNumber.Width = 120;
-            // 
-            // ColumnBarCode
-            // 
-            this.ColumnBarCode.DataPropertyName = "ColumnBarCode";
-            this.ColumnBarCode.HeaderText = "Barcode";
-            this.ColumnBarCode.MinimumWidth = 6;
-            this.ColumnBarCode.Name = "ColumnBarCode";
-            this.ColumnBarCode.ReadOnly = true;
-            this.ColumnBarCode.Width = 125;
-            // 
-            // ColumnItemDescription
-            // 
-            this.ColumnItemDescription.DataPropertyName = "ColumnItemDescription";
-            this.ColumnItemDescription.HeaderText = "Item Description";
-            this.ColumnItemDescription.MinimumWidth = 6;
-            this.ColumnItemDescription.Name = "ColumnItemDescription";
-            this.ColumnItemDescription.ReadOnly = true;
-            this.ColumnItemDescription.Width = 200;
-            // 
-            // ColumnQuantity
-            // 
-            this.ColumnQuantity.DataPropertyName = "ColumnQuantity";
-            this.ColumnQuantity.HeaderText = "Quantity";
-            this.ColumnQuantity.MinimumWidth = 6;
-            this.ColumnQuantity.Name = "ColumnQuantity";
-            this.ColumnQuantity.ReadOnly = true;
-            this.ColumnQuantity.Width = 120;
-            // 
-            // ColumnCost
-            // 
-            this.ColumnCost.DataPropertyName = "ColumnCost";
-            this.ColumnCost.HeaderText = "Cost";
-            this.ColumnCost.MinimumWidth = 6;
-            this.ColumnCost.Name = "ColumnCost";
-            this.ColumnCost.ReadOnly = true;
-            this.ColumnCost.Width = 125;
-            // 
-            // ColumnCostAmount
-            // 
-            this.ColumnCostAmount.DataPropertyName = "ColumnCostAmount";
-            this.ColumnCostAmount.HeaderText = "Cost Amount";
-            this.ColumnCostAmount.MinimumWidth = 6;
-            this.ColumnCostAmount.Name = "ColumnCostAmount";
-            this.ColumnCostAmount.ReadOnly = true;
-            this.ColumnCostAmount.Width = 125;
             // 
             // panel2
             // 
@@ -239,6 +173,8 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LightGray;
+            this.panel4.Controls.Add(this.textBoxTotalProfit);
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.textBoxTotalCost);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.buttonPageListFirst);
@@ -259,11 +195,11 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.textBoxTotalCost.BackColor = System.Drawing.Color.LightGray;
             this.textBoxTotalCost.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTotalCost.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTotalCost.Location = new System.Drawing.Point(800, 12);
+            this.textBoxTotalCost.Location = new System.Drawing.Point(578, 10);
             this.textBoxTotalCost.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTotalCost.Name = "textBoxTotalCost";
             this.textBoxTotalCost.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBoxTotalCost.Size = new System.Drawing.Size(246, 23);
+            this.textBoxTotalCost.Size = new System.Drawing.Size(202, 23);
             this.textBoxTotalCost.TabIndex = 15;
             // 
             // label2
@@ -271,7 +207,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(688, 12);
+            this.label2.Location = new System.Drawing.Point(487, 11);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 23);
@@ -337,7 +273,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.buttonPageListPrevious.Location = new System.Drawing.Point(80, 8);
             this.buttonPageListPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPageListPrevious.Name = "buttonPageListPrevious";
-            this.buttonPageListPrevious.Size = new System.Drawing.Size(70, 26);
+            this.buttonPageListPrevious.Size = new System.Drawing.Size(84, 26);
             this.buttonPageListPrevious.TabIndex = 9;
             this.buttonPageListPrevious.TabStop = false;
             this.buttonPageListPrevious.Text = "Previous";
@@ -357,6 +293,121 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.textBoxPageNumber.TabIndex = 12;
             this.textBoxPageNumber.TabStop = false;
             this.textBoxPageNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ColumnTerminal
+            // 
+            this.ColumnTerminal.DataPropertyName = "ColumnTerminal";
+            this.ColumnTerminal.HeaderText = "Terminal";
+            this.ColumnTerminal.MinimumWidth = 6;
+            this.ColumnTerminal.Name = "ColumnTerminal";
+            this.ColumnTerminal.ReadOnly = true;
+            this.ColumnTerminal.Width = 125;
+            // 
+            // ColumnDate
+            // 
+            this.ColumnDate.DataPropertyName = "ColumnDate";
+            this.ColumnDate.HeaderText = "Sales Date";
+            this.ColumnDate.MinimumWidth = 6;
+            this.ColumnDate.Name = "ColumnDate";
+            this.ColumnDate.ReadOnly = true;
+            this.ColumnDate.Width = 120;
+            // 
+            // ColumnSalesNumber
+            // 
+            this.ColumnSalesNumber.DataPropertyName = "ColumnSalesNumber";
+            this.ColumnSalesNumber.HeaderText = "Sales No.";
+            this.ColumnSalesNumber.MinimumWidth = 6;
+            this.ColumnSalesNumber.Name = "ColumnSalesNumber";
+            this.ColumnSalesNumber.ReadOnly = true;
+            this.ColumnSalesNumber.Width = 120;
+            // 
+            // ColumnBarCode
+            // 
+            this.ColumnBarCode.DataPropertyName = "ColumnBarCode";
+            this.ColumnBarCode.HeaderText = "Barcode";
+            this.ColumnBarCode.MinimumWidth = 6;
+            this.ColumnBarCode.Name = "ColumnBarCode";
+            this.ColumnBarCode.ReadOnly = true;
+            this.ColumnBarCode.Width = 125;
+            // 
+            // ColumnItemDescription
+            // 
+            this.ColumnItemDescription.DataPropertyName = "ColumnItemDescription";
+            this.ColumnItemDescription.HeaderText = "Item Description";
+            this.ColumnItemDescription.MinimumWidth = 6;
+            this.ColumnItemDescription.Name = "ColumnItemDescription";
+            this.ColumnItemDescription.ReadOnly = true;
+            this.ColumnItemDescription.Width = 200;
+            // 
+            // ColumnQuantity
+            // 
+            this.ColumnQuantity.DataPropertyName = "ColumnQuantity";
+            this.ColumnQuantity.HeaderText = "Quantity";
+            this.ColumnQuantity.MinimumWidth = 6;
+            this.ColumnQuantity.Name = "ColumnQuantity";
+            this.ColumnQuantity.ReadOnly = true;
+            this.ColumnQuantity.Width = 120;
+            // 
+            // ColumnCost
+            // 
+            this.ColumnCost.DataPropertyName = "ColumnCost";
+            this.ColumnCost.HeaderText = "Cost";
+            this.ColumnCost.MinimumWidth = 6;
+            this.ColumnCost.Name = "ColumnCost";
+            this.ColumnCost.ReadOnly = true;
+            this.ColumnCost.Width = 125;
+            // 
+            // ColumnCostAmount
+            // 
+            this.ColumnCostAmount.DataPropertyName = "ColumnCostAmount";
+            this.ColumnCostAmount.HeaderText = "Cost Amount";
+            this.ColumnCostAmount.MinimumWidth = 6;
+            this.ColumnCostAmount.Name = "ColumnCostAmount";
+            this.ColumnCostAmount.ReadOnly = true;
+            this.ColumnCostAmount.Width = 125;
+            // 
+            // ColumnCostSellingPrice
+            // 
+            this.ColumnCostSellingPrice.DataPropertyName = "ColumnCostSellingPrice";
+            this.ColumnCostSellingPrice.HeaderText = "Selling Price";
+            this.ColumnCostSellingPrice.MinimumWidth = 6;
+            this.ColumnCostSellingPrice.Name = "ColumnCostSellingPrice";
+            this.ColumnCostSellingPrice.ReadOnly = true;
+            this.ColumnCostSellingPrice.Width = 125;
+            // 
+            // ColumnCostProfit
+            // 
+            this.ColumnCostProfit.DataPropertyName = "ColumnCostProfit";
+            this.ColumnCostProfit.HeaderText = "Profit";
+            this.ColumnCostProfit.MinimumWidth = 6;
+            this.ColumnCostProfit.Name = "ColumnCostProfit";
+            this.ColumnCostProfit.ReadOnly = true;
+            this.ColumnCostProfit.Width = 125;
+            // 
+            // textBoxTotalProfit
+            // 
+            this.textBoxTotalProfit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTotalProfit.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxTotalProfit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTotalProfit.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTotalProfit.Location = new System.Drawing.Point(907, 10);
+            this.textBoxTotalProfit.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxTotalProfit.Name = "textBoxTotalProfit";
+            this.textBoxTotalProfit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBoxTotalProfit.Size = new System.Drawing.Size(173, 23);
+            this.textBoxTotalProfit.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(800, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 23);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Total Profit:";
             // 
             // RepCostOfSaleReportForm
             // 
@@ -407,5 +458,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCostAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCostSellingPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCostProfit;
+        private System.Windows.Forms.TextBox textBoxTotalProfit;
+        private System.Windows.Forms.Label label1;
     }
 }
