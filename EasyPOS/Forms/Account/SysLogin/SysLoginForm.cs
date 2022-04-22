@@ -72,7 +72,7 @@ namespace EasyPOS.Forms.Account.SysLogin
 
             dateTimePickerLoginDate.Enabled = false;
             textBoxUsername.Focus();
-            labelVersion.Text = "Liteclerk POS Version: " + Modules.SysCurrentModule.GetCurrentSettings().CurrentVersion;
+            labelVersion.Text = "©" + " " + Modules.SysCurrentModule.GetCurrentSettings().CurrentVersion + ", Easyfis Corporation";
             labelSupport.Text = "Support: Easyfis Corporation " + Modules.SysCurrentModule.GetCurrentSettings().CurrentSupport;
 
             _trnPOSBarcodeForm = trnPOSBarcodeForm;

@@ -46,7 +46,7 @@ namespace EasyPOS.Forms.Software
             labelCurrentTerminal.Text = "Terminal: " + currentTerminal;
             panelSidebarMenu.Visible = false;
 
-            labelVersion.Text = "Liteclerk POS Version: " + Modules.SysCurrentModule.GetCurrentSettings().CurrentVersion;
+            labelVersion.Text = "©" + " " + Modules.SysCurrentModule.GetCurrentSettings().CurrentVersion + ", Easyfis Corporation";
             labelSupport.Text = "Support: Liteclerk Corporation " + Modules.SysCurrentModule.GetCurrentSettings().CurrentSupport;
         }
 

@@ -47,9 +47,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelSupport = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonChangeLoginDate = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBoxUserCardNumber = new System.Windows.Forms.TextBox();
-            this.buttonChangeLoginDate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -255,15 +255,14 @@
             this.labelVersion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.labelVersion.AutoSize = true;
-            this.labelVersion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.labelVersion.Font = new System.Drawing.Font("Segoe UI Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVersion.ForeColor = System.Drawing.Color.White;
-            this.labelVersion.Location = new System.Drawing.Point(351, 10);
+            this.labelVersion.Location = new System.Drawing.Point(230, 24);
             this.labelVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(221, 20);
+            this.labelVersion.Size = new System.Drawing.Size(201, 19);
             this.labelVersion.TabIndex = 9;
-            this.labelVersion.Text = "Easy POS Version: 1.20200518";
-            this.labelVersion.Visible = false;
+            this.labelVersion.Text = "Liteclerk POS Version: 1.20200518";
             // 
             // pictureBox2
             // 
@@ -283,7 +282,7 @@
             this.labelSupport.AutoSize = true;
             this.labelSupport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.labelSupport.ForeColor = System.Drawing.Color.White;
-            this.labelSupport.Location = new System.Drawing.Point(351, 30);
+            this.labelSupport.Location = new System.Drawing.Point(507, 11);
             this.labelSupport.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSupport.Name = "labelSupport";
             this.labelSupport.Size = new System.Drawing.Size(323, 20);
@@ -304,6 +303,27 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(579, 94);
             this.panel3.TabIndex = 22;
+            // 
+            // buttonChangeLoginDate
+            // 
+            this.buttonChangeLoginDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonChangeLoginDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonChangeLoginDate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonChangeLoginDate.FlatAppearance.BorderSize = 0;
+            this.buttonChangeLoginDate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(126)))), ((int)(((byte)(181)))));
+            this.buttonChangeLoginDate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(126)))), ((int)(((byte)(181)))));
+            this.buttonChangeLoginDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChangeLoginDate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonChangeLoginDate.ForeColor = System.Drawing.Color.White;
+            this.buttonChangeLoginDate.Location = new System.Drawing.Point(450, 42);
+            this.buttonChangeLoginDate.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonChangeLoginDate.Name = "buttonChangeLoginDate";
+            this.buttonChangeLoginDate.Size = new System.Drawing.Size(105, 36);
+            this.buttonChangeLoginDate.TabIndex = 17;
+            this.buttonChangeLoginDate.TabStop = false;
+            this.buttonChangeLoginDate.Text = "Change";
+            this.buttonChangeLoginDate.UseVisualStyleBackColor = false;
+            this.buttonChangeLoginDate.Click += new System.EventHandler(this.buttonChangeLoginDate_Click);
             // 
             // panel4
             // 
@@ -332,27 +352,6 @@
             this.textBoxUserCardNumber.TabIndex = 0;
             this.textBoxUserCardNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxUserCardNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxUserCardNumber_KeyDown);
-            // 
-            // buttonChangeLoginDate
-            // 
-            this.buttonChangeLoginDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonChangeLoginDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
-            this.buttonChangeLoginDate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
-            this.buttonChangeLoginDate.FlatAppearance.BorderSize = 0;
-            this.buttonChangeLoginDate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(126)))), ((int)(((byte)(181)))));
-            this.buttonChangeLoginDate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(126)))), ((int)(((byte)(181)))));
-            this.buttonChangeLoginDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonChangeLoginDate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonChangeLoginDate.ForeColor = System.Drawing.Color.White;
-            this.buttonChangeLoginDate.Location = new System.Drawing.Point(450, 42);
-            this.buttonChangeLoginDate.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonChangeLoginDate.Name = "buttonChangeLoginDate";
-            this.buttonChangeLoginDate.Size = new System.Drawing.Size(105, 36);
-            this.buttonChangeLoginDate.TabIndex = 17;
-            this.buttonChangeLoginDate.TabStop = false;
-            this.buttonChangeLoginDate.Text = "Change";
-            this.buttonChangeLoginDate.UseVisualStyleBackColor = false;
-            this.buttonChangeLoginDate.Click += new System.EventHandler(this.buttonChangeLoginDate_Click);
             // 
             // SysLoginForm
             // 

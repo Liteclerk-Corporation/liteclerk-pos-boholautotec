@@ -143,15 +143,14 @@
             this.labelVersion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.labelVersion.AutoSize = true;
-            this.labelVersion.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVersion.Font = new System.Drawing.Font("Segoe UI Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVersion.ForeColor = System.Drawing.Color.White;
-            this.labelVersion.Location = new System.Drawing.Point(279, 9);
+            this.labelVersion.Location = new System.Drawing.Point(279, 20);
             this.labelVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(235, 19);
+            this.labelVersion.Size = new System.Drawing.Size(201, 19);
             this.labelVersion.TabIndex = 4;
             this.labelVersion.Text = "Liteclerk POS Version: 1.20200518";
-            this.labelVersion.Visible = false;
             // 
             // pictureBox1
             // 
@@ -171,7 +170,7 @@
             this.labelSupport.AutoSize = true;
             this.labelSupport.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSupport.ForeColor = System.Drawing.Color.White;
-            this.labelSupport.Location = new System.Drawing.Point(279, 28);
+            this.labelSupport.Location = new System.Drawing.Point(279, 39);
             this.labelSupport.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSupport.Name = "labelSupport";
             this.labelSupport.Size = new System.Drawing.Size(316, 19);
