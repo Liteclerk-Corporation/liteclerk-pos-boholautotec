@@ -19,7 +19,7 @@ namespace EasyPOS.Forms.License.SysLicense
 
             textBoxLicenseCode.Focus();
 
-            labelVersion.Text = "EasyPOS Version: " + Modules.SysCurrentModule.GetCurrentSettings().CurrentVersion;
+            labelVersion.Text = "©" + " " + Modules.SysCurrentModule.GetCurrentSettings().CurrentVersion + ", Easyfis Corporation";
             labelSupport.Text = "Support: Easyfis Corporation " + Modules.SysCurrentModule.GetCurrentSettings().CurrentSupport;
         }
 

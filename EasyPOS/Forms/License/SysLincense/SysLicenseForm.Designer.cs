@@ -35,7 +35,6 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonLicense = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.labelVersion = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelSupport = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -44,6 +43,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBoxSerialNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.labelVersion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -144,21 +144,6 @@
             this.panel2.Size = new System.Drawing.Size(554, 58);
             this.panel2.TabIndex = 21;
             // 
-            // labelVersion
-            // 
-            this.labelVersion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelVersion.AutoSize = true;
-            this.labelVersion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.labelVersion.ForeColor = System.Drawing.Color.White;
-            this.labelVersion.Location = new System.Drawing.Point(267, 8);
-            this.labelVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(221, 20);
-            this.labelVersion.TabIndex = 4;
-            this.labelVersion.Text = "Easy POS Version: 1.20200518";
-            this.labelVersion.Visible = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::EasyPOS.Properties.Resources.liteclerklogo;
@@ -177,7 +162,7 @@
             this.labelSupport.AutoSize = true;
             this.labelSupport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.labelSupport.ForeColor = System.Drawing.Color.White;
-            this.labelSupport.Location = new System.Drawing.Point(267, 28);
+            this.labelSupport.Location = new System.Drawing.Point(472, 18);
             this.labelSupport.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSupport.Name = "labelSupport";
             this.labelSupport.Size = new System.Drawing.Size(323, 20);
@@ -259,6 +244,20 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "Serial Number:";
             // 
+            // labelVersion
+            // 
+            this.labelVersion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelVersion.AutoSize = true;
+            this.labelVersion.Font = new System.Drawing.Font("Segoe UI Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVersion.ForeColor = System.Drawing.Color.White;
+            this.labelVersion.Location = new System.Drawing.Point(267, 19);
+            this.labelVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelVersion.Name = "labelVersion";
+            this.labelVersion.Size = new System.Drawing.Size(201, 19);
+            this.labelVersion.TabIndex = 10;
+            this.labelVersion.Text = "Liteclerk POS Version: 1.20200518";
+            // 
             // SysLicenseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -299,7 +298,6 @@
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonLicense;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label labelVersion;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label labelSupport;
         private System.Windows.Forms.Panel panel4;
@@ -308,5 +306,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxSerialNumber;
+        private System.Windows.Forms.Label labelVersion;
     }
 }
