@@ -559,14 +559,14 @@ namespace EasyPOS.Forms.Software.TrnPOS
             }
             else
             {
-                labelTerminal.Text = dataGridViewSalesList.Rows[rowIndex].Cells[dataGridViewSalesList.Columns["ColumnTerminal"].Index].Value.ToString();
-                labelTransactionDate.Text = dataGridViewSalesList.Rows[rowIndex].Cells[dataGridViewSalesList.Columns["ColumnSalesDate"].Index].Value.ToString();
-                labelInvoiceNumber.Text = dataGridViewSalesList.Rows[rowIndex].Cells[dataGridViewSalesList.Columns["ColumnSalesNumber"].Index].Value.ToString();
+                labelTerminal.Text = dataGridViewSalesList.Rows[rowIndex].Cells[dataGridViewSalesList.Columns["ColumnTerminal"].Index].Selected.ToString();
+                labelTransactionDate.Text = dataGridViewSalesList.Rows[rowIndex].Cells[dataGridViewSalesList.Columns["ColumnSalesDate"].Index].Selected.ToString();
+                labelInvoiceNumber.Text = dataGridViewSalesList.Rows[rowIndex].Cells[dataGridViewSalesList.Columns["ColumnSalesNumber"].Index].Selected.ToString();
 
                 String receiptInvoiceNumber = "";
                 if (dataGridViewSalesList.Rows[rowIndex].Cells[dataGridViewSalesList.Columns["ColumnRececiptInvoiceNumber"].Index].Value != null)
                 {
-                    receiptInvoiceNumber = dataGridViewSalesList.Rows[rowIndex].Cells[dataGridViewSalesList.Columns["ColumnRececiptInvoiceNumber"].Index].Value.ToString();
+                    receiptInvoiceNumber = dataGridViewSalesList.Rows[rowIndex].Cells[dataGridViewSalesList.Columns["ColumnRececiptInvoiceNumber"].Index].Selected.ToString();
                 }
 
                 labelReceiptInvoiceNumber.Text = receiptInvoiceNumber;
