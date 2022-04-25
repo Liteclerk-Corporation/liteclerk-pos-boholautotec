@@ -414,7 +414,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 {
                     dataGridViewSalesLineList.Columns[1].Visible = false;
                 }
-
+                
                 GetSalesDetail();
                 GetSalesLineList();
             }
@@ -689,8 +689,16 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                 if (Modules.SysCurrentModule.GetCurrentSettings().IsBarcodeQuantityAlwaysOne == true)
                 {
-                    trnPOSSalesLineController.BarcodeSalesLine(trnSalesEntity.Id, textBoxBarcode.Text);
-                    GetSalesLineList();
+                    String[] barcodeSalesLine = trnPOSSalesLineController.BarcodeSalesLine(trnSalesEntity.Id, textBoxBarcode.Text);
+                    if (barcodeSalesLine[1].Equals("0") == false)
+                    {
+                        GetSalesLineList();
+                    }
+                    else
+                    {
+                        MessageBox.Show(barcodeSalesLine[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else
                 {
