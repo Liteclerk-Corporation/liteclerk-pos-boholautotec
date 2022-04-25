@@ -1023,6 +1023,7 @@
             this.Name = "TrnPOSBarcodeDetailForm";
             this.Text = "Sales Detail";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TrnSalesDetailForm_FormClosing);
+            this.Shown += new System.EventHandler(this.TrnPOSBarcodeDetailForm_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -1250,5 +1250,10 @@ namespace EasyPOS.Forms.Software.TrnPOS
             Account.SysLogin.SysLoginOpenDrawerForm login = new Account.SysLogin.SysLoginOpenDrawerForm();
             login.ShowDialog();
         }
+
+        private void TrnPOSBarcodeDetailForm_Shown(object sender, EventArgs e)
+        {
+            textBoxBarcode.Focus();
+        }
     }
 }
