@@ -64,7 +64,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(554, 62);
+            this.panel1.Size = new System.Drawing.Size(579, 62);
             this.panel1.TabIndex = 4;
             // 
             // pictureBox1
@@ -100,7 +100,7 @@
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(454, 12);
+            this.buttonClose.Location = new System.Drawing.Point(479, 12);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(88, 40);
@@ -121,7 +121,7 @@
             this.buttonLicense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLicense.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLicense.ForeColor = System.Drawing.Color.White;
-            this.buttonLicense.Location = new System.Drawing.Point(360, 12);
+            this.buttonLicense.Location = new System.Drawing.Point(385, 12);
             this.buttonLicense.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLicense.Name = "buttonLicense";
             this.buttonLicense.Size = new System.Drawing.Size(88, 40);
@@ -141,7 +141,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 267);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(554, 58);
+            this.panel2.Size = new System.Drawing.Size(579, 58);
             this.panel2.TabIndex = 21;
             // 
             // pictureBox2
@@ -179,7 +179,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 164);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(554, 103);
+            this.panel4.Size = new System.Drawing.Size(579, 103);
             this.panel4.TabIndex = 23;
             // 
             // textBoxLicenseCode
@@ -190,7 +190,7 @@
             this.textBoxLicenseCode.Location = new System.Drawing.Point(14, 45);
             this.textBoxLicenseCode.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxLicenseCode.Name = "textBoxLicenseCode";
-            this.textBoxLicenseCode.Size = new System.Drawing.Size(525, 34);
+            this.textBoxLicenseCode.Size = new System.Drawing.Size(550, 34);
             this.textBoxLicenseCode.TabIndex = 14;
             this.textBoxLicenseCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxLicenseCode_KeyDown);
             // 
@@ -214,7 +214,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 62);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(554, 102);
+            this.panel3.Size = new System.Drawing.Size(579, 102);
             this.panel3.TabIndex = 22;
             // 
             // textBoxSerialNumber
@@ -228,7 +228,7 @@
             this.textBoxSerialNumber.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSerialNumber.Name = "textBoxSerialNumber";
             this.textBoxSerialNumber.ReadOnly = true;
-            this.textBoxSerialNumber.Size = new System.Drawing.Size(525, 39);
+            this.textBoxSerialNumber.Size = new System.Drawing.Size(550, 39);
             this.textBoxSerialNumber.TabIndex = 0;
             this.textBoxSerialNumber.TabStop = false;
             this.textBoxSerialNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -262,7 +262,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(554, 325);
+            this.ClientSize = new System.Drawing.Size(579, 325);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
