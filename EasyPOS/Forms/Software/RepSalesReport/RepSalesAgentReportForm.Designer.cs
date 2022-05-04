@@ -148,7 +148,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.buttonPageListPrevious.Location = new System.Drawing.Point(80, 15);
             this.buttonPageListPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPageListPrevious.Name = "buttonPageListPrevious";
-            this.buttonPageListPrevious.Size = new System.Drawing.Size(84, 33);
+            this.buttonPageListPrevious.Size = new System.Drawing.Size(101, 33);
             this.buttonPageListPrevious.TabIndex = 9;
             this.buttonPageListPrevious.TabStop = false;
             this.buttonPageListPrevious.Text = "Previous";
@@ -177,7 +177,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             this.textBoxPageNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxPageNumber.BackColor = System.Drawing.Color.White;
             this.textBoxPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPageNumber.Location = new System.Drawing.Point(185, 21);
+            this.textBoxPageNumber.Location = new System.Drawing.Point(188, 26);
             this.textBoxPageNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPageNumber.Name = "textBoxPageNumber";
             this.textBoxPageNumber.ReadOnly = true;
