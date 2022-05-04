@@ -1306,5 +1306,59 @@ namespace EasyPOS.Controllers
             return salesLines.ToList();
 
         }
+
+        // ==================
+        // Sales Agent Report
+        // ==================
+        public List<Entities.RepSalesReportSalesAgentReportEntity> SalesAgentReport(DateTime startDate, DateTime endDate, Int32 SalesAgentId)
+        {
+            if (SalesAgentId == 0)
+            {
+                var salesLines = from d in db.TrnSalesLines
+                                 where d.TrnSale.SalesDate >= startDate
+                                 && d.TrnSale.SalesDate <= endDate
+                                 && d.TrnSale.IsLocked == true
+                                 && d.TrnSale.IsCancelled == false
+                                 select new Entities.RepSalesReportSalesAgentReportEntity
+                                 {
+                                     Id = d.Id,
+                                     SalesId = d.SalesId,
+                                     SalesAgent = d.TrnSale.MstUser5.FullName,
+                                     EntryDateTime = d.TrnSale.EntryDateTime.ToShortTimeString(),
+                                     Quantity = d.Quantity,
+                                     BarCode = d.MstItem.BarCode,
+                                     ItemDescription = d.MstItem.ItemDescription,
+                                     Price = d.Price,
+                                     DiscountAmount = d.DiscountAmount,
+                                     Amount = d.Amount,
+                                 };
+
+                return salesLines.ToList();
+            }
+            else
+            {
+                var salesLines = from d in db.TrnSalesLines
+                                 where d.TrnSale.SalesDate >= startDate
+                                 && d.TrnSale.SalesDate <= endDate
+                                 && d.TrnSale.SalesAgent == SalesAgentId
+                                 && d.TrnSale.IsLocked == true
+                                 && d.TrnSale.IsCancelled == false
+                                 select new Entities.RepSalesReportSalesAgentReportEntity
+                                 {
+                                     Id = d.Id,
+                                     SalesId = d.SalesId,
+                                     SalesAgent = d.TrnSale.MstUser5.FullName,
+                                     EntryDateTime = d.TrnSale.EntryDateTime.ToShortTimeString(),
+                                     Quantity = d.Quantity,
+                                     BarCode = d.MstItem.BarCode,
+                                     ItemDescription = d.MstItem.ItemDescription,
+                                     Price = d.Price,
+                                     DiscountAmount = d.DiscountAmount,
+                                     Amount = d.Amount,
+                                 };
+
+                return salesLines.ToList();
+            }
+        }
     }
 }

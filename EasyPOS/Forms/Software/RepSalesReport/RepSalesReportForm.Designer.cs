@@ -307,7 +307,9 @@
             "",
             "Accounts Receivable",
             "",
-            "POS Touch Deleted Items"});
+            "POS Touch Deleted Items",
+            "",
+            "Sales Agent Report"});
             this.listBoxSalesReport.Location = new System.Drawing.Point(0, 0);
             this.listBoxSalesReport.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxSalesReport.Name = "listBoxSalesReport";
