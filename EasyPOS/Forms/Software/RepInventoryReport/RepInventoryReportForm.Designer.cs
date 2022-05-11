@@ -40,6 +40,8 @@
             this.buttonPageListNext = new System.Windows.Forms.Button();
             this.buttonPageListPrevious = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.textBoxTotalSellingAmount = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.textBoxTotalAmount = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonPageListFirst = new System.Windows.Forms.Button();
@@ -55,8 +57,6 @@
             this.folderBrowserDialogGenerateCSV = new System.Windows.Forms.FolderBrowserDialog();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonPrint = new System.Windows.Forms.Button();
-            this.textBoxTotalSellingAmount = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.ColumnItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnBarCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnItemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,7 +103,7 @@
             this.buttonPageListPrevious.Location = new System.Drawing.Point(100, 9);
             this.buttonPageListPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPageListPrevious.Name = "buttonPageListPrevious";
-            this.buttonPageListPrevious.Size = new System.Drawing.Size(82, 32);
+            this.buttonPageListPrevious.Size = new System.Drawing.Size(94, 32);
             this.buttonPageListPrevious.TabIndex = 9;
             this.buttonPageListPrevious.Text = "Previous";
             this.buttonPageListPrevious.UseVisualStyleBackColor = false;
@@ -128,6 +128,33 @@
             this.panel4.Size = new System.Drawing.Size(1370, 52);
             this.panel4.TabIndex = 20;
             // 
+            // textBoxTotalSellingAmount
+            // 
+            this.textBoxTotalSellingAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTotalSellingAmount.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxTotalSellingAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTotalSellingAmount.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTotalSellingAmount.Location = new System.Drawing.Point(1187, 14);
+            this.textBoxTotalSellingAmount.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxTotalSellingAmount.Name = "textBoxTotalSellingAmount";
+            this.textBoxTotalSellingAmount.ReadOnly = true;
+            this.textBoxTotalSellingAmount.Size = new System.Drawing.Size(165, 23);
+            this.textBoxTotalSellingAmount.TabIndex = 17;
+            this.textBoxTotalSellingAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxTotalSellingAmount.WordWrap = false;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(994, 14);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(189, 23);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Total Selling Amount :";
+            // 
             // textBoxTotalAmount
             // 
             this.textBoxTotalAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -137,9 +164,10 @@
             this.textBoxTotalAmount.Location = new System.Drawing.Point(743, 14);
             this.textBoxTotalAmount.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTotalAmount.Name = "textBoxTotalAmount";
-            this.textBoxTotalAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBoxTotalAmount.Size = new System.Drawing.Size(188, 23);
+            this.textBoxTotalAmount.ReadOnly = true;
+            this.textBoxTotalAmount.Size = new System.Drawing.Size(179, 23);
             this.textBoxTotalAmount.TabIndex = 15;
+            this.textBoxTotalAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxTotalAmount.WordWrap = false;
             // 
             // label2
@@ -353,32 +381,6 @@
             this.buttonPrint.UseVisualStyleBackColor = false;
             this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
-            // textBoxTotalSellingAmount
-            // 
-            this.textBoxTotalSellingAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxTotalSellingAmount.BackColor = System.Drawing.Color.LightGray;
-            this.textBoxTotalSellingAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTotalSellingAmount.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTotalSellingAmount.Location = new System.Drawing.Point(1162, 14);
-            this.textBoxTotalSellingAmount.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxTotalSellingAmount.Name = "textBoxTotalSellingAmount";
-            this.textBoxTotalSellingAmount.Size = new System.Drawing.Size(190, 23);
-            this.textBoxTotalSellingAmount.TabIndex = 17;
-            this.textBoxTotalSellingAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBoxTotalSellingAmount.WordWrap = false;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(962, 14);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 23);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Total Selling Amount :";
-            // 
             // ColumnItemCode
             // 
             this.ColumnItemCode.DataPropertyName = "ColumnItemCode";
@@ -514,6 +516,7 @@
             // 
             // ColumnSellingAmount
             // 
+            this.ColumnSellingAmount.DataPropertyName = "ColumnSellingAmount";
             this.ColumnSellingAmount.HeaderText = "Selling Amount";
             this.ColumnSellingAmount.MinimumWidth = 6;
             this.ColumnSellingAmount.Name = "ColumnSellingAmount";
