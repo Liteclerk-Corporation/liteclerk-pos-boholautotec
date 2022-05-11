@@ -25,5 +25,6 @@ namespace EasyPOS.Entities
         public Decimal Cost { get; set; }
         public Decimal Price { get; set; }
         public Decimal Amount { get; set; }
+        public Decimal SellingAmount { get; set; }
     }
 }

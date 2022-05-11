@@ -49,6 +49,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonClose = new System.Windows.Forms.Button();
+            this.comboBoxStockCount = new System.Windows.Forms.ComboBox();
+            this.labelStockCount = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -86,6 +88,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LightGray;
+            this.panel4.Controls.Add(this.comboBoxStockCount);
+            this.panel4.Controls.Add(this.labelStockCount);
             this.panel4.Controls.Add(this.checkBoxFilter);
             this.panel4.Controls.Add(this.labelFilter);
             this.panel4.Controls.Add(this.comboBoxCategory);
@@ -108,7 +112,7 @@
             // checkBoxFilter
             // 
             this.checkBoxFilter.AutoSize = true;
-            this.checkBoxFilter.Location = new System.Drawing.Point(504, 140);
+            this.checkBoxFilter.Location = new System.Drawing.Point(504, 177);
             this.checkBoxFilter.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxFilter.Name = "checkBoxFilter";
             this.checkBoxFilter.Size = new System.Drawing.Size(18, 17);
@@ -119,7 +123,7 @@
             // labelFilter
             // 
             this.labelFilter.AutoSize = true;
-            this.labelFilter.Location = new System.Drawing.Point(441, 136);
+            this.labelFilter.Location = new System.Drawing.Point(441, 173);
             this.labelFilter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFilter.Name = "labelFilter";
             this.labelFilter.Size = new System.Drawing.Size(51, 23);
@@ -131,7 +135,7 @@
             this.comboBoxCategory.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.comboBoxCategory.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxCategory.FormattingEnabled = true;
-            this.comboBoxCategory.Location = new System.Drawing.Point(504, 200);
+            this.comboBoxCategory.Location = new System.Drawing.Point(504, 237);
             this.comboBoxCategory.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(419, 31);
@@ -142,7 +146,7 @@
             // 
             this.labelCategory.AutoSize = true;
             this.labelCategory.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelCategory.Location = new System.Drawing.Point(409, 204);
+            this.labelCategory.Location = new System.Drawing.Point(409, 241);
             this.labelCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCategory.Name = "labelCategory";
             this.labelCategory.Size = new System.Drawing.Size(83, 23);
@@ -155,7 +159,7 @@
             this.comboBoxItem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.comboBoxItem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxItem.FormattingEnabled = true;
-            this.comboBoxItem.Location = new System.Drawing.Point(504, 162);
+            this.comboBoxItem.Location = new System.Drawing.Point(504, 199);
             this.comboBoxItem.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxItem.Name = "comboBoxItem";
             this.comboBoxItem.Size = new System.Drawing.Size(419, 31);
@@ -166,7 +170,7 @@
             // 
             this.labelItem.AutoSize = true;
             this.labelItem.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelItem.Location = new System.Drawing.Point(409, 166);
+            this.labelItem.Location = new System.Drawing.Point(409, 203);
             this.labelItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelItem.Name = "labelItem";
             this.labelItem.Size = new System.Drawing.Size(49, 23);
@@ -330,6 +334,30 @@
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_OnClick);
             // 
+            // comboBoxStockCount
+            // 
+            this.comboBoxStockCount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboBoxStockCount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxStockCount.FormattingEnabled = true;
+            this.comboBoxStockCount.Location = new System.Drawing.Point(543, 130);
+            this.comboBoxStockCount.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxStockCount.Name = "comboBoxStockCount";
+            this.comboBoxStockCount.Size = new System.Drawing.Size(223, 31);
+            this.comboBoxStockCount.TabIndex = 30;
+            this.comboBoxStockCount.Visible = false;
+            // 
+            // labelStockCount
+            // 
+            this.labelStockCount.AutoSize = true;
+            this.labelStockCount.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.labelStockCount.Location = new System.Drawing.Point(396, 140);
+            this.labelStockCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelStockCount.Name = "labelStockCount";
+            this.labelStockCount.Size = new System.Drawing.Size(138, 23);
+            this.labelStockCount.TabIndex = 31;
+            this.labelStockCount.Text = "Stock Count No.:";
+            this.labelStockCount.Visible = false;
+            // 
             // RepInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -377,5 +405,7 @@
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.CheckBox checkBoxFilter;
         private System.Windows.Forms.Label labelFilter;
+        private System.Windows.Forms.ComboBox comboBoxStockCount;
+        private System.Windows.Forms.Label labelStockCount;
     }
 }
