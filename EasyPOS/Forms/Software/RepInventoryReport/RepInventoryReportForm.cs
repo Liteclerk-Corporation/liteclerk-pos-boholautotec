@@ -284,7 +284,8 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                         "Variance Quantity",
                         "Cost",
                         "Price",
-                        "Amount"
+                        "Cost Amount",
+                        "Selling Amount"
                     };
 
                     csv.AppendLine(String.Join(",", header));
@@ -306,7 +307,8 @@ namespace EasyPOS.Forms.Software.RepInventoryReport
                               inventoryReport.ColumnVariance.Replace(",", ""),
                               inventoryReport.ColumnCost.Replace(",", ""),
                               inventoryReport.ColumnItemPrice.Replace(",", ""),
-                              inventoryReport.ColumnAmount.Replace(",", "")
+                              inventoryReport.ColumnAmount.Replace(",", ""),
+                              inventoryReport.ColumnSellingAmount.Replace(",", "")
                             };
 
                             csv.AppendLine(String.Join(",", data));
