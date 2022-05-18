@@ -29,7 +29,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
             sysUserRights = new Modules.SysUserRightsModule("TrnRestaurant");
             if (sysUserRights.GetUserRights() == null)
             {
-                MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -52,7 +52,18 @@ namespace EasyPOS.Forms.Software.TrnPOS
                 {
                     buttonEditOrder.Enabled = false;
                 }
-
+                if (sysUserRights.GetUserRights().CanDelete == false)
+                {
+                    buttonDelete.Enabled = false;
+                }
+            }
+            if (Modules.SysCurrentModule.GetCurrentSettings().EnableSelectOrderTaker == true)
+            {
+                buttonSelectOrderTaker.Enabled = true;
+            }
+            else
+            {
+                buttonSelectOrderTaker.Enabled = false;
             }
 
             labelInvoiceNumber.Text = trnSalesEntity.SalesNumber;
