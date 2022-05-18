@@ -126,6 +126,8 @@
             this.buttonUnlock = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonComputeMarkup = new System.Windows.Forms.Button();
+            this.buttonCompute = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -251,6 +253,8 @@
             // 
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel3.Controls.Add(this.buttonComputeMarkup);
+            this.panel3.Controls.Add(this.buttonCompute);
             this.panel3.Controls.Add(this.comboBoxChildItem);
             this.panel3.Controls.Add(this.label22);
             this.panel3.Controls.Add(this.textBoxConversionValue);
@@ -1338,6 +1342,42 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // buttonComputeMarkup
+            // 
+            this.buttonComputeMarkup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
+            this.buttonComputeMarkup.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonComputeMarkup.FlatAppearance.BorderSize = 0;
+            this.buttonComputeMarkup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonComputeMarkup.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonComputeMarkup.ForeColor = System.Drawing.Color.White;
+            this.buttonComputeMarkup.Location = new System.Drawing.Point(413, 412);
+            this.buttonComputeMarkup.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonComputeMarkup.Name = "buttonComputeMarkup";
+            this.buttonComputeMarkup.Size = new System.Drawing.Size(142, 30);
+            this.buttonComputeMarkup.TabIndex = 29;
+            this.buttonComputeMarkup.TabStop = false;
+            this.buttonComputeMarkup.Text = "Compute Markup";
+            this.buttonComputeMarkup.UseVisualStyleBackColor = false;
+            this.buttonComputeMarkup.Click += new System.EventHandler(this.buttonComputeMarkup_Click);
+            // 
+            // buttonCompute
+            // 
+            this.buttonCompute.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
+            this.buttonCompute.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonCompute.FlatAppearance.BorderSize = 0;
+            this.buttonCompute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCompute.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCompute.ForeColor = System.Drawing.Color.White;
+            this.buttonCompute.Location = new System.Drawing.Point(413, 375);
+            this.buttonCompute.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCompute.Name = "buttonCompute";
+            this.buttonCompute.Size = new System.Drawing.Size(142, 30);
+            this.buttonCompute.TabIndex = 28;
+            this.buttonCompute.TabStop = false;
+            this.buttonCompute.Text = "Compute Price";
+            this.buttonCompute.UseVisualStyleBackColor = false;
+            this.buttonCompute.Click += new System.EventHandler(this.buttonCompute_Click);
+            // 
             // MstItemDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1466,5 +1506,7 @@
         private System.Windows.Forms.TextBox textBoxConversionValue;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ComboBox comboBoxChildItem;
+        private System.Windows.Forms.Button buttonComputeMarkup;
+        private System.Windows.Forms.Button buttonCompute;
     }
 }

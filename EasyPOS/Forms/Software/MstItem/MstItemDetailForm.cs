@@ -308,6 +308,8 @@ namespace EasyPOS.Forms.Software.MstItem
             textBoxMarkUp.Enabled = !isLocked;
             textBoxPrice.Enabled = !isLocked;
             textBoxStockLevelQuantity.Enabled = !isLocked;
+            buttonCompute.Enabled = !isLocked;
+            buttonComputeMarkup.Enabled = !isLocked;
 
             if (hasComponents)
             {
@@ -1138,15 +1140,7 @@ namespace EasyPOS.Forms.Software.MstItem
 
         private void textBoxMarkUp_Leave(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(textBoxMarkUp.Text))
-            {
-                textBoxMarkUp.Text = "0.00";
-            }
-            else
-            {
-                ComputePriceMarkUp();
-                textBoxMarkUp.Text = Convert.ToDecimal(textBoxMarkUp.Text).ToString();
-            }
+            
         }
 
         private void textBoxPrice_Leave(object sender, EventArgs e)
@@ -1169,19 +1163,47 @@ namespace EasyPOS.Forms.Software.MstItem
 
         private void textBoxMarkUp_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            //if (e.KeyCode == Keys.Enter)
+            //{
+            //    if (String.IsNullOrEmpty(textBoxMarkUp.Text))
+            //    {
+            //        textBoxMarkUp.Text = "0.00";
+            //    }
+            //    else
+            //    {
+            //        ComputePriceMarkUp();
+            //        textBoxMarkUp.Text = Convert.ToDecimal(textBoxMarkUp.Text).ToString();
+            //        textBoxPrice.Focus();
+            //        textBoxPrice.SelectAll();
+            //    }
+            //}
+        }
+
+        private void buttonCompute_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToDecimal(textBoxCost.Text) == 0)
             {
-                if (String.IsNullOrEmpty(textBoxMarkUp.Text))
-                {
-                    textBoxMarkUp.Text = "0.00";
-                }
-                else
-                {
-                    ComputePriceMarkUp();
-                    textBoxMarkUp.Text = Convert.ToDecimal(textBoxMarkUp.Text).ToString();
-                    textBoxPrice.Focus();
-                    textBoxPrice.SelectAll();
-                }
+                MessageBox.Show("Cannot compute for price. Please fill in cost!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                ComputePriceMarkUp();
+                textBoxMarkUp.Text = Convert.ToDecimal(textBoxMarkUp.Text).ToString();
+                textBoxPrice.Focus();
+                textBoxPrice.SelectAll();
+            }
+        }
+
+        private void buttonComputeMarkup_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToDecimal(textBoxCost.Text) == 0)
+            {
+                MessageBox.Show("Cannot compute for price. Please fill in cost!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                ComputeMarkUpPrice();
+                textBoxMarkUp.Text = Convert.ToDecimal(textBoxMarkUp.Text).ToString();
             }
         }
     }
