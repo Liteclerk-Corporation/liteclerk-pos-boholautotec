@@ -21,28 +21,9 @@ namespace EasyPOS.Forms.Software.SysMenu
         {
             InitializeComponent();
 
-            SalesSummaryPerMonth();
-
-            Int32 itemCounter = 0;
-            Controllers.RepSalesReportController repTopSellingItemsReportController = new Controllers.RepSalesReportController();
-            var topSellingItems = repTopSellingItemsReportController.TopSellingItemsReportPieChart();
-            if (topSellingItems.Any())
-            {
-                Decimal totalQuantity = 0;
-                totalQuantity = topSellingItems.Sum(d => d.Quantity);
-
-                foreach (var topSellingItem in topSellingItems)
-                {
-                    if (itemCounter < 10)
-                    {
-                        Decimal percentage = (topSellingItem.Quantity * Convert.ToDecimal(1.0) / totalQuantity);
-                        chartTopSellingItems.Series["TopSelling"].IsValueShownAsLabel = true;
-                        chartTopSellingItems.Series["TopSelling"].LabelFormat = "#.##%";
-                        chartTopSellingItems.Series["TopSelling"].Points.AddXY(topSellingItem.ItemDescription, percentage);
-                        itemCounter += 1;
-                    }
-                }
-            }
+            var logoFilePath = Modules.SysCurrentModule.GetCurrentSettings().LogoFilePath;
+            pictureBoxLogo.Image = Image.FromFile(@"" + logoFilePath);
+            pictureBoxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
 
             buttonItem.Text = SetLabel(buttonItem.Text);
             buttonDiscounting.Text = SetLabel(buttonDiscounting.Text);
@@ -499,5 +480,36 @@ namespace EasyPOS.Forms.Software.SysMenu
 
         }
 
+        public void TopSellingChart()
+        {
+            Int32 itemCounter = 0;
+            Controllers.RepSalesReportController repTopSellingItemsReportController = new Controllers.RepSalesReportController();
+            var topSellingItems = repTopSellingItemsReportController.TopSellingItemsReportPieChart();
+            if (topSellingItems.Any())
+            {
+                Decimal totalQuantity = 0;
+                totalQuantity = topSellingItems.Sum(d => d.Quantity);
+
+                foreach (var topSellingItem in topSellingItems)
+                {
+                    if (itemCounter < 10)
+                    {
+                        Decimal percentage = (topSellingItem.Quantity * Convert.ToDecimal(1.0) / totalQuantity);
+                        chartTopSellingItems.Series["TopSelling"].IsValueShownAsLabel = true;
+                        chartTopSellingItems.Series["TopSelling"].LabelFormat = "#.##%";
+                        chartTopSellingItems.Series["TopSelling"].Points.AddXY(topSellingItem.ItemDescription, percentage);
+                        itemCounter += 1;
+                    }
+                }
+            }
+        }
+
+        private void radioButtonSales_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBoxLogo.Hide();
+            SalesSummaryPerMonth();
+            TopSellingChart();
+            radioButtonSales.Enabled = false;
+        }
     }
 }
