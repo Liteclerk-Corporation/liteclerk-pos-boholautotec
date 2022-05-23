@@ -473,7 +473,7 @@
             this.buttonHideItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHideItems.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.buttonHideItems.ForeColor = System.Drawing.Color.Black;
-            this.buttonHideItems.Location = new System.Drawing.Point(1186, 8);
+            this.buttonHideItems.Location = new System.Drawing.Point(1186, 9);
             this.buttonHideItems.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHideItems.Name = "buttonHideItems";
             this.buttonHideItems.Size = new System.Drawing.Size(90, 60);
