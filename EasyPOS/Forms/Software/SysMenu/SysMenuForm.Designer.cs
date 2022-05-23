@@ -30,16 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SysMenuForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.imageListMenuIcons = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.radioButtonSales = new System.Windows.Forms.RadioButton();
             this.chartTopSellingItems = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartMonthlySales = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -59,11 +60,10 @@
             this.buttonRemittanceReport = new System.Windows.Forms.Button();
             this.buttonStockIn = new System.Windows.Forms.Button();
             this.buttonSalesReport = new System.Windows.Forms.Button();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartTopSellingItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartMonthlySales)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // imageListMenuIcons
@@ -130,6 +130,17 @@
             this.panel1.Size = new System.Drawing.Size(1370, 700);
             this.panel1.TabIndex = 19;
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(28, 20);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(587, 643);
+            this.pictureBoxLogo.TabIndex = 21;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // radioButtonSales
             // 
             this.radioButtonSales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -154,67 +165,67 @@
             this.chartTopSellingItems.BorderlineColor = System.Drawing.Color.Transparent;
             this.chartTopSellingItems.BorderSkin.BackColor = System.Drawing.Color.Transparent;
             this.chartTopSellingItems.BorderSkin.PageColor = System.Drawing.Color.Transparent;
-            chartArea3.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
-            chartArea3.Area3DStyle.Enable3D = true;
-            chartArea3.Area3DStyle.Inclination = 50;
-            chartArea3.Area3DStyle.IsRightAngleAxes = false;
-            chartArea3.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea3.Area3DStyle.PointDepth = 110;
-            chartArea3.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.BackSecondaryColor = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
-            this.chartTopSellingItems.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartTopSellingItems.Legends.Add(legend3);
+            chartArea1.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
+            chartArea1.Area3DStyle.Enable3D = true;
+            chartArea1.Area3DStyle.Inclination = 50;
+            chartArea1.Area3DStyle.IsRightAngleAxes = false;
+            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea1.Area3DStyle.PointDepth = 110;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chartTopSellingItems.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartTopSellingItems.Legends.Add(legend1);
             this.chartTopSellingItems.Location = new System.Drawing.Point(28, 348);
             this.chartTopSellingItems.Margin = new System.Windows.Forms.Padding(2);
             this.chartTopSellingItems.Name = "chartTopSellingItems";
             this.chartTopSellingItems.Padding = new System.Windows.Forms.Padding(2);
             this.chartTopSellingItems.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "Legend1";
-            series3.Name = "TopSelling";
-            this.chartTopSellingItems.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "TopSelling";
+            this.chartTopSellingItems.Series.Add(series1);
             this.chartTopSellingItems.Size = new System.Drawing.Size(587, 315);
             this.chartTopSellingItems.TabIndex = 17;
             this.chartTopSellingItems.Text = "chart2";
-            title3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title3.Name = "Title1";
-            title3.Text = "Top Selling Items";
-            this.chartTopSellingItems.Titles.Add(title3);
+            title1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "Top Selling Items";
+            this.chartTopSellingItems.Titles.Add(title1);
             // 
             // chartMonthlySales
             // 
             this.chartMonthlySales.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chartMonthlySales.BackColor = System.Drawing.Color.DarkGray;
-            chartArea4.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea4.Name = "ChartArea1";
-            this.chartMonthlySales.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartMonthlySales.Legends.Add(legend4);
+            chartArea2.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea2.Name = "ChartArea1";
+            this.chartMonthlySales.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartMonthlySales.Legends.Add(legend2);
             this.chartMonthlySales.Location = new System.Drawing.Point(28, 20);
             this.chartMonthlySales.Margin = new System.Windows.Forms.Padding(2);
             this.chartMonthlySales.Name = "chartMonthlySales";
             this.chartMonthlySales.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartMonthlySales.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(195)))), ((int)(((byte)(84)))))};
-            series4.ChartArea = "ChartArea1";
-            series4.IsValueShownAsLabel = true;
-            series4.LabelAngle = 15;
-            series4.Legend = "Legend1";
-            series4.MarkerSize = 3;
-            series4.Name = "Sales";
-            this.chartMonthlySales.Series.Add(series4);
-            this.chartMonthlySales.Size = new System.Drawing.Size(587, 311);
+            series2.ChartArea = "ChartArea1";
+            series2.IsValueShownAsLabel = true;
+            series2.LabelAngle = 15;
+            series2.Legend = "Legend1";
+            series2.MarkerSize = 3;
+            series2.Name = "Sales";
+            this.chartMonthlySales.Series.Add(series2);
+            this.chartMonthlySales.Size = new System.Drawing.Size(587, 334);
             this.chartMonthlySales.TabIndex = 16;
             this.chartMonthlySales.TabStop = false;
             this.chartMonthlySales.Text = "chart1";
-            title4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title4.Name = "Titles";
-            title4.Text = "Monthly Sales";
-            this.chartMonthlySales.Titles.Add(title4);
+            title2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Titles";
+            title2.Text = "Monthly Sales";
+            this.chartMonthlySales.Titles.Add(title2);
             // 
             // buttonItem
             // 
@@ -573,17 +584,6 @@
             this.buttonSalesReport.UseVisualStyleBackColor = false;
             this.buttonSalesReport.Click += new System.EventHandler(this.buttonSalesReport_OnClick);
             // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(28, 20);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(587, 643);
-            this.pictureBoxLogo.TabIndex = 21;
-            this.pictureBoxLogo.TabStop = false;
-            // 
             // SysMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -599,9 +599,9 @@
             this.Text = "Menu";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartTopSellingItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartMonthlySales)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
