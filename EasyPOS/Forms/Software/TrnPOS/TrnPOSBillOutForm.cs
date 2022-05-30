@@ -99,97 +99,195 @@ namespace EasyPOS.Forms.Software.TrnPOS
             // ==============
             var systemCurrent = Modules.SysCurrentModule.GetCurrentSettings();
 
-            // ============
-            // Company Name
-            // ============
-            String companyName = systemCurrent.CompanyName;
-            RectangleF companyNameRectangle = new RectangleF
+            if (Modules.SysCurrentModule.GetCurrentSettings().PrinterType == "58mm Printer")
             {
-                X = x,
-                Y = y,
-                Size = new Size(245, ((int)graphics.MeasureString(companyName, fontArial8Bold, 245, StringFormat.GenericDefault).Height))
-            };
+                // ============
+                // Company Name
+                // ============
+                String companyName = systemCurrent.CompanyName;
+                RectangleF companyNameRectangle = new RectangleF
 
-            graphics.DrawString(companyName, fontArial8Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatCenter);
-            y += companyNameRectangle.Size.Height + 1.0F;
+                {
+                    X = x,
+                    Y = y,
+                    Size = new Size(170, ((int)graphics.MeasureString(companyName, fontArial8Bold, 170, StringFormat.GenericDefault).Height))
+                };
 
-            // ===============
-            // Company Address
-            // ===============
-            String companyAddress = systemCurrent.Address;
-            RectangleF companyAddressRectangle = new RectangleF
+                graphics.DrawString(companyName, fontArial8Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatCenter);
+                y += companyNameRectangle.Size.Height + 1.0F;
+
+                // ===============
+                // Company Address
+                // ===============
+                String companyAddress = systemCurrent.Address;
+                RectangleF companyAddressRectangle = new RectangleF
+                {
+                    X = x,
+                    Y = y,
+                    Size = new Size(170, ((int)graphics.MeasureString(companyAddress, fontArial8Regular, 170, StringFormat.GenericDefault).Height))
+                };
+                graphics.DrawString(companyAddress, fontArial8Regular, Brushes.Black, companyAddressRectangle, drawFormatCenter);
+                y += companyAddressRectangle.Size.Height;
+
+                // ==========
+                // TIN Number
+                // ==========
+                String TINNumber = "TIN: " + systemCurrent.TIN;
+                RectangleF TINNumbersRectangle = new RectangleF
+                {
+                    X = x,
+                    Y = y,
+                    Size = new Size(170, ((int)graphics.MeasureString(TINNumber, fontArial8Regular, 170, StringFormat.GenericDefault).Height))
+                };
+                graphics.DrawString(TINNumber, fontArial8Regular, Brushes.Black, TINNumbersRectangle, drawFormatCenter);
+                y += TINNumbersRectangle.Size.Height;
+
+                // =============
+                // Serial Number
+                // =============
+                String serialNo = "SN: " + systemCurrent.SerialNo;
+                RectangleF serialNoDataRectangle = new RectangleF
+                {
+                    X = x,
+                    Y = y,
+                    Size = new Size(170, ((int)graphics.MeasureString(serialNo, fontArial8Regular, 170, StringFormat.GenericDefault).Height))
+                };
+                graphics.DrawString(serialNo, fontArial8Regular, Brushes.Black, serialNoDataRectangle, drawFormatCenter);
+                y += serialNoDataRectangle.Size.Height;
+
+                //==============
+                // Permit Number
+                //==============
+                String permitNumber = "PN: " + systemCurrent.PermitNo;
+                RectangleF permitNoDataRectangle = new RectangleF
+                {
+                    X = x,
+                    Y = y,
+                    Size = new Size(170, ((int)graphics.MeasureString(permitNumber, fontArial8Regular, 170, StringFormat.GenericDefault).Height))
+                };
+                graphics.DrawString(permitNumber, fontArial8Regular, Brushes.Black, permitNoDataRectangle, drawFormatCenter);
+                y += permitNoDataRectangle.Size.Height;
+
+                //=====================
+                // Accreditation Number
+                //=====================
+                String accrdNo = "ACRED No.: " + systemCurrent.AccreditationNo;
+                RectangleF accrdNoDataRectangle = new RectangleF
+                {
+                    X = x,
+                    Y = y,
+                    Size = new Size(170, ((int)graphics.MeasureString(accrdNo, fontArial8Regular, 170, StringFormat.GenericDefault).Height))
+                };
+                graphics.DrawString(accrdNo, fontArial8Regular, Brushes.Black, accrdNoDataRectangle, drawFormatCenter);
+                y += accrdNoDataRectangle.Size.Height;
+
+                // ==============
+                // Machine Number
+                // ==============
+                String machineNo = "MIN: " + systemCurrent.MachineNo;
+                RectangleF MINNumbersRectangle = new RectangleF
+                {
+                    X = x,
+                    Y = y,
+                    Size = new Size(170, ((int)graphics.MeasureString(machineNo, fontArial8Regular, 170, StringFormat.GenericDefault).Height))
+                };
+                graphics.DrawString(machineNo, fontArial8Regular, Brushes.Black, MINNumbersRectangle, drawFormatCenter);
+                y += MINNumbersRectangle.Size.Height;
+            }
+            else
             {
-                X = x,
-                Y = y,
-                Size = new Size(245, ((int)graphics.MeasureString(companyAddress, fontArial8Regular, 245, StringFormat.GenericDefault).Height))
-            };
-            graphics.DrawString(companyAddress, fontArial8Regular, Brushes.Black, companyAddressRectangle, drawFormatCenter);
-            y += companyAddressRectangle.Size.Height;
+                // ============
+                // Company Name
+                // ============
+                String companyName = systemCurrent.CompanyName;
+                RectangleF companyNameRectangle = new RectangleF
+                {
+                    X = x,
+                    Y = y,
+                    Size = new Size(245, ((int)graphics.MeasureString(companyName, fontArial8Bold, 245, StringFormat.GenericDefault).Height))
+                };
 
-            // ==========
-            // TIN Number
-            // ==========
-            String TINNumber = "TIN: " + systemCurrent.TIN;
-            RectangleF TINNumbersRectangle = new RectangleF
-            {
-                X = x,
-                Y = y,
-                Size = new Size(245, ((int)graphics.MeasureString(TINNumber, fontArial8Regular, 245, StringFormat.GenericDefault).Height))
-            };
-            graphics.DrawString(TINNumber, fontArial8Regular, Brushes.Black, TINNumbersRectangle, drawFormatCenter);
-            y += TINNumbersRectangle.Size.Height;
+                graphics.DrawString(companyName, fontArial8Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatCenter);
+                y += companyNameRectangle.Size.Height + 1.0F;
 
-            // =============
-            // Serial Number
-            // =============
-            String serialNo = "SN: " + systemCurrent.SerialNo;
-            RectangleF serialNoDataRectangle = new RectangleF
-            {
-                X = x,
-                Y = y,
-                Size = new Size(245, ((int)graphics.MeasureString(serialNo, fontArial8Regular, 245, StringFormat.GenericDefault).Height))
-            };
-            graphics.DrawString(serialNo, fontArial8Regular, Brushes.Black, serialNoDataRectangle, drawFormatCenter);
-            y += serialNoDataRectangle.Size.Height;
+                // ===============
+                // Company Address
+                // ===============
+                String companyAddress = systemCurrent.Address;
+                RectangleF companyAddressRectangle = new RectangleF
+                {
+                    X = x,
+                    Y = y,
+                    Size = new Size(245, ((int)graphics.MeasureString(companyAddress, fontArial8Regular, 245, StringFormat.GenericDefault).Height))
+                };
+                graphics.DrawString(companyAddress, fontArial8Regular, Brushes.Black, companyAddressRectangle, drawFormatCenter);
+                y += companyAddressRectangle.Size.Height;
 
-            //==============
-            // Permit Number
-            //==============
-            String permitNumber = "PN: " + systemCurrent.PermitNo;
-            RectangleF permitNoDataRectangle = new RectangleF
-            {
-                X = x,
-                Y = y,
-                Size = new Size(245, ((int)graphics.MeasureString(permitNumber, fontArial8Regular, 245, StringFormat.GenericDefault).Height))
-            };
-            graphics.DrawString(permitNumber, fontArial8Regular, Brushes.Black, permitNoDataRectangle, drawFormatCenter);
-            y += permitNoDataRectangle.Size.Height;
+                // ==========
+                // TIN Number
+                // ==========
+                String TINNumber = "TIN: " + systemCurrent.TIN;
+                RectangleF TINNumbersRectangle = new RectangleF
+                {
+                    X = x,
+                    Y = y,
+                    Size = new Size(245, ((int)graphics.MeasureString(TINNumber, fontArial8Regular, 245, StringFormat.GenericDefault).Height))
+                };
+                graphics.DrawString(TINNumber, fontArial8Regular, Brushes.Black, TINNumbersRectangle, drawFormatCenter);
+                y += TINNumbersRectangle.Size.Height;
 
-            //=====================
-            // Accreditation Number
-            //=====================
-            String accrdNo = "ACRED No.: " + systemCurrent.AccreditationNo;
-            RectangleF accrdNoDataRectangle = new RectangleF
-            {
-                X = x,
-                Y = y,
-                Size = new Size(245, ((int)graphics.MeasureString(accrdNo, fontArial8Regular, 245, StringFormat.GenericDefault).Height))
-            };
-            graphics.DrawString(accrdNo, fontArial8Regular, Brushes.Black, accrdNoDataRectangle, drawFormatCenter);
-            y += accrdNoDataRectangle.Size.Height;
+                // =============
+                // Serial Number
+                // =============
+                String serialNo = "SN: " + systemCurrent.SerialNo;
+                RectangleF serialNoDataRectangle = new RectangleF
+                {
+                    X = x,
+                    Y = y,
+                    Size = new Size(245, ((int)graphics.MeasureString(serialNo, fontArial8Regular, 245, StringFormat.GenericDefault).Height))
+                };
+                graphics.DrawString(serialNo, fontArial8Regular, Brushes.Black, serialNoDataRectangle, drawFormatCenter);
+                y += serialNoDataRectangle.Size.Height;
 
-            // ==============
-            // Machine Number
-            // ==============
-            String machineNo = "MIN: " + systemCurrent.MachineNo;
-            RectangleF MINNumbersRectangle = new RectangleF
-            {
-                X = x,
-                Y = y,
-                Size = new Size(245, ((int)graphics.MeasureString(machineNo, fontArial8Regular, 245, StringFormat.GenericDefault).Height))
-            };
-            graphics.DrawString(machineNo, fontArial8Regular, Brushes.Black, MINNumbersRectangle, drawFormatCenter);
-            y += MINNumbersRectangle.Size.Height;
+                //==============
+                // Permit Number
+                //==============
+                String permitNumber = "PN: " + systemCurrent.PermitNo;
+                RectangleF permitNoDataRectangle = new RectangleF
+                {
+                    X = x,
+                    Y = y,
+                    Size = new Size(245, ((int)graphics.MeasureString(permitNumber, fontArial8Regular, 245, StringFormat.GenericDefault).Height))
+                };
+                graphics.DrawString(permitNumber, fontArial8Regular, Brushes.Black, permitNoDataRectangle, drawFormatCenter);
+                y += permitNoDataRectangle.Size.Height;
+
+                //=====================
+                // Accreditation Number
+                //=====================
+                String accrdNo = "ACRED No.: " + systemCurrent.AccreditationNo;
+                RectangleF accrdNoDataRectangle = new RectangleF
+                {
+                    X = x,
+                    Y = y,
+                    Size = new Size(245, ((int)graphics.MeasureString(accrdNo, fontArial8Regular, 245, StringFormat.GenericDefault).Height))
+                };
+                graphics.DrawString(accrdNo, fontArial8Regular, Brushes.Black, accrdNoDataRectangle, drawFormatCenter);
+                y += accrdNoDataRectangle.Size.Height;
+
+                // ==============
+                // Machine Number
+                // ==============
+                String machineNo = "MIN: " + systemCurrent.MachineNo;
+                RectangleF MINNumbersRectangle = new RectangleF
+                {
+                    X = x,
+                    Y = y,
+                    Size = new Size(245, ((int)graphics.MeasureString(machineNo, fontArial8Regular, 245, StringFormat.GenericDefault).Height))
+                };
+                graphics.DrawString(machineNo, fontArial8Regular, Brushes.Black, MINNumbersRectangle, drawFormatCenter);
+                y += MINNumbersRectangle.Size.Height;
+            }
 
             // ======================
             // Official Receipt Title
@@ -352,7 +450,27 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                             if (salesLine.MstItem.BarCode != "0000000001")
                             {
-                                String itemData = salesLine.ItemDescription + " " + itemPreparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                String itemData;
+                                if (Modules.SysCurrentModule.GetCurrentSettings().ShowPriceDescriptioninReceipts == true)
+                                {
+                                    var itemPrices = from d in db.MstItemPrices
+                                                     where d.ItemId == salesLine.ItemId
+                                                     && d.Price == salesLine.Price
+                                                     select d;
+                                    if (itemPrices.Any())
+                                    {
+                                        var itemPrice = itemPrices.FirstOrDefault().PriceDescription;
+                                        itemData = salesLine.ItemDescription + " " + salesLine.Preparation + " - " + itemPrice + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                    }
+                                    else
+                                    {
+                                        itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                    }
+                                }
+                                else
+                                {
+                                    itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                }
                                 String itemAmountData = (salesLine.Amount + salesLine.DiscountAmount).ToString("#,##0.00");
                                 RectangleF itemDataRectangle = new RectangleF
                                 {
@@ -557,7 +675,27 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                             if (salesLine.MstItem.BarCode != "0000000001")
                             {
-                                String itemData = salesLine.ItemDescription + " " + itemPreparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                String itemData;
+                                if (Modules.SysCurrentModule.GetCurrentSettings().ShowPriceDescriptioninReceipts == true)
+                                {
+                                    var itemPrices = from d in db.MstItemPrices
+                                                     where d.ItemId == salesLine.ItemId
+                                                     && d.Price == salesLine.Price
+                                                     select d;
+                                    if (itemPrices.Any())
+                                    {
+                                        var itemPrice = itemPrices.FirstOrDefault().PriceDescription;
+                                        itemData = salesLine.ItemDescription + " " + salesLine.Preparation + " - " + itemPrice + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                    }
+                                    else
+                                    {
+                                        itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                    }
+                                }
+                                else
+                                {
+                                    itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                }
                                 String itemAmountData = (salesLine.Amount + salesLine.DiscountAmount).ToString("#,##0.00");
                                 RectangleF itemDataRectangle = new RectangleF
                                 {

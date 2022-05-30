@@ -44,6 +44,7 @@
             this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonPrint = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonGenerateCSV = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -189,6 +190,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
+            this.panel1.Controls.Add(this.buttonPrint);
             this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Controls.Add(this.buttonGenerateCSV);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -200,6 +202,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1370, 62);
             this.panel1.TabIndex = 10;
+            // 
+            // buttonPrint
+            // 
+            this.buttonPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
+            this.buttonPrint.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonPrint.FlatAppearance.BorderSize = 0;
+            this.buttonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPrint.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrint.ForeColor = System.Drawing.Color.White;
+            this.buttonPrint.Location = new System.Drawing.Point(1083, 11);
+            this.buttonPrint.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(88, 40);
+            this.buttonPrint.TabIndex = 7;
+            this.buttonPrint.TabStop = false;
+            this.buttonPrint.Text = "Print";
+            this.buttonPrint.UseVisualStyleBackColor = false;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
             // buttonClose
             // 
@@ -435,5 +456,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAmount;
+        private System.Windows.Forms.Button buttonPrint;
     }
 }

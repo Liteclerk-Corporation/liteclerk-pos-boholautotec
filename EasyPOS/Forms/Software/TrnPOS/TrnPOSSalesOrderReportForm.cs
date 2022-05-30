@@ -315,13 +315,33 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                                 if (salesLine.MstItem.BarCode != "0000000001")
                                 {
-                                    String itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                    String itemData;
+                                    if (Modules.SysCurrentModule.GetCurrentSettings().ShowPriceDescriptioninReceipts == true)
+                                    {
+                                        var itemPrices = from d in db.MstItemPrices
+                                                         where d.ItemId == salesLine.ItemId
+                                                         && d.Price == salesLine.Price
+                                                         select d;
+                                        if (itemPrices.Any())
+                                        {
+                                            var itemPrice = itemPrices.FirstOrDefault().PriceDescription;
+                                            itemData = salesLine.ItemDescription + " " + salesLine.Preparation + " - " + itemPrice + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                        }
+                                        else
+                                        {
+                                            itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                        }
+                                    }
+                                    else
+                                    {
+                                        itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                    }
                                     String itemAmountData = (salesLine.Amount + salesLine.DiscountAmount).ToString("#,##0.00");
                                     RectangleF itemDataRectangle = new RectangleF
                                     {
                                         X = x,
                                         Y = y,
-                                        Size = new Size(150, ((int)graphics.MeasureString(itemData, fontArial7Regular, 150, StringFormat.GenericDefault).Height))
+                                        Size = new Size(170, ((int)graphics.MeasureString(itemData, fontArial7Regular, 170, StringFormat.GenericDefault).Height))
                                     };
                                     graphics.DrawString(itemData, fontArial7Regular, Brushes.Black, itemDataRectangle, drawFormatLeft);
                                     graphics.DrawString(itemAmountData, fontArial7Regular, drawBrush, new RectangleF(x, y, 170.0F, height), drawFormatRight);
@@ -569,7 +589,27 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                                 if (salesLine.MstItem.BarCode != "0000000001")
                                 {
-                                    String itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                    String itemData;
+                                    if (Modules.SysCurrentModule.GetCurrentSettings().ShowPriceDescriptioninReceipts == true)
+                                    {
+                                        var itemPrices = from d in db.MstItemPrices
+                                                         where d.ItemId == salesLine.ItemId
+                                                         && d.Price == salesLine.Price
+                                                         select d;
+                                        if (itemPrices.Any())
+                                        {
+                                            var itemPrice = itemPrices.FirstOrDefault().PriceDescription;
+                                            itemData = salesLine.ItemDescription + " " + salesLine.Preparation + " - " + itemPrice + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                        }
+                                        else
+                                        {
+                                            itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                        }
+                                    }
+                                    else
+                                    {
+                                        itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                    }
                                     String itemAmountData = (salesLine.Amount + salesLine.DiscountAmount).ToString("#,##0.00");
                                     RectangleF itemDataRectangle = new RectangleF
                                     {

@@ -157,6 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(664, 716);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

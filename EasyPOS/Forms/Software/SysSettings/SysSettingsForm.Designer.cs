@@ -201,6 +201,7 @@
             this.buttonKitchenPageListLast = new System.Windows.Forms.Button();
             this.textBoxKitchenPageNumber = new System.Windows.Forms.TextBox();
             this.backgroundWorkerEasyfisIntegration = new System.ComponentModel.BackgroundWorker();
+            this.checkBoxShowPriceDescriptionInReceipts = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -487,6 +488,7 @@
             // 
             this.panel5.AutoScroll = true;
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel5.Controls.Add(this.checkBoxShowPriceDescriptionInReceipts);
             this.panel5.Controls.Add(this.dateTimePickerLoginDate);
             this.panel5.Controls.Add(this.checkBoxIsLoginDate);
             this.panel5.Controls.Add(this.checkBoxEnableSelectOrderTaker);
@@ -2355,6 +2357,19 @@
             this.backgroundWorkerEasyfisIntegration.WorkerSupportsCancellation = true;
             this.backgroundWorkerEasyfisIntegration.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerEasyfisIntegration_DoWork);
             // 
+            // checkBoxShowPriceDescriptionInReceipts
+            // 
+            this.checkBoxShowPriceDescriptionInReceipts.AutoSize = true;
+            this.checkBoxShowPriceDescriptionInReceipts.Enabled = false;
+            this.checkBoxShowPriceDescriptionInReceipts.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxShowPriceDescriptionInReceipts.Location = new System.Drawing.Point(1000, 356);
+            this.checkBoxShowPriceDescriptionInReceipts.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxShowPriceDescriptionInReceipts.Name = "checkBoxShowPriceDescriptionInReceipts";
+            this.checkBoxShowPriceDescriptionInReceipts.Size = new System.Drawing.Size(293, 27);
+            this.checkBoxShowPriceDescriptionInReceipts.TabIndex = 109;
+            this.checkBoxShowPriceDescriptionInReceipts.Text = "Show Price Description in Receipts";
+            this.checkBoxShowPriceDescriptionInReceipts.UseVisualStyleBackColor = true;
+            // 
             // SysSettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -2581,5 +2596,6 @@
         private System.Windows.Forms.CheckBox checkBoxChangeComputeOnLock;
         private System.Windows.Forms.DateTimePicker dateTimePickerLoginDate;
         private System.Windows.Forms.CheckBox checkBoxIsLoginDate;
+        private System.Windows.Forms.CheckBox checkBoxShowPriceDescriptionInReceipts;
     }
 }
