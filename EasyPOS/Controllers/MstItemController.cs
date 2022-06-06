@@ -28,7 +28,7 @@ namespace EasyPOS.Controllers
 
             return result;
         }
-         
+
         // ==========
         // List Items
         // ==========
@@ -425,14 +425,14 @@ namespace EasyPOS.Controllers
         {
             var categories = from d in db.MstItems
                              group d by new
-                           {
-                               d.Category
-                           }
+                             {
+                                 d.Category
+                             }
                            into g
-                           select new Entities.MstItemEntity
-                           {
-                               Category = g.Key.Category
-                           };
+                             select new Entities.MstItemEntity
+                             {
+                                 Category = g.Key.Category
+                             };
 
             return categories.ToList();
         }
@@ -442,13 +442,13 @@ namespace EasyPOS.Controllers
         public List<Entities.MstItemEntity> DropdownListItemList()
         {
             var itemList = from d in db.MstItems
-                            select new Entities.MstItemEntity
-                            {
-                                Id = d.Id,
-                                ItemDescription = d.ItemDescription
-                            };
+                           select new Entities.MstItemEntity
+                           {
+                               Id = d.Id,
+                               ItemDescription = d.ItemDescription
+                           };
 
-    
+
             return itemList.OrderBy(d => d.ItemDescription).ToList();
         }
 
@@ -1011,7 +1011,8 @@ namespace EasyPOS.Controllers
                                                     where d.TrnSale.IsLocked == true
                                                     && d.TrnSale.IsCancelled == false
                                                     && d.MstItem.MstItemComponents.Any() == true
-                                                    && d.ItemId == itemId
+                                                    && d.MstItem.IsInventory == false
+                                                    && d.MstItem.IsLocked == true
                                                     select d;
 
                         Decimal componentQty = 0;
@@ -1022,6 +1023,7 @@ namespace EasyPOS.Controllers
                             {
                                 var itemComponents = from d in currentSoldComponent.MstItem.MstItemComponents.ToList()
                                                      where d.ComponentItemId == itemId
+                                                     && d.Quantity > 0
                                                      select d;
 
                                 if (itemComponents.Any() == true)
@@ -1034,6 +1036,7 @@ namespace EasyPOS.Controllers
                                 }
                             }
                         }
+                        Decimal totalComponent = totalComponentQty;
 
                         var currentOutInventories = from d in db.TrnStockOutLines
                                                     where d.TrnStockOut.IsLocked == true
