@@ -476,7 +476,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                                 {
                                     X = x,
                                     Y = y,
-                                    Size = new Size(200, ((int)graphics.MeasureString(itemData, fontArial7Regular, 200, StringFormat.GenericTypographic).Height))
+                                    Size = new Size(170, ((int)graphics.MeasureString(itemData, fontArial7Regular, 170, StringFormat.GenericTypographic).Height))
                                 };
                                 graphics.DrawString(itemData, fontArial7Regular, Brushes.Black, itemDataRectangle, drawFormatLeft);
                                 if (Modules.SysCurrentModule.GetCurrentSettings().PrinterType == "Dot Matrix Printer")
@@ -701,7 +701,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                                 {
                                     X = x,
                                     Y = y,
-                                    Size = new Size(200, ((int)graphics.MeasureString(itemData, fontArial8Regular, 200, StringFormat.GenericDefault).Height))
+                                    Size = new Size(245, ((int)graphics.MeasureString(itemData, fontArial8Regular, 245, StringFormat.GenericDefault).Height))
                                 };
                                 graphics.DrawString(itemData, fontArial8Regular, Brushes.Black, itemDataRectangle, drawFormatLeft);
                                 if (Modules.SysCurrentModule.GetCurrentSettings().PrinterType == "Dot Matrix Printer")
