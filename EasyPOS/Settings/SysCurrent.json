@@ -69,5 +69,9 @@
   "XMLFilePath": "C:\\EasyPOS",
   "CustomerCode": "STR1",
   "LogoFilePath": "C:\\Liteclerk_POS\\LITECLERK.png",
-  "BodegaTransaction": false
+  "BodegaTransaction": false,
+  "EnablePOSTouchPrintDeletedItem": false,
+  "DisableSalesDate": false,
+  "EnableSelectOrderTaker": false,
+  "ShowPriceDescriptioninReceipts": false
 }
