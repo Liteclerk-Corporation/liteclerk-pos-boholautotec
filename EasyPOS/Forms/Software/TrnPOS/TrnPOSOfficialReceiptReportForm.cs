@@ -518,6 +518,10 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                                     }
                                 }
+                                else if (Modules.SysCurrentModule.GetCurrentSettings().ItemQtyRemoveDecimalPlaces == true)
+                                {
+                                    itemData = salesLine.ItemDescription + " " + itemPreparation + "\n" + salesLine.Quantity.ToString("#,##0") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                }
                                 else
                                 {
                                     itemData = salesLine.ItemDescription + " " + itemPreparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
@@ -1031,10 +1035,15 @@ namespace EasyPOS.Forms.Software.TrnPOS
                                         itemData = salesLine.ItemDescription + " " + itemPreparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
                                     }
                                 }
+                                else if (Modules.SysCurrentModule.GetCurrentSettings().ItemQtyRemoveDecimalPlaces == true)
+                                {
+                                    itemData = salesLine.ItemDescription + " " + itemPreparation + "\n" + salesLine.Quantity.ToString("#,##0") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                }
                                 else
                                 {
                                     itemData = salesLine.ItemDescription + " " + itemPreparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
                                 }
+
                                 String itemAmountData = (_VAT).ToString("#,##0.00");
                                 RectangleF itemDataRectangle = new RectangleF
                                 {
