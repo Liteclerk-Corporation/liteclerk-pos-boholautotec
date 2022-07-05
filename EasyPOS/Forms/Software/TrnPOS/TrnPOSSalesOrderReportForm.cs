@@ -255,6 +255,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                     Decimal totalServiceCharge = 0;
                     Boolean hasServiceCharge = false;
+                    Decimal totalDiscount = 0;
+                    String salesLineQty;
 
                     var salesLines = from d in db.TrnSalesLines where d.SalesId == trnSalesId select d;
                     if (salesLines.Any())
@@ -312,12 +314,22 @@ namespace EasyPOS.Forms.Software.TrnPOS
                                 totalNumberOfItems += 1;
 
                                 totalAmount += salesLine.Amount;
+                                totalDiscount += salesLine.DiscountAmount;
 
                                 if (salesLine.MstItem.BarCode != "0000000001")
                                 {
                                     String itemData;
                                     if (Modules.SysCurrentModule.GetCurrentSettings().ShowPriceDescriptioninReceipts == true)
                                     {
+                                        if (Modules.SysCurrentModule.GetCurrentSettings().ItemQtyRemoveDecimalPlaces == true)
+                                        {
+                                            salesLineQty = salesLine.Quantity.ToString("#,##0");
+                                        }
+                                        else
+                                        {
+                                            salesLineQty = salesLine.Quantity.ToString("#,##0.00");
+                                        }
+
                                         var itemPrices = from d in db.MstItemPrices
                                                          where d.ItemId == salesLine.ItemId
                                                          && d.Price == salesLine.Price
@@ -325,16 +337,46 @@ namespace EasyPOS.Forms.Software.TrnPOS
                                         if (itemPrices.Any())
                                         {
                                             var itemPrice = itemPrices.FirstOrDefault().PriceDescription;
-                                            itemData = salesLine.ItemDescription + " " + salesLine.Preparation + " - " + itemPrice + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                            if (salesLine.DiscountAmount > 0)
+                                            {
+                                                itemData = salesLine.ItemDescription + " " + salesLine.Preparation + " - " + itemPrice + "\n" + salesLineQty + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " " + "less" + " " + ((salesLine.DiscountAmount / salesLine.Quantity) * salesLine.Quantity).ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                            }
+                                            else
+                                            {
+                                                itemData = salesLine.ItemDescription + " " + salesLine.Preparation + " - " + itemPrice + "\n" + salesLineQty + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                            }
                                         }
                                         else
                                         {
-                                            itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                            if (salesLine.DiscountAmount > 0)
+                                            {
+                                                itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLineQty + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " " + "less" + " " + ((salesLine.DiscountAmount / salesLine.Quantity) * salesLine.Quantity).ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                            }
+                                            else
+                                            {
+                                                itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLineQty + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                            }
                                         }
                                     }
                                     else
                                     {
-                                        itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                        if (Modules.SysCurrentModule.GetCurrentSettings().ItemQtyRemoveDecimalPlaces == true)
+                                        {
+                                            salesLineQty = salesLine.Quantity.ToString("#,##0");
+                                        }
+                                        else
+                                        {
+                                            salesLineQty = salesLine.Quantity.ToString("#,##0.00");
+                                        }
+
+                                        if (salesLine.DiscountAmount > 0)
+                                        {
+                                            itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLineQty + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " " + "less" + " " + ((salesLine.DiscountAmount / salesLine.Quantity) * salesLine.Quantity).ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                        }
+                                        else
+                                        {
+                                            itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLineQty + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                        }
                                     }
                                     String itemAmountData = (salesLine.Amount + salesLine.DiscountAmount).ToString("#,##0.00");
                                     RectangleF itemDataRectangle = new RectangleF
@@ -375,6 +417,11 @@ namespace EasyPOS.Forms.Software.TrnPOS
                         graphics.DrawString(totalServiceChangeAmount, fontArial7Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatRight);
                         y += graphics.MeasureString(totalServiceChangeAmount, fontArial7Regular).Height;
 
+                        String totalDiscountLabel = "Total Discount";
+                        String totalDiscountAmount = totalDiscount.ToString("#,##0.00");
+                        graphics.DrawString(totalDiscountLabel, fontArial7Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatLeft);
+                        graphics.DrawString(totalDiscountAmount, fontArial7Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatRight);
+                        y += graphics.MeasureString(totalDiscountAmount, fontArial7Regular).Height;
 
                         String totalSalesLabel = "Total Amount";
                         String totalSalesAmount = totalAmount.ToString("#,##0.00");
@@ -384,8 +431,14 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     }
                     else
                     {
-                        String totalSalesLabel = "\nTotal Amount";
-                        String totalSalesAmount = "\n" + totalAmount.ToString("#,##0.00");
+                        String totalDiscountLabel = "\nTotal Discount";
+                        String totalDiscountAmount = "\n" + totalDiscount.ToString("#,##0.00");
+                        graphics.DrawString(totalDiscountLabel, fontArial7Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatLeft);
+                        graphics.DrawString(totalDiscountAmount, fontArial7Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatRight);
+                        y += graphics.MeasureString(totalDiscountAmount, fontArial7Regular).Height;
+
+                        String totalSalesLabel = "Total Amount";
+                        String totalSalesAmount = totalAmount.ToString("#,##0.00");
                         graphics.DrawString(totalSalesLabel, fontArial8Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatLeft);
                         graphics.DrawString(totalSalesAmount, fontArial8Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatRight);
                         y += graphics.MeasureString(totalSalesAmount, fontArial8Bold).Height;
@@ -521,6 +574,8 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                     Decimal totalServiceCharge = 0;
                     Boolean hasServiceCharge = false;
+                    Decimal totalDiscount = 0;
+                    String salesLineQty;
 
                     var salesLines = from d in db.TrnSalesLines where d.SalesId == trnSalesId select d;
                     if (salesLines.Any())
@@ -585,13 +640,22 @@ namespace EasyPOS.Forms.Software.TrnPOS
                                 }
 
                                 totalAmount += salesLine.Amount;
-
+                                totalDiscount += salesLine.DiscountAmount;
 
                                 if (salesLine.MstItem.BarCode != "0000000001")
                                 {
                                     String itemData;
                                     if (Modules.SysCurrentModule.GetCurrentSettings().ShowPriceDescriptioninReceipts == true)
                                     {
+                                        if (Modules.SysCurrentModule.GetCurrentSettings().ItemQtyRemoveDecimalPlaces == true)
+                                        {
+                                            salesLineQty = salesLine.Quantity.ToString("#,##0");
+                                        }
+                                        else
+                                        {
+                                            salesLineQty = salesLine.Quantity.ToString("#,##0.00");
+                                        }
+
                                         var itemPrices = from d in db.MstItemPrices
                                                          where d.ItemId == salesLine.ItemId
                                                          && d.Price == salesLine.Price
@@ -599,16 +663,46 @@ namespace EasyPOS.Forms.Software.TrnPOS
                                         if (itemPrices.Any())
                                         {
                                             var itemPrice = itemPrices.FirstOrDefault().PriceDescription;
-                                            itemData = salesLine.ItemDescription + " " + salesLine.Preparation + " - " + itemPrice + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                            if (salesLine.DiscountAmount > 0)
+                                            {
+                                                itemData = salesLine.ItemDescription + " " + salesLine.Preparation + " - " + itemPrice + "\n" + salesLineQty + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " " + "less" + " " + ((salesLine.DiscountAmount / salesLine.Quantity) * salesLine.Quantity).ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                            }
+                                            else
+                                            {
+                                                itemData = salesLine.ItemDescription + " " + salesLine.Preparation + " - " + itemPrice + "\n" + salesLineQty + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                            }
                                         }
                                         else
                                         {
-                                            itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                            if (salesLine.DiscountAmount > 0)
+                                            {
+                                                itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLineQty + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " " + "less" + " " + ((salesLine.DiscountAmount / salesLine.Quantity) * salesLine.Quantity).ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                            }
+                                            else
+                                            {
+                                                itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLineQty + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                            }
                                         }
                                     }
                                     else
                                     {
-                                        itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLine.Quantity.ToString("#,##0.00") + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                        if (Modules.SysCurrentModule.GetCurrentSettings().ItemQtyRemoveDecimalPlaces == true)
+                                        {
+                                            salesLineQty = salesLine.Quantity.ToString("#,##0");
+                                        }
+                                        else
+                                        {
+                                            salesLineQty = salesLine.Quantity.ToString("#,##0.00");
+                                        }
+
+                                        if (salesLine.DiscountAmount > 0)
+                                        {
+                                            itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLineQty + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " " + "less" + " " + ((salesLine.DiscountAmount / salesLine.Quantity) * salesLine.Quantity).ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                        }
+                                        else
+                                        {
+                                            itemData = salesLine.ItemDescription + " " + salesLine.Preparation + "\n" + salesLineQty + " " + salesLine.Unit + " @ " + salesLine.Price.ToString("#,##0.00") + " - " + salesLine.MstTax.Code[0];
+                                        }
                                     }
                                     String itemAmountData = (salesLine.Amount + salesLine.DiscountAmount).ToString("#,##0.00");
                                     RectangleF itemDataRectangle = new RectangleF
@@ -657,6 +751,12 @@ namespace EasyPOS.Forms.Software.TrnPOS
                         graphics.DrawString(totalServiceChangeAmount, fontArial7Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatRight);
                         y += graphics.MeasureString(totalServiceChangeAmount, fontArial7Regular).Height;
 
+                        String totalDiscountLabel = "Total Discount";
+                        String totalDiscountAmount = totalDiscount.ToString("#,##0.00");
+                        graphics.DrawString(totalDiscountLabel, fontArial7Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatLeft);
+                        graphics.DrawString(totalDiscountAmount, fontArial7Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatRight);
+                        y += graphics.MeasureString(totalDiscountAmount, fontArial7Regular).Height;
+
                         String totalSalesLabel = "Total Amount";
                         String totalSalesAmount = totalAmount.ToString("#,##0.00");
                         graphics.DrawString(totalSalesLabel, fontArial8Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatLeft);
@@ -680,8 +780,14 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     }
                     else
                     {
-                        String totalSalesLabel = "\nTotal Amount";
-                        String totalSalesAmount = "\n" + totalAmount.ToString("#,##0.00");
+                        String totalDiscountLabel = "\nTotal Discount";
+                        String totalDiscountAmount = "\n" + totalDiscount.ToString("#,##0.00");
+                        graphics.DrawString(totalDiscountLabel, fontArial7Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatLeft);
+                        graphics.DrawString(totalDiscountAmount, fontArial7Regular, drawBrush, new RectangleF(x, y, width, height), drawFormatRight);
+                        y += graphics.MeasureString(totalDiscountAmount, fontArial7Regular).Height;
+
+                        String totalSalesLabel = "Total Amount";
+                        String totalSalesAmount = totalAmount.ToString("#,##0.00");
                         graphics.DrawString(totalSalesLabel, fontArial8Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatLeft);
                         graphics.DrawString(totalSalesAmount, fontArial8Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatRight);
                         y += graphics.MeasureString(totalSalesAmount, fontArial8Bold).Height;
