@@ -51,6 +51,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.comboBoxTenant = new System.Windows.Forms.ComboBox();
             this.checkBoxItemQtyRemoveDecimalPlaces = new System.Windows.Forms.CheckBox();
             this.checkBoxShowPriceDescriptionInReceipts = new System.Windows.Forms.CheckBox();
             this.dateTimePickerLoginDate = new System.Windows.Forms.DateTimePicker();
@@ -202,7 +203,7 @@
             this.buttonKitchenPageListLast = new System.Windows.Forms.Button();
             this.textBoxKitchenPageNumber = new System.Windows.Forms.TextBox();
             this.backgroundWorkerEasyfisIntegration = new System.ComponentModel.BackgroundWorker();
-            this.comboBoxTenant = new System.Windows.Forms.ComboBox();
+            this.checkBoxStockLevelAlert = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -489,6 +490,7 @@
             // 
             this.panel5.AutoScroll = true;
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel5.Controls.Add(this.checkBoxStockLevelAlert);
             this.panel5.Controls.Add(this.comboBoxTenant);
             this.panel5.Controls.Add(this.checkBoxItemQtyRemoveDecimalPlaces);
             this.panel5.Controls.Add(this.checkBoxShowPriceDescriptionInReceipts);
@@ -555,6 +557,18 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1370, 594);
             this.panel5.TabIndex = 34;
+            // 
+            // comboBoxTenant
+            // 
+            this.comboBoxTenant.Enabled = false;
+            this.comboBoxTenant.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.comboBoxTenant.FormattingEnabled = true;
+            this.comboBoxTenant.Location = new System.Drawing.Point(172, 82);
+            this.comboBoxTenant.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxTenant.Name = "comboBoxTenant";
+            this.comboBoxTenant.Size = new System.Drawing.Size(248, 31);
+            this.comboBoxTenant.TabIndex = 111;
+            this.comboBoxTenant.Text = "NA";
             // 
             // checkBoxItemQtyRemoveDecimalPlaces
             // 
@@ -2375,17 +2389,18 @@
             this.backgroundWorkerEasyfisIntegration.WorkerSupportsCancellation = true;
             this.backgroundWorkerEasyfisIntegration.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerEasyfisIntegration_DoWork);
             // 
-            // comboBoxTenant
+            // checkBoxStockLevelAlert
             // 
-            this.comboBoxTenant.Enabled = false;
-            this.comboBoxTenant.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.comboBoxTenant.FormattingEnabled = true;
-            this.comboBoxTenant.Location = new System.Drawing.Point(172, 82);
-            this.comboBoxTenant.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxTenant.Name = "comboBoxTenant";
-            this.comboBoxTenant.Size = new System.Drawing.Size(248, 31);
-            this.comboBoxTenant.TabIndex = 111;
-            this.comboBoxTenant.Text = "NA";
+            this.checkBoxStockLevelAlert.AutoSize = true;
+            this.checkBoxStockLevelAlert.Enabled = false;
+            this.checkBoxStockLevelAlert.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxStockLevelAlert.Location = new System.Drawing.Point(1000, 405);
+            this.checkBoxStockLevelAlert.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxStockLevelAlert.Name = "checkBoxStockLevelAlert";
+            this.checkBoxStockLevelAlert.Size = new System.Drawing.Size(212, 27);
+            this.checkBoxStockLevelAlert.TabIndex = 112;
+            this.checkBoxStockLevelAlert.Text = "Enable Stock Level Alert";
+            this.checkBoxStockLevelAlert.UseVisualStyleBackColor = true;
             // 
             // SysSettingsForm
             // 
@@ -2615,5 +2630,6 @@
         private System.Windows.Forms.CheckBox checkBoxShowPriceDescriptionInReceipts;
         private System.Windows.Forms.CheckBox checkBoxItemQtyRemoveDecimalPlaces;
         private System.Windows.Forms.ComboBox comboBoxTenant;
+        private System.Windows.Forms.CheckBox checkBoxStockLevelAlert;
     }
 }

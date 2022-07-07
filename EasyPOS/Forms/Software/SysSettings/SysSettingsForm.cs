@@ -571,6 +571,7 @@ namespace EasyPOS.Forms.Software.SysSettings
                 checkBoxEnableSelectOrderTaker.Checked = Convert.ToBoolean(sysCurrent.EnableSelectOrderTaker);
                 checkBoxShowPriceDescriptionInReceipts.Checked = Convert.ToBoolean(sysCurrent.ShowPriceDescriptioninReceipts);
                 checkBoxItemQtyRemoveDecimalPlaces.Checked = Convert.ToBoolean(sysCurrent.ItemQtyRemoveDecimalPlaces);
+                checkBoxStockLevelAlert.Checked = Convert.ToBoolean(sysCurrent.StockLevelAlert);
             }
             dateTimePickerLoginDate.Enabled = false;
         }
@@ -668,8 +669,8 @@ namespace EasyPOS.Forms.Software.SysSettings
                 DisableSalesDate = checkBoxDisableSalesDate.Checked,
                 EnableSelectOrderTaker = checkBoxEnableSelectOrderTaker.Checked,
                 ShowPriceDescriptioninReceipts = checkBoxShowPriceDescriptionInReceipts.Checked,
-                ItemQtyRemoveDecimalPlaces = checkBoxItemQtyRemoveDecimalPlaces.Checked
-
+                ItemQtyRemoveDecimalPlaces = checkBoxItemQtyRemoveDecimalPlaces.Checked,
+                StockLevelAlert = checkBoxStockLevelAlert.Checked
             };
 
             String[] saveSysCurrent = sysSettingsController.UpdateSysCurrent(sysCurrentEntity);
@@ -748,6 +749,7 @@ namespace EasyPOS.Forms.Software.SysSettings
                 checkBoxEnableSelectOrderTaker.Enabled = false;
                 checkBoxShowPriceDescriptionInReceipts.Enabled = false;
                 checkBoxItemQtyRemoveDecimalPlaces.Enabled = false;
+                checkBoxStockLevelAlert.Enabled = false;
             }
             else
             {
@@ -858,6 +860,7 @@ namespace EasyPOS.Forms.Software.SysSettings
                 checkBoxEnableSelectOrderTaker.Enabled = true;
                 checkBoxShowPriceDescriptionInReceipts.Enabled = true;
                 checkBoxItemQtyRemoveDecimalPlaces.Enabled = true;
+                checkBoxStockLevelAlert.Enabled = true;
             }
         }
 

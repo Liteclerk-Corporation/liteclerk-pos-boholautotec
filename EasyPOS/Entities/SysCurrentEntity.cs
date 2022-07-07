@@ -86,6 +86,6 @@ namespace EasyPOS.Entities
         public Boolean EnableSelectOrderTaker { get; set; }
         public Boolean ShowPriceDescriptioninReceipts { get; set; }
         public Boolean ItemQtyRemoveDecimalPlaces { get; set; }
-
+        public Boolean StockLevelAlert { get; set; }
     }
 }

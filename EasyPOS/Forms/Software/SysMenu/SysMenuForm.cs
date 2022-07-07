@@ -26,6 +26,8 @@ namespace EasyPOS.Forms.Software.SysMenu
         {
             InitializeComponent();
 
+            GetInventoryListStockLevelAlert();
+
             var logoFilePath = Modules.SysCurrentModule.GetCurrentSettings().LogoFilePath;
             pictureBoxLogo.Image = Image.FromFile(@"" + logoFilePath);
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -63,6 +65,24 @@ namespace EasyPOS.Forms.Software.SysMenu
 
             MenuForm();
             InventoryModuleButtonLocation();
+        }
+        public List<Entities.DgvStockLevelReportEntity> GetInventoryListStockLevelAlert()
+        {
+
+            List<Entities.DgvStockLevelReportEntity> rowList = new List<Entities.DgvStockLevelReportEntity>();
+
+            Controllers.RepInventoryReportController repInvetoryReportController = new Controllers.RepInventoryReportController();
+
+            var inventoryListReport = repInvetoryReportController.GetInventoryListStockLevelAlert();
+            if (inventoryListReport.Any())
+            {
+                if (Modules.SysCurrentModule.GetCurrentSettings().StockLevelAlert == true)
+                {
+                    RepInventoryReport.RepInventoryStockLevelReportForm repInventoryReportStockLevel = new RepInventoryReport.RepInventoryStockLevelReportForm();
+                    repInventoryReportStockLevel.ShowDialog();
+                }
+            }
+            return rowList;
         }
 
         public string SetLabel(string label)

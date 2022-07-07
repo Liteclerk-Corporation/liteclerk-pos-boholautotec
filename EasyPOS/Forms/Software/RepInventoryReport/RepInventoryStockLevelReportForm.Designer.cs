@@ -57,6 +57,7 @@
             this.buttonPageListPrevious = new System.Windows.Forms.Button();
             this.textBoxPageNumber = new System.Windows.Forms.TextBox();
             this.folderBrowserDialogGenerateCSV = new System.Windows.Forms.FolderBrowserDialog();
+            this.buttonPDF = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItemListReport)).BeginInit();
@@ -66,6 +67,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
+            this.panel1.Controls.Add(this.buttonPDF);
             this.panel1.Controls.Add(this.buttonGenerateCSV);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
@@ -414,6 +416,25 @@
             this.textBoxPageNumber.TabStop = false;
             this.textBoxPageNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // buttonPDF
+            // 
+            this.buttonPDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonPDF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
+            this.buttonPDF.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonPDF.FlatAppearance.BorderSize = 0;
+            this.buttonPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPDF.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPDF.ForeColor = System.Drawing.Color.White;
+            this.buttonPDF.Location = new System.Drawing.Point(1037, 11);
+            this.buttonPDF.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.buttonPDF.Name = "buttonPDF";
+            this.buttonPDF.Size = new System.Drawing.Size(88, 40);
+            this.buttonPDF.TabIndex = 6;
+            this.buttonPDF.TabStop = false;
+            this.buttonPDF.Text = "PDF";
+            this.buttonPDF.UseVisualStyleBackColor = false;
+            this.buttonPDF.Click += new System.EventHandler(this.buttonPDF_Click);
+            // 
             // RepInventoryStockLevelReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -471,5 +492,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnItemListIsInventory;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnItemListIsLocked;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSupplier;
+        private System.Windows.Forms.Button buttonPDF;
     }
 }
