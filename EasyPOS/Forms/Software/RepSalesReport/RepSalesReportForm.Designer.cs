@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RepSalesReportForm));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.comboBoxCategory = new System.Windows.Forms.ComboBox();
+            this.labelCategory = new System.Windows.Forms.Label();
             this.comboBoxItemFilter = new System.Windows.Forms.ComboBox();
             this.labelItem = new System.Windows.Forms.Label();
             this.comboBoxSupplier = new System.Windows.Forms.ComboBox();
@@ -59,8 +61,6 @@
             this.folderBrowserDialogStockWithdrawalReport = new System.Windows.Forms.FolderBrowserDialog();
             this.folderBrowserDialogCollectionDetailReportFacepay = new System.Windows.Forms.FolderBrowserDialog();
             this.printDialog80mmReport = new System.Windows.Forms.PrintDialog();
-            this.comboBoxCategory = new System.Windows.Forms.ComboBox();
-            this.labelCategory = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -97,6 +97,31 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1370, 638);
             this.panel4.TabIndex = 8;
+            // 
+            // comboBoxCategory
+            // 
+            this.comboBoxCategory.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboBoxCategory.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxCategory.FormattingEnabled = true;
+            this.comboBoxCategory.Location = new System.Drawing.Point(514, 367);
+            this.comboBoxCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxCategory.Name = "comboBoxCategory";
+            this.comboBoxCategory.Size = new System.Drawing.Size(419, 31);
+            this.comboBoxCategory.TabIndex = 36;
+            this.comboBoxCategory.Visible = false;
+            // 
+            // labelCategory
+            // 
+            this.labelCategory.AutoSize = true;
+            this.labelCategory.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.labelCategory.Location = new System.Drawing.Point(406, 370);
+            this.labelCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCategory.Name = "labelCategory";
+            this.labelCategory.Size = new System.Drawing.Size(83, 23);
+            this.labelCategory.TabIndex = 37;
+            this.labelCategory.Text = "Category:";
+            this.labelCategory.UseWaitCursor = true;
+            this.labelCategory.Visible = false;
             // 
             // comboBoxItemFilter
             // 
@@ -313,7 +338,9 @@
             "",
             "POS Touch Deleted Items",
             "",
-            "Sales Agent Report"});
+            "Sales Agent Report",
+            "",
+            "Customer Load Summary Report"});
             this.listBoxSalesReport.Location = new System.Drawing.Point(0, 0);
             this.listBoxSalesReport.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxSalesReport.Name = "listBoxSalesReport";
@@ -449,31 +476,6 @@
             // printDialog80mmReport
             // 
             this.printDialog80mmReport.UseEXDialog = true;
-            // 
-            // comboBoxCategory
-            // 
-            this.comboBoxCategory.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.comboBoxCategory.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxCategory.FormattingEnabled = true;
-            this.comboBoxCategory.Location = new System.Drawing.Point(514, 367);
-            this.comboBoxCategory.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxCategory.Name = "comboBoxCategory";
-            this.comboBoxCategory.Size = new System.Drawing.Size(419, 31);
-            this.comboBoxCategory.TabIndex = 36;
-            this.comboBoxCategory.Visible = false;
-            // 
-            // labelCategory
-            // 
-            this.labelCategory.AutoSize = true;
-            this.labelCategory.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelCategory.Location = new System.Drawing.Point(406, 370);
-            this.labelCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelCategory.Name = "labelCategory";
-            this.labelCategory.Size = new System.Drawing.Size(83, 23);
-            this.labelCategory.TabIndex = 37;
-            this.labelCategory.Text = "Category:";
-            this.labelCategory.UseWaitCursor = true;
-            this.labelCategory.Visible = false;
             // 
             // RepSalesReportForm
             // 

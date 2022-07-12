@@ -995,9 +995,39 @@ namespace EasyPOS.Forms.Software.RepSalesReport
 
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
+                        break;
+                    case "Customer Load Summary Report":
+                        labelStartDate.Visible = true;
+                        dateTimePickerStartDate.Visible = true;
+
+                        labelEndDate.Visible = true;
+                        dateTimePickerEndDate.Visible = true;
+
+                        labelTerminal.Visible = false;
+                        comboBoxTerminal.Visible = false;
+
+                        labelCustomer.Visible = true;
+                        comboBoxCustomer.Visible = true;
+
+                        labelAgent.Visible = false;
+                        comboBoxSalesAgent.Visible = false;
+
+                        labelSupplier.Visible = false;
+                        comboBoxSupplier.Visible = false;
+
+                        labelItem.Visible = false;
+                        comboBoxItemFilter.Visible = false;
+
+                        labelDateAsOf.Visible = false;
+                        dateTimePickerDateAsOf.Visible = false;
+
+                        dateTimePickerStartDate.Focus();
+                        buttonView.Text = SetLabel("Print");
+
+                        labelCategory.Visible = false;
+                        comboBoxCategory.Visible = false;
 
                         break;
-
                     default:
                         labelStartDate.Visible = false;
                         dateTimePickerStartDate.Visible = false;
@@ -1552,6 +1582,26 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                                 else
                                 {
                                     MessageBox.Show("No rights!", "Easy POS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                            }
+                            break;
+                        case "Customer Load Summary Report":
+                            sysUserRights = new Modules.SysUserRightsModule("RepSalesDetail");
+
+                            if (sysUserRights.GetUserRights() == null)
+                            {
+                                MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                if (sysUserRights.GetUserRights().CanPrint == true)
+                                {
+                                    _80mmReport.RepLoadSummaryReport80mmForm repLoadSummary80mmReport = new _80mmReport.RepLoadSummaryReport80mmForm(dateTimePickerStartDate.Value.Date, dateTimePickerEndDate.Value.Date, Convert.ToInt32(comboBoxCustomer.SelectedValue));
+                                    repLoadSummary80mmReport.ShowDialog();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No rights!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
                             }
                             break;

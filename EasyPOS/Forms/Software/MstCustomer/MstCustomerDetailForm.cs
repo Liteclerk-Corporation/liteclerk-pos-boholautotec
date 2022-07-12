@@ -205,7 +205,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
             textBoxRewardNumber.Enabled = !isLocked;
             textBoxRewardConversion.Enabled = !isLocked;
             textBoxDefaultPrice.Enabled = !isLocked;
-            buttonAddLoad.Enabled = !isLocked;
+            buttonAddLoad.Enabled = isLocked;
             textBoxCustomerCode.Focus();
             textBoxBusinessStyle.Enabled = !isLocked;
             comboBoxPriceLevel.Enabled = !isLocked;
@@ -598,7 +598,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
             {
                 Id = 0,
                 CustomerId = mstCustomerEntity.Id,
-                CardNumber = "",
+                CardNumber = "NA",
                 LoadDate = DateTime.Today.ToShortDateString(),
                 Type = "Load",
                 Amount = 0,
@@ -607,6 +607,23 @@ namespace EasyPOS.Forms.Software.MstCustomer
 
             MstCustomerLoadDetailForm sysSystemTablesCustomerLoadDetailForm = new MstCustomerLoadDetailForm(this, newCustomerLoad);
             sysSystemTablesCustomerLoadDetailForm.ShowDialog();
+        }
+
+        private void buttonRefund_Click(object sender, EventArgs e)
+        {
+            Entities.MstCustomerLoadEntity newCustomerLoad = new Entities.MstCustomerLoadEntity()
+            {
+                Id = 0,
+                CustomerId = mstCustomerEntity.Id,
+                CardNumber = "NA",
+                LoadDate = DateTime.Today.ToShortDateString(),
+                Type = "Load",
+                Amount = 0,
+                Remarks = ""
+            };
+
+            MstCustomerLoadDetailRefund sysSystemTablesCustomerLoadDetailRefundForm = new MstCustomerLoadDetailRefund(this, newCustomerLoad);
+            sysSystemTablesCustomerLoadDetailRefundForm.ShowDialog();
         }
     }
 }
