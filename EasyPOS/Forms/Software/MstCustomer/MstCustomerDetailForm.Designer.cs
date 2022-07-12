@@ -88,7 +88,7 @@
             this.ColumnCustomerLoadType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCustomerLoadAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCustomerLoadRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonCustomerLoadRefund = new System.Windows.Forms.Button();
+            this.buttonRefund = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -620,7 +620,6 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.Control;
-            this.panel5.Controls.Add(this.buttonCustomerLoadRefund);
             this.panel5.Controls.Add(this.panel19);
             this.panel5.Controls.Add(this.buttonAddLoad);
             this.panel5.Controls.Add(this.dataGridViewCustomerLoadList);
@@ -634,6 +633,7 @@
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.Color.White;
+            this.panel19.Controls.Add(this.buttonRefund);
             this.panel19.Controls.Add(this.buttonCustomerLoadListPageListFirst);
             this.panel19.Controls.Add(this.buttonCustomerLoadListPageListPrevious);
             this.panel19.Controls.Add(this.buttonCustomerLoadListPageListNext);
@@ -832,23 +832,23 @@
             this.ColumnCustomerLoadRemarks.ReadOnly = true;
             this.ColumnCustomerLoadRemarks.Width = 300;
             // 
-            // buttonCustomerLoadRefund
+            // buttonRefund
             // 
-            this.buttonCustomerLoadRefund.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCustomerLoadRefund.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
-            this.buttonCustomerLoadRefund.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
-            this.buttonCustomerLoadRefund.FlatAppearance.BorderSize = 0;
-            this.buttonCustomerLoadRefund.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCustomerLoadRefund.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustomerLoadRefund.ForeColor = System.Drawing.Color.White;
-            this.buttonCustomerLoadRefund.Location = new System.Drawing.Point(1171, 5);
-            this.buttonCustomerLoadRefund.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonCustomerLoadRefund.Name = "buttonCustomerLoadRefund";
-            this.buttonCustomerLoadRefund.Size = new System.Drawing.Size(101, 40);
-            this.buttonCustomerLoadRefund.TabIndex = 37;
-            this.buttonCustomerLoadRefund.Text = "Refund";
-            this.buttonCustomerLoadRefund.UseVisualStyleBackColor = false;
-            this.buttonCustomerLoadRefund.Click += new System.EventHandler(this.buttonCustomerLoadRefund_Click);
+            this.buttonRefund.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRefund.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
+            this.buttonRefund.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonRefund.FlatAppearance.BorderSize = 0;
+            this.buttonRefund.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefund.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefund.ForeColor = System.Drawing.Color.White;
+            this.buttonRefund.Location = new System.Drawing.Point(1275, 6);
+            this.buttonRefund.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonRefund.Name = "buttonRefund";
+            this.buttonRefund.Size = new System.Drawing.Size(88, 40);
+            this.buttonRefund.TabIndex = 37;
+            this.buttonRefund.Text = "Refund";
+            this.buttonRefund.UseVisualStyleBackColor = false;
+            this.buttonRefund.Click += new System.EventHandler(this.buttonRefund_Click);
             // 
             // pictureBox1
             // 
@@ -951,6 +951,6 @@
         private System.Windows.Forms.TextBox textBoxLoadBalance;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox comboBoxPriceLevel;
-        private System.Windows.Forms.Button buttonCustomerLoadRefund;
+        private System.Windows.Forms.Button buttonRefund;
     }
 }

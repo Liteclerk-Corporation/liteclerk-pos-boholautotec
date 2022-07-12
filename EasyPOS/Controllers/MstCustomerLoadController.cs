@@ -31,7 +31,7 @@ namespace EasyPOS.Controllers
                                     Remarks = d.Remarks
                                 };
 
-            return customerLoads.OrderByDescending(d => d.Id).ToList();
+            return customerLoads.OrderBy(d => d.Id).ToList();
         }
     
         // =================
