@@ -608,5 +608,9 @@ namespace EasyPOS.Forms.Software.MstCustomer
             MstCustomerLoadDetailForm sysSystemTablesCustomerLoadDetailForm = new MstCustomerLoadDetailForm(this, newCustomerLoad);
             sysSystemTablesCustomerLoadDetailForm.ShowDialog();
         }
+        private void buttonCustomerLoadRefund_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -104,6 +104,8 @@ namespace EasyPOS.Forms.Software.MstCustomer
                 {
                     mstCustomerDetailForm.UpdateCustomerLoadListDataSource();
                     Close();
+
+                    new MstCustomerLoadReceiptForm(mstCustomerLoadEntity.CustomerId, newCustomerLoad);
                 }
             }
         }
