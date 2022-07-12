@@ -548,6 +548,12 @@
     <Compile Include="Forms\Software\MstCustomer\MstCustomerLoadDetailRefund.Designer.cs">
       <DependentUpon>MstCustomerLoadDetailRefund.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Software\MstCustomer\MstCustomerLoadReceiptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Software\MstCustomer\MstCustomerLoadReceiptForm.Designer.cs">
+      <DependentUpon>MstCustomerLoadReceiptForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Software\MstDiscounting\MstDiscountingListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1610,6 +1616,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Software\MstCustomer\MstCustomerLoadDetailRefund.resx">
       <DependentUpon>MstCustomerLoadDetailRefund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Software\MstCustomer\MstCustomerLoadReceiptForm.resx">
+      <DependentUpon>MstCustomerLoadReceiptForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Software\MstDiscounting\MstDiscountingDetailForm.resx">
       <DependentUpon>MstDiscountingDetailForm.cs</DependentUpon>
