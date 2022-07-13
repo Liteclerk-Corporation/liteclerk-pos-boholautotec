@@ -168,6 +168,7 @@ namespace EasyPOS.Forms.Software._80mmReport
                             where s.LoadDate >= dateStart
                              && s.LoadDate <= dateEnd
                              && s.CustomerId == filterCustomerId
+                             && s.Type == "Load"
                             select s;
 
                 if (filterCustomerId == 0)
@@ -175,6 +176,7 @@ namespace EasyPOS.Forms.Software._80mmReport
                     loads = from s in db.MstCustomerLoads
                             where s.LoadDate >= dateStart
                              && s.LoadDate <= dateEnd
+                             && s.Type == "Load"
                             select s;
                 }
 
@@ -254,6 +256,7 @@ namespace EasyPOS.Forms.Software._80mmReport
                             where s.LoadDate >= dateStart
                              && s.LoadDate <= dateEnd
                              && s.CustomerId == filterCustomerId
+                             && s.Type == "Load"
                             select s;
 
                 if (filterCustomerId == 0)
@@ -261,6 +264,7 @@ namespace EasyPOS.Forms.Software._80mmReport
                     loads = from s in db.MstCustomerLoads
                             where s.LoadDate >= dateStart
                              && s.LoadDate <= dateEnd
+                             && s.Type == "Load"
                             select s;
                 }
 

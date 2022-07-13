@@ -93,19 +93,26 @@ namespace EasyPOS.Forms.Software.MstCustomer
                     Remarks = "Beginning Balance"
                 };
 
-                Controllers.MstCustomerLoadController mstCustomerLoadController = new Controllers.MstCustomerLoadController();
-                String[] addCustomerLoad = mstCustomerLoadController.AddCustomerLoad(newCustomerLoad);
-
-                if (addCustomerLoad[1].Equals("0") == true)
+                if (newCustomerLoad.Amount > 0)
                 {
-                    MessageBox.Show(addCustomerLoad[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Controllers.MstCustomerLoadController mstCustomerLoadController = new Controllers.MstCustomerLoadController();
+                    String[] addCustomerLoad = mstCustomerLoadController.AddCustomerLoad(newCustomerLoad);
+
+                    if (addCustomerLoad[1].Equals("0") == true)
+                    {
+                        MessageBox.Show(addCustomerLoad[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        mstCustomerDetailForm.UpdateCustomerLoadListDataSource();
+                        Close();
+
+                        new MstCustomerLoadReceiptForm(mstCustomerLoadEntity.CustomerId, newCustomerLoad);
+                    }
                 }
                 else
                 {
-                    mstCustomerDetailForm.UpdateCustomerLoadListDataSource();
-                    Close();
-
-                    new MstCustomerLoadReceiptForm(mstCustomerLoadEntity.CustomerId, newCustomerLoad);
+                    MessageBox.Show("Cannot Load Zero Amount!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

@@ -203,7 +203,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
 
             String customerName = "\n" + customer.FirstOrDefault().Customer.ToString(CultureInfo.InvariantCulture);
             graphics.DrawString(customerName, fontArial8Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatLeft);
-            String customerLoadAmount = "\n" + customerLoad.FirstOrDefault().Amount.ToString("#,##0.00", CultureInfo.InvariantCulture);
+            String customerLoadAmount = "\n" + mstCustomerLoadEntity.Amount.ToString("#,##0.00", CultureInfo.InvariantCulture);
             graphics.DrawString(customerLoadAmount, fontArial8Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatRight);
             y += graphics.MeasureString(customerLoadAmount, fontArial8Bold).Height;
 
