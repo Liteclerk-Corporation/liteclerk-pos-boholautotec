@@ -838,7 +838,7 @@ namespace EasyPOS.Controllers
                         return new String[] { "Tax not found.", "0" };
                     }
 
-                    var supplier = from d in db.MstSuppliers where d.Id == Convert.ToInt32(Modules.SysCurrentModule.GetCurrentSettings().ReturnSupplierId) select d;
+                    var supplier = from d in db.MstSuppliers where d.Supplier == objitemList.FirstOrDefault().Supplier select d;
                     if (supplier.Any() == false)
                     {
                         return new String[] { "Supplier not found.", "0" };
@@ -882,12 +882,12 @@ namespace EasyPOS.Controllers
                             MarkUp = 0,
                             Price = Convert.ToDecimal(obj.Price),
                             ImagePath = "NA",
-                            ReorderQuantity = 0,
+                            ReorderQuantity = obj.ReorderQuantity,
                             OnhandQuantity = 0,
-                            IsInventory = true,
-                            ExpiryDate = null,
+                            IsInventory = obj.IsInventory,
+                            ExpiryDate = Convert.ToDateTime(obj.ExpiryDate),
                             LotNumber = obj.LotNumber,
-                            Remarks = "NA",
+                            Remarks = obj.Remarks,
                             EntryUserId = currentUserLogin.FirstOrDefault().Id,
                             EntryDateTime = DateTime.Today,
                             UpdateUserId = currentUserLogin.FirstOrDefault().Id,
