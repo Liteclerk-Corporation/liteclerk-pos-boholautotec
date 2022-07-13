@@ -25,22 +25,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
             mstCustomerDetailForm = customerDetailForm;
             mstCustomerLoadEntity = customerLoadEntity;
 
-            LoadCustomerLoad();
-        }
-        public void LoadCustomerLoad()
-        {
-            Decimal totalLoadAmount = 0;
-
-            var customerLoads = from d in db.MstCustomerLoads
-                                where d.CustomerId == mstCustomerLoadEntity.CustomerId
-                                select d;
-
-            if (customerLoads.Any())
-            {
-                totalLoadAmount = customerLoads.Sum(a => a.Amount);
-            }
-
-            textBoxAmount.Text = totalLoadAmount.ToString("#,##0.00");
+            textBoxAmount.Text = "0.00";
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -63,17 +48,26 @@ namespace EasyPOS.Forms.Software.MstCustomer
                             Remarks = "Load Refund"
                         };
 
-                        Controllers.MstCustomerLoadController mstCustomerLoadController = new Controllers.MstCustomerLoadController();
-                        String[] addCustomerLoad = mstCustomerLoadController.AddCustomerLoad(newCustomerLoad);
-
-                        if (addCustomerLoad[1].Equals("0") == true)
+                        if (newCustomerLoad.Amount < 0)
                         {
-                            MessageBox.Show(addCustomerLoad[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Controllers.MstCustomerLoadController mstCustomerLoadController = new Controllers.MstCustomerLoadController();
+                            String[] addCustomerLoad = mstCustomerLoadController.AddCustomerLoad(newCustomerLoad);
+
+                            if (addCustomerLoad[1].Equals("0") == true)
+                            {
+                                MessageBox.Show(addCustomerLoad[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                mstCustomerDetailForm.UpdateCustomerLoadListDataSource();
+                                Close();
+
+                                new MstCustomerRefundReceiptForm(mstCustomerLoadEntity.CustomerId, newCustomerLoad);
+                            }
                         }
                         else
                         {
-                            mstCustomerDetailForm.UpdateCustomerLoadListDataSource();
-                            Close();
+                            MessageBox.Show("Unable to process refund request!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -82,11 +76,6 @@ namespace EasyPOS.Forms.Software.MstCustomer
                     MessageBox.Show("Unable to process refund request!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void textBoxAmount_Leave(object sender, EventArgs e)
-        {
-            textBoxAmount.Text = Convert.ToDecimal(textBoxAmount.Text).ToString("#,##0.00");
         }
 
         private void textBoxAmount_KeyPress(object sender, KeyPressEventArgs e)

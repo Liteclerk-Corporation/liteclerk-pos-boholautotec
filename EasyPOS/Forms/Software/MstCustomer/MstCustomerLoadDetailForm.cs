@@ -80,39 +80,47 @@ namespace EasyPOS.Forms.Software.MstCustomer
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            if (mstCustomerLoadEntity.Id == 0)
+            DialogResult closeDialogResult = MessageBox.Show("Confirm load?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (closeDialogResult == DialogResult.Yes)
             {
-                Entities.MstCustomerLoadEntity newCustomerLoad = new Entities.MstCustomerLoadEntity()
+                if (mstCustomerLoadEntity.Id == 0)
                 {
-                    Id = mstCustomerLoadEntity.Id,
-                    CustomerId = mstCustomerLoadEntity.CustomerId,
-                    CardNumber = mstCustomerDetailForm.mstCustomerEntity.CustomerCode,
-                    LoadDate = DateTime.Today.ToShortDateString(),
-                    Type = "Load",
-                    Amount = Convert.ToDecimal(textBoxAmount.Text),
-                    Remarks = "Beginning Balance"
-                };
-
-                if (newCustomerLoad.Amount > 0)
-                {
-                    Controllers.MstCustomerLoadController mstCustomerLoadController = new Controllers.MstCustomerLoadController();
-                    String[] addCustomerLoad = mstCustomerLoadController.AddCustomerLoad(newCustomerLoad);
-
-                    if (addCustomerLoad[1].Equals("0") == true)
+                    Entities.MstCustomerLoadEntity newCustomerLoad = new Entities.MstCustomerLoadEntity()
                     {
-                        MessageBox.Show(addCustomerLoad[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Id = mstCustomerLoadEntity.Id,
+                        CustomerId = mstCustomerLoadEntity.CustomerId,
+                        CardNumber = mstCustomerDetailForm.mstCustomerEntity.CustomerCode,
+                        LoadDate = DateTime.Today.ToShortDateString(),
+                        Type = "Load",
+                        Amount = Convert.ToDecimal(textBoxAmount.Text),
+                        Remarks = "Beginning Balance"
+                    };
+
+                    if (newCustomerLoad.Amount > 0)
+                    {
+                        Controllers.MstCustomerLoadController mstCustomerLoadController = new Controllers.MstCustomerLoadController();
+                        String[] addCustomerLoad = mstCustomerLoadController.AddCustomerLoad(newCustomerLoad);
+
+                        if (addCustomerLoad[1].Equals("0") == true)
+                        {
+                            MessageBox.Show(addCustomerLoad[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            mstCustomerDetailForm.UpdateCustomerLoadListDataSource();
+                            Close();
+
+                            new MstCustomerLoadReceiptForm(mstCustomerLoadEntity.CustomerId, newCustomerLoad);
+                        }
                     }
                     else
                     {
-                        mstCustomerDetailForm.UpdateCustomerLoadListDataSource();
-                        Close();
-
-                        new MstCustomerLoadReceiptForm(mstCustomerLoadEntity.CustomerId, newCustomerLoad);
+                        MessageBox.Show("Cannot Load Zero Amount!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Cannot Load Zero Amount!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Unable to Process Load Request!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

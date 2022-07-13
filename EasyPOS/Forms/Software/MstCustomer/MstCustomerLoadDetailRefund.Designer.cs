@@ -117,7 +117,6 @@ namespace EasyPOS.Forms.Software.MstCustomer
             // 
             // textBoxAmount
             // 
-            this.textBoxAmount.Enabled = false;
             this.textBoxAmount.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.textBoxAmount.Location = new System.Drawing.Point(154, 78);
             this.textBoxAmount.Margin = new System.Windows.Forms.Padding(2);
@@ -126,7 +125,6 @@ namespace EasyPOS.Forms.Software.MstCustomer
             this.textBoxAmount.TabIndex = 14;
             this.textBoxAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
-            this.textBoxAmount.Leave += new System.EventHandler(this.textBoxAmount_Leave);
             // 
             // label3
             // 

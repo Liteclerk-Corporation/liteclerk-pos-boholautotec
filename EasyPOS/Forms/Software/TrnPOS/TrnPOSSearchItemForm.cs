@@ -45,11 +45,11 @@ namespace EasyPOS.Forms.Software.TrnPOS
                     buttonClose.Text = SetLabel(buttonClose.Text);
                     label1.Text = SetLabel(label1.Text);
                     dataGridViewSearchItemList.Columns[1].HeaderText = SetLabel(dataGridViewSearchItemList.Columns[1].HeaderText);
-                    dataGridViewSearchItemList.Columns[2].HeaderText = SetLabel(dataGridViewSearchItemList.Columns[2].HeaderText);
-                    dataGridViewSearchItemList.Columns[9].HeaderText = SetLabel(dataGridViewSearchItemList.Columns[9].HeaderText);
-                    dataGridViewSearchItemList.Columns[10].HeaderText = SetLabel(dataGridViewSearchItemList.Columns[10].HeaderText);
-                    dataGridViewSearchItemList.Columns[11].HeaderText = SetLabel(dataGridViewSearchItemList.Columns[11].HeaderText);
-                    dataGridViewSearchItemList.Columns[12].HeaderText = SetLabel(dataGridViewSearchItemList.Columns[12].HeaderText);
+                    dataGridViewSearchItemList.Columns[3].HeaderText = SetLabel(dataGridViewSearchItemList.Columns[2].HeaderText);
+                    dataGridViewSearchItemList.Columns[10].HeaderText = SetLabel(dataGridViewSearchItemList.Columns[9].HeaderText);
+                    dataGridViewSearchItemList.Columns[11].HeaderText = SetLabel(dataGridViewSearchItemList.Columns[10].HeaderText);
+                    dataGridViewSearchItemList.Columns[12].HeaderText = SetLabel(dataGridViewSearchItemList.Columns[11].HeaderText);
+                    dataGridViewSearchItemList.Columns[13].HeaderText = SetLabel(dataGridViewSearchItemList.Columns[12].HeaderText);
                     buttonPageListFirst.Text = SetLabel(buttonPageListFirst.Text);
                     buttonPageListPrevious.Text = SetLabel(buttonPageListPrevious.Text);
                     buttonPageListNext.Text = SetLabel(buttonPageListNext.Text);
@@ -150,13 +150,14 @@ namespace EasyPOS.Forms.Software.TrnPOS
             var itemList = trnPOSSalesLineController.ListSearchItem(filter);
             if (itemList.Any())
             {
-                dataGridViewSearchItemList.Columns[12].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
-                dataGridViewSearchItemList.Columns[12].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
-                dataGridViewSearchItemList.Columns[12].DefaultCellStyle.ForeColor = Color.White;
+                dataGridViewSearchItemList.Columns[1].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#0090B5");
+                dataGridViewSearchItemList.Columns[1].DefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#0090B5");
+                dataGridViewSearchItemList.Columns[1].DefaultCellStyle.ForeColor = Color.White;
                 var row = from d in itemList
                           select new Entities.DgvTrnSalesSearchItemListEntity
                           {
                               ColumnSearchItemId = d.Id,
+                              ColumnSearchItemButtonPick = "Pick",
                               ColumnSearchItemBarcode = d.BarCode,
                               ColumnSearchItemDescription = d.ItemDescription,
                               ColumnSearchItemGenericName = d.GenericName,
@@ -168,8 +169,7 @@ namespace EasyPOS.Forms.Software.TrnPOS
                               ColumnSearchItemUnit = d.Unit,
                               ColumnSearchItemPrice = d.Price.ToString("#,##0.00"),
                               ColumnSearchItemOnHandQuantity = d.OnhandQuantity.ToString("#,##0.00"),
-                              ColumnSearchItemIsInventory = d.IsInventory,
-                              ColumnSearchItemButtonPick = "Pick"
+                              ColumnSearchItemIsInventory = d.IsInventory
                           };
 
                 rowList = row.ToList();
