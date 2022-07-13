@@ -65,10 +65,10 @@ namespace EasyPOS.Forms.Software.MstCustomer
             this.buttonWithdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonWithdraw.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonWithdraw.ForeColor = System.Drawing.Color.White;
-            this.buttonWithdraw.Location = new System.Drawing.Point(402, 12);
+            this.buttonWithdraw.Location = new System.Drawing.Point(391, 12);
             this.buttonWithdraw.Margin = new System.Windows.Forms.Padding(2);
             this.buttonWithdraw.Name = "buttonWithdraw";
-            this.buttonWithdraw.Size = new System.Drawing.Size(104, 40);
+            this.buttonWithdraw.Size = new System.Drawing.Size(115, 40);
             this.buttonWithdraw.TabIndex = 20;
             this.buttonWithdraw.Text = "Withdraw";
             this.buttonWithdraw.UseVisualStyleBackColor = false;
