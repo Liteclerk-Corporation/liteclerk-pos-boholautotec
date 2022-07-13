@@ -17,12 +17,14 @@ namespace EasyPOS.Forms.Software._80mmReport
         public DateTime dateStart;
         public DateTime dateEnd;
         public Int32 filterCustomerId;
-        public RepLoadSummaryReport80mmForm(DateTime startDate, DateTime endDate, Int32 customerId)
+        public String loadTypes;
+        public RepLoadSummaryReport80mmForm(DateTime startDate, DateTime endDate, Int32 customerId, String loadType)
         {
             InitializeComponent();
             dateStart = startDate;
             dateEnd = endDate;
             filterCustomerId = customerId;
+            loadTypes = loadType;
 
             if (Modules.SysCurrentModule.GetCurrentSettings().PrinterType == "Dot Matrix Printer")
             {
@@ -214,9 +216,26 @@ namespace EasyPOS.Forms.Software._80mmReport
                 // =================
                 // 80mm Report Title
                 // =================
-                String title = "Load Summary Report";
-                graphics.DrawString(title, fontArial11Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatCenter);
-                y += graphics.MeasureString(title, fontArial11Bold).Height;
+                if (loadTypes == "Load")
+                {
+                    String title = "Load Summary Report";
+                    graphics.DrawString(title, fontArial11Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatCenter);
+                    y += graphics.MeasureString(title, fontArial11Bold).Height;
+                }
+                else if (loadTypes == "Refund")
+                {
+                    String title = "Refund Summary Report";
+                    graphics.DrawString(title, fontArial11Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatCenter);
+                    y += graphics.MeasureString(title, fontArial11Bold).Height;
+                }
+                else
+                {
+                    String title = "Withdrawal Summary Report";
+                    graphics.DrawString(title, fontArial11Bold, drawBrush, new RectangleF(x, y, width, height), drawFormatCenter);
+                    y += graphics.MeasureString(title, fontArial11Bold).Height;
+                }
+                
+                
 
                 // ==================
                 // Date Range Header
@@ -256,7 +275,7 @@ namespace EasyPOS.Forms.Software._80mmReport
                             where s.LoadDate >= dateStart
                              && s.LoadDate <= dateEnd
                              && s.CustomerId == filterCustomerId
-                             && s.Type == "Load"
+                             && s.Type == loadTypes
                             select s;
 
                 if (filterCustomerId == 0)
@@ -264,7 +283,7 @@ namespace EasyPOS.Forms.Software._80mmReport
                     loads = from s in db.MstCustomerLoads
                             where s.LoadDate >= dateStart
                              && s.LoadDate <= dateEnd
-                             && s.Type == "Load"
+                             && s.Type == loadTypes
                             select s;
                 }
 

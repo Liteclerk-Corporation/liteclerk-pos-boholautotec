@@ -554,11 +554,23 @@
     <Compile Include="Forms\Software\MstCustomer\MstCustomerLoadReceiptForm.Designer.cs">
       <DependentUpon>MstCustomerLoadReceiptForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Software\MstCustomer\MstCustomerLoadWithdrawalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Software\MstCustomer\MstCustomerLoadWithdrawalForm.Designer.cs">
+      <DependentUpon>MstCustomerLoadWithdrawalForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Software\MstCustomer\MstCustomerRefundReceiptForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Software\MstCustomer\MstCustomerRefundReceiptForm.Designer.cs">
       <DependentUpon>MstCustomerRefundReceiptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Software\MstCustomer\MstCustomerWithdrawalReceiptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Software\MstCustomer\MstCustomerWithdrawalReceiptForm.Designer.cs">
+      <DependentUpon>MstCustomerWithdrawalReceiptForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Software\MstDiscounting\MstDiscountingListForm.cs">
       <SubType>Form</SubType>
@@ -1626,8 +1638,14 @@
     <EmbeddedResource Include="Forms\Software\MstCustomer\MstCustomerLoadReceiptForm.resx">
       <DependentUpon>MstCustomerLoadReceiptForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Software\MstCustomer\MstCustomerLoadWithdrawalForm.resx">
+      <DependentUpon>MstCustomerLoadWithdrawalForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Software\MstCustomer\MstCustomerRefundReceiptForm.resx">
       <DependentUpon>MstCustomerRefundReceiptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Software\MstCustomer\MstCustomerWithdrawalReceiptForm.resx">
+      <DependentUpon>MstCustomerWithdrawalReceiptForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Software\MstDiscounting\MstDiscountingDetailForm.resx">
       <DependentUpon>MstDiscountingDetailForm.cs</DependentUpon>

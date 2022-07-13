@@ -61,6 +61,8 @@
             this.folderBrowserDialogStockWithdrawalReport = new System.Windows.Forms.FolderBrowserDialog();
             this.folderBrowserDialogCollectionDetailReportFacepay = new System.Windows.Forms.FolderBrowserDialog();
             this.printDialog80mmReport = new System.Windows.Forms.PrintDialog();
+            this.comboBoxLoadTrsctionType = new System.Windows.Forms.ComboBox();
+            this.labelLoadTrnsctionType = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -71,6 +73,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LightGray;
+            this.panel4.Controls.Add(this.labelLoadTrnsctionType);
+            this.panel4.Controls.Add(this.comboBoxLoadTrsctionType);
             this.panel4.Controls.Add(this.comboBoxCategory);
             this.panel4.Controls.Add(this.labelCategory);
             this.panel4.Controls.Add(this.comboBoxItemFilter);
@@ -477,6 +481,30 @@
             // 
             this.printDialog80mmReport.UseEXDialog = true;
             // 
+            // comboBoxLoadTrsctionType
+            // 
+            this.comboBoxLoadTrsctionType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboBoxLoadTrsctionType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxLoadTrsctionType.FormattingEnabled = true;
+            this.comboBoxLoadTrsctionType.Location = new System.Drawing.Point(1114, 167);
+            this.comboBoxLoadTrsctionType.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxLoadTrsctionType.Name = "comboBoxLoadTrsctionType";
+            this.comboBoxLoadTrsctionType.Size = new System.Drawing.Size(206, 31);
+            this.comboBoxLoadTrsctionType.TabIndex = 38;
+            this.comboBoxLoadTrsctionType.Visible = false;
+            // 
+            // labelLoadTrnsctionType
+            // 
+            this.labelLoadTrnsctionType.AutoSize = true;
+            this.labelLoadTrnsctionType.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.labelLoadTrnsctionType.Location = new System.Drawing.Point(962, 171);
+            this.labelLoadTrnsctionType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelLoadTrnsctionType.Name = "labelLoadTrnsctionType";
+            this.labelLoadTrnsctionType.Size = new System.Drawing.Size(141, 23);
+            this.labelLoadTrnsctionType.TabIndex = 39;
+            this.labelLoadTrnsctionType.Text = "Transaction Type:";
+            this.labelLoadTrnsctionType.Visible = false;
+            // 
             // RepSalesReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -536,5 +564,7 @@
         private System.Windows.Forms.Label labelItem;
         private System.Windows.Forms.ComboBox comboBoxCategory;
         private System.Windows.Forms.Label labelCategory;
+        private System.Windows.Forms.Label labelLoadTrnsctionType;
+        private System.Windows.Forms.ComboBox comboBoxLoadTrsctionType;
     }
 }

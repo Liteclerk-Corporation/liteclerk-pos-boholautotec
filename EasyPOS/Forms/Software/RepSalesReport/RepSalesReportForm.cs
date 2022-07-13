@@ -235,7 +235,17 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                 comboBoxCategory.ValueMember = "Category";
                 comboBoxCategory.DisplayMember = "Category";
             }
+
+            List<String> loadTrnsctionList = new List<String>
+            {
+                "Load",
+                "Refund",
+                "Withdrawal"
+            };
+
+            comboBoxLoadTrsctionType.DataSource = loadTrnsctionList;
         }
+        
 
         private void listBoxSalesReport_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -276,6 +286,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
 
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
+
                         break;
                     case "Sales Detail Report":
                     case "销售明细报表":
@@ -308,6 +321,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
 
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
+
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
 
                         break;
                     case "80mm Sales Summary Report":
@@ -342,6 +358,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
 
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
+
                         break;
                     case "80mm Sales Detail Report":
                     case "80mm 销售明细报告":
@@ -374,6 +393,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
 
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
+
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
 
                         break;
                     case "80mm Sales Status Report":
@@ -408,6 +430,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
 
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
+
                         break;
                     case "Collection Summary Report":
                     case "馆藏汇总报告":
@@ -440,6 +465,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
 
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
+
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
 
                         break;
                     case "Collection Detail Report":
@@ -474,6 +502,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
 
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
+
                         break;
                     case "80mm Collection Detail Report":
                     case "80 毫米系列详细报告":
@@ -506,6 +537,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
 
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
+
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
 
                         break;
                     case "Cancelled Summary Report":
@@ -540,6 +574,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
 
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
+
                         break;
                     case "Stock Withdrawal Report":
                     case "股票提取报告":
@@ -572,6 +609,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
 
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
+
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
 
                         break;
                     case "Collection Detail Report (Facepay)":
@@ -606,6 +646,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
 
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
+
                         break;
                     case "Top Selling Items Report":
                     case "畅销商品报告":
@@ -639,6 +682,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         labelCategory.Visible = true;
                         comboBoxCategory.Visible = true;
 
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
+
                         break;
                     case "Sales Return Detail Report":
                     case "销售退货明细报表":
@@ -671,6 +717,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
 
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
+
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
 
                         break;
                     case "Customer List Report":
@@ -709,6 +758,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
 
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
+
                         break;
                     case "Net Sales Summary Report - Daily":
                     case "净销售额汇总报告 - 每日":
@@ -740,6 +792,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
 
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
+
                         break;
                     case "Net Sales Summary Report - Monthly":
                     case "净销售额汇总报告 - 每月":
@@ -769,6 +824,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
 
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
+
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
 
                         break;
                     case "Hourly Top Selling Sales Report":
@@ -800,6 +858,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
 
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
+
                         break;
 
                     case "Unsold Item Report":
@@ -830,6 +891,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
 
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
+
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
 
                         break;
                     case "Cost Of Sales Report":
@@ -864,6 +928,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
 
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
+
                         break;
                     case "Accounts Receivable":
                     case "应收账款":
@@ -896,6 +963,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
 
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
+
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
 
                         break;
                     case "Daily Sales Report (BIR)":
@@ -930,6 +1000,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
 
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
+
                         break;
 
                     case "POS Touch Deleted Items":
@@ -963,6 +1036,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
 
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
+
                         break;
 
                     case "Sales Agent Report":
@@ -995,6 +1071,10 @@ namespace EasyPOS.Forms.Software.RepSalesReport
 
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
+
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
+
                         break;
                     case "Customer Load Summary Report":
                         labelStartDate.Visible = true;
@@ -1026,6 +1106,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
 
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
+
+                        labelLoadTrnsctionType.Visible = true;
+                        comboBoxLoadTrsctionType.Visible = true;
 
                         break;
                     default:
@@ -1059,6 +1142,9 @@ namespace EasyPOS.Forms.Software.RepSalesReport
 
                         labelCategory.Visible = false;
                         comboBoxCategory.Visible = false;
+
+                        labelLoadTrnsctionType.Visible = false;
+                        comboBoxLoadTrsctionType.Visible = false;
 
                         break;
                 }
@@ -1596,7 +1682,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                             {
                                 if (sysUserRights.GetUserRights().CanPrint == true)
                                 {
-                                    _80mmReport.RepLoadSummaryReport80mmForm repLoadSummary80mmReport = new _80mmReport.RepLoadSummaryReport80mmForm(dateTimePickerStartDate.Value.Date, dateTimePickerEndDate.Value.Date, Convert.ToInt32(comboBoxCustomer.SelectedValue));
+                                    _80mmReport.RepLoadSummaryReport80mmForm repLoadSummary80mmReport = new _80mmReport.RepLoadSummaryReport80mmForm(dateTimePickerStartDate.Value.Date, dateTimePickerEndDate.Value.Date, Convert.ToInt32(comboBoxCustomer.SelectedValue), Convert.ToString(comboBoxLoadTrsctionType.SelectedValue));
                                     repLoadSummary80mmReport.ShowDialog();
                                 }
                                 else

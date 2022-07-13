@@ -90,6 +90,7 @@
             this.ColumnCustomerLoadType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCustomerLoadAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCustomerLoadRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonLoadWithdrawal = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -644,6 +645,7 @@
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.Color.White;
+            this.panel19.Controls.Add(this.buttonLoadWithdrawal);
             this.panel19.Controls.Add(this.buttonRefund);
             this.panel19.Controls.Add(this.buttonCustomerLoadListPageListFirst);
             this.panel19.Controls.Add(this.buttonCustomerLoadListPageListPrevious);
@@ -861,6 +863,24 @@
             this.ColumnCustomerLoadRemarks.ReadOnly = true;
             this.ColumnCustomerLoadRemarks.Width = 300;
             // 
+            // buttonLoadWithdrawal
+            // 
+            this.buttonLoadWithdrawal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLoadWithdrawal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
+            this.buttonLoadWithdrawal.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonLoadWithdrawal.FlatAppearance.BorderSize = 0;
+            this.buttonLoadWithdrawal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLoadWithdrawal.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLoadWithdrawal.ForeColor = System.Drawing.Color.White;
+            this.buttonLoadWithdrawal.Location = new System.Drawing.Point(1147, 6);
+            this.buttonLoadWithdrawal.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonLoadWithdrawal.Name = "buttonLoadWithdrawal";
+            this.buttonLoadWithdrawal.Size = new System.Drawing.Size(124, 40);
+            this.buttonLoadWithdrawal.TabIndex = 38;
+            this.buttonLoadWithdrawal.Text = "Withdrawal";
+            this.buttonLoadWithdrawal.UseVisualStyleBackColor = false;
+            this.buttonLoadWithdrawal.Click += new System.EventHandler(this.buttonLoadWithdrawal_Click);
+            // 
             // MstCustomerDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -952,5 +972,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox comboBoxPriceLevel;
         private System.Windows.Forms.Button buttonRefund;
+        private System.Windows.Forms.Button buttonLoadWithdrawal;
     }
 }

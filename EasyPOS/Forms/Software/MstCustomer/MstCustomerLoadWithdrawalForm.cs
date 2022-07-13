@@ -10,22 +10,24 @@ using System.Windows.Forms;
 
 namespace EasyPOS.Forms.Software.MstCustomer
 {
-    public partial class MstCustomerLoadDetailRefund : Form
+    public partial class MstCustomerLoadWithdrawalForm : Form
     {
         MstCustomerDetailForm mstCustomerDetailForm;
         Entities.MstCustomerLoadEntity mstCustomerLoadEntity;
-        public MstCustomerLoadDetailRefund(MstCustomerDetailForm customerDetailForm, Entities.MstCustomerLoadEntity customerLoadEntity)
+
+        public MstCustomerLoadWithdrawalForm(MstCustomerDetailForm customerDetailForm, Entities.MstCustomerLoadEntity customerLoadEntity)
         {
             InitializeComponent();
+
             mstCustomerDetailForm = customerDetailForm;
             mstCustomerLoadEntity = customerLoadEntity;
 
             textBoxAmount.Text = "0.00";
         }
 
-        private void buttonSave_Click(object sender, EventArgs e)
+        private void buttonWithdraw_Click(object sender, EventArgs e)
         {
-            DialogResult closeDialogResult = MessageBox.Show("Confirm refund?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult closeDialogResult = MessageBox.Show("Confirm load withdrawal?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (closeDialogResult == DialogResult.Yes)
             {
                 if (Convert.ToDecimal(textBoxAmount.Text) > 0)
@@ -38,9 +40,9 @@ namespace EasyPOS.Forms.Software.MstCustomer
                             CustomerId = mstCustomerLoadEntity.CustomerId,
                             CardNumber = mstCustomerDetailForm.mstCustomerEntity.CustomerCode,
                             LoadDate = DateTime.Today.ToShortDateString(),
-                            Type = "Refund",
+                            Type = "Withdrawal",
                             Amount = Convert.ToDecimal(textBoxAmount.Text) * -1,
-                            Remarks = "Load Refund"
+                            Remarks = "Load Withdrawal"
                         };
 
                         if (newCustomerLoad.Amount < 0)
@@ -57,18 +59,18 @@ namespace EasyPOS.Forms.Software.MstCustomer
                                 mstCustomerDetailForm.UpdateCustomerLoadListDataSource();
                                 Close();
 
-                                new MstCustomerRefundReceiptForm(mstCustomerLoadEntity.CustomerId, newCustomerLoad);
+                                new MstCustomerWithdrawalReceiptForm(mstCustomerLoadEntity.CustomerId, newCustomerLoad);
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Unable to process refund request!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Unable to process withdrawal request!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Unable to process refund request!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Unable to process withdrawal request!", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

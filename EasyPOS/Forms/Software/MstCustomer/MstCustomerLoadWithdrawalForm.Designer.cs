@@ -1,7 +1,7 @@
 ﻿
 namespace EasyPOS.Forms.Software.MstCustomer
 {
-    partial class MstCustomerLoadDetailRefund
+    partial class MstCustomerLoadWithdrawalForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,14 @@ namespace EasyPOS.Forms.Software.MstCustomer
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MstCustomerLoadDetailRefund));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MstCustomerLoadWithdrawalForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonWithdraw = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonClose = new System.Windows.Forms.Button();
             this.textBoxAmount = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +44,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(114)))), ((int)(((byte)(113)))));
-            this.panel1.Controls.Add(this.buttonSave);
+            this.panel1.Controls.Add(this.buttonWithdraw);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonClose);
@@ -54,25 +54,36 @@ namespace EasyPOS.Forms.Software.MstCustomer
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(611, 62);
-            this.panel1.TabIndex = 15;
+            this.panel1.TabIndex = 18;
             // 
-            // buttonSave
+            // buttonWithdraw
             // 
-            this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
-            this.buttonSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
-            this.buttonSave.FlatAppearance.BorderSize = 0;
-            this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSave.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.ForeColor = System.Drawing.Color.White;
-            this.buttonSave.Location = new System.Drawing.Point(418, 12);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(88, 40);
-            this.buttonSave.TabIndex = 20;
-            this.buttonSave.Text = "Refund";
-            this.buttonSave.UseVisualStyleBackColor = false;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            this.buttonWithdraw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonWithdraw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(144)))), ((int)(((byte)(181)))));
+            this.buttonWithdraw.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonWithdraw.FlatAppearance.BorderSize = 0;
+            this.buttonWithdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonWithdraw.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonWithdraw.ForeColor = System.Drawing.Color.White;
+            this.buttonWithdraw.Location = new System.Drawing.Point(402, 12);
+            this.buttonWithdraw.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonWithdraw.Name = "buttonWithdraw";
+            this.buttonWithdraw.Size = new System.Drawing.Size(104, 40);
+            this.buttonWithdraw.TabIndex = 20;
+            this.buttonWithdraw.Text = "Withdraw";
+            this.buttonWithdraw.UseVisualStyleBackColor = false;
+            this.buttonWithdraw.Click += new System.EventHandler(this.buttonWithdraw_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Customer1;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -81,9 +92,9 @@ namespace EasyPOS.Forms.Software.MstCustomer
             this.label1.Location = new System.Drawing.Point(68, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 35);
+            this.label1.Size = new System.Drawing.Size(213, 35);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Refund";
+            this.label1.Text = "Load Withdrawal";
             // 
             // buttonClose
             // 
@@ -111,7 +122,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
             this.textBoxAmount.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmount.Name = "textBoxAmount";
             this.textBoxAmount.Size = new System.Drawing.Size(443, 30);
-            this.textBoxAmount.TabIndex = 14;
+            this.textBoxAmount.TabIndex = 17;
             this.textBoxAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAmount_KeyPress);
             // 
@@ -123,35 +134,23 @@ namespace EasyPOS.Forms.Software.MstCustomer
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 23);
-            this.label3.TabIndex = 16;
+            this.label3.TabIndex = 19;
             this.label3.Text = "Amount:";
             // 
-            // pictureBox1
+            // MstCustomerLoadWithdrawalForm
             // 
-            this.pictureBox1.Image = global::EasyPOS.Properties.Resources.Customer1;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // MstCustomerLoadDetailRefund
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(611, 115);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBoxAmount);
             this.Controls.Add(this.label3);
-            this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "MstCustomerLoadDetailRefund";
+            this.MaximizeBox = false;
+            this.Name = "MstCustomerLoadWithdrawalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Customer Load Detail";
+            this.Text = "Customer Load Withdrawal";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -163,7 +162,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonWithdraw;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonClose;

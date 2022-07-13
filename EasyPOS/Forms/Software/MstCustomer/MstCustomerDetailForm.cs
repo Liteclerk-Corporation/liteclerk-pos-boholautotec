@@ -625,5 +625,22 @@ namespace EasyPOS.Forms.Software.MstCustomer
             MstCustomerLoadDetailRefund sysSystemTablesCustomerLoadDetailRefundForm = new MstCustomerLoadDetailRefund(this, newCustomerLoad);
             sysSystemTablesCustomerLoadDetailRefundForm.ShowDialog();
         }
+
+        private void buttonLoadWithdrawal_Click(object sender, EventArgs e)
+        {
+            Entities.MstCustomerLoadEntity newCustomerLoad = new Entities.MstCustomerLoadEntity()
+            {
+                Id = 0,
+                CustomerId = mstCustomerEntity.Id,
+                CardNumber = "NA",
+                LoadDate = DateTime.Today.ToShortDateString(),
+                Type = "Load",
+                Amount = 0,
+                Remarks = ""
+            };
+
+            MstCustomerLoadWithdrawalForm sysSystemTablesCustomerLoadDetailWithdrawalForm = new MstCustomerLoadWithdrawalForm(this, newCustomerLoad);
+            sysSystemTablesCustomerLoadDetailWithdrawalForm.ShowDialog();
+        }
     }
 }
