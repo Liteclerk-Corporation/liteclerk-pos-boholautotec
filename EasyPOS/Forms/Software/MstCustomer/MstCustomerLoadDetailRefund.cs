@@ -57,7 +57,11 @@ namespace EasyPOS.Forms.Software.MstCustomer
                                 mstCustomerDetailForm.UpdateCustomerLoadListDataSource();
                                 Close();
 
-                                new MstCustomerRefundReceiptForm(mstCustomerLoadEntity.CustomerId, newCustomerLoad);
+                                DialogResult tenderPrinterReadyDialogResult = MessageBox.Show("Is printer ready?", "Liteclerk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                if (tenderPrinterReadyDialogResult == DialogResult.Yes)
+                                {
+                                    new MstCustomerRefundReceiptForm(mstCustomerLoadEntity.CustomerId, newCustomerLoad);
+                                }
                             }
                         }
                         else
