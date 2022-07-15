@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RepSalesReportForm));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.labelLoadTrnsctionType = new System.Windows.Forms.Label();
+            this.comboBoxLoadTrsctionType = new System.Windows.Forms.ComboBox();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.labelCategory = new System.Windows.Forms.Label();
             this.comboBoxItemFilter = new System.Windows.Forms.ComboBox();
@@ -61,8 +63,6 @@
             this.folderBrowserDialogStockWithdrawalReport = new System.Windows.Forms.FolderBrowserDialog();
             this.folderBrowserDialogCollectionDetailReportFacepay = new System.Windows.Forms.FolderBrowserDialog();
             this.printDialog80mmReport = new System.Windows.Forms.PrintDialog();
-            this.comboBoxLoadTrsctionType = new System.Windows.Forms.ComboBox();
-            this.labelLoadTrnsctionType = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -102,12 +102,36 @@
             this.panel4.Size = new System.Drawing.Size(1370, 638);
             this.panel4.TabIndex = 8;
             // 
+            // labelLoadTrnsctionType
+            // 
+            this.labelLoadTrnsctionType.AutoSize = true;
+            this.labelLoadTrnsctionType.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.labelLoadTrnsctionType.Location = new System.Drawing.Point(962, 172);
+            this.labelLoadTrnsctionType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelLoadTrnsctionType.Name = "labelLoadTrnsctionType";
+            this.labelLoadTrnsctionType.Size = new System.Drawing.Size(141, 23);
+            this.labelLoadTrnsctionType.TabIndex = 39;
+            this.labelLoadTrnsctionType.Text = "Transaction Type:";
+            this.labelLoadTrnsctionType.Visible = false;
+            // 
+            // comboBoxLoadTrsctionType
+            // 
+            this.comboBoxLoadTrsctionType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboBoxLoadTrsctionType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxLoadTrsctionType.FormattingEnabled = true;
+            this.comboBoxLoadTrsctionType.Location = new System.Drawing.Point(1114, 168);
+            this.comboBoxLoadTrsctionType.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxLoadTrsctionType.Name = "comboBoxLoadTrsctionType";
+            this.comboBoxLoadTrsctionType.Size = new System.Drawing.Size(206, 31);
+            this.comboBoxLoadTrsctionType.TabIndex = 38;
+            this.comboBoxLoadTrsctionType.Visible = false;
+            // 
             // comboBoxCategory
             // 
             this.comboBoxCategory.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.comboBoxCategory.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxCategory.FormattingEnabled = true;
-            this.comboBoxCategory.Location = new System.Drawing.Point(514, 367);
+            this.comboBoxCategory.Location = new System.Drawing.Point(522, 326);
             this.comboBoxCategory.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(419, 31);
@@ -118,7 +142,7 @@
             // 
             this.labelCategory.AutoSize = true;
             this.labelCategory.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelCategory.Location = new System.Drawing.Point(406, 370);
+            this.labelCategory.Location = new System.Drawing.Point(419, 331);
             this.labelCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCategory.Name = "labelCategory";
             this.labelCategory.Size = new System.Drawing.Size(83, 23);
@@ -132,7 +156,7 @@
             this.comboBoxItemFilter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.comboBoxItemFilter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxItemFilter.FormattingEnabled = true;
-            this.comboBoxItemFilter.Location = new System.Drawing.Point(514, 288);
+            this.comboBoxItemFilter.Location = new System.Drawing.Point(522, 287);
             this.comboBoxItemFilter.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxItemFilter.Name = "comboBoxItemFilter";
             this.comboBoxItemFilter.Size = new System.Drawing.Size(419, 31);
@@ -143,7 +167,7 @@
             // 
             this.labelItem.AutoSize = true;
             this.labelItem.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelItem.Location = new System.Drawing.Point(399, 292);
+            this.labelItem.Location = new System.Drawing.Point(453, 292);
             this.labelItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelItem.Name = "labelItem";
             this.labelItem.Size = new System.Drawing.Size(49, 23);
@@ -156,7 +180,7 @@
             this.comboBoxSupplier.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.comboBoxSupplier.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxSupplier.FormattingEnabled = true;
-            this.comboBoxSupplier.Location = new System.Drawing.Point(514, 248);
+            this.comboBoxSupplier.Location = new System.Drawing.Point(522, 248);
             this.comboBoxSupplier.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSupplier.Name = "comboBoxSupplier";
             this.comboBoxSupplier.Size = new System.Drawing.Size(419, 31);
@@ -167,7 +191,7 @@
             // 
             this.labelSupplier.AutoSize = true;
             this.labelSupplier.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelSupplier.Location = new System.Drawing.Point(399, 252);
+            this.labelSupplier.Location = new System.Drawing.Point(426, 252);
             this.labelSupplier.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSupplier.Name = "labelSupplier";
             this.labelSupplier.Size = new System.Drawing.Size(76, 23);
@@ -178,7 +202,7 @@
             // dateTimePickerDateAsOf
             // 
             this.dateTimePickerDateAsOf.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDateAsOf.Location = new System.Drawing.Point(514, 329);
+            this.dateTimePickerDateAsOf.Location = new System.Drawing.Point(522, 365);
             this.dateTimePickerDateAsOf.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerDateAsOf.Name = "dateTimePickerDateAsOf";
             this.dateTimePickerDateAsOf.Size = new System.Drawing.Size(220, 30);
@@ -189,7 +213,7 @@
             // 
             this.labelDateAsOf.AutoSize = true;
             this.labelDateAsOf.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelDateAsOf.Location = new System.Drawing.Point(399, 336);
+            this.labelDateAsOf.Location = new System.Drawing.Point(411, 372);
             this.labelDateAsOf.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDateAsOf.Name = "labelDateAsOf";
             this.labelDateAsOf.Size = new System.Drawing.Size(91, 23);
@@ -202,7 +226,7 @@
             this.comboBoxSalesAgent.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.comboBoxSalesAgent.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxSalesAgent.FormattingEnabled = true;
-            this.comboBoxSalesAgent.Location = new System.Drawing.Point(514, 208);
+            this.comboBoxSalesAgent.Location = new System.Drawing.Point(522, 209);
             this.comboBoxSalesAgent.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSalesAgent.Name = "comboBoxSalesAgent";
             this.comboBoxSalesAgent.Size = new System.Drawing.Size(419, 31);
@@ -213,7 +237,7 @@
             // 
             this.labelAgent.AutoSize = true;
             this.labelAgent.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelAgent.Location = new System.Drawing.Point(398, 212);
+            this.labelAgent.Location = new System.Drawing.Point(399, 212);
             this.labelAgent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAgent.Name = "labelAgent";
             this.labelAgent.Size = new System.Drawing.Size(103, 23);
@@ -226,7 +250,7 @@
             this.comboBoxCustomer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.comboBoxCustomer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxCustomer.FormattingEnabled = true;
-            this.comboBoxCustomer.Location = new System.Drawing.Point(514, 167);
+            this.comboBoxCustomer.Location = new System.Drawing.Point(522, 170);
             this.comboBoxCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCustomer.Name = "comboBoxCustomer";
             this.comboBoxCustomer.Size = new System.Drawing.Size(419, 31);
@@ -237,7 +261,7 @@
             // 
             this.labelCustomer.AutoSize = true;
             this.labelCustomer.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelCustomer.Location = new System.Drawing.Point(406, 171);
+            this.labelCustomer.Location = new System.Drawing.Point(414, 171);
             this.labelCustomer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCustomer.Name = "labelCustomer";
             this.labelCustomer.Size = new System.Drawing.Size(88, 23);
@@ -248,7 +272,7 @@
             // comboBoxTerminal
             // 
             this.comboBoxTerminal.FormattingEnabled = true;
-            this.comboBoxTerminal.Location = new System.Drawing.Point(514, 128);
+            this.comboBoxTerminal.Location = new System.Drawing.Point(522, 131);
             this.comboBoxTerminal.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTerminal.Name = "comboBoxTerminal";
             this.comboBoxTerminal.Size = new System.Drawing.Size(220, 31);
@@ -259,7 +283,7 @@
             // 
             this.labelTerminal.AutoSize = true;
             this.labelTerminal.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelTerminal.Location = new System.Drawing.Point(406, 128);
+            this.labelTerminal.Location = new System.Drawing.Point(424, 128);
             this.labelTerminal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTerminal.Name = "labelTerminal";
             this.labelTerminal.Size = new System.Drawing.Size(78, 23);
@@ -270,7 +294,7 @@
             // dateTimePickerStartDate
             // 
             this.dateTimePickerStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerStartDate.Location = new System.Drawing.Point(514, 55);
+            this.dateTimePickerStartDate.Location = new System.Drawing.Point(522, 55);
             this.dateTimePickerStartDate.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerStartDate.Name = "dateTimePickerStartDate";
             this.dateTimePickerStartDate.Size = new System.Drawing.Size(220, 30);
@@ -281,7 +305,7 @@
             // 
             this.labelStartDate.AutoSize = true;
             this.labelStartDate.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelStartDate.Location = new System.Drawing.Point(406, 58);
+            this.labelStartDate.Location = new System.Drawing.Point(412, 58);
             this.labelStartDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelStartDate.Name = "labelStartDate";
             this.labelStartDate.Size = new System.Drawing.Size(90, 23);
@@ -355,7 +379,7 @@
             // dateTimePickerEndDate
             // 
             this.dateTimePickerEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerEndDate.Location = new System.Drawing.Point(514, 91);
+            this.dateTimePickerEndDate.Location = new System.Drawing.Point(522, 93);
             this.dateTimePickerEndDate.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerEndDate.Name = "dateTimePickerEndDate";
             this.dateTimePickerEndDate.Size = new System.Drawing.Size(220, 30);
@@ -390,7 +414,7 @@
             // 
             this.labelEndDate.AutoSize = true;
             this.labelEndDate.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelEndDate.Location = new System.Drawing.Point(406, 91);
+            this.labelEndDate.Location = new System.Drawing.Point(418, 91);
             this.labelEndDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEndDate.Name = "labelEndDate";
             this.labelEndDate.Size = new System.Drawing.Size(84, 23);
@@ -480,30 +504,6 @@
             // printDialog80mmReport
             // 
             this.printDialog80mmReport.UseEXDialog = true;
-            // 
-            // comboBoxLoadTrsctionType
-            // 
-            this.comboBoxLoadTrsctionType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.comboBoxLoadTrsctionType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxLoadTrsctionType.FormattingEnabled = true;
-            this.comboBoxLoadTrsctionType.Location = new System.Drawing.Point(1114, 167);
-            this.comboBoxLoadTrsctionType.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxLoadTrsctionType.Name = "comboBoxLoadTrsctionType";
-            this.comboBoxLoadTrsctionType.Size = new System.Drawing.Size(206, 31);
-            this.comboBoxLoadTrsctionType.TabIndex = 38;
-            this.comboBoxLoadTrsctionType.Visible = false;
-            // 
-            // labelLoadTrnsctionType
-            // 
-            this.labelLoadTrnsctionType.AutoSize = true;
-            this.labelLoadTrnsctionType.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.labelLoadTrnsctionType.Location = new System.Drawing.Point(962, 171);
-            this.labelLoadTrnsctionType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelLoadTrnsctionType.Name = "labelLoadTrnsctionType";
-            this.labelLoadTrnsctionType.Size = new System.Drawing.Size(141, 23);
-            this.labelLoadTrnsctionType.TabIndex = 39;
-            this.labelLoadTrnsctionType.Text = "Transaction Type:";
-            this.labelLoadTrnsctionType.Visible = false;
             // 
             // RepSalesReportForm
             // 

@@ -23,14 +23,20 @@ namespace EasyPOS.Forms.Software.RepSalesReport
         public Int32 filterSalesAgentId;
         public Int32 filterSupplierId;
         public Int32 filterItemId;
+        public String filterCategory;
 
-        public RepSalesDetailReportPDFForm(DateTime startDate, DateTime endDate, Int32 terminalId)
+        public RepSalesDetailReportPDFForm(DateTime startDate, DateTime endDate, Int32 terminalId, Int32 customerId, Int32 salesAgentId, Int32 supplierId, Int32 itemId, String category)
         {
             InitializeComponent();
 
             dateStart = startDate;
             dateEnd = endDate;
             filterTerminalId = terminalId;
+            filterCustomerId = customerId;
+            filterSalesAgentId = salesAgentId;
+            filterSupplierId = supplierId;
+            filterItemId = itemId;
+            filterCategory = category;
 
             PrintReport();
         }
@@ -58,12 +64,12 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                 document.SetMargins(15f, 15f, 100f, 30f);
 
                 PdfWriter pdfWriter = PdfWriter.GetInstance(document, new FileStream(fileName, FileMode.Create));
-                pdfWriter.PageEvent = new ConfigureHeaderFooter(dateStart, dateEnd, filterTerminalId);
+                pdfWriter.PageEvent = new ConfigureHeaderFooter(dateStart, dateEnd, filterTerminalId, filterCustomerId, filterSalesAgentId, filterSupplierId, filterItemId, filterCategory);
 
                 document.Open();
 
                 Controllers.RepSalesReportController repSalesDetailReportController = new Controllers.RepSalesReportController();
-                var salesDetailList = repSalesDetailReportController.SalesDetailReport(dateStart, dateEnd, filterTerminalId, filterCustomerId, filterSalesAgentId, filterSupplierId, filterItemId);
+                var salesDetailList = repSalesDetailReportController.SalesDetailReport(dateStart, dateEnd, filterTerminalId, filterCustomerId, filterSalesAgentId, filterSupplierId, filterItemId, filterCategory);
 
                 if (salesDetailList.Any())
                 {
@@ -144,14 +150,22 @@ namespace EasyPOS.Forms.Software.RepSalesReport
             public Int32 filterTerminalId;
             public Int32 filterCustomerId;
             public Int32 filterSalesAgentId;
+            public Int32 filterSupplierId;
+            public Int32 filterItemId;
+            public String filterCategory;
 
             public Data.easyposdbDataContext db;
 
-            public ConfigureHeaderFooter(DateTime startDate, DateTime endDate, Int32 terminalId)
+            public ConfigureHeaderFooter(DateTime startDate, DateTime endDate, Int32 terminalId, Int32 customerId, Int32 salesAgentId, Int32 supplierId, Int32 itemId, String category)
             {
                 dateStart = startDate;
                 dateEnd = endDate;
                 filterTerminalId = terminalId;
+                filterCustomerId = customerId;
+                filterSalesAgentId = salesAgentId;
+                filterSupplierId = supplierId;
+                filterItemId = itemId;
+                filterCategory = category;
 
                 db = new Data.easyposdbDataContext(Modules.SysConnectionStringModule.GetConnectionString());
             }
@@ -179,7 +193,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                 PdfPTable tableLines = new PdfPTable(17);
                 tableLines.SetWidths(new float[] { 35f, 50f, 50f, 50f, 50f, 50f, 50f, 30f, 20f, 30f, 30f, 30f, 30f, 40f, 40f, 40f, 30f });
                 tableLines.TotalWidth = document.PageSize.Width - document.LeftMargin - document.RightMargin;
-                tableLines.AddCell(new PdfPCell(new Phrase(" \n", fontTimesNewRoman10Bold)) { Border = 0, Colspan = 16, PaddingBottom = 5f });
+                tableLines.AddCell(new PdfPCell(new Phrase(" \n", fontTimesNewRoman10Bold)) { Border = 0, Colspan = 18, PaddingBottom = 5f });
                 tableLines.AddCell(new PdfPCell(new Phrase("Terminal", fontTimesNewRoman10Bold)) { HorizontalAlignment = 1, PaddingTop = 2f, PaddingBottom = 5f });
                 tableLines.AddCell(new PdfPCell(new Phrase("Sales No.", fontTimesNewRoman10Bold)) { HorizontalAlignment = 1, PaddingTop = 2f, PaddingBottom = 5f });
                 tableLines.AddCell(new PdfPCell(new Phrase("Date", fontTimesNewRoman10Bold)) { HorizontalAlignment = 1, PaddingTop = 2f, PaddingBottom = 5f });

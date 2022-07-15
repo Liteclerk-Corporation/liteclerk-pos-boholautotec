@@ -22,6 +22,7 @@ namespace EasyPOS.Forms.Software.RepPOSReport
         public Int32 filterSalesAgentId;
         public Int32 filterSupplierId;
         public Int32 filterItemId;
+        public String filterCategory;
 
         public RepPOSReportForm(SysSoftwareForm softwareForm)
         {
@@ -348,7 +349,7 @@ namespace EasyPOS.Forms.Software.RepPOSReport
                         {
                             if (sysUserRights.GetUserRights().CanView == true)
                             {
-                                RepSalesReport.RepSalesDetailReportForm repSalesDetailReportForm = new RepSalesReport.RepSalesDetailReportForm(dateTimePickerStartDate.Value.Date, dateTimePickerEndDate.Value.Date, Convert.ToInt32(comboBoxTerminal.SelectedValue), filterCustomerId, filterSalesAgentId, filterSupplierId, filterItemId);
+                                RepSalesReport.RepSalesDetailReportForm repSalesDetailReportForm = new RepSalesReport.RepSalesDetailReportForm(dateTimePickerStartDate.Value.Date, dateTimePickerEndDate.Value.Date, Convert.ToInt32(comboBoxTerminal.SelectedValue), filterCustomerId, filterSalesAgentId, filterSupplierId, filterItemId, filterCategory);
                                 repSalesDetailReportForm.ShowDialog();
                             }
                             else

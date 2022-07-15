@@ -319,8 +319,8 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                         dateTimePickerStartDate.Focus();
                         buttonView.Text = SetLabel("View");
 
-                        labelCategory.Visible = false;
-                        comboBoxCategory.Visible = false;
+                        labelCategory.Visible = true;
+                        comboBoxCategory.Visible = true;
 
                         labelLoadTrnsctionType.Visible = false;
                         comboBoxLoadTrsctionType.Visible = false;
@@ -1204,7 +1204,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                             {
                                 if (sysUserRights.GetUserRights().CanView == true)
                                 {
-                                    RepSalesDetailReportForm repSalesReportSalesDetail = new RepSalesDetailReportForm(dateTimePickerStartDate.Value.Date, dateTimePickerEndDate.Value.Date, Convert.ToInt32(comboBoxTerminal.SelectedValue), Convert.ToInt32(comboBoxCustomer.SelectedValue), Convert.ToInt32(comboBoxSalesAgent.SelectedValue), Convert.ToInt32(comboBoxSupplier.SelectedValue), Convert.ToInt32(comboBoxItemFilter.SelectedValue));
+                                    RepSalesDetailReportForm repSalesReportSalesDetail = new RepSalesDetailReportForm(dateTimePickerStartDate.Value.Date, dateTimePickerEndDate.Value.Date, Convert.ToInt32(comboBoxTerminal.SelectedValue), Convert.ToInt32(comboBoxCustomer.SelectedValue), Convert.ToInt32(comboBoxSalesAgent.SelectedValue), Convert.ToInt32(comboBoxSupplier.SelectedValue), Convert.ToInt32(comboBoxItemFilter.SelectedValue), Convert.ToString(comboBoxCategory.SelectedValue));
                                     repSalesReportSalesDetail.ShowDialog();
                                 }
                                 else
@@ -1576,7 +1576,7 @@ namespace EasyPOS.Forms.Software.RepSalesReport
                             {
                                 if (sysUserRights.GetUserRights().CanView == true)
                                 {
-                                    RepCostOfSaleReportForm repCostOfSaleReportForm = new RepCostOfSaleReportForm(dateTimePickerStartDate.Value.Date, dateTimePickerEndDate.Value.Date, Convert.ToInt32(comboBoxTerminal.SelectedValue), Convert.ToInt32(comboBoxCustomer.SelectedValue), Convert.ToInt32(comboBoxSalesAgent.SelectedValue), Convert.ToInt32(comboBoxSupplier.SelectedValue), Convert.ToInt32(comboBoxItemFilter.SelectedValue));
+                                    RepCostOfSaleReportForm repCostOfSaleReportForm = new RepCostOfSaleReportForm(dateTimePickerStartDate.Value.Date, dateTimePickerEndDate.Value.Date, Convert.ToInt32(comboBoxTerminal.SelectedValue), Convert.ToInt32(comboBoxCustomer.SelectedValue), Convert.ToInt32(comboBoxSalesAgent.SelectedValue), Convert.ToInt32(comboBoxSupplier.SelectedValue), Convert.ToInt32(comboBoxItemFilter.SelectedValue), Convert.ToString(comboBoxCategory.SelectedValue));
                                     repCostOfSaleReportForm.ShowDialog();
                                 }
                                 else
