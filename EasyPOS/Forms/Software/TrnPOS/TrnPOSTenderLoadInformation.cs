@@ -32,103 +32,22 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-
-
             String customerCode = textBoxCardNumber.Text;
             Decimal amount = Convert.ToDecimal(textBoxAmount.Text);
 
             Controllers.MstCustomerController mstCustomerController = new Controllers.MstCustomerController();
             if (mstCustomerController.DetailCustomerPerCustomerCode(customerCode) != null)
             {
-                Int32 customerId = mstCustomerController.DetailCustomerPerCustomerCode(customerCode).Id;
-                String customer = mstCustomerController.DetailCustomerPerCustomerCode(customerCode).Customer;
-                Int32 termId = mstCustomerController.DetailCustomerPerCustomerCode(customerCode).TermId;
-                String address = mstCustomerController.DetailCustomerPerCustomerCode(customerCode).Address;
 
-                Entities.TrnSalesEntity newSalesEntity = new Entities.TrnSalesEntity()
+                Decimal loadAmount = mstCustomerController.DetailCustomerPerCustomerCode(customerCode).LoadAmount;
+                if (loadAmount >= amount)
                 {
-                    CustomerId = customerId,
-                    TermId = termId,
-                    Remarks = "Sales Number: " + trnPOSTenderForm.trnSalesEntity.SalesNumber + ",\nSales Date: " + trnPOSTenderForm.trnSalesEntity.SalesDate,
-                    SalesAgent = Modules.SysCurrentModule.GetCurrentSettings().CurrentUserId
-                };
-
-                Controllers.TrnSalesController trnPOSSalesController = new Controllers.TrnSalesController();
-                String[] updateSales = trnPOSSalesController.TenderUpdateSales(trnPOSTenderForm.trnSalesEntity.Id, newSalesEntity);
-                if (updateSales[1].Equals("0") == false)
-                {
-                    trnPOSTenderForm.trnSalesEntity.CustomerId = customerId;
-                    trnPOSTenderForm.trnSalesEntity.CustomerCode = customerCode;
-                    trnPOSTenderForm.trnSalesEntity.Customer = customer;
-                    trnPOSTenderForm.trnSalesEntity.CustomerAddress = address;
-                    trnPOSTenderForm.trnSalesEntity.Remarks = "Sales Number: " + trnPOSTenderForm.trnSalesEntity.SalesNumber + ",\nSales Date: " + trnPOSTenderForm.trnSalesEntity.SalesDate;
-                    trnPOSTenderForm.GetSalesDetail();
-
-                    if (trnPOSTenderForm.trnPOSBarcodeDetailForm != null)
-                    {
-                        trnPOSTenderForm.trnPOSBarcodeDetailForm.trnSalesEntity.CustomerCode = customerCode;
-                        trnPOSTenderForm.trnPOSBarcodeDetailForm.trnSalesEntity.Customer = customer;
-                        trnPOSTenderForm.trnPOSBarcodeDetailForm.trnSalesEntity.Remarks = newSalesEntity.Remarks;
-                        trnPOSTenderForm.trnPOSBarcodeDetailForm.GetSalesDetail();
-                    }
-                    else
-                    {
-                        if (trnPOSTenderForm.trnPOSBarcodeForm != null)
-                        {
-                            trnPOSTenderForm.trnPOSBarcodeForm.UpdateSalesListGridDataSource();
-                        }
-                    }
-
-                    if (trnPOSTenderForm.trnPOSTouchDetailForm != null)
-                    {
-                        trnPOSTenderForm.trnPOSTouchDetailForm.trnSalesEntity.CustomerCode = customerCode;
-                        trnPOSTenderForm.trnPOSTouchDetailForm.trnSalesEntity.Customer = customer;
-                        trnPOSTenderForm.trnPOSTouchDetailForm.trnSalesEntity.Remarks = newSalesEntity.Remarks;
-                        trnPOSTenderForm.trnPOSTouchDetailForm.GetSalesDetail();
-                    }
-                    else
-                    {
-                        if (trnPOSTenderForm.trnPOSTouchForm != null)
-                        {
-                            trnPOSTenderForm.trnPOSTouchForm.UpdateSalesListGridDataSource();
-                        }
-                    }
-
-                    Decimal loadAmount = mstCustomerController.DetailCustomerPerCustomerCode(customerCode).LoadAmount;
-                    if (loadAmount >= amount)
-                    {
-                        Entities.MstCustomerLoadEntity newCustomerLoad = new Entities.MstCustomerLoadEntity()
-                        {
-                            Id = 0,
-                            CustomerId = mstCustomerController.DetailCustomerPerCustomerCode(customerCode).Id,
-                            CardNumber = customerCode,
-                            LoadDate = DateTime.Today.ToShortDateString(),
-                            Type = "Sales",
-                            Amount = amount * -1,
-                            Remarks = "Sales Number: " + trnPOSTenderForm.trnSalesEntity.SalesNumber + ",\n Sales Date: " + trnPOSTenderForm.trnSalesEntity.SalesDate
-                        };
-
-                        Controllers.MstCustomerLoadController mstCustomerLoadController = new Controllers.MstCustomerLoadController();
-                        String[] addCustomerLoad = mstCustomerLoadController.AddCustomerLoad(newCustomerLoad);
-
-                        if (addCustomerLoad[1].Equals("0") == true)
-                        {
-                            MessageBox.Show(addCustomerLoad[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else
-                        {
-                            LoadPay();
-                            Close();
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Insufficient Balance! Please Reload.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    LoadPay();
+                    Close();
                 }
                 else
                 {
-                    MessageBox.Show(updateSales[0], "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Insufficient Balance! Please Reload.", "Liteclerk", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -181,6 +100,23 @@ namespace EasyPOS.Forms.Software.TrnPOS
 
                     trnPOSTenderForm.ComputeAmount();
                     trnPOSTenderForm.CreateCollection(null);
+
+                    String _customerCode = textBoxCardNumber.Text;
+                    Decimal _amount = Convert.ToDecimal(textBoxAmount.Text);
+                    Controllers.MstCustomerController mstCustomerController = new Controllers.MstCustomerController();
+                    Entities.MstCustomerLoadEntity newCustomerLoad = new Entities.MstCustomerLoadEntity()
+                    {
+                        Id = 0,
+                        CustomerId = mstCustomerController.DetailCustomerPerCustomerCode(_customerCode).Id,
+                        CardNumber = _customerCode,
+                        LoadDate = DateTime.Today.ToShortDateString(),
+                        Type = "Sales",
+                        Amount = _amount * -1,
+                        Remarks = "Sales Number: " + trnPOSTenderForm.trnSalesEntity.SalesNumber + ",\n Sales Date: " + trnPOSTenderForm.trnSalesEntity.SalesDate
+                    };
+
+                    Controllers.MstCustomerLoadController mstCustomerLoadController = new Controllers.MstCustomerLoadController();
+                    String[] addCustomerLoad = mstCustomerLoadController.AddCustomerLoad(newCustomerLoad);
                 }
                 else
                 {
