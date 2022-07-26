@@ -169,6 +169,10 @@ namespace EasyPOS.Forms.Software.MstCustomer
             textBoxBusinessStyle.Text = mstCustomerEntity.BusinessStyle;
             textBoxLoadBalance.Text = mstCustomerEntity.LoadAmount.ToString("#,##0.00");
             comboBoxPriceLevel.Text = mstCustomerEntity.PriceLevel;
+            textBoxVehicleModel.Text = mstCustomerEntity.VehicleModel;
+            textBoxEngineNo.Text = mstCustomerEntity.EngineNo;
+            textBoxChassisNo.Text = mstCustomerEntity.ChassisNo;
+            textBoxPlateNo.Text = mstCustomerEntity.PlateNo;
 
             CreateCustomerLoadListDataGridView();
         }
@@ -209,6 +213,10 @@ namespace EasyPOS.Forms.Software.MstCustomer
             textBoxCustomerCode.Focus();
             textBoxBusinessStyle.Enabled = !isLocked;
             comboBoxPriceLevel.Enabled = !isLocked;
+            textBoxVehicleModel.Enabled = !isLocked;
+            textBoxEngineNo.Enabled = !isLocked;
+            textBoxChassisNo.Enabled = !isLocked;
+            textBoxPlateNo.Enabled = !isLocked;
         }
 
         private void buttonLock_Click(object sender, EventArgs e)
@@ -231,7 +239,11 @@ namespace EasyPOS.Forms.Software.MstCustomer
                 AvailableReward = Convert.ToDecimal(textBoxAvailableReward.Text),
                 DefaultPriceDescription = textBoxDefaultPrice.Text,
                 BusinessStyle = textBoxBusinessStyle.Text,
-                PriceLevel = comboBoxPriceLevel.SelectedValue.ToString()
+                PriceLevel = comboBoxPriceLevel.SelectedValue.ToString(),
+                VehicleModel = textBoxVehicleModel.Text,
+                EngineNo = textBoxEngineNo.Text,
+                ChassisNo = textBoxChassisNo.Text,
+                PlateNo = textBoxPlateNo.Text
             };
 
             String[] lockCustomer = mstCustomerController.LockCustomer(mstCustomerEntity.Id, newCustomerEntity);
@@ -300,7 +312,11 @@ namespace EasyPOS.Forms.Software.MstCustomer
                         AvailableReward = Convert.ToDecimal(textBoxAvailableReward.Text),
                         DefaultPriceDescription = textBoxDefaultPrice.Text,
                         BusinessStyle = textBoxBusinessStyle.Text,
-                        PriceLevel = comboBoxPriceLevel.SelectedValue.ToString()
+                        PriceLevel = comboBoxPriceLevel.SelectedValue.ToString(),
+                        VehicleModel = textBoxVehicleModel.Text,
+                        EngineNo = textBoxEngineNo.Text,
+                        ChassisNo = textBoxChassisNo.Text,
+                        PlateNo = textBoxPlateNo.Text
                     };
 
                     String[] lockCustomer = mstCustomerController.SaveCustomer(mstCustomerEntity.Id, newCustomerEntity);

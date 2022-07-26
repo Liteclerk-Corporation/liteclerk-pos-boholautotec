@@ -89,7 +89,11 @@ namespace EasyPOS.Controllers
                                CustomerCode = d.CustomerCode,
                                BusinessStyle = d.BusinessStyle,
                                LoadAmount = d.LoadAmount,
-                               PriceLevel = d.PriceLevel
+                               PriceLevel = d.PriceLevel,
+                               VehicleModel = d.VehicleModel,
+                               EngineNo = d.EngineNo,
+                               ChassisNo = d.ChassisNo,
+                               PlateNo = d.PlateNo
                            };
 
             return customer.FirstOrDefault();
@@ -127,7 +131,11 @@ namespace EasyPOS.Controllers
                                CustomerCode = d.CustomerCode,
                                BusinessStyle = d.BusinessStyle,
                                LoadAmount = d.LoadAmount,
-                               PriceLevel = d.PriceLevel
+                               PriceLevel = d.PriceLevel,
+                               VehicleModel = d.VehicleModel,
+                               EngineNo = d.EngineNo,
+                               ChassisNo = d.ChassisNo,
+                               PlateNo = d.PlateNo
                            };
 
             return customer.FirstOrDefault();
@@ -196,7 +204,11 @@ namespace EasyPOS.Controllers
                     CustomerCode = null,
                     BusinessStyle = "",
                     LoadAmount = 0,
-                    PriceLevel = "Retail Price"
+                    PriceLevel = "Retail Price",
+                    VehicleModel = "NA",
+                    EngineNo = "NA",
+                    ChassisNo = "NA",
+                    PlateNo = "NA"
                 };
 
                 db.MstCustomers.InsertOnSubmit(newCustomer);
@@ -284,6 +296,10 @@ namespace EasyPOS.Controllers
                     lockCustomer.CustomerCode = objCustomer.CustomerCode;
                     lockCustomer.BusinessStyle = objCustomer.BusinessStyle;
                     lockCustomer.PriceLevel = objCustomer.PriceLevel;
+                    lockCustomer.VehicleModel = objCustomer.VehicleModel;
+                    lockCustomer.EngineNo = objCustomer.EngineNo;
+                    lockCustomer.ChassisNo = objCustomer.ChassisNo;
+                    lockCustomer.PlateNo = objCustomer.PlateNo;
                     db.SubmitChanges();
 
                     String newObject = Modules.SysAuditTrailModule.GetObjectString(customer.FirstOrDefault());
@@ -478,7 +494,11 @@ namespace EasyPOS.Controllers
                             CustomerCode = obj.CustomerCode,
                             BusinessStyle = obj.BusinessStyle,
                             LoadAmount = 0,
-                            PriceLevel = "Retail Price"
+                            PriceLevel = "Retail Price",
+                            VehicleModel = "NA",
+                            EngineNo = "NA",
+                            ChassisNo = "NA",
+                            PlateNo = "NA"
                         };
 
                         db.MstCustomers.InsertOnSubmit(newCustomer);
@@ -556,6 +576,10 @@ namespace EasyPOS.Controllers
                     saveCustomer.CustomerCode = objCustomer.CustomerCode;
                     saveCustomer.BusinessStyle = objCustomer.BusinessStyle;
                     saveCustomer.PriceLevel = objCustomer.PriceLevel;
+                    saveCustomer.VehicleModel = objCustomer.VehicleModel;
+                    saveCustomer.EngineNo = objCustomer.EngineNo;
+                    saveCustomer.ChassisNo = objCustomer.ChassisNo;
+                    saveCustomer.PlateNo = objCustomer.PlateNo;
                     db.SubmitChanges();
 
                     String newObject = Modules.SysAuditTrailModule.GetObjectString(customer.FirstOrDefault());

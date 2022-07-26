@@ -75,6 +75,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
+            this.buttonLoadWithdrawal = new System.Windows.Forms.Button();
             this.buttonRefund = new System.Windows.Forms.Button();
             this.buttonCustomerLoadListPageListFirst = new System.Windows.Forms.Button();
             this.buttonCustomerLoadListPageListPrevious = new System.Windows.Forms.Button();
@@ -90,7 +91,14 @@
             this.ColumnCustomerLoadType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCustomerLoadAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCustomerLoadRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonLoadWithdrawal = new System.Windows.Forms.Button();
+            this.textBoxVehicleModel = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBoxEngineNo = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBoxChassisNo = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBoxPlateNo = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -241,6 +249,14 @@
             // 
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Controls.Add(this.textBoxPlateNo);
+            this.panel3.Controls.Add(this.label21);
+            this.panel3.Controls.Add(this.textBoxChassisNo);
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Controls.Add(this.textBoxEngineNo);
+            this.panel3.Controls.Add(this.label19);
+            this.panel3.Controls.Add(this.textBoxVehicleModel);
+            this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.textBoxLoadBalance);
             this.panel3.Controls.Add(this.textBoxCustomerCode);
@@ -297,7 +313,7 @@
             // 
             this.textBoxLoadBalance.Enabled = false;
             this.textBoxLoadBalance.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxLoadBalance.Location = new System.Drawing.Point(771, 81);
+            this.textBoxLoadBalance.Location = new System.Drawing.Point(778, 81);
             this.textBoxLoadBalance.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxLoadBalance.Name = "textBoxLoadBalance";
             this.textBoxLoadBalance.Size = new System.Drawing.Size(214, 30);
@@ -316,7 +332,7 @@
             // textBoxBusinessStyle
             // 
             this.textBoxBusinessStyle.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxBusinessStyle.Location = new System.Drawing.Point(771, 44);
+            this.textBoxBusinessStyle.Location = new System.Drawing.Point(778, 44);
             this.textBoxBusinessStyle.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBusinessStyle.Name = "textBoxBusinessStyle";
             this.textBoxBusinessStyle.Size = new System.Drawing.Size(214, 30);
@@ -356,7 +372,7 @@
             // textBoxDefaultPrice
             // 
             this.textBoxDefaultPrice.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxDefaultPrice.Location = new System.Drawing.Point(771, 8);
+            this.textBoxDefaultPrice.Location = new System.Drawing.Point(778, 8);
             this.textBoxDefaultPrice.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDefaultPrice.Name = "textBoxDefaultPrice";
             this.textBoxDefaultPrice.Size = new System.Drawing.Size(214, 30);
@@ -592,7 +608,7 @@
             // 
             this.comboBoxPriceLevel.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.comboBoxPriceLevel.FormattingEnabled = true;
-            this.comboBoxPriceLevel.Location = new System.Drawing.Point(771, 119);
+            this.comboBoxPriceLevel.Location = new System.Drawing.Point(778, 119);
             this.comboBoxPriceLevel.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxPriceLevel.Name = "comboBoxPriceLevel";
             this.comboBoxPriceLevel.Size = new System.Drawing.Size(214, 31);
@@ -658,6 +674,24 @@
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(1370, 52);
             this.panel19.TabIndex = 33;
+            // 
+            // buttonLoadWithdrawal
+            // 
+            this.buttonLoadWithdrawal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLoadWithdrawal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
+            this.buttonLoadWithdrawal.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
+            this.buttonLoadWithdrawal.FlatAppearance.BorderSize = 0;
+            this.buttonLoadWithdrawal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLoadWithdrawal.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLoadWithdrawal.ForeColor = System.Drawing.Color.White;
+            this.buttonLoadWithdrawal.Location = new System.Drawing.Point(1147, 6);
+            this.buttonLoadWithdrawal.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonLoadWithdrawal.Name = "buttonLoadWithdrawal";
+            this.buttonLoadWithdrawal.Size = new System.Drawing.Size(124, 40);
+            this.buttonLoadWithdrawal.TabIndex = 38;
+            this.buttonLoadWithdrawal.Text = "Withdrawal";
+            this.buttonLoadWithdrawal.UseVisualStyleBackColor = false;
+            this.buttonLoadWithdrawal.Click += new System.EventHandler(this.buttonLoadWithdrawal_Click);
             // 
             // buttonRefund
             // 
@@ -863,23 +897,89 @@
             this.ColumnCustomerLoadRemarks.ReadOnly = true;
             this.ColumnCustomerLoadRemarks.Width = 300;
             // 
-            // buttonLoadWithdrawal
+            // textBoxVehicleModel
             // 
-            this.buttonLoadWithdrawal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLoadWithdrawal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(41)))), ((int)(((byte)(56)))));
-            this.buttonLoadWithdrawal.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(166)))), ((int)(((byte)(240)))));
-            this.buttonLoadWithdrawal.FlatAppearance.BorderSize = 0;
-            this.buttonLoadWithdrawal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLoadWithdrawal.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLoadWithdrawal.ForeColor = System.Drawing.Color.White;
-            this.buttonLoadWithdrawal.Location = new System.Drawing.Point(1147, 6);
-            this.buttonLoadWithdrawal.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonLoadWithdrawal.Name = "buttonLoadWithdrawal";
-            this.buttonLoadWithdrawal.Size = new System.Drawing.Size(124, 40);
-            this.buttonLoadWithdrawal.TabIndex = 38;
-            this.buttonLoadWithdrawal.Text = "Withdrawal";
-            this.buttonLoadWithdrawal.UseVisualStyleBackColor = false;
-            this.buttonLoadWithdrawal.Click += new System.EventHandler(this.buttonLoadWithdrawal_Click);
+            this.textBoxVehicleModel.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.textBoxVehicleModel.Location = new System.Drawing.Point(778, 162);
+            this.textBoxVehicleModel.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxVehicleModel.Multiline = true;
+            this.textBoxVehicleModel.Name = "textBoxVehicleModel";
+            this.textBoxVehicleModel.Size = new System.Drawing.Size(431, 61);
+            this.textBoxVehicleModel.TabIndex = 53;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.label18.Location = new System.Drawing.Point(648, 165);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(126, 23);
+            this.label18.TabIndex = 54;
+            this.label18.Text = "Vehicle Model :";
+            // 
+            // textBoxEngineNo
+            // 
+            this.textBoxEngineNo.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.textBoxEngineNo.Location = new System.Drawing.Point(778, 236);
+            this.textBoxEngineNo.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEngineNo.Multiline = true;
+            this.textBoxEngineNo.Name = "textBoxEngineNo";
+            this.textBoxEngineNo.Size = new System.Drawing.Size(431, 35);
+            this.textBoxEngineNo.TabIndex = 55;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.label19.Location = new System.Drawing.Point(648, 239);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(103, 23);
+            this.label19.TabIndex = 56;
+            this.label19.Text = "Engine No. :";
+            // 
+            // textBoxChassisNo
+            // 
+            this.textBoxChassisNo.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.textBoxChassisNo.Location = new System.Drawing.Point(778, 287);
+            this.textBoxChassisNo.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxChassisNo.Multiline = true;
+            this.textBoxChassisNo.Name = "textBoxChassisNo";
+            this.textBoxChassisNo.Size = new System.Drawing.Size(431, 35);
+            this.textBoxChassisNo.TabIndex = 57;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.label20.Location = new System.Drawing.Point(648, 290);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(106, 23);
+            this.label20.TabIndex = 58;
+            this.label20.Text = "Chassis No. :";
+            // 
+            // textBoxPlateNo
+            // 
+            this.textBoxPlateNo.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.textBoxPlateNo.Location = new System.Drawing.Point(778, 338);
+            this.textBoxPlateNo.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxPlateNo.Multiline = true;
+            this.textBoxPlateNo.Name = "textBoxPlateNo";
+            this.textBoxPlateNo.Size = new System.Drawing.Size(431, 35);
+            this.textBoxPlateNo.TabIndex = 59;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.label21.Location = new System.Drawing.Point(648, 341);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(89, 23);
+            this.label21.TabIndex = 60;
+            this.label21.Text = "Plate No. :";
             // 
             // MstCustomerDetailForm
             // 
@@ -973,5 +1073,13 @@
         private System.Windows.Forms.ComboBox comboBoxPriceLevel;
         private System.Windows.Forms.Button buttonRefund;
         private System.Windows.Forms.Button buttonLoadWithdrawal;
+        private System.Windows.Forms.TextBox textBoxPlateNo;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBoxChassisNo;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBoxEngineNo;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBoxVehicleModel;
+        private System.Windows.Forms.Label label18;
     }
 }
