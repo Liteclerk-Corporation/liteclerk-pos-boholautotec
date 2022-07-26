@@ -22,7 +22,7 @@ namespace EasyPOS.Data
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="easypos")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="liteclerk_autotec")]
 	public partial class easyposdbDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -147,6 +147,15 @@ namespace EasyPOS.Data
     partial void InsertTrnDisbursement(TrnDisbursement instance);
     partial void UpdateTrnDisbursement(TrnDisbursement instance);
     partial void DeleteTrnDisbursement(TrnDisbursement instance);
+    partial void InsertTrnJobOrder(TrnJobOrder instance);
+    partial void UpdateTrnJobOrder(TrnJobOrder instance);
+    partial void DeleteTrnJobOrder(TrnJobOrder instance);
+    partial void InsertTrnJobOrderJob(TrnJobOrderJob instance);
+    partial void UpdateTrnJobOrderJob(TrnJobOrderJob instance);
+    partial void DeleteTrnJobOrderJob(TrnJobOrderJob instance);
+    partial void InsertTrnJobOrderPart(TrnJobOrderPart instance);
+    partial void UpdateTrnJobOrderPart(TrnJobOrderPart instance);
+    partial void DeleteTrnJobOrderPart(TrnJobOrderPart instance);
     partial void InsertTrnJournal(TrnJournal instance);
     partial void UpdateTrnJournal(TrnJournal instance);
     partial void DeleteTrnJournal(TrnJournal instance);
@@ -186,7 +195,7 @@ namespace EasyPOS.Data
     #endregion
 		
 		public easyposdbDataContext() : 
-				base(global::EasyPOS.Properties.Settings.Default.easyposConnectionString3, mappingSource)
+				base(global::EasyPOS.Properties.Settings.Default.liteclerk_autotecConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -524,6 +533,30 @@ namespace EasyPOS.Data
 			get
 			{
 				return this.GetTable<TrnDisbursement>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TrnJobOrder> TrnJobOrders
+		{
+			get
+			{
+				return this.GetTable<TrnJobOrder>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TrnJobOrderJob> TrnJobOrderJobs
+		{
+			get
+			{
+				return this.GetTable<TrnJobOrderJob>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TrnJobOrderPart> TrnJobOrderParts
+		{
+			get
+			{
+				return this.GetTable<TrnJobOrderPart>();
 			}
 		}
 		
@@ -2068,6 +2101,14 @@ namespace EasyPOS.Data
 		
 		private string _PriceLevel;
 		
+		private string _VehicleModel;
+		
+		private string _EngineNo;
+		
+		private string _ChassisNo;
+		
+		private string _PlateNo;
+		
 		private EntitySet<MstCustomerLoad> _MstCustomerLoads;
 		
 		private EntitySet<TrnCollection> _TrnCollections;
@@ -2132,6 +2173,14 @@ namespace EasyPOS.Data
     partial void OnLoadAmountChanged();
     partial void OnPriceLevelChanging(string value);
     partial void OnPriceLevelChanged();
+    partial void OnVehicleModelChanging(string value);
+    partial void OnVehicleModelChanged();
+    partial void OnEngineNoChanging(string value);
+    partial void OnEngineNoChanged();
+    partial void OnChassisNoChanging(string value);
+    partial void OnChassisNoChanged();
+    partial void OnPlateNoChanging(string value);
+    partial void OnPlateNoChanged();
     #endregion
 		
 		public MstCustomer()
@@ -2618,6 +2667,86 @@ namespace EasyPOS.Data
 					this._PriceLevel = value;
 					this.SendPropertyChanged("PriceLevel");
 					this.OnPriceLevelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VehicleModel", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string VehicleModel
+		{
+			get
+			{
+				return this._VehicleModel;
+			}
+			set
+			{
+				if ((this._VehicleModel != value))
+				{
+					this.OnVehicleModelChanging(value);
+					this.SendPropertyChanging();
+					this._VehicleModel = value;
+					this.SendPropertyChanged("VehicleModel");
+					this.OnVehicleModelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EngineNo", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string EngineNo
+		{
+			get
+			{
+				return this._EngineNo;
+			}
+			set
+			{
+				if ((this._EngineNo != value))
+				{
+					this.OnEngineNoChanging(value);
+					this.SendPropertyChanging();
+					this._EngineNo = value;
+					this.SendPropertyChanged("EngineNo");
+					this.OnEngineNoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ChassisNo", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string ChassisNo
+		{
+			get
+			{
+				return this._ChassisNo;
+			}
+			set
+			{
+				if ((this._ChassisNo != value))
+				{
+					this.OnChassisNoChanging(value);
+					this.SendPropertyChanging();
+					this._ChassisNo = value;
+					this.SendPropertyChanged("ChassisNo");
+					this.OnChassisNoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PlateNo", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string PlateNo
+		{
+			get
+			{
+				return this._PlateNo;
+			}
+			set
+			{
+				if ((this._PlateNo != value))
+				{
+					this.OnPlateNoChanging(value);
+					this.SendPropertyChanging();
+					this._PlateNo = value;
+					this.SendPropertyChanged("PlateNo");
+					this.OnPlateNoChanged();
 				}
 			}
 		}
@@ -4163,6 +4292,8 @@ namespace EasyPOS.Data
 		
 		private EntitySet<MstItemPrice> _MstItemPrices;
 		
+		private EntitySet<TrnJobOrderPart> _TrnJobOrderParts;
+		
 		private EntitySet<TrnPurchaseOrderLine> _TrnPurchaseOrderLines;
 		
 		private EntitySet<TrnSalesDraft> _TrnSalesDrafts;
@@ -4274,6 +4405,7 @@ namespace EasyPOS.Data
 			this._MstItemPackages = new EntitySet<MstItemPackage>(new Action<MstItemPackage>(this.attach_MstItemPackages), new Action<MstItemPackage>(this.detach_MstItemPackages));
 			this._MstItemPackages1 = new EntitySet<MstItemPackage>(new Action<MstItemPackage>(this.attach_MstItemPackages1), new Action<MstItemPackage>(this.detach_MstItemPackages1));
 			this._MstItemPrices = new EntitySet<MstItemPrice>(new Action<MstItemPrice>(this.attach_MstItemPrices), new Action<MstItemPrice>(this.detach_MstItemPrices));
+			this._TrnJobOrderParts = new EntitySet<TrnJobOrderPart>(new Action<TrnJobOrderPart>(this.attach_TrnJobOrderParts), new Action<TrnJobOrderPart>(this.detach_TrnJobOrderParts));
 			this._TrnPurchaseOrderLines = new EntitySet<TrnPurchaseOrderLine>(new Action<TrnPurchaseOrderLine>(this.attach_TrnPurchaseOrderLines), new Action<TrnPurchaseOrderLine>(this.detach_TrnPurchaseOrderLines));
 			this._TrnSalesDrafts = new EntitySet<TrnSalesDraft>(new Action<TrnSalesDraft>(this.attach_TrnSalesDrafts), new Action<TrnSalesDraft>(this.detach_TrnSalesDrafts));
 			this._TrnSalesLines = new EntitySet<TrnSalesLine>(new Action<TrnSalesLine>(this.attach_TrnSalesLines), new Action<TrnSalesLine>(this.detach_TrnSalesLines));
@@ -5104,6 +5236,19 @@ namespace EasyPOS.Data
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MstItem_TrnJobOrderPart", Storage="_TrnJobOrderParts", ThisKey="Id", OtherKey="ItemId")]
+		public EntitySet<TrnJobOrderPart> TrnJobOrderParts
+		{
+			get
+			{
+				return this._TrnJobOrderParts;
+			}
+			set
+			{
+				this._TrnJobOrderParts.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MstItem_TrnPurchaseOrderLine", Storage="_TrnPurchaseOrderLines", ThisKey="Id", OtherKey="ItemId")]
 		public EntitySet<TrnPurchaseOrderLine> TrnPurchaseOrderLines
 		{
@@ -5598,6 +5743,18 @@ namespace EasyPOS.Data
 		}
 		
 		private void detach_MstItemPrices(MstItemPrice entity)
+		{
+			this.SendPropertyChanging();
+			entity.MstItem = null;
+		}
+		
+		private void attach_TrnJobOrderParts(TrnJobOrderPart entity)
+		{
+			this.SendPropertyChanging();
+			entity.MstItem = this;
+		}
+		
+		private void detach_TrnJobOrderParts(TrnJobOrderPart entity)
 		{
 			this.SendPropertyChanging();
 			entity.MstItem = null;
@@ -10109,6 +10266,10 @@ namespace EasyPOS.Data
 		
 		private EntitySet<TrnDisbursement> _TrnDisbursements4;
 		
+		private EntitySet<TrnJobOrder> _TrnJobOrders;
+		
+		private EntitySet<TrnJobOrderJob> _TrnJobOrderJobs;
+		
 		private EntitySet<TrnPurchaseOrder> _TrnPurchaseOrders;
 		
 		private EntitySet<TrnPurchaseOrder> _TrnPurchaseOrders1;
@@ -10228,6 +10389,8 @@ namespace EasyPOS.Data
 			this._TrnDisbursements2 = new EntitySet<TrnDisbursement>(new Action<TrnDisbursement>(this.attach_TrnDisbursements2), new Action<TrnDisbursement>(this.detach_TrnDisbursements2));
 			this._TrnDisbursements3 = new EntitySet<TrnDisbursement>(new Action<TrnDisbursement>(this.attach_TrnDisbursements3), new Action<TrnDisbursement>(this.detach_TrnDisbursements3));
 			this._TrnDisbursements4 = new EntitySet<TrnDisbursement>(new Action<TrnDisbursement>(this.attach_TrnDisbursements4), new Action<TrnDisbursement>(this.detach_TrnDisbursements4));
+			this._TrnJobOrders = new EntitySet<TrnJobOrder>(new Action<TrnJobOrder>(this.attach_TrnJobOrders), new Action<TrnJobOrder>(this.detach_TrnJobOrders));
+			this._TrnJobOrderJobs = new EntitySet<TrnJobOrderJob>(new Action<TrnJobOrderJob>(this.attach_TrnJobOrderJobs), new Action<TrnJobOrderJob>(this.detach_TrnJobOrderJobs));
 			this._TrnPurchaseOrders = new EntitySet<TrnPurchaseOrder>(new Action<TrnPurchaseOrder>(this.attach_TrnPurchaseOrders), new Action<TrnPurchaseOrder>(this.detach_TrnPurchaseOrders));
 			this._TrnPurchaseOrders1 = new EntitySet<TrnPurchaseOrder>(new Action<TrnPurchaseOrder>(this.attach_TrnPurchaseOrders1), new Action<TrnPurchaseOrder>(this.detach_TrnPurchaseOrders1));
 			this._TrnPurchaseOrders2 = new EntitySet<TrnPurchaseOrder>(new Action<TrnPurchaseOrder>(this.attach_TrnPurchaseOrders2), new Action<TrnPurchaseOrder>(this.detach_TrnPurchaseOrders2));
@@ -10918,6 +11081,32 @@ namespace EasyPOS.Data
 			set
 			{
 				this._TrnDisbursements4.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MstUser_TrnJobOrder", Storage="_TrnJobOrders", ThisKey="Id", OtherKey="PreparedById")]
+		public EntitySet<TrnJobOrder> TrnJobOrders
+		{
+			get
+			{
+				return this._TrnJobOrders;
+			}
+			set
+			{
+				this._TrnJobOrders.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MstUser_TrnJobOrderJob", Storage="_TrnJobOrderJobs", ThisKey="Id", OtherKey="DoneById")]
+		public EntitySet<TrnJobOrderJob> TrnJobOrderJobs
+		{
+			get
+			{
+				return this._TrnJobOrderJobs;
+			}
+			set
+			{
+				this._TrnJobOrderJobs.Assign(value);
 			}
 		}
 		
@@ -11662,6 +11851,30 @@ namespace EasyPOS.Data
 		{
 			this.SendPropertyChanging();
 			entity.MstUser4 = null;
+		}
+		
+		private void attach_TrnJobOrders(TrnJobOrder entity)
+		{
+			this.SendPropertyChanging();
+			entity.MstUser = this;
+		}
+		
+		private void detach_TrnJobOrders(TrnJobOrder entity)
+		{
+			this.SendPropertyChanging();
+			entity.MstUser = null;
+		}
+		
+		private void attach_TrnJobOrderJobs(TrnJobOrderJob entity)
+		{
+			this.SendPropertyChanging();
+			entity.MstUser = this;
+		}
+		
+		private void detach_TrnJobOrderJobs(TrnJobOrderJob entity)
+		{
+			this.SendPropertyChanging();
+			entity.MstUser = null;
 		}
 		
 		private void attach_TrnPurchaseOrders(TrnPurchaseOrder entity)
@@ -18311,6 +18524,861 @@ namespace EasyPOS.Data
 		{
 			this.SendPropertyChanging();
 			entity.TrnDisbursement = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TrnJobOrder")]
+	public partial class TrnJobOrder : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _JONo;
+		
+		private System.DateTime _JODate;
+		
+		private int _CustomerId;
+		
+		private int _PreparedById;
+		
+		private bool _IsLocked;
+		
+		private EntitySet<TrnJobOrderJob> _TrnJobOrderJobs;
+		
+		private EntitySet<TrnJobOrderPart> _TrnJobOrderParts;
+		
+		private EntityRef<MstUser> _MstUser;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnJONoChanging(string value);
+    partial void OnJONoChanged();
+    partial void OnJODateChanging(System.DateTime value);
+    partial void OnJODateChanged();
+    partial void OnCustomerIdChanging(int value);
+    partial void OnCustomerIdChanged();
+    partial void OnPreparedByIdChanging(int value);
+    partial void OnPreparedByIdChanged();
+    partial void OnIsLockedChanging(bool value);
+    partial void OnIsLockedChanged();
+    #endregion
+		
+		public TrnJobOrder()
+		{
+			this._TrnJobOrderJobs = new EntitySet<TrnJobOrderJob>(new Action<TrnJobOrderJob>(this.attach_TrnJobOrderJobs), new Action<TrnJobOrderJob>(this.detach_TrnJobOrderJobs));
+			this._TrnJobOrderParts = new EntitySet<TrnJobOrderPart>(new Action<TrnJobOrderPart>(this.attach_TrnJobOrderParts), new Action<TrnJobOrderPart>(this.detach_TrnJobOrderParts));
+			this._MstUser = default(EntityRef<MstUser>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JONo", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string JONo
+		{
+			get
+			{
+				return this._JONo;
+			}
+			set
+			{
+				if ((this._JONo != value))
+				{
+					this.OnJONoChanging(value);
+					this.SendPropertyChanging();
+					this._JONo = value;
+					this.SendPropertyChanged("JONo");
+					this.OnJONoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JODate", DbType="DateTime NOT NULL")]
+		public System.DateTime JODate
+		{
+			get
+			{
+				return this._JODate;
+			}
+			set
+			{
+				if ((this._JODate != value))
+				{
+					this.OnJODateChanging(value);
+					this.SendPropertyChanging();
+					this._JODate = value;
+					this.SendPropertyChanged("JODate");
+					this.OnJODateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerId", DbType="Int NOT NULL")]
+		public int CustomerId
+		{
+			get
+			{
+				return this._CustomerId;
+			}
+			set
+			{
+				if ((this._CustomerId != value))
+				{
+					this.OnCustomerIdChanging(value);
+					this.SendPropertyChanging();
+					this._CustomerId = value;
+					this.SendPropertyChanged("CustomerId");
+					this.OnCustomerIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PreparedById", DbType="Int NOT NULL")]
+		public int PreparedById
+		{
+			get
+			{
+				return this._PreparedById;
+			}
+			set
+			{
+				if ((this._PreparedById != value))
+				{
+					if (this._MstUser.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnPreparedByIdChanging(value);
+					this.SendPropertyChanging();
+					this._PreparedById = value;
+					this.SendPropertyChanged("PreparedById");
+					this.OnPreparedByIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsLocked", DbType="Bit NOT NULL")]
+		public bool IsLocked
+		{
+			get
+			{
+				return this._IsLocked;
+			}
+			set
+			{
+				if ((this._IsLocked != value))
+				{
+					this.OnIsLockedChanging(value);
+					this.SendPropertyChanging();
+					this._IsLocked = value;
+					this.SendPropertyChanged("IsLocked");
+					this.OnIsLockedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TrnJobOrder_TrnJobOrderJob", Storage="_TrnJobOrderJobs", ThisKey="Id", OtherKey="JOId")]
+		public EntitySet<TrnJobOrderJob> TrnJobOrderJobs
+		{
+			get
+			{
+				return this._TrnJobOrderJobs;
+			}
+			set
+			{
+				this._TrnJobOrderJobs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TrnJobOrder_TrnJobOrderPart", Storage="_TrnJobOrderParts", ThisKey="Id", OtherKey="JOId")]
+		public EntitySet<TrnJobOrderPart> TrnJobOrderParts
+		{
+			get
+			{
+				return this._TrnJobOrderParts;
+			}
+			set
+			{
+				this._TrnJobOrderParts.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MstUser_TrnJobOrder", Storage="_MstUser", ThisKey="PreparedById", OtherKey="Id", IsForeignKey=true)]
+		public MstUser MstUser
+		{
+			get
+			{
+				return this._MstUser.Entity;
+			}
+			set
+			{
+				MstUser previousValue = this._MstUser.Entity;
+				if (((previousValue != value) 
+							|| (this._MstUser.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MstUser.Entity = null;
+						previousValue.TrnJobOrders.Remove(this);
+					}
+					this._MstUser.Entity = value;
+					if ((value != null))
+					{
+						value.TrnJobOrders.Add(this);
+						this._PreparedById = value.Id;
+					}
+					else
+					{
+						this._PreparedById = default(int);
+					}
+					this.SendPropertyChanged("MstUser");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_TrnJobOrderJobs(TrnJobOrderJob entity)
+		{
+			this.SendPropertyChanging();
+			entity.TrnJobOrder = this;
+		}
+		
+		private void detach_TrnJobOrderJobs(TrnJobOrderJob entity)
+		{
+			this.SendPropertyChanging();
+			entity.TrnJobOrder = null;
+		}
+		
+		private void attach_TrnJobOrderParts(TrnJobOrderPart entity)
+		{
+			this.SendPropertyChanging();
+			entity.TrnJobOrder = this;
+		}
+		
+		private void detach_TrnJobOrderParts(TrnJobOrderPart entity)
+		{
+			this.SendPropertyChanging();
+			entity.TrnJobOrder = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TrnJobOrderJob")]
+	public partial class TrnJobOrderJob : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _JOId;
+		
+		private System.DateTime _JobDate;
+		
+		private string _Job;
+		
+		private string _Remarks;
+		
+		private int _DoneById;
+		
+		private decimal _TotalAmount;
+		
+		private EntityRef<MstUser> _MstUser;
+		
+		private EntityRef<TrnJobOrder> _TrnJobOrder;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnJOIdChanging(int value);
+    partial void OnJOIdChanged();
+    partial void OnJobDateChanging(System.DateTime value);
+    partial void OnJobDateChanged();
+    partial void OnJobChanging(string value);
+    partial void OnJobChanged();
+    partial void OnRemarksChanging(string value);
+    partial void OnRemarksChanged();
+    partial void OnDoneByIdChanging(int value);
+    partial void OnDoneByIdChanged();
+    partial void OnTotalAmountChanging(decimal value);
+    partial void OnTotalAmountChanged();
+    #endregion
+		
+		public TrnJobOrderJob()
+		{
+			this._MstUser = default(EntityRef<MstUser>);
+			this._TrnJobOrder = default(EntityRef<TrnJobOrder>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JOId", DbType="Int NOT NULL")]
+		public int JOId
+		{
+			get
+			{
+				return this._JOId;
+			}
+			set
+			{
+				if ((this._JOId != value))
+				{
+					if (this._TrnJobOrder.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnJOIdChanging(value);
+					this.SendPropertyChanging();
+					this._JOId = value;
+					this.SendPropertyChanged("JOId");
+					this.OnJOIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JobDate", DbType="DateTime NOT NULL")]
+		public System.DateTime JobDate
+		{
+			get
+			{
+				return this._JobDate;
+			}
+			set
+			{
+				if ((this._JobDate != value))
+				{
+					this.OnJobDateChanging(value);
+					this.SendPropertyChanging();
+					this._JobDate = value;
+					this.SendPropertyChanged("JobDate");
+					this.OnJobDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Job", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Job
+		{
+			get
+			{
+				return this._Job;
+			}
+			set
+			{
+				if ((this._Job != value))
+				{
+					this.OnJobChanging(value);
+					this.SendPropertyChanging();
+					this._Job = value;
+					this.SendPropertyChanged("Job");
+					this.OnJobChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remarks", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Remarks
+		{
+			get
+			{
+				return this._Remarks;
+			}
+			set
+			{
+				if ((this._Remarks != value))
+				{
+					this.OnRemarksChanging(value);
+					this.SendPropertyChanging();
+					this._Remarks = value;
+					this.SendPropertyChanged("Remarks");
+					this.OnRemarksChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DoneById", DbType="Int NOT NULL")]
+		public int DoneById
+		{
+			get
+			{
+				return this._DoneById;
+			}
+			set
+			{
+				if ((this._DoneById != value))
+				{
+					if (this._MstUser.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnDoneByIdChanging(value);
+					this.SendPropertyChanging();
+					this._DoneById = value;
+					this.SendPropertyChanged("DoneById");
+					this.OnDoneByIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalAmount", DbType="Decimal(18,2) NOT NULL")]
+		public decimal TotalAmount
+		{
+			get
+			{
+				return this._TotalAmount;
+			}
+			set
+			{
+				if ((this._TotalAmount != value))
+				{
+					this.OnTotalAmountChanging(value);
+					this.SendPropertyChanging();
+					this._TotalAmount = value;
+					this.SendPropertyChanged("TotalAmount");
+					this.OnTotalAmountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MstUser_TrnJobOrderJob", Storage="_MstUser", ThisKey="DoneById", OtherKey="Id", IsForeignKey=true)]
+		public MstUser MstUser
+		{
+			get
+			{
+				return this._MstUser.Entity;
+			}
+			set
+			{
+				MstUser previousValue = this._MstUser.Entity;
+				if (((previousValue != value) 
+							|| (this._MstUser.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MstUser.Entity = null;
+						previousValue.TrnJobOrderJobs.Remove(this);
+					}
+					this._MstUser.Entity = value;
+					if ((value != null))
+					{
+						value.TrnJobOrderJobs.Add(this);
+						this._DoneById = value.Id;
+					}
+					else
+					{
+						this._DoneById = default(int);
+					}
+					this.SendPropertyChanged("MstUser");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TrnJobOrder_TrnJobOrderJob", Storage="_TrnJobOrder", ThisKey="JOId", OtherKey="Id", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
+		public TrnJobOrder TrnJobOrder
+		{
+			get
+			{
+				return this._TrnJobOrder.Entity;
+			}
+			set
+			{
+				TrnJobOrder previousValue = this._TrnJobOrder.Entity;
+				if (((previousValue != value) 
+							|| (this._TrnJobOrder.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TrnJobOrder.Entity = null;
+						previousValue.TrnJobOrderJobs.Remove(this);
+					}
+					this._TrnJobOrder.Entity = value;
+					if ((value != null))
+					{
+						value.TrnJobOrderJobs.Add(this);
+						this._JOId = value.Id;
+					}
+					else
+					{
+						this._JOId = default(int);
+					}
+					this.SendPropertyChanged("TrnJobOrder");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TrnJobOrderParts")]
+	public partial class TrnJobOrderPart : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _JOId;
+		
+		private System.DateTime _JOPartsDate;
+		
+		private int _ItemId;
+		
+		private decimal _Quantity;
+		
+		private decimal _Price;
+		
+		private decimal _TotalAmount;
+		
+		private EntityRef<MstItem> _MstItem;
+		
+		private EntityRef<TrnJobOrder> _TrnJobOrder;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnJOIdChanging(int value);
+    partial void OnJOIdChanged();
+    partial void OnJOPartsDateChanging(System.DateTime value);
+    partial void OnJOPartsDateChanged();
+    partial void OnItemIdChanging(int value);
+    partial void OnItemIdChanged();
+    partial void OnQuantityChanging(decimal value);
+    partial void OnQuantityChanged();
+    partial void OnPriceChanging(decimal value);
+    partial void OnPriceChanged();
+    partial void OnTotalAmountChanging(decimal value);
+    partial void OnTotalAmountChanged();
+    #endregion
+		
+		public TrnJobOrderPart()
+		{
+			this._MstItem = default(EntityRef<MstItem>);
+			this._TrnJobOrder = default(EntityRef<TrnJobOrder>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JOId", DbType="Int NOT NULL")]
+		public int JOId
+		{
+			get
+			{
+				return this._JOId;
+			}
+			set
+			{
+				if ((this._JOId != value))
+				{
+					if (this._TrnJobOrder.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnJOIdChanging(value);
+					this.SendPropertyChanging();
+					this._JOId = value;
+					this.SendPropertyChanged("JOId");
+					this.OnJOIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JOPartsDate", DbType="DateTime NOT NULL")]
+		public System.DateTime JOPartsDate
+		{
+			get
+			{
+				return this._JOPartsDate;
+			}
+			set
+			{
+				if ((this._JOPartsDate != value))
+				{
+					this.OnJOPartsDateChanging(value);
+					this.SendPropertyChanging();
+					this._JOPartsDate = value;
+					this.SendPropertyChanged("JOPartsDate");
+					this.OnJOPartsDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ItemId", DbType="Int NOT NULL")]
+		public int ItemId
+		{
+			get
+			{
+				return this._ItemId;
+			}
+			set
+			{
+				if ((this._ItemId != value))
+				{
+					if (this._MstItem.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnItemIdChanging(value);
+					this.SendPropertyChanging();
+					this._ItemId = value;
+					this.SendPropertyChanged("ItemId");
+					this.OnItemIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Decimal(18,2) NOT NULL")]
+		public decimal Quantity
+		{
+			get
+			{
+				return this._Quantity;
+			}
+			set
+			{
+				if ((this._Quantity != value))
+				{
+					this.OnQuantityChanging(value);
+					this.SendPropertyChanging();
+					this._Quantity = value;
+					this.SendPropertyChanged("Quantity");
+					this.OnQuantityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Decimal(18,2) NOT NULL")]
+		public decimal Price
+		{
+			get
+			{
+				return this._Price;
+			}
+			set
+			{
+				if ((this._Price != value))
+				{
+					this.OnPriceChanging(value);
+					this.SendPropertyChanging();
+					this._Price = value;
+					this.SendPropertyChanged("Price");
+					this.OnPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalAmount", DbType="Decimal(18,2) NOT NULL")]
+		public decimal TotalAmount
+		{
+			get
+			{
+				return this._TotalAmount;
+			}
+			set
+			{
+				if ((this._TotalAmount != value))
+				{
+					this.OnTotalAmountChanging(value);
+					this.SendPropertyChanging();
+					this._TotalAmount = value;
+					this.SendPropertyChanged("TotalAmount");
+					this.OnTotalAmountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MstItem_TrnJobOrderPart", Storage="_MstItem", ThisKey="ItemId", OtherKey="Id", IsForeignKey=true)]
+		public MstItem MstItem
+		{
+			get
+			{
+				return this._MstItem.Entity;
+			}
+			set
+			{
+				MstItem previousValue = this._MstItem.Entity;
+				if (((previousValue != value) 
+							|| (this._MstItem.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MstItem.Entity = null;
+						previousValue.TrnJobOrderParts.Remove(this);
+					}
+					this._MstItem.Entity = value;
+					if ((value != null))
+					{
+						value.TrnJobOrderParts.Add(this);
+						this._ItemId = value.Id;
+					}
+					else
+					{
+						this._ItemId = default(int);
+					}
+					this.SendPropertyChanged("MstItem");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TrnJobOrder_TrnJobOrderPart", Storage="_TrnJobOrder", ThisKey="JOId", OtherKey="Id", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
+		public TrnJobOrder TrnJobOrder
+		{
+			get
+			{
+				return this._TrnJobOrder.Entity;
+			}
+			set
+			{
+				TrnJobOrder previousValue = this._TrnJobOrder.Entity;
+				if (((previousValue != value) 
+							|| (this._TrnJobOrder.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TrnJobOrder.Entity = null;
+						previousValue.TrnJobOrderParts.Remove(this);
+					}
+					this._TrnJobOrder.Entity = value;
+					if ((value != null))
+					{
+						value.TrnJobOrderParts.Add(this);
+						this._JOId = value.Id;
+					}
+					else
+					{
+						this._JOId = default(int);
+					}
+					this.SendPropertyChanged("TrnJobOrder");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	

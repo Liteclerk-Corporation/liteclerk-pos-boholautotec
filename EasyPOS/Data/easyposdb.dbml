@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="easypos" Class="easyposdbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=easypos;Persist Security Info=True;User ID=sa" SettingsObjectName="EasyPOS.Properties.Settings" SettingsPropertyName="easyposConnectionString3" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="liteclerk_autotec" Class="easyposdbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=EGGSY\SQLEXPRESS;Initial Catalog=liteclerk_autotec;User ID=sa" SettingsObjectName="EasyPOS.Properties.Settings" SettingsPropertyName="liteclerk_autotecConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.IntCloudSettings" Member="IntCloudSettings">
     <Type Name="IntCloudSetting">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -83,6 +83,10 @@
       <Column Name="BusinessStyle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="LoadAmount" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
       <Column Name="PriceLevel" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="VehicleModel" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="EngineNo" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ChassisNo" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PlateNo" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
       <Association Name="MstCustomer_MstCustomerLoad" Member="MstCustomerLoads" ThisKey="Id" OtherKey="CustomerId" Type="MstCustomerLoad" />
       <Association Name="MstCustomer_TrnCollection" Member="TrnCollections" ThisKey="Id" OtherKey="CustomerId" Type="TrnCollection" />
       <Association Name="MstCustomer_TrnSale" Member="TrnSales" ThisKey="Id" OtherKey="CustomerId" Type="TrnSale" />
@@ -190,6 +194,7 @@
       <Association Name="MstItem_MstItemPackage" Member="MstItemPackages" ThisKey="Id" OtherKey="ItemId" Type="MstItemPackage" />
       <Association Name="MstItem_MstItemPackage1" Member="MstItemPackages1" ThisKey="Id" OtherKey="PackageItemId" Type="MstItemPackage" />
       <Association Name="MstItem_MstItemPrice" Member="MstItemPrices" ThisKey="Id" OtherKey="ItemId" Type="MstItemPrice" />
+      <Association Name="MstItem_TrnJobOrderPart" Member="TrnJobOrderParts" ThisKey="Id" OtherKey="ItemId" Type="TrnJobOrderPart" />
       <Association Name="MstItem_TrnPurchaseOrderLine" Member="TrnPurchaseOrderLines" ThisKey="Id" OtherKey="ItemId" Type="TrnPurchaseOrderLine" />
       <Association Name="MstItem_TrnSalesDraft" Member="TrnSalesDrafts" ThisKey="Id" OtherKey="ItemId" Type="TrnSalesDraft" />
       <Association Name="MstItem_TrnSalesLine" Member="TrnSalesLines" ThisKey="Id" OtherKey="ItemId" Type="TrnSalesLine" />
@@ -449,6 +454,8 @@
       <Association Name="MstUser_TrnDisbursement2" Member="TrnDisbursements2" ThisKey="Id" OtherKey="ApprovedBy" Type="TrnDisbursement" />
       <Association Name="MstUser_TrnDisbursement3" Member="TrnDisbursements3" ThisKey="Id" OtherKey="EntryUserId" Type="TrnDisbursement" />
       <Association Name="MstUser_TrnDisbursement4" Member="TrnDisbursements4" ThisKey="Id" OtherKey="UpdateUserId" Type="TrnDisbursement" />
+      <Association Name="MstUser_TrnJobOrder" Member="TrnJobOrders" ThisKey="Id" OtherKey="PreparedById" Type="TrnJobOrder" />
+      <Association Name="MstUser_TrnJobOrderJob" Member="TrnJobOrderJobs" ThisKey="Id" OtherKey="DoneById" Type="TrnJobOrderJob" />
       <Association Name="MstUser_TrnPurchaseOrder" Member="TrnPurchaseOrders" ThisKey="Id" OtherKey="PreparedBy" Type="TrnPurchaseOrder" />
       <Association Name="MstUser_TrnPurchaseOrder1" Member="TrnPurchaseOrders1" ThisKey="Id" OtherKey="CheckedBy" Type="TrnPurchaseOrder" />
       <Association Name="MstUser_TrnPurchaseOrder2" Member="TrnPurchaseOrders2" ThisKey="Id" OtherKey="ApprovedBy" Type="TrnPurchaseOrder" />
@@ -747,6 +754,45 @@
       <Association Name="MstUser_TrnDisbursement4" Member="MstUser4" ThisKey="UpdateUserId" OtherKey="Id" Type="MstUser" IsForeignKey="true" />
       <Association Name="TrnSale_TrnDisbursement" Member="TrnSale" ThisKey="RefundSalesId" OtherKey="Id" Type="TrnSale" IsForeignKey="true" />
       <Association Name="TrnStockIn_TrnDisbursement" Member="TrnStockIn" ThisKey="StockInId" OtherKey="Id" Type="TrnStockIn" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TrnJobOrder" Member="TrnJobOrders">
+    <Type Name="TrnJobOrder">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="JONo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="JODate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PreparedById" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsLocked" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="TrnJobOrder_TrnJobOrderJob" Member="TrnJobOrderJobs" ThisKey="Id" OtherKey="JOId" Type="TrnJobOrderJob" />
+      <Association Name="TrnJobOrder_TrnJobOrderPart" Member="TrnJobOrderParts" ThisKey="Id" OtherKey="JOId" Type="TrnJobOrderPart" />
+      <Association Name="MstUser_TrnJobOrder" Member="MstUser" ThisKey="PreparedById" OtherKey="Id" Type="MstUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TrnJobOrderJob" Member="TrnJobOrderJobs">
+    <Type Name="TrnJobOrderJob">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="JOId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="JobDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Job" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Remarks" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="DoneById" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalAmount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Association Name="MstUser_TrnJobOrderJob" Member="MstUser" ThisKey="DoneById" OtherKey="Id" Type="MstUser" IsForeignKey="true" />
+      <Association Name="TrnJobOrder_TrnJobOrderJob" Member="TrnJobOrder" ThisKey="JOId" OtherKey="Id" Type="TrnJobOrder" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TrnJobOrderParts" Member="TrnJobOrderParts">
+    <Type Name="TrnJobOrderPart">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="JOId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="JOPartsDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalAmount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Association Name="MstItem_TrnJobOrderPart" Member="MstItem" ThisKey="ItemId" OtherKey="Id" Type="MstItem" IsForeignKey="true" />
+      <Association Name="TrnJobOrder_TrnJobOrderPart" Member="TrnJobOrder" ThisKey="JOId" OtherKey="Id" Type="TrnJobOrder" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.TrnJournal" Member="TrnJournals">
