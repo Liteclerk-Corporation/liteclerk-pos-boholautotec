@@ -40,6 +40,14 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBoxPlateNo = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBoxChassisNo = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBoxEngineNo = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBoxVehicleModel = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.textBoxLoadBalance = new System.Windows.Forms.TextBox();
             this.textBoxCustomerCode = new System.Windows.Forms.TextBox();
@@ -91,14 +99,8 @@
             this.ColumnCustomerLoadType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCustomerLoadAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCustomerLoadRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxVehicleModel = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBoxEngineNo = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBoxChassisNo = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBoxPlateNo = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
+            this.textBoxVehicleBrand = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -249,6 +251,8 @@
             // 
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Controls.Add(this.textBoxVehicleBrand);
+            this.panel3.Controls.Add(this.label22);
             this.panel3.Controls.Add(this.textBoxPlateNo);
             this.panel3.Controls.Add(this.label21);
             this.panel3.Controls.Add(this.textBoxChassisNo);
@@ -297,6 +301,90 @@
             this.panel3.Padding = new System.Windows.Forms.Padding(10);
             this.panel3.Size = new System.Drawing.Size(1370, 594);
             this.panel3.TabIndex = 38;
+            // 
+            // textBoxPlateNo
+            // 
+            this.textBoxPlateNo.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.textBoxPlateNo.Location = new System.Drawing.Point(778, 367);
+            this.textBoxPlateNo.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxPlateNo.Multiline = true;
+            this.textBoxPlateNo.Name = "textBoxPlateNo";
+            this.textBoxPlateNo.Size = new System.Drawing.Size(431, 35);
+            this.textBoxPlateNo.TabIndex = 59;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.label21.Location = new System.Drawing.Point(648, 370);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(89, 23);
+            this.label21.TabIndex = 60;
+            this.label21.Text = "Plate No. :";
+            // 
+            // textBoxChassisNo
+            // 
+            this.textBoxChassisNo.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.textBoxChassisNo.Location = new System.Drawing.Point(778, 321);
+            this.textBoxChassisNo.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxChassisNo.Multiline = true;
+            this.textBoxChassisNo.Name = "textBoxChassisNo";
+            this.textBoxChassisNo.Size = new System.Drawing.Size(431, 35);
+            this.textBoxChassisNo.TabIndex = 57;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.label20.Location = new System.Drawing.Point(648, 324);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(106, 23);
+            this.label20.TabIndex = 58;
+            this.label20.Text = "Chassis No. :";
+            // 
+            // textBoxEngineNo
+            // 
+            this.textBoxEngineNo.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.textBoxEngineNo.Location = new System.Drawing.Point(778, 275);
+            this.textBoxEngineNo.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEngineNo.Multiline = true;
+            this.textBoxEngineNo.Name = "textBoxEngineNo";
+            this.textBoxEngineNo.Size = new System.Drawing.Size(431, 35);
+            this.textBoxEngineNo.TabIndex = 55;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.label19.Location = new System.Drawing.Point(648, 278);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(103, 23);
+            this.label19.TabIndex = 56;
+            this.label19.Text = "Engine No. :";
+            // 
+            // textBoxVehicleModel
+            // 
+            this.textBoxVehicleModel.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.textBoxVehicleModel.Location = new System.Drawing.Point(778, 204);
+            this.textBoxVehicleModel.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxVehicleModel.Multiline = true;
+            this.textBoxVehicleModel.Name = "textBoxVehicleModel";
+            this.textBoxVehicleModel.Size = new System.Drawing.Size(431, 61);
+            this.textBoxVehicleModel.TabIndex = 53;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.label18.Location = new System.Drawing.Point(648, 207);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(126, 23);
+            this.label18.TabIndex = 54;
+            this.label18.Text = "Vehicle Model :";
             // 
             // label16
             // 
@@ -897,89 +985,26 @@
             this.ColumnCustomerLoadRemarks.ReadOnly = true;
             this.ColumnCustomerLoadRemarks.Width = 300;
             // 
-            // textBoxVehicleModel
+            // textBoxVehicleBrand
             // 
-            this.textBoxVehicleModel.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxVehicleModel.Location = new System.Drawing.Point(778, 162);
-            this.textBoxVehicleModel.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxVehicleModel.Multiline = true;
-            this.textBoxVehicleModel.Name = "textBoxVehicleModel";
-            this.textBoxVehicleModel.Size = new System.Drawing.Size(431, 61);
-            this.textBoxVehicleModel.TabIndex = 53;
+            this.textBoxVehicleBrand.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.textBoxVehicleBrand.Location = new System.Drawing.Point(778, 158);
+            this.textBoxVehicleBrand.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxVehicleBrand.Multiline = true;
+            this.textBoxVehicleBrand.Name = "textBoxVehicleBrand";
+            this.textBoxVehicleBrand.Size = new System.Drawing.Size(431, 35);
+            this.textBoxVehicleBrand.TabIndex = 61;
             // 
-            // label18
+            // label22
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label18.Location = new System.Drawing.Point(648, 165);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(126, 23);
-            this.label18.TabIndex = 54;
-            this.label18.Text = "Vehicle Model :";
-            // 
-            // textBoxEngineNo
-            // 
-            this.textBoxEngineNo.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxEngineNo.Location = new System.Drawing.Point(778, 236);
-            this.textBoxEngineNo.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxEngineNo.Multiline = true;
-            this.textBoxEngineNo.Name = "textBoxEngineNo";
-            this.textBoxEngineNo.Size = new System.Drawing.Size(431, 35);
-            this.textBoxEngineNo.TabIndex = 55;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label19.Location = new System.Drawing.Point(648, 239);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(103, 23);
-            this.label19.TabIndex = 56;
-            this.label19.Text = "Engine No. :";
-            // 
-            // textBoxChassisNo
-            // 
-            this.textBoxChassisNo.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxChassisNo.Location = new System.Drawing.Point(778, 287);
-            this.textBoxChassisNo.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxChassisNo.Multiline = true;
-            this.textBoxChassisNo.Name = "textBoxChassisNo";
-            this.textBoxChassisNo.Size = new System.Drawing.Size(431, 35);
-            this.textBoxChassisNo.TabIndex = 57;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label20.Location = new System.Drawing.Point(648, 290);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(106, 23);
-            this.label20.TabIndex = 58;
-            this.label20.Text = "Chassis No. :";
-            // 
-            // textBoxPlateNo
-            // 
-            this.textBoxPlateNo.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.textBoxPlateNo.Location = new System.Drawing.Point(778, 338);
-            this.textBoxPlateNo.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxPlateNo.Multiline = true;
-            this.textBoxPlateNo.Name = "textBoxPlateNo";
-            this.textBoxPlateNo.Size = new System.Drawing.Size(431, 35);
-            this.textBoxPlateNo.TabIndex = 59;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label21.Location = new System.Drawing.Point(648, 341);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(89, 23);
-            this.label21.TabIndex = 60;
-            this.label21.Text = "Plate No. :";
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.label22.Location = new System.Drawing.Point(648, 166);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(123, 23);
+            this.label22.TabIndex = 62;
+            this.label22.Text = "Vehicle Brand :";
             // 
             // MstCustomerDetailForm
             // 
@@ -1081,5 +1106,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBoxVehicleModel;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBoxVehicleBrand;
+        private System.Windows.Forms.Label label22;
     }
 }

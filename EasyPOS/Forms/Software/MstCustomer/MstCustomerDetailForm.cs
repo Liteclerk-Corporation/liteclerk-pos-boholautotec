@@ -213,6 +213,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
             textBoxCustomerCode.Focus();
             textBoxBusinessStyle.Enabled = !isLocked;
             comboBoxPriceLevel.Enabled = !isLocked;
+            textBoxVehicleBrand.Enabled = !isLocked;
             textBoxVehicleModel.Enabled = !isLocked;
             textBoxEngineNo.Enabled = !isLocked;
             textBoxChassisNo.Enabled = !isLocked;
@@ -240,6 +241,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
                 DefaultPriceDescription = textBoxDefaultPrice.Text,
                 BusinessStyle = textBoxBusinessStyle.Text,
                 PriceLevel = comboBoxPriceLevel.SelectedValue.ToString(),
+                VehicleBrand = textBoxVehicleBrand.Text,
                 VehicleModel = textBoxVehicleModel.Text,
                 EngineNo = textBoxEngineNo.Text,
                 ChassisNo = textBoxChassisNo.Text,
@@ -313,6 +315,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
                         DefaultPriceDescription = textBoxDefaultPrice.Text,
                         BusinessStyle = textBoxBusinessStyle.Text,
                         PriceLevel = comboBoxPriceLevel.SelectedValue.ToString(),
+                        VehicleBrand = textBoxVehicleBrand.Text,
                         VehicleModel = textBoxVehicleModel.Text,
                         EngineNo = textBoxEngineNo.Text,
                         ChassisNo = textBoxChassisNo.Text,

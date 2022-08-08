@@ -296,6 +296,7 @@ namespace EasyPOS.Controllers
                     lockCustomer.CustomerCode = objCustomer.CustomerCode;
                     lockCustomer.BusinessStyle = objCustomer.BusinessStyle;
                     lockCustomer.PriceLevel = objCustomer.PriceLevel;
+                    lockCustomer.VehicleBrand = objCustomer.VehicleBrand;
                     lockCustomer.VehicleModel = objCustomer.VehicleModel;
                     lockCustomer.EngineNo = objCustomer.EngineNo;
                     lockCustomer.ChassisNo = objCustomer.ChassisNo;
@@ -495,6 +496,7 @@ namespace EasyPOS.Controllers
                             BusinessStyle = obj.BusinessStyle,
                             LoadAmount = 0,
                             PriceLevel = "Retail Price",
+                            VehicleBrand = "NA",
                             VehicleModel = "NA",
                             EngineNo = "NA",
                             ChassisNo = "NA",
@@ -576,6 +578,7 @@ namespace EasyPOS.Controllers
                     saveCustomer.CustomerCode = objCustomer.CustomerCode;
                     saveCustomer.BusinessStyle = objCustomer.BusinessStyle;
                     saveCustomer.PriceLevel = objCustomer.PriceLevel;
+                    saveCustomer.VehicleBrand = objCustomer.VehicleBrand;
                     saveCustomer.VehicleModel = objCustomer.VehicleModel;
                     saveCustomer.EngineNo = objCustomer.EngineNo;
                     saveCustomer.ChassisNo = objCustomer.ChassisNo;
