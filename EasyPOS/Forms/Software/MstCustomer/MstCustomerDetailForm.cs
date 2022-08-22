@@ -169,6 +169,7 @@ namespace EasyPOS.Forms.Software.MstCustomer
             textBoxBusinessStyle.Text = mstCustomerEntity.BusinessStyle;
             textBoxLoadBalance.Text = mstCustomerEntity.LoadAmount.ToString("#,##0.00");
             comboBoxPriceLevel.Text = mstCustomerEntity.PriceLevel;
+            textBoxVehicleBrand.Text = mstCustomerEntity.VehicleBrand;
             textBoxVehicleModel.Text = mstCustomerEntity.VehicleModel;
             textBoxEngineNo.Text = mstCustomerEntity.EngineNo;
             textBoxChassisNo.Text = mstCustomerEntity.ChassisNo;
